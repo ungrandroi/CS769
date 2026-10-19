@@ -1,49 +1,84 @@
 # CS769 — Graph Memory for Tool-Using Agents
 
-BFCL 文件操作场景下的图记忆研究。被测模型为本地 Qwen3.8-27B-Q8_0；数据来自 `multi_turn_base` 和 `multi_turn_long_context`，共 13 个任务家族 × 2 种条件。工具是 GorillaFileSystem 的 18 个模拟文件工具，不是真实 Bash。
+This project studies graph memory for file-operation tasks in the Berkeley Function Calling Leaderboard (BFCL). Experiments use a locally hosted **Qwen3.8-27B-Q8_0** model and 26 task conditions: 13 task families evaluated under both `multi_turn_base` and `multi_turn_long_context`. The environment provides 18 simulated GorillaFileSystem tools, not a real Bash shell.
 
-## 记忆方法
+## Memory Methods
 
-| 方法 | 历史 ID | 说明 |
+| Method | Historical ID | Representation |
 |---|---|---|
-| Identity | `identity` | 保留原始消息历史 |
-| State-Transition Graph | `v1-compact` | 状态快照节点与工具调用转移边 |
-| Event Graph | `v2-compact` | 执行事件、共享对象和版本化事实 |
-| Event Graph-Dedup | `v2-dedup` | 无损去重重复来源关系，不合并实际调用 |
+| Identity | `identity` | Original message history |
+| State-Transition Graph | `v1-compact` | State snapshot nodes connected by tool-call transition edges |
+| Event Graph | `v2-compact` | Execution events, shared objects, and versioned facts |
+| Event Graph-Dedup | `v2-dedup` | Lossless deduplication of repeated provenance relationships; individual tool calls remain distinct |
 
-## 实验与代码
+The graph methods use compact serialization. “Compact” means a more concise encoding of the full graph; it does not guarantee fewer tokens than the original message history. Historical IDs remain unchanged in stored artifacts for reproducibility.
 
-- `scripts/manage.py`：统一实验命令入口（`run` / `audit` / `checkpoints` / `probe` / `reports`）。
-- `scripts/workflows/`：实验协议的具体流程。
-- `scripts/core/`：共享图构建、编码、模型传输、评分、批量调度及冻结源码加载。
-- `tests/`：单元测试与调度安全测试。
-- `experiments/bfcl_identity/qwen27b_experiment/`：首轮后替换历史的完整 26 项 × 三方法基线。官方通过数分别为 18/26、14/26、17/26。
-- `experiments/bfcl_identity/v2_provenance_dedup_probe/`：事件图来源去重离线验证。
-- `experiments/bfcl_identity/qwen27b_dedup_eval/`：来源去重版的 26 项实际续跑，官方通过 15/26。
-- `experiments/bfcl_identity/history1000_eval/`：仅按调用与返回内容累计 1000 tokens 触发的检查点。当前为 **prepared_not_run**：9 项触发、17 项未触发，尚无新评分。
-- `experiments/bfcl_identity/reports/`：统一展示名称的报告；原始记录使用历史 ID。
-- `visualization/`：用户维护的记忆回放界面，包含源代码和可直接打开的 `index.html`。
+## Experiments
 
-各方法每项只运行一次；这些结果不是重复试验的统计估计。Compact 是相对完整图的紧凑编码，不保证比原始历史短。已实现图构建和编码，尚未实现可学习压缩器或风险模型。
+| Experiment | Protocol | Status and results |
+|---|---|---|
+| Early baseline | Share the first Qwen-generated user turn, then replace history before the second user turn | 26 tasks per method. Official passes: Identity **18/26**, State-Transition Graph **14/26**, Event Graph **17/26** |
+| Provenance deduplication: offline | Encode existing Event Graph memories and verify exact reconstruction | Offline serialization and token measurements; no model inference |
+| Provenance deduplication: continuation | Continue from the same first-turn checkpoints using Event Graph-Dedup | Official passes: **15/26** |
+| History threshold | Replace history when accumulated tool-call and return content reaches 1,000 tokens, excluding tool definitions | **prepared_not_run**: 9 tasks reach the threshold and 17 do not. No continuation scores yet |
 
-## 获取与环境
+Each evaluated method has one run per task condition. These results are not estimates from repeated trials. Graph construction and serialization are implemented; a learned compressor and risk model are not yet implemented.
+
+## Repository Layout
+
+- `scripts/manage.py`: unified CLI for running experiments, auditing records, preparing checkpoints, probing codecs, and rendering reports.
+- `scripts/workflows/`: experiment-specific workflows.
+- `scripts/core/`: shared graph builders, codecs, model transport, scoring, batch scheduling, and frozen-source loading.
+- `tests/`: unit tests and batch-safety checks.
+- `experiments/bfcl_identity/qwen27b_experiment/`: complete early baseline records for 26 tasks and three methods.
+- `experiments/bfcl_identity/v2_provenance_dedup_probe/`: offline Event Graph provenance-deduplication study.
+- `experiments/bfcl_identity/qwen27b_dedup_eval/`: 26 evaluated Event Graph-Dedup continuations.
+- `experiments/bfcl_identity/history1000_eval/`: prepared checkpoints for the pure 1,000-token history threshold.
+- `experiments/bfcl_identity/reports/`: reports using the current method names.
+- `visualization/`: user-maintained memory replay interface, including source files and a standalone `index.html`.
+
+## Setup
+
+Clone the repository and its pinned BFCL submodule:
 
 ```bash
 git clone --recurse-submodules https://github.com/ungrandroi/CS769.git
 cd CS769
 ```
 
-`vendor/gorilla` 固定到原实验使用的上游提交。Python 环境的精确记录位于 `experiments/bfcl_identity/conda-explicit.txt` 和 `requirements.lock.txt`。例如在兼容的 Linux 平台恢复：
+`vendor/gorilla` is pinned to the upstream commit used in the experiments. Exact Python environment records are provided in `experiments/bfcl_identity/conda-explicit.txt` and `experiments/bfcl_identity/requirements.lock.txt`. On a compatible Linux system:
 
 ```bash
 conda create --prefix "$PWD/.conda/bfcl" --file experiments/bfcl_identity/conda-explicit.txt
 scripts/bfcl_python.sh -m pip install -r experiments/bfcl_identity/requirements.lock.txt
 ```
 
-锁文件、冻结脚本和运行配置可能包含原机器的绝对路径，迁移机器时需要调整。BFCL 源代码位于子模块的 `berkeley-function-call-leaderboard/`；本地 editable 安装按该项目说明配置。
+Lockfiles, frozen scripts, and runtime configurations may contain absolute paths from the original machine; adjust them when migrating to another system. BFCL source code is under `vendor/gorilla/berkeley-function-call-leaderboard/`. Follow its installation instructions to configure a local editable installation.
 
-模型权重、模型服务二进制、conda 环境及本机 tokenizer 动态库不提交。精确 tokenizer 的版本和 SHA-256 记录在 `vendor/qwen-tokenizer-631109b34/`；需要恢复匹配的动态库与 GGUF 路径后，才能进行精确 token 计数与完整校验。推理服务设置见各实验的 `runtime/`。本仓库不包含 API 凭据。
+Model weights, inference-server binaries, the conda environment, and native tokenizer libraries are not included. Tokenizer versions and SHA-256 records are stored in `vendor/qwen-tokenizer-631109b34/`. Exact token counting and full validation require the matching native libraries and GGUF model path. Inference-server configurations are recorded in each experiment's `runtime/` directory. API credentials are excluded from the repository.
 
-详细运行入口见 [实验使用说明](experiments/bfcl_identity/USAGE.txt)，协议状态见 [ACTIVE_SCOPE](experiments/bfcl_identity/ACTIVE_SCOPE.txt)。直接打开 [可视化页面](visualization/index.html) 可查看已生成的结果，无需调用模型；重新生成的依赖见 [可视化说明](visualization/README.md)。
+## Usage
 
-历史实验目录中的 `source_code/` 是不可随意修改的复现快照。上游 BFCL 和 tokenizer 头文件遵循其各自许可证。
+```bash
+# Show available commands
+scripts/bfcl_python.sh scripts/manage.py --help
+
+# Audit the existing baseline without model inference
+scripts/bfcl_python.sh scripts/manage.py audit baseline
+
+# Prepare a new history-threshold batch without model inference
+scripts/bfcl_python.sh scripts/manage.py run history1000 --prepare-only --output /tmp/history-check
+
+# Run the test suite
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=scripts scripts/bfcl_python.sh -m unittest discover -s tests -p 'test_*.py'
+```
+
+See the [CLI guide](scripts/README.md), [experiment usage notes](experiments/bfcl_identity/USAGE.txt), and [active experiment scope](experiments/bfcl_identity/ACTIVE_SCOPE.txt) for details. Some supporting documents remain in Chinese.
+
+Download and open [the visualization page](visualization/index.html) in a browser to explore the saved results without calling a model. Dependencies for regenerating it are documented in the [visualization README](visualization/README.md).
+
+## Reproducibility
+
+The `source_code/` directories inside historical experiments contain frozen implementation snapshots. Preserve them together with their original records. Audit commands load these snapshots and write rebuilt reports separately, allowing active code to evolve without overwriting historical evidence.
+
+Upstream BFCL code and tokenizer headers remain subject to their respective licenses.
