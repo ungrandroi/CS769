@@ -20,7 +20,6 @@ BFCL 文件操作场景下的图记忆研究。被测模型为本地 Qwen3.8-27B
 - `experiments/bfcl_identity/history1000_eval/`：仅按调用与返回内容累计 1000 tokens 触发的检查点。当前为 **prepared_not_run**：9 项触发、17 项未触发，尚无新评分。
 - `experiments/bfcl_identity/reports/`：统一展示名称的报告；原始记录使用历史 ID。
 - `visualization/`：用户维护的记忆回放界面，包含源代码和可直接打开的 `index.html`。
-- `workflow_graph_memory_research_proposal.md`：研究提案。
 
 各方法每项只运行一次；这些结果不是重复试验的统计估计。Compact 是相对完整图的紧凑编码，不保证比原始历史短。已实现图构建和编码，尚未实现可学习压缩器或风险模型。
 
