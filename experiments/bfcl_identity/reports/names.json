@@ -1,15 +1,15 @@
 {
   "labels": {
-    "identity": "原始历史记忆",
-    "v1-compact": "状态转移图记忆 · Compact",
-    "v2-compact": "事件图记忆 · Compact",
-    "v2-dedup": "事件图记忆 · 来源去重版"
+    "identity": "Identity",
+    "v1-compact": "State-Transition Graph",
+    "v2-compact": "Event Graph",
+    "v2-dedup": "Event Graph-Dedup"
   },
   "short_labels": {
     "identity": "Identity",
-    "v1-compact": "State Graph",
+    "v1-compact": "State-Transition Graph",
     "v2-compact": "Event Graph",
-    "v2-dedup": "Event Graph–Dedup"
+    "v2-dedup": "Event Graph-Dedup"
   },
   "source_sha256": {
     "qwen27b_experiment/report.txt": "777b7430051fb7b4637cbd3b1ce96331bbc30e003edbc37550e6ddc63558cab7",

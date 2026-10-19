@@ -6,14 +6,17 @@ BFCL 文件操作场景下的图记忆研究。被测模型为本地 Qwen3.8-27B
 
 | 方法 | 历史 ID | 说明 |
 |---|---|---|
-| 原始历史记忆 / Identity | `identity` | 保留原始消息历史 |
-| 状态转移图记忆 · Compact / State Graph | `v1-compact` | 状态快照节点与工具调用转移边 |
-| 事件图记忆 · Compact / Event Graph | `v2-compact` | 执行事件、共享对象和版本化事实 |
-| 事件图记忆 · 来源去重版 / Event Graph–Dedup | `v2-dedup` | 无损去重重复来源关系，不合并实际调用 |
+| Identity | `identity` | 保留原始消息历史 |
+| State-Transition Graph | `v1-compact` | 状态快照节点与工具调用转移边 |
+| Event Graph | `v2-compact` | 执行事件、共享对象和版本化事实 |
+| Event Graph-Dedup | `v2-dedup` | 无损去重重复来源关系，不合并实际调用 |
 
 ## 实验与代码
 
-- `scripts/`：实验运行、图构建和编码、评分、校验与测试。
+- `scripts/manage.py`：统一实验命令入口（`run` / `audit` / `checkpoints` / `probe` / `reports`）。
+- `scripts/workflows/`：实验协议的具体流程。
+- `scripts/core/`：共享图构建、编码、模型传输、评分、批量调度及冻结源码加载。
+- `tests/`：单元测试与调度安全测试。
 - `experiments/bfcl_identity/qwen27b_experiment/`：首轮后替换历史的完整 26 项 × 三方法基线。官方通过数分别为 18/26、14/26、17/26。
 - `experiments/bfcl_identity/v2_provenance_dedup_probe/`：事件图来源去重离线验证。
 - `experiments/bfcl_identity/qwen27b_dedup_eval/`：来源去重版的 26 项实际续跑，官方通过 15/26。

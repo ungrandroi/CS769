@@ -1,0 +1,424 @@
+{
+  "status": "complete",
+  "groups": {
+    "all": {
+      "identity": {
+        "tasks": 26,
+        "passed": 18,
+        "mean_whole_trajectory_input_tokens": 55529.307692307695,
+        "mean_continuation_input_tokens": 38257.153846153844,
+        "mean_first_continuation_input_tokens": 3892.269230769231,
+        "mean_continuation_requests": 8.576923076923077
+      },
+      "v2-compact": {
+        "tasks": 26,
+        "passed": 17,
+        "mean_whole_trajectory_input_tokens": 89783.69230769231,
+        "mean_continuation_input_tokens": 72511.53846153847,
+        "mean_first_continuation_input_tokens": 7702.2307692307695,
+        "mean_continuation_requests": 9.76923076923077
+      },
+      "v2-dedup": {
+        "tasks": 26,
+        "passed": 15,
+        "mean_whole_trajectory_input_tokens": 81254.73076923077,
+        "mean_continuation_input_tokens": 63982.57692307692,
+        "mean_first_continuation_input_tokens": 6539.538461538462,
+        "mean_continuation_requests": 9.807692307692308
+      }
+    },
+    "multi_turn_base": {
+      "identity": {
+        "tasks": 13,
+        "passed": 9,
+        "mean_whole_trajectory_input_tokens": 51084.38461538462,
+        "mean_continuation_input_tokens": 33325,
+        "mean_first_continuation_input_tokens": 3481.230769230769,
+        "mean_continuation_requests": 8.692307692307692
+      },
+      "v2-compact": {
+        "tasks": 13,
+        "passed": 9,
+        "mean_whole_trajectory_input_tokens": 77285.46153846153,
+        "mean_continuation_input_tokens": 59526.07692307692,
+        "mean_first_continuation_input_tokens": 5529.307692307692,
+        "mean_continuation_requests": 10.23076923076923
+      },
+      "v2-dedup": {
+        "tasks": 13,
+        "passed": 8,
+        "mean_whole_trajectory_input_tokens": 74713.53846153847,
+        "mean_continuation_input_tokens": 56954.153846153844,
+        "mean_first_continuation_input_tokens": 5161,
+        "mean_continuation_requests": 10.307692307692308
+      }
+    },
+    "multi_turn_long_context": {
+      "identity": {
+        "tasks": 13,
+        "passed": 9,
+        "mean_whole_trajectory_input_tokens": 59974.230769230766,
+        "mean_continuation_input_tokens": 43189.307692307695,
+        "mean_first_continuation_input_tokens": 4303.307692307692,
+        "mean_continuation_requests": 8.461538461538462
+      },
+      "v2-compact": {
+        "tasks": 13,
+        "passed": 8,
+        "mean_whole_trajectory_input_tokens": 102281.92307692308,
+        "mean_continuation_input_tokens": 85497,
+        "mean_first_continuation_input_tokens": 9875.153846153846,
+        "mean_continuation_requests": 9.307692307692308
+      },
+      "v2-dedup": {
+        "tasks": 13,
+        "passed": 7,
+        "mean_whole_trajectory_input_tokens": 87795.92307692308,
+        "mean_continuation_input_tokens": 71011,
+        "mean_first_continuation_input_tokens": 7918.076923076923,
+        "mean_continuation_requests": 9.307692307692308
+      }
+    }
+  },
+  "paired_changes": {
+    "identity": [
+      {
+        "id": "multi_turn_base_1",
+        "reference": true,
+        "dedup": false
+      },
+      {
+        "id": "multi_turn_long_context_1",
+        "reference": true,
+        "dedup": false
+      },
+      {
+        "id": "multi_turn_long_context_9",
+        "reference": true,
+        "dedup": false
+      }
+    ],
+    "v2-compact": [
+      {
+        "id": "multi_turn_base_9",
+        "reference": true,
+        "dedup": false
+      },
+      {
+        "id": "multi_turn_long_context_1",
+        "reference": true,
+        "dedup": false
+      },
+      {
+        "id": "multi_turn_long_context_10",
+        "reference": false,
+        "dedup": true
+      },
+      {
+        "id": "multi_turn_long_context_25",
+        "reference": true,
+        "dedup": false
+      }
+    ]
+  },
+  "actual_new_usage": {
+    "prompt_tokens": 1663547,
+    "completion_tokens": 11378,
+    "total_tokens": 1674925
+  },
+  "finish_reasons": {
+    "tool_calls": 199,
+    "stop": 56
+  },
+  "new_rows": [
+    {
+      "id": "multi_turn_base_1",
+      "category": "multi_turn_base",
+      "mode": "v2-dedup",
+      "passed": false,
+      "whole_trajectory_input_tokens": 113940,
+      "continuation_input_tokens": 107569,
+      "whole_trajectory_output_tokens": 619,
+      "continuation_requests": 21,
+      "first_continuation_input_tokens": 4549
+    },
+    {
+      "id": "multi_turn_base_3",
+      "category": "multi_turn_base",
+      "mode": "v2-dedup",
+      "passed": true,
+      "whole_trajectory_input_tokens": 116652,
+      "continuation_input_tokens": 66269,
+      "whole_trajectory_output_tokens": 1093,
+      "continuation_requests": 9,
+      "first_continuation_input_tokens": 7039
+    },
+    {
+      "id": "multi_turn_base_6",
+      "category": "multi_turn_base",
+      "mode": "v2-dedup",
+      "passed": false,
+      "whole_trajectory_input_tokens": 102979,
+      "continuation_input_tokens": 83287,
+      "whole_trajectory_output_tokens": 708,
+      "continuation_requests": 14,
+      "first_continuation_input_tokens": 5482
+    },
+    {
+      "id": "multi_turn_base_9",
+      "category": "multi_turn_base",
+      "mode": "v2-dedup",
+      "passed": false,
+      "whole_trajectory_input_tokens": 116789,
+      "continuation_input_tokens": 103973,
+      "whole_trajectory_output_tokens": 919,
+      "continuation_requests": 19,
+      "first_continuation_input_tokens": 4881
+    },
+    {
+      "id": "multi_turn_base_10",
+      "category": "multi_turn_base",
+      "mode": "v2-dedup",
+      "passed": false,
+      "whole_trajectory_input_tokens": 151782,
+      "continuation_input_tokens": 135682,
+      "whole_trajectory_output_tokens": 937,
+      "continuation_requests": 24,
+      "first_continuation_input_tokens": 4939
+    },
+    {
+      "id": "multi_turn_base_12",
+      "category": "multi_turn_base",
+      "mode": "v2-dedup",
+      "passed": true,
+      "whole_trajectory_input_tokens": 37329,
+      "continuation_input_tokens": 24463,
+      "whole_trajectory_output_tokens": 225,
+      "continuation_requests": 5,
+      "first_continuation_input_tokens": 4780
+    },
+    {
+      "id": "multi_turn_base_16",
+      "category": "multi_turn_base",
+      "mode": "v2-dedup",
+      "passed": true,
+      "whole_trajectory_input_tokens": 52708,
+      "continuation_input_tokens": 29330,
+      "whole_trajectory_output_tokens": 520,
+      "continuation_requests": 5,
+      "first_continuation_input_tokens": 5699
+    },
+    {
+      "id": "multi_turn_base_25",
+      "category": "multi_turn_base",
+      "mode": "v2-dedup",
+      "passed": false,
+      "whole_trajectory_input_tokens": 39001,
+      "continuation_input_tokens": 29392,
+      "whole_trajectory_output_tokens": 295,
+      "continuation_requests": 6,
+      "first_continuation_input_tokens": 4736
+    },
+    {
+      "id": "multi_turn_base_26",
+      "category": "multi_turn_base",
+      "mode": "v2-dedup",
+      "passed": true,
+      "whole_trajectory_input_tokens": 51044,
+      "continuation_input_tokens": 37915,
+      "whole_trajectory_output_tokens": 473,
+      "continuation_requests": 7,
+      "first_continuation_input_tokens": 5226
+    },
+    {
+      "id": "multi_turn_base_29",
+      "category": "multi_turn_base",
+      "mode": "v2-dedup",
+      "passed": true,
+      "whole_trajectory_input_tokens": 32813,
+      "continuation_input_tokens": 23237,
+      "whole_trajectory_output_tokens": 264,
+      "continuation_requests": 5,
+      "first_continuation_input_tokens": 4538
+    },
+    {
+      "id": "multi_turn_base_37",
+      "category": "multi_turn_base",
+      "mode": "v2-dedup",
+      "passed": true,
+      "whole_trajectory_input_tokens": 50101,
+      "continuation_input_tokens": 37033,
+      "whole_trajectory_output_tokens": 708,
+      "continuation_requests": 7,
+      "first_continuation_input_tokens": 4861
+    },
+    {
+      "id": "multi_turn_base_38",
+      "category": "multi_turn_base",
+      "mode": "v2-dedup",
+      "passed": true,
+      "whole_trajectory_input_tokens": 46003,
+      "continuation_input_tokens": 11665,
+      "whole_trajectory_output_tokens": 418,
+      "continuation_requests": 2,
+      "first_continuation_input_tokens": 5808
+    },
+    {
+      "id": "multi_turn_base_39",
+      "category": "multi_turn_base",
+      "mode": "v2-dedup",
+      "passed": true,
+      "whole_trajectory_input_tokens": 60135,
+      "continuation_input_tokens": 50589,
+      "whole_trajectory_output_tokens": 652,
+      "continuation_requests": 10,
+      "first_continuation_input_tokens": 4555
+    },
+    {
+      "id": "multi_turn_long_context_1",
+      "category": "multi_turn_long_context",
+      "mode": "v2-dedup",
+      "passed": false,
+      "whole_trajectory_input_tokens": 113940,
+      "continuation_input_tokens": 107569,
+      "whole_trajectory_output_tokens": 619,
+      "continuation_requests": 21,
+      "first_continuation_input_tokens": 4549
+    },
+    {
+      "id": "multi_turn_long_context_3",
+      "category": "multi_turn_long_context",
+      "mode": "v2-dedup",
+      "passed": true,
+      "whole_trajectory_input_tokens": 103812,
+      "continuation_input_tokens": 79041,
+      "whole_trajectory_output_tokens": 888,
+      "continuation_requests": 7,
+      "first_continuation_input_tokens": 10400
+    },
+    {
+      "id": "multi_turn_long_context_6",
+      "category": "multi_turn_long_context",
+      "mode": "v2-dedup",
+      "passed": false,
+      "whole_trajectory_input_tokens": 163028,
+      "continuation_input_tokens": 142619,
+      "whole_trajectory_output_tokens": 706,
+      "continuation_requests": 14,
+      "first_continuation_input_tokens": 9720
+    },
+    {
+      "id": "multi_turn_long_context_9",
+      "category": "multi_turn_long_context",
+      "mode": "v2-dedup",
+      "passed": false,
+      "whole_trajectory_input_tokens": 92668,
+      "continuation_input_tokens": 79852,
+      "whole_trajectory_output_tokens": 776,
+      "continuation_requests": 14,
+      "first_continuation_input_tokens": 4881
+    },
+    {
+      "id": "multi_turn_long_context_10",
+      "category": "multi_turn_long_context",
+      "mode": "v2-dedup",
+      "passed": true,
+      "whole_trajectory_input_tokens": 120240,
+      "continuation_input_tokens": 104140,
+      "whole_trajectory_output_tokens": 749,
+      "continuation_requests": 17,
+      "first_continuation_input_tokens": 4939
+    },
+    {
+      "id": "multi_turn_long_context_12",
+      "category": "multi_turn_long_context",
+      "mode": "v2-dedup",
+      "passed": true,
+      "whole_trajectory_input_tokens": 50697,
+      "continuation_input_tokens": 36401,
+      "whole_trajectory_output_tokens": 194,
+      "continuation_requests": 4,
+      "first_continuation_input_tokens": 9013
+    },
+    {
+      "id": "multi_turn_long_context_16",
+      "category": "multi_turn_long_context",
+      "mode": "v2-dedup",
+      "passed": true,
+      "whole_trajectory_input_tokens": 78923,
+      "continuation_input_tokens": 54828,
+      "whole_trajectory_output_tokens": 527,
+      "continuation_requests": 5,
+      "first_continuation_input_tokens": 9954
+    },
+    {
+      "id": "multi_turn_long_context_25",
+      "category": "multi_turn_long_context",
+      "mode": "v2-dedup",
+      "passed": false,
+      "whole_trajectory_input_tokens": 50037,
+      "continuation_input_tokens": 39822,
+      "whole_trajectory_output_tokens": 532,
+      "continuation_requests": 6,
+      "first_continuation_input_tokens": 6182
+    },
+    {
+      "id": "multi_turn_long_context_26",
+      "category": "multi_turn_long_context",
+      "mode": "v2-dedup",
+      "passed": false,
+      "whole_trajectory_input_tokens": 88320,
+      "continuation_input_tokens": 74480,
+      "whole_trajectory_output_tokens": 1652,
+      "continuation_requests": 7,
+      "first_continuation_input_tokens": 10294
+    },
+    {
+      "id": "multi_turn_long_context_29",
+      "category": "multi_turn_long_context",
+      "mode": "v2-dedup",
+      "passed": true,
+      "whole_trajectory_input_tokens": 45404,
+      "continuation_input_tokens": 35829,
+      "whole_trajectory_output_tokens": 342,
+      "continuation_requests": 7,
+      "first_continuation_input_tokens": 4532
+    },
+    {
+      "id": "multi_turn_long_context_37",
+      "category": "multi_turn_long_context",
+      "mode": "v2-dedup",
+      "passed": true,
+      "whole_trajectory_input_tokens": 111227,
+      "continuation_input_tokens": 94437,
+      "whole_trajectory_output_tokens": 3470,
+      "continuation_requests": 7,
+      "first_continuation_input_tokens": 12530
+    },
+    {
+      "id": "multi_turn_long_context_38",
+      "category": "multi_turn_long_context",
+      "mode": "v2-dedup",
+      "passed": false,
+      "whole_trajectory_input_tokens": 62916,
+      "continuation_input_tokens": 23536,
+      "whole_trajectory_output_tokens": 1392,
+      "continuation_requests": 2,
+      "first_continuation_input_tokens": 11386
+    },
+    {
+      "id": "multi_turn_long_context_39",
+      "category": "multi_turn_long_context",
+      "mode": "v2-dedup",
+      "passed": true,
+      "whole_trajectory_input_tokens": 60135,
+      "continuation_input_tokens": 50589,
+      "whole_trajectory_output_tokens": 652,
+      "continuation_requests": 10,
+      "first_continuation_input_tokens": 4555
+    }
+  ],
+  "audit_passed": true,
+  "baseline_unchanged": true,
+  "sampling": "one continuation per method per task; no score-based retry; 26 paired conditions from 13 families"
+}

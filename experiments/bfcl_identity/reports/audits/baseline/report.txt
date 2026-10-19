@@ -1,0 +1,40 @@
+全 Qwen 27B 文件系统图记忆实验
+26 项任务条件 = 13 个任务家族 × Base/Long Context；每方法一次。
+所有生成（包括首轮）均来自本地 Qwen；图分支回放相同 Qwen 首轮恢复环境，在第二轮前替换一次历史。
+官方整任务评分；首轮失败不筛掉，不按分数重跑。配对任务不是独立重复样本。
+输入 token 包含缓存；整条轨迹用量=共同首轮+该方法续段。实际计算消耗只计共同首轮一次。
+
+overall26
+方法 | 得分 | 首次续段平均输入 | 平均续段累计输入 | 平均整条轨迹累计输入
+Identity | 18/26 | 3892.269230769231 | 38257.153846153844 | 55529.307692307695
+State-Transition Graph | 14/26 | 6738.923076923077 | 60519.269230769234 | 77791.42307692308
+Event Graph | 17/26 | 7702.2307692307695 | 72511.53846153847 | 89783.69230769231
+
+boundary_reached
+方法 | 得分 | 首次续段平均输入 | 平均续段累计输入 | 平均整条轨迹累计输入
+Identity | 18/26 | 3892.269230769231 | 38257.153846153844 | 55529.307692307695
+State-Transition Graph | 14/26 | 6738.923076923077 | 60519.269230769234 | 77791.42307692308
+Event Graph | 17/26 | 7702.2307692307695 | 72511.53846153847 | 89783.69230769231
+
+first_turn_valid
+方法 | 得分 | 首次续段平均输入 | 平均续段累计输入 | 平均整条轨迹累计输入
+Identity | 18/25 | 3835.84 | 39332.64 | 55720.48
+State-Transition Graph | 14/25 | 6546.76 | 61986.04 | 78373.88
+Event Graph | 17/25 | 7356.44 | 74073.68 | 90461.52
+
+multi_turn_base
+方法 | 得分 | 首次续段平均输入 | 平均续段累计输入 | 平均整条轨迹累计输入
+Identity | 9/13 | 3481.230769230769 | 33325 | 51084.38461538462
+State-Transition Graph | 8/13 | 4980.461538461538 | 48067 | 65826.38461538461
+Event Graph | 9/13 | 5529.307692307692 | 59526.07692307692 | 77285.46153846153
+
+multi_turn_long_context
+方法 | 得分 | 首次续段平均输入 | 平均续段累计输入 | 平均整条轨迹累计输入
+Identity | 9/13 | 4303.307692307692 | 43189.307692307695 | 59974.230769230766
+State-Transition Graph | 6/13 | 8497.384615384615 | 72971.53846153847 | 89756.46153846153
+Event Graph | 8/13 | 9875.153846153846 | 85497 | 102281.92307692308
+
+实际计算用量：{"input": 4902563, "output": 48171, "requests": 849, "cached_input": 4559330}
+成败变化：[{"reference": "identity", "candidate": "v1-compact", "changed_tasks": [{"id": "multi_turn_base_1", "identity": true, "candidate": false}, {"id": "multi_turn_long_context_1", "identity": true, "candidate": false}, {"id": "multi_turn_long_context_9", "identity": true, "candidate": false}, {"id": "multi_turn_long_context_10", "identity": true, "candidate": false}]}, {"reference": "identity", "candidate": "v2-compact", "changed_tasks": [{"id": "multi_turn_base_1", "identity": true, "candidate": false}, {"id": "multi_turn_base_9", "identity": false, "candidate": true}, {"id": "multi_turn_long_context_9", "identity": true, "candidate": false}, {"id": "multi_turn_long_context_10", "identity": true, "candidate": false}, {"id": "multi_turn_long_context_25", "identity": false, "candidate": true}]}]
+首轮诊断：[{"id": "multi_turn_base_1", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_base_3", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_base_6", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_base_9", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_base_10", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_base_12", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_base_16", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_base_25", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_base_26", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_base_29", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_base_37", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_base_38", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_base_39", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_long_context_1", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_long_context_3", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_long_context_6", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_long_context_9", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_long_context_10", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_long_context_12", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_long_context_16", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_long_context_25", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_long_context_26", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_long_context_29", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_long_context_37", "passed": true, "error_type": null, "boundary_reached": true}, {"id": "multi_turn_long_context_38", "passed": false, "error_type": "multi_turn:instance_state_mismatch", "boundary_reached": true}, {"id": "multi_turn_long_context_39", "passed": true, "error_type": null, "boundary_reached": true}]
+验证：{"all_Qwen": true, "prefix_replay_and_state_exact": true, "graph_roundtrip_exact": true, "official_scores_verified": true, "no_old_GPT_inputs": true}

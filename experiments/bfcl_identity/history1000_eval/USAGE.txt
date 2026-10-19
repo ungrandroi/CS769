@@ -1,6 +1,6 @@
 纯历史阈值实验：prepared_not_run。仅达到1000工具内容tokens即触发，不限制5次调用，不使用未来2次调用条件。
 checkpoints.json包含9项触发、17项未触发；模型、图编码沿用完整基线。三方法共享同一Qwen前缀和环境。仅转换一次并追加后续历史。
-准备：scripts/bfcl_python.sh scripts/audit_history_checkpoints.py
-推理：scripts/bfcl_python.sh scripts/batch_history1000.py
-核验：scripts/bfcl_python.sh scripts/summarize_history1000.py
+准备：scripts/bfcl_python.sh scripts/manage.py checkpoints
+推理：scripts/bfcl_python.sh scripts/manage.py run history1000
+核验：scripts/bfcl_python.sh scripts/manage.py audit history1000
 本次整理未运行模型，不存在新评分。

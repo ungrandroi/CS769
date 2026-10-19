@@ -1,15 +1,12 @@
-统一方法名称（结构与编码分开命名）
-identity：原始历史记忆 / Identity Memory；图表简称 Identity。
-v1-compact：状态转移图记忆 · Compact / State-Transition Graph Memory — Compact；简称 State Graph。
-v2-compact：事件图记忆 · Compact / Event Graph Memory — Compact；简称 Event Graph。
-v2-dedup：事件图记忆 · 来源去重版 / Event Graph Memory — Provenance Deduplication；简称 Event Graph–Dedup。
+统一方法名称：
+Identity — 原始消息历史；历史ID identity。
+State-Transition Graph — 状态转移图，使用Compact编码；历史ID v1-compact。
+Event Graph — 对象、版本化事实与执行事件图，使用Compact编码；历史ID v2-compact。
+Event Graph-Dedup — 事件图来源关系无损去重，不合并实际调用；历史ID v2-dedup。
 
-状态转移图：已知状态快照节点＋工具调用转移边。
-事件图：执行事件、共享对象、版本化事实及来源关系。
-来源去重：无损编码重复来源关系，不合并实际发生的多次调用。
-转换协议单独注明：首轮后转换，或1000-token历史阈值转换。
-
-原始方法ID、实验目录、冻结代码和已评分记录不改名，以维持校验和复现。
-新名字报告见reports/；从原报告生成，仅更新展示名称，不更改数值。
-更新报告：scripts/bfcl_python.sh scripts/render_named_reports.py
-纯1000-token实验尚未重跑，当前没有可展示的新成绩。
+显示名称严格使用上面四种写法。核心文件分别为state_transition_graph.py、event_graph.py、event_graph_dedup.py；Identity不需要额外构图模块。
+历史ID、冻结代码、目录及官方评分不改写，防止破坏校验。
+协议单独命名：baseline（首轮后转换）、dedup（来源去重续跑）、history1000（纯历史阈值转换）。
+统一入口：scripts/bfcl_python.sh scripts/manage.py --help
+刷新显示报告：scripts/bfcl_python.sh scripts/manage.py reports
+纯history1000目前仅准备检查点，未推理，没有新评分。
