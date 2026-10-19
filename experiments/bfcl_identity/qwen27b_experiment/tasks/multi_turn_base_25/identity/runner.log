@@ -1,0 +1,23 @@
+----------------------------------------------------------------------------------------------------
+ID: base_25, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_25, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_25, Turn: 0, Step: 2
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_25, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_25, Turn: 1, Step: 1
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_25, Turn: 2, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_25, Turn: 2, Step: 1
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_25, Turn: 3, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_25, Turn: 3, Step: 1
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_base_25", "category": "multi_turn_base", "mode": "identity", "status": "complete", "prefix_model": "bfcl-qwen38-27b", "serving_model": "bfcl-qwen38-27b", "base_url": "http://127.0.0.1:11436/v1", "prefix_source": null, "runtime": {"temperature": 0, "seed": 42, "max_tokens": 4096, "context_size": 131072, "thinking": false, "cache_prompt": true}, "intervention": "One history replacement before second user input; later history retained", "boundary": {"turn": 1, "history_sha256": "31dfe4436b1b0f47826c17fe8babcf808f702200bcb73ba1ace46eca5cef3f09", "after_sha256": "31dfe4436b1b0f47826c17fe8babcf808f702200bcb73ba1ace46eca5cef3f09", "source_messages": 7, "roundtrip_verified": false}, "boundary_reached": true, "first_turn_requests": 3, "live_requests": 9, "replayed_requests": 0, "continuation_requests": 6, "live_usage": {"prompt_tokens": 30585, "completion_tokens": 303, "total_tokens": 30888}, "prefix_usage": {"prompt_tokens": 9609, "completion_tokens": 102, "total_tokens": 9711}, "continuation_usage": {"prompt_tokens": 20976, "completion_tokens": 201, "total_tokens": 21177}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

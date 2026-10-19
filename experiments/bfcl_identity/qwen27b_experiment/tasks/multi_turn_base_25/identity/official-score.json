@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_25",
+      "model_name": "local_Qwen3.8-27B-Q8-0-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 2.",
+        "error_type": "multi_turn:execution_response_mismatch",
+        "details": {
+          "missing_items": [
+            "{\"current_working_directory\": \"Research2023\"}"
+          ],
+          "model_response (including all previous turns)": [
+            "{\"current_directory_content\": [\"Research2023\", \"summary.txt\"]}",
+            "{\"file_content\": \"This is the summary of the project. It includes various findings and conclusions. Further analysis is required.\"}",
+            "{\"result\": \"'summary.txt' copied to 'Research2023/summary.txt'\"}",
+            "{\"sorted_content\": \"This is the summary of the project. It includes various findings and conclusions. Further analysis is required.\"}"
+          ],
+          "ground_truth_response (only the current turn)": [
+            "{\"current_working_directory\": \"Research2023\"}",
+            "{\"sorted_content\": \"This is the summary of the project. It includes various findings and conclusions. Further analysis is required.\"}"
+          ]
+        }
+      }
+    }
+  ],
+  "result_sha256": "552e124a8a544cdd846c64a451c56397ddc91aa1f1263f35615d9ce8a403d406",
+  "score_sha256": "97d1abbffe163168d5e97320f97036c28b99a2b17aabb4638c5e1409bee4d7b1",
+  "evaluator": "official BFCL",
+  "score_file": "score/local_Qwen3.8-27B-Q8-0-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

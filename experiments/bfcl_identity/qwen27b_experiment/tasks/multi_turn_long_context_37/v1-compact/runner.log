@@ -1,0 +1,26 @@
+----------------------------------------------------------------------------------------------------
+ID: long_context_37, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_37, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_37, Turn: 0, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: long_context_37, Turn: 0, Step: 3
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_37, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_37, Turn: 1, Step: 1
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_37, Turn: 2, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_37, Turn: 2, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_37, Turn: 2, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: long_context_37, Turn: 2, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: long_context_37, Turn: 2, Step: 4
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_long_context_37", "category": "multi_turn_long_context", "mode": "v1-compact", "status": "complete", "prefix_model": "bfcl-qwen38-27b", "serving_model": "bfcl-qwen38-27b", "base_url": "http://127.0.0.1:11436/v1", "prefix_source": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/qwen27b_experiment/tasks/multi_turn_long_context_37/identity", "runtime": {"temperature": 0, "seed": 42, "max_tokens": 4096, "context_size": 131072, "thinking": false, "cache_prompt": true}, "intervention": "One history replacement before second user input; later history retained", "memory_tokens": 32255, "boundary": {"turn": 1, "history_sha256": "bd40a93ea418db177f44e3babdace752f4583cdfbbe464b6e3b9c10a5cb9445e", "after_sha256": "aa28bfe24328a94aac56e406d3813d2808ad2d9f224f613fdbd969c754aaa99e", "source_messages": 73, "roundtrip_verified": true}, "boundary_reached": true, "first_turn_requests": 4, "live_requests": 7, "replayed_requests": 4, "continuation_requests": 7, "live_usage": {"prompt_tokens": 254619, "completion_tokens": 528, "total_tokens": 255147}, "prefix_usage": {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}, "continuation_usage": {"prompt_tokens": 254619, "completion_tokens": 528, "total_tokens": 255147}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

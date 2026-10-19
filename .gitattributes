@@ -1,0 +1,7 @@
+# Preserve experimental hashes and user-maintained visualization bytes across platforms.
+experiments/** -text
+visualization/** -text
+*.py text eol=lf
+*.sh text eol=lf
+# Frozen source snapshots must also remain byte-for-byte identical.
+experiments/**/source_code/** -text

@@ -1,0 +1,17 @@
+{
+  "source": "Existing downloaded Ollama 0.40.2 native tokenizer libraries; no server installation or upgrade performed.",
+  "llama_cpp_commit": "631109b34",
+  "files": {
+    "headers-manifest.json": "cc062f87c4079777fd6aaf6b5e07372cd51d729b5460d52af68c9651df1df2f6",
+    "lib/libllama.so.0.5.0": "73b89cc3cfd638b9175974fc9337ce6ad5a80272562bd933056948327188f723",
+    "lib/libggml.so.0": "df4dd67bbb902ca01149bb8330b9e2d76b6de7f9bbb99e503294a5f07649b7f6",
+    "lib/libggml-base.so.0": "bdac3fa5e62d1c44b948f74f679b82e779ece48bf43f780479739aa35bd0c58e",
+    "include/llama.h": "d5cf9203bea63b575e76cba4881f29cfd1b611451578b01582b75b72ecbb04bc",
+    "ggml/include/ggml.h": "12ee71f99db7db9b353bc02b1fbb57c344ee17c01ac5fb7952b41a637a747ea9",
+    "ggml/include/ggml-alloc.h": "d114067f9099c4a0e2bbc0625c676d4894d9cf0ea27168ee072c7de0e71bb51d",
+    "ggml/include/ggml-backend.h": "5791edae1fb7622027621d15bc7a160198bd3b75ed8f96d06cb7b85e2b873756",
+    "ggml/include/ggml-cpu.h": "316279e004cdeb8e6ef78599acb602bf79a8abdf897fed9fd1914808c1518c6e",
+    "ggml/include/gguf.h": "e56714aab702e5ce62ee587a409643c08f7e93e8fbb77f48ef7cc85075f96fa4",
+    "ggml/include/ggml-opt.h": "3586de1bc8a934b5c72339e2b6937b0641e8f149b512231e666f67de0736eea2"
+  }
+}

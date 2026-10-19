@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_10",
+      "model_name": "local_Qwen3.8-27B-Q8-0-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 1.",
+        "error_type": "multi_turn:execution_response_mismatch",
+        "details": {
+          "missing_items": [
+            "{\"result\": \"'proposal.docx' moved to 'Projects/proposal.docx'\"}"
+          ],
+          "model_response (including all previous turns)": [
+            "{\"current_working_directory\": \"/alex\"}",
+            "{\"current_directory_content\": [\"workspace\"]}",
+            "{\"current_working_directory\": \"workspace\"}",
+            "None",
+            "{\"current_directory_content\": [\"proposal.docx\", \"notes.md\", \"Projects\"]}",
+            "{\"error\": \"mv: path not allowed in destination. Provide only a file or directory name.\"}",
+            "{\"current_working_directory\": \"Projects\"}",
+            "{\"error\": \"mv: cannot move '../proposal.docx': No such file or directory\"}",
+            "{}",
+            "{\"result\": \"'proposal.docx' moved to 'final_proposal_2024'\"}",
+            "{\"current_working_directory\": \"Projects\"}",
+            "{\"error\": \"mv: cannot move '../final_proposal_2024': No such file or directory\"}",
+            "{}",
+            "{\"current_directory_content\": [\"notes.md\", \"Projects\", \"final_proposal_2024\"]}",
+            "{\"result\": \"'final_proposal_2024' copied to 'Projects/final_proposal_2024'\"}",
+            "{\"result\": \"'final_proposal_2024' removed\"}",
+            "{\"current_directory_content\": [\"notes.md\", \"Projects\"]}",
+            "{\"current_working_directory\": \"Projects\"}",
+            "{\"current_directory_content\": [\"final_proposal_2024\"]}"
+          ],
+          "ground_truth_response (only the current turn)": [
+            "{\"result\": \"'proposal.docx' moved to 'Projects/proposal.docx'\"}",
+            "{\"current_working_directory\": \"Projects\"}",
+            "{\"result\": \"'proposal.docx' moved to 'final_proposal_2024'\"}"
+          ]
+        }
+      }
+    }
+  ],
+  "result_sha256": "4e69e608ab7f796efed742bf3422f35deda7f27ba99f6888033d57f465eca775",
+  "score_sha256": "64b314243e9dae2c09e1cd5a3cc4b5e4ddfd231fc1551ef8f6c4fc320e56b2cb",
+  "evaluator": "official BFCL",
+  "score_file": "score/local_Qwen3.8-27B-Q8-0-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

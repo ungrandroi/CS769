@@ -1,0 +1,176 @@
+{
+  "status": "prepared_not_run",
+  "threshold": 1000,
+  "metric": "Sum of standalone Qwen tokens for call name(arguments) and raw returns once; excludes tools, user/assistant prose and wrappers",
+  "selection": "First complete paired checkpoint reaching threshold; no minimum calls; no future-call or success filter",
+  "tasks": [
+    {
+      "id": "multi_turn_long_context_3",
+      "category": "multi_turn_long_context",
+      "trigger_index": 8,
+      "history_tokens": 1629,
+      "calls": 10,
+      "returns": 10,
+      "before": 5533
+    },
+    {
+      "id": "multi_turn_long_context_6",
+      "category": "multi_turn_long_context",
+      "trigger_index": 16,
+      "history_tokens": 1022,
+      "calls": 12,
+      "returns": 12,
+      "before": 5072
+    },
+    {
+      "id": "multi_turn_long_context_9",
+      "category": "multi_turn_long_context",
+      "trigger_index": 10,
+      "history_tokens": 1518,
+      "calls": 8,
+      "returns": 8,
+      "before": 5140
+    },
+    {
+      "id": "multi_turn_long_context_10",
+      "category": "multi_turn_long_context",
+      "trigger_index": 19,
+      "history_tokens": 1013,
+      "calls": 15,
+      "returns": 15,
+      "before": 5134
+    },
+    {
+      "id": "multi_turn_long_context_16",
+      "category": "multi_turn_long_context",
+      "trigger_index": 8,
+      "history_tokens": 1493,
+      "calls": 7,
+      "returns": 7,
+      "before": 5022
+    },
+    {
+      "id": "multi_turn_long_context_25",
+      "category": "multi_turn_long_context",
+      "trigger_index": 6,
+      "history_tokens": 1334,
+      "calls": 4,
+      "returns": 4,
+      "before": 5018
+    },
+    {
+      "id": "multi_turn_long_context_26",
+      "category": "multi_turn_long_context",
+      "trigger_index": 8,
+      "history_tokens": 1643,
+      "calls": 8,
+      "returns": 8,
+      "before": 6340
+    },
+    {
+      "id": "multi_turn_long_context_37",
+      "category": "multi_turn_long_context",
+      "trigger_index": 3,
+      "history_tokens": 2104,
+      "calls": 34,
+      "returns": 34,
+      "before": 6406
+    },
+    {
+      "id": "multi_turn_long_context_38",
+      "category": "multi_turn_long_context",
+      "trigger_index": 9,
+      "history_tokens": 1559,
+      "calls": 9,
+      "returns": 9,
+      "before": 5123
+    }
+  ],
+  "untriggered": [
+    {
+      "id": "multi_turn_base_1",
+      "category": "multi_turn_base",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_base_3",
+      "category": "multi_turn_base",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_base_6",
+      "category": "multi_turn_base",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_base_9",
+      "category": "multi_turn_base",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_base_10",
+      "category": "multi_turn_base",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_base_12",
+      "category": "multi_turn_base",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_base_16",
+      "category": "multi_turn_base",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_base_25",
+      "category": "multi_turn_base",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_base_26",
+      "category": "multi_turn_base",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_base_29",
+      "category": "multi_turn_base",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_base_37",
+      "category": "multi_turn_base",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_base_38",
+      "category": "multi_turn_base",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_base_39",
+      "category": "multi_turn_base",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_long_context_1",
+      "category": "multi_turn_long_context",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_long_context_12",
+      "category": "multi_turn_long_context",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_long_context_29",
+      "category": "multi_turn_long_context",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    },
+    {
+      "id": "multi_turn_long_context_39",
+      "category": "multi_turn_long_context",
+      "reason": "No next-request checkpoint reached 1000 paired tool-content tokens"
+    }
+  ]
+}

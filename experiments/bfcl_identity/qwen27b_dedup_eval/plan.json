@@ -1,0 +1,312 @@
+{
+  "model": "Qwen3.8-27B-Q8_0",
+  "serving_model": "bfcl-qwen38-27b",
+  "modes": [
+    "v2-provenance-dedup"
+  ],
+  "tasks": [
+    {
+      "id": "multi_turn_base_1",
+      "category": "multi_turn_base",
+      "family_id": 1,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_3",
+      "category": "multi_turn_base",
+      "family_id": 3,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_6",
+      "category": "multi_turn_base",
+      "family_id": 6,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_9",
+      "category": "multi_turn_base",
+      "family_id": 9,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_10",
+      "category": "multi_turn_base",
+      "family_id": 10,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_12",
+      "category": "multi_turn_base",
+      "family_id": 12,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_16",
+      "category": "multi_turn_base",
+      "family_id": 16,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_25",
+      "category": "multi_turn_base",
+      "family_id": 25,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_26",
+      "category": "multi_turn_base",
+      "family_id": 26,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_29",
+      "category": "multi_turn_base",
+      "family_id": 29,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_37",
+      "category": "multi_turn_base",
+      "family_id": 37,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_38",
+      "category": "multi_turn_base",
+      "family_id": 38,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_39",
+      "category": "multi_turn_base",
+      "family_id": 39,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_1",
+      "category": "multi_turn_long_context",
+      "family_id": 1,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_3",
+      "category": "multi_turn_long_context",
+      "family_id": 3,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_6",
+      "category": "multi_turn_long_context",
+      "family_id": 6,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_9",
+      "category": "multi_turn_long_context",
+      "family_id": 9,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_10",
+      "category": "multi_turn_long_context",
+      "family_id": 10,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_12",
+      "category": "multi_turn_long_context",
+      "family_id": 12,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_16",
+      "category": "multi_turn_long_context",
+      "family_id": 16,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_25",
+      "category": "multi_turn_long_context",
+      "family_id": 25,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_26",
+      "category": "multi_turn_long_context",
+      "family_id": 26,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_29",
+      "category": "multi_turn_long_context",
+      "family_id": 29,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_37",
+      "category": "multi_turn_long_context",
+      "family_id": 37,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_38",
+      "category": "multi_turn_long_context",
+      "family_id": 38,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_39",
+      "category": "multi_turn_long_context",
+      "family_id": 39,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    }
+  ],
+  "planned_records": 26,
+  "task_conditions": 26,
+  "task_families": 13,
+  "samples_per_method": 1,
+  "protocol": "Identity runs entirely with Qwen; graph branches replay its identical first turn to restore the simulator, then replace history once before user turn 2; no GPT history.",
+  "sampling": {
+    "temperature": 0,
+    "seed": 42,
+    "max_tokens": 4096,
+    "context_size": 131072,
+    "thinking": false,
+    "cache_prompt": true
+  },
+  "parallelism": "Two identical local servers, one task at a time per server; all branches of a task use the same server.",
+  "usage": "Report common first-turn usage once as actual compute, plus per-method continuation; also report equivalent whole-trajectory usage per method.",
+  "score": "Unmodified official BFCL whole-task evaluator; retain first-turn failures in all three arms; no score-based retries.",
+  "data_sha256": {
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_base.json": "1a21a995d06fd6f20ba55de7bced30ef953ec35e998f502ec2ecf4d66ef1c43a",
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/possible_answer/BFCL_v4_multi_turn_base.json": "1fee67823b317571649177dd89d63969feaae4e810cc7448ee55ba797fb7c8fc",
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_long_context.json": "78c3268c5cc8e97c0f4ec6c811b3b9a2bba14323b1830b7a874b06d822749324",
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/possible_answer/BFCL_v4_multi_turn_long_context.json": "e82aa0e839c39d23c64a05834f7ae024d7c9738ec21738ecee78dc876e3d0d18"
+  },
+  "implementation_sha256": {
+    "run_qwen_task.py": "4d4058ce64db39105b6dbf3d35bb56f3ddf5d6dd176befe9b30cd05751754a4a",
+    "qwen_transport.py": "3c2eff51dce31fe0987957c67783e8128852736d4ce3e81b485a94bc2041560d",
+    "qwen_prompt_accounting.py": "56705bd033177fa5438a6e23ec1ec8ac7c1463f83043e5eed62478591b3ad60a",
+    "graph_memory.py": "7de6f78bb509f9df19d4ed825210c83a90fe9e039236e98255227395c53b4369",
+    "graph_memory_v2.py": "062074fb1552d2087efb0e50c0ff5f9e80b358d016d5e2a06d1ad2113eba114a",
+    "graph_memory_replace.py": "1d50692d5399bf50f6e854829e93cb6264f89dee6d378c8266c26d1c7c9fb674",
+    "graph_memory_serialization.py": "2307854a41a101b472fab68ab1d410127035d3bebac6aae6c266a0a2f17c0c4a",
+    "graph_memory_serialization_target.py": "008858dae17cbe02290efe72ee3731498a1ff27470ed96c459ea78617b1982d9",
+    "local_qwen_tokenizer.py": "9942cb2e5a771294afd5aabd1c679e5456addaaaec70ca94da0c6c2cf1b922c7",
+    "research_modes.py": "a1e31e072f61848ed8f02e40b6b3706346aa6b29740b84c902dad1012276b30c",
+    "qwen_official_score.py": "648620b4f6cca536fc1a7ceefe196fe943913ed8ec67a2f696e4126585224124",
+    "evaluate_qwen_compact.py": "1b5575b1b88903b25c1ca3caa790dec4f80351d9e41f6171d3b9882e4e8ff79b",
+    "batch_qwen_experiment.py": "34ecd7ef05beb2d1ec67b2b6903ffc907decbc4e2fd085e06ad8cd7bb73ed85b",
+    "run_qwen_dedup_task.py": "437f365f1a617d5637ce6636e8c63e703c29276750bcebc86d8ba60494f0fd6d",
+    "v2_provenance_dedup.py": "6914d21dc1c10d38c6e4c172755ae893e825eb0e75edf3cf8328b8aa7c83a451",
+    "batch_qwen_dedup.py": "2bac1f294a17c4bdb72b2eda98c739731ff8f4c13444b99d6d6589405ce95b96"
+  },
+  "variant": "v2-provenance-dedup",
+  "baseline": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/qwen27b_experiment",
+  "shared_prefix": "Replay frozen all-Qwen Identity first turn; same task-to-GPU assignment as baseline."
+}

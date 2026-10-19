@@ -1,0 +1,9 @@
+保留目录：
+qwen27b_experiment/ — 完整早期26项×三方法基线，原始记录和冻结代码均保留。
+v2_provenance_dedup_probe/ — 仅原事件图记忆的无损来源去重离线实验，26张图精确还原。
+qwen27b_dedup_eval/ — V2无损去重编码的26项实际续跑，原始记录和冻结代码均保留。
+history1000_eval/ — 纯1000-token阈值协议和检查点；prepared_not_run，不含旧4项结果。
+
+冻结source_code/用于复现实验，即使快照含历史名称也不代表活动实验入口。
+项目scripts/仅保留以上方向的入口、共享依赖与当前测试；环境、模型、BFCL源码、proposal未清理。
+清理细目见cleanup-project.json；此前清理见cleanup-latest.json。

@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_long_context_1",
+      "model_name": "local_Qwen3.8-27B-Q8-0-FC",
+      "test_category": "multi_turn_long_context",
+      "valid": false,
+      "error": {
+        "error_message": [
+          "Model was force-terminated during inference phase. The length of the model result turns (2) does not match the length of the ground truth turns (4)."
+        ],
+        "error_type": "multi_turn:force_terminated"
+      }
+    }
+  ],
+  "result_sha256": "fea9039e2092ccdc88067eb0f9b1947f2d400f295a5624bd24bf0e3ae856984a",
+  "score_sha256": "d61778ca5a549c13d3b3bf842917402a52df56b261c1670273956c36bac554c3",
+  "evaluator": "official BFCL",
+  "score_file": "score/local_Qwen3.8-27B-Q8-0-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json"
+}

@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "accuracy": 1.0,
+    "correct_count": 1,
+    "total_count": 1
+  },
+  "passed": true,
+  "diagnostics": [],
+  "result_sha256": "83b07016e1333197e6362eca173479fa9e9a3086059825cbb4821bf15b16579f",
+  "score_sha256": "92ab4990b62f1b6dfd7a6afa01877b87316d60d5e3a8c221330d83b7bf0696d5",
+  "evaluator": "official BFCL",
+  "score_file": "score/local_Qwen3.8-27B-Q8-0-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json"
+}

@@ -1,0 +1,25 @@
+.conda/
+**/.env
+api.txt
+__pycache__/
+experiments/bfcl_identity/runs/
+experiments/bfcl_identity/models/*/runs/
+experiments/bfcl_identity/diagnostics/*/runs/
+experiments/bfcl_identity/diagnostics/graph-wire-format/
+experiments/bfcl_identity/.file_locks/
+
+# Machine-local environments, model weights, credentials and caches
+local_models/
+.agents/
+.codex/
+*.gguf
+*.safetensors
+*.pyc
+.pytest_cache/
+.DS_Store
+.env.*
+*.pem
+*.key
+
+# Native tokenizer binaries are machine-specific; provenance stays tracked.
+vendor/qwen-tokenizer-631109b34/lib/

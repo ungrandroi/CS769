@@ -1,0 +1,6 @@
+V2 无损来源去重实际续跑实验。26 项固定 Qwen 首轮，与 qwen27b_experiment 的 Identity/V2 比较。
+本次统一应用去重编码，不启用短任务退回原编码。
+汇总与审计：scripts/bfcl_python.sh scripts/summarize_qwen_dedup.py
+运行：scripts/bfcl_python.sh scripts/batch_qwen_dedup.py（需要启动 runtime/servers.json 中配置的服务）。
+已有完成记录不会重新推理；中断记录不自动重试。模型服务已在完成后停止。
+结果见 report.txt、summary.json、task-results.csv。

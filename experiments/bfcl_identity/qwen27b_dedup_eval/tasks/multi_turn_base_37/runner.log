@@ -1,0 +1,26 @@
+----------------------------------------------------------------------------------------------------
+ID: base_37, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_37, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_37, Turn: 0, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: base_37, Turn: 0, Step: 3
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_37, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_37, Turn: 1, Step: 1
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_37, Turn: 2, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_37, Turn: 2, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_37, Turn: 2, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: base_37, Turn: 2, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: base_37, Turn: 2, Step: 4
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_base_37", "category": "multi_turn_base", "mode": "v2-compact", "status": "complete", "prefix_model": "bfcl-qwen38-27b", "serving_model": "bfcl-qwen38-27b", "base_url": "http://127.0.0.1:11435/v1", "prefix_source": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/qwen27b_experiment/tasks/multi_turn_base_37/identity", "runtime": {"temperature": 0, "seed": 42, "max_tokens": 4096, "context_size": 131072, "thinking": false, "cache_prompt": true}, "intervention": "One history replacement before second user input; later history retained", "memory_tokens": 1715, "boundary": {"turn": 1, "history_sha256": "f211693365aa5ef76cb3fb5b7797525ae7f0178892243b678126c663c3a08ddc", "after_sha256": "773f3e0feaf2ede12ea293db1fae5e3e2d32a02288b5684335a81113b5aa00ff", "source_messages": 13, "roundtrip_verified": true}, "boundary_reached": true, "first_turn_requests": 4, "live_requests": 7, "replayed_requests": 4, "continuation_requests": 7, "live_usage": {"prompt_tokens": 37033, "completion_tokens": 486, "total_tokens": 37519}, "prefix_usage": {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}, "continuation_usage": {"prompt_tokens": 37033, "completion_tokens": 486, "total_tokens": 37519}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

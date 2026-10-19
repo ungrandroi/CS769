@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-10-18T01:07:18.440824+00:00",
+  "removed": [
+    {
+      "path": "threshold3300_eval",
+      "files": 4431,
+      "bytes": 132606868
+    },
+    {
+      "path": "window8000_eval",
+      "files": 1089,
+      "bytes": 23844916
+    },
+    {
+      "path": "window8000_probe",
+      "files": 5,
+      "bytes": 59466
+    },
+    {
+      "path": "qwen_first_turn_diagnostic",
+      "files": 35,
+      "bytes": 3094641
+    },
+    {
+      "path": "memory_viewer",
+      "files": 2,
+      "bytes": 4946660
+    },
+    {
+      "path": "history_checkpoints_audit.json",
+      "files": 1,
+      "bytes": 62438
+    }
+  ],
+  "retained": [
+    "qwen27b_experiment",
+    "history1000_eval",
+    "qwen27b_dedup_eval",
+    "v2_provenance_dedup_probe",
+    "v2_tool_compact_probe",
+    "v2_tool_sharing_probe"
+  ],
+  "retained_files_hash_verified": 4259,
+  "retained_files_unchanged": true,
+  "bytes_removed": 164614989
+}

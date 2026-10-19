@@ -1,0 +1,49 @@
+{
+  "task_id": "multi_turn_base_25",
+  "category": "multi_turn_base",
+  "mode": "v1-compact",
+  "status": "complete",
+  "prefix_model": "bfcl-qwen38-27b",
+  "serving_model": "bfcl-qwen38-27b",
+  "base_url": "http://127.0.0.1:11436/v1",
+  "prefix_source": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/qwen27b_experiment/tasks/multi_turn_base_25/identity",
+  "runtime": {
+    "temperature": 0,
+    "seed": 42,
+    "max_tokens": 4096,
+    "context_size": 131072,
+    "thinking": false,
+    "cache_prompt": true
+  },
+  "intervention": "One history replacement before second user input; later history retained",
+  "memory_tokens": 1109,
+  "boundary": {
+    "turn": 1,
+    "history_sha256": "31dfe4436b1b0f47826c17fe8babcf808f702200bcb73ba1ace46eca5cef3f09",
+    "after_sha256": "8839deb16ad6ce7c04ce1e118de415c44d91782195e16f86691a628e78ec555e",
+    "source_messages": 7,
+    "roundtrip_verified": true
+  },
+  "boundary_reached": true,
+  "first_turn_requests": 3,
+  "live_requests": 6,
+  "replayed_requests": 3,
+  "continuation_requests": 6,
+  "live_usage": {
+    "prompt_tokens": 26428,
+    "completion_tokens": 196,
+    "total_tokens": 26624
+  },
+  "prefix_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0
+  },
+  "continuation_usage": {
+    "prompt_tokens": 26428,
+    "completion_tokens": 196,
+    "total_tokens": 26624
+  },
+  "prefix_log_equal": true,
+  "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"
+}

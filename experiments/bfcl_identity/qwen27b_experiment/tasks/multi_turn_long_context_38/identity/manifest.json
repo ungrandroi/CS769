@@ -1,0 +1,48 @@
+{
+  "task_id": "multi_turn_long_context_38",
+  "category": "multi_turn_long_context",
+  "mode": "identity",
+  "status": "complete",
+  "prefix_model": "bfcl-qwen38-27b",
+  "serving_model": "bfcl-qwen38-27b",
+  "base_url": "http://127.0.0.1:11435/v1",
+  "prefix_source": null,
+  "runtime": {
+    "temperature": 0,
+    "seed": 42,
+    "max_tokens": 4096,
+    "context_size": 131072,
+    "thinking": false,
+    "cache_prompt": true
+  },
+  "intervention": "One history replacement before second user input; later history retained",
+  "boundary": {
+    "turn": 1,
+    "history_sha256": "7a5d630e5c90b7e270fa1f562ae586fb743824b3ca1e4b24586e752f9afc61eb",
+    "after_sha256": "7a5d630e5c90b7e270fa1f562ae586fb743824b3ca1e4b24586e752f9afc61eb",
+    "source_messages": 25,
+    "roundtrip_verified": false
+  },
+  "boundary_reached": true,
+  "first_turn_requests": 10,
+  "live_requests": 12,
+  "replayed_requests": 0,
+  "continuation_requests": 2,
+  "live_usage": {
+    "prompt_tokens": 50750,
+    "completion_tokens": 1350,
+    "total_tokens": 52100
+  },
+  "prefix_usage": {
+    "prompt_tokens": 39380,
+    "completion_tokens": 504,
+    "total_tokens": 39884
+  },
+  "continuation_usage": {
+    "prompt_tokens": 11370,
+    "completion_tokens": 846,
+    "total_tokens": 12216
+  },
+  "prefix_log_equal": true,
+  "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"
+}

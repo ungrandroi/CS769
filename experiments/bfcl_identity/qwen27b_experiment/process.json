@@ -1,0 +1,4 @@
+{
+  "pid": 3000928,
+  "command": "scripts/bfcl_python.sh scripts/batch_qwen_experiment.py"
+}

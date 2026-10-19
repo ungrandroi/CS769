@@ -1,0 +1,116 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_10",
+      "model_name": "local_Qwen3.8-27B-Q8-0-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model instance for GorillaFileSystem does not match the state with ground truth instance.",
+        "error_type": "multi_turn:instance_state_mismatch",
+        "details": {
+          "differences": {
+            "root": {
+              "model": "<Directory: alex, Parent: None, Contents: {'workspace': <Directory: workspace, Parent: alex, Contents: {'notes.md': <<File: notes.md, Content: Meeting highlights and notes.>>, 'Projects': <Directory: Projects, Parent: workspace, Contents: {'final_proposal_2024.docx': <<File: final_proposal_2024.docx, Content: Initial project proposal document content.>>}>}>}>",
+              "ground_truth": "<Directory: alex, Parent: None, Contents: {'workspace': <Directory: workspace, Parent: alex, Contents: {'notes.md': <<File: notes.md, Content: Meeting highlights and notes.>>, 'Projects': <Directory: Projects, Parent: workspace, Contents: {'final_proposal_2024': <<File: final_proposal_2024, Content: Initial project proposal document content.>>}>}>}>"
+            }
+          },
+          "model_instance_state": {
+            "long_context": false,
+            "root": "<Directory: alex, Parent: None, Contents: {'workspace': <Directory: workspace, Parent: alex, Contents: {'notes.md': <<File: notes.md, Content: Meeting highlights and notes.>>, 'Projects': <Directory: Projects, Parent: workspace, Contents: {'final_proposal_2024.docx': <<File: final_proposal_2024.docx, Content: Initial project proposal document content.>>}>}>}>"
+          },
+          "ground_truth_instance_state": {
+            "long_context": false,
+            "root": "<Directory: alex, Parent: None, Contents: {'workspace': <Directory: workspace, Parent: alex, Contents: {'notes.md': <<File: notes.md, Content: Meeting highlights and notes.>>, 'Projects': <Directory: Projects, Parent: workspace, Contents: {'final_proposal_2024': <<File: final_proposal_2024, Content: Initial project proposal document content.>>}>}>}>"
+          }
+        },
+        "execution_result": [
+          {
+            "model": [
+              [
+                "{\"current_working_directory\": \"/alex\"}"
+              ],
+              [
+                "{\"current_directory_content\": [\"workspace\"]}"
+              ],
+              [
+                "{\"current_working_directory\": \"workspace\"}"
+              ],
+              [
+                "None"
+              ]
+            ],
+            "ground_truth": [
+              "{\"current_working_directory\": \"workspace\"}",
+              "None"
+            ]
+          },
+          {
+            "model": [
+              [
+                "{\"current_directory_content\": [\"proposal.docx\", \"notes.md\", \"Projects\"]}"
+              ],
+              [
+                "{\"error\": \"mv: path not allowed in destination. Provide only a file or directory name.\"}"
+              ],
+              [
+                "{\"result\": \"'proposal.docx' moved to 'final_proposal_2024.docx'\"}"
+              ],
+              [
+                "{\"current_working_directory\": \"Projects\"}"
+              ],
+              [
+                "{\"error\": \"mv: cannot move '../final_proposal_2024.docx': No such file or directory\"}"
+              ],
+              [
+                "{}"
+              ],
+              [
+                "{\"current_directory_content\": [\"notes.md\", \"Projects\", \"final_proposal_2024.docx\"]}"
+              ],
+              [
+                "{\"current_working_directory\": \"Projects\"}"
+              ],
+              [
+                "{\"error\": \"mv: cannot move '../final_proposal_2024.docx': No such file or directory\"}"
+              ],
+              [
+                "{}"
+              ],
+              [
+                "{\"result\": \"'final_proposal_2024.docx' copied to 'Projects/final_proposal_2024.docx'\"}"
+              ],
+              [
+                "{\"result\": \"'final_proposal_2024.docx' removed\"}"
+              ],
+              [
+                "{\"current_directory_content\": [\"notes.md\", \"Projects\"]}"
+              ],
+              [
+                "{\"current_working_directory\": \"Projects\"}"
+              ],
+              [
+                "{\"current_directory_content\": [\"final_proposal_2024.docx\"]}"
+              ]
+            ],
+            "ground_truth": [
+              "{\"result\": \"'proposal.docx' moved to 'Projects/proposal.docx'\"}",
+              "{\"current_working_directory\": \"Projects\"}",
+              "{\"result\": \"'proposal.docx' moved to 'final_proposal_2024'\"}"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "result_sha256": "fc4d25f991371b0771b321b4b6b98c5a15f68db706f8872f55d3289153d15c8e",
+  "score_sha256": "a541e07cbfb3935a8af8ea4b564fd615241fc41fb64b66e4d9d10c8777f4330f",
+  "evaluator": "official BFCL",
+  "score_file": "score/local_Qwen3.8-27B-Q8-0-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

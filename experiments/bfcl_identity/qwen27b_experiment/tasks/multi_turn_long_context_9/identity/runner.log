@@ -1,0 +1,44 @@
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 0, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 0, Step: 3
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 1, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 1, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 1, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 1, Step: 4
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 4
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 5
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 6
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 7
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 8
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 9
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 10
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_long_context_9", "category": "multi_turn_long_context", "mode": "identity", "status": "complete", "prefix_model": "bfcl-qwen38-27b", "serving_model": "bfcl-qwen38-27b", "base_url": "http://127.0.0.1:11435/v1", "prefix_source": null, "runtime": {"temperature": 0, "seed": 42, "max_tokens": 4096, "context_size": 131072, "thinking": false, "cache_prompt": true}, "intervention": "One history replacement before second user input; later history retained", "boundary": {"turn": 1, "history_sha256": "a55fd5c8d3719cee1de7b8c59c934ea01cdbd05071bd61e2216fd8f5713069d8", "after_sha256": "a55fd5c8d3719cee1de7b8c59c934ea01cdbd05071bd61e2216fd8f5713069d8", "source_messages": 8, "roundtrip_verified": false}, "boundary_reached": true, "first_turn_requests": 4, "live_requests": 20, "replayed_requests": 0, "continuation_requests": 16, "live_usage": {"prompt_tokens": 119456, "completion_tokens": 4706, "total_tokens": 124162}, "prefix_usage": {"prompt_tokens": 12816, "completion_tokens": 96, "total_tokens": 12912}, "continuation_usage": {"prompt_tokens": 106640, "completion_tokens": 4610, "total_tokens": 111250}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

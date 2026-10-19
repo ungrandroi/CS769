@@ -1,0 +1,31 @@
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 0, Step: 2
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 1, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 1, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 1, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 1, Step: 4
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 1, Step: 5
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 2, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 2, Step: 1
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 3, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 3, Step: 1
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_long_context_39", "category": "multi_turn_long_context", "mode": "v1-compact", "status": "complete", "prefix_model": "bfcl-qwen38-27b", "serving_model": "bfcl-qwen38-27b", "base_url": "http://127.0.0.1:11436/v1", "prefix_source": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/qwen27b_experiment/tasks/multi_turn_long_context_39/identity", "runtime": {"temperature": 0, "seed": 42, "max_tokens": 4096, "context_size": 131072, "thinking": false, "cache_prompt": true}, "intervention": "One history replacement before second user input; later history retained", "memory_tokens": 930, "boundary": {"turn": 1, "history_sha256": "cd156f2ea60fa26f1f165b412123a9f347e2f1820e7183017125e2bc86bf85c0", "after_sha256": "0598b5898601d82aceb865789c9777f570f2d72f8e95516872af2f0d44e84ab5", "source_messages": 6, "roundtrip_verified": true}, "boundary_reached": true, "first_turn_requests": 3, "live_requests": 10, "replayed_requests": 3, "continuation_requests": 10, "live_usage": {"prompt_tokens": 46039, "completion_tokens": 578, "total_tokens": 46617}, "prefix_usage": {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}, "continuation_usage": {"prompt_tokens": 46039, "completion_tokens": 578, "total_tokens": 46617}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

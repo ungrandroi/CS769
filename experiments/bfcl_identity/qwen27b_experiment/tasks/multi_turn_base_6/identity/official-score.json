@@ -1,0 +1,78 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_6",
+      "model_name": "local_Qwen3.8-27B-Q8-0-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model instance for GorillaFileSystem does not match the state with ground truth instance.",
+        "error_type": "multi_turn:instance_state_mismatch",
+        "details": {
+          "differences": {
+            "root": {
+              "model": "<Directory: gorilla, Parent: None, Contents: {'communal': <Directory: communal, Parent: gorilla, Contents: {'Annual_Report_2023.docx': <<File: Annual_Report_2023.docx, Content: Company Name: Gorilla\nCompany Earning: 2000\nCompany Expenditure: 500>>}>, 'reserve': <Directory: reserve, Parent: gorilla, Contents: {}>, 'shared': <Directory: shared, Parent: gorilla, Contents: {}>, 'archives': <Directory: archives, Parent: gorilla, Contents: {}>}>",
+              "ground_truth": "<Directory: gorilla, Parent: None, Contents: {'communal': <Directory: communal, Parent: gorilla, Contents: {'Annual_Report_2023.docx': <<File: Annual_Report_2023.docx, Content: Company Earning: 2000 Company Expenditure: 500 Company Name: Gorilla>>}>, 'reserve': <Directory: reserve, Parent: gorilla, Contents: {}>, 'shared': <Directory: shared, Parent: gorilla, Contents: {}>, 'archives': <Directory: archives, Parent: gorilla, Contents: {}>}>"
+            }
+          },
+          "model_instance_state": {
+            "long_context": false,
+            "root": "<Directory: gorilla, Parent: None, Contents: {'communal': <Directory: communal, Parent: gorilla, Contents: {'Annual_Report_2023.docx': <<File: Annual_Report_2023.docx, Content: Company Name: Gorilla\nCompany Earning: 2000\nCompany Expenditure: 500>>}>, 'reserve': <Directory: reserve, Parent: gorilla, Contents: {}>, 'shared': <Directory: shared, Parent: gorilla, Contents: {}>, 'archives': <Directory: archives, Parent: gorilla, Contents: {}>}>"
+          },
+          "ground_truth_instance_state": {
+            "long_context": false,
+            "root": "<Directory: gorilla, Parent: None, Contents: {'communal': <Directory: communal, Parent: gorilla, Contents: {'Annual_Report_2023.docx': <<File: Annual_Report_2023.docx, Content: Company Earning: 2000 Company Expenditure: 500 Company Name: Gorilla>>}>, 'reserve': <Directory: reserve, Parent: gorilla, Contents: {}>, 'shared': <Directory: shared, Parent: gorilla, Contents: {}>, 'archives': <Directory: archives, Parent: gorilla, Contents: {}>}>"
+          }
+        },
+        "execution_result": [
+          {
+            "model": [
+              [
+                "{\"current_working_directory\": \"/gorilla\"}"
+              ],
+              [
+                "{\"current_directory_content\": [\"communal\", \"reserve\", \"shared\", \"archives\"]}"
+              ],
+              [
+                "{\"current_working_directory\": \"communal\"}"
+              ],
+              [
+                "None"
+              ],
+              [
+                "{\"current_directory_content\": [\"Annual_Report_2023.docx\"]}"
+              ]
+            ],
+            "ground_truth": [
+              "{\"current_working_directory\": \"communal\"}",
+              "None"
+            ]
+          },
+          {
+            "model": [
+              [
+                "None"
+              ],
+              [
+                "{\"file_content\": \"Company Name: Gorilla\\nCompany Earning: 2000\\nCompany Expenditure: 500\"}"
+              ]
+            ],
+            "ground_truth": [
+              "None"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "result_sha256": "0badbfac43ae92948ddddc8a93b52b955ad765985c7614fba95d3f79d36cfd7f",
+  "score_sha256": "ee449b693afee0ec57aa437f6943193a8efda7d83af6f310d457770c8aeda2e7",
+  "evaluator": "official BFCL",
+  "score_file": "score/local_Qwen3.8-27B-Q8-0-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

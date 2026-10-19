@@ -1,0 +1,158 @@
+{
+  "removed": [
+    {
+      "path": "experiments/bfcl_identity/compact_eval_qwen38_27b",
+      "files": 1366,
+      "bytes": 152469458
+    },
+    {
+      "path": "experiments/bfcl_identity/qwen_inputs",
+      "files": 155,
+      "bytes": 32251463
+    },
+    {
+      "path": "experiments/bfcl_identity/serialization_stage1",
+      "files": 197,
+      "bytes": 4043513
+    },
+    {
+      "path": "experiments/bfcl_identity/serialization_stage1_qwen38_27b",
+      "files": 398,
+      "bytes": 7879726
+    },
+    {
+      "path": "experiments/bfcl_identity/graph-token-audit",
+      "files": 3,
+      "bytes": 203640
+    },
+    {
+      "path": "experiments/bfcl_identity/versions",
+      "files": 24,
+      "bytes": 13104532
+    },
+    {
+      "path": "experiments/bfcl_identity/archives",
+      "files": 10,
+      "bytes": 54744230
+    },
+    {
+      "path": "experiments/bfcl_identity/maintenance",
+      "files": 9,
+      "bytes": 1703525
+    },
+    {
+      "path": "experiments/bfcl_identity/active_model.json",
+      "files": 1,
+      "bytes": 519
+    },
+    {
+      "path": "experiments/bfcl_identity/graph-comparison-validation.json",
+      "files": 1,
+      "bytes": 555
+    },
+    {
+      "path": "experiments/bfcl_identity/graph-replacement-summary.json",
+      "files": 1,
+      "bytes": 8601
+    },
+    {
+      "path": "experiments/bfcl_identity/graph-replacement-validation.json",
+      "files": 1,
+      "bytes": 5007
+    },
+    {
+      "path": "experiments/bfcl_identity/graph-summary.json",
+      "files": 1,
+      "bytes": 4631
+    },
+    {
+      "path": "experiments/bfcl_identity/graph-v2-summary.json",
+      "files": 1,
+      "bytes": 6118
+    },
+    {
+      "path": "experiments/bfcl_identity/graph-v2-validation.json",
+      "files": 1,
+      "bytes": 4155
+    },
+    {
+      "path": "experiments/bfcl_identity/gt-replay.json",
+      "files": 1,
+      "bytes": 24542
+    },
+    {
+      "path": "experiments/bfcl_identity/live-summary.json",
+      "files": 1,
+      "bytes": 5415
+    },
+    {
+      "path": "experiments/bfcl_identity/memory-view-validation.json",
+      "files": 1,
+      "bytes": 3261
+    },
+    {
+      "path": "experiments/bfcl_identity/model-comparison.json",
+      "files": 1,
+      "bytes": 8077
+    },
+    {
+      "path": "experiments/bfcl_identity/status.json",
+      "files": 1,
+      "bytes": 9170
+    },
+    {
+      "path": "experiments/bfcl_identity/task-scores.json",
+      "files": 1,
+      "bytes": 3843
+    },
+    {
+      "path": "experiments/bfcl_identity/llama.Modelfile",
+      "files": 1,
+      "bytes": 1547
+    },
+    {
+      "path": "experiments/bfcl_identity/replay-live.log",
+      "files": 1,
+      "bytes": 12343
+    },
+    {
+      "path": "experiments/bfcl_identity/graph-v2.log",
+      "files": 1,
+      "bytes": 14073
+    },
+    {
+      "path": "experiments/bfcl_identity/identity-live.log",
+      "files": 1,
+      "bytes": 13663
+    },
+    {
+      "path": "experiments/bfcl_identity/offline-test.log",
+      "files": 1,
+      "bytes": 17291
+    },
+    {
+      "path": "experiments/bfcl_identity/live-preflight.log",
+      "files": 1,
+      "bytes": 402
+    },
+    {
+      "path": "experiments/bfcl_identity/baseline-live.log",
+      "files": 1,
+      "bytes": 12361
+    },
+    {
+      "path": "experiments/bfcl_identity/graph.log",
+      "files": 1,
+      "bytes": 12463
+    },
+    {
+      "path": "experiments/bfcl_identity/identity-paired.log",
+      "files": 1,
+      "bytes": 13616
+    }
+  ],
+  "bytes_removed": 266581740,
+  "current_raw_files_unchanged": 2132,
+  "old_history_and_old_results_deleted": true,
+  "new_archive_created": false
+}

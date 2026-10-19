@@ -1,0 +1,452 @@
+{
+  "timestamp": "2026-10-19T09:24:44.287827+00:00",
+  "removed": [
+    {
+      "path": "experiments/bfcl_identity/history1000_eval",
+      "bytes": 27658334
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_tool_compact_probe",
+      "bytes": 301406
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_tool_sharing_probe",
+      "bytes": 3908219
+    },
+    {
+      "path": "visualization",
+      "bytes": 5022384
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_16/shared_tool.stats.json",
+      "bytes": 56
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_16/shared_tool.memory.txt",
+      "bytes": 8744
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_12/shared_tool.stats.json",
+      "bytes": 55
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_12/shared_tool.memory.txt",
+      "bytes": 6162
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_26/shared_tool.stats.json",
+      "bytes": 56
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_26/shared_tool.memory.txt",
+      "bytes": 7731
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_1/shared_tool.stats.json",
+      "bytes": 55
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_1/shared_tool.memory.txt",
+      "bytes": 5630
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_9/shared_tool.stats.json",
+      "bytes": 56
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_9/shared_tool.memory.txt",
+      "bytes": 6547
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_12/shared_tool.stats.json",
+      "bytes": 57
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_12/shared_tool.memory.txt",
+      "bytes": 14090
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_10/shared_tool.stats.json",
+      "bytes": 56
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_10/shared_tool.memory.txt",
+      "bytes": 6546
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_6/shared_tool.stats.json",
+      "bytes": 57
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_6/shared_tool.memory.txt",
+      "bytes": 15952
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_1/shared_tool.stats.json",
+      "bytes": 55
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_1/shared_tool.memory.txt",
+      "bytes": 5630
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_38/shared_tool.stats.json",
+      "bytes": 58
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_38/shared_tool.memory.txt",
+      "bytes": 19761
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_29/shared_tool.stats.json",
+      "bytes": 55
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_29/shared_tool.memory.txt",
+      "bytes": 5455
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_26/shared_tool.stats.json",
+      "bytes": 57
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_26/shared_tool.memory.txt",
+      "bytes": 16880
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_25/shared_tool.stats.json",
+      "bytes": 55
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_25/shared_tool.memory.txt",
+      "bytes": 14399
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_25/shared_tool.stats.json",
+      "bytes": 55
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_25/shared_tool.memory.txt",
+      "bytes": 6246
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_29/shared_tool.stats.json",
+      "bytes": 55
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_29/shared_tool.memory.txt",
+      "bytes": 5466
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_3/shared_tool.stats.json",
+      "bytes": 57
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_3/shared_tool.memory.txt",
+      "bytes": 12319
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_37/shared_tool.stats.json",
+      "bytes": 55
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_37/shared_tool.memory.txt",
+      "bytes": 6622
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_39/shared_tool.stats.json",
+      "bytes": 55
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_39/shared_tool.memory.txt",
+      "bytes": 5526
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_38/shared_tool.stats.json",
+      "bytes": 56
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_38/shared_tool.memory.txt",
+      "bytes": 9479
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_6/shared_tool.stats.json",
+      "bytes": 56
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_6/shared_tool.memory.txt",
+      "bytes": 8035
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_16/shared_tool.stats.json",
+      "bytes": 57
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_16/shared_tool.memory.txt",
+      "bytes": 16763
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_9/shared_tool.stats.json",
+      "bytes": 56
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_9/shared_tool.memory.txt",
+      "bytes": 6547
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_10/shared_tool.stats.json",
+      "bytes": 56
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_10/shared_tool.memory.txt",
+      "bytes": 6546
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_37/shared_tool.stats.json",
+      "bytes": 57
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_37/shared_tool.memory.txt",
+      "bytes": 21376
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_3/shared_tool.stats.json",
+      "bytes": 57
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_long_context_3/shared_tool.memory.txt",
+      "bytes": 18398
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_39/shared_tool.stats.json",
+      "bytes": 55
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/tasks/multi_turn_base_39/shared_tool.memory.txt",
+      "bytes": 5526
+    },
+    {
+      "path": "experiments/bfcl_identity/v2_provenance_dedup_probe/verification.txt",
+      "bytes": 411
+    },
+    {
+      "path": "scripts/summarize_qwen_compact_eval.py",
+      "bytes": 19750
+    },
+    {
+      "path": "scripts/run_qwen_compact_eval.py",
+      "bytes": 13782
+    },
+    {
+      "path": "scripts/probe_tool_graph_compact.py",
+      "bytes": 3268
+    },
+    {
+      "path": "scripts/tool_graph_compact.py",
+      "bytes": 6105
+    },
+    {
+      "path": "scripts/run_threshold3300_task.py",
+      "bytes": 7665
+    },
+    {
+      "path": "scripts/summarize_graph_memory.py",
+      "bytes": 5011
+    },
+    {
+      "path": "scripts/batch_window8000.py",
+      "bytes": 2104
+    },
+    {
+      "path": "scripts/run_bfcl_multiturn.py",
+      "bytes": 15965
+    },
+    {
+      "path": "scripts/plot_graph_serialization.py",
+      "bytes": 6723
+    },
+    {
+      "path": "scripts/test_bfcl_scale.py",
+      "bytes": 3964
+    },
+    {
+      "path": "scripts/test_qwen_compact_summary.py",
+      "bytes": 7050
+    },
+    {
+      "path": "scripts/summarize_bfcl_repeated.py",
+      "bytes": 22463
+    },
+    {
+      "path": "scripts/probe_v2_tool_sharing.py",
+      "bytes": 8512
+    },
+    {
+      "path": "scripts/batch_threshold3300.py",
+      "bytes": 2708
+    },
+    {
+      "path": "scripts/compare_bfcl_models.py",
+      "bytes": 2655
+    },
+    {
+      "path": "scripts/audit_qwen_frozen_prefix.py",
+      "bytes": 5656
+    },
+    {
+      "path": "scripts/test_run_qwen_compact_eval.py",
+      "bytes": 2296
+    },
+    {
+      "path": "scripts/run_bfcl_repeated.py",
+      "bytes": 9680
+    },
+    {
+      "path": "scripts/run_bfcl_filesystem.py",
+      "bytes": 6978
+    },
+    {
+      "path": "scripts/batch_qwen_compact_eval.py",
+      "bytes": 8421
+    },
+    {
+      "path": "scripts/run_bfcl_scale.py",
+      "bytes": 8805
+    },
+    {
+      "path": "scripts/summarize_window8000.py",
+      "bytes": 5632
+    },
+    {
+      "path": "scripts/run_window8000_task.py",
+      "bytes": 7109
+    },
+    {
+      "path": "scripts/diagnose_qwen_first_turn.py",
+      "bytes": 1703
+    },
+    {
+      "path": "scripts/analyze_graph_token_overhead.py",
+      "bytes": 16119
+    },
+    {
+      "path": "scripts/summarize_graph_replacement.py",
+      "bytes": 5218
+    },
+    {
+      "path": "scripts/test_bfcl_identity.py",
+      "bytes": 3131
+    },
+    {
+      "path": "scripts/audit_qwen_compact_results.py",
+      "bytes": 6614
+    },
+    {
+      "path": "scripts/cleanup_superseded_experiments.py",
+      "bytes": 2324
+    },
+    {
+      "path": "scripts/report_graph_serialization.py",
+      "bytes": 15201
+    },
+    {
+      "path": "scripts/replay_bfcl_gt.py",
+      "bytes": 4145
+    },
+    {
+      "path": "scripts/benchmark_graph_serialization.py",
+      "bytes": 16682
+    },
+    {
+      "path": "scripts/probe_window4800.py",
+      "bytes": 3469
+    },
+    {
+      "path": "scripts/test_tool_graph_compact.py",
+      "bytes": 1013
+    },
+    {
+      "path": "scripts/summarize_threshold3300.py",
+      "bytes": 7782
+    },
+    {
+      "path": "scripts/benchmark_qwen_serialization.py",
+      "bytes": 14580
+    },
+    {
+      "path": "scripts/summarize_bfcl_smoke.py",
+      "bytes": 4119
+    },
+    {
+      "path": "scripts/report_qwen_serialization.py",
+      "bytes": 14009
+    },
+    {
+      "path": "scripts/test_bfcl_filesystem.py",
+      "bytes": 1792
+    },
+    {
+      "path": "scripts/summarize_bfcl_scale.py",
+      "bytes": 14968
+    },
+    {
+      "path": "scripts/test_bfcl_repeated.py",
+      "bytes": 5249
+    },
+    {
+      "path": "scripts/bfcl_models.py",
+      "bytes": 1819
+    },
+    {
+      "path": "scripts/evaluate_bfcl_smoke.py",
+      "bytes": 212
+    },
+    {
+      "path": "scripts/run_bfcl_smoke.py",
+      "bytes": 15778
+    },
+    {
+      "path": "scripts/input_provenance.py",
+      "bytes": 1385
+    },
+    {
+      "path": "scripts/graph_serialization_corpus.py",
+      "bytes": 7803
+    },
+    {
+      "path": "scripts/test_qwen_prompt_accounting.py",
+      "bytes": 8955
+    },
+    {
+      "path": "scripts/test_graph_memory_serialization_target.py",
+      "bytes": 4713
+    },
+    {
+      "path": "scripts/test_graph_memory_serialization.py",
+      "bytes": 16266
+    },
+    {
+      "path": "experiments/bfcl_identity/GRAPH_MEMORY.txt",
+      "bytes": 5490
+    },
+    {
+      "path": "experiments/bfcl_identity/GRAPH_MEMORY_REPLACEMENT.txt",
+      "bytes": 5963
+    },
+    {
+      "path": "experiments/bfcl_identity/GRAPH_MEMORY_V2.txt",
+      "bytes": 6826
+    },
+    {
+      "path": "scripts/identity_memory.py",
+      "bytes": 239
+    }
+  ],
+  "protected_files_verified_unchanged": 3214,
+  "baseline_implementation_verified_unchanged": true,
+  "tests_passed": 52,
+  "history1000_status": "prepared_not_run",
+  "history1000_triggered": 9,
+  "history1000_untriggered": 17,
+  "deleted_bytes": 37550454
+}

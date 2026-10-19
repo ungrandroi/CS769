@@ -1,0 +1,109 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_long_context_38",
+      "model_name": "local_Qwen3.8-27B-Q8-0-FC",
+      "test_category": "multi_turn_long_context",
+      "valid": false,
+      "error": {
+        "error_message": "Model instance for GorillaFileSystem does not match the state with ground truth instance.",
+        "error_type": "multi_turn:instance_state_mismatch",
+        "details": {
+          "differences": {
+            "root": {
+              "model": "<Directory: researcher, Parent: None, Contents: {'SuperResearch': <Directory: SuperResearch, Parent: researcher, Contents: {'image_344822349461074042.jpg': <<File: image_344822349461074042.jpg, Content: >>, 'image_8219547643081662353.jpg': <<File: image_8219547643081662353.jpg, Content: >>, 'image_5421509146842474663.jpg': <<File: image_5421509146842474663.jpg, Content: >>, 'image_185391401034246046.jpg': <<File: image_185391401034246046.jpg, Content: >>, 'image_6824007961180780019.jpg': <<File: image_6824007961180780019.jpg, Content: >>, 'image_2994974694593273051.jpg': <<File: image_2994974694593273051.jpg, Content: >>, 'image_2537728455072851196.jpg': <<File: image_2537728455072851196.jpg, Content: >>, 'image_2164918946836800275.jpg': <<File: image_2164918946836800275.jpg, Content: >>, 'image_1745133864906284051.jpg': <<File: image_1745133864906284051.jpg, Content: >>, 'image_7707563551789432679.jpg': <<File: image_7707563551789432679.jpg, Content: >>, 'image_8190489168166590809.jpg': <<File: image_8190489168166590809.jpg, Content: >>, 'image_2385660725381355820.jpg': <<File: image_2385660725381355820.jpg, Content: >>, 'image_4771211633166048374.jpg': <<File: image_4771211633166048374.jpg, Content: >>, 'image_3443718094055823214.jpg': <<File: image_3443718094055823214.jpg, Content: >>, 'image_6838087561356843690.jpg': <<File: image_6838087561356843690.jpg, Content: >>, 'image_605952633285970710.jpg': <<File: image_605952633285970710.jpg, Content: >>, 'image_6341510244180179744.jpg': <<File: image_6341510244180179744.jpg, Content: >>, 'image_4119241148692325954.jpg': <<File: image_4119241148692325954.jpg, Content: >>, 'image_5651066601163181955.jpg': <<File: image_5651066601163181955.jpg, Content: >>, 'image_3747091333751395055.jpg': <<File: image_3747091333751395055.jpg, Content: >>, 'image_4623743619379194431.jpg': <<File: image_4623743619379194431.jpg, Content: >>, 'image_5072742684386583099.jpg': <<File: image_5072742684386583099.jpg, Content: >>, 'image_1978458056362464778.jpg': <<File: image_1978458056362464778.jpg, Content: >>, 'image_3090346927968358019.jpg': <<File: image_3090346927968358019.jpg, Content: >>, 'image_7193806748674265039.jpg': <<File: image_7193806748674265039.jpg, Content: >>, 'image_7169516574395086720.jpg': <<File: image_7169516574395086720.jpg, Content: >>, 'image_8618240224293913315.jpg': <<File: image_8618240224293913315.jpg, Content: >>, 'image_5514683852355062444.jpg': <<File: image_5514683852355062444.jpg, Content: >>, 'image_8749630317332649147.jpg': <<File: image_8749630317332649147.jpg, Content: >>, 'image_1912245706439755759.jpg': <<File: image_1912245706439755759.jpg, Content: >>}>}>",
+              "ground_truth": "<Directory: researcher, Parent: None, Contents: {}>"
+            }
+          },
+          "model_instance_state": {
+            "long_context": true,
+            "root": "<Directory: researcher, Parent: None, Contents: {'SuperResearch': <Directory: SuperResearch, Parent: researcher, Contents: {'image_344822349461074042.jpg': <<File: image_344822349461074042.jpg, Content: >>, 'image_8219547643081662353.jpg': <<File: image_8219547643081662353.jpg, Content: >>, 'image_5421509146842474663.jpg': <<File: image_5421509146842474663.jpg, Content: >>, 'image_185391401034246046.jpg': <<File: image_185391401034246046.jpg, Content: >>, 'image_6824007961180780019.jpg': <<File: image_6824007961180780019.jpg, Content: >>, 'image_2994974694593273051.jpg': <<File: image_2994974694593273051.jpg, Content: >>, 'image_2537728455072851196.jpg': <<File: image_2537728455072851196.jpg, Content: >>, 'image_2164918946836800275.jpg': <<File: image_2164918946836800275.jpg, Content: >>, 'image_1745133864906284051.jpg': <<File: image_1745133864906284051.jpg, Content: >>, 'image_7707563551789432679.jpg': <<File: image_7707563551789432679.jpg, Content: >>, 'image_8190489168166590809.jpg': <<File: image_8190489168166590809.jpg, Content: >>, 'image_2385660725381355820.jpg': <<File: image_2385660725381355820.jpg, Content: >>, 'image_4771211633166048374.jpg': <<File: image_4771211633166048374.jpg, Content: >>, 'image_3443718094055823214.jpg': <<File: image_3443718094055823214.jpg, Content: >>, 'image_6838087561356843690.jpg': <<File: image_6838087561356843690.jpg, Content: >>, 'image_605952633285970710.jpg': <<File: image_605952633285970710.jpg, Content: >>, 'image_6341510244180179744.jpg': <<File: image_6341510244180179744.jpg, Content: >>, 'image_4119241148692325954.jpg': <<File: image_4119241148692325954.jpg, Content: >>, 'image_5651066601163181955.jpg': <<File: image_5651066601163181955.jpg, Content: >>, 'image_3747091333751395055.jpg': <<File: image_3747091333751395055.jpg, Content: >>, 'image_4623743619379194431.jpg': <<File: image_4623743619379194431.jpg, Content: >>, 'image_5072742684386583099.jpg': <<File: image_5072742684386583099.jpg, Content: >>, 'image_1978458056362464778.jpg': <<File: image_1978458056362464778.jpg, Content: >>, 'image_3090346927968358019.jpg': <<File: image_3090346927968358019.jpg, Content: >>, 'image_7193806748674265039.jpg': <<File: image_7193806748674265039.jpg, Content: >>, 'image_7169516574395086720.jpg': <<File: image_7169516574395086720.jpg, Content: >>, 'image_8618240224293913315.jpg': <<File: image_8618240224293913315.jpg, Content: >>, 'image_5514683852355062444.jpg': <<File: image_5514683852355062444.jpg, Content: >>, 'image_8749630317332649147.jpg': <<File: image_8749630317332649147.jpg, Content: >>, 'image_1912245706439755759.jpg': <<File: image_1912245706439755759.jpg, Content: >>}>}>"
+          },
+          "ground_truth_instance_state": {
+            "long_context": true,
+            "root": "<Directory: researcher, Parent: None, Contents: {}>"
+          }
+        },
+        "execution_result": [
+          {
+            "model": [
+              [
+                "{\"matches\": [\"./SuperResearch/findings_report\"]}"
+              ],
+              [
+                "{\"current_directory_content\": [\"SuperResearch\"]}"
+              ],
+              [
+                "{\"current_working_directory\": \"SuperResearch\"}"
+              ],
+              [
+                "{\"current_directory_content\": [\"findings_report\", \"image_344822349461074042.jpg\", \"image_8219547643081662353.jpg\", \"image_5421509146842474663.jpg\", \"image_185391401034246046.jpg\", \"image_6824007961180780019.jpg\", \"image_2994974694593273051.jpg\", \"image_2537728455072851196.jpg\", \"image_2164918946836800275.jpg\", \"image_1745133864906284051.jpg\", \"image_7707563551789432679.jpg\", \"image_8190489168166590809.jpg\", \"image_2385660725381355820.jpg\", \"image_4771211633166048374.jpg\", \"image_3443718094055823214.jpg\", \"image_6838087561356843690.jpg\", \"image_605952633285970710.jpg\", \"image_6341510244180179744.jpg\", \"image_4119241148692325954.jpg\", \"image_5651066601163181955.jpg\", \"image_3747091333751395055.jpg\", \"image_4623743619379194431.jpg\", \"image_5072742684386583099.jpg\", \"image_1978458056362464778.jpg\", \"image_3090346927968358019.jpg\", \"image_7193806748674265039.jpg\", \"image_7169516574395086720.jpg\", \"image_8618240224293913315.jpg\", \"image_5514683852355062444.jpg\", \"image_8749630317332649147.jpg\", \"image_1912245706439755759.jpg\"]}"
+              ],
+              [
+                "{\"result\": \"'findings_report' removed\"}"
+              ],
+              [
+                "{}"
+              ],
+              [
+                "{\"current_directory_content\": [\"SuperResearch\"]}"
+              ],
+              [
+                "{\"current_working_directory\": \"SuperResearch\"}"
+              ],
+              [
+                "{\"current_directory_content\": [\"image_344822349461074042.jpg\", \"image_8219547643081662353.jpg\", \"image_5421509146842474663.jpg\", \"image_185391401034246046.jpg\", \"image_6824007961180780019.jpg\", \"image_2994974694593273051.jpg\", \"image_2537728455072851196.jpg\", \"image_2164918946836800275.jpg\", \"image_1745133864906284051.jpg\", \"image_7707563551789432679.jpg\", \"image_8190489168166590809.jpg\", \"image_2385660725381355820.jpg\", \"image_4771211633166048374.jpg\", \"image_3443718094055823214.jpg\", \"image_6838087561356843690.jpg\", \"image_605952633285970710.jpg\", \"image_6341510244180179744.jpg\", \"image_4119241148692325954.jpg\", \"image_5651066601163181955.jpg\", \"image_3747091333751395055.jpg\", \"image_4623743619379194431.jpg\", \"image_5072742684386583099.jpg\", \"image_1978458056362464778.jpg\", \"image_3090346927968358019.jpg\", \"image_7193806748674265039.jpg\", \"image_7169516574395086720.jpg\", \"image_8618240224293913315.jpg\", \"image_5514683852355062444.jpg\", \"image_8749630317332649147.jpg\", \"image_1912245706439755759.jpg\"]}"
+              ]
+            ],
+            "ground_truth": [
+              "{\"current_working_directory\": \"SuperResearch\"}",
+              "{\"result\": \"'findings_report' removed\"}",
+              "{\"result\": \"'image_5421509146842474663.jpg' removed\"}",
+              "{\"result\": \"'image_185391401034246046.jpg' removed\"}",
+              "{\"result\": \"'image_6824007961180780019.jpg' removed\"}",
+              "{\"result\": \"'image_2994974694593273051.jpg' removed\"}",
+              "{\"result\": \"'image_2537728455072851196.jpg' removed\"}",
+              "{\"result\": \"'image_2164918946836800275.jpg' removed\"}",
+              "{\"result\": \"'image_1745133864906284051.jpg' removed\"}",
+              "{\"result\": \"'image_7707563551789432679.jpg' removed\"}",
+              "{\"result\": \"'image_8190489168166590809.jpg' removed\"}",
+              "{\"result\": \"'image_2385660725381355820.jpg' removed\"}",
+              "{\"result\": \"'image_4771211633166048374.jpg' removed\"}",
+              "{\"result\": \"'image_3443718094055823214.jpg' removed\"}",
+              "{\"result\": \"'image_6838087561356843690.jpg' removed\"}",
+              "{\"result\": \"'image_605952633285970710.jpg' removed\"}",
+              "{\"result\": \"'image_6341510244180179744.jpg' removed\"}",
+              "{\"result\": \"'image_4119241148692325954.jpg' removed\"}",
+              "{\"result\": \"'image_5651066601163181955.jpg' removed\"}",
+              "{\"result\": \"'image_3747091333751395055.jpg' removed\"}",
+              "{\"result\": \"'image_4623743619379194431.jpg' removed\"}",
+              "{\"result\": \"'image_5072742684386583099.jpg' removed\"}",
+              "{\"result\": \"'image_1978458056362464778.jpg' removed\"}",
+              "{\"result\": \"'image_3090346927968358019.jpg' removed\"}",
+              "{\"result\": \"'image_7193806748674265039.jpg' removed\"}",
+              "{\"result\": \"'image_7169516574395086720.jpg' removed\"}",
+              "{\"result\": \"'image_8618240224293913315.jpg' removed\"}",
+              "{\"result\": \"'image_5514683852355062444.jpg' removed\"}",
+              "{\"result\": \"'image_8749630317332649147.jpg' removed\"}",
+              "{\"result\": \"'image_1912245706439755759.jpg' removed\"}",
+              "{\"result\": \"'image_344822349461074042.jpg' removed\"}",
+              "{\"result\": \"'image_8219547643081662353.jpg' removed\"}",
+              "{}",
+              "{\"result\": \"'SuperResearch' removed\"}"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "result_sha256": "7f6f1901dd14d6ed1d79707829d042d5669a02f4d6f77c122d30de18d4f3f903",
+  "score_sha256": "22a4d17cffe5d3b73f64fea64b1c0c017964ae6825570ca3f064ef79b78403a1",
+  "evaluator": "official BFCL",
+  "score_file": "score/local_Qwen3.8-27B-Q8-0-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json"
+}

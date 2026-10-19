@@ -1,0 +1,23 @@
+在项目根目录执行（使用已有BFCL conda环境）：
+
+完整早期基线：
+  scripts/bfcl_python.sh scripts/run_research_eval.py --help
+  scripts/bfcl_python.sh scripts/summarize_research_eval.py
+
+原事件图记忆 · 来源去重版（离线，不调用模型）：
+  scripts/bfcl_python.sh scripts/probe_v2_provenance_dedup.py
+无损去重续跑及评分：
+  scripts/bfcl_python.sh scripts/batch_qwen_dedup.py
+  scripts/bfcl_python.sh scripts/summarize_qwen_dedup.py
+
+纯1000-token历史触发：
+  scripts/bfcl_python.sh scripts/audit_history_checkpoints.py
+  scripts/bfcl_python.sh scripts/batch_history1000.py
+  scripts/bfcl_python.sh scripts/summarize_history1000.py
+当前仅第一步已完成，未执行推理；不要把检查点当作成功率结果。
+后两条推理批次入口需要先按qwen27b_experiment/runtime/servers.json配置启动本地模型服务。已完成记录不应覆盖。
+
+测试：
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=scripts scripts/bfcl_python.sh -m unittest discover -s scripts -p 'test_*.py'
+
+统一名称见METHOD_NAMES.txt；新名称报告见reports/。刷新：scripts/bfcl_python.sh scripts/render_named_reports.py
