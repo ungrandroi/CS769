@@ -1,4 +1,9 @@
-"""Build the step-by-step memory viewer data from saved qwen27b_experiment runs.
+"""Build the step-by-step memory viewer data from saved Qwen 27B runs.
+
+Experiments: qwen27b_experiment (Identity / State-Transition Graph / Event Graph),
+qwen27b_dedup_eval (Event Graph-Dedup, same shared first turn), and the prepared
+history1000 checkpoints (no inference yet; only the trigger point and the graphs
+that conversion would deliver, which the history prefix fully determines).
 
 No model calls. For every task x method it:
   * reads the saved API tape (exact request inputs, responses, usage);
@@ -18,8 +23,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BATCH = ROOT / "experiments/bfcl_identity/qwen27b_experiment"
+DEDUP = ROOT / "experiments/bfcl_identity/qwen27b_dedup_eval"
+HISTORY = ROOT / "experiments/bfcl_identity/history1000_eval"
 BFCL = ROOT / "vendor/gorilla/berkeley-function-call-leaderboard"
-MODES = ("identity", "v1-compact", "v2-compact")
+MODES = ("identity", "v1-compact", "v2-compact", "v2-dedup")
+LABELS = {"identity": "Identity", "v1-compact": "State-Transition Graph",
+          "v2-compact": "Event Graph", "v2-dedup": "Event Graph-Dedup"}
+THRESHOLD = 1000
 MODEL = {"key": "qwen38-27b", "label": "Qwen3.8-27B-Q8_0", "note": "本地 GGUF · temperature 0 · seed 42"}
 
 sys.path.insert(0, str(BATCH / "source_code"))
@@ -27,6 +37,11 @@ sys.path.insert(0, str(BFCL))
 from graph_memory import GraphMemory  # noqa: E402  (batch snapshot)
 from graph_memory_v2 import GraphMemoryV2  # noqa: E402
 fs_mod = importlib.import_module("bfcl_eval.eval_checker.multi_turn_eval.func_source_code.gorilla_file_system")
+
+
+def run_dir_for(task_id, mode):
+    return DEDUP / "tasks" / task_id if mode == "v2-dedup" else BATCH / "tasks" / task_id / mode
+
 
 TOOLSETS = set()
 CLIP = 1400        # characters of a message kept for display
@@ -140,8 +155,18 @@ def v1_export(graph, visible_at, delivered_step):
     return {"nodes": nodes, "edges": edges}
 
 
+def history_size(history, count):
+    """history1000 metric, as in scripts/workflows/checkpoints.py."""
+    calls = [m for m in history if m.get("type") == "function_call"]
+    returns = [m for m in history if m.get("type") == "function_call_output"]
+    ids, out_ids = [m["call_id"] for m in calls], [m["call_id"] for m in returns]
+    if len(set(ids)) != len(ids) or len(set(out_ids)) != len(out_ids) or set(ids) != set(out_ids):
+        return None
+    return sum(count(m["name"] + "(" + m["arguments"] + ")") for m in calls) + sum(count(m["output"]) for m in returns)
+
+
 def build_run(task_id, category, mode, entry, issues):
-    run_dir = BATCH / "tasks" / task_id / mode
+    run_dir = run_dir_for(task_id, mode)
     api = json.load(open(run_dir / f"{task_id}.api.json"))
     for rec in api:
         TOOLSETS.add(json.dumps(rec["request"]["tools"], sort_keys=True))
@@ -194,7 +219,7 @@ def build_run(task_id, category, mode, entry, issues):
             saved = recorded.get(call["call_id"])
             if saved is not None and norm(saved) != norm(out):
                 issues.append(f"{task_id}/{mode} req{r} {call['name']}: replay output differs")
-            results.append({"id": call["call_id"], "out": clip(saved if saved is not None else out, 900),
+            results.append({"id": call["call_id"], "out": clip(saved if saved is not None else out, 6000),
                             "recorded": saved is not None, "cwd": cwd_path(fs)})
         steps[r]["res"] = results
         steps[r]["fs"] = snap()
@@ -254,6 +279,7 @@ def build_run(task_id, category, mode, entry, issues):
         if ids != rebuilt:
             issues.append(f"{task_id}/{mode}: rebuilt delivered nodes differ ({len(ids)} vs {len(rebuilt)})")
 
+    run_graph_inputs[(task_id, mode)] = (logical, visible_at, api)
     return {
         "passed": bool(score["passed"]),
         "reason": (score.get("diagnostics") or [{}])[0].get("error", {}).get("error_type") if not score["passed"] else "passed",
@@ -263,6 +289,29 @@ def build_run(task_id, category, mode, entry, issues):
         "steps": steps, "pool": pool, "fs0": initial,
         "graph": graph, "turnChecks": checked, "cwd0": cwd0,
     }
+
+
+run_graph_inputs = {}
+
+
+def history1000(task_id, checkpoint, count, issues):
+    """Per-request cumulative tool-content tokens on the Identity run, plus the
+    graphs a conversion at the trigger would deliver (offline, no inference)."""
+    logical, visible_at, api = run_graph_inputs[(task_id, "identity")]
+    hist = [history_size(rec["request"]["input"], count) for rec in api]
+    trigger = next((i for i, h in enumerate(hist) if h is not None and h >= THRESHOLD), None)
+    expected = checkpoint["trigger_index"] if checkpoint else None
+    if trigger != expected:
+        issues.append(f"{task_id} history1000: trigger {trigger} != checkpoints.json {expected}")
+    if checkpoint and trigger is not None and hist[trigger] != checkpoint["history_tokens"]:
+        issues.append(f"{task_id} history1000: {hist[trigger]} tokens != checkpoints.json {checkpoint['history_tokens']}")
+    out = {"hist": hist, "trigger": trigger, "graphs": None}
+    if trigger is not None:
+        delivered_step = sum(1 for m in api[trigger]["request"]["input"] if m.get("type") == "function_call_output")
+        out["graphs"] = {"v1-compact": v1_export(GraphMemory().build(logical), visible_at, delivered_step),
+                         "v2-compact": v2_export(GraphMemoryV2().build(logical), visible_at, delivered_step)}
+        out["before"] = checkpoint["before"]
+    return out
 
 
 TOOL_PREFIX = "Tool description: "
@@ -310,14 +359,21 @@ def main():
     args = parser.parse_args()
     dataset = load_dataset()
     plan = json.load(open(BATCH / "plan.json"))
+    checkpoints = json.load(open(HISTORY / "checkpoints.json"))
+    by_task = {c["id"]: c for c in checkpoints["tasks"]}
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from local_qwen_tokenizer import LocalQwenTokenizer
     tasks, issues = [], []
-    for t in plan["tasks"]:
-        entry = dataset[t["id"]]
-        runs = {m: build_run(t["id"], t["category"], m, entry, issues) for m in MODES}
-        tasks.append({"id": t["id"], "category": t["category"], "family": t.get("family_id"),
-                      "questions": [q[0]["content"] if q else "" for q in entry["question"]],
-                      "runs": runs})
-        print(t["id"], {m: (r["passed"], len(r["steps"])) for m, r in runs.items()}, flush=True)
+    with LocalQwenTokenizer() as tok:
+        for t in plan["tasks"]:
+            entry = dataset[t["id"]]
+            runs = {m: build_run(t["id"], t["category"], m, entry, issues) for m in MODES}
+            h = history1000(t["id"], by_task.get(t["id"]), tok.count, issues)
+            tasks.append({"id": t["id"], "category": t["category"], "family": t.get("family_id"),
+                          "questions": [q[0]["content"] if q else "" for q in entry["question"]],
+                          "runs": runs, "h1000": h})
+            print(t["id"], {m: (r["passed"], len(r["steps"])) for m, r in runs.items()},
+                  "h1000", h["trigger"], flush=True)
     if len(TOOLSETS) != 1:
         issues.append(f"{len(TOOLSETS)} different tool sets across requests")
     first = plan["tasks"][0]["id"]
@@ -327,7 +383,14 @@ def main():
              "toolTokens": tool_tokens(sample["request"], sample["response"]["usage"]["input_tokens"], issues),
              "tasks": tasks}
     print("tool tokens:", model["toolTokens"])
-    data = {"models": [model], "issues": issues}
+    model["experiments"] = [
+        {"key": "baseline", "label": "首轮后转换", "status": "complete",
+         "modes": list(MODES), "note": "第 2 轮用户输入前把历史转换成记忆一次；Event Graph-Dedup 来自 qwen27b_dedup_eval，共用同一段首轮"},
+        {"key": "history1000", "label": "1000-token 历史阈值转换", "status": checkpoints["status"],
+         "modes": ["identity"], "pending": ["v1-compact", "v2-compact"], "threshold": checkpoints["threshold"],
+         "metric": checkpoints["metric"], "triggered": len(checkpoints["tasks"]), "untriggered": len(checkpoints["untriggered"])},
+    ]
+    data = {"models": [model], "labels": LABELS, "issues": issues}
     args.data_out.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
     print("issues:", len(issues))
     for i in issues[:40]:

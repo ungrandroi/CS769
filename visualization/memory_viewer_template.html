@@ -17,6 +17,8 @@
   --m-id: #2a78d6;
   --m-v1: #eb6834;
   --m-v2: #1baf7a;
+  --m-dd: #eda100;
+  --on-cur: #ffffff;
   --ok: #1d7f45;
   --bad: #c13d2c;
   --add: #1d7f45;
@@ -38,7 +40,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0e1117; --surface: #161a22; --sunk: #1c212b; --ink: #e8ebf1; --ink-2: #b3bbca; --muted: #7f899c; --line: #2a303c;
-    --m-id: #3987e5; --m-v1: #d95926; --m-v2: #199e70;
+    --m-id: #3987e5; --m-v1: #d95926; --m-v2: #199e70; --m-dd: #c98500;
     --ok: #4cc283; --bad: #ef7464; --add: #5fd090; --add-bg: #173327; --mod-bg: #3a2e15; --mod: #e5b55a;
     --term-bg: #0a0d13; --term-now: #172030;
     color-scheme: dark;
@@ -46,7 +48,7 @@
 }
 :root[data-theme="dark"] {
   --bg: #0e1117; --surface: #161a22; --sunk: #1c212b; --ink: #e8ebf1; --ink-2: #b3bbca; --muted: #7f899c; --line: #2a303c;
-  --m-id: #3987e5; --m-v1: #d95926; --m-v2: #199e70;
+  --m-id: #3987e5; --m-v1: #d95926; --m-v2: #199e70; --m-dd: #c98500;
   --ok: #4cc283; --bad: #ef7464; --add: #5fd090; --add-bg: #173327; --mod-bg: #3a2e15; --mod: #e5b55a;
   --term-bg: #0a0d13; --term-now: #172030;
   color-scheme: dark;
@@ -55,7 +57,9 @@ body { background: var(--bg); color: var(--ink); font-family: var(--font-ui); fo
 body[data-mode="identity"] { --cur: var(--m-id); }
 body[data-mode="v1-compact"] { --cur: var(--m-v1); }
 body[data-mode="v2-compact"] { --cur: var(--m-v2); }
+body[data-mode="v2-dedup"] { --cur: var(--m-dd); --on-cur: #1d1500; }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 button, select, input { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--cur); outline-offset: 2px; }
 
@@ -66,7 +70,8 @@ h1 { font-size: 22px; font-weight: 600; margin: 0; letter-spacing: -0.01em; text
 .scoreline { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .scoreline b { color: var(--ink); font-weight: 600; }
 
-.controls { display: grid; grid-template-columns: minmax(180px, 240px) minmax(220px, 1fr) auto; gap: 12px; align-items: end; }
+.controls { display: grid; grid-template-columns: minmax(170px, 230px) minmax(200px, 270px) minmax(240px, 1fr); gap: 12px; align-items: end; }
+.controls .wide { grid-column: 1 / -1; }
 @media (max-width: 900px) { .controls { grid-template-columns: 1fr; } }
 .field { display: grid; gap: 4px; min-width: 0; }
 .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 500; }
@@ -81,7 +86,7 @@ select { width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-r
 .turns { display: grid; gap: 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
 .chip { font-size: 12px; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); background: transparent; cursor: pointer; }
 .chip.past { color: var(--ink-2); }
-.chip.now { color: var(--surface); background: var(--cur); border-color: var(--cur); }
+.chip.now { color: var(--on-cur); background: var(--cur); border-color: var(--cur); }
 .chip.never { text-decoration: line-through; opacity: .6; cursor: default; }
 
 .player { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 14px; align-items: center; padding: 10px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; }
@@ -89,7 +94,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @media (max-width: 700px) { .player { grid-template-columns: 1fr; position: static; } }
 .transport { display: flex; gap: 4px; }
 .btn { width: 34px; height: 32px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 6px; background: var(--sunk); cursor: pointer; }
-.btn.play { width: 44px; background: var(--cur); border-color: var(--cur); color: #fff; }
+.btn.play { width: 44px; background: var(--cur); border-color: var(--cur); color: var(--on-cur); }
 .btn svg { width: 14px; height: 14px; fill: currentColor; }
 .scrub { display: grid; gap: 2px; min-width: 0; }
 .ticks { position: relative; height: 16px; font-size: 10.5px; color: var(--muted); }
@@ -99,7 +104,7 @@ input[type="range"] { width: 100%; accent-color: var(--cur); margin: 0; }
 .stepinfo { display: flex; align-items: center; gap: 10px; font-size: 13px; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .stepinfo select { width: auto; padding: 4px 6px; }
 .tag { font-size: 11px; padding: 1px 7px; border-radius: 4px; background: var(--sunk); color: var(--ink-2); border: 1px solid var(--line); }
-.tag.swap { background: var(--cur); color: #fff; border-color: var(--cur); }
+.tag.swap { background: var(--cur); color: var(--on-cur); border-color: var(--cur); }
 
 .stage { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 14px; }
 @media (max-width: 1000px) { .stage { grid-template-columns: minmax(0, 1fr); } }
@@ -117,7 +122,7 @@ h2 { font-size: 13px; font-weight: 600; margin: 0; letter-spacing: 0.02em; }
 .row .sz { color: var(--muted); font-size: 11px; }
 .row .flag { font-family: var(--font-ui); font-size: 10.5px; padding: 0 6px; border-radius: 3px; }
 .row.cwd { background: color-mix(in srgb, var(--cur) 14%, transparent); }
-.row.cwd .flag.c { background: var(--cur); color: #fff; }
+.row.cwd .flag.c { background: var(--cur); color: var(--on-cur); }
 .row.st-add { background: var(--add-bg); } .row.st-add .flag.s { color: var(--add); }
 .row.st-mod { background: var(--mod-bg); } .row.st-mod .flag.s { color: var(--mod); }
 .row.st-del .nm { text-decoration: line-through; color: var(--bad); } .row.st-del .flag.s { color: var(--bad); }
@@ -135,12 +140,12 @@ h2 { font-size: 13px; font-weight: 600; margin: 0; letter-spacing: 0.02em; }
 .t-now { background: var(--term-now); box-shadow: -12px 0 0 var(--term-now), 12px 0 0 var(--term-now); }
 .t-p { color: var(--term-prompt); } .t-c { color: var(--term-cmd); } .t-d { color: var(--term-dim); }
 .t-u { color: var(--term-user); } .t-e { color: var(--term-err); } .t-a { color: #a9c4ff; }
-.t-swap { color: #fff; background: var(--cur); padding: 0 4px; border-radius: 3px; }
+.t-swap { color: var(--on-cur); background: var(--cur); padding: 0 4px; border-radius: 3px; }
 
 /* memory */
 .tabs { display: inline-flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
 .tabs button { border: 0; background: transparent; padding: 4px 12px; font-size: 12.5px; cursor: pointer; }
-.tabs button[aria-selected="true"] { background: var(--cur); color: #fff; }
+.tabs button[aria-selected="true"] { background: var(--cur); color: var(--on-cur); }
 .memp { height: 734px; }
 .membody { flex: 1; min-height: 0; overflow: auto; position: relative; }
 @media (max-width: 1000px) { .memp { height: auto; } .membody { flex: none; height: 560px; } }
@@ -233,21 +238,31 @@ code { font-family: var(--font-mono); font-size: 12px; }
 @keyframes flash { from { background: color-mix(in srgb, var(--cur) 32%, transparent); } }
 .msg.fresh, .row.st-add, .row.st-mod { animation: flash 900ms ease-out; }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+.mode[aria-disabled="true"] { border-style: dashed; cursor: not-allowed; color: var(--muted); }
+.mode[aria-disabled="true"] .dot { opacity: .45; }
+.res.pend { color: var(--muted); }
+.field .hint { font-size: 11px; color: var(--muted); text-transform: none; letter-spacing: 0; font-weight: 400; }
+.expnote { font-size: 12.5px; color: var(--ink-2); padding: 8px 12px; border-radius: 6px; background: var(--sunk); border: 1px dashed var(--line); }
+.expnote b { color: var(--ink); }
+.ticks span.trig { color: var(--bad); border-left: 2px solid var(--bad); font-weight: 500; }
+
 </style>
 
 <div class="app">
   <header class="top">
     <div>
       <h1>BFCL 记忆回放</h1>
-      <p>逐次模型调用回放：左侧是模拟文件系统的变化，右侧是模型每次看到的工作上下文。两种 Compact 方法在第 2 轮用户输入前把历史替换成图，只替换一次。</p>
+      <p>逐次模型调用回放：左侧是模拟文件系统的变化，右侧是模型每次看到的工作上下文。比较 Identity、State-Transition Graph、Event Graph、Event Graph-Dedup 四种记忆方法，以及两种转换时机。</p>
     </div>
     <div class="scoreline" id="scoreline"></div>
   </header>
 
   <section class="controls" aria-label="选择">
     <label class="field"><span class="label">模型</span><select id="model"></select></label>
-    <label class="field"><span class="label">任务</span><select id="task"></select></label>
-    <div class="field"><span class="label">记忆模式</span><div class="modes" id="modes" role="radiogroup" aria-label="记忆模式"></div></div>
+    <label class="field"><span class="label">实验</span><select id="exp"></select></label>
+    <label class="field"><span class="label">任务 <span class="hint" id="taskHint"></span></span><select id="task"></select></label>
+    <div class="field wide"><span class="label">记忆方法</span><div class="modes" id="modes" role="radiogroup" aria-label="记忆方法"></div></div>
+    <div class="expnote wide" id="expnote" hidden></div>
   </section>
 
   <section class="turns prefix" id="prefix" aria-label="任务与工具"></section>
@@ -293,14 +308,22 @@ code { font-family: var(--font-mono); font-size: 12px; }
           <h2 id="memTitle">工作上下文</h2>
           <div class="sub" id="memSub"></div>
         </div>
-        <div class="tabs" id="tabs" role="tablist">
-          <button role="tab" id="tabGraph" aria-selected="true">图</button>
-          <button role="tab" id="tabText" aria-selected="false">上下文文本</button>
-        </div>
+        <div class="tabs" id="tabs" role="tablist"></div>
       </div>
       <div class="membody" id="membody"></div>
     </section>
   </main>
+
+  <section class="panel" id="histPanel" hidden>
+    <div class="phead">
+      <h2>工具内容累计 tokens（history1000 口径）</h2>
+      <span class="sub">调用 name(arguments) 与原始返回各自用 Qwen tokenizer 计数后求和；不含工具定义、用户输入、模型文字和协议包装</span>
+    </div>
+    <div class="chartwrap">
+      <div id="chart2"></div>
+      <div class="stats" id="stats2"></div>
+    </div>
+  </section>
 
   <section class="panel">
     <div class="phead">
@@ -317,10 +340,11 @@ code { font-family: var(--font-mono); font-size: 12px; }
   <details class="about">
     <summary>数据来源与读法</summary>
     <ul>
-      <li>数据来自 <code>qwen27b_experiment/tasks/</code> 的原始请求与响应记录，没有重新推理。得分为官方 BFCL 整任务评分。</li>
-      <li>三种方法共用同一段 Qwen 第 1 轮。两种 Compact 分支回放这段首轮来恢复环境，第 2 轮用户输入前把旧历史换成一条图记忆，之后的新消息照常追加，不再压缩。</li>
+      <li>首轮后转换：Identity、State-Transition Graph、Event Graph 来自 <code>qwen27b_experiment/</code>，Event Graph-Dedup 来自 <code>qwen27b_dedup_eval/</code>。四种方法共用同一段 Qwen 第 1 轮；图方法回放这段首轮恢复环境，在第 2 轮用户输入前把旧历史换成一条图记忆，之后的新消息照常追加，不再转换。没有重新推理，得分为官方 BFCL 整任务评分。</li>
+      <li>Event Graph-Dedup 与 Event Graph 的图内容相同，区别在编码：来源关系按规则无损去重，不合并实际调用。图视图因此一样，记忆文本与 token 不同。</li>
+      <li>1000-token 历史阈值转换：<code>history1000_eval/</code> 目前只准备了检查点，还没有推理，也没有成绩。页面显示 Identity 轨迹上的工具内容累计曲线、触发点，以及在触发点转换时会交给模型的两种图（由前缀完全决定，离线构建）。逐次累计值与 <code>checkpoints.json</code> 的触发位置和 token 数逐项核对一致。</li>
       <li>文件环境：用官方 GorillaFileSystem 逐条重放工具调用得到。每次输出与记录一致，每轮结束时的目录树与 BFCL 状态日志一致。</li>
-      <li>图视图：用该批次 <code>source_code/</code> 中的构图代码，对整段可见历史重建。替换点之前的节点与实际发送的图一致（实线）。替换点之后的部分在实验中以原始消息形式追加，这里按同一规则画出，仅作对照（虚线 / 斜纹）。</li>
+      <li>图视图：用各批次 <code>source_code/</code> 中的构图代码，对整段可见历史重建。转换点之前的节点与实际发送的图一致（实线）；之后的部分在实验中以原始消息形式追加，这里按同一规则画出，仅作对照（虚线 / 斜纹）。</li>
       <li>工具定义的 token 数：用服务端同一 chat template 和本地 Qwen tokenizer，把同一条请求分别带工具、不带工具渲染并计数，两者之差即工具成本；渲染总数与服务端 usage 逐 token 一致。</li>
       <li>上下文文本：每次调用实际发送的输入消息。较长的工具返回在页面上截断显示，并标出原长度。</li>
     </ul>
@@ -331,77 +355,115 @@ code { font-family: var(--font-mono); font-size: 12px; }
 <script>
 (() => {
 const DATA = JSON.parse(document.getElementById('viewer-data').textContent);
+const LABELS = DATA.labels;
 const MODES = [
-  { k: 'identity', label: 'Mem Identity', short: 'Identity', c: '--m-id' },
-  { k: 'v1-compact', label: 'V1-Compact', short: 'V1', c: '--m-v1' },
-  { k: 'v2-compact', label: 'V2-Compact', short: 'V2', c: '--m-v2' },
-];
+  { k: 'identity', c: '--m-id' },
+  { k: 'v1-compact', c: '--m-v1' },
+  { k: 'v2-compact', c: '--m-v2' },
+  { k: 'v2-dedup', c: '--m-dd' },
+].map(m => ({ ...m, label: LABELS[m.k] }));
+const modeOf = k => MODES.find(m => m.k === k);
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const fmtK = n => n >= 10000 ? (n / 1000).toFixed(0) + 'k' : n >= 1000 ? (n / 1000).toFixed(1) + 'k' : String(n);
 const fmtN = n => n.toLocaleString('en-US');
 const css = name => getComputedStyle(document.body).getPropertyValue(name).trim();
 
-const S = { mi: 0, ti: 0, mode: 'v2-compact', r: 0, playing: false, speed: 1, tab: 'graph', timer: null, toolsOpen: false };
+const S = { mi: 0, ei: 0, ti: 0, mode: 'v2-compact', r: 0, playing: false, speed: 1, tab: 'graph', timer: null, toolsOpen: false };
 try {
   const saved = JSON.parse(localStorage.getItem('bfcl-memory-viewer') || 'null');
-  if (saved) Object.assign(S, { mi: saved.mi ?? 0, ti: saved.ti ?? 0, mode: saved.mode ?? S.mode, speed: saved.speed ?? 1, tab: saved.tab ?? 'graph', toolsOpen: !!saved.toolsOpen });
+  if (saved) Object.assign(S, { mi: saved.mi ?? 0, ei: saved.ei ?? 0, ti: saved.ti ?? 0, mode: saved.mode ?? S.mode, speed: saved.speed ?? 1, tab: saved.tab ?? 'graph', toolsOpen: !!saved.toolsOpen });
 } catch (e) {}
-function persist() { try { localStorage.setItem('bfcl-memory-viewer', JSON.stringify({ mi: S.mi, ti: S.ti, mode: S.mode, speed: S.speed, tab: S.tab, toolsOpen: S.toolsOpen })); } catch (e) {} }
+function persist() { try { localStorage.setItem('bfcl-memory-viewer', JSON.stringify({ mi: S.mi, ei: S.ei, ti: S.ti, mode: S.mode, speed: S.speed, tab: S.tab, toolsOpen: S.toolsOpen })); } catch (e) {} }
 
 const model = () => DATA.models[S.mi];
+const exp = () => model().experiments[S.ei];
+const isH = () => exp().key === 'history1000';
+const expModes = () => exp().modes.map(modeOf);
 const task = () => model().tasks[S.ti];
 const run = (m = S.mode) => task().runs[m];
 const shortId = id => id.replace('multi_turn_long_context_', 'long_context ').replace('multi_turn_base_', 'base ');
+
+/* The single conversion point of the current view: history → memory. */
+function conv() {
+  if (isH()) { const h = task().h1000; return h.trigger != null ? { idx: h.trigger, kind: 'h1000' } : null; }
+  const R = run();
+  return R.boundary != null ? { idx: R.boundary, kind: 'swap' } : null;
+}
 
 /* ---------- pickers ---------- */
 function fillModels() {
   $('model').innerHTML = DATA.models.map((m, i) => `<option value="${i}">${esc(m.label)}</option>`).join('');
   $('model').value = S.mi;
 }
+function fillExps() {
+  if (S.ei >= model().experiments.length) S.ei = 0;
+  $('exp').innerHTML = model().experiments.map((e, i) => `<option value="${i}">${esc(e.label)}${e.status === 'complete' ? '' : '（未运行）'}</option>`).join('');
+  $('exp').value = S.ei;
+}
 function fillTasks() {
   const groups = {};
   model().tasks.forEach((t, i) => (groups[t.category] ||= []).push([t, i]));
   const names = { multi_turn_base: 'Base', multi_turn_long_context: 'Long Context' };
+  const ms = expModes();
   $('task').innerHTML = Object.entries(groups).map(([g, list]) => `<optgroup label="${names[g] || g}">` + list.map(([t, i]) => {
-    const marks = MODES.map(m => `${m.short}${t.runs[m.k].passed ? '✓' : '✗'}`).join(' ');
-    return `<option value="${i}">${shortId(t.id)} · ${t.questions.length} 轮 · ${marks}</option>`;
+    let tail;
+    if (isH()) { const h = t.h1000; tail = h.trigger != null ? `第 ${h.trigger + 1} 次调用触发（${fmtN(h.hist[h.trigger])}）` : '未触发'; }
+    else tail = ms.map(m => t.runs[m.k].passed ? '✓' : '✗').join('');
+    return `<option value="${i}">${shortId(t.id)} · ${t.questions.length} 轮 · ${tail}</option>`;
   }).join('') + '</optgroup>').join('');
   if (S.ti >= model().tasks.length) S.ti = 0;
   $('task').value = S.ti;
-  const sc = MODES.map(m => `${m.short} <b>${model().tasks.filter(t => t.runs[m.k].passed).length}/${model().tasks.length}</b>`).join(' · ');
-  $('scoreline').innerHTML = `${esc(model().label)} · ${esc(model().note)}<br>官方得分：${sc}`;
+  $('taskHint').textContent = isH() ? '（是否达到 1000 阈值）' : `（✓/✗ 依次为 ${ms.map(m => m.label).join('、')}）`;
+  const T = model().tasks, E = exp();
+  const sc = isH()
+    ? `history1000：${E.triggered} 项触发 / ${E.untriggered} 项未触发 · 尚未推理`
+    : '官方得分：' + ms.map(m => `${m.label} <b>${T.filter(t => t.runs[m.k].passed).length}/${T.length}</b>`).join(' · ');
+  $('scoreline').innerHTML = `${esc(model().label)} · ${esc(model().note)}<br>${sc}`;
+  const note = $('expnote');
+  note.hidden = !isH();
+  if (isH()) note.innerHTML = `<b>这个实验还没有运行。</b>阈值 ${E.threshold}：工具内容累计首次达到 ${E.threshold} tokens 的那次调用之前，把历史转换为图一次，之后保留新历史。现在能看的是 Identity 的实际轨迹、触发点，以及在触发点会交给模型的 State-Transition Graph 和 Event Graph（离线构建）；两种图方法的续跑和成绩还没有。`;
 }
 function renderModes() {
-  $('modes').innerHTML = MODES.map(m => {
-    const r = run(m.k);
-    return `<button class="mode" role="radio" aria-checked="${m.k === S.mode}" data-k="${m.k}" style="--c:var(${m.c})">
+  const ex = exp();
+  const live = ex.modes.map(k => {
+    const m = modeOf(k), r = run(k);
+    return `<button class="mode" role="radio" aria-checked="${k === S.mode}" data-k="${k}" style="--c:var(${m.c})">
       <span class="dot"></span><span>${m.label}</span><span class="res ${r.passed ? 'ok' : 'bad'}">${r.passed ? '✓ 通过' : '✗ 未通过'}</span></button>`;
-  }).join('');
+  });
+  const pend = (ex.pending || []).map(k => {
+    const m = modeOf(k);
+    return `<button class="mode" role="radio" aria-checked="false" aria-disabled="true" style="--c:var(${m.c})" title="这个实验里该方法还没有续跑记录">
+      <span class="dot"></span><span>${m.label}</span><span class="res pend">待运行</span></button>`;
+  });
+  $('modes').innerHTML = live.concat(pend).join('');
   document.body.dataset.mode = S.mode;
 }
 
 /* ---------- turns + transport ---------- */
 function renderTurns() { renderPrefix(); }
 function renderTicks() {
-  const R = run(), N = R.steps.length;
+  const R = run(), N = R.steps.length, cv = conv();
   $('scrub').max = N - 1;
   const pos = i => N > 1 ? (i / (N - 1)) * 100 : 0;
   let html = '';
   R.steps.forEach((s, i) => {
     if (i === 0 || s.turn !== R.steps[i - 1].turn) {
-      const swap = R.boundary === i;
-      html += `<span class="${swap ? 'swap' : ''}" style="left:${pos(i)}%">${swap ? '替换 · ' : ''}第${s.turn + 1}轮</span>`;
+      const swap = cv && cv.kind === 'swap' && cv.idx === i;
+      html += `<span class="${swap ? 'swap' : ''}" style="left:${pos(i)}%">${swap ? '转换 · ' : ''}第${s.turn + 1}轮</span>`;
     }
   });
+  if (cv && cv.kind === 'h1000') html += `<span class="trig" style="left:${pos(cv.idx)}%">1000 阈值</span>`;
   $('ticks').innerHTML = html;
 }
 function renderStepInfo() {
-  const R = run(), st = R.steps[S.r];
+  const R = run(), st = R.steps[S.r], cv = conv();
   $('scrub').value = S.r;
   $('stepLabel').textContent = `调用 ${S.r + 1} / ${R.steps.length}`;
   const tag = $('stepTag');
-  if (R.boundary === S.r) { tag.textContent = '图记忆刚替换历史'; tag.className = 'tag swap'; }
+  if (cv && cv.idx === S.r && cv.kind === 'swap') { tag.textContent = '图记忆刚替换历史'; tag.className = 'tag swap'; }
+  else if (cv && cv.idx === S.r) { tag.textContent = '达到 1000：此处转换（未运行）'; tag.className = 'tag swap'; }
+  else if (isH()) { const h = task().h1000.hist[S.r]; tag.textContent = `工具内容 ${h == null ? '—' : fmtN(h)} tokens`; tag.className = 'tag'; }
   else if (st.replay) { tag.textContent = '首轮回放（与 Identity 相同）'; tag.className = 'tag'; }
   else { tag.textContent = `第 ${st.turn + 1} 轮 · 实时生成`; tag.className = 'tag'; }
 }
@@ -499,14 +561,17 @@ function clipLines(lines, maxLines = 10, maxChars = 700) {
   return out;
 }
 function renderTerm() {
-  const t = task(), R = run();
+  const t = task(), R = run(), cv = conv();
   const user = R.cwd0.split('/')[1] || 'user';
   let cwd = R.cwd0, html = '';
   const line = (cls, s) => `<span class="t-line ${cls}">${s}</span>`;
   for (let i = 0; i <= S.r; i++) {
     const st = R.steps[i], now = i === S.r ? 't-now' : '';
+    if (cv && cv.idx === i) {
+      if (cv.kind === 'swap') html += line('', `<span class="t-swap">── 记忆转换：之前 ${R.replaced ?? ''} 条消息被换成 1 条 ${esc(modeOf(S.mode).label)} 记忆（${R.memTokens ? fmtN(R.memTokens) + ' tokens' : ''}）──</span>`);
+      else html += line('', `<span class="t-swap">── history1000 检查点：工具内容累计 ${fmtN(task().h1000.hist[i])} tokens ≥ 1000，图方法将在这次调用前转换（尚未运行）──</span>`);
+    }
     if (i === 0 || st.turn !== R.steps[i - 1].turn) {
-      if (R.boundary === i) html += line('', `<span class="t-swap">── 记忆替换：之前 ${R.replaced ?? ''} 条消息被换成 1 条图记忆（${R.memTokens ? fmtN(R.memTokens) + ' tokens' : ''}）──</span>`);
       const rep = st.replay ? '  [首轮回放，与 Identity 相同]' : '';
       html += line('t-u', esc(`# 第 ${st.turn + 1} 轮 · 用户：${t.questions[st.turn]}`) + `<span class="t-d">${rep}</span>`);
     }
@@ -536,7 +601,7 @@ function msgHTML(m, fresh) {
   const cut = n => `<div class="cut">… 原文 ${fmtN(n)} 字符，此处截断显示</div>`;
   if (m.k === 'memory') {
     const R = run();
-    return `<div class="memblock ${fresh ? 'fresh' : ''}"><details><summary>图记忆 · ${S.mode === 'v1-compact' ? 'V1 状态链' : 'V2 对象-事实-事件图'} · ${R.memTokens ? fmtN(R.memTokens) + ' tokens' : ''} · 替换了首轮 ${R.replaced ?? ''} 条消息（点开看全文 ${fmtN(m.n)} 字符）</summary><pre>${esc(m.t)}</pre></details></div>`;
+    return `<div class="memblock ${fresh ? 'fresh' : ''}"><details><summary>${esc(modeOf(S.mode).label)} 记忆 · ${R.memTokens ? fmtN(R.memTokens) + ' tokens' : ''} · 替换了首轮 ${R.replaced ?? ''} 条消息（点开看全文 ${fmtN(m.n)} 字符）</summary><pre>${esc(m.t)}</pre></details></div>`;
   }
   const who = { user: '用户', assistant: 'Qwen', call: '调用', output: '返回', system: '系统', developer: '系统' }[m.k] || m.k;
   let body;
@@ -545,14 +610,22 @@ function msgHTML(m, fresh) {
   return `<div class="msg ${m.k} ${fresh ? 'fresh' : ''}"><div class="who">${who}</div><div class="body">${body}</div></div>`;
 }
 function renderMemText(box) {
-  const R = run(), st = R.steps[S.r];
+  const R = run(), st = R.steps[S.r], cv = conv();
   const seg = R.segments[st.seg].slice(0, st.n);
   const prevSt = S.r > 0 ? R.steps[S.r - 1] : null;
   const prevN = prevSt && prevSt.seg === st.seg ? prevSt.n : 0;
+  const label = modeOf(S.mode).label;
   let html = '';
-  if (S.mode !== 'identity' && st.seg === 0) html += `<div class="note">第 1 轮还没有替换：这里的上下文与 Identity 完全相同。第 2 轮开始前，这段历史会被换成一条图记忆。</div>`;
-  if (S.mode !== 'identity' && st.seg > 0) html += `<div class="note">首轮的 ${R.replaced ?? ''} 条原始消息已被下方的图记忆替换。之后的新消息照常追加，不再压缩。</div>`;
-  if (S.mode === 'identity') html += `<div class="note">Identity 不做任何压缩：每次调用都带上全部历史消息，上下文只增不减。</div>`;
+  if (isH()) {
+    const h = task().h1000.hist[S.r];
+    const state = !cv ? '这个任务的工具内容始终没有达到 1000，不会触发转换。'
+      : S.r < cv.idx ? `尚未达到 1000（第 ${cv.idx + 1} 次调用前触发）。`
+      : S.r === cv.idx ? '已达到阈值：两种图方法会在这次调用前把下面这段历史转换为图（续跑尚未运行）。'
+      : '已过检查点：图方法的续跑尚未运行，这里仍是 Identity 的实际上下文。';
+    html += `<div class="note">Identity 原始历史。history1000 口径的工具内容累计 <b>${h == null ? '—' : fmtN(h)}</b> tokens。${state}</div>`;
+  } else if (S.mode === 'identity') html += `<div class="note">Identity 不做任何压缩：每次调用都带上全部历史消息，上下文只增不减。</div>`;
+  else if (st.seg === 0) html += `<div class="note">第 1 轮还没有转换：这里的上下文与 Identity 完全相同。第 2 轮开始前，这段历史会被换成一条 ${esc(label)} 记忆。</div>`;
+  else html += `<div class="note">首轮的 ${R.replaced ?? ''} 条原始消息已被下方的 ${esc(label)} 记忆替换。之后的新消息照常追加，不再转换。</div>`;
   html += '<div class="msgs">';
   seg.forEach((m, i) => { html += msgHTML(m, i >= prevN); });
   html += `<div class="divider">本次调用的输出</div>`;
@@ -562,20 +635,32 @@ function renderMemText(box) {
   box.scrollTop = box.scrollHeight;
 }
 
-function renderV1(box) {
-  const R = run(), g = R.graph, r = S.r;
+/* Wording for the graph views, per conversion kind. */
+function graphWords(cIdx) {
+  if (isH()) return {
+    before: `还没到检查点；第 ${cIdx + 1} 次调用前，这段历史会被转换为图（续跑尚未运行）。`,
+    after: '实线是检查点处会交给模型的部分；虚线 / 斜纹是检查点之后的步骤，转换后会以原始消息追加，这里按同一规则画出作对照。',
+    hatch: '检查点之后：转换后以原始消息追加（离线重建）',
+  };
+  return {
+    before: '当前仍在第 1 轮，图尚未发送；第 2 轮开始前，这张图会被序列化后替换历史。',
+    after: '实线是第 2 轮前实际发送的部分；虚线 / 斜纹是之后的步骤，实验中以原始消息追加，这里按同一规则画出作对照。',
+    hatch: '转换点之后：实验中以原始消息追加（离线重建）',
+  };
+}
+
+function renderV1(box, g, cIdx, title) {
+  const r = S.r, W = graphWords(cIdx);
   const nodes = g.nodes.filter(n => n.r <= r);
   const edges = new Map(g.edges.map(e => [e.t, e]));
-  const delivered = g.nodes.filter(n => n.d).length;
-  let html = `<div class="note"><b>V1 状态链</b>：每次工具调用产生一个新的状态节点 s<sub>k</sub>（工作目录、已知对象、观察记录），由工具调用边相连。` +
-    (r < R.boundary ? `当前仍在第 1 轮，图尚未发送；第 2 轮开始前会把这 ${nodes.length} 个节点序列化后替换历史。`
-      : `实线框是第 2 轮前实际发送的 ${delivered} 个节点；虚线框是之后的步骤，实验中以原始消息追加，这里按同一规则画出作对照。`) + `</div><div class="chain">`;
+  let html = `<div class="note"><b>${esc(title)}</b>：每次工具调用产生一个新的状态节点 s<sub>k</sub>（工作目录、已知对象、观察记录），由工具调用边相连。` +
+    (r < cIdx ? W.before : W.after) + `</div><div class="chain">`;
   nodes.forEach((n, i) => {
     if (i > 0) {
       const e = edges.get(n.id);
       html += `<div class="sedge ${e && e.st === 'error' ? 'err' : ''}" title="${esc(e ? e.tool + ' ' + e.a : '')}"><span>${esc(e ? e.tool : '')}</span><span class="ar"></span></div>`;
     }
-    const post = !n.d && r >= R.boundary;
+    const post = !n.d && r >= cIdx;
     html += `<div class="snode ${post ? 'post' : ''} ${n.r === r && r > 0 ? 'fresh' : ''}" title="${esc(n.desc)}">
       <div class="sid"><span>${n.id}</span><span style="color:var(--muted)">对象 ${n.objs}</span></div>
       <div class="cwdv">${esc(n.cwd ?? 'cwd 未知')}</div><div class="ds">${esc(n.desc)}</div></div>`;
@@ -586,8 +671,8 @@ function renderV1(box) {
 }
 
 const PRED = { cwd: '工作目录', binding: '名称/位置', exists: '存在', kind: '类型', content: '内容', entry_absent: '不在目录中', parent: '父目录', root: '根' };
-function renderV2(box) {
-  const R = run(), g = R.graph, r = S.r;
+function renderV2(box, g, cIdx, title, extra = '') {
+  const r = S.r, Wd = graphWords(cIdx);
   const vis = g.nodes.filter(n => n.r <= r);
   const byId = new Map(g.nodes.map(n => [n.id, n]));
   const objects = vis.filter(n => n.c === 'object');
@@ -599,7 +684,6 @@ function renderV2(box) {
   const colW = Math.max(30, Math.min(64, (box.clientWidth - labelW - 18 - padR - 60) / (maxStep + 1)));
   const x = s => labelW + 18 + s * colW;
   const W = x(maxStep) + padR + 60;
-  // rows: one lane per object, one track per predicate
   const rows = [];
   let y = 54;
   objects.forEach(o => {
@@ -612,24 +696,21 @@ function renderV2(box) {
     y += h + 6;
   });
   const H = y + 10;
-  const ink2 = css('--ink-2'), muted = css('--muted'), line = css('--line'), cur = css('--cur'), bad = css('--bad'), sunk = css('--sunk'), surf = css('--surface');
-  let s = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="V2 图记忆泳道">
+  const ink2 = css('--ink-2'), muted = css('--muted'), line = css('--line'), cur = css('--cur'), bad = css('--bad'), sunk = css('--sunk'), surf = css('--surface'), onCur = css('--on-cur');
+  let s = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(title)} 泳道图">
   <defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="${surf}"/><line x1="0" y1="0" x2="0" y2="6" stroke="${line}" stroke-width="2"/></pattern></defs>`;
-  if (r >= R.boundary && maxStep > deliveredStep) {
+  if (r >= cIdx && maxStep > deliveredStep) {
     const bx = x(deliveredStep + 0.5);
     s += `<rect x="${bx}" y="0" width="${W - bx}" height="${H}" fill="url(#hatch)" opacity="0.7"/>
       <line x1="${bx}" y1="0" x2="${bx}" y2="${H}" stroke="${cur}" stroke-width="1.5" stroke-dasharray="4 3"/>
-      <text x="${bx + 6}" y="12" font-size="10.5" fill="${ink2}">替换点之后：实验中以原始消息追加（此处为离线重建）</text>`;
+      <text x="${bx + 6}" y="12" font-size="10.5" fill="${ink2}">${esc(Wd.hatch)}</text>`;
   }
-  // step grid
   for (let k = 0; k <= maxStep; k++) {
     s += `<line x1="${x(k)}" y1="22" x2="${x(k)}" y2="${H - 6}" stroke="${line}" stroke-width="0.5"/>`;
     if (k % (maxStep > 30 ? 5 : 2) === 0) s += `<text x="${x(k)}" y="${H - 0}" font-size="9" fill="${muted}" text-anchor="middle" class="mono">${k}</text>`;
   }
-  // event lane
   s += `<text x="10" y="40" font-size="11" fill="${ink2}" font-weight="600">执行事件</text>`;
   const rowOf = new Map(rows.map(rw => [rw.o.id, rw]));
-  // relation lines from events
   g.edges.filter(e => e.r <= r && (e.rel === 'acts_on' || e.rel === 'supports')).forEach(e => {
     const ev = byId.get(e.f); if (!ev || ev.c !== 'event') return;
     let ty;
@@ -659,7 +740,7 @@ function renderV2(box) {
         const retiredNow = f.ret != null && f.rr != null && f.rr <= r;
         const end = retiredNow ? f.ret : maxStep + 0.8;
         const x1 = x(f.s), x2 = Math.max(x(end), x1 + 8);
-        const post = !f.d && r >= R.boundary;
+        const post = !f.d && r >= cIdx;
         const isNew = f.r === r && r > 0;
         const fill = post ? 'none' : cur;
         s += `<g><title>${esc(`${f.id} · ${p}${f.k ? '[' + f.k + ']' : ''} = ${f.v} · v${f.ver} · 观察于 step ${f.s}${retiredNow ? ' · 于 step ' + f.ret + ' 失效（' + (f.why || '') + '）' : ''}`)}</title>
@@ -667,16 +748,15 @@ function renderV2(box) {
         if (retiredNow) s += `<line x1="${x2}" y1="${ty - 2}" x2="${x2}" y2="${ty + 12}" stroke="${bad}" stroke-width="1.5"/>`;
         const label = (f.name || f.v || '').toString();
         const room = (x2 - x1 - 6) / 5.4;
-        if (room >= 3) s += `<text x="${x1 + 4}" y="${ty + 8.5}" font-size="8.5" fill="${post ? ink2 : '#fff'}" class="mono">${esc(label.length > room ? label.slice(0, Math.max(1, Math.floor(room) - 1)) + '…' : label)}</text>`;
+        if (room >= 3) s += `<text x="${x1 + 4}" y="${ty + 8.5}" font-size="8.5" fill="${post ? ink2 : onCur}" class="mono">${esc(label.length > room ? label.slice(0, Math.max(1, Math.floor(room) - 1)) + '…' : label)}</text>`;
         s += `</g>`;
       });
     });
   });
   s += `</svg>`;
   const nf = facts.filter(f => !(f.ret != null && f.rr != null && f.rr <= r)).length;
-  box.innerHTML = `<div class="note"><b>V2 对象-事实-事件图</b>：每行是一个对象（会话、目录、文件）。横条是带版本的事实，从首次观察持续到失效（红色竖线）；顶部圆点是工具执行事件。横轴为工具观察序号。当前可见 ${objects.length} 个对象、${facts.length} 条事实（${nf} 条有效）、${events.length} 个事件。` +
-    (r < R.boundary ? ' 当前仍在第 1 轮，图尚未发送；第 2 轮开始前，这张图会被序列化后替换历史。' : ' 斜纹区域之前是实际发送的图。') +
-    `</div><div class="lanes" id="lanes">${s}</div>`;
+  box.innerHTML = `<div class="note"><b>${esc(title)}</b>：每行是一个对象（会话、目录、文件）。横条是带版本的事实，从首次观察持续到失效（红色竖线）；顶部圆点是工具执行事件。横轴为工具观察序号。当前可见 ${objects.length} 个对象、${facts.length} 条事实（${nf} 条有效）、${events.length} 个事件。` +
+    (r < cIdx ? Wd.before : Wd.after) + extra + `</div><div class="lanes" id="lanes">${s}</div>`;
   const lanes = $('lanes'); lanes.scrollLeft = lanes.scrollWidth;
   box.scrollTop = 0;
 }
@@ -684,7 +764,7 @@ function renderV2(box) {
 function renderPrefix() {
   const t = task(), R = run(), st = R.steps[S.r], M = model();
   const known = t.questions.slice(0, st.turn + 1);
-  const inGraph = S.mode !== 'identity' && st.seg > 0;
+  const inGraph = !isH() && S.mode !== 'identity' && st.seg > 0;
   const left = t.questions.length - known.length;
   const reached = new Set(R.steps.map(x => x.turn));
   const items = known.map((q, i) => {
@@ -705,50 +785,43 @@ function renderPrefix() {
   $('toolsBox').addEventListener('toggle', e => { if (S.toolsOpen !== e.target.open) { S.toolsOpen = e.target.open; persist(); renderPrefix(); } });
 }
 
+function tabList() {
+  if (isH()) return task().h1000.graphs
+    ? [['text', '上下文文本'], ['g:v1-compact', 'State-Transition Graph（检查点）'], ['g:v2-compact', 'Event Graph（检查点）']]
+    : [['text', '上下文文本']];
+  return S.mode === 'identity' ? [['text', '上下文文本']] : [['graph', '图'], ['text', '上下文文本']];
+}
 function renderMem() {
-  const R = run(), st = R.steps[S.r];
-  const isId = S.mode === 'identity';
-  $('tabs').hidden = isId;
-  const tab = isId ? 'text' : S.tab;
-  $('tabGraph').setAttribute('aria-selected', tab === 'graph');
-  $('tabText').setAttribute('aria-selected', tab === 'text');
-  const lbl = MODES.find(m => m.k === S.mode).label;
+  const R = run(), st = R.steps[S.r], cv = conv();
+  const tabs = tabList();
+  const tab = tabs.some(t => t[0] === S.tab) ? S.tab : tabs[0][0];
+  $('tabs').hidden = tabs.length < 2;
+  $('tabs').innerHTML = tabs.map(([k, l]) => `<button role="tab" data-tab="${k}" aria-selected="${k === tab}">${esc(l)}</button>`).join('');
+  const lbl = modeOf(S.mode).label;
   $('memTitle').textContent = `工作上下文 · ${lbl}`;
   const segLen = R.segments[st.seg].slice(0, st.n).length;
   const tt = model().toolTokens;
-  $('memSub').textContent = `本次输入 ${fmtN(st.in)} tokens = 工具 ${fmtN(tt)} + 消息 ${fmtN(st.in - tt)} · ${segLen} 条消息` + (!isId && st.seg > 0 ? ` · 其中图记忆 ${fmtN(R.memTokens || 0)}` : '');
+  $('memSub').textContent = `本次输入 ${fmtN(st.in)} tokens = 工具 ${fmtN(tt)} + 消息 ${fmtN(st.in - tt)} · ${segLen} 条消息` + (!isH() && S.mode !== 'identity' && st.seg > 0 ? ` · 其中图记忆 ${fmtN(R.memTokens || 0)}` : '');
   const box = $('membody');
-  if (tab === 'text') renderMemText(box);
-  else if (S.mode === 'v1-compact') renderV1(box);
-  else renderV2(box);
+  if (tab === 'text') return renderMemText(box);
+  if (isH()) {
+    const k = tab.slice(2), g = task().h1000.graphs[k];
+    return k === 'v1-compact' ? renderV1(box, g, cv.idx, 'State-Transition Graph（检查点处）') : renderV2(box, g, cv.idx, 'Event Graph（检查点处）');
+  }
+  if (S.mode === 'v1-compact') return renderV1(box, R.graph, cv.idx, 'State-Transition Graph');
+  let extra = '';
+  if (S.mode === 'v2-dedup') {
+    const base = run('v2-compact').memTokens, mine = R.memTokens;
+    extra = ` <br>图内容与 Event Graph 相同；Dedup 只改编码，把可由规则推出的来源关系折叠成配方，不合并实际调用。本任务记忆：Event Graph ${fmtN(base)} → Event Graph-Dedup ${fmtN(mine)} tokens（${mine <= base ? '−' : '+'}${fmtN(Math.abs(mine - base))}）。`;
+  }
+  renderV2(box, R.graph, cv.idx, lbl, extra);
 }
 
-/* ---------- token chart ---------- */
+/* ---------- charts ---------- */
 function niceMax(v) { const p = Math.pow(10, Math.floor(Math.log10(v))); const m = v / p; return (m <= 1 ? 1 : m <= 2 ? 2 : m <= 2.5 ? 2.5 : m <= 5 ? 5 : 10) * p; }
-function renderChart() {
-  const box = $('chart');
-  const W = Math.max(320, box.clientWidth), H = 280;
-  const m = { l: 52, r: 18, t: 26, b: 34 };
-  const runs = MODES.map(md => ({ md, R: run(md.k) }));
-  const N = Math.max(...runs.map(x => x.R.steps.length));
-  const ymax = niceMax(Math.max(...runs.flatMap(x => x.R.steps.map(s => s.in))) * 1.05);
-  const X = i => m.l + (N > 1 ? i / (N - 1) : 0) * (W - m.l - m.r);
-  const Y = v => H - m.b - (v / ymax) * (H - m.t - m.b);
-  const ink2 = css('--ink-2'), muted = css('--muted'), line = css('--line'), cur = css('--cur'), sunk = css('--sunk'), surf = css('--surface');
-  const R = run();
-  let s = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="每次模型调用的输入 tokens">`;
-  // turn bands of the selected run
-  let start = 0;
-  R.steps.forEach((st, i) => {
-    const endTurn = i === R.steps.length - 1 || R.steps[i + 1].turn !== st.turn;
-    if (endTurn) {
-      const x1 = X(start) - (start > 0 ? (X(1) - X(0)) / 2 : 0), x2 = i === R.steps.length - 1 ? X(i) + 4 : (X(i) + X(i + 1)) / 2;
-      if (st.turn % 2 === 1) s += `<rect x="${x1}" y="${m.t}" width="${x2 - x1}" height="${H - m.t - m.b}" fill="${sunk}"/>`;
-      s += `<text x="${(x1 + x2) / 2}" y="${m.t - 8}" font-size="10.5" fill="${muted}" text-anchor="middle">第${st.turn + 1}轮</text>`;
-      start = i + 1;
-    }
-  });
-  // grid + axes
+function axes(W, H, m, N, ymax, X, Y) {
+  const muted = css('--muted'), line = css('--line');
+  let s = '';
   for (let k = 0; k <= 4; k++) {
     const v = ymax * k / 4;
     s += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="${line}" stroke-width="${k === 0 ? 1 : 0.6}"/>`;
@@ -757,15 +830,59 @@ function renderChart() {
   const every = N > 40 ? 10 : N > 20 ? 5 : 2;
   for (let i = 0; i < N; i++) if ((i + 1) % every === 0 || i === 0) s += `<text x="${X(i)}" y="${H - m.b + 16}" font-size="10.5" fill="${muted}" text-anchor="middle">${i + 1}</text>`;
   s += `<text x="${(m.l + W - m.r) / 2}" y="${H - 4}" font-size="10.5" fill="${muted}" text-anchor="middle">模型调用序号</text>`;
+  return s;
+}
+function turnBands(R, X, H, m) {
+  const muted = css('--muted'), sunk = css('--sunk');
+  let s = '', start = 0;
+  R.steps.forEach((st, i) => {
+    const endTurn = i === R.steps.length - 1 || R.steps[i + 1].turn !== st.turn;
+    if (!endTurn) return;
+    const x1 = X(start) - (start > 0 ? (X(1) - X(0)) / 2 : 0), x2 = i === R.steps.length - 1 ? X(i) + 4 : (X(i) + X(i + 1)) / 2;
+    if (st.turn % 2 === 1) s += `<rect x="${x1}" y="${m.t}" width="${x2 - x1}" height="${H - m.t - m.b}" fill="${sunk}"/>`;
+    s += `<text x="${(x1 + x2) / 2}" y="${m.t - 8}" font-size="10.5" fill="${muted}" text-anchor="middle">第${st.turn + 1}轮</text>`;
+    start = i + 1;
+  });
+  return s;
+}
+function convMarker(cv, X, H, m, color) {
+  if (!cv) return '';
+  const bx = cv.idx > 0 ? (X(cv.idx - 1) + X(cv.idx)) / 2 : X(0);
+  const label = cv.kind === 'swap' ? '历史 → 图记忆' : '1000 阈值触发（未运行）';
+  return `<line x1="${bx}" x2="${bx}" y1="${m.t}" y2="${H - m.b}" stroke="${color}" stroke-width="1.5" stroke-dasharray="4 3"/><text x="${bx + 4}" y="${m.t + 12}" font-size="10.5" fill="${color}">${label}</text>`;
+}
+function attachHover(box, W, m, N, onTip, onClick) {
+  const hit = box.querySelector('.hit'), tip = box.querySelector('.tip');
+  const idxAt = ev => { const rect = box.querySelector('svg').getBoundingClientRect(); const px = (ev.clientX - rect.left) * (W / rect.width); return Math.max(0, Math.min(N - 1, Math.round((px - m.l) / ((W - m.l - m.r) / Math.max(1, N - 1))))); };
+  hit.addEventListener('mousemove', ev => {
+    const i = idxAt(ev);
+    tip.hidden = false;
+    tip.innerHTML = onTip(i);
+    const rect = box.getBoundingClientRect();
+    let left = ev.clientX - rect.left + 14; if (left > rect.width - 260) left = ev.clientX - rect.left - 260;
+    tip.style.left = left + 'px'; tip.style.top = Math.max(0, ev.clientY - rect.top - 40) + 'px';
+  });
+  hit.addEventListener('mouseleave', () => { tip.hidden = true; });
+  hit.addEventListener('click', ev => onClick(idxAt(ev)));
+}
+function renderChart() {
+  const box = $('chart');
+  const W = Math.max(320, box.clientWidth), H = 280;
+  const m = { l: 52, r: 18, t: 26, b: 34 };
+  const runs = expModes().map(md => ({ md, R: run(md.k) }));
+  const N = Math.max(...runs.map(x => x.R.steps.length));
+  const ymax = niceMax(Math.max(...runs.flatMap(x => x.R.steps.map(s => s.in))) * 1.05);
+  const X = i => m.l + (N > 1 ? i / (N - 1) : 0) * (W - m.l - m.r);
+  const Y = v => H - m.b - (v / ymax) * (H - m.t - m.b);
+  const muted = css('--muted'), cur = css('--cur'), surf = css('--surface');
+  const R = run(), cv = conv();
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="每次模型调用的输入 tokens">`;
+  s += turnBands(R, X, H, m) + axes(W, H, m, N, ymax, X, Y);
   const tt = model().toolTokens;
   s += `<rect x="${m.l}" y="${Y(tt)}" width="${W - m.l - m.r}" height="${Y(0) - Y(tt)}" fill="${muted}" opacity="0.07"/>
     <line x1="${m.l}" x2="${W - m.r}" y1="${Y(tt)}" y2="${Y(tt)}" stroke="${muted}" stroke-width="1" stroke-dasharray="2 3"/>
     <text x="${W - m.r - 4}" y="${Y(tt) + 13}" font-size="10.5" fill="${muted}" text-anchor="end">工具定义 ${fmtN(tt)}（每次调用固定）</text>`;
-  if (R.boundary != null) {
-    const bx = (X(R.boundary - 1) + X(R.boundary)) / 2;
-    s += `<line x1="${bx}" x2="${bx}" y1="${m.t}" y2="${H - m.b}" stroke="${cur}" stroke-width="1.5" stroke-dasharray="4 3"/><text x="${bx + 4}" y="${m.t + 12}" font-size="10.5" fill="${cur}">历史 → 图记忆</text>`;
-  }
-  // other series first, selected on top
+  s += convMarker(cv, X, H, m, cv && cv.kind === 'h1000' ? css('--bad') : cur);
   const order = runs.filter(x => x.md.k !== S.mode).concat(runs.filter(x => x.md.k === S.mode));
   order.forEach(({ md, R: rr }) => {
     const col = css(md.c), sel = md.k === S.mode;
@@ -773,8 +890,7 @@ function renderChart() {
     if (!sel) { s += `<polyline points="${pts.join(' ')}" fill="none" stroke="${col}" stroke-width="1.5" opacity="0.55" stroke-linejoin="round"/>`; return; }
     s += `<polyline points="${pts.join(' ')}" fill="none" stroke="${col}" stroke-width="1.5" opacity="0.3" stroke-dasharray="3 3"/>`;
     const done = pts.slice(0, S.r + 1);
-    const area = `${X(0)},${Y(0)} ${done.join(' ')} ${X(S.r)},${Y(0)}`;
-    s += `<polygon points="${area}" fill="${col}" opacity="0.10"/>`;
+    s += `<polygon points="${X(0)},${Y(0)} ${done.join(' ')} ${X(S.r)},${Y(0)}" fill="${col}" opacity="0.10"/>`;
     s += `<polyline points="${done.join(' ')}" fill="none" stroke="${col}" stroke-width="2.5" stroke-linejoin="round"/>`;
     rr.steps.slice(0, S.r + 1).forEach((st, i) => { s += `<circle cx="${X(i)}" cy="${Y(st.in)}" r="${i === S.r ? 5 : 2.5}" fill="${col}" stroke="${surf}" stroke-width="${i === S.r ? 2 : 1}"/>`; });
     const v = rr.steps[S.r].in, px = X(S.r), py = Y(v);
@@ -782,21 +898,11 @@ function renderChart() {
     const right = px > W - 120;
     s += `<text x="${px + (right ? -8 : 8)}" y="${py - 9}" font-size="12" font-weight="600" fill="${css('--ink')}" text-anchor="${right ? 'end' : 'start'}">${fmtN(v)}</text>`;
   });
-  s += `<rect id="hit" x="${m.l}" y="${m.t}" width="${W - m.l - m.r}" height="${H - m.t - m.b}" fill="transparent" style="cursor:pointer"/></svg><div class="tip" id="tip" hidden></div>`;
+  s += `<rect class="hit" x="${m.l}" y="${m.t}" width="${W - m.l - m.r}" height="${H - m.t - m.b}" fill="transparent" style="cursor:pointer"/></svg><div class="tip" hidden></div>`;
   box.innerHTML = s;
-  const hit = box.querySelector('#hit'), tip = box.querySelector('#tip');
-  const idxAt = ev => { const rect = box.querySelector('svg').getBoundingClientRect(); const px = (ev.clientX - rect.left) * (W / rect.width); return Math.max(0, Math.min(N - 1, Math.round((px - m.l) / ((W - m.l - m.r) / Math.max(1, N - 1))))); };
-  hit.addEventListener('mousemove', ev => {
-    const i = idxAt(ev);
-    tip.hidden = false;
-    tip.innerHTML = `<div style="color:var(--muted);margin-bottom:2px">第 ${i + 1} 次调用</div>` + runs.map(({ md, R: rr }) => rr.steps[i] ? `<div class="r"><i class="sw" style="background:var(${md.c})"></i>${md.short}：<b>${fmtN(rr.steps[i].in)}</b>（第${rr.steps[i].turn + 1}轮）</div>` : `<div class="r" style="color:var(--muted)"><i class="sw" style="background:var(${md.c})"></i>${md.short}：已结束</div>`).join('');
-    const rect = box.getBoundingClientRect();
-    let left = ev.clientX - rect.left + 14; if (left > rect.width - 190) left = ev.clientX - rect.left - 190;
-    tip.style.left = left + 'px'; tip.style.top = Math.max(0, ev.clientY - rect.top - 40) + 'px';
-  });
-  hit.addEventListener('mouseleave', () => { tip.hidden = true; });
-  hit.addEventListener('click', ev => { const i = idxAt(ev); if (i < run().steps.length) { stop(); setStep(i); } });
-  // legend + stats
+  attachHover(box, W, m, N,
+    i => `<div style="color:var(--muted);margin-bottom:2px">第 ${i + 1} 次调用</div>` + runs.map(({ md, R: rr }) => rr.steps[i] ? `<div class="r"><i class="sw" style="background:var(${md.c})"></i>${md.label}：<b>${fmtN(rr.steps[i].in)}</b>（第${rr.steps[i].turn + 1}轮）</div>` : `<div class="r" style="color:var(--muted)"><i class="sw" style="background:var(${md.c})"></i>${md.label}：已结束</div>`).join(''),
+    i => { if (i < run().steps.length) { stop(); setStep(i); } });
   $('legend').innerHTML = runs.map(({ md, R: rr }) => {
     const total = rr.steps.reduce((a, s) => a + s.in, 0);
     return `<span class="it ${md.k === S.mode ? 'cur' : ''}" data-k="${md.k}" style="--c:var(${md.c})"><span class="ln"></span>${md.label}<span class="v">${rr.steps.length} 次调用 · 累计 ${fmtN(total)} · ${rr.passed ? '通过' : '未通过'}</span></span>`;
@@ -804,20 +910,57 @@ function renderChart() {
   const cum = R.steps.slice(0, S.r + 1).reduce((a, s) => a + s.in, 0);
   const st = R.steps[S.r];
   const idAt = run('identity').steps[S.r];
-  $('stats').innerHTML = `<span>本次输入 <b>${fmtN(st.in)}</b> tokens（工具 ${fmtN(model().toolTokens)} + 消息 <b>${fmtN(st.in - model().toolTokens)}</b>）</span><span>其中缓存命中 <b>${fmtN(st.cached)}</b></span><span>累计至此 <b>${fmtN(cum)}</b> tokens</span>` +
+  $('stats').innerHTML = `<span>本次输入 <b>${fmtN(st.in)}</b> tokens（工具 ${fmtN(tt)} + 消息 <b>${fmtN(st.in - tt)}</b>）</span><span>其中缓存命中 <b>${fmtN(st.cached)}</b></span><span>累计至此 <b>${fmtN(cum)}</b> tokens</span>` +
     (S.mode !== 'identity' && idAt ? `<span>同序号 Identity 输入 <b>${fmtN(idAt.in)}</b>（差 ${st.in - idAt.in >= 0 ? '+' : ''}${fmtN(st.in - idAt.in)}）</span>` : '');
+}
+function renderHistChart() {
+  $('histPanel').hidden = !isH();
+  if (!isH()) return;
+  const box = $('chart2'), h = task().h1000, R = run('identity');
+  const W = Math.max(320, box.clientWidth), H = 220;
+  const m = { l: 52, r: 18, t: 26, b: 34 };
+  const N = R.steps.length, TH = exp().threshold;
+  const vals = h.hist.map(v => v ?? 0);
+  const ymax = niceMax(Math.max(TH * 1.15, ...vals) * 1.05);
+  const X = i => m.l + (N > 1 ? i / (N - 1) : 0) * (W - m.l - m.r);
+  const Y = v => H - m.b - (v / ymax) * (H - m.t - m.b);
+  const col = css('--m-id'), bad = css('--bad'), muted = css('--muted'), surf = css('--surface'), cv = conv();
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="工具内容累计 tokens">`;
+  s += turnBands(R, X, H, m) + axes(W, H, m, N, ymax, X, Y);
+  s += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(TH)}" y2="${Y(TH)}" stroke="${bad}" stroke-width="1.2" stroke-dasharray="5 3"/>
+    <text x="${m.l + 6}" y="${Y(TH) - 6}" font-size="10.5" fill="${bad}">阈值 ${fmtN(TH)}</text>`;
+  s += convMarker(cv, X, H, m, bad);
+  const pts = h.hist.map((v, i) => v == null ? null : `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).filter(Boolean);
+  s += `<polyline points="${pts.join(' ')}" fill="none" stroke="${col}" stroke-width="1.5" opacity="0.3" stroke-dasharray="3 3"/>`;
+  const done = h.hist.slice(0, S.r + 1).map((v, i) => v == null ? null : `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).filter(Boolean);
+  s += `<polyline points="${done.join(' ')}" fill="none" stroke="${col}" stroke-width="2.5" stroke-linejoin="round"/>`;
+  h.hist.slice(0, S.r + 1).forEach((v, i) => { if (v != null) s += `<circle cx="${X(i)}" cy="${Y(v)}" r="${i === S.r ? 5 : 2.5}" fill="${i === h.trigger ? bad : col}" stroke="${surf}" stroke-width="${i === S.r ? 2 : 1}"/>`; });
+  const v = h.hist[S.r];
+  if (v != null) { const px = X(S.r), right = px > W - 120; s += `<text x="${px + (right ? -8 : 8)}" y="${Y(v) - 9}" font-size="12" font-weight="600" fill="${css('--ink')}" text-anchor="${right ? 'end' : 'start'}">${fmtN(v)}</text>`; }
+  s += `<rect class="hit" x="${m.l}" y="${m.t}" width="${W - m.l - m.r}" height="${H - m.t - m.b}" fill="transparent" style="cursor:pointer"/></svg><div class="tip" hidden></div>`;
+  box.innerHTML = s;
+  attachHover(box, W, m, N, i => `<div style="color:var(--muted);margin-bottom:2px">第 ${i + 1} 次调用前</div>工具内容累计 <b>${h.hist[i] == null ? '—' : fmtN(h.hist[i])}</b> tokens${i === h.trigger ? '<br><b style="color:var(--bad)">首次达到阈值，在此转换</b>' : ''}`, i => { stop(); setStep(i); });
+  $('stats2').innerHTML = h.trigger != null
+    ? `<span>第 <b>${h.trigger + 1}</b> 次调用前达到 <b>${fmtN(h.hist[h.trigger])}</b> tokens</span><span>该次调用的完整输入 <b>${fmtN(h.before)}</b> tokens</span><span>当前 <b>${v == null ? '—' : fmtN(v)}</b></span>`
+    : `<span>整条轨迹最高 <b>${fmtN(Math.max(...vals))}</b> tokens，没有达到 ${fmtN(TH)}，不触发转换</span>`;
 }
 
 /* ---------- control flow ---------- */
-function renderStep() { renderTurns(); renderStepInfo(); renderTree(); renderTerm(); renderMem(); renderChart(); }
+function renderStep() { renderTurns(); renderStepInfo(); renderTree(); renderTerm(); renderMem(); renderChart(); renderHistChart(); }
 function setStep(r) { const N = run().steps.length; S.r = Math.max(0, Math.min(N - 1, r)); renderStep(); }
-function renderRun() { renderModes(); renderTicks(); setStep(S.r); persist(); }
+function renderRun() { if (!exp().modes.includes(S.mode)) S.mode = exp().modes[0]; renderModes(); renderTicks(); setStep(S.r); persist(); }
 function stop() { S.playing = false; clearInterval(S.timer); $('playIcon').innerHTML = '<path d="M4 2l10 6-10 6z"/>'; $('play').setAttribute('aria-label', '播放'); }
 function play() {
   if (S.r >= run().steps.length - 1) setStep(0);
   S.playing = true; $('playIcon').innerHTML = '<path d="M3 2h4v12H3zM9 2h4v12H9z"/>'; $('play').setAttribute('aria-label', '暂停');
   clearInterval(S.timer);
   S.timer = setInterval(() => { if (S.r >= run().steps.length - 1) { stop(); return; } setStep(S.r + 1); }, 1300 / S.speed);
+}
+function defaultStep() {
+  if (!exp().modes.includes(S.mode)) S.mode = exp().modes[0];
+  const R = run(), cv = conv(), N = R.steps.length;
+  if (!cv) return Math.min(N - 1, 5);
+  return Math.min(N - 1, cv.kind === 'swap' ? cv.idx + 3 : cv.idx);
 }
 $('play').onclick = () => S.playing ? stop() : play();
 $('prev').onclick = () => { stop(); setStep(S.r - 1); };
@@ -827,25 +970,24 @@ $('last').onclick = () => { stop(); setStep(run().steps.length - 1); };
 $('scrub').oninput = e => { stop(); setStep(+e.target.value); };
 $('speed').value = String(S.speed);
 $('speed').onchange = e => { S.speed = +e.target.value; persist(); if (S.playing) play(); };
-$('model').onchange = e => { stop(); S.mi = +e.target.value; S.ti = 0; fillTasks(); S.r = 0; renderRun(); };
+$('model').onchange = e => { stop(); S.mi = +e.target.value; S.ti = 0; fillExps(); fillTasks(); S.r = defaultStep(); renderRun(); };
+$('exp').onchange = e => { stop(); S.ei = +e.target.value; fillTasks(); S.r = defaultStep(); renderRun(); };
 $('task').onchange = e => { stop(); S.ti = +e.target.value; S.r = defaultStep(); renderRun(); };
-$('modes').onclick = e => { const b = e.target.closest('.mode'); if (!b) return; S.mode = b.dataset.k; renderRun(); };
+$('modes').onclick = e => { const b = e.target.closest('.mode'); if (!b || b.getAttribute('aria-disabled') === 'true') return; S.mode = b.dataset.k; renderRun(); };
 $('legend').onclick = e => { const b = e.target.closest('.it'); if (!b) return; S.mode = b.dataset.k; renderRun(); };
 $('prefix').onclick = e => { const b = e.target.closest('[data-turn]'); if (!b) return; stop(); const t = +b.dataset.turn; const i = run().steps.findIndex(s => s.turn === t); if (i >= 0) setStep(i); };
-$('tabGraph').onclick = () => { S.tab = 'graph'; persist(); renderMem(); };
-$('tabText').onclick = () => { S.tab = 'text'; persist(); renderMem(); };
+$('tabs').onclick = e => { const b = e.target.closest('[data-tab]'); if (!b) return; S.tab = b.dataset.tab; persist(); renderMem(); };
 document.addEventListener('keydown', e => {
   if (e.target.closest('select, input, textarea')) return;
   if (e.key === ' ') { e.preventDefault(); S.playing ? stop() : play(); }
   else if (e.key === 'ArrowRight') { stop(); setStep(S.r + 1); }
   else if (e.key === 'ArrowLeft') { stop(); setStep(S.r - 1); }
 });
-let rz; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(renderChart, 120); });
+let rz; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { renderChart(); renderHistChart(); }, 120); });
 matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', () => renderStep());
 new MutationObserver(() => renderStep()).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
-function defaultStep() { const R = run(); return R.boundary != null ? Math.min(R.steps.length - 1, R.boundary + 3) : Math.min(R.steps.length - 1, 5); }
-fillModels(); fillTasks();
+fillModels(); fillExps(); fillTasks();
 if (!MODES.some(m => m.k === S.mode)) S.mode = 'v2-compact';
 let firstVisit = true;
 try { firstVisit = !localStorage.getItem('bfcl-memory-viewer'); } catch (e) {}
