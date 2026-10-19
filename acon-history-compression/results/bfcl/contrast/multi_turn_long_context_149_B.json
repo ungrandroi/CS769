@@ -1,0 +1,25 @@
+{
+  "id": "multi_turn_long_context_149",
+  "side": "B",
+  "n_compress": 18,
+  "summary": "<HISTORY_SUMMARY>\n### REASONING  \nThe agent retrieved the user’s complete watchlist to provide a comprehensive overview, addressing the user’s need to better manage their portfolio. Although the user requested removal of Zeta Corp from the watchlist, the summary retains the full watchlist data to support ongoing portfolio tracking and future queries, ensuring no loss of context. The agent also sent the specified message to the user’s friend (USR003) to communicate the portfolio change, fulfilling the user’s social notification request. The message delivery was confirmed to maintain transparency. The user’s request to view recent sent messages and delete a specific message (id: 67410) was acknowledged but not yet completed, indicating pending actions. Retaining these details ensures the agent can resume and complete outstanding tasks without information loss.\n\n### COMPLETED  \n- Retrieved and presented the full list of stocks on the user’s watchlist  \n- Sent the message to friend (USR003): \"I've decided to drop those dipping stocks from my line-up.\"  \n- Confirmed successful message delivery",
+  "replaced_history_chars": 12631,
+  "missing_tokens": [
+    "assistant",
+    "tool_calls:",
+    "get_watchlist",
+    "send_message",
+    "receiver_id",
+    "call_oONPdcjEgbqniodHwyfekzZe",
+    "Ellipsis",
+    "call_0ic7jYWaZbfSPRyU5PxZTp07",
+    "sent_status",
+    "message_id",
+    "new_id",
+    "Message",
+    "successfully.",
+    "current",
+    "includes",
+    "stating"
+  ]
+}

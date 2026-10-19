@@ -1,0 +1,13 @@
+{
+  "id": "multi_turn_long_context_123",
+  "side": "C",
+  "n_compress": 19,
+  "summary": "<HISTORY_SUMMARY>\n\n1. REASONING  \n- Confirmed account balance of $105,000 and binding card details for account ID 98765.  \n- Retrieved current TSLA market price at $667.92 per share.  \n- Calculated total cost for 150 shares: $100,188, which is within available balance.  \n- Prepared to place purchase order for 150 shares of TSLA using account ID 98765 and binding card.  \n- Need to place order and confirm execution to update balance.\n\n2. VARS  \n| name          | value            | purpose                              |  \n|---------------|------------------|------------------------------------|  \n| account_id    | 98765            | Identifier for user's account       |  \n| balance      | 105000.0          | Current account balance             |  \n| binding_card  | 1987654321098765  | Card linked to the account          |  \n| shares_to_buy | 150               | Number of TSLA shares to purchase  |  \n| tsla_price    | 667.92            | Current market price per TSLA share|  \n| total_cost    | 100188.0          | Total cost for 150 shares           |\n\n3. TODO  \n- Place purchase order for 150 shares of TSLA at market price $667.92 using account ID 98765 and binding card 1987654321098765.  \n- Confirm order execution and update account balance accordingly.\n\n4. COMPLETED  \n- Retrieved and confirmed account balance and binding card details.  \n- Obtained current market price of TSLA.  \n- Verified sufficient funds to cover purchase of 150 shares at market price.\n\n5. GUARDRAILS  \n- Always re-declare VARS at session start to maintain state.  \n- Validate sufficient funds before placing purchase orders.  \n- Confirm market price before executing trades to avoid errors.  \n- Confirm order execution and update account balance post-trade.",
+  "replaced_history_chars": 162,
+  "missing_tokens": [
+    "assistant",
+    "tool_calls:",
+    "get_account_info",
+    "call_Wis4ajotVNgtS9dfWRWNe4W7"
+  ]
+}

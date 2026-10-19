@@ -1,0 +1,8 @@
+{
+  "completed_tasks": 200,
+  "budget_hit": false,
+  "agent_input_tokens": 14826580,
+  "evaluated": true,
+  "accuracy": 0.45,
+  "csv": "baseline_200.csv"
+}

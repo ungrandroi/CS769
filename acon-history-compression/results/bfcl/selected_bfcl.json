@@ -1,0 +1,91 @@
+{
+  "seed": 42,
+  "category": "multi_turn_long_context",
+  "n_calls_definition": "sum of ground_truth inner-list lengths across turns",
+  "tertile_cuts_by_sorted_rank": {
+    "low": [
+      0,
+      65
+    ],
+    "mid": [
+      66,
+      132
+    ],
+    "high": [
+      133,
+      199
+    ]
+  },
+  "tasks": [
+    {
+      "id": "multi_turn_long_context_2",
+      "domain": "filesystem",
+      "band": "high",
+      "n_calls": 8,
+      "rank": 158
+    },
+    {
+      "id": "multi_turn_long_context_7",
+      "domain": "filesystem",
+      "band": "low",
+      "n_calls": 4,
+      "rank": 27
+    },
+    {
+      "id": "multi_turn_long_context_45",
+      "domain": "filesystem",
+      "band": "low",
+      "n_calls": 3,
+      "rank": 11
+    },
+    {
+      "id": "multi_turn_long_context_62",
+      "domain": "vehicle",
+      "band": "high",
+      "n_calls": 8,
+      "rank": 161
+    },
+    {
+      "id": "multi_turn_long_context_70",
+      "domain": "vehicle",
+      "band": "high",
+      "n_calls": 9,
+      "rank": 186
+    },
+    {
+      "id": "multi_turn_long_context_102",
+      "domain": "trading",
+      "band": "mid",
+      "n_calls": 5,
+      "rank": 69
+    },
+    {
+      "id": "multi_turn_long_context_139",
+      "domain": "trading",
+      "band": "low",
+      "n_calls": 2,
+      "rank": 3
+    },
+    {
+      "id": "multi_turn_long_context_168",
+      "domain": "travel",
+      "band": "mid",
+      "n_calls": 6,
+      "rank": 130
+    },
+    {
+      "id": "multi_turn_long_context_171",
+      "domain": "travel",
+      "band": "high",
+      "n_calls": 9,
+      "rank": 190
+    },
+    {
+      "id": "multi_turn_long_context_191",
+      "domain": "travel",
+      "band": "mid",
+      "n_calls": 5,
+      "rank": 95
+    }
+  ]
+}

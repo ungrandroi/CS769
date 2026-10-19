@@ -1,0 +1,24 @@
+{
+  "id": "multi_turn_long_context_127",
+  "side": "B",
+  "n_compress": 1,
+  "summary": "<HISTORY_SUMMARY>\n### REASONING\nThe user began by requesting a display of their current stock watchlist to reassess their investment portfolio. The assistant retrieved and presented the extensive list of monitored stocks. Following this, the user identified BDX as an underperforming stock and requested its removal from the watchlist to streamline their focus. The assistant successfully removed BDX from the watchlist and confirmed this action. Despite removal from the watchlist, the user then decided to take decisive action by purchasing 150 shares of BDX at market value. This indicates a shift from passive monitoring to active investment in BDX, suggesting the user may be pursuing a different strategy for this stock. The summary retains the current watchlist state (without BDX) and the recent purchase decision to ensure continuity in portfolio management and to avoid conflicting actions regarding BDX.\n\n### COMPLETED\n- Retrieved and displayed the full current stock watchlist.\n- Removed BDX from the watchlist successfully.\n- Confirmed removal of BDX from watchlist.\n- Initiated purchase order for 150 shares of BDX at market price.",
+  "replaced_history_chars": 7606,
+  "missing_tokens": [
+    "tool_calls:",
+    "get_watchlist",
+    "call_kXBxoLVw2NA5jdQTrqfJ6aj3",
+    "Ellipsis",
+    "currently",
+    "number",
+    "provide",
+    "details",
+    "specific",
+    "remove_stock_from_watchlist",
+    "symbol",
+    "call_nsjFDxUAHv3TkftrOwMid5Wm",
+    "status",
+    "further",
+    "assistance"
+  ]
+}

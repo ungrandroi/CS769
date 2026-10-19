@@ -1,0 +1,207 @@
+diff --git a/berkeley-function-call-leaderboard/bfcl_eval/_llm_response_generation.py b/berkeley-function-call-leaderboard/bfcl_eval/_llm_response_generation.py
+index 8997958..ff9f3b6 100644
+--- a/berkeley-function-call-leaderboard/bfcl_eval/_llm_response_generation.py
++++ b/berkeley-function-call-leaderboard/bfcl_eval/_llm_response_generation.py
+@@ -254,6 +254,13 @@ def generate_results(args, model_name, test_cases_total):
+     writer_thread.start()
+ 
+     try:
++        from bfcl_eval.model_handler.history_compress import (
++            scheduling_should_stop,
++            seed_input_token_counter,
++        )
++
++        seed_input_token_counter(handler)
++
+         if is_oss_model:
+             handler.spin_up_local_server(
+                 num_gpus=args.num_gpus,
+@@ -299,7 +306,7 @@ def generate_results(args, model_name, test_cases_total):
+         ) as pbar:
+ 
+             # seed initial ready tasks
+-            while ready_queue and len(in_flight) < num_threads:
++            while ready_queue and len(in_flight) < num_threads and not scheduling_should_stop():
+                 _, test_case_id = heapq.heappop(ready_queue)
+                 test_case = id_to_test_case[test_case_id]
+                 future = pool.submit(
+@@ -335,7 +342,7 @@ def generate_results(args, model_name, test_cases_total):
+                             )
+ 
+                 # refill the pool up to max_workers
+-                while ready_queue and len(in_flight) < num_threads:
++                while ready_queue and len(in_flight) < num_threads and not scheduling_should_stop():
+                     _, test_case_id = heapq.heappop(ready_queue)
+                     test_case = id_to_test_case[test_case_id]
+                     future = pool.submit(
+diff --git a/berkeley-function-call-leaderboard/bfcl_eval/constants/model_config.py b/berkeley-function-call-leaderboard/bfcl_eval/constants/model_config.py
+index e42fe1c..c4a3dc1 100644
+--- a/berkeley-function-call-leaderboard/bfcl_eval/constants/model_config.py
++++ b/berkeley-function-call-leaderboard/bfcl_eval/constants/model_config.py
+@@ -2227,6 +2227,44 @@ third_party_inference_model_map = {
+         is_fc_model=True,
+         underscore_to_dot=True,
+     ),
++    # Azure deployment name is gpt-4.1-mini. The registry key is only the
++    # local result-directory name. -hist-FC / -ut-FC select history compression.
++    "gpt-4.1-mini-azure-FC": ModelConfig(
++        model_name="gpt-4.1-mini",
++        display_name="GPT-4.1-mini Azure (FC)",
++        url="https://openai.com/index/gpt-4-1/",
++        org="OpenAI",
++        license="Proprietary",
++        model_handler=OpenAICompletionsHandler,
++        input_price=0.4,
++        output_price=1.6,
++        is_fc_model=True,
++        underscore_to_dot=True,
++    ),
++    "gpt-4.1-mini-azure-hist-FC": ModelConfig(
++        model_name="gpt-4.1-mini",
++        display_name="GPT-4.1-mini Azure history v2 (FC)",
++        url="https://openai.com/index/gpt-4-1/",
++        org="OpenAI",
++        license="Proprietary",
++        model_handler=OpenAICompletionsHandler,
++        input_price=0.4,
++        output_price=1.6,
++        is_fc_model=True,
++        underscore_to_dot=True,
++    ),
++    "gpt-4.1-mini-azure-ut-FC": ModelConfig(
++        model_name="gpt-4.1-mini",
++        display_name="GPT-4.1-mini Azure history UT (FC)",
++        url="https://openai.com/index/gpt-4-1/",
++        org="OpenAI",
++        license="Proprietary",
++        model_handler=OpenAICompletionsHandler,
++        input_price=0.4,
++        output_price=1.6,
++        is_fc_model=True,
++        underscore_to_dot=True,
++    ),
+ }
+ 
+ 
+diff --git a/berkeley-function-call-leaderboard/bfcl_eval/model_handler/api_inference/openai_completion.py b/berkeley-function-call-leaderboard/bfcl_eval/model_handler/api_inference/openai_completion.py
+index 357584f..1a2f48d 100644
+--- a/berkeley-function-call-leaderboard/bfcl_eval/model_handler/api_inference/openai_completion.py
++++ b/berkeley-function-call-leaderboard/bfcl_eval/model_handler/api_inference/openai_completion.py
+@@ -15,7 +15,16 @@ from bfcl_eval.model_handler.utils import (
+     retry_with_backoff,
+     system_prompt_pre_processing_chat_model,
+ )
+-from openai import OpenAI, RateLimitError
++from openai import BadRequestError, OpenAI, RateLimitError
++
++from bfcl_eval.model_handler.history_compress import (
++    dump_request,
++    maybe_compress,
++    note_agent_usage,
++    note_message_tokens,
++    note_rate_limit,
++    note_tool_return,
++)
+ 
+ 
+ class OpenAICompletionsHandler(BaseHandler):
+@@ -29,7 +38,13 @@ class OpenAICompletionsHandler(BaseHandler):
+     ) -> None:
+         super().__init__(model_name, temperature, registry_name, is_fc_model, **kwargs)
+         self.model_style = ModelStyle.OPENAI_COMPLETIONS
+-        self.client = OpenAI(**self._build_client_kwargs())
++        self._omit_store = False
++        self._current_test_id = None
++        self._azure_custom = str(registry_name).startswith("gpt-4.1-mini-azure")
++        client_kwargs = self._build_client_kwargs()
++        if self._azure_custom:
++            client_kwargs["max_retries"] = 0
++        self.client = OpenAI(**client_kwargs)
+ 
+     def _build_client_kwargs(self):
+         """Collect OpenAI client keyword arguments from environment variables, but only
+@@ -66,10 +81,34 @@ class OpenAICompletionsHandler(BaseHandler):
+         else:
+             return default_decode_execute_prompting(result)
+ 
++    def _create_completion(self, kwargs):
++        if self._omit_store:
++            kwargs.pop("store", None)
++        try:
++            return self.client.chat.completions.create(**kwargs)
++        except RateLimitError:
++            if self._azure_custom:
++                note_rate_limit(self)
++            raise
++        except BadRequestError as exc:
++            if (
++                self._azure_custom
++                and "store" in kwargs
++                and "store" in str(exc).lower()
++            ):
++                self._omit_store = True
++                kwargs.pop("store", None)
++                try:
++                    return self.client.chat.completions.create(**kwargs)
++                except RateLimitError:
++                    note_rate_limit(self)
++                    raise
++            raise
++
+     @retry_with_backoff(error_type=RateLimitError)
+     def generate_with_backoff(self, **kwargs):
+         start_time = time.time()
+-        api_response = self.client.chat.completions.create(**kwargs)
++        api_response = self._create_completion(kwargs)
+         end_time = time.time()
+ 
+         return api_response, end_time - start_time
+@@ -77,8 +116,12 @@ class OpenAICompletionsHandler(BaseHandler):
+     #### FC methods ####
+ 
+     def _query_FC(self, inference_data: dict):
++        maybe_compress(self, inference_data)
+         message: list[dict] = inference_data["message"]
+         tools = inference_data["tools"]
++        if self._azure_custom:
++            note_message_tokens(self, message)
++            dump_request(self, message, tools)
+         inference_data["inference_input_log"] = {"message": repr(message), "tools": tools}
+ 
+         kwargs = {
+@@ -95,6 +138,7 @@ class OpenAICompletionsHandler(BaseHandler):
+ 
+     def _pre_query_processing_FC(self, inference_data: dict, test_entry: dict) -> dict:
+         inference_data["message"] = []
++        self._current_test_id = test_entry["id"]
+         return inference_data
+ 
+     def _compile_tools(self, inference_data: dict, test_entry: dict) -> dict:
+@@ -121,12 +165,16 @@ class OpenAICompletionsHandler(BaseHandler):
+ 
+         model_responses_message_for_chat_history = api_response.choices[0].message
+ 
++        input_token = api_response.usage.prompt_tokens
++        output_token = api_response.usage.completion_tokens
++        if self._azure_custom:
++            note_agent_usage(self, input_token, output_token)
+         return {
+             "model_responses": model_responses,
+             "model_responses_message_for_chat_history": model_responses_message_for_chat_history,
+             "tool_call_ids": tool_call_ids,
+-            "input_token": api_response.usage.prompt_tokens,
+-            "output_token": api_response.usage.completion_tokens,
++            "input_token": input_token,
++            "output_token": output_token,
+         }
+ 
+     def add_first_turn_message_FC(
+@@ -165,6 +213,8 @@ class OpenAICompletionsHandler(BaseHandler):
+                 "tool_call_id": tool_call_id,
+             }
+             inference_data["message"].append(tool_message)
++            if self._azure_custom:
++                note_tool_return(self, execution_result)
+ 
+         return inference_data
+ 

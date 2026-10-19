@@ -1,0 +1,156 @@
+{
+  "seed": 42,
+  "split": "test_normal",
+  "tasks": [
+    {
+      "id": "afc4005_3",
+      "difficulty": 1,
+      "scenario": "afc4005"
+    },
+    {
+      "id": "a30375d_1",
+      "difficulty": 1,
+      "scenario": "a30375d"
+    },
+    {
+      "id": "166f4ff_3",
+      "difficulty": 1,
+      "scenario": "166f4ff"
+    },
+    {
+      "id": "552869a_3",
+      "difficulty": 1,
+      "scenario": "552869a"
+    },
+    {
+      "id": "21abae1_3",
+      "difficulty": 1,
+      "scenario": "21abae1"
+    },
+    {
+      "id": "cef9191_3",
+      "difficulty": 1,
+      "scenario": "cef9191"
+    },
+    {
+      "id": "f3f60f0_2",
+      "difficulty": 1,
+      "scenario": "f3f60f0"
+    },
+    {
+      "id": "29a7b7e_1",
+      "difficulty": 1,
+      "scenario": "29a7b7e"
+    },
+    {
+      "id": "7847649_2",
+      "difficulty": 1,
+      "scenario": "7847649"
+    },
+    {
+      "id": "dac78d9_3",
+      "difficulty": 1,
+      "scenario": "dac78d9"
+    },
+    {
+      "id": "b6d1104_2",
+      "difficulty": 2,
+      "scenario": "b6d1104"
+    },
+    {
+      "id": "3aa1a22_2",
+      "difficulty": 2,
+      "scenario": "3aa1a22"
+    },
+    {
+      "id": "c77c005_3",
+      "difficulty": 2,
+      "scenario": "c77c005"
+    },
+    {
+      "id": "ffe6d5e_2",
+      "difficulty": 2,
+      "scenario": "ffe6d5e"
+    },
+    {
+      "id": "ff58e36_1",
+      "difficulty": 2,
+      "scenario": "ff58e36"
+    },
+    {
+      "id": "8749218_3",
+      "difficulty": 2,
+      "scenario": "8749218"
+    },
+    {
+      "id": "270f1ff_2",
+      "difficulty": 2,
+      "scenario": "270f1ff"
+    },
+    {
+      "id": "ccf4b82_3",
+      "difficulty": 2,
+      "scenario": "ccf4b82"
+    },
+    {
+      "id": "3d9a636_1",
+      "difficulty": 2,
+      "scenario": "3d9a636"
+    },
+    {
+      "id": "522e5e5_2",
+      "difficulty": 2,
+      "scenario": "522e5e5"
+    },
+    {
+      "id": "986aa4e_1",
+      "difficulty": 3,
+      "scenario": "986aa4e"
+    },
+    {
+      "id": "f323bae_3",
+      "difficulty": 3,
+      "scenario": "f323bae"
+    },
+    {
+      "id": "32616b5_2",
+      "difficulty": 3,
+      "scenario": "32616b5"
+    },
+    {
+      "id": "6b6ca61_3",
+      "difficulty": 3,
+      "scenario": "6b6ca61"
+    },
+    {
+      "id": "652485c_3",
+      "difficulty": 3,
+      "scenario": "652485c"
+    },
+    {
+      "id": "d18139b_3",
+      "difficulty": 3,
+      "scenario": "d18139b"
+    },
+    {
+      "id": "9dabbc9_1",
+      "difficulty": 3,
+      "scenario": "9dabbc9"
+    },
+    {
+      "id": "b9c5c9a_3",
+      "difficulty": 3,
+      "scenario": "b9c5c9a"
+    },
+    {
+      "id": "90adc3f_3",
+      "difficulty": 3,
+      "scenario": "90adc3f"
+    },
+    {
+      "id": "9016950_1",
+      "difficulty": 3,
+      "scenario": "9016950"
+    }
+  ]
+}

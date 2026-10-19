@@ -1,0 +1,22 @@
+{
+  "id": "multi_turn_long_context_116",
+  "side": "B",
+  "n_compress": 20,
+  "summary": "<HISTORY_SUMMARY>\n### REASONING  \nThe user’s portfolio management involved reviewing and adjusting their stock watchlist and investment positions with a focus on Technology sector opportunities. Initially, the user requested a review of their current watchlist and removal of Zeta Corp; however, attempts to remove Zeta Corp were unsuccessful due to the symbol \"Z\" not being found, a detail preserved to avoid redundant removal attempts. The user then expressed interest in Omega Industries, leading to retrieval of its latest stock details to inform potential investment decisions. Recognizing the Technology sector’s current momentum, a comprehensive list of Technology stocks was compiled to support the user’s scouting for new investments. The user subsequently increased their trading funds by $10,000, raising the account balance to $75,000, thereby enhancing purchasing power. This enabled the execution of a purchase order for 50 shares of AAPL at $150 per share, aligning with the user’s intent to capitalize on a key Technology stock. Retaining watchlist contents, sector-specific stock data, account funding updates, and transaction records ensures continuity and supports future portfolio adjustments without loss of context.\n\n### COMPLETED  \n- Confirmed Zeta Corp removal unsuccessful; symbol \"Z\" not found in watchlist.  \n- Retrieved latest stock details for Omega Industries.  \n- Compiled updated list of Technology sector stocks.  \n- Increased trading funds by $10,000; new account balance $75,000.  \n- Executed purchase order for 50 shares of AAPL at $150 per share; order status pending.",
+  "replaced_history_chars": 7303,
+  "missing_tokens": [
+    "assistant",
+    "tool_calls:",
+    "get_available_stocks",
+    "fund_account",
+    "amount",
+    "call_06zTnEfIzypickch1UVQh4I6",
+    "stock_list",
+    "call_mLK98GasZ1EKgFbgjpna5uxO",
+    "Account",
+    "funded",
+    "successfully",
+    "new_balance",
+    "75000.0"
+  ]
+}

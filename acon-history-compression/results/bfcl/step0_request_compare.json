@@ -1,0 +1,51 @@
+{
+  "task_id": "multi_turn_long_context_7",
+  "turn2_definition": "first request after the second user message",
+  "id_fields_removed": [
+    "id",
+    "tool_call_id"
+  ],
+  "comparisons": {
+    "turn1_step0": {
+      "byte_identical_without_ids": true,
+      "nocomp_bytes": 26377,
+      "hist_bytes": 26377,
+      "nocomp_message_tokens_roles": [
+        "user"
+      ],
+      "hist_message_roles": [
+        "user"
+      ]
+    },
+    "turn2_step0": {
+      "byte_identical_without_ids": true,
+      "nocomp_bytes": 27088,
+      "hist_bytes": 27088,
+      "nocomp_message_tokens_roles": [
+        "user",
+        "assistant",
+        "tool",
+        "assistant",
+        "tool",
+        "assistant",
+        "user"
+      ],
+      "hist_message_roles": [
+        "user",
+        "assistant",
+        "tool",
+        "assistant",
+        "tool",
+        "assistant",
+        "user"
+      ]
+    }
+  },
+  "replay_maybe_compress_on_nocomp_turn2": {
+    "mode": "v2",
+    "tokens": 186,
+    "unchanged": true,
+    "same_object_contents": true
+  },
+  "verdict": "hook_clean_turn2_identical"
+}

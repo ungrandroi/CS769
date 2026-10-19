@@ -1,0 +1,35 @@
+{
+  "task_id": "multi_turn_long_context_7",
+  "mode": "gpt-4.1-mini-azure-FC",
+  "temperature": 0.001,
+  "runs": [
+    {
+      "run": 1,
+      "passed": true,
+      "summary": {
+        "accuracy": 1.0,
+        "correct_count": 1,
+        "total_count": 1
+      }
+    },
+    {
+      "run": 2,
+      "passed": true,
+      "summary": {
+        "accuracy": 1.0,
+        "correct_count": 1,
+        "total_count": 1
+      }
+    },
+    {
+      "run": 3,
+      "passed": true,
+      "summary": {
+        "accuracy": 1.0,
+        "correct_count": 1,
+        "total_count": 1
+      }
+    }
+  ],
+  "passed_count": 3
+}

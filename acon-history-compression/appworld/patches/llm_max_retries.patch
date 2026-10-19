@@ -1,0 +1,13 @@
+diff --git a/src/productive_agents/llm.py b/src/productive_agents/llm.py
+index 7281e68..947cf25 100644
+--- a/src/productive_agents/llm.py
++++ b/src/productive_agents/llm.py
+@@ -401,7 +401,7 @@ class ChatGPT(BaseLLMModel):
+         super().__init__(model_name, system_message, log_file, log_level, temperature)
+         
+         self.key = key
+-        self.client = OpenAI(api_key=key)
++        self.client = OpenAI(api_key=key, max_retries=8)
+ 
+     def generate(self, prompt, max_tokens=1024, temperature=None, stop=None, seed=None, **kwargs):
+         """Generate response using OpenAI API"""

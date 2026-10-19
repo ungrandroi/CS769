@@ -1,0 +1,38 @@
+{
+  "n": 200,
+  "accuracy": 0.45,
+  "correct": 90,
+  "force_terminated": 1,
+  "messages_peak_median": 2973.5,
+  "messages_peak_p90": 25905,
+  "messages_peak_max": 59216,
+  "messages_peak_ge": {
+    "4096": 83,
+    "6144": 60,
+    "8192": 44
+  },
+  "by_domain": {
+    "filesystem": {
+      "n": 50,
+      "correct": 15
+    },
+    "vehicle": {
+      "n": 50,
+      "correct": 13
+    },
+    "trading": {
+      "n": 50,
+      "correct": 37
+    },
+    "travel": {
+      "n": 50,
+      "correct": 25
+    }
+  },
+  "agent_input_tokens": 14826580,
+  "agent_output_tokens": 128181,
+  "rate_limit_429": 1470,
+  "stats_missing_ids": [
+    "multi_turn_long_context_21"
+  ]
+}

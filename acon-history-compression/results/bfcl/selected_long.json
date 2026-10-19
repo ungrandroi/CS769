@@ -1,0 +1,189 @@
+{
+  "seed": 42,
+  "threshold": 8192,
+  "rule": "passed and messages_peak >= threshold; sample 30 if more than 30",
+  "candidate_count": 32,
+  "selected_count": 30,
+  "tasks": [
+    {
+      "id": "multi_turn_long_context_91",
+      "domain": "vehicle",
+      "messages_peak_tokens": 8473,
+      "peak_input_tokens": 10414
+    },
+    {
+      "id": "multi_turn_long_context_101",
+      "domain": "trading",
+      "messages_peak_tokens": 40453,
+      "peak_input_tokens": 41889
+    },
+    {
+      "id": "multi_turn_long_context_102",
+      "domain": "trading",
+      "messages_peak_tokens": 20490,
+      "peak_input_tokens": 22563
+    },
+    {
+      "id": "multi_turn_long_context_104",
+      "domain": "trading",
+      "messages_peak_tokens": 24371,
+      "peak_input_tokens": 25812
+    },
+    {
+      "id": "multi_turn_long_context_105",
+      "domain": "trading",
+      "messages_peak_tokens": 24368,
+      "peak_input_tokens": 26304
+    },
+    {
+      "id": "multi_turn_long_context_108",
+      "domain": "trading",
+      "messages_peak_tokens": 26364,
+      "peak_input_tokens": 28395
+    },
+    {
+      "id": "multi_turn_long_context_109",
+      "domain": "trading",
+      "messages_peak_tokens": 27074,
+      "peak_input_tokens": 28652
+    },
+    {
+      "id": "multi_turn_long_context_112",
+      "domain": "trading",
+      "messages_peak_tokens": 24534,
+      "peak_input_tokens": 27248
+    },
+    {
+      "id": "multi_turn_long_context_114",
+      "domain": "trading",
+      "messages_peak_tokens": 24524,
+      "peak_input_tokens": 26557
+    },
+    {
+      "id": "multi_turn_long_context_115",
+      "domain": "trading",
+      "messages_peak_tokens": 22120,
+      "peak_input_tokens": 23537
+    },
+    {
+      "id": "multi_turn_long_context_116",
+      "domain": "trading",
+      "messages_peak_tokens": 32515,
+      "peak_input_tokens": 33940
+    },
+    {
+      "id": "multi_turn_long_context_118",
+      "domain": "trading",
+      "messages_peak_tokens": 26151,
+      "peak_input_tokens": 27557
+    },
+    {
+      "id": "multi_turn_long_context_119",
+      "domain": "trading",
+      "messages_peak_tokens": 26976,
+      "peak_input_tokens": 29200
+    },
+    {
+      "id": "multi_turn_long_context_120",
+      "domain": "trading",
+      "messages_peak_tokens": 22046,
+      "peak_input_tokens": 23460
+    },
+    {
+      "id": "multi_turn_long_context_121",
+      "domain": "trading",
+      "messages_peak_tokens": 28548,
+      "peak_input_tokens": 29965
+    },
+    {
+      "id": "multi_turn_long_context_123",
+      "domain": "trading",
+      "messages_peak_tokens": 22278,
+      "peak_input_tokens": 23665
+    },
+    {
+      "id": "multi_turn_long_context_126",
+      "domain": "trading",
+      "messages_peak_tokens": 26257,
+      "peak_input_tokens": 27687
+    },
+    {
+      "id": "multi_turn_long_context_127",
+      "domain": "trading",
+      "messages_peak_tokens": 25905,
+      "peak_input_tokens": 27333
+    },
+    {
+      "id": "multi_turn_long_context_128",
+      "domain": "trading",
+      "messages_peak_tokens": 26327,
+      "peak_input_tokens": 27752
+    },
+    {
+      "id": "multi_turn_long_context_129",
+      "domain": "trading",
+      "messages_peak_tokens": 22444,
+      "peak_input_tokens": 24640
+    },
+    {
+      "id": "multi_turn_long_context_134",
+      "domain": "trading",
+      "messages_peak_tokens": 59216,
+      "peak_input_tokens": 61851
+    },
+    {
+      "id": "multi_turn_long_context_135",
+      "domain": "trading",
+      "messages_peak_tokens": 29955,
+      "peak_input_tokens": 31387
+    },
+    {
+      "id": "multi_turn_long_context_136",
+      "domain": "trading",
+      "messages_peak_tokens": 22265,
+      "peak_input_tokens": 24977
+    },
+    {
+      "id": "multi_turn_long_context_137",
+      "domain": "trading",
+      "messages_peak_tokens": 24665,
+      "peak_input_tokens": 26709
+    },
+    {
+      "id": "multi_turn_long_context_138",
+      "domain": "trading",
+      "messages_peak_tokens": 22532,
+      "peak_input_tokens": 24562
+    },
+    {
+      "id": "multi_turn_long_context_142",
+      "domain": "trading",
+      "messages_peak_tokens": 24557,
+      "peak_input_tokens": 25981
+    },
+    {
+      "id": "multi_turn_long_context_145",
+      "domain": "trading",
+      "messages_peak_tokens": 22568,
+      "peak_input_tokens": 24588
+    },
+    {
+      "id": "multi_turn_long_context_146",
+      "domain": "trading",
+      "messages_peak_tokens": 28926,
+      "peak_input_tokens": 30327
+    },
+    {
+      "id": "multi_turn_long_context_148",
+      "domain": "trading",
+      "messages_peak_tokens": 22345,
+      "peak_input_tokens": 24553
+    },
+    {
+      "id": "multi_turn_long_context_149",
+      "domain": "trading",
+      "messages_peak_tokens": 28625,
+      "peak_input_tokens": 30656
+    }
+  ]
+}
