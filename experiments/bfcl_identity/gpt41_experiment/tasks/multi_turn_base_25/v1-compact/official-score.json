@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_25",
+      "model_name": "azure_gpt-4.1-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 2.",
+        "error_type": "multi_turn:execution_response_mismatch",
+        "details": {
+          "missing_items": [
+            "{\"current_working_directory\": \"Research2023\"}"
+          ],
+          "model_response (including all previous turns)": [
+            "{\"current_directory_content\": [\"Research2023\", \"summary.txt\"]}",
+            "{\"file_content\": \"This is the summary of the project. It includes various findings and conclusions. Further analysis is required.\"}",
+            "{\"result\": \"'summary.txt' copied to 'Research2023/summary.txt'\"}",
+            "{\"sorted_content\": \"This is the summary of the project. It includes various findings and conclusions. Further analysis is required.\"}"
+          ],
+          "ground_truth_response (only the current turn)": [
+            "{\"current_working_directory\": \"Research2023\"}",
+            "{\"sorted_content\": \"This is the summary of the project. It includes various findings and conclusions. Further analysis is required.\"}"
+          ]
+        }
+      }
+    }
+  ],
+  "result_sha256": "e6d12a0c501aec90d4202f768bec31f54e27d39e983ed16dd760a2420d950070",
+  "score_sha256": "4e3224bb9a42bee24bd1c8d1897644c34fc47176ae8a30b5ff1a734d4bdf9287",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

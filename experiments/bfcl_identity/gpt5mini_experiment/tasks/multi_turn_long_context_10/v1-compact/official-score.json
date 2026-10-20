@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_long_context_10",
+      "model_name": "azure_gpt-5-mini-FC",
+      "test_category": "multi_turn_long_context",
+      "valid": false,
+      "error": {
+        "error_message": [
+          "Model was force-terminated during inference phase. The length of the model result turns (2) does not match the length of the ground truth turns (5)."
+        ],
+        "error_type": "multi_turn:force_terminated"
+      }
+    }
+  ],
+  "result_sha256": "4301e863f6bd39ad84d206f8273fd05c5e66155152cf03e2bbd60538881d5335",
+  "score_sha256": "b73243f3d1541dd5ab53ff387284de97859d299f9c4773ff4d7221c00b328a61",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-5-mini-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json"
+}

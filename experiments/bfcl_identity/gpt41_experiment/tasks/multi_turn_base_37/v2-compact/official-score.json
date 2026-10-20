@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_37",
+      "model_name": "azure_gpt-4.1-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 0.",
+        "error_type": "multi_turn:execution_response_mismatch",
+        "details": {
+          "missing_items": [
+            "{\"count\": 1, \"type\": \"lines\"}"
+          ],
+          "model_response (including all previous turns)": [
+            "{\"error\": \"cd: 'temp': No such file or directory\"}",
+            "{\"current_directory_content\": [\"dev_summary.txt\"]}"
+          ],
+          "ground_truth_response (only the current turn)": [
+            "{\"count\": 1, \"type\": \"lines\"}"
+          ]
+        }
+      }
+    }
+  ],
+  "result_sha256": "8e74c774bb8381cf637d9e6018edc7794b056760947a980f9ed80417e2c648be",
+  "score_sha256": "d5d23698ef0c419d955f3bbb14d6305bf3db2446a05ac323c1c0533e7089c0a3",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

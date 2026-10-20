@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_long_context_26",
+      "model_name": "azure_gpt-4.1-FC",
+      "test_category": "multi_turn_long_context",
+      "valid": false,
+      "error": {
+        "error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 1.",
+        "error_type": "multi_turn:execution_response_mismatch",
+        "details": {
+          "missing_items": [
+            "{\"file_content\": \"Nothing important here. Yet another line.\"}"
+          ],
+          "model_response (including all previous turns)": [
+            "{\"current_working_directory\": \"tmp\"}",
+            "{\"current_directory_content\": [\"file1.txt\", \"file2.txt\", \"file3.txt\", \"image_344822349461074042.jpg\", \"image_8219547643081662353.jpg\", \"image_5421509146842474663.jpg\", \"image_185391401034246046.jpg\", \"image_6824007961180780019.jpg\", \"image_2994974694593273051.jpg\", \"image_2537728455072851196.jpg\", \"image_2164918946836800275.jpg\", \"image_1745133864906284051.jpg\", \"image_7707563551789432679.jpg\", \"image_8190489168166590809.jpg\", \"image_2385660725381355820.jpg\", \"image_4771211633166048374.jpg\", \"image_3443718094055823214.jpg\", \"image_6838087561356843690.jpg\", \"image_605952633285970710.jpg\", \"image_6341510244180179744.jpg\", \"image_4119241148692325954.jpg\", \"image_5651066601163181955.jpg\", \"image_3747091333751395055.jpg\", \"image_4623743619379194431.jpg\", \"image_5072742684386583099.jpg\", \"image_1978458056362464778.jpg\", \"image_3090346927968358019.jpg\", \"image_7193806748674265039.jpg\", \"image_7169516574395086720.jpg\", \"image_8618240224293913315.jpg\", \"image_5514683852355062444.jpg\", \"image_8749630317332649147.jpg\", \"image_1912245706439755759.jpg\"]}",
+            "{\"file_content\": \"\"}"
+          ],
+          "ground_truth_response (only the current turn)": [
+            "{\"file_content\": \"Nothing important here. Yet another line.\"}"
+          ]
+        }
+      }
+    }
+  ],
+  "result_sha256": "023396d118123768962df75fe0f3342603b8f1cca70f6ce554bef89dfdf30cdf",
+  "score_sha256": "3c8f44d7ba10a2f9d67feae0d21c3c2499a5f702fe045dcb7c37ff774758d856",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json"
+}

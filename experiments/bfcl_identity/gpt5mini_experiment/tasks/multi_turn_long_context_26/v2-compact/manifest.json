@@ -1,0 +1,53 @@
+{
+  "task_id": "multi_turn_long_context_26",
+  "category": "multi_turn_long_context",
+  "mode": "v2-compact",
+  "status": "complete",
+  "agent_deployment": "gpt-5-mini",
+  "registry_name": "azure/gpt-5-mini-FC",
+  "base_url": "https://ruqi-llm.openai.azure.com/openai/v1",
+  "prefix_source": "/home/ruqi/public/CS769/experiments/bfcl_identity/gpt5mini_experiment/tasks/multi_turn_long_context_26/identity",
+  "runtime": {
+    "reasoning_effort": "medium",
+    "max_completion_tokens": 16384,
+    "seed": 42
+  },
+  "memory_tokenizer": "tiktoken o200k_base",
+  "intervention": "One history replacement before second user input; later history retained",
+  "memory_tokens": 8072,
+  "boundary": {
+    "turn": 1,
+    "history_sha256": "961759e2d759a0739cc44dc6197ea582c8c18050715702ffbff7410b1ee3505c",
+    "after_sha256": "3b2403b2699c55aae887d7224c21b6c2e2df65210748c3e4fd1c320405decdd0",
+    "source_messages": 10,
+    "roundtrip_verified": true
+  },
+  "boundary_reached": true,
+  "first_turn_requests": 5,
+  "served_models": [
+    "gpt-5-mini-2025-08-07"
+  ],
+  "live_requests": 9,
+  "replayed_requests": 5,
+  "continuation_requests": 9,
+  "live_usage": {
+    "prompt_tokens": 95450,
+    "completion_tokens": 3002,
+    "total_tokens": 98452
+  },
+  "live_cached_input": 77952,
+  "live_reasoning_output": 2432,
+  "length_truncations": 0,
+  "prefix_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0
+  },
+  "continuation_usage": {
+    "prompt_tokens": 95450,
+    "completion_tokens": 3002,
+    "total_tokens": 98452
+  },
+  "prefix_log_equal": true,
+  "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"
+}

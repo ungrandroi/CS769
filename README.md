@@ -21,6 +21,8 @@ The graph methods use compact serialization. “Compact” means a more concise 
 | Provenance deduplication: offline | Encode existing Event Graph memories and verify exact reconstruction | Offline serialization and token measurements; no model inference |
 | Provenance deduplication: continuation | Continue from the same first-turn checkpoints using Event Graph-Dedup | Official passes: **15/26** |
 | History threshold | Replace history when accumulated tool-call and return content reaches 1,000 tokens, excluding tool definitions | **prepared_not_run**: 9 tasks reach the threshold and 17 do not. No continuation scores yet |
+| GPT-4.1 rerun | Early baseline protocol with Azure `gpt-4.1` generating every turn, including the first | Official passes: Identity **13/26**, State-Transition Graph **10/26**, Event Graph **11/26**. The graph drop also appears with GPT-4.1. See [the report](experiments/bfcl_identity/reports/gpt41_rerun.md) |
+| GPT-5-mini rerun | Same protocol with Azure `gpt-5-mini`, `reasoning_effort` medium | Official passes: Identity **12/26**, State-Transition Graph **9/26**, Event Graph **9/26**. See [the report](experiments/bfcl_identity/reports/gpt5mini_rerun.md) and the [three-model summary](experiments/bfcl_identity/reports/model_comparison.md) |
 
 Each evaluated method has one run per task condition. These results are not estimates from repeated trials. Graph construction and serialization are implemented; a learned compressor and risk model are not yet implemented.
 
@@ -34,6 +36,8 @@ Each evaluated method has one run per task condition. These results are not esti
 - `experiments/bfcl_identity/v2_provenance_dedup_probe/`: offline Event Graph provenance-deduplication study.
 - `experiments/bfcl_identity/qwen27b_dedup_eval/`: 26 evaluated Event Graph-Dedup continuations.
 - `experiments/bfcl_identity/history1000_eval/`: prepared checkpoints for the pure 1,000-token history threshold.
+- `experiments/bfcl_identity/gpt41_experiment/`: 26 tasks and three methods rerun with Azure GPT-4.1.
+- `experiments/bfcl_identity/gpt5mini_experiment/`: the same 26 tasks and three methods rerun with Azure GPT-5-mini.
 - `experiments/bfcl_identity/reports/`: reports using the current method names.
 - `visualization/`: user-maintained memory replay interface, including source files and a standalone `index.html`.
 

@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_6",
+      "model_name": "azure_gpt-4.1-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model instance for GorillaFileSystem does not match the state with ground truth instance.",
+        "error_type": "multi_turn:instance_state_mismatch",
+        "details": {
+          "differences": {
+            "root": {
+              "model": "<Directory: gorilla, Parent: None, Contents: {'communal': <Directory: communal, Parent: gorilla, Contents: {}>, 'reserve': <Directory: reserve, Parent: gorilla, Contents: {}>, 'shared': <Directory: shared, Parent: gorilla, Contents: {}>, 'archives': <Directory: archives, Parent: gorilla, Contents: {}>, 'Annual_Report_2023.docx': <<File: Annual_Report_2023.docx, Content: >>}>",
+              "ground_truth": "<Directory: gorilla, Parent: None, Contents: {'communal': <Directory: communal, Parent: gorilla, Contents: {'Annual_Report_2023.docx': <<File: Annual_Report_2023.docx, Content: >>}>, 'reserve': <Directory: reserve, Parent: gorilla, Contents: {}>, 'shared': <Directory: shared, Parent: gorilla, Contents: {}>, 'archives': <Directory: archives, Parent: gorilla, Contents: {}>}>"
+            }
+          },
+          "model_instance_state": {
+            "long_context": false,
+            "root": "<Directory: gorilla, Parent: None, Contents: {'communal': <Directory: communal, Parent: gorilla, Contents: {}>, 'reserve': <Directory: reserve, Parent: gorilla, Contents: {}>, 'shared': <Directory: shared, Parent: gorilla, Contents: {}>, 'archives': <Directory: archives, Parent: gorilla, Contents: {}>, 'Annual_Report_2023.docx': <<File: Annual_Report_2023.docx, Content: >>}>"
+          },
+          "ground_truth_instance_state": {
+            "long_context": false,
+            "root": "<Directory: gorilla, Parent: None, Contents: {'communal': <Directory: communal, Parent: gorilla, Contents: {'Annual_Report_2023.docx': <<File: Annual_Report_2023.docx, Content: >>}>, 'reserve': <Directory: reserve, Parent: gorilla, Contents: {}>, 'shared': <Directory: shared, Parent: gorilla, Contents: {}>, 'archives': <Directory: archives, Parent: gorilla, Contents: {}>}>"
+          }
+        },
+        "execution_result": [
+          {
+            "model": [
+              [
+                "None"
+              ]
+            ],
+            "ground_truth": [
+              "{\"current_working_directory\": \"communal\"}",
+              "None"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "result_sha256": "0764bdfa627bdd107c9fc3cdfee4b31d8c63e276554124c24848316823a26034",
+  "score_sha256": "5d43c40a522f4dd425a5dca2901f9a11b2214b1ce1cff428c5d376b9bca6b65d",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

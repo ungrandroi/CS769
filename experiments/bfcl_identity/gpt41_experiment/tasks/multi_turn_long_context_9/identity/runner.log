@@ -1,0 +1,46 @@
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 0, Step: 1
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 1, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 1, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 1, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 1, Step: 4
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 1, Step: 5
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 1, Step: 6
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 1, Step: 7
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 1, Step: 8
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 4
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 5
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 6
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 7
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 8
+----------------------------------------------------------------------------------------------------
+ID: long_context_9, Turn: 2, Step: 9
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_long_context_9", "category": "multi_turn_long_context", "mode": "identity", "status": "complete", "agent_deployment": "gpt-4.1", "registry_name": "azure/gpt-4.1-FC", "base_url": "https://ruqi-llm.openai.azure.com/openai/v1", "prefix_source": null, "runtime": {"temperature": 0, "seed": 42, "max_tokens": 4096}, "memory_tokenizer": "tiktoken o200k_base", "intervention": "One history replacement before second user input; later history retained", "boundary": {"turn": 1, "history_sha256": "5e88488618294116f1d9a30dd34b7c990bd0eb477a63fc91c2b96650b3fe03b0", "after_sha256": "5e88488618294116f1d9a30dd34b7c990bd0eb477a63fc91c2b96650b3fe03b0", "source_messages": 4, "roundtrip_verified": false}, "boundary_reached": true, "first_turn_requests": 2, "served_models": ["gpt-4.1-2025-04-14"], "live_requests": 21, "replayed_requests": 0, "continuation_requests": 19, "live_usage": {"prompt_tokens": 66198, "completion_tokens": 1127, "total_tokens": 67325}, "live_cached_input": 57728, "prefix_usage": {"prompt_tokens": 4289, "completion_tokens": 56, "total_tokens": 4345}, "continuation_usage": {"prompt_tokens": 61909, "completion_tokens": 1071, "total_tokens": 62980}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

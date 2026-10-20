@@ -1,0 +1,25 @@
+----------------------------------------------------------------------------------------------------
+ID: base_38, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_38, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_38, Turn: 0, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: base_38, Turn: 0, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: base_38, Turn: 0, Step: 4
+----------------------------------------------------------------------------------------------------
+ID: base_38, Turn: 0, Step: 5
+----------------------------------------------------------------------------------------------------
+ID: base_38, Turn: 0, Step: 6
+----------------------------------------------------------------------------------------------------
+ID: base_38, Turn: 0, Step: 7
+----------------------------------------------------------------------------------------------------
+ID: base_38, Turn: 0, Step: 8
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_38, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_38, Turn: 1, Step: 1
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_base_38", "category": "multi_turn_base", "mode": "v2-compact", "status": "complete", "agent_deployment": "gpt-4.1", "registry_name": "azure/gpt-4.1-FC", "base_url": "https://ruqi-llm.openai.azure.com/openai/v1", "prefix_source": "/home/ruqi/public/CS769/experiments/bfcl_identity/gpt41_experiment/tasks/multi_turn_base_38/identity", "runtime": {"temperature": 0, "seed": 42, "max_tokens": 4096}, "memory_tokenizer": "tiktoken o200k_base", "intervention": "One history replacement before second user input; later history retained", "memory_tokens": 3029, "boundary": {"turn": 1, "history_sha256": "3551876de190328f8a463681da0e26d182eeeb8d75a5f307fd9e4db2af59b94e", "after_sha256": "1363762d065b2e22816524869b9e37619481f2d70789426a39ad1d10287aa97b", "source_messages": 18, "roundtrip_verified": true}, "boundary_reached": true, "first_turn_requests": 9, "served_models": ["gpt-4.1-2025-04-14"], "live_requests": 2, "replayed_requests": 9, "continuation_requests": 2, "live_usage": {"prompt_tokens": 10326, "completion_tokens": 53, "total_tokens": 10379}, "live_cached_input": 7552, "prefix_usage": {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}, "continuation_usage": {"prompt_tokens": 10326, "completion_tokens": 53, "total_tokens": 10379}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

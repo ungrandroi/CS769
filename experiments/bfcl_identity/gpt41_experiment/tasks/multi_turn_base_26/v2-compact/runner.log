@@ -1,0 +1,20 @@
+----------------------------------------------------------------------------------------------------
+ID: base_26, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_26, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_26, Turn: 0, Step: 2
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_26, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_26, Turn: 1, Step: 1
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_26, Turn: 2, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_26, Turn: 2, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_26, Turn: 2, Step: 2
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_base_26", "category": "multi_turn_base", "mode": "v2-compact", "status": "complete", "agent_deployment": "gpt-4.1", "registry_name": "azure/gpt-4.1-FC", "base_url": "https://ruqi-llm.openai.azure.com/openai/v1", "prefix_source": "/home/ruqi/public/CS769/experiments/bfcl_identity/gpt41_experiment/tasks/multi_turn_base_26/identity", "runtime": {"temperature": 0, "seed": 42, "max_tokens": 4096}, "memory_tokenizer": "tiktoken o200k_base", "intervention": "One history replacement before second user input; later history retained", "memory_tokens": 1848, "boundary": {"turn": 1, "history_sha256": "e7c0cc56ce8510ca35f9cb0630c8ab6b398a985b8be04871789e8ffcd695bc32", "after_sha256": "fcff79c9487ddb856157a173d38b08336b6d5210d0a73040ef6ee36c9cee0d00", "source_messages": 6, "roundtrip_verified": true}, "boundary_reached": true, "first_turn_requests": 3, "served_models": ["gpt-4.1-2025-04-14"], "live_requests": 5, "replayed_requests": 3, "continuation_requests": 5, "live_usage": {"prompt_tokens": 20263, "completion_tokens": 145, "total_tokens": 20408}, "live_cached_input": 16512, "prefix_usage": {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}, "continuation_usage": {"prompt_tokens": 20263, "completion_tokens": 145, "total_tokens": 20408}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

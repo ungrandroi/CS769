@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "accuracy": 1.0,
+    "correct_count": 1,
+    "total_count": 1
+  },
+  "passed": true,
+  "diagnostics": [],
+  "result_sha256": "59c1e8061a9e9f4435c72dec73aec3fc0856195b27516601deced1b0d9dfa359",
+  "score_sha256": "92ab4990b62f1b6dfd7a6afa01877b87316d60d5e3a8c221330d83b7bf0696d5",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-5-mini-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

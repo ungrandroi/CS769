@@ -1,0 +1,27 @@
+----------------------------------------------------------------------------------------------------
+ID: long_context_25, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_25, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_25, Turn: 0, Step: 2
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_25, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_25, Turn: 1, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_25, Turn: 1, Step: 2
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_25, Turn: 2, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_25, Turn: 2, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_25, Turn: 2, Step: 2
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_25, Turn: 3, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_25, Turn: 3, Step: 1
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_long_context_25", "category": "multi_turn_long_context", "mode": "v1-compact", "status": "complete", "agent_deployment": "gpt-5-mini", "registry_name": "azure/gpt-5-mini-FC", "base_url": "https://ruqi-llm.openai.azure.com/openai/v1", "prefix_source": "/home/ruqi/public/CS769/experiments/bfcl_identity/gpt5mini_experiment/tasks/multi_turn_long_context_25/identity", "runtime": {"reasoning_effort": "medium", "max_completion_tokens": 16384, "seed": 42}, "memory_tokenizer": "tiktoken o200k_base", "intervention": "One history replacement before second user input; later history retained", "memory_tokens": 2654, "boundary": {"turn": 1, "history_sha256": "8443d3c8a566a4204321b8b7985d883bf9a2ea5e4ebc4e40a5d7e53107a3c04d", "after_sha256": "632d55cb81a7ca55fe48cd03dc9f74035a72162470b5d9e3cdd45196c9a55545", "source_messages": 6, "roundtrip_verified": true}, "boundary_reached": true, "first_turn_requests": 3, "served_models": ["gpt-5-mini-2025-08-07"], "live_requests": 8, "replayed_requests": 3, "continuation_requests": 8, "live_usage": {"prompt_tokens": 44345, "completion_tokens": 1310, "total_tokens": 45655}, "live_cached_input": 36992, "live_reasoning_output": 1024, "length_truncations": 0, "prefix_usage": {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}, "continuation_usage": {"prompt_tokens": 44345, "completion_tokens": 1310, "total_tokens": 45655}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

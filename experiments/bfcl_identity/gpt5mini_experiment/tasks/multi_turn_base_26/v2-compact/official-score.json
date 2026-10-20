@@ -1,0 +1,65 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_26",
+      "model_name": "azure_gpt-5-mini-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model response list is empty for turn 2",
+        "error_type": "multi_turn:empty_turn_model_response",
+        "details": {
+          "execution_result": [
+            {
+              "model": [
+                [
+                  "{\"current_working_directory\": \"/alex\"}"
+                ],
+                [
+                  "{\"current_directory_content\": [\"tmp\"]}"
+                ],
+                [
+                  "{\"current_working_directory\": \"tmp\"}"
+                ],
+                [
+                  "{\"current_directory_content\": [\"file1.txt\", \"file2.txt\", \"file3.txt\"]}"
+                ]
+              ],
+              "ground_truth": [
+                "{\"current_working_directory\": \"tmp\"}",
+                "{\"current_directory_content\": [\"file1.txt\", \"file2.txt\", \"file3.txt\"]}"
+              ]
+            },
+            {
+              "model": [
+                [
+                  "{\"file_content\": \"Nothing important here. Yet another line.\"}"
+                ]
+              ],
+              "ground_truth": [
+                "{\"file_content\": \"Nothing important here. Yet another line.\"}"
+              ]
+            },
+            {
+              "model": [],
+              "ground_truth": [
+                "None",
+                "None"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "result_sha256": "78f6b500ad0ebfef4b8cd7fdf164d19d77817822cf57267d7cb7f67983a80502",
+  "score_sha256": "3cf2c2beff0aaed9973137858627916a54c226344292ff5962f3b3f5b9acadaf",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-5-mini-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

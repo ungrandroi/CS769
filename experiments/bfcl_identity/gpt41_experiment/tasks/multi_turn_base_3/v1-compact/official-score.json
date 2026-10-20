@@ -1,0 +1,66 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_3",
+      "model_name": "azure_gpt-4.1-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model instance for GorillaFileSystem does not match the state with ground truth instance.",
+        "error_type": "multi_turn:instance_state_mismatch",
+        "details": {
+          "differences": {
+            "root": {
+              "model": "<Directory: alex, Parent: None, Contents: {'projects': <Directory: projects, Parent: alex, Contents: {'photography': <Directory: photography, Parent: projects, Contents: {'test_image1.jpg': <<File: test_image1.jpg, Content: Image data 1>>, 'test_document.txt': <<File: test_document.txt, Content: Document data>>, 'backup_tests': <Directory: backup_tests, Parent: photography, Contents: {}>}>}>}>",
+              "ground_truth": "<Directory: alex, Parent: None, Contents: {'projects': <Directory: projects, Parent: alex, Contents: {'photography': <Directory: photography, Parent: projects, Contents: {'test_image1.jpg': <<File: test_image1.jpg, Content: Image data 1>>, 'test_document.txt': <<File: test_document.txt, Content: Document data>>, 'backup_tests': <Directory: backup_tests, Parent: photography, Contents: {'test_image1.jpg': <<File: test_image1.jpg, Content: Image data 1>>, 'test_document.txt': <<File: test_document.txt, Content: Document data>>}>}>}>}>"
+            }
+          },
+          "model_instance_state": {
+            "long_context": false,
+            "root": "<Directory: alex, Parent: None, Contents: {'projects': <Directory: projects, Parent: alex, Contents: {'photography': <Directory: photography, Parent: projects, Contents: {'test_image1.jpg': <<File: test_image1.jpg, Content: Image data 1>>, 'test_document.txt': <<File: test_document.txt, Content: Document data>>, 'backup_tests': <Directory: backup_tests, Parent: photography, Contents: {}>}>}>}>"
+          },
+          "ground_truth_instance_state": {
+            "long_context": false,
+            "root": "<Directory: alex, Parent: None, Contents: {'projects': <Directory: projects, Parent: alex, Contents: {'photography': <Directory: photography, Parent: projects, Contents: {'test_image1.jpg': <<File: test_image1.jpg, Content: Image data 1>>, 'test_document.txt': <<File: test_document.txt, Content: Document data>>, 'backup_tests': <Directory: backup_tests, Parent: photography, Contents: {'test_image1.jpg': <<File: test_image1.jpg, Content: Image data 1>>, 'test_document.txt': <<File: test_document.txt, Content: Document data>>}>}>}>}>"
+          }
+        },
+        "execution_result": [
+          {
+            "model": [
+              [
+                "{\"matches\": [\"./projects/photography/test_image1.jpg\", \"./projects/photography/test_document.txt\", \"./projects/photography/backup_tests\"]}"
+              ]
+            ],
+            "ground_truth": [
+              "{\"matches\": [\"./projects/photography/test_image1.jpg\", \"./projects/photography/test_document.txt\", \"./projects/photography/backup_tests\"]}"
+            ]
+          },
+          {
+            "model": [
+              [
+                "{\"error\": \"cp: cannot copy 'projects/photography/test_image1.jpg': No such file or directory\"}",
+                "{\"error\": \"cp: cannot copy 'projects/photography/test_document.txt': No such file or directory\"}"
+              ]
+            ],
+            "ground_truth": [
+              "{\"current_working_directory\": \"projects\"}",
+              "{\"current_working_directory\": \"photography\"}",
+              "{\"result\": \"'test_image1.jpg' copied to 'backup_tests/test_image1.jpg'\"}",
+              "{\"result\": \"'test_document.txt' copied to 'backup_tests/test_document.txt'\"}"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "result_sha256": "330d6f5262a95948b50522b805685c24b70a82e024f126f56d4b4fc48bf32223",
+  "score_sha256": "436f1b3d494a0f04bf41f8a6690c049cc2733a28025fb1f340e08f8c31285b1b",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

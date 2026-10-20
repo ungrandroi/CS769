@@ -1,0 +1,328 @@
+{
+  "model": "gpt-4.1",
+  "serving_model": "gpt-4.1",
+  "modes": [
+    "identity",
+    "v1-compact",
+    "v2-compact"
+  ],
+  "tasks": [
+    {
+      "id": "multi_turn_base_1",
+      "category": "multi_turn_base",
+      "family_id": 1,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_3",
+      "category": "multi_turn_base",
+      "family_id": 3,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_6",
+      "category": "multi_turn_base",
+      "family_id": 6,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_9",
+      "category": "multi_turn_base",
+      "family_id": 9,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_10",
+      "category": "multi_turn_base",
+      "family_id": 10,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_12",
+      "category": "multi_turn_base",
+      "family_id": 12,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_16",
+      "category": "multi_turn_base",
+      "family_id": 16,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_25",
+      "category": "multi_turn_base",
+      "family_id": 25,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_26",
+      "category": "multi_turn_base",
+      "family_id": 26,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_29",
+      "category": "multi_turn_base",
+      "family_id": 29,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_37",
+      "category": "multi_turn_base",
+      "family_id": 37,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_38",
+      "category": "multi_turn_base",
+      "family_id": 38,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_base_39",
+      "category": "multi_turn_base",
+      "family_id": 39,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_1",
+      "category": "multi_turn_long_context",
+      "family_id": 1,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_3",
+      "category": "multi_turn_long_context",
+      "family_id": 3,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_6",
+      "category": "multi_turn_long_context",
+      "family_id": 6,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_9",
+      "category": "multi_turn_long_context",
+      "family_id": 9,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_10",
+      "category": "multi_turn_long_context",
+      "family_id": 10,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_12",
+      "category": "multi_turn_long_context",
+      "family_id": 12,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_16",
+      "category": "multi_turn_long_context",
+      "family_id": 16,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_25",
+      "category": "multi_turn_long_context",
+      "family_id": 25,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_26",
+      "category": "multi_turn_long_context",
+      "family_id": 26,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_29",
+      "category": "multi_turn_long_context",
+      "family_id": 29,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_37",
+      "category": "multi_turn_long_context",
+      "family_id": 37,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_38",
+      "category": "multi_turn_long_context",
+      "family_id": 38,
+      "order": [
+        "identity",
+        "v1-compact",
+        "v2-compact"
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_39",
+      "category": "multi_turn_long_context",
+      "family_id": 39,
+      "order": [
+        "identity",
+        "v2-compact",
+        "v1-compact"
+      ]
+    }
+  ],
+  "planned_records": 78,
+  "task_conditions": 26,
+  "task_families": 13,
+  "samples_per_method": 1,
+  "protocol": "Identity runs entirely with the Azure deployment; graph branches replay its identical first turn to restore the simulator, then replace history once before user turn 2. Same tasks, branch order and graph builders as the all-Qwen baseline.",
+  "sampling": {
+    "temperature": 0,
+    "seed": 42,
+    "max_tokens": 4096
+  },
+  "parallelism": "Two workers against one Azure deployment; all branches of a task run sequentially on one worker.",
+  "usage": "Report common first-turn usage once as actual compute, plus per-method continuation; also report equivalent whole-trajectory usage per method.",
+  "score": "Unmodified official BFCL whole-task evaluator; retain first-turn failures in all three arms; no score-based retries.",
+  "data_sha256": {
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_base.json": "1a21a995d06fd6f20ba55de7bced30ef953ec35e998f502ec2ecf4d66ef1c43a",
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/possible_answer/BFCL_v4_multi_turn_base.json": "1fee67823b317571649177dd89d63969feaae4e810cc7448ee55ba797fb7c8fc",
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_long_context.json": "78c3268c5cc8e97c0f4ec6c811b3b9a2bba14323b1830b7a874b06d822749324",
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/possible_answer/BFCL_v4_multi_turn_long_context.json": "e82aa0e839c39d23c64a05834f7ae024d7c9738ec21738ecee78dc876e3d0d18"
+  },
+  "implementation_sha256": {
+    "core/__init__.py": "d29025f18a67f2775c3fcb7bb0913d086c9e67d460f93fe823e915c19d9ee131",
+    "core/event_graph.py": "34fabec02adde9aeb610a24dd08a44bccacb26bd7555b6c106d9b06f2ddcc10a",
+    "core/event_graph_dedup.py": "9ad02818207d172411da69d0d18ba1ab40d640c4711f37f564bf77657affd30b",
+    "core/experiment.py": "e43dff7cca5f1f353c560579e2432405c64ed718cec6deb71d807e5822eb1d06",
+    "core/frozen.py": "0383b69f79fd54f7467d5de26fa92a3df88284c44597d62130f4b5285066172a",
+    "core/graph_memory_replace.py": "48510d78a2d88463496f58968d905c60f0813d6b873a528719b5f6afe7a599fa",
+    "core/graph_memory_serialization.py": "6a1a3bf48ce3c5f07f6bfdb961d1de947b074265c8dd7c44fa2f5464b95da2ba",
+    "core/graph_memory_serialization_target.py": "aad9e60d8764b2909307ac5df7fb0632e1f39a029b92787d0c3eea952ac46792",
+    "core/local_qwen_tokenizer.py": "9c4115251ec6a626fcdabaed9c7b035a142abffdca60ddcb6df8ef3fe03b16a4",
+    "core/model_config.py": "5588d092f06cdd7a2630cebf1ae030899a110e61af07604fbbd438829158ca80",
+    "core/qwen_official_score.py": "b66af5c7b65596d2096ea49e8891efd92066e034ce500e1667723fd69db546bd",
+    "core/qwen_prompt_accounting.py": "56705bd033177fa5438a6e23ec1ec8ac7c1463f83043e5eed62478591b3ad60a",
+    "core/qwen_transport.py": "530defd7331cb0101b642d7eeea4617b5980e416185ee4128fa17a7a88002392",
+    "core/research_modes.py": "ad9b36625bbd6ba08fe4cda3638e0c86eccbe6a95c82b51b74e7a5c0d0021cfb",
+    "core/state_transition_graph.py": "7de6f78bb509f9df19d4ed825210c83a90fe9e039236e98255227395c53b4369",
+    "local_qwen_tokenizer.py": "c7a92b8167470e92aaff8141c4dd5d5f66954041a7ba3cc06912f23ac78f12b9",
+    "manage.py": "274cd0517453eb0213477cdef130532d6e4c331c072ac8afe6bf69284c6de160",
+    "qwen_prompt_accounting.py": "2afb75f13a9d6f38f0c224db6f44074faed565449333bfb2d047b29e209516ab",
+    "workflows/__init__.py": "bdebe37560fb7ec474b9814660db17a2f68b29beb77b7df76eb94f2988d6043f",
+    "workflows/baseline_audit.py": "f9550e8a62adef53824878b52fe64b6fab50f6c107b81630162146b6d89ccbcc",
+    "workflows/baseline_batch.py": "9d8cf4f0038d1aec3fa50911bbe5f4d95d6925a33f3997f03d1f6c73728eee4e",
+    "workflows/baseline_task.py": "d155f0c99582b5509b56b5bc12d154a270962be00485d5009193ac7d129c369c",
+    "workflows/checkpoints.py": "b248350c6e83ef06276057cf137b7bf9a5f675e6f364a374282ebb951338e7c3",
+    "workflows/dedup_audit.py": "c97ca45d2f237f030c227ed9c2b20acfedd87e8ae71de827a17f563d86216731",
+    "workflows/dedup_batch.py": "cdd27c0064433ef2e0fbe08b0b6fa9afa84bac422d916253116c6a77c8b5a680",
+    "workflows/dedup_probe.py": "2ebb9302517389449ef83b2a9c37d67600a9b0a5db99a31caa2af4d8a27edab0",
+    "workflows/dedup_task.py": "d44c890db34569a550490ac486339c73e69d48df463f7e9ced2f82987bfc9b81",
+    "workflows/gpt41_batch.py": "42c87ce053d95c74f02d6681d8a915d91a38f51497ffc2bc067b26fde3ce9143",
+    "workflows/gpt41_report.py": "3130f0aeb143b9f6d9a4584793c12708aaea2d4df17836e468507d5847b59dd0",
+    "workflows/gpt41_task.py": "fb89fb16be396c1ad23a51f7a1eeb6322c7d1ae8937c6c9853e02480c2d24e86",
+    "workflows/history_audit.py": "4412ca7537495baf0e7725e30899c3c24b4c9ed927470341863b52d3f8eb3a9f",
+    "workflows/history_batch.py": "0f6a374707ee01a76d845b46f9db665b217732695ebaf034964f3f96cc105249",
+    "workflows/history_task.py": "e83bbc0e973b9b7e5b06ed82e8d680195f5a40bc0372af2ac80b3014f2ad410c",
+    "workflows/reports.py": "3704bcf6b5a82c766b9c7a5aa676bc4bb44c1e3dddd07b43b621e11893e7cf25"
+  },
+  "registry_name": "azure/gpt-4.1-FC",
+  "memory_tokenizer": "tiktoken o200k_base (selects the lossless compact string dictionary only)"
+}

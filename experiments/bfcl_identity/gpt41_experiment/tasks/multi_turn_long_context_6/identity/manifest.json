@@ -1,0 +1,50 @@
+{
+  "task_id": "multi_turn_long_context_6",
+  "category": "multi_turn_long_context",
+  "mode": "identity",
+  "status": "complete",
+  "agent_deployment": "gpt-4.1",
+  "registry_name": "azure/gpt-4.1-FC",
+  "base_url": "https://ruqi-llm.openai.azure.com/openai/v1",
+  "prefix_source": null,
+  "runtime": {
+    "temperature": 0,
+    "seed": 42,
+    "max_tokens": 4096
+  },
+  "memory_tokenizer": "tiktoken o200k_base",
+  "intervention": "One history replacement before second user input; later history retained",
+  "boundary": {
+    "turn": 1,
+    "history_sha256": "824e2a5a71220d71ec0b410a2c0b0dfefd07298097488c11e101f3766aa78f26",
+    "after_sha256": "824e2a5a71220d71ec0b410a2c0b0dfefd07298097488c11e101f3766aa78f26",
+    "source_messages": 4,
+    "roundtrip_verified": false
+  },
+  "boundary_reached": true,
+  "first_turn_requests": 2,
+  "served_models": [
+    "gpt-4.1-2025-04-14"
+  ],
+  "live_requests": 12,
+  "replayed_requests": 0,
+  "continuation_requests": 10,
+  "live_usage": {
+    "prompt_tokens": 29472,
+    "completion_tokens": 404,
+    "total_tokens": 29876
+  },
+  "live_cached_input": 26752,
+  "prefix_usage": {
+    "prompt_tokens": 4312,
+    "completion_tokens": 64,
+    "total_tokens": 4376
+  },
+  "continuation_usage": {
+    "prompt_tokens": 25160,
+    "completion_tokens": 340,
+    "total_tokens": 25500
+  },
+  "prefix_log_equal": true,
+  "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"
+}

@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_10",
+      "model_name": "azure_gpt-4.1-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model instance for GorillaFileSystem does not match the state with ground truth instance.",
+        "error_type": "multi_turn:instance_state_mismatch",
+        "details": {
+          "differences": {
+            "root": {
+              "model": "<Directory: alex, Parent: None, Contents: {'workspace': <Directory: workspace, Parent: alex, Contents: {'proposal.docx': <<File: proposal.docx, Content: Initial project proposal document content.>>, 'notes.md': <<File: notes.md, Content: Meeting highlights and notes.>>}>, 'Projects': <Directory: Projects, Parent: alex, Contents: {}>}>",
+              "ground_truth": "<Directory: alex, Parent: None, Contents: {'workspace': <Directory: workspace, Parent: alex, Contents: {'proposal.docx': <<File: proposal.docx, Content: Initial project proposal document content.>>, 'notes.md': <<File: notes.md, Content: Meeting highlights and notes.>>, 'Projects': <Directory: Projects, Parent: workspace, Contents: {}>}>}>"
+            }
+          },
+          "model_instance_state": {
+            "long_context": false,
+            "root": "<Directory: alex, Parent: None, Contents: {'workspace': <Directory: workspace, Parent: alex, Contents: {'proposal.docx': <<File: proposal.docx, Content: Initial project proposal document content.>>, 'notes.md': <<File: notes.md, Content: Meeting highlights and notes.>>}>, 'Projects': <Directory: Projects, Parent: alex, Contents: {}>}>"
+          },
+          "ground_truth_instance_state": {
+            "long_context": false,
+            "root": "<Directory: alex, Parent: None, Contents: {'workspace': <Directory: workspace, Parent: alex, Contents: {'proposal.docx': <<File: proposal.docx, Content: Initial project proposal document content.>>, 'notes.md': <<File: notes.md, Content: Meeting highlights and notes.>>, 'Projects': <Directory: Projects, Parent: workspace, Contents: {}>}>}>"
+          }
+        },
+        "execution_result": [
+          {
+            "model": [
+              [
+                "None"
+              ]
+            ],
+            "ground_truth": [
+              "{\"current_working_directory\": \"workspace\"}",
+              "None"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "result_sha256": "4624086d3bb69f91f1f4924ccf3ffb8ab1844983d71ace93d6024bea16d64d7c",
+  "score_sha256": "2f18184c4a202e8e2e26be1451b9647b4996392e22443ad2bf6beb47c91588bb",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

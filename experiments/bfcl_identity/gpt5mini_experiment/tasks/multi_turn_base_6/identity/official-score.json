@@ -1,0 +1,78 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_6",
+      "model_name": "azure_gpt-5-mini-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model instance for GorillaFileSystem does not match the state with ground truth instance.",
+        "error_type": "multi_turn:instance_state_mismatch",
+        "details": {
+          "differences": {
+            "root": {
+              "model": "<Directory: gorilla, Parent: None, Contents: {'communal': <Directory: communal, Parent: gorilla, Contents: {'Annual_Report_2023.docx': <<File: Annual_Report_2023.docx, Content: Statistics for Annual Report 2023\n\nCompany Name: Gorilla\nCompany Earning: 2000\nCompany Expenditure: 500\n>>}>, 'reserve': <Directory: reserve, Parent: gorilla, Contents: {}>, 'shared': <Directory: shared, Parent: gorilla, Contents: {}>, 'archives': <Directory: archives, Parent: gorilla, Contents: {}>}>",
+              "ground_truth": "<Directory: gorilla, Parent: None, Contents: {'communal': <Directory: communal, Parent: gorilla, Contents: {'Annual_Report_2023.docx': <<File: Annual_Report_2023.docx, Content: Company Earning: 2000 Company Expenditure: 500 Company Name: Gorilla>>}>, 'reserve': <Directory: reserve, Parent: gorilla, Contents: {}>, 'shared': <Directory: shared, Parent: gorilla, Contents: {}>, 'archives': <Directory: archives, Parent: gorilla, Contents: {}>}>"
+            }
+          },
+          "model_instance_state": {
+            "long_context": false,
+            "root": "<Directory: gorilla, Parent: None, Contents: {'communal': <Directory: communal, Parent: gorilla, Contents: {'Annual_Report_2023.docx': <<File: Annual_Report_2023.docx, Content: Statistics for Annual Report 2023\n\nCompany Name: Gorilla\nCompany Earning: 2000\nCompany Expenditure: 500\n>>}>, 'reserve': <Directory: reserve, Parent: gorilla, Contents: {}>, 'shared': <Directory: shared, Parent: gorilla, Contents: {}>, 'archives': <Directory: archives, Parent: gorilla, Contents: {}>}>"
+          },
+          "ground_truth_instance_state": {
+            "long_context": false,
+            "root": "<Directory: gorilla, Parent: None, Contents: {'communal': <Directory: communal, Parent: gorilla, Contents: {'Annual_Report_2023.docx': <<File: Annual_Report_2023.docx, Content: Company Earning: 2000 Company Expenditure: 500 Company Name: Gorilla>>}>, 'reserve': <Directory: reserve, Parent: gorilla, Contents: {}>, 'shared': <Directory: shared, Parent: gorilla, Contents: {}>, 'archives': <Directory: archives, Parent: gorilla, Contents: {}>}>"
+          }
+        },
+        "execution_result": [
+          {
+            "model": [
+              [
+                "{\"matches\": [\"./communal\"]}"
+              ],
+              [
+                "{\"current_directory_content\": [\"communal\", \"reserve\", \"shared\", \"archives\"]}"
+              ],
+              [
+                "Error during execution: GorillaFileSystem.ls() got an unexpected keyword argument '_path'"
+              ],
+              [
+                "{\"current_working_directory\": \"communal\"}"
+              ],
+              [
+                "{\"current_directory_content\": []}"
+              ],
+              [
+                "None"
+              ]
+            ],
+            "ground_truth": [
+              "{\"current_working_directory\": \"communal\"}",
+              "None"
+            ]
+          },
+          {
+            "model": [
+              [
+                "None"
+              ]
+            ],
+            "ground_truth": [
+              "None"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "result_sha256": "294532a900cfe9c6139dc9c831920a93bfd03419a5cadd602378469fe824faf8",
+  "score_sha256": "43bbce371cea6dd230038468b40644c4450e7371eabe6f9a0ec03fbd2fc86e2b",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-5-mini-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

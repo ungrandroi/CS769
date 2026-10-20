@@ -1,0 +1,25 @@
+{
+  "task_id": "multi_turn_long_context_16",
+  "category": "multi_turn_long_context",
+  "mode": "identity",
+  "status": "error",
+  "agent_deployment": "gpt-5-mini",
+  "registry_name": "azure/gpt-5-mini-FC",
+  "base_url": "https://ruqi-llm.openai.azure.com/openai/v1",
+  "prefix_source": null,
+  "runtime": {
+    "reasoning_effort": "medium",
+    "max_completion_tokens": 16384,
+    "seed": 42
+  },
+  "memory_tokenizer": "tiktoken o200k_base",
+  "intervention": "One history replacement before second user input; later history retained",
+  "boundary": {
+    "turn": 1,
+    "history_sha256": "5df1877cbaae478ba2c355d6fd531b1f5a6bd08fe28a1ed44d094a919edc942d",
+    "after_sha256": "5df1877cbaae478ba2c355d6fd531b1f5a6bd08fe28a1ed44d094a919edc942d",
+    "source_messages": 20,
+    "roundtrip_verified": false
+  },
+  "error": "ValueError: Duplicate argument key: 'file_name'"
+}

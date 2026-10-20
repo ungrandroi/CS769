@@ -1,8 +1,10 @@
 研究主体：本地 Qwen3.8-27B-Q8_0；BFCL multi_turn_base / multi_turn_long_context，13家族×2条件，共26项，18个GorillaFileSystem模拟文件工具。
-保留方向只有三个：
+保留方向只有五个：
 1. qwen27b_experiment/：早期完整基线。Qwen首轮后，在第二轮输入前替换一次历史。Identity18/26、State-Transition Graph14/26、Event Graph17/26。完整记录与代码快照未改动。
 2. Event Graph-Dedup：v2_provenance_dedup_probe/保留原事件图记忆的26张图离线还原及token测量；平均记忆4550.85→3388.15 tokens。qwen27b_dedup_eval/保留26项实际续跑，15/26通过。共享工具图探索已删除。
 3. history1000_eval/：纯1000-token历史阈值协议，当前仅准备检查点，尚未推理、没有新成绩。
+4. gpt41_experiment/：同一基线协议改由Azure GPT-4.1全程生成（含首轮）。Identity13/26、State-Transition Graph10/26、Event Graph11/26；分析见reports/gpt41_rerun.md。
+5. gpt5mini_experiment/：同一协议改由Azure GPT-5-mini全程生成（reasoning_effort medium，含首轮）。Identity12/26、State-Transition Graph9/26、Event Graph9/26；分析见reports/gpt5mini_rerun.md，三模型汇总见reports/model_comparison.md。
 纯阈值：累计调用name(arguments)与原始返回文本分别用Qwen tokenizer计数求和；不计工具定义、用户输入、模型文字或协议包装。在完整调用/返回配对后的下一次请求前首次达到1000时触发。
 不限制最低调用次数，不查看未来调用数，不按成功率筛选。现有26条Qwen Identity轨迹有9项触发、17项未触发。
 重放相同前缀恢复环境后，Identity/State-Transition Graph/Event Graph独立续跑；图仅转换一次，保留并追加新历史。未触发任务单独报告，不计作图转换结果。

@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_26",
+      "model_name": "azure_gpt-5-mini-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model instance for GorillaFileSystem does not match the state with ground truth instance.",
+        "error_type": "multi_turn:instance_state_mismatch",
+        "details": {
+          "differences": {
+            "root": {
+              "model": "<Directory: alex, Parent: None, Contents: {'tmp': <Directory: tmp, Parent: alex, Contents: {'file1.txt': <<File: file1.txt, Content: This is some important data. Another line of text.>>, 'file2.txt': <<File: file2.txt, Content: Just some random text. More important data here.>>, 'file3.txt': <<File: file3.txt, Content: Nothing important here. Yet another line.>>, 'file3.docx': <<File: file3.docx, Content: >>}>}>",
+              "ground_truth": "<Directory: alex, Parent: None, Contents: {'tmp': <Directory: tmp, Parent: alex, Contents: {'file1.txt': <<File: file1.txt, Content: This is some important data. Another line of text.>>, 'file2.txt': <<File: file2.txt, Content: Just some random text. More important data here.>>, 'file3.txt': <<File: file3.txt, Content: Nothing important here. Yet another line.>>, 'file3.docx': <<File: file3.docx, Content: Nothing important here. Yet another line.>>}>}>"
+            }
+          },
+          "model_instance_state": {
+            "long_context": false,
+            "root": "<Directory: alex, Parent: None, Contents: {'tmp': <Directory: tmp, Parent: alex, Contents: {'file1.txt': <<File: file1.txt, Content: This is some important data. Another line of text.>>, 'file2.txt': <<File: file2.txt, Content: Just some random text. More important data here.>>, 'file3.txt': <<File: file3.txt, Content: Nothing important here. Yet another line.>>, 'file3.docx': <<File: file3.docx, Content: >>}>}>"
+          },
+          "ground_truth_instance_state": {
+            "long_context": false,
+            "root": "<Directory: alex, Parent: None, Contents: {'tmp': <Directory: tmp, Parent: alex, Contents: {'file1.txt': <<File: file1.txt, Content: This is some important data. Another line of text.>>, 'file2.txt': <<File: file2.txt, Content: Just some random text. More important data here.>>, 'file3.txt': <<File: file3.txt, Content: Nothing important here. Yet another line.>>, 'file3.docx': <<File: file3.docx, Content: Nothing important here. Yet another line.>>}>}>"
+          }
+        },
+        "execution_result": [
+          {
+            "model": [
+              [
+                "{\"current_working_directory\": \"/alex\"}"
+              ],
+              [
+                "{\"current_directory_content\": [\"tmp\"]}"
+              ],
+              [
+                "{\"current_working_directory\": \"tmp\"}"
+              ],
+              [
+                "{\"current_directory_content\": [\"file1.txt\", \"file2.txt\", \"file3.txt\"]}"
+              ]
+            ],
+            "ground_truth": [
+              "{\"current_working_directory\": \"tmp\"}",
+              "{\"current_directory_content\": [\"file1.txt\", \"file2.txt\", \"file3.txt\"]}"
+            ]
+          },
+          {
+            "model": [
+              [
+                "{\"file_content\": \"Nothing important here. Yet another line.\"}"
+              ]
+            ],
+            "ground_truth": [
+              "{\"file_content\": \"Nothing important here. Yet another line.\"}"
+            ]
+          },
+          {
+            "model": [
+              [
+                "{\"error\": \"echo: cannot write to 'file3.docx': No such file\"}"
+              ],
+              [
+                "None"
+              ],
+              [
+                "{\"terminal_output\": \"This file is a placeholder. The environment doesn't support creating real .docx binaries via echo. To create a true .docx file we'd need a library like python-docx. Would you like me to create a plain-text file with .docx extension containing the text, or create a script you can run locally to generate a proper .docx?\"}"
+              ]
+            ],
+            "ground_truth": [
+              "None",
+              "None"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "result_sha256": "8d7d2661107de5b1d742fd20ec61a776f056c609ff4c8afb166320e29edb2e7b",
+  "score_sha256": "2a6b0c581f53d8999145ddddfda6f04586c87c82f621ae9f1ca9698a0dac2aa5",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-5-mini-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

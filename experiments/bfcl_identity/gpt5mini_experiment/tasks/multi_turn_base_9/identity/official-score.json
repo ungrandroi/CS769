@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_9",
+      "model_name": "azure_gpt-5-mini-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 1.",
+        "error_type": "multi_turn:execution_response_mismatch",
+        "details": {
+          "missing_items": [
+            "{\"result\": \"'FinalReport.txt' copied to 'Archives/FinalReport.txt'\"}",
+            "{\"result\": \"'FinalReport.txt' moved to 'ArchivedFinalReport2024.txt'\"}"
+          ],
+          "model_response (including all previous turns)": [
+            "{\"matches\": [\"./Documentation/FinalReport.txt\"]}",
+            "{\"current_working_directory\": \"Documentation\"}",
+            "{\"current_directory_content\": [\"FinalReport.txt\", \"Archives\"]}",
+            "{\"file_content\": \"This is the final report for the year 2024. It contains all the necessary details and summaries.\"}",
+            "{\"result\": \"'FinalReport.txt' copied to 'ArchivedFinalReport2024.txt'\"}",
+            "{\"error\": \"mv: path not allowed in destination. Provide only a file or directory name.\"}",
+            "{\"result\": \"'ArchivedFinalReport2024.txt' moved to 'Archives/ArchivedFinalReport2024.txt'\"}",
+            "{\"current_directory_content\": [\"FinalReport.txt\", \"Archives\"]}",
+            "{\"current_directory_content\": [\"FinalReport.txt\", \"Archives\"]}",
+            "{\"current_working_directory\": \"Archives\"}",
+            "{\"current_directory_content\": [\"ArchivedFinalReport2024.txt\"]}",
+            "{\"file_content\": \"This is the final report for the year 2024. It contains all the necessary details and summaries.\"}"
+          ],
+          "ground_truth_response (only the current turn)": [
+            "{\"result\": \"'FinalReport.txt' copied to 'Archives/FinalReport.txt'\"}",
+            "{\"current_working_directory\": \"Archives\"}",
+            "{\"result\": \"'FinalReport.txt' moved to 'ArchivedFinalReport2024.txt'\"}"
+          ]
+        }
+      }
+    }
+  ],
+  "result_sha256": "7319675d45e26fa17ac86c38f2ed3f6dc3178171c2c3ef818e845e283bdf5b6c",
+  "score_sha256": "b00e4ef4184458494d79884dafb2e7e7ae8578a8804d630f6d7ec7d5ef8b05c6",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-5-mini-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

@@ -1,0 +1,13 @@
+----------------------------------------------------------------------------------------------------
+ID: long_context_38, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_38, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_38, Turn: 0, Step: 2
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_38, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_38, Turn: 1, Step: 1
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_long_context_38", "category": "multi_turn_long_context", "mode": "v2-compact", "status": "complete", "agent_deployment": "gpt-4.1", "registry_name": "azure/gpt-4.1-FC", "base_url": "https://ruqi-llm.openai.azure.com/openai/v1", "prefix_source": "/home/ruqi/public/CS769/experiments/bfcl_identity/gpt41_experiment/tasks/multi_turn_long_context_38/identity", "runtime": {"temperature": 0, "seed": 42, "max_tokens": 4096}, "memory_tokenizer": "tiktoken o200k_base", "intervention": "One history replacement before second user input; later history retained", "memory_tokens": 1199, "boundary": {"turn": 1, "history_sha256": "ba4e0f80ec92d1938a8ec7fe356174d082429523dba61c2793b1b31970f46694", "after_sha256": "f03e4cca5e29001f79f717aa57a91db687078a0c0c055a0d6d9727eba4f3230d", "source_messages": 8, "roundtrip_verified": true}, "boundary_reached": true, "first_turn_requests": 3, "served_models": ["gpt-4.1-2025-04-14"], "live_requests": 2, "replayed_requests": 3, "continuation_requests": 2, "live_usage": {"prompt_tokens": 6669, "completion_tokens": 45, "total_tokens": 6714}, "live_cached_input": 4608, "prefix_usage": {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}, "continuation_usage": {"prompt_tokens": 6669, "completion_tokens": 45, "total_tokens": 6714}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

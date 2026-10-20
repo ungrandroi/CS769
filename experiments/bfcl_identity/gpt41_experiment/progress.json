@@ -1,0 +1,474 @@
+{
+  "runs": {
+    "multi_turn_base_3/identity": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 7
+    },
+    "multi_turn_base_1/identity": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 23
+    },
+    "multi_turn_base_3/v2-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 2
+    },
+    "multi_turn_base_3/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 2
+    },
+    "multi_turn_base_1/v2-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 16
+    },
+    "multi_turn_base_9/identity": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 16
+    },
+    "multi_turn_base_1/v1-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 11
+    },
+    "multi_turn_base_9/v2-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 11
+    },
+    "multi_turn_base_6/identity": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 12
+    },
+    "multi_turn_base_9/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 11
+    },
+    "multi_turn_base_6/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 14
+    },
+    "multi_turn_base_12/identity": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 8
+    },
+    "multi_turn_base_6/v2-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 10
+    },
+    "multi_turn_base_12/v1-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 4
+    },
+    "multi_turn_base_12/v2-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 4
+    },
+    "multi_turn_base_10/identity": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 20
+    },
+    "multi_turn_base_25/identity": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 9
+    },
+    "multi_turn_base_25/v2-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 6
+    },
+    "multi_turn_base_10/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 20
+    },
+    "multi_turn_base_25/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 6
+    },
+    "multi_turn_base_29/identity": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 7
+    },
+    "multi_turn_base_10/v2-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 21
+    },
+    "multi_turn_base_29/v2-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 4
+    },
+    "multi_turn_base_16/identity": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 13
+    },
+    "multi_turn_base_29/v1-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 4
+    },
+    "multi_turn_base_16/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 6
+    },
+    "multi_turn_base_38/identity": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 11
+    },
+    "multi_turn_base_16/v2-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 6
+    },
+    "multi_turn_base_38/v1-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 2
+    },
+    "multi_turn_base_26/identity": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 8
+    },
+    "multi_turn_base_38/v2-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 2
+    },
+    "multi_turn_base_26/v1-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 5
+    },
+    "multi_turn_base_26/v2-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 5
+    },
+    "multi_turn_long_context_1/identity": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 23
+    },
+    "multi_turn_base_37/identity": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 9
+    },
+    "multi_turn_long_context_1/v2-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 12
+    },
+    "multi_turn_base_37/v2-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 5
+    },
+    "multi_turn_long_context_1/v1-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 16
+    },
+    "multi_turn_base_37/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 5
+    },
+    "multi_turn_long_context_6/identity": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 12
+    },
+    "multi_turn_base_39/identity": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 11
+    },
+    "multi_turn_long_context_6/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 8
+    },
+    "multi_turn_base_39/v2-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 9
+    },
+    "multi_turn_long_context_6/v2-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 10
+    },
+    "multi_turn_base_39/v1-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 9
+    },
+    "multi_turn_long_context_3/identity": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 7
+    },
+    "multi_turn_long_context_10/identity": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 23
+    },
+    "multi_turn_long_context_3/v2-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 2
+    },
+    "multi_turn_long_context_3/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 2
+    },
+    "multi_turn_long_context_10/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 21
+    },
+    "multi_turn_long_context_9/identity": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 21
+    },
+    "multi_turn_long_context_10/v2-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 21
+    },
+    "multi_turn_long_context_9/v2-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 19
+    },
+    "multi_turn_long_context_16/identity": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 13
+    },
+    "multi_turn_long_context_9/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 4
+    },
+    "multi_turn_long_context_16/v1-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 4
+    },
+    "multi_turn_long_context_16/v2-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 4
+    },
+    "multi_turn_long_context_12/identity": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 10
+    },
+    "multi_turn_long_context_12/v1-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 4
+    },
+    "multi_turn_long_context_26/identity": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 7
+    },
+    "multi_turn_long_context_12/v2-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 4
+    },
+    "multi_turn_long_context_26/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 4
+    },
+    "multi_turn_long_context_26/v2-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 5
+    },
+    "multi_turn_long_context_25/identity": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 9
+    },
+    "multi_turn_long_context_37/identity": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 9
+    },
+    "multi_turn_long_context_25/v2-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 8
+    },
+    "multi_turn_long_context_37/v2-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 6
+    },
+    "multi_turn_long_context_25/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 8
+    },
+    "multi_turn_long_context_37/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 4
+    },
+    "multi_turn_long_context_29/identity": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 7
+    },
+    "multi_turn_long_context_39/identity": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 11
+    },
+    "multi_turn_long_context_29/v2-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 4
+    },
+    "multi_turn_long_context_39/v2-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 9
+    },
+    "multi_turn_long_context_29/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 4
+    },
+    "multi_turn_long_context_39/v1-compact": {
+      "status": "complete",
+      "passed": true,
+      "boundary_reached": true,
+      "live_requests": 9
+    },
+    "multi_turn_long_context_38/identity": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 9
+    },
+    "multi_turn_long_context_38/v1-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 2
+    },
+    "multi_turn_long_context_38/v2-compact": {
+      "status": "complete",
+      "passed": false,
+      "boundary_reached": true,
+      "live_requests": 2
+    }
+  },
+  "status": "complete",
+  "active": {}
+}

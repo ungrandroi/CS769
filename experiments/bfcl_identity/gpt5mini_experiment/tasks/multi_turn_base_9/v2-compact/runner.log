@@ -1,0 +1,26 @@
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 0, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 0, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 0, Step: 4
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 3
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 2, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 2, Step: 1
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_base_9", "category": "multi_turn_base", "mode": "v2-compact", "status": "complete", "agent_deployment": "gpt-5-mini", "registry_name": "azure/gpt-5-mini-FC", "base_url": "https://ruqi-llm.openai.azure.com/openai/v1", "prefix_source": "/home/ruqi/public/CS769/experiments/bfcl_identity/gpt5mini_experiment/tasks/multi_turn_base_9/identity", "runtime": {"reasoning_effort": "medium", "max_completion_tokens": 16384, "seed": 42}, "memory_tokenizer": "tiktoken o200k_base", "intervention": "One history replacement before second user input; later history retained", "memory_tokens": 2197, "boundary": {"turn": 1, "history_sha256": "62cce00c423fee3e245259a0a69e3c76f82692caf05ed8d0fccd87a56d6469ed", "after_sha256": "27977a8779c5def0804cb5f094211be56fbcef8839eeb9c8e277cef63a200e2f", "source_messages": 10, "roundtrip_verified": true}, "boundary_reached": true, "first_turn_requests": 5, "served_models": ["gpt-5-mini-2025-08-07"], "live_requests": 6, "replayed_requests": 5, "continuation_requests": 6, "live_usage": {"prompt_tokens": 27393, "completion_tokens": 3067, "total_tokens": 30460}, "live_cached_input": 22400, "live_reasoning_output": 2688, "length_truncations": 0, "prefix_usage": {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}, "continuation_usage": {"prompt_tokens": 27393, "completion_tokens": 3067, "total_tokens": 30460}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

@@ -1,0 +1,30 @@
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 4
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 5
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 6
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 7
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 8
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 1, Step: 1
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 2, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 2, Step: 1
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_long_context_16", "category": "multi_turn_long_context", "mode": "identity", "status": "complete", "agent_deployment": "gpt-4.1", "registry_name": "azure/gpt-4.1-FC", "base_url": "https://ruqi-llm.openai.azure.com/openai/v1", "prefix_source": null, "runtime": {"temperature": 0, "seed": 42, "max_tokens": 4096}, "memory_tokenizer": "tiktoken o200k_base", "intervention": "One history replacement before second user input; later history retained", "boundary": {"turn": 1, "history_sha256": "d5c923e70f8ca22bbee235d2929bb691b87a04be3a7723a88a33c1976a8b521b", "after_sha256": "d5c923e70f8ca22bbee235d2929bb691b87a04be3a7723a88a33c1976a8b521b", "source_messages": 18, "roundtrip_verified": false}, "boundary_reached": true, "first_turn_requests": 9, "served_models": ["gpt-4.1-2025-04-14"], "live_requests": 13, "replayed_requests": 0, "continuation_requests": 4, "live_usage": {"prompt_tokens": 33020, "completion_tokens": 326, "total_tokens": 33346}, "live_cached_input": 29568, "prefix_usage": {"prompt_tokens": 20740, "completion_tokens": 207, "total_tokens": 20947}, "continuation_usage": {"prompt_tokens": 12280, "completion_tokens": 119, "total_tokens": 12399}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

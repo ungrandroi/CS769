@@ -1,0 +1,22 @@
+----------------------------------------------------------------------------------------------------
+ID: base_29, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_29, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_29, Turn: 0, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: base_29, Turn: 0, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: base_29, Turn: 0, Step: 4
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_29, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_29, Turn: 1, Step: 1
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_29, Turn: 2, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_29, Turn: 2, Step: 1
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_base_29", "category": "multi_turn_base", "mode": "identity", "status": "complete", "agent_deployment": "gpt-5-mini", "registry_name": "azure/gpt-5-mini-FC", "base_url": "https://ruqi-llm.openai.azure.com/openai/v1", "prefix_source": null, "runtime": {"reasoning_effort": "medium", "max_completion_tokens": 16384, "seed": 42}, "memory_tokenizer": "tiktoken o200k_base", "intervention": "One history replacement before second user input; later history retained", "boundary": {"turn": 1, "history_sha256": "4482fb1bbf0ad9e59946a8af2404ae57db161390953a102c457289fa3f0c5e72", "after_sha256": "4482fb1bbf0ad9e59946a8af2404ae57db161390953a102c457289fa3f0c5e72", "source_messages": 10, "roundtrip_verified": false}, "boundary_reached": true, "first_turn_requests": 5, "served_models": ["gpt-5-mini-2025-08-07"], "live_requests": 9, "replayed_requests": 0, "continuation_requests": 4, "live_usage": {"prompt_tokens": 21259, "completion_tokens": 780, "total_tokens": 22039}, "live_cached_input": 19840, "live_reasoning_output": 576, "length_truncations": 0, "prefix_usage": {"prompt_tokens": 11411, "completion_tokens": 296, "total_tokens": 11707}, "continuation_usage": {"prompt_tokens": 9848, "completion_tokens": 484, "total_tokens": 10332}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

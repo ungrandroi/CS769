@@ -17,6 +17,16 @@
 当前仅第一步已完成，未执行推理；不要把检查点当作成功率结果。
 后两条推理批次入口需要先按qwen27b_experiment/runtime/servers.json配置启动本地模型服务。已完成记录不应覆盖。
 
+GPT-4.1重跑基线（Azure，密钥读自~/.azure_openai_env；需PYTHONPATH指向vendor里的BFCL）：
+  scripts/bfcl_python.sh scripts/manage.py run gpt41 --output DIR --deployment gpt-4.1
+  scripts/bfcl_python.sh scripts/manage.py audit gpt41 --output DIR
+已完成记录在gpt41_experiment/，报告见reports/gpt41_rerun.md。
+
+GPT-5-mini重跑（同一入口，推理强度medium；该模型不接受temperature 0）：
+  scripts/bfcl_python.sh scripts/manage.py run gpt41 --output DIR --deployment gpt-5-mini --reasoning-effort medium
+  scripts/bfcl_python.sh scripts/manage.py audit gpt41 --output DIR
+已完成记录在gpt5mini_experiment/，报告见reports/gpt5mini_rerun.md，三模型汇总见reports/model_comparison.md。
+
 测试：
   PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=scripts scripts/bfcl_python.sh -m unittest discover -s tests -p 'test_*.py'
 

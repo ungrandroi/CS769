@@ -1,0 +1,28 @@
+----------------------------------------------------------------------------------------------------
+ID: long_context_29, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_29, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_29, Turn: 0, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: long_context_29, Turn: 0, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: long_context_29, Turn: 0, Step: 4
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_29, Turn: 1, Step: 0
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_29, Turn: 2, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_29, Turn: 2, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_29, Turn: 2, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: long_context_29, Turn: 2, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: long_context_29, Turn: 2, Step: 4
+----------------------------------------------------------------------------------------------------
+ID: long_context_29, Turn: 2, Step: 5
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_long_context_29", "category": "multi_turn_long_context", "mode": "v1-compact", "status": "complete", "agent_deployment": "gpt-5-mini", "registry_name": "azure/gpt-5-mini-FC", "base_url": "https://ruqi-llm.openai.azure.com/openai/v1", "prefix_source": "/home/ruqi/public/CS769/experiments/bfcl_identity/gpt5mini_experiment/tasks/multi_turn_long_context_29/identity", "runtime": {"reasoning_effort": "medium", "max_completion_tokens": 16384, "seed": 42}, "memory_tokenizer": "tiktoken o200k_base", "intervention": "One history replacement before second user input; later history retained", "memory_tokens": 1409, "boundary": {"turn": 1, "history_sha256": "3bbbb74819c70e25f2bc31704fa7684801de136305756a2043b9fbbd5c1d602f", "after_sha256": "da1fd6b5ac05e708d5a3fa870da4ee7a76e3dfc0aad5096e32403885567955e4", "source_messages": 10, "roundtrip_verified": true}, "boundary_reached": true, "first_turn_requests": 5, "served_models": ["gpt-5-mini-2025-08-07"], "live_requests": 7, "replayed_requests": 5, "continuation_requests": 7, "live_usage": {"prompt_tokens": 28424, "completion_tokens": 2864, "total_tokens": 31288}, "live_cached_input": 25216, "live_reasoning_output": 2496, "length_truncations": 0, "prefix_usage": {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}, "continuation_usage": {"prompt_tokens": 28424, "completion_tokens": 2864, "total_tokens": 31288}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

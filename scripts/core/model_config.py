@@ -1,6 +1,11 @@
 """Register the exact local model and invoke the unmodified official BFCL scorer."""
 MODEL_KEY = "local/Qwen3.8-27B-Q8-0-FC"
 SERVING_MODEL = "bfcl-qwen38-27b"
+AZURE_DEPLOYMENTS = ("gpt-4.1", "gpt-4.1-mini", "gpt-5-mini")
+
+
+def azure_model_key(deployment):
+    return f"azure/{deployment}-FC"
 
 
 def register_models():
@@ -11,6 +16,12 @@ def register_models():
         url="https://huggingface.co/ggml-org/Qwen3.8-27B-GGUF", org="Qwen",
         license="See original model distribution", model_handler=OpenAICompletionsHandler,
         is_fc_model=True, underscore_to_dot=True))
+    for deployment in AZURE_DEPLOYMENTS:
+        MODEL_CONFIG_MAPPING.setdefault(azure_model_key(deployment), ModelConfig(
+            model_name=deployment, display_name=f"Azure {deployment} (FC)",
+            url="https://platform.openai.com/docs/models", org="OpenAI",
+            license="Proprietary", model_handler=OpenAICompletionsHandler,
+            is_fc_model=True, underscore_to_dot=True))
 
 
 def main():

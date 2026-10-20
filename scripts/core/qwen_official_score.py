@@ -10,7 +10,7 @@ def read(path): return json.loads(path.read_text())
 def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
 def write(path,value): path.write_text(json.dumps(value,indent=2)+"\n")
 
-def score_run(directory, task):
+def score_run(directory, task, model_key=MODEL_KEY):
     score_path = directory / "official-score.json"
     if score_path.exists():
         return read(score_path)
@@ -18,7 +18,7 @@ def score_run(directory, task):
     assert len(result_paths) == 1, f"Missing/ambiguous official result at {directory}"
     rows = [json.loads(line) for line in result_paths[0].read_text().splitlines() if line.strip()]
     assert len(rows) == 1 and rows[0]["id"] == task["id"], "Refuse scoring duplicate/mismatched result"
-    command = [sys.executable, str(ROOT / "scripts/manage.py"), "bfcl", "evaluate", "--model", MODEL_KEY,
+    command = [sys.executable, str(ROOT / "scripts/manage.py"), "bfcl", "evaluate", "--model", model_key,
                "--test-category", task["category"], "--partial-eval", "--result-dir", str(directory / "result"),
                "--score-dir", str(directory / "score")]
     with (directory / "official-evaluation.log").open("w") as log:

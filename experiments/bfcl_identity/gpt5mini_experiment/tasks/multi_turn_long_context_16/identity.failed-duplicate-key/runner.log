@@ -1,0 +1,73 @@
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 4
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 5
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 6
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 7
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 8
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 0, Step: 9
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 1, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 1, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 1, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 1, Step: 4
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 1, Step: 5
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 1, Step: 6
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 1, Step: 7
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 1, Step: 8
+----------------------------------------------------------------------------------------------------
+ID: long_context_16, Turn: 1, Step: 9
+Traceback (most recent call last):
+  File "/home/ruqi/public/CS769/scripts/manage.py", line 56, in <module>
+    if __name__=='__main__':main()
+  File "/home/ruqi/public/CS769/scripts/manage.py", line 52, in main
+    return getattr(importlib.import_module(module),entry)()
+  File "/home/ruqi/public/CS769/scripts/workflows/gpt41_task.py", line 155, in main
+    result,metadata=handler.inference(entry,True,False);metadata=plain(make_json_serializable(metadata))
+  File "/home/ruqi/public/CS769/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/model_handler/base_handler.py", line 80, in inference
+    return self.inference_multi_turn_FC(
+  File "/home/ruqi/public/CS769/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/model_handler/base_handler.py", line 220, in inference_multi_turn_FC
+    api_response, query_latency = self._query_FC(inference_data)
+  File "/home/ruqi/public/CS769/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/model_handler/api_inference/openai_response.py", line 124, in _query_FC
+    return self.generate_with_backoff(**kwargs)
+  File "/home/ruqi/public/CS769/scripts/workflows/gpt41_task.py", line 143, in generate
+    native={'model':args.deployment,'messages':chat_messages(request['input']),'tools':to_chat_tools(request['tools']),**sampling}
+  File "/home/ruqi/public/CS769/scripts/core/qwen_transport.py", line 24, in chat_messages
+    for item in to_chat_messages(items):
+  File "/home/ruqi/public/CS769/scripts/core/qwen_prompt_accounting.py", line 141, in to_chat_messages
+    call = _call(item)
+  File "/home/ruqi/public/CS769/scripts/core/qwen_prompt_accounting.py", line 120, in _call
+    "function": {"name": item["name"], "arguments": _arguments(item["arguments"])},
+  File "/home/ruqi/public/CS769/scripts/core/qwen_prompt_accounting.py", line 60, in _arguments
+    result = json.loads(raw, object_pairs_hook=_no_duplicate_keys,
+  File "/home/ruqi/miniconda3/envs/bfcl/lib/python3.10/json/__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "/home/ruqi/miniconda3/envs/bfcl/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/ruqi/miniconda3/envs/bfcl/lib/python3.10/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+  File "/home/ruqi/public/CS769/scripts/core/qwen_prompt_accounting.py", line 44, in _no_duplicate_keys
+    raise ValueError(f"Duplicate argument key: {key!r}")
+ValueError: Duplicate argument key: 'file_name'

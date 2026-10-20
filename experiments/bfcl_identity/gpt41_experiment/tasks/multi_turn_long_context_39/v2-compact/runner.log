@@ -1,0 +1,27 @@
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 0, Step: 1
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 1, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 1, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 1, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 1, Step: 4
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 2, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 2, Step: 1
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 3, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: long_context_39, Turn: 3, Step: 1
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_long_context_39", "category": "multi_turn_long_context", "mode": "v2-compact", "status": "complete", "agent_deployment": "gpt-4.1", "registry_name": "azure/gpt-4.1-FC", "base_url": "https://ruqi-llm.openai.azure.com/openai/v1", "prefix_source": "/home/ruqi/public/CS769/experiments/bfcl_identity/gpt41_experiment/tasks/multi_turn_long_context_39/identity", "runtime": {"temperature": 0, "seed": 42, "max_tokens": 4096}, "memory_tokenizer": "tiktoken o200k_base", "intervention": "One history replacement before second user input; later history retained", "memory_tokens": 1047, "boundary": {"turn": 1, "history_sha256": "d3c7a11a01b37254858747d21215fe0635dbfcd37e1eb208e101ec336d95b21d", "after_sha256": "64589e2d05ecc63e69fd51f95e3e400400349497bfeb5324ac8df850ae14e738", "source_messages": 4, "roundtrip_verified": true}, "boundary_reached": true, "first_turn_requests": 2, "served_models": ["gpt-4.1-2025-04-14"], "live_requests": 9, "replayed_requests": 2, "continuation_requests": 9, "live_usage": {"prompt_tokens": 31624, "completion_tokens": 361, "total_tokens": 31985}, "live_cached_input": 29824, "prefix_usage": {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}, "continuation_usage": {"prompt_tokens": 31624, "completion_tokens": 361, "total_tokens": 31985}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

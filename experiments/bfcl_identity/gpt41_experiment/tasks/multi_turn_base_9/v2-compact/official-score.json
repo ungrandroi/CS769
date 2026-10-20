@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_9",
+      "model_name": "azure_gpt-4.1-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 2.",
+        "error_type": "multi_turn:execution_response_mismatch",
+        "details": {
+          "missing_items": [
+            "{\"sorted_content\": \"This is the final report for the year 2024. It contains all the necessary details and summaries.\"}"
+          ],
+          "model_response (including all previous turns)": [
+            "{\"matches\": [\"./Documentation\"]}",
+            "{\"current_working_directory\": \"Documentation\"}",
+            "{\"current_directory_content\": [\"FinalReport.txt\", \"Archives\"]}",
+            "{\"file_content\": \"This is the final report for the year 2024. It contains all the necessary details and summaries.\"}",
+            "{\"error\": \"cp: path not allowed in destination. Provide only a file or directory name.\"}",
+            "{\"current_working_directory\": \"Archives\"}",
+            "{\"error\": \"cp: cannot copy '../FinalReport.txt': No such file or directory\"}",
+            "{\"error\": \"cp: cannot copy 'FinalReport.txt': No such file or directory\"}",
+            "{}",
+            "{\"result\": \"'FinalReport.txt' copied to 'Archives/FinalReport.txt'\"}",
+            "{\"current_working_directory\": \"Archives\"}",
+            "{\"result\": \"'FinalReport.txt' moved to 'ArchivedFinalReport2024.txt'\"}",
+            "{\"file_content\": \"This is the final report for the year 2024. It contains all the necessary details and summaries.\"}"
+          ],
+          "ground_truth_response (only the current turn)": [
+            "{\"sorted_content\": \"This is the final report for the year 2024. It contains all the necessary details and summaries.\"}"
+          ]
+        }
+      }
+    }
+  ],
+  "result_sha256": "ed57d8ad188df2b310f16c908dff74906e54b577752f2778865571eba4d26389",
+  "score_sha256": "9be8c8ffb8b9404392b32d521ec8d7109b4f1c0b5aca03bc62bfa5d4ca7a22bc",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

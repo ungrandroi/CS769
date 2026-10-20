@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_long_context_29",
+      "model_name": "azure_gpt-5-mini-FC",
+      "test_category": "multi_turn_long_context",
+      "valid": false,
+      "error": {
+        "error_message": "Model response list is empty for turn 1",
+        "error_type": "multi_turn:empty_turn_model_response",
+        "details": {
+          "execution_result": [
+            {
+              "model": [
+                [
+                  "{\"current_directory_content\": [\"VisionX\", \"Archives\"]}"
+                ],
+                [
+                  "{\"disk_usage\": \"3.28 KB\"}"
+                ],
+                [
+                  "{\"current_working_directory\": \"VisionX\"}"
+                ],
+                [
+                  "{\"disk_usage\": \"3.28 KB\"}"
+                ]
+              ],
+              "ground_truth": [
+                "{\"current_working_directory\": \"VisionX\"}",
+                "{\"disk_usage\": \"3.28 KB\"}"
+              ]
+            },
+            {
+              "model": [],
+              "ground_truth": [
+                "None"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "result_sha256": "e801832882873a64fa66cdd979e740f3c8e4c90db102a9ba92589b361dac8286",
+  "score_sha256": "01966aa61b6e8d4c1deba1862a33424770ec882414b06c6219fb27bf4db8a7a7",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-5-mini-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json"
+}

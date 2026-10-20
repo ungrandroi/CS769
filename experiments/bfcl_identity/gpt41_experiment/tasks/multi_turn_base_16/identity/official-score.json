@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_16",
+      "model_name": "azure_gpt-4.1-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 0.",
+        "error_type": "multi_turn:execution_response_mismatch",
+        "details": {
+          "missing_items": [
+            "{\"result\": \"'research_notes.txt' copied to 'archives/research_notes.txt'\"}",
+            "{\"result\": \"'research_notes.txt' moved to '2024_research_backup.txt'\"}"
+          ],
+          "model_response (including all previous turns)": [
+            "{\"current_working_directory\": \"research\"}",
+            "{\"result\": \"'research_notes.txt' copied to '2024_research_backup.txt'\"}",
+            "{\"error\": \"mv: path not allowed in destination. Provide only a file or directory name.\"}",
+            "{\"current_working_directory\": \"archives\"}",
+            "{\"error\": \"mv: cannot move '../2024_research_backup.txt': No such file or directory\"}",
+            "{}",
+            "{\"result\": \"'2024_research_backup.txt' moved to 'archives/2024_research_backup.txt'\"}"
+          ],
+          "ground_truth_response (only the current turn)": [
+            "{\"current_working_directory\": \"research\"}",
+            "{\"result\": \"'research_notes.txt' copied to 'archives/research_notes.txt'\"}",
+            "{\"current_working_directory\": \"archives\"}",
+            "{\"result\": \"'research_notes.txt' moved to '2024_research_backup.txt'\"}"
+          ]
+        }
+      }
+    }
+  ],
+  "result_sha256": "82d2308dd091f6f11d9910269a6c4c19e1080d0ee8083769c050f9712c7a6cf9",
+  "score_sha256": "9bc77fb0563d00d6b62b043b650ae788d398810f6c84971f580add29968e1f8d",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

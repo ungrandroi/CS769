@@ -1,0 +1,48 @@
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 0, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 0, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 0, Step: 4
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 0, Step: 5
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 0, Step: 6
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 1, Step: 1
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 2, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 2, Step: 1
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 3, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 3, Step: 1
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 4, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 4, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 4, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 4, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 4, Step: 4
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 4, Step: 5
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 4, Step: 6
+----------------------------------------------------------------------------------------------------
+ID: base_6, Turn: 4, Step: 7
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_base_6", "category": "multi_turn_base", "mode": "identity", "status": "complete", "agent_deployment": "gpt-5-mini", "registry_name": "azure/gpt-5-mini-FC", "base_url": "https://ruqi-llm.openai.azure.com/openai/v1", "prefix_source": null, "runtime": {"reasoning_effort": "medium", "max_completion_tokens": 16384, "seed": 42}, "memory_tokenizer": "tiktoken o200k_base", "intervention": "One history replacement before second user input; later history retained", "boundary": {"turn": 1, "history_sha256": "a60472d35f985afe1150025978ebab5c83dedc3c2a282e8307ad5542118272eb", "after_sha256": "a60472d35f985afe1150025978ebab5c83dedc3c2a282e8307ad5542118272eb", "source_messages": 14, "roundtrip_verified": false}, "boundary_reached": true, "first_turn_requests": 7, "served_models": ["gpt-5-mini-2025-08-07"], "live_requests": 21, "replayed_requests": 0, "continuation_requests": 14, "live_usage": {"prompt_tokens": 57210, "completion_tokens": 1753, "total_tokens": 58963}, "live_cached_input": 50560, "live_reasoning_output": 1152, "length_truncations": 0, "prefix_usage": {"prompt_tokens": 16448, "completion_tokens": 495, "total_tokens": 16943}, "continuation_usage": {"prompt_tokens": 40762, "completion_tokens": 1258, "total_tokens": 42020}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}

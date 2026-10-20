@@ -1,0 +1,36 @@
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 0, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 0, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 0, Step: 4
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 4
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 5
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 6
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 2, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 2, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 2, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 2, Step: 3
+Failed to decode the model response. Proceed to next turn.
+{"task_id": "multi_turn_base_9", "category": "multi_turn_base", "mode": "identity", "status": "complete", "agent_deployment": "gpt-4.1", "registry_name": "azure/gpt-4.1-FC", "base_url": "https://ruqi-llm.openai.azure.com/openai/v1", "prefix_source": null, "runtime": {"temperature": 0, "seed": 42, "max_tokens": 4096}, "memory_tokenizer": "tiktoken o200k_base", "intervention": "One history replacement before second user input; later history retained", "boundary": {"turn": 1, "history_sha256": "08856b2b9a3fcc6ac75819a776984cefdd0d456b151c585b85fc547a1b201141", "after_sha256": "08856b2b9a3fcc6ac75819a776984cefdd0d456b151c585b85fc547a1b201141", "source_messages": 10, "roundtrip_verified": false}, "boundary_reached": true, "first_turn_requests": 5, "served_models": ["gpt-4.1-2025-04-14"], "live_requests": 16, "replayed_requests": 0, "continuation_requests": 11, "live_usage": {"prompt_tokens": 39611, "completion_tokens": 427, "total_tokens": 40038}, "live_cached_input": 36736, "prefix_usage": {"prompt_tokens": 10957, "completion_tokens": 119, "total_tokens": 11076}, "continuation_usage": {"prompt_tokens": 28654, "completion_tokens": 308, "total_tokens": 28962}, "prefix_log_equal": true, "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a"}
