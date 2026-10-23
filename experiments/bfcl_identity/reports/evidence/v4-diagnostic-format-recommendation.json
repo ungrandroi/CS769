@@ -1,0 +1,14 @@
+{
+  "status": "reviewed_engineering_preference_not_acceptance",
+  "preferred_candidate": "native-graph-index",
+  "preferred_label": "B · assistant 索引",
+  "replace_B_with_D": false,
+  "acceptance_of_preserved_accuracy": "not_established",
+  "formal_format_approval_written": false,
+  "new_validation_authorized": false,
+  "new_validation_started": false,
+  "claude_enabled": false,
+  "reason": "D没有显示收益，且本地重复出现创建阶段状态偏差；B是较小的格式变更，但官方通过率仍低于identity。保留B作为后续候选，不把本轮认作保持通过率验收通过。",
+  "plan_sha256": "ad5bc295e9ed1b574ad843ff7678a531fa2a784eece6d61d92c11888c52fdb24",
+  "summary_sha256": "4564389f87332f09af69e05a523a1658228d77dcc627d56ebe7a2221a7d2d649"
+}

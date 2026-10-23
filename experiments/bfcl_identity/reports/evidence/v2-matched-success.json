@@ -1,0 +1,1717 @@
+{
+  "status": "complete",
+  "analysis": "matched_official_success_continuation_cost",
+  "all_trajectory_rows": 81,
+  "models": {
+    "gpt-4.1": {
+      "all_trajectory_rows": 36,
+      "paired_repeats": 12,
+      "unique_task_conditions": 4,
+      "methods": {
+        "identity": {
+          "trajectories": 12,
+          "passed": 12,
+          "success_rate": 1.0,
+          "all_attempt_totals": {
+            "continuation_input": 134994,
+            "continuation_output": 1751,
+            "requests": 54,
+            "tool_calls": 45
+          }
+        },
+        "v2-compact": {
+          "trajectories": 12,
+          "passed": 6,
+          "success_rate": 0.5,
+          "all_attempt_totals": {
+            "continuation_input": 200702,
+            "continuation_output": 1722,
+            "requests": 36,
+            "tool_calls": 24
+          }
+        },
+        "v2-readable": {
+          "trajectories": 12,
+          "passed": 9,
+          "success_rate": 0.75,
+          "all_attempt_totals": {
+            "continuation_input": 115706,
+            "continuation_output": 1724,
+            "requests": 45,
+            "tool_calls": 36
+          }
+        }
+      }
+    },
+    "gpt-5-mini": {
+      "all_trajectory_rows": 45,
+      "paired_repeats": 15,
+      "unique_task_conditions": 5,
+      "methods": {
+        "identity": {
+          "trajectories": 15,
+          "passed": 12,
+          "success_rate": 0.8,
+          "all_attempt_totals": {
+            "continuation_input": 243654,
+            "continuation_output": 8907,
+            "requests": 92,
+            "tool_calls": 65
+          }
+        },
+        "v2-compact": {
+          "trajectories": 15,
+          "passed": 11,
+          "success_rate": 0.7333333333333333,
+          "all_attempt_totals": {
+            "continuation_input": 481142,
+            "continuation_output": 14268,
+            "requests": 99,
+            "tool_calls": 66
+          }
+        },
+        "v2-readable": {
+          "trajectories": 15,
+          "passed": 10,
+          "success_rate": 0.6666666666666666,
+          "all_attempt_totals": {
+            "continuation_input": 248646,
+            "continuation_output": 9100,
+            "requests": 93,
+            "tool_calls": 60
+          }
+        }
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "model": "gpt-4.1",
+      "identity_mode": "identity",
+      "candidate_mode": "v2-compact",
+      "all_paired_repeats": 12,
+      "outcome_transitions": {
+        "both_pass": 6,
+        "identity_only_pass": 6,
+        "candidate_only_pass": 0,
+        "both_fail": 0
+      },
+      "joint_success_pairs": 6,
+      "joint_success_unique_tasks": 2,
+      "joint_success_metrics": {
+        "continuation_input": {
+          "identity_total": 61638,
+          "candidate_total": 163646,
+          "candidate_minus_identity": 102008,
+          "candidate_over_identity": 2.654953113339174,
+          "change_percent": 165.49531133391739,
+          "ratio_status": "available"
+        },
+        "continuation_output": {
+          "identity_total": 639,
+          "candidate_total": 653,
+          "candidate_minus_identity": 14,
+          "candidate_over_identity": 1.021909233176839,
+          "change_percent": 2.1909233176838905,
+          "ratio_status": "available"
+        },
+        "requests": {
+          "identity_total": 24,
+          "candidate_total": 24,
+          "candidate_minus_identity": 0,
+          "candidate_over_identity": 1.0,
+          "change_percent": 0.0,
+          "ratio_status": "available"
+        },
+        "tool_calls": {
+          "identity_total": 12,
+          "candidate_total": 12,
+          "candidate_minus_identity": 0,
+          "candidate_over_identity": 1.0,
+          "change_percent": 0.0,
+          "ratio_status": "available"
+        }
+      },
+      "joint_success_pairs_detail": [
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 42,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 9436,
+            "continuation_output": 111,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 15766,
+            "continuation_output": 111,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 43,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 9436,
+            "continuation_output": 111,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 15762,
+            "continuation_output": 104,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 44,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 9428,
+            "continuation_output": 101,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 15764,
+            "continuation_output": 105,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 42,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 11110,
+            "continuation_output": 104,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 38784,
+            "continuation_output": 109,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 43,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 11114,
+            "continuation_output": 106,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 38786,
+            "continuation_output": 115,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 44,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 11114,
+            "continuation_output": 106,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 38784,
+            "continuation_output": 109,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        }
+      ],
+      "by_partition": {
+        "control": {
+          "joint_success_pairs": 6,
+          "metrics": {
+            "continuation_input": {
+              "identity_total": 61638,
+              "candidate_total": 163646,
+              "candidate_minus_identity": 102008,
+              "candidate_over_identity": 2.654953113339174,
+              "change_percent": 165.49531133391739,
+              "ratio_status": "available"
+            },
+            "continuation_output": {
+              "identity_total": 639,
+              "candidate_total": 653,
+              "candidate_minus_identity": 14,
+              "candidate_over_identity": 1.021909233176839,
+              "change_percent": 2.1909233176838905,
+              "ratio_status": "available"
+            },
+            "requests": {
+              "identity_total": 24,
+              "candidate_total": 24,
+              "candidate_minus_identity": 0,
+              "candidate_over_identity": 1.0,
+              "change_percent": 0.0,
+              "ratio_status": "available"
+            },
+            "tool_calls": {
+              "identity_total": 12,
+              "candidate_total": 12,
+              "candidate_minus_identity": 0,
+              "candidate_over_identity": 1.0,
+              "change_percent": 0.0,
+              "ratio_status": "available"
+            }
+          }
+        }
+      }
+    },
+    {
+      "model": "gpt-4.1",
+      "identity_mode": "identity",
+      "candidate_mode": "v2-readable",
+      "all_paired_repeats": 12,
+      "outcome_transitions": {
+        "both_pass": 9,
+        "identity_only_pass": 3,
+        "candidate_only_pass": 0,
+        "both_fail": 0
+      },
+      "joint_success_pairs": 9,
+      "joint_success_unique_tasks": 3,
+      "joint_success_metrics": {
+        "continuation_input": {
+          "identity_total": 97908,
+          "candidate_total": 101252,
+          "candidate_minus_identity": 3344,
+          "candidate_over_identity": 1.0341545123993954,
+          "change_percent": 3.4154512399395376,
+          "ratio_status": "available"
+        },
+        "continuation_output": {
+          "identity_total": 1131,
+          "candidate_total": 1253,
+          "candidate_minus_identity": 122,
+          "candidate_over_identity": 1.107869142351901,
+          "change_percent": 10.786914235190093,
+          "ratio_status": "available"
+        },
+        "requests": {
+          "identity_total": 39,
+          "candidate_total": 39,
+          "candidate_minus_identity": 0,
+          "candidate_over_identity": 1.0,
+          "change_percent": 0.0,
+          "ratio_status": "available"
+        },
+        "tool_calls": {
+          "identity_total": 27,
+          "candidate_total": 30,
+          "candidate_minus_identity": 3,
+          "candidate_over_identity": 1.1111111111111112,
+          "change_percent": 11.111111111111116,
+          "ratio_status": "available"
+        }
+      },
+      "joint_success_pairs_detail": [
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 42,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 9436,
+            "continuation_output": 111,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 9754,
+            "continuation_output": 104,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 43,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 9436,
+            "continuation_output": 111,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 9754,
+            "continuation_output": 100,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 44,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 9428,
+            "continuation_output": 101,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 9756,
+            "continuation_output": 105,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 42,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 11110,
+            "continuation_output": 104,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 11474,
+            "continuation_output": 106,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 43,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 11114,
+            "continuation_output": 106,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 11474,
+            "continuation_output": 102,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 44,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 11114,
+            "continuation_output": 106,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 11474,
+            "continuation_output": 102,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_3",
+          "seed": 42,
+          "partition": "same_family",
+          "identity": {
+            "continuation_input": 12090,
+            "continuation_output": 165,
+            "requests": 5,
+            "tool_calls": 5
+          },
+          "candidate": {
+            "continuation_input": 12522,
+            "continuation_output": 210,
+            "requests": 5,
+            "tool_calls": 6
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_3",
+          "seed": 43,
+          "partition": "same_family",
+          "identity": {
+            "continuation_input": 12090,
+            "continuation_output": 166,
+            "requests": 5,
+            "tool_calls": 5
+          },
+          "candidate": {
+            "continuation_input": 12522,
+            "continuation_output": 212,
+            "requests": 5,
+            "tool_calls": 6
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_3",
+          "seed": 44,
+          "partition": "same_family",
+          "identity": {
+            "continuation_input": 12090,
+            "continuation_output": 161,
+            "requests": 5,
+            "tool_calls": 5
+          },
+          "candidate": {
+            "continuation_input": 12522,
+            "continuation_output": 212,
+            "requests": 5,
+            "tool_calls": 6
+          }
+        }
+      ],
+      "by_partition": {
+        "control": {
+          "joint_success_pairs": 6,
+          "metrics": {
+            "continuation_input": {
+              "identity_total": 61638,
+              "candidate_total": 63686,
+              "candidate_minus_identity": 2048,
+              "candidate_over_identity": 1.0332262565300627,
+              "change_percent": 3.3226256530062726,
+              "ratio_status": "available"
+            },
+            "continuation_output": {
+              "identity_total": 639,
+              "candidate_total": 619,
+              "candidate_minus_identity": -20,
+              "candidate_over_identity": 0.9687010954616588,
+              "change_percent": -3.1298904538341166,
+              "ratio_status": "available"
+            },
+            "requests": {
+              "identity_total": 24,
+              "candidate_total": 24,
+              "candidate_minus_identity": 0,
+              "candidate_over_identity": 1.0,
+              "change_percent": 0.0,
+              "ratio_status": "available"
+            },
+            "tool_calls": {
+              "identity_total": 12,
+              "candidate_total": 12,
+              "candidate_minus_identity": 0,
+              "candidate_over_identity": 1.0,
+              "change_percent": 0.0,
+              "ratio_status": "available"
+            }
+          }
+        },
+        "same_family": {
+          "joint_success_pairs": 3,
+          "metrics": {
+            "continuation_input": {
+              "identity_total": 36270,
+              "candidate_total": 37566,
+              "candidate_minus_identity": 1296,
+              "candidate_over_identity": 1.0357320099255583,
+              "change_percent": 3.573200992555825,
+              "ratio_status": "available"
+            },
+            "continuation_output": {
+              "identity_total": 492,
+              "candidate_total": 634,
+              "candidate_minus_identity": 142,
+              "candidate_over_identity": 1.2886178861788617,
+              "change_percent": 28.861788617886177,
+              "ratio_status": "available"
+            },
+            "requests": {
+              "identity_total": 15,
+              "candidate_total": 15,
+              "candidate_minus_identity": 0,
+              "candidate_over_identity": 1.0,
+              "change_percent": 0.0,
+              "ratio_status": "available"
+            },
+            "tool_calls": {
+              "identity_total": 15,
+              "candidate_total": 18,
+              "candidate_minus_identity": 3,
+              "candidate_over_identity": 1.2,
+              "change_percent": 19.999999999999996,
+              "ratio_status": "available"
+            }
+          }
+        }
+      }
+    },
+    {
+      "model": "gpt-5-mini",
+      "identity_mode": "identity",
+      "candidate_mode": "v2-compact",
+      "all_paired_repeats": 15,
+      "outcome_transitions": {
+        "both_pass": 9,
+        "identity_only_pass": 3,
+        "candidate_only_pass": 2,
+        "both_fail": 1
+      },
+      "joint_success_pairs": 9,
+      "joint_success_unique_tasks": 3,
+      "joint_success_metrics": {
+        "continuation_input": {
+          "identity_total": 97896,
+          "candidate_total": 255166,
+          "candidate_minus_identity": 157270,
+          "candidate_over_identity": 2.6065007763340686,
+          "change_percent": 160.65007763340685,
+          "ratio_status": "available"
+        },
+        "continuation_output": {
+          "identity_total": 3782,
+          "candidate_total": 5497,
+          "candidate_minus_identity": 1715,
+          "candidate_over_identity": 1.4534637757800106,
+          "change_percent": 45.34637757800106,
+          "ratio_status": "available"
+        },
+        "requests": {
+          "identity_total": 36,
+          "candidate_total": 39,
+          "candidate_minus_identity": 3,
+          "candidate_over_identity": 1.0833333333333333,
+          "change_percent": 8.333333333333325,
+          "ratio_status": "available"
+        },
+        "tool_calls": {
+          "identity_total": 18,
+          "candidate_total": 21,
+          "candidate_minus_identity": 3,
+          "candidate_over_identity": 1.1666666666666667,
+          "change_percent": 16.666666666666675,
+          "ratio_status": "available"
+        }
+      },
+      "joint_success_pairs_detail": [
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 42,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 9884,
+            "continuation_output": 345,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 16816,
+            "continuation_output": 341,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 43,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 9888,
+            "continuation_output": 155,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 21092,
+            "continuation_output": 620,
+            "requests": 5,
+            "tool_calls": 3
+          }
+        },
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 44,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 9884,
+            "continuation_output": 217,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 16822,
+            "continuation_output": 282,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_base_16",
+          "seed": 42,
+          "partition": "other_regression",
+          "identity": {
+            "continuation_input": 11364,
+            "continuation_output": 463,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 30291,
+            "continuation_output": 849,
+            "requests": 5,
+            "tool_calls": 3
+          }
+        },
+        {
+          "task_id": "multi_turn_base_16",
+          "seed": 43,
+          "partition": "other_regression",
+          "identity": {
+            "continuation_input": 11462,
+            "continuation_output": 1081,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 30341,
+            "continuation_output": 995,
+            "requests": 5,
+            "tool_calls": 3
+          }
+        },
+        {
+          "task_id": "multi_turn_base_16",
+          "seed": 44,
+          "partition": "other_regression",
+          "identity": {
+            "continuation_input": 11474,
+            "continuation_output": 738,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 24256,
+            "continuation_output": 1435,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 42,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 11312,
+            "continuation_output": 285,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 38516,
+            "continuation_output": 345,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 43,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 11314,
+            "continuation_output": 280,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 38516,
+            "continuation_output": 283,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 44,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 11314,
+            "continuation_output": 218,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 38516,
+            "continuation_output": 347,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        }
+      ],
+      "by_partition": {
+        "control": {
+          "joint_success_pairs": 6,
+          "metrics": {
+            "continuation_input": {
+              "identity_total": 63596,
+              "candidate_total": 170278,
+              "candidate_minus_identity": 106682,
+              "candidate_over_identity": 2.6774954399647775,
+              "change_percent": 167.74954399647774,
+              "ratio_status": "available"
+            },
+            "continuation_output": {
+              "identity_total": 1500,
+              "candidate_total": 2218,
+              "candidate_minus_identity": 718,
+              "candidate_over_identity": 1.4786666666666666,
+              "change_percent": 47.86666666666666,
+              "ratio_status": "available"
+            },
+            "requests": {
+              "identity_total": 24,
+              "candidate_total": 25,
+              "candidate_minus_identity": 1,
+              "candidate_over_identity": 1.0416666666666667,
+              "change_percent": 4.166666666666674,
+              "ratio_status": "available"
+            },
+            "tool_calls": {
+              "identity_total": 12,
+              "candidate_total": 13,
+              "candidate_minus_identity": 1,
+              "candidate_over_identity": 1.0833333333333333,
+              "change_percent": 8.333333333333325,
+              "ratio_status": "available"
+            }
+          }
+        },
+        "other_regression": {
+          "joint_success_pairs": 3,
+          "metrics": {
+            "continuation_input": {
+              "identity_total": 34300,
+              "candidate_total": 84888,
+              "candidate_minus_identity": 50588,
+              "candidate_over_identity": 2.474868804664723,
+              "change_percent": 147.48688046647231,
+              "ratio_status": "available"
+            },
+            "continuation_output": {
+              "identity_total": 2282,
+              "candidate_total": 3279,
+              "candidate_minus_identity": 997,
+              "candidate_over_identity": 1.436897458369851,
+              "change_percent": 43.689745836985104,
+              "ratio_status": "available"
+            },
+            "requests": {
+              "identity_total": 12,
+              "candidate_total": 14,
+              "candidate_minus_identity": 2,
+              "candidate_over_identity": 1.1666666666666667,
+              "change_percent": 16.666666666666675,
+              "ratio_status": "available"
+            },
+            "tool_calls": {
+              "identity_total": 6,
+              "candidate_total": 8,
+              "candidate_minus_identity": 2,
+              "candidate_over_identity": 1.3333333333333333,
+              "change_percent": 33.33333333333333,
+              "ratio_status": "available"
+            }
+          }
+        }
+      }
+    },
+    {
+      "model": "gpt-5-mini",
+      "identity_mode": "identity",
+      "candidate_mode": "v2-readable",
+      "all_paired_repeats": 15,
+      "outcome_transitions": {
+        "both_pass": 9,
+        "identity_only_pass": 3,
+        "candidate_only_pass": 1,
+        "both_fail": 2
+      },
+      "joint_success_pairs": 9,
+      "joint_success_unique_tasks": 4,
+      "joint_success_metrics": {
+        "continuation_input": {
+          "identity_total": 99832,
+          "candidate_total": 101738,
+          "candidate_minus_identity": 1906,
+          "candidate_over_identity": 1.0190920746854717,
+          "change_percent": 1.9092074685471694,
+          "ratio_status": "available"
+        },
+        "continuation_output": {
+          "identity_total": 3714,
+          "candidate_total": 3544,
+          "candidate_minus_identity": -170,
+          "candidate_over_identity": 0.9542272482498654,
+          "change_percent": -4.577275175013462,
+          "ratio_status": "available"
+        },
+        "requests": {
+          "identity_total": 38,
+          "candidate_total": 38,
+          "candidate_minus_identity": 0,
+          "candidate_over_identity": 1.0,
+          "change_percent": 0.0,
+          "ratio_status": "available"
+        },
+        "tool_calls": {
+          "identity_total": 20,
+          "candidate_total": 20,
+          "candidate_minus_identity": 0,
+          "candidate_over_identity": 1.0,
+          "change_percent": 0.0,
+          "ratio_status": "available"
+        }
+      },
+      "joint_success_pairs_detail": [
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 42,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 9884,
+            "continuation_output": 345,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 10126,
+            "continuation_output": 350,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 43,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 9888,
+            "continuation_output": 155,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 10120,
+            "continuation_output": 277,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 44,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 9884,
+            "continuation_output": 217,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 10114,
+            "continuation_output": 210,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_base_16",
+          "seed": 44,
+          "partition": "other_regression",
+          "identity": {
+            "continuation_input": 11474,
+            "continuation_output": 738,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 11580,
+            "continuation_output": 530,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 42,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 11312,
+            "continuation_output": 285,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 11568,
+            "continuation_output": 213,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 43,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 11314,
+            "continuation_output": 280,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 11562,
+            "continuation_output": 210,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 44,
+          "partition": "control",
+          "identity": {
+            "continuation_input": 11314,
+            "continuation_output": 218,
+            "requests": 4,
+            "tool_calls": 2
+          },
+          "candidate": {
+            "continuation_input": 11560,
+            "continuation_output": 273,
+            "requests": 4,
+            "tool_calls": 2
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_29",
+          "seed": 42,
+          "partition": "development",
+          "identity": {
+            "continuation_input": 12393,
+            "continuation_output": 645,
+            "requests": 5,
+            "tool_calls": 3
+          },
+          "candidate": {
+            "continuation_input": 12567,
+            "continuation_output": 844,
+            "requests": 5,
+            "tool_calls": 3
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_29",
+          "seed": 44,
+          "partition": "development",
+          "identity": {
+            "continuation_input": 12369,
+            "continuation_output": 831,
+            "requests": 5,
+            "tool_calls": 3
+          },
+          "candidate": {
+            "continuation_input": 12541,
+            "continuation_output": 637,
+            "requests": 5,
+            "tool_calls": 3
+          }
+        }
+      ],
+      "by_partition": {
+        "control": {
+          "joint_success_pairs": 6,
+          "metrics": {
+            "continuation_input": {
+              "identity_total": 63596,
+              "candidate_total": 65050,
+              "candidate_minus_identity": 1454,
+              "candidate_over_identity": 1.0228630731492547,
+              "change_percent": 2.286307314925473,
+              "ratio_status": "available"
+            },
+            "continuation_output": {
+              "identity_total": 1500,
+              "candidate_total": 1533,
+              "candidate_minus_identity": 33,
+              "candidate_over_identity": 1.022,
+              "change_percent": 2.200000000000002,
+              "ratio_status": "available"
+            },
+            "requests": {
+              "identity_total": 24,
+              "candidate_total": 24,
+              "candidate_minus_identity": 0,
+              "candidate_over_identity": 1.0,
+              "change_percent": 0.0,
+              "ratio_status": "available"
+            },
+            "tool_calls": {
+              "identity_total": 12,
+              "candidate_total": 12,
+              "candidate_minus_identity": 0,
+              "candidate_over_identity": 1.0,
+              "change_percent": 0.0,
+              "ratio_status": "available"
+            }
+          }
+        },
+        "development": {
+          "joint_success_pairs": 2,
+          "metrics": {
+            "continuation_input": {
+              "identity_total": 24762,
+              "candidate_total": 25108,
+              "candidate_minus_identity": 346,
+              "candidate_over_identity": 1.01397302318068,
+              "change_percent": 1.3973023180680055,
+              "ratio_status": "available"
+            },
+            "continuation_output": {
+              "identity_total": 1476,
+              "candidate_total": 1481,
+              "candidate_minus_identity": 5,
+              "candidate_over_identity": 1.0033875338753389,
+              "change_percent": 0.3387533875338855,
+              "ratio_status": "available"
+            },
+            "requests": {
+              "identity_total": 10,
+              "candidate_total": 10,
+              "candidate_minus_identity": 0,
+              "candidate_over_identity": 1.0,
+              "change_percent": 0.0,
+              "ratio_status": "available"
+            },
+            "tool_calls": {
+              "identity_total": 6,
+              "candidate_total": 6,
+              "candidate_minus_identity": 0,
+              "candidate_over_identity": 1.0,
+              "change_percent": 0.0,
+              "ratio_status": "available"
+            }
+          }
+        },
+        "other_regression": {
+          "joint_success_pairs": 1,
+          "metrics": {
+            "continuation_input": {
+              "identity_total": 11474,
+              "candidate_total": 11580,
+              "candidate_minus_identity": 106,
+              "candidate_over_identity": 1.009238277845564,
+              "change_percent": 0.9238277845563969,
+              "ratio_status": "available"
+            },
+            "continuation_output": {
+              "identity_total": 738,
+              "candidate_total": 530,
+              "candidate_minus_identity": -208,
+              "candidate_over_identity": 0.7181571815718157,
+              "change_percent": -28.184281842818425,
+              "ratio_status": "available"
+            },
+            "requests": {
+              "identity_total": 4,
+              "candidate_total": 4,
+              "candidate_minus_identity": 0,
+              "candidate_over_identity": 1.0,
+              "change_percent": 0.0,
+              "ratio_status": "available"
+            },
+            "tool_calls": {
+              "identity_total": 2,
+              "candidate_total": 2,
+              "candidate_minus_identity": 0,
+              "candidate_over_identity": 1.0,
+              "change_percent": 0.0,
+              "ratio_status": "available"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "three_way_common_success": {
+    "gpt-4.1": {
+      "role": "stricter_auxiliary_same_set_comparison",
+      "all_paired_repeats": 12,
+      "all_three_success_repeats": 6,
+      "all_three_success_unique_tasks": 2,
+      "methods": {
+        "identity": {
+          "continuation_input": {
+            "identity_total": 61638,
+            "candidate_total": 61638,
+            "candidate_minus_identity": 0,
+            "candidate_over_identity": 1.0,
+            "change_percent": 0.0,
+            "ratio_status": "available"
+          },
+          "continuation_output": {
+            "identity_total": 639,
+            "candidate_total": 639,
+            "candidate_minus_identity": 0,
+            "candidate_over_identity": 1.0,
+            "change_percent": 0.0,
+            "ratio_status": "available"
+          },
+          "requests": {
+            "identity_total": 24,
+            "candidate_total": 24,
+            "candidate_minus_identity": 0,
+            "candidate_over_identity": 1.0,
+            "change_percent": 0.0,
+            "ratio_status": "available"
+          },
+          "tool_calls": {
+            "identity_total": 12,
+            "candidate_total": 12,
+            "candidate_minus_identity": 0,
+            "candidate_over_identity": 1.0,
+            "change_percent": 0.0,
+            "ratio_status": "available"
+          }
+        },
+        "v2-compact": {
+          "continuation_input": {
+            "identity_total": 61638,
+            "candidate_total": 163646,
+            "candidate_minus_identity": 102008,
+            "candidate_over_identity": 2.654953113339174,
+            "change_percent": 165.49531133391739,
+            "ratio_status": "available"
+          },
+          "continuation_output": {
+            "identity_total": 639,
+            "candidate_total": 653,
+            "candidate_minus_identity": 14,
+            "candidate_over_identity": 1.021909233176839,
+            "change_percent": 2.1909233176838905,
+            "ratio_status": "available"
+          },
+          "requests": {
+            "identity_total": 24,
+            "candidate_total": 24,
+            "candidate_minus_identity": 0,
+            "candidate_over_identity": 1.0,
+            "change_percent": 0.0,
+            "ratio_status": "available"
+          },
+          "tool_calls": {
+            "identity_total": 12,
+            "candidate_total": 12,
+            "candidate_minus_identity": 0,
+            "candidate_over_identity": 1.0,
+            "change_percent": 0.0,
+            "ratio_status": "available"
+          }
+        },
+        "v2-readable": {
+          "continuation_input": {
+            "identity_total": 61638,
+            "candidate_total": 63686,
+            "candidate_minus_identity": 2048,
+            "candidate_over_identity": 1.0332262565300627,
+            "change_percent": 3.3226256530062726,
+            "ratio_status": "available"
+          },
+          "continuation_output": {
+            "identity_total": 639,
+            "candidate_total": 619,
+            "candidate_minus_identity": -20,
+            "candidate_over_identity": 0.9687010954616588,
+            "change_percent": -3.1298904538341166,
+            "ratio_status": "available"
+          },
+          "requests": {
+            "identity_total": 24,
+            "candidate_total": 24,
+            "candidate_minus_identity": 0,
+            "candidate_over_identity": 1.0,
+            "change_percent": 0.0,
+            "ratio_status": "available"
+          },
+          "tool_calls": {
+            "identity_total": 12,
+            "candidate_total": 12,
+            "candidate_minus_identity": 0,
+            "candidate_over_identity": 1.0,
+            "change_percent": 0.0,
+            "ratio_status": "available"
+          }
+        }
+      },
+      "common_repeats_detail": [
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 42,
+          "partition": "control",
+          "methods": {
+            "identity": {
+              "continuation_input": 9436,
+              "continuation_output": 111,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-compact": {
+              "continuation_input": 15766,
+              "continuation_output": 111,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-readable": {
+              "continuation_input": 9754,
+              "continuation_output": 104,
+              "requests": 4,
+              "tool_calls": 2
+            }
+          }
+        },
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 43,
+          "partition": "control",
+          "methods": {
+            "identity": {
+              "continuation_input": 9436,
+              "continuation_output": 111,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-compact": {
+              "continuation_input": 15762,
+              "continuation_output": 104,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-readable": {
+              "continuation_input": 9754,
+              "continuation_output": 100,
+              "requests": 4,
+              "tool_calls": 2
+            }
+          }
+        },
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 44,
+          "partition": "control",
+          "methods": {
+            "identity": {
+              "continuation_input": 9428,
+              "continuation_output": 101,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-compact": {
+              "continuation_input": 15764,
+              "continuation_output": 105,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-readable": {
+              "continuation_input": 9756,
+              "continuation_output": 105,
+              "requests": 4,
+              "tool_calls": 2
+            }
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 42,
+          "partition": "control",
+          "methods": {
+            "identity": {
+              "continuation_input": 11110,
+              "continuation_output": 104,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-compact": {
+              "continuation_input": 38784,
+              "continuation_output": 109,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-readable": {
+              "continuation_input": 11474,
+              "continuation_output": 106,
+              "requests": 4,
+              "tool_calls": 2
+            }
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 43,
+          "partition": "control",
+          "methods": {
+            "identity": {
+              "continuation_input": 11114,
+              "continuation_output": 106,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-compact": {
+              "continuation_input": 38786,
+              "continuation_output": 115,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-readable": {
+              "continuation_input": 11474,
+              "continuation_output": 102,
+              "requests": 4,
+              "tool_calls": 2
+            }
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 44,
+          "partition": "control",
+          "methods": {
+            "identity": {
+              "continuation_input": 11114,
+              "continuation_output": 106,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-compact": {
+              "continuation_input": 38784,
+              "continuation_output": 109,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-readable": {
+              "continuation_input": 11474,
+              "continuation_output": 102,
+              "requests": 4,
+              "tool_calls": 2
+            }
+          }
+        }
+      ]
+    },
+    "gpt-5-mini": {
+      "role": "stricter_auxiliary_same_set_comparison",
+      "all_paired_repeats": 15,
+      "all_three_success_repeats": 7,
+      "all_three_success_unique_tasks": 3,
+      "methods": {
+        "identity": {
+          "continuation_input": {
+            "identity_total": 75070,
+            "candidate_total": 75070,
+            "candidate_minus_identity": 0,
+            "candidate_over_identity": 1.0,
+            "change_percent": 0.0,
+            "ratio_status": "available"
+          },
+          "continuation_output": {
+            "identity_total": 2238,
+            "candidate_total": 2238,
+            "candidate_minus_identity": 0,
+            "candidate_over_identity": 1.0,
+            "change_percent": 0.0,
+            "ratio_status": "available"
+          },
+          "requests": {
+            "identity_total": 28,
+            "candidate_total": 28,
+            "candidate_minus_identity": 0,
+            "candidate_over_identity": 1.0,
+            "change_percent": 0.0,
+            "ratio_status": "available"
+          },
+          "tool_calls": {
+            "identity_total": 14,
+            "candidate_total": 14,
+            "candidate_minus_identity": 0,
+            "candidate_over_identity": 1.0,
+            "change_percent": 0.0,
+            "ratio_status": "available"
+          }
+        },
+        "v2-compact": {
+          "continuation_input": {
+            "identity_total": 75070,
+            "candidate_total": 194534,
+            "candidate_minus_identity": 119464,
+            "candidate_over_identity": 2.591368056480618,
+            "change_percent": 159.1368056480618,
+            "ratio_status": "available"
+          },
+          "continuation_output": {
+            "identity_total": 2238,
+            "candidate_total": 3653,
+            "candidate_minus_identity": 1415,
+            "candidate_over_identity": 1.6322609472743521,
+            "change_percent": 63.22609472743521,
+            "ratio_status": "available"
+          },
+          "requests": {
+            "identity_total": 28,
+            "candidate_total": 29,
+            "candidate_minus_identity": 1,
+            "candidate_over_identity": 1.0357142857142858,
+            "change_percent": 3.571428571428581,
+            "ratio_status": "available"
+          },
+          "tool_calls": {
+            "identity_total": 14,
+            "candidate_total": 15,
+            "candidate_minus_identity": 1,
+            "candidate_over_identity": 1.0714285714285714,
+            "change_percent": 7.14285714285714,
+            "ratio_status": "available"
+          }
+        },
+        "v2-readable": {
+          "continuation_input": {
+            "identity_total": 75070,
+            "candidate_total": 76630,
+            "candidate_minus_identity": 1560,
+            "candidate_over_identity": 1.0207806047688823,
+            "change_percent": 2.0780604768882327,
+            "ratio_status": "available"
+          },
+          "continuation_output": {
+            "identity_total": 2238,
+            "candidate_total": 2063,
+            "candidate_minus_identity": -175,
+            "candidate_over_identity": 0.9218051831992851,
+            "change_percent": -7.819481680071494,
+            "ratio_status": "available"
+          },
+          "requests": {
+            "identity_total": 28,
+            "candidate_total": 28,
+            "candidate_minus_identity": 0,
+            "candidate_over_identity": 1.0,
+            "change_percent": 0.0,
+            "ratio_status": "available"
+          },
+          "tool_calls": {
+            "identity_total": 14,
+            "candidate_total": 14,
+            "candidate_minus_identity": 0,
+            "candidate_over_identity": 1.0,
+            "change_percent": 0.0,
+            "ratio_status": "available"
+          }
+        }
+      },
+      "common_repeats_detail": [
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 42,
+          "partition": "control",
+          "methods": {
+            "identity": {
+              "continuation_input": 9884,
+              "continuation_output": 345,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-compact": {
+              "continuation_input": 16816,
+              "continuation_output": 341,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-readable": {
+              "continuation_input": 10126,
+              "continuation_output": 350,
+              "requests": 4,
+              "tool_calls": 2
+            }
+          }
+        },
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 43,
+          "partition": "control",
+          "methods": {
+            "identity": {
+              "continuation_input": 9888,
+              "continuation_output": 155,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-compact": {
+              "continuation_input": 21092,
+              "continuation_output": 620,
+              "requests": 5,
+              "tool_calls": 3
+            },
+            "v2-readable": {
+              "continuation_input": 10120,
+              "continuation_output": 277,
+              "requests": 4,
+              "tool_calls": 2
+            }
+          }
+        },
+        {
+          "task_id": "multi_turn_base_12",
+          "seed": 44,
+          "partition": "control",
+          "methods": {
+            "identity": {
+              "continuation_input": 9884,
+              "continuation_output": 217,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-compact": {
+              "continuation_input": 16822,
+              "continuation_output": 282,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-readable": {
+              "continuation_input": 10114,
+              "continuation_output": 210,
+              "requests": 4,
+              "tool_calls": 2
+            }
+          }
+        },
+        {
+          "task_id": "multi_turn_base_16",
+          "seed": 44,
+          "partition": "other_regression",
+          "methods": {
+            "identity": {
+              "continuation_input": 11474,
+              "continuation_output": 738,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-compact": {
+              "continuation_input": 24256,
+              "continuation_output": 1435,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-readable": {
+              "continuation_input": 11580,
+              "continuation_output": 530,
+              "requests": 4,
+              "tool_calls": 2
+            }
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 42,
+          "partition": "control",
+          "methods": {
+            "identity": {
+              "continuation_input": 11312,
+              "continuation_output": 285,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-compact": {
+              "continuation_input": 38516,
+              "continuation_output": 345,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-readable": {
+              "continuation_input": 11568,
+              "continuation_output": 213,
+              "requests": 4,
+              "tool_calls": 2
+            }
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 43,
+          "partition": "control",
+          "methods": {
+            "identity": {
+              "continuation_input": 11314,
+              "continuation_output": 280,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-compact": {
+              "continuation_input": 38516,
+              "continuation_output": 283,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-readable": {
+              "continuation_input": 11562,
+              "continuation_output": 210,
+              "requests": 4,
+              "tool_calls": 2
+            }
+          }
+        },
+        {
+          "task_id": "multi_turn_long_context_12",
+          "seed": 44,
+          "partition": "control",
+          "methods": {
+            "identity": {
+              "continuation_input": 11314,
+              "continuation_output": 218,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-compact": {
+              "continuation_input": 38516,
+              "continuation_output": 347,
+              "requests": 4,
+              "tool_calls": 2
+            },
+            "v2-readable": {
+              "continuation_input": 11560,
+              "continuation_output": 273,
+              "requests": 4,
+              "tool_calls": 2
+            }
+          }
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Matched pairs share model, task ID and seed; actual prefix/tool equality is established by the experiment audit, not inferred from this summary.",
+    "A cost comparison includes only pairs in which both identity and that candidate passed the unchanged official task scorer.",
+    "Compact and readable can have different joint-success subsets; their ratios must not be compared as if computed on the same tasks.",
+    "The three-way common-success set is a stricter auxiliary comparison on exactly the same repeats for all three methods. It does not replace pairwise results, overall success rates or failure transitions.",
+    "This is conditional descriptive analysis, not a causal estimate or an independent-task statistical test. Three seeds are repeats of each fixed condition.",
+    "Continuation totals exclude the replayed frozen prefix. Reasoning tokens are already included in continuation_output and cached input remains in continuation_input.",
+    "All-attempt totals include failures and early stopping. A lower all-attempt token total does not establish greater efficiency when success decreases.",
+    "A zero identity denominator or no joint-success pairs produces a null ratio, never zero cost or an infinite saving claim."
+  ],
+  "source_summary": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/final-experiment/continuations/summary.json",
+  "source_sha256": "5fa1f1b58524cccc18285223740b411215c5e388eb12081bc0e36c348f24a5ef"
+}

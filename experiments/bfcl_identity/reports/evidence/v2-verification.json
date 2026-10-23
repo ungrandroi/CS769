@@ -1,0 +1,3804 @@
+{
+  "status": "pass",
+  "audited_at_utc": "2026-10-21T20:38:16.354767+00:00",
+  "input_directory": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/final-experiment/continuations",
+  "new_api_calls": 0,
+  "source_or_result_mutations": 0,
+  "errors": [],
+  "warnings": [],
+  "runs": [
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "seed": 42,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 9436,
+        "completion_tokens": 111,
+        "total_tokens": 9547
+      },
+      "cached_input": 8704,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "045a5d14881f5f82e1c98a3e1910adfd5b7c9f45738a7e52ae54b6d9ccf282c4",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "86a82e7b49cc2958b2f4adb63b67e61d3c2ae61113f632b75c42852a73a4e743",
+        "prefix_inference_log_sha256": "cdc285c26cbfca301cf68674f83614fdc18cccedcb90557abcf2dd56f4a68631",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "seed": 42,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 15766,
+        "completion_tokens": 111,
+        "total_tokens": 15877
+      },
+      "cached_input": 13952,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "045a5d14881f5f82e1c98a3e1910adfd5b7c9f45738a7e52ae54b6d9ccf282c4",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "86a82e7b49cc2958b2f4adb63b67e61d3c2ae61113f632b75c42852a73a4e743",
+        "prefix_inference_log_sha256": "cdc285c26cbfca301cf68674f83614fdc18cccedcb90557abcf2dd56f4a68631",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "seed": 42,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 9754,
+        "completion_tokens": 104,
+        "total_tokens": 9858
+      },
+      "cached_input": 9088,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "045a5d14881f5f82e1c98a3e1910adfd5b7c9f45738a7e52ae54b6d9ccf282c4",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "86a82e7b49cc2958b2f4adb63b67e61d3c2ae61113f632b75c42852a73a4e743",
+        "prefix_inference_log_sha256": "cdc285c26cbfca301cf68674f83614fdc18cccedcb90557abcf2dd56f4a68631",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "seed": 43,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 9436,
+        "completion_tokens": 111,
+        "total_tokens": 9547
+      },
+      "cached_input": 9088,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "045a5d14881f5f82e1c98a3e1910adfd5b7c9f45738a7e52ae54b6d9ccf282c4",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "86a82e7b49cc2958b2f4adb63b67e61d3c2ae61113f632b75c42852a73a4e743",
+        "prefix_inference_log_sha256": "cdc285c26cbfca301cf68674f83614fdc18cccedcb90557abcf2dd56f4a68631",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "seed": 43,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 15762,
+        "completion_tokens": 104,
+        "total_tokens": 15866
+      },
+      "cached_input": 13824,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "045a5d14881f5f82e1c98a3e1910adfd5b7c9f45738a7e52ae54b6d9ccf282c4",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "86a82e7b49cc2958b2f4adb63b67e61d3c2ae61113f632b75c42852a73a4e743",
+        "prefix_inference_log_sha256": "cdc285c26cbfca301cf68674f83614fdc18cccedcb90557abcf2dd56f4a68631",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "seed": 43,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 9754,
+        "completion_tokens": 100,
+        "total_tokens": 9854
+      },
+      "cached_input": 9088,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "045a5d14881f5f82e1c98a3e1910adfd5b7c9f45738a7e52ae54b6d9ccf282c4",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "86a82e7b49cc2958b2f4adb63b67e61d3c2ae61113f632b75c42852a73a4e743",
+        "prefix_inference_log_sha256": "cdc285c26cbfca301cf68674f83614fdc18cccedcb90557abcf2dd56f4a68631",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "seed": 44,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 9428,
+        "completion_tokens": 101,
+        "total_tokens": 9529
+      },
+      "cached_input": 8832,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "045a5d14881f5f82e1c98a3e1910adfd5b7c9f45738a7e52ae54b6d9ccf282c4",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "86a82e7b49cc2958b2f4adb63b67e61d3c2ae61113f632b75c42852a73a4e743",
+        "prefix_inference_log_sha256": "cdc285c26cbfca301cf68674f83614fdc18cccedcb90557abcf2dd56f4a68631",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "seed": 44,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 15764,
+        "completion_tokens": 105,
+        "total_tokens": 15869
+      },
+      "cached_input": 15488,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "045a5d14881f5f82e1c98a3e1910adfd5b7c9f45738a7e52ae54b6d9ccf282c4",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "86a82e7b49cc2958b2f4adb63b67e61d3c2ae61113f632b75c42852a73a4e743",
+        "prefix_inference_log_sha256": "cdc285c26cbfca301cf68674f83614fdc18cccedcb90557abcf2dd56f4a68631",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "seed": 44,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 9756,
+        "completion_tokens": 105,
+        "total_tokens": 9861
+      },
+      "cached_input": 9344,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "045a5d14881f5f82e1c98a3e1910adfd5b7c9f45738a7e52ae54b6d9ccf282c4",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "86a82e7b49cc2958b2f4adb63b67e61d3c2ae61113f632b75c42852a73a4e743",
+        "prefix_inference_log_sha256": "cdc285c26cbfca301cf68674f83614fdc18cccedcb90557abcf2dd56f4a68631",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "seed": 42,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 12362,
+        "completion_tokens": 206,
+        "total_tokens": 12568
+      },
+      "cached_input": 12032,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 4,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "71e482265af2cf7a27f580ea173d1d5c2b245e7292eddb12c51b63e808c8aabc",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2d17058c9c1c017e8ab36fb7fe454c89b73713e140e9569856bd0fa1161dea17",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e11c245f59ead0069cc2b8369df998549582ca470ef42ddcbb83b4f7f14735c9",
+        "prefix_inference_log_sha256": "2f00f4d520efa82cca1fd43de5fb2d92458b807830b3118707e28bd07438e7f4",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "seed": 42,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 2,
+      "usage": {
+        "prompt_tokens": 6172,
+        "completion_tokens": 173,
+        "total_tokens": 6345
+      },
+      "cached_input": 6016,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 1,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "71e482265af2cf7a27f580ea173d1d5c2b245e7292eddb12c51b63e808c8aabc",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2d17058c9c1c017e8ab36fb7fe454c89b73713e140e9569856bd0fa1161dea17",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e11c245f59ead0069cc2b8369df998549582ca470ef42ddcbb83b4f7f14735c9",
+        "prefix_inference_log_sha256": "2f00f4d520efa82cca1fd43de5fb2d92458b807830b3118707e28bd07438e7f4",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "seed": 42,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 2,
+      "usage": {
+        "prompt_tokens": 4818,
+        "completion_tokens": 153,
+        "total_tokens": 4971
+      },
+      "cached_input": 4736,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 1,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "71e482265af2cf7a27f580ea173d1d5c2b245e7292eddb12c51b63e808c8aabc",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2d17058c9c1c017e8ab36fb7fe454c89b73713e140e9569856bd0fa1161dea17",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e11c245f59ead0069cc2b8369df998549582ca470ef42ddcbb83b4f7f14735c9",
+        "prefix_inference_log_sha256": "2f00f4d520efa82cca1fd43de5fb2d92458b807830b3118707e28bd07438e7f4",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "seed": 43,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 12362,
+        "completion_tokens": 207,
+        "total_tokens": 12569
+      },
+      "cached_input": 12160,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 4,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "71e482265af2cf7a27f580ea173d1d5c2b245e7292eddb12c51b63e808c8aabc",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2d17058c9c1c017e8ab36fb7fe454c89b73713e140e9569856bd0fa1161dea17",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e11c245f59ead0069cc2b8369df998549582ca470ef42ddcbb83b4f7f14735c9",
+        "prefix_inference_log_sha256": "2f00f4d520efa82cca1fd43de5fb2d92458b807830b3118707e28bd07438e7f4",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "seed": 43,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 2,
+      "usage": {
+        "prompt_tokens": 6172,
+        "completion_tokens": 169,
+        "total_tokens": 6341
+      },
+      "cached_input": 6016,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 1,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "71e482265af2cf7a27f580ea173d1d5c2b245e7292eddb12c51b63e808c8aabc",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2d17058c9c1c017e8ab36fb7fe454c89b73713e140e9569856bd0fa1161dea17",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e11c245f59ead0069cc2b8369df998549582ca470ef42ddcbb83b4f7f14735c9",
+        "prefix_inference_log_sha256": "2f00f4d520efa82cca1fd43de5fb2d92458b807830b3118707e28bd07438e7f4",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "seed": 43,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 2,
+      "usage": {
+        "prompt_tokens": 4818,
+        "completion_tokens": 169,
+        "total_tokens": 4987
+      },
+      "cached_input": 4736,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 1,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "71e482265af2cf7a27f580ea173d1d5c2b245e7292eddb12c51b63e808c8aabc",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2d17058c9c1c017e8ab36fb7fe454c89b73713e140e9569856bd0fa1161dea17",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e11c245f59ead0069cc2b8369df998549582ca470ef42ddcbb83b4f7f14735c9",
+        "prefix_inference_log_sha256": "2f00f4d520efa82cca1fd43de5fb2d92458b807830b3118707e28bd07438e7f4",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "seed": 44,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 12362,
+        "completion_tokens": 207,
+        "total_tokens": 12569
+      },
+      "cached_input": 12160,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 4,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "71e482265af2cf7a27f580ea173d1d5c2b245e7292eddb12c51b63e808c8aabc",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2d17058c9c1c017e8ab36fb7fe454c89b73713e140e9569856bd0fa1161dea17",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e11c245f59ead0069cc2b8369df998549582ca470ef42ddcbb83b4f7f14735c9",
+        "prefix_inference_log_sha256": "2f00f4d520efa82cca1fd43de5fb2d92458b807830b3118707e28bd07438e7f4",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "seed": 44,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 2,
+      "usage": {
+        "prompt_tokens": 6172,
+        "completion_tokens": 176,
+        "total_tokens": 6348
+      },
+      "cached_input": 6016,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 1,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "71e482265af2cf7a27f580ea173d1d5c2b245e7292eddb12c51b63e808c8aabc",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2d17058c9c1c017e8ab36fb7fe454c89b73713e140e9569856bd0fa1161dea17",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e11c245f59ead0069cc2b8369df998549582ca470ef42ddcbb83b4f7f14735c9",
+        "prefix_inference_log_sha256": "2f00f4d520efa82cca1fd43de5fb2d92458b807830b3118707e28bd07438e7f4",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "seed": 44,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 2,
+      "usage": {
+        "prompt_tokens": 4818,
+        "completion_tokens": 149,
+        "total_tokens": 4967
+      },
+      "cached_input": 4736,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 1,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "71e482265af2cf7a27f580ea173d1d5c2b245e7292eddb12c51b63e808c8aabc",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2d17058c9c1c017e8ab36fb7fe454c89b73713e140e9569856bd0fa1161dea17",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e11c245f59ead0069cc2b8369df998549582ca470ef42ddcbb83b4f7f14735c9",
+        "prefix_inference_log_sha256": "2f00f4d520efa82cca1fd43de5fb2d92458b807830b3118707e28bd07438e7f4",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_12",
+      "seed": 42,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11110,
+        "completion_tokens": 104,
+        "total_tokens": 11214
+      },
+      "cached_input": 9600,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "1aecc98eece20153ca9bb92c1b202fd9ceb1719717e67f87b22ff937fafae235",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "99dc04c85e5c96498f79d1f208affde1c1e67c326e3b1f5991dbb2fcdef19cbd",
+        "prefix_inference_log_sha256": "28175bc8dd5248172977adb607164fb1a8916c627e38613342be72dce50d718a",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_12",
+      "seed": 42,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 38784,
+        "completion_tokens": 109,
+        "total_tokens": 38893
+      },
+      "cached_input": 24192,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "1aecc98eece20153ca9bb92c1b202fd9ceb1719717e67f87b22ff937fafae235",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "99dc04c85e5c96498f79d1f208affde1c1e67c326e3b1f5991dbb2fcdef19cbd",
+        "prefix_inference_log_sha256": "28175bc8dd5248172977adb607164fb1a8916c627e38613342be72dce50d718a",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_12",
+      "seed": 42,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11474,
+        "completion_tokens": 106,
+        "total_tokens": 11580
+      },
+      "cached_input": 9728,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "1aecc98eece20153ca9bb92c1b202fd9ceb1719717e67f87b22ff937fafae235",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "99dc04c85e5c96498f79d1f208affde1c1e67c326e3b1f5991dbb2fcdef19cbd",
+        "prefix_inference_log_sha256": "28175bc8dd5248172977adb607164fb1a8916c627e38613342be72dce50d718a",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_12",
+      "seed": 43,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11114,
+        "completion_tokens": 106,
+        "total_tokens": 11220
+      },
+      "cached_input": 10752,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "1aecc98eece20153ca9bb92c1b202fd9ceb1719717e67f87b22ff937fafae235",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "99dc04c85e5c96498f79d1f208affde1c1e67c326e3b1f5991dbb2fcdef19cbd",
+        "prefix_inference_log_sha256": "28175bc8dd5248172977adb607164fb1a8916c627e38613342be72dce50d718a",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_12",
+      "seed": 43,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 38786,
+        "completion_tokens": 115,
+        "total_tokens": 38901
+      },
+      "cached_input": 38400,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "1aecc98eece20153ca9bb92c1b202fd9ceb1719717e67f87b22ff937fafae235",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "99dc04c85e5c96498f79d1f208affde1c1e67c326e3b1f5991dbb2fcdef19cbd",
+        "prefix_inference_log_sha256": "28175bc8dd5248172977adb607164fb1a8916c627e38613342be72dce50d718a",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_12",
+      "seed": 43,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11474,
+        "completion_tokens": 102,
+        "total_tokens": 11576
+      },
+      "cached_input": 11136,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "1aecc98eece20153ca9bb92c1b202fd9ceb1719717e67f87b22ff937fafae235",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "99dc04c85e5c96498f79d1f208affde1c1e67c326e3b1f5991dbb2fcdef19cbd",
+        "prefix_inference_log_sha256": "28175bc8dd5248172977adb607164fb1a8916c627e38613342be72dce50d718a",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_12",
+      "seed": 44,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11114,
+        "completion_tokens": 106,
+        "total_tokens": 11220
+      },
+      "cached_input": 10880,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "1aecc98eece20153ca9bb92c1b202fd9ceb1719717e67f87b22ff937fafae235",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "99dc04c85e5c96498f79d1f208affde1c1e67c326e3b1f5991dbb2fcdef19cbd",
+        "prefix_inference_log_sha256": "28175bc8dd5248172977adb607164fb1a8916c627e38613342be72dce50d718a",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_12",
+      "seed": 44,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 38784,
+        "completion_tokens": 109,
+        "total_tokens": 38893
+      },
+      "cached_input": 38528,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "1aecc98eece20153ca9bb92c1b202fd9ceb1719717e67f87b22ff937fafae235",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "99dc04c85e5c96498f79d1f208affde1c1e67c326e3b1f5991dbb2fcdef19cbd",
+        "prefix_inference_log_sha256": "28175bc8dd5248172977adb607164fb1a8916c627e38613342be72dce50d718a",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_12",
+      "seed": 44,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11474,
+        "completion_tokens": 102,
+        "total_tokens": 11576
+      },
+      "cached_input": 11136,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "1aecc98eece20153ca9bb92c1b202fd9ceb1719717e67f87b22ff937fafae235",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "99dc04c85e5c96498f79d1f208affde1c1e67c326e3b1f5991dbb2fcdef19cbd",
+        "prefix_inference_log_sha256": "28175bc8dd5248172977adb607164fb1a8916c627e38613342be72dce50d718a",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_3",
+      "seed": 42,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 12090,
+        "completion_tokens": 165,
+        "total_tokens": 12255
+      },
+      "cached_input": 11264,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 4,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "732922536337315677bb4aa53ba3f52eb005a6baa8350857ae57a4385e463d75",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "a04de875ddf432b2bd99e663c102ec0c776ce3771ae29c7855a59baf1727f622",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e48230f4851df51a73ca22916d13e5ca59a00ca440eae857c3a4df3bf7b1b620",
+        "prefix_inference_log_sha256": "009958b4073822471c6f08245ddcbd42bfa81165cd09dd993ed8062b07c0b7dd",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_3",
+      "seed": 42,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 2,
+      "usage": {
+        "prompt_tokens": 6180,
+        "completion_tokens": 186,
+        "total_tokens": 6366
+      },
+      "cached_input": 5888,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 1,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "732922536337315677bb4aa53ba3f52eb005a6baa8350857ae57a4385e463d75",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "a04de875ddf432b2bd99e663c102ec0c776ce3771ae29c7855a59baf1727f622",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e48230f4851df51a73ca22916d13e5ca59a00ca440eae857c3a4df3bf7b1b620",
+        "prefix_inference_log_sha256": "009958b4073822471c6f08245ddcbd42bfa81165cd09dd993ed8062b07c0b7dd",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_3",
+      "seed": 42,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 12522,
+        "completion_tokens": 210,
+        "total_tokens": 12732
+      },
+      "cached_input": 11520,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 4,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "732922536337315677bb4aa53ba3f52eb005a6baa8350857ae57a4385e463d75",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "a04de875ddf432b2bd99e663c102ec0c776ce3771ae29c7855a59baf1727f622",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e48230f4851df51a73ca22916d13e5ca59a00ca440eae857c3a4df3bf7b1b620",
+        "prefix_inference_log_sha256": "009958b4073822471c6f08245ddcbd42bfa81165cd09dd993ed8062b07c0b7dd",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_3",
+      "seed": 43,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 12090,
+        "completion_tokens": 166,
+        "total_tokens": 12256
+      },
+      "cached_input": 11776,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 4,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "732922536337315677bb4aa53ba3f52eb005a6baa8350857ae57a4385e463d75",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "a04de875ddf432b2bd99e663c102ec0c776ce3771ae29c7855a59baf1727f622",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e48230f4851df51a73ca22916d13e5ca59a00ca440eae857c3a4df3bf7b1b620",
+        "prefix_inference_log_sha256": "009958b4073822471c6f08245ddcbd42bfa81165cd09dd993ed8062b07c0b7dd",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_3",
+      "seed": 43,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 2,
+      "usage": {
+        "prompt_tokens": 6180,
+        "completion_tokens": 187,
+        "total_tokens": 6367
+      },
+      "cached_input": 5888,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 1,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "732922536337315677bb4aa53ba3f52eb005a6baa8350857ae57a4385e463d75",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "a04de875ddf432b2bd99e663c102ec0c776ce3771ae29c7855a59baf1727f622",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e48230f4851df51a73ca22916d13e5ca59a00ca440eae857c3a4df3bf7b1b620",
+        "prefix_inference_log_sha256": "009958b4073822471c6f08245ddcbd42bfa81165cd09dd993ed8062b07c0b7dd",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_3",
+      "seed": 43,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 12522,
+        "completion_tokens": 212,
+        "total_tokens": 12734
+      },
+      "cached_input": 12160,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 4,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "732922536337315677bb4aa53ba3f52eb005a6baa8350857ae57a4385e463d75",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "a04de875ddf432b2bd99e663c102ec0c776ce3771ae29c7855a59baf1727f622",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e48230f4851df51a73ca22916d13e5ca59a00ca440eae857c3a4df3bf7b1b620",
+        "prefix_inference_log_sha256": "009958b4073822471c6f08245ddcbd42bfa81165cd09dd993ed8062b07c0b7dd",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_3",
+      "seed": 44,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 12090,
+        "completion_tokens": 161,
+        "total_tokens": 12251
+      },
+      "cached_input": 11776,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 4,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "732922536337315677bb4aa53ba3f52eb005a6baa8350857ae57a4385e463d75",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "a04de875ddf432b2bd99e663c102ec0c776ce3771ae29c7855a59baf1727f622",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e48230f4851df51a73ca22916d13e5ca59a00ca440eae857c3a4df3bf7b1b620",
+        "prefix_inference_log_sha256": "009958b4073822471c6f08245ddcbd42bfa81165cd09dd993ed8062b07c0b7dd",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_3",
+      "seed": 44,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 2,
+      "usage": {
+        "prompt_tokens": 6180,
+        "completion_tokens": 178,
+        "total_tokens": 6358
+      },
+      "cached_input": 5760,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 1,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "732922536337315677bb4aa53ba3f52eb005a6baa8350857ae57a4385e463d75",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "a04de875ddf432b2bd99e663c102ec0c776ce3771ae29c7855a59baf1727f622",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e48230f4851df51a73ca22916d13e5ca59a00ca440eae857c3a4df3bf7b1b620",
+        "prefix_inference_log_sha256": "009958b4073822471c6f08245ddcbd42bfa81165cd09dd993ed8062b07c0b7dd",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_3",
+      "seed": 44,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 12522,
+        "completion_tokens": 212,
+        "total_tokens": 12734
+      },
+      "cached_input": 12160,
+      "reasoning_output_subset": 0,
+      "finish_reason_counts": {
+        "tool_calls": 4,
+        "stop": 1
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "system_fingerprints": [
+        "fp_a265b6cf81"
+      ],
+      "boundary_signature": {
+        "dataset_entry_sha256": "732922536337315677bb4aa53ba3f52eb005a6baa8350857ae57a4385e463d75",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "a04de875ddf432b2bd99e663c102ec0c776ce3771ae29c7855a59baf1727f622",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e48230f4851df51a73ca22916d13e5ca59a00ca440eae857c3a4df3bf7b1b620",
+        "prefix_inference_log_sha256": "009958b4073822471c6f08245ddcbd42bfa81165cd09dd993ed8062b07c0b7dd",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_12",
+      "seed": 42,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 9884,
+        "completion_tokens": 345,
+        "total_tokens": 10229
+      },
+      "cached_input": 8960,
+      "reasoning_output_subset": 256,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2e0fd41cec6768796e703f25d9fc034af770cd85bef265b2b845c2264080f819",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "dbe70e5ebb3ec1fbbdbb452ab9a92a076372cc60620ed712b949d30b2e2eb00a",
+        "prefix_inference_log_sha256": "9564b8b71444b059a0749de8f21448dd9211b7d41edd353b16b4ded10f959fba",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_12",
+      "seed": 42,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 16816,
+        "completion_tokens": 341,
+        "total_tokens": 17157
+      },
+      "cached_input": 14592,
+      "reasoning_output_subset": 256,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2e0fd41cec6768796e703f25d9fc034af770cd85bef265b2b845c2264080f819",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "dbe70e5ebb3ec1fbbdbb452ab9a92a076372cc60620ed712b949d30b2e2eb00a",
+        "prefix_inference_log_sha256": "9564b8b71444b059a0749de8f21448dd9211b7d41edd353b16b4ded10f959fba",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_12",
+      "seed": 42,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 10126,
+        "completion_tokens": 350,
+        "total_tokens": 10476
+      },
+      "cached_input": 9216,
+      "reasoning_output_subset": 256,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2e0fd41cec6768796e703f25d9fc034af770cd85bef265b2b845c2264080f819",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "dbe70e5ebb3ec1fbbdbb452ab9a92a076372cc60620ed712b949d30b2e2eb00a",
+        "prefix_inference_log_sha256": "9564b8b71444b059a0749de8f21448dd9211b7d41edd353b16b4ded10f959fba",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_12",
+      "seed": 43,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 9888,
+        "completion_tokens": 155,
+        "total_tokens": 10043
+      },
+      "cached_input": 9344,
+      "reasoning_output_subset": 64,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2e0fd41cec6768796e703f25d9fc034af770cd85bef265b2b845c2264080f819",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "dbe70e5ebb3ec1fbbdbb452ab9a92a076372cc60620ed712b949d30b2e2eb00a",
+        "prefix_inference_log_sha256": "9564b8b71444b059a0749de8f21448dd9211b7d41edd353b16b4ded10f959fba",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_12",
+      "seed": 43,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 21092,
+        "completion_tokens": 620,
+        "total_tokens": 21712
+      },
+      "cached_input": 20224,
+      "reasoning_output_subset": 512,
+      "finish_reason_counts": {
+        "tool_calls": 3,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2e0fd41cec6768796e703f25d9fc034af770cd85bef265b2b845c2264080f819",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "dbe70e5ebb3ec1fbbdbb452ab9a92a076372cc60620ed712b949d30b2e2eb00a",
+        "prefix_inference_log_sha256": "9564b8b71444b059a0749de8f21448dd9211b7d41edd353b16b4ded10f959fba",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_12",
+      "seed": 43,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 10120,
+        "completion_tokens": 277,
+        "total_tokens": 10397
+      },
+      "cached_input": 9600,
+      "reasoning_output_subset": 192,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2e0fd41cec6768796e703f25d9fc034af770cd85bef265b2b845c2264080f819",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "dbe70e5ebb3ec1fbbdbb452ab9a92a076372cc60620ed712b949d30b2e2eb00a",
+        "prefix_inference_log_sha256": "9564b8b71444b059a0749de8f21448dd9211b7d41edd353b16b4ded10f959fba",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_12",
+      "seed": 44,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 9884,
+        "completion_tokens": 217,
+        "total_tokens": 10101
+      },
+      "cached_input": 9344,
+      "reasoning_output_subset": 128,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2e0fd41cec6768796e703f25d9fc034af770cd85bef265b2b845c2264080f819",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "dbe70e5ebb3ec1fbbdbb452ab9a92a076372cc60620ed712b949d30b2e2eb00a",
+        "prefix_inference_log_sha256": "9564b8b71444b059a0749de8f21448dd9211b7d41edd353b16b4ded10f959fba",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_12",
+      "seed": 44,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 16822,
+        "completion_tokens": 282,
+        "total_tokens": 17104
+      },
+      "cached_input": 16256,
+      "reasoning_output_subset": 192,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2e0fd41cec6768796e703f25d9fc034af770cd85bef265b2b845c2264080f819",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "dbe70e5ebb3ec1fbbdbb452ab9a92a076372cc60620ed712b949d30b2e2eb00a",
+        "prefix_inference_log_sha256": "9564b8b71444b059a0749de8f21448dd9211b7d41edd353b16b4ded10f959fba",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_12",
+      "seed": 44,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 10114,
+        "completion_tokens": 210,
+        "total_tokens": 10324
+      },
+      "cached_input": 9600,
+      "reasoning_output_subset": 128,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2e0fd41cec6768796e703f25d9fc034af770cd85bef265b2b845c2264080f819",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "dbe70e5ebb3ec1fbbdbb452ab9a92a076372cc60620ed712b949d30b2e2eb00a",
+        "prefix_inference_log_sha256": "9564b8b71444b059a0749de8f21448dd9211b7d41edd353b16b4ded10f959fba",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_16",
+      "seed": 42,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11364,
+        "completion_tokens": 463,
+        "total_tokens": 11827
+      },
+      "cached_input": 10112,
+      "reasoning_output_subset": 320,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3d6532ecb12569c2f0de9b82f864ae586901c45f33e26caf59cfb8b15fdf6143",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "179d9b3ad00c1415b8e23629f9e7f7968962de21968c68a38b251895a948f455",
+        "user_suffix_sha256": "ff2218f2df2de64bc0eb01c2c36be200cd0bc8aa6aaddea83ae00a3c95815fc0",
+        "prefix_replay_sha256": "e1943d26a1e276a9dc4bc7f2c0a6cef713accb77187bba671528e9c5e964d3c4",
+        "prefix_inference_log_sha256": "aadcad312ad66a69f5bd0909900fa4a17d4758e41ee95c97ca13aa68ea05ab1d",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_16",
+      "seed": 42,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 30291,
+        "completion_tokens": 849,
+        "total_tokens": 31140
+      },
+      "cached_input": 25984,
+      "reasoning_output_subset": 576,
+      "finish_reason_counts": {
+        "tool_calls": 3,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3d6532ecb12569c2f0de9b82f864ae586901c45f33e26caf59cfb8b15fdf6143",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "179d9b3ad00c1415b8e23629f9e7f7968962de21968c68a38b251895a948f455",
+        "user_suffix_sha256": "ff2218f2df2de64bc0eb01c2c36be200cd0bc8aa6aaddea83ae00a3c95815fc0",
+        "prefix_replay_sha256": "e1943d26a1e276a9dc4bc7f2c0a6cef713accb77187bba671528e9c5e964d3c4",
+        "prefix_inference_log_sha256": "aadcad312ad66a69f5bd0909900fa4a17d4758e41ee95c97ca13aa68ea05ab1d",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_16",
+      "seed": 42,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 3,
+      "usage": {
+        "prompt_tokens": 8654,
+        "completion_tokens": 1025,
+        "total_tokens": 9679
+      },
+      "cached_input": 7552,
+      "reasoning_output_subset": 832,
+      "finish_reason_counts": {
+        "tool_calls": 1,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3d6532ecb12569c2f0de9b82f864ae586901c45f33e26caf59cfb8b15fdf6143",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "179d9b3ad00c1415b8e23629f9e7f7968962de21968c68a38b251895a948f455",
+        "user_suffix_sha256": "ff2218f2df2de64bc0eb01c2c36be200cd0bc8aa6aaddea83ae00a3c95815fc0",
+        "prefix_replay_sha256": "e1943d26a1e276a9dc4bc7f2c0a6cef713accb77187bba671528e9c5e964d3c4",
+        "prefix_inference_log_sha256": "aadcad312ad66a69f5bd0909900fa4a17d4758e41ee95c97ca13aa68ea05ab1d",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_16",
+      "seed": 43,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11462,
+        "completion_tokens": 1081,
+        "total_tokens": 12543
+      },
+      "cached_input": 11008,
+      "reasoning_output_subset": 832,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3d6532ecb12569c2f0de9b82f864ae586901c45f33e26caf59cfb8b15fdf6143",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "179d9b3ad00c1415b8e23629f9e7f7968962de21968c68a38b251895a948f455",
+        "user_suffix_sha256": "ff2218f2df2de64bc0eb01c2c36be200cd0bc8aa6aaddea83ae00a3c95815fc0",
+        "prefix_replay_sha256": "e1943d26a1e276a9dc4bc7f2c0a6cef713accb77187bba671528e9c5e964d3c4",
+        "prefix_inference_log_sha256": "aadcad312ad66a69f5bd0909900fa4a17d4758e41ee95c97ca13aa68ea05ab1d",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_16",
+      "seed": 43,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 30341,
+        "completion_tokens": 995,
+        "total_tokens": 31336
+      },
+      "cached_input": 29440,
+      "reasoning_output_subset": 704,
+      "finish_reason_counts": {
+        "tool_calls": 3,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3d6532ecb12569c2f0de9b82f864ae586901c45f33e26caf59cfb8b15fdf6143",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "179d9b3ad00c1415b8e23629f9e7f7968962de21968c68a38b251895a948f455",
+        "user_suffix_sha256": "ff2218f2df2de64bc0eb01c2c36be200cd0bc8aa6aaddea83ae00a3c95815fc0",
+        "prefix_replay_sha256": "e1943d26a1e276a9dc4bc7f2c0a6cef713accb77187bba671528e9c5e964d3c4",
+        "prefix_inference_log_sha256": "aadcad312ad66a69f5bd0909900fa4a17d4758e41ee95c97ca13aa68ea05ab1d",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_16",
+      "seed": 43,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 14772,
+        "completion_tokens": 1059,
+        "total_tokens": 15831
+      },
+      "cached_input": 13824,
+      "reasoning_output_subset": 768,
+      "finish_reason_counts": {
+        "tool_calls": 3,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3d6532ecb12569c2f0de9b82f864ae586901c45f33e26caf59cfb8b15fdf6143",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "179d9b3ad00c1415b8e23629f9e7f7968962de21968c68a38b251895a948f455",
+        "user_suffix_sha256": "ff2218f2df2de64bc0eb01c2c36be200cd0bc8aa6aaddea83ae00a3c95815fc0",
+        "prefix_replay_sha256": "e1943d26a1e276a9dc4bc7f2c0a6cef713accb77187bba671528e9c5e964d3c4",
+        "prefix_inference_log_sha256": "aadcad312ad66a69f5bd0909900fa4a17d4758e41ee95c97ca13aa68ea05ab1d",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_16",
+      "seed": 44,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11474,
+        "completion_tokens": 738,
+        "total_tokens": 12212
+      },
+      "cached_input": 11008,
+      "reasoning_output_subset": 512,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3d6532ecb12569c2f0de9b82f864ae586901c45f33e26caf59cfb8b15fdf6143",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "179d9b3ad00c1415b8e23629f9e7f7968962de21968c68a38b251895a948f455",
+        "user_suffix_sha256": "ff2218f2df2de64bc0eb01c2c36be200cd0bc8aa6aaddea83ae00a3c95815fc0",
+        "prefix_replay_sha256": "e1943d26a1e276a9dc4bc7f2c0a6cef713accb77187bba671528e9c5e964d3c4",
+        "prefix_inference_log_sha256": "aadcad312ad66a69f5bd0909900fa4a17d4758e41ee95c97ca13aa68ea05ab1d",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_16",
+      "seed": 44,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 24256,
+        "completion_tokens": 1435,
+        "total_tokens": 25691
+      },
+      "cached_input": 23552,
+      "reasoning_output_subset": 1152,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3d6532ecb12569c2f0de9b82f864ae586901c45f33e26caf59cfb8b15fdf6143",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "179d9b3ad00c1415b8e23629f9e7f7968962de21968c68a38b251895a948f455",
+        "user_suffix_sha256": "ff2218f2df2de64bc0eb01c2c36be200cd0bc8aa6aaddea83ae00a3c95815fc0",
+        "prefix_replay_sha256": "e1943d26a1e276a9dc4bc7f2c0a6cef713accb77187bba671528e9c5e964d3c4",
+        "prefix_inference_log_sha256": "aadcad312ad66a69f5bd0909900fa4a17d4758e41ee95c97ca13aa68ea05ab1d",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_16",
+      "seed": 44,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11580,
+        "completion_tokens": 530,
+        "total_tokens": 12110
+      },
+      "cached_input": 10880,
+      "reasoning_output_subset": 256,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3d6532ecb12569c2f0de9b82f864ae586901c45f33e26caf59cfb8b15fdf6143",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "179d9b3ad00c1415b8e23629f9e7f7968962de21968c68a38b251895a948f455",
+        "user_suffix_sha256": "ff2218f2df2de64bc0eb01c2c36be200cd0bc8aa6aaddea83ae00a3c95815fc0",
+        "prefix_replay_sha256": "e1943d26a1e276a9dc4bc7f2c0a6cef713accb77187bba671528e9c5e964d3c4",
+        "prefix_inference_log_sha256": "aadcad312ad66a69f5bd0909900fa4a17d4758e41ee95c97ca13aa68ea05ab1d",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_12",
+      "seed": 42,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11312,
+        "completion_tokens": 285,
+        "total_tokens": 11597
+      },
+      "cached_input": 10240,
+      "reasoning_output_subset": 192,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "da7f127b36824e30574b9a596f5fc9e3bac6e36dd6578b2a60f1de1858b214c1",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "2e2bcb05e4b27464bbc15fcabdd7d2097dddc2d1fe071c9837a35fcc9788312f",
+        "prefix_inference_log_sha256": "873f95895775aa43a34a17e3380f241dc8c239b8b3fcb51b88f6ee863474d984",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_12",
+      "seed": 42,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 38516,
+        "completion_tokens": 345,
+        "total_tokens": 38861
+      },
+      "cached_input": 30720,
+      "reasoning_output_subset": 256,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "da7f127b36824e30574b9a596f5fc9e3bac6e36dd6578b2a60f1de1858b214c1",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "2e2bcb05e4b27464bbc15fcabdd7d2097dddc2d1fe071c9837a35fcc9788312f",
+        "prefix_inference_log_sha256": "873f95895775aa43a34a17e3380f241dc8c239b8b3fcb51b88f6ee863474d984",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_12",
+      "seed": 42,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11568,
+        "completion_tokens": 213,
+        "total_tokens": 11781
+      },
+      "cached_input": 10240,
+      "reasoning_output_subset": 128,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "da7f127b36824e30574b9a596f5fc9e3bac6e36dd6578b2a60f1de1858b214c1",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "2e2bcb05e4b27464bbc15fcabdd7d2097dddc2d1fe071c9837a35fcc9788312f",
+        "prefix_inference_log_sha256": "873f95895775aa43a34a17e3380f241dc8c239b8b3fcb51b88f6ee863474d984",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_12",
+      "seed": 43,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11314,
+        "completion_tokens": 280,
+        "total_tokens": 11594
+      },
+      "cached_input": 10752,
+      "reasoning_output_subset": 192,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "da7f127b36824e30574b9a596f5fc9e3bac6e36dd6578b2a60f1de1858b214c1",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "2e2bcb05e4b27464bbc15fcabdd7d2097dddc2d1fe071c9837a35fcc9788312f",
+        "prefix_inference_log_sha256": "873f95895775aa43a34a17e3380f241dc8c239b8b3fcb51b88f6ee863474d984",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_12",
+      "seed": 43,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 38516,
+        "completion_tokens": 283,
+        "total_tokens": 38799
+      },
+      "cached_input": 37888,
+      "reasoning_output_subset": 192,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "da7f127b36824e30574b9a596f5fc9e3bac6e36dd6578b2a60f1de1858b214c1",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "2e2bcb05e4b27464bbc15fcabdd7d2097dddc2d1fe071c9837a35fcc9788312f",
+        "prefix_inference_log_sha256": "873f95895775aa43a34a17e3380f241dc8c239b8b3fcb51b88f6ee863474d984",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_12",
+      "seed": 43,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11562,
+        "completion_tokens": 210,
+        "total_tokens": 11772
+      },
+      "cached_input": 10880,
+      "reasoning_output_subset": 128,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "da7f127b36824e30574b9a596f5fc9e3bac6e36dd6578b2a60f1de1858b214c1",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "2e2bcb05e4b27464bbc15fcabdd7d2097dddc2d1fe071c9837a35fcc9788312f",
+        "prefix_inference_log_sha256": "873f95895775aa43a34a17e3380f241dc8c239b8b3fcb51b88f6ee863474d984",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_12",
+      "seed": 44,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11314,
+        "completion_tokens": 218,
+        "total_tokens": 11532
+      },
+      "cached_input": 10880,
+      "reasoning_output_subset": 128,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "da7f127b36824e30574b9a596f5fc9e3bac6e36dd6578b2a60f1de1858b214c1",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "2e2bcb05e4b27464bbc15fcabdd7d2097dddc2d1fe071c9837a35fcc9788312f",
+        "prefix_inference_log_sha256": "873f95895775aa43a34a17e3380f241dc8c239b8b3fcb51b88f6ee863474d984",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_12",
+      "seed": 44,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 38516,
+        "completion_tokens": 347,
+        "total_tokens": 38863
+      },
+      "cached_input": 37888,
+      "reasoning_output_subset": 256,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "da7f127b36824e30574b9a596f5fc9e3bac6e36dd6578b2a60f1de1858b214c1",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "2e2bcb05e4b27464bbc15fcabdd7d2097dddc2d1fe071c9837a35fcc9788312f",
+        "prefix_inference_log_sha256": "873f95895775aa43a34a17e3380f241dc8c239b8b3fcb51b88f6ee863474d984",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_12",
+      "seed": 44,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 4,
+      "usage": {
+        "prompt_tokens": 11560,
+        "completion_tokens": 273,
+        "total_tokens": 11833
+      },
+      "cached_input": 10880,
+      "reasoning_output_subset": 192,
+      "finish_reason_counts": {
+        "tool_calls": 2,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "da7f127b36824e30574b9a596f5fc9e3bac6e36dd6578b2a60f1de1858b214c1",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "2e2bcb05e4b27464bbc15fcabdd7d2097dddc2d1fe071c9837a35fcc9788312f",
+        "prefix_inference_log_sha256": "873f95895775aa43a34a17e3380f241dc8c239b8b3fcb51b88f6ee863474d984",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_29",
+      "seed": 42,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 12393,
+        "completion_tokens": 645,
+        "total_tokens": 13038
+      },
+      "cached_input": 11648,
+      "reasoning_output_subset": 512,
+      "finish_reason_counts": {
+        "tool_calls": 3,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3c90ab94c7fbbffa36e9754bf1c4c33fa8a74a9138e6435b584cd1f814e61a54",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "3bbbb74819c70e25f2bc31704fa7684801de136305756a2043b9fbbd5c1d602f",
+        "user_suffix_sha256": "94058c48a119d72bf46a0acd0c3a3b0827dc31cc881729a2ebdd4d82c0989f09",
+        "prefix_replay_sha256": "722dcd3faec845ad28e27ae92b5128c05d049ab6a12f15ed51f3beac3ac9e8ac",
+        "prefix_inference_log_sha256": "2f91086ce3072f4abb00d8c384deac500c70b2689b6440bb540599023689ace8",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_29",
+      "seed": 42,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 2,
+      "usage": {
+        "prompt_tokens": 8103,
+        "completion_tokens": 1259,
+        "total_tokens": 9362
+      },
+      "cached_input": 7680,
+      "reasoning_output_subset": 960,
+      "finish_reason_counts": {
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3c90ab94c7fbbffa36e9754bf1c4c33fa8a74a9138e6435b584cd1f814e61a54",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "3bbbb74819c70e25f2bc31704fa7684801de136305756a2043b9fbbd5c1d602f",
+        "user_suffix_sha256": "94058c48a119d72bf46a0acd0c3a3b0827dc31cc881729a2ebdd4d82c0989f09",
+        "prefix_replay_sha256": "722dcd3faec845ad28e27ae92b5128c05d049ab6a12f15ed51f3beac3ac9e8ac",
+        "prefix_inference_log_sha256": "2f91086ce3072f4abb00d8c384deac500c70b2689b6440bb540599023689ace8",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_29",
+      "seed": 42,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 12567,
+        "completion_tokens": 844,
+        "total_tokens": 13411
+      },
+      "cached_input": 11776,
+      "reasoning_output_subset": 704,
+      "finish_reason_counts": {
+        "tool_calls": 3,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3c90ab94c7fbbffa36e9754bf1c4c33fa8a74a9138e6435b584cd1f814e61a54",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "3bbbb74819c70e25f2bc31704fa7684801de136305756a2043b9fbbd5c1d602f",
+        "user_suffix_sha256": "94058c48a119d72bf46a0acd0c3a3b0827dc31cc881729a2ebdd4d82c0989f09",
+        "prefix_replay_sha256": "722dcd3faec845ad28e27ae92b5128c05d049ab6a12f15ed51f3beac3ac9e8ac",
+        "prefix_inference_log_sha256": "2f91086ce3072f4abb00d8c384deac500c70b2689b6440bb540599023689ace8",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_29",
+      "seed": 43,
+      "mode": "identity",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 12351,
+        "completion_tokens": 433,
+        "total_tokens": 12784
+      },
+      "cached_input": 11648,
+      "reasoning_output_subset": 320,
+      "finish_reason_counts": {
+        "tool_calls": 3,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3c90ab94c7fbbffa36e9754bf1c4c33fa8a74a9138e6435b584cd1f814e61a54",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "3bbbb74819c70e25f2bc31704fa7684801de136305756a2043b9fbbd5c1d602f",
+        "user_suffix_sha256": "94058c48a119d72bf46a0acd0c3a3b0827dc31cc881729a2ebdd4d82c0989f09",
+        "prefix_replay_sha256": "722dcd3faec845ad28e27ae92b5128c05d049ab6a12f15ed51f3beac3ac9e8ac",
+        "prefix_inference_log_sha256": "2f91086ce3072f4abb00d8c384deac500c70b2689b6440bb540599023689ace8",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_29",
+      "seed": 43,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 20524,
+        "completion_tokens": 1236,
+        "total_tokens": 21760
+      },
+      "cached_input": 19712,
+      "reasoning_output_subset": 1024,
+      "finish_reason_counts": {
+        "tool_calls": 3,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3c90ab94c7fbbffa36e9754bf1c4c33fa8a74a9138e6435b584cd1f814e61a54",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "3bbbb74819c70e25f2bc31704fa7684801de136305756a2043b9fbbd5c1d602f",
+        "user_suffix_sha256": "94058c48a119d72bf46a0acd0c3a3b0827dc31cc881729a2ebdd4d82c0989f09",
+        "prefix_replay_sha256": "722dcd3faec845ad28e27ae92b5128c05d049ab6a12f15ed51f3beac3ac9e8ac",
+        "prefix_inference_log_sha256": "2f91086ce3072f4abb00d8c384deac500c70b2689b6440bb540599023689ace8",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_29",
+      "seed": 43,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 12537,
+        "completion_tokens": 692,
+        "total_tokens": 13229
+      },
+      "cached_input": 11776,
+      "reasoning_output_subset": 576,
+      "finish_reason_counts": {
+        "tool_calls": 3,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3c90ab94c7fbbffa36e9754bf1c4c33fa8a74a9138e6435b584cd1f814e61a54",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "3bbbb74819c70e25f2bc31704fa7684801de136305756a2043b9fbbd5c1d602f",
+        "user_suffix_sha256": "94058c48a119d72bf46a0acd0c3a3b0827dc31cc881729a2ebdd4d82c0989f09",
+        "prefix_replay_sha256": "722dcd3faec845ad28e27ae92b5128c05d049ab6a12f15ed51f3beac3ac9e8ac",
+        "prefix_inference_log_sha256": "2f91086ce3072f4abb00d8c384deac500c70b2689b6440bb540599023689ace8",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_29",
+      "seed": 44,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 12369,
+        "completion_tokens": 831,
+        "total_tokens": 13200
+      },
+      "cached_input": 11648,
+      "reasoning_output_subset": 704,
+      "finish_reason_counts": {
+        "tool_calls": 3,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3c90ab94c7fbbffa36e9754bf1c4c33fa8a74a9138e6435b584cd1f814e61a54",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "3bbbb74819c70e25f2bc31704fa7684801de136305756a2043b9fbbd5c1d602f",
+        "user_suffix_sha256": "94058c48a119d72bf46a0acd0c3a3b0827dc31cc881729a2ebdd4d82c0989f09",
+        "prefix_replay_sha256": "722dcd3faec845ad28e27ae92b5128c05d049ab6a12f15ed51f3beac3ac9e8ac",
+        "prefix_inference_log_sha256": "2f91086ce3072f4abb00d8c384deac500c70b2689b6440bb540599023689ace8",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_29",
+      "seed": 44,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 8,
+      "usage": {
+        "prompt_tokens": 35853,
+        "completion_tokens": 2298,
+        "total_tokens": 38151
+      },
+      "cached_input": 33920,
+      "reasoning_output_subset": 1920,
+      "finish_reason_counts": {
+        "stop": 2,
+        "tool_calls": 6
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3c90ab94c7fbbffa36e9754bf1c4c33fa8a74a9138e6435b584cd1f814e61a54",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "3bbbb74819c70e25f2bc31704fa7684801de136305756a2043b9fbbd5c1d602f",
+        "user_suffix_sha256": "94058c48a119d72bf46a0acd0c3a3b0827dc31cc881729a2ebdd4d82c0989f09",
+        "prefix_replay_sha256": "722dcd3faec845ad28e27ae92b5128c05d049ab6a12f15ed51f3beac3ac9e8ac",
+        "prefix_inference_log_sha256": "2f91086ce3072f4abb00d8c384deac500c70b2689b6440bb540599023689ace8",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_29",
+      "seed": 44,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 5,
+      "usage": {
+        "prompt_tokens": 12541,
+        "completion_tokens": 637,
+        "total_tokens": 13178
+      },
+      "cached_input": 11904,
+      "reasoning_output_subset": 512,
+      "finish_reason_counts": {
+        "tool_calls": 3,
+        "stop": 2
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "3c90ab94c7fbbffa36e9754bf1c4c33fa8a74a9138e6435b584cd1f814e61a54",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "3bbbb74819c70e25f2bc31704fa7684801de136305756a2043b9fbbd5c1d602f",
+        "user_suffix_sha256": "94058c48a119d72bf46a0acd0c3a3b0827dc31cc881729a2ebdd4d82c0989f09",
+        "prefix_replay_sha256": "722dcd3faec845ad28e27ae92b5128c05d049ab6a12f15ed51f3beac3ac9e8ac",
+        "prefix_inference_log_sha256": "2f91086ce3072f4abb00d8c384deac500c70b2689b6440bb540599023689ace8",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_39",
+      "seed": 42,
+      "mode": "identity",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 14,
+      "usage": {
+        "prompt_tokens": 36455,
+        "completion_tokens": 1121,
+        "total_tokens": 37576
+      },
+      "cached_input": 34176,
+      "reasoning_output_subset": 768,
+      "finish_reason_counts": {
+        "tool_calls": 11,
+        "stop": 3
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "aa8158bc60945708fb922cf030688da5d7d0e51747124216efa5e9a3737bffce",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "15e63d97997049071c42b7b41356061129d866e7055c839b31a2f95c4252eaf5",
+        "user_suffix_sha256": "5602f2691460fad246b43f546d02f246e5c896760fb70dde288f0c09ff6a1998",
+        "prefix_replay_sha256": "bbce1c581711b4249b544dc2ad4420451c4124830244d0ca661af23788a94fe9",
+        "prefix_inference_log_sha256": "8a3f992d74f806b48a502834c1da2348c93834a226ecc6773b6bc88120f365d6",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_39",
+      "seed": 42,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 13,
+      "usage": {
+        "prompt_tokens": 45910,
+        "completion_tokens": 1210,
+        "total_tokens": 47120
+      },
+      "cached_input": 39680,
+      "reasoning_output_subset": 896,
+      "finish_reason_counts": {
+        "tool_calls": 10,
+        "stop": 3
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "aa8158bc60945708fb922cf030688da5d7d0e51747124216efa5e9a3737bffce",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "15e63d97997049071c42b7b41356061129d866e7055c839b31a2f95c4252eaf5",
+        "user_suffix_sha256": "5602f2691460fad246b43f546d02f246e5c896760fb70dde288f0c09ff6a1998",
+        "prefix_replay_sha256": "bbce1c581711b4249b544dc2ad4420451c4124830244d0ca661af23788a94fe9",
+        "prefix_inference_log_sha256": "8a3f992d74f806b48a502834c1da2348c93834a226ecc6773b6bc88120f365d6",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_39",
+      "seed": 42,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 13,
+      "usage": {
+        "prompt_tokens": 33950,
+        "completion_tokens": 868,
+        "total_tokens": 34818
+      },
+      "cached_input": 31232,
+      "reasoning_output_subset": 576,
+      "finish_reason_counts": {
+        "tool_calls": 10,
+        "stop": 3
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "aa8158bc60945708fb922cf030688da5d7d0e51747124216efa5e9a3737bffce",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "15e63d97997049071c42b7b41356061129d866e7055c839b31a2f95c4252eaf5",
+        "user_suffix_sha256": "5602f2691460fad246b43f546d02f246e5c896760fb70dde288f0c09ff6a1998",
+        "prefix_replay_sha256": "bbce1c581711b4249b544dc2ad4420451c4124830244d0ca661af23788a94fe9",
+        "prefix_inference_log_sha256": "8a3f992d74f806b48a502834c1da2348c93834a226ecc6773b6bc88120f365d6",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_39",
+      "seed": 43,
+      "mode": "identity",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 13,
+      "usage": {
+        "prompt_tokens": 33517,
+        "completion_tokens": 833,
+        "total_tokens": 34350
+      },
+      "cached_input": 31872,
+      "reasoning_output_subset": 512,
+      "finish_reason_counts": {
+        "tool_calls": 10,
+        "stop": 3
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "aa8158bc60945708fb922cf030688da5d7d0e51747124216efa5e9a3737bffce",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "15e63d97997049071c42b7b41356061129d866e7055c839b31a2f95c4252eaf5",
+        "user_suffix_sha256": "5602f2691460fad246b43f546d02f246e5c896760fb70dde288f0c09ff6a1998",
+        "prefix_replay_sha256": "bbce1c581711b4249b544dc2ad4420451c4124830244d0ca661af23788a94fe9",
+        "prefix_inference_log_sha256": "8a3f992d74f806b48a502834c1da2348c93834a226ecc6773b6bc88120f365d6",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_39",
+      "seed": 43,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 16,
+      "usage": {
+        "prompt_tokens": 57623,
+        "completion_tokens": 1742,
+        "total_tokens": 59365
+      },
+      "cached_input": 55168,
+      "reasoning_output_subset": 1344,
+      "finish_reason_counts": {
+        "tool_calls": 13,
+        "stop": 3
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "aa8158bc60945708fb922cf030688da5d7d0e51747124216efa5e9a3737bffce",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "15e63d97997049071c42b7b41356061129d866e7055c839b31a2f95c4252eaf5",
+        "user_suffix_sha256": "5602f2691460fad246b43f546d02f246e5c896760fb70dde288f0c09ff6a1998",
+        "prefix_replay_sha256": "bbce1c581711b4249b544dc2ad4420451c4124830244d0ca661af23788a94fe9",
+        "prefix_inference_log_sha256": "8a3f992d74f806b48a502834c1da2348c93834a226ecc6773b6bc88120f365d6",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_39",
+      "seed": 43,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 16,
+      "usage": {
+        "prompt_tokens": 42914,
+        "completion_tokens": 881,
+        "total_tokens": 43795
+      },
+      "cached_input": 40576,
+      "reasoning_output_subset": 512,
+      "finish_reason_counts": {
+        "tool_calls": 13,
+        "stop": 3
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "aa8158bc60945708fb922cf030688da5d7d0e51747124216efa5e9a3737bffce",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "15e63d97997049071c42b7b41356061129d866e7055c839b31a2f95c4252eaf5",
+        "user_suffix_sha256": "5602f2691460fad246b43f546d02f246e5c896760fb70dde288f0c09ff6a1998",
+        "prefix_replay_sha256": "bbce1c581711b4249b544dc2ad4420451c4124830244d0ca661af23788a94fe9",
+        "prefix_inference_log_sha256": "8a3f992d74f806b48a502834c1da2348c93834a226ecc6773b6bc88120f365d6",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_39",
+      "seed": 44,
+      "mode": "identity",
+      "status": "pass",
+      "passed": false,
+      "continuation_requests": 14,
+      "usage": {
+        "prompt_tokens": 38673,
+        "completion_tokens": 1262,
+        "total_tokens": 39935
+      },
+      "cached_input": 36096,
+      "reasoning_output_subset": 768,
+      "finish_reason_counts": {
+        "tool_calls": 11,
+        "stop": 3
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "aa8158bc60945708fb922cf030688da5d7d0e51747124216efa5e9a3737bffce",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "15e63d97997049071c42b7b41356061129d866e7055c839b31a2f95c4252eaf5",
+        "user_suffix_sha256": "5602f2691460fad246b43f546d02f246e5c896760fb70dde288f0c09ff6a1998",
+        "prefix_replay_sha256": "bbce1c581711b4249b544dc2ad4420451c4124830244d0ca661af23788a94fe9",
+        "prefix_inference_log_sha256": "8a3f992d74f806b48a502834c1da2348c93834a226ecc6773b6bc88120f365d6",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_39",
+      "seed": 44,
+      "mode": "v2-compact",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 16,
+      "usage": {
+        "prompt_tokens": 57963,
+        "completion_tokens": 1026,
+        "total_tokens": 58989
+      },
+      "cached_input": 55552,
+      "reasoning_output_subset": 640,
+      "finish_reason_counts": {
+        "tool_calls": 13,
+        "stop": 3
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "aa8158bc60945708fb922cf030688da5d7d0e51747124216efa5e9a3737bffce",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "15e63d97997049071c42b7b41356061129d866e7055c839b31a2f95c4252eaf5",
+        "user_suffix_sha256": "5602f2691460fad246b43f546d02f246e5c896760fb70dde288f0c09ff6a1998",
+        "prefix_replay_sha256": "bbce1c581711b4249b544dc2ad4420451c4124830244d0ca661af23788a94fe9",
+        "prefix_inference_log_sha256": "8a3f992d74f806b48a502834c1da2348c93834a226ecc6773b6bc88120f365d6",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_39",
+      "seed": 44,
+      "mode": "v2-readable",
+      "status": "pass",
+      "passed": true,
+      "continuation_requests": 13,
+      "usage": {
+        "prompt_tokens": 34081,
+        "completion_tokens": 1031,
+        "total_tokens": 35112
+      },
+      "cached_input": 29824,
+      "reasoning_output_subset": 704,
+      "finish_reason_counts": {
+        "tool_calls": 10,
+        "stop": 3
+      },
+      "retries": 0,
+      "served_models": [
+        "gpt-5-mini-2025-08-07"
+      ],
+      "system_fingerprints": [],
+      "boundary_signature": {
+        "dataset_entry_sha256": "aa8158bc60945708fb922cf030688da5d7d0e51747124216efa5e9a3737bffce",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "15e63d97997049071c42b7b41356061129d866e7055c839b31a2f95c4252eaf5",
+        "user_suffix_sha256": "5602f2691460fad246b43f546d02f246e5c896760fb70dde288f0c09ff6a1998",
+        "prefix_replay_sha256": "bbce1c581711b4249b544dc2ad4420451c4124830244d0ca661af23788a94fe9",
+        "prefix_inference_log_sha256": "8a3f992d74f806b48a502834c1da2348c93834a226ecc6773b6bc88120f365d6",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_prefix_byte_hash_match": true
+    }
+  ],
+  "conditions": [
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "status": "pass",
+      "runs": 9,
+      "shared_signature": {
+        "dataset_entry_sha256": "71e482265af2cf7a27f580ea173d1d5c2b245e7292eddb12c51b63e808c8aabc",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2d17058c9c1c017e8ab36fb7fe454c89b73713e140e9569856bd0fa1161dea17",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e11c245f59ead0069cc2b8369df998549582ca470ef42ddcbb83b4f7f14735c9",
+        "prefix_inference_log_sha256": "2f00f4d520efa82cca1fd43de5fb2d92458b807830b3118707e28bd07438e7f4",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_source_files_verified": [
+        "manifest.json",
+        "prefix-history.json",
+        "multi_turn_base_3.api.json",
+        "multi_turn_base_3.full.json"
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_3",
+      "status": "pass",
+      "runs": 9,
+      "shared_signature": {
+        "dataset_entry_sha256": "732922536337315677bb4aa53ba3f52eb005a6baa8350857ae57a4385e463d75",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "a04de875ddf432b2bd99e663c102ec0c776ce3771ae29c7855a59baf1727f622",
+        "user_suffix_sha256": "70452967b34123bfc29933bee5645935737b11eeab7009cfda5a8c28bf9441cd",
+        "prefix_replay_sha256": "e48230f4851df51a73ca22916d13e5ca59a00ca440eae857c3a4df3bf7b1b620",
+        "prefix_inference_log_sha256": "009958b4073822471c6f08245ddcbd42bfa81165cd09dd993ed8062b07c0b7dd",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_source_files_verified": [
+        "manifest.json",
+        "prefix-history.json",
+        "multi_turn_long_context_3.api.json",
+        "multi_turn_long_context_3.full.json"
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "status": "pass",
+      "runs": 9,
+      "shared_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "045a5d14881f5f82e1c98a3e1910adfd5b7c9f45738a7e52ae54b6d9ccf282c4",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "86a82e7b49cc2958b2f4adb63b67e61d3c2ae61113f632b75c42852a73a4e743",
+        "prefix_inference_log_sha256": "cdc285c26cbfca301cf68674f83614fdc18cccedcb90557abcf2dd56f4a68631",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_source_files_verified": [
+        "manifest.json",
+        "prefix-history.json",
+        "multi_turn_base_12.api.json",
+        "multi_turn_base_12.full.json"
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_12",
+      "status": "pass",
+      "runs": 9,
+      "shared_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "1aecc98eece20153ca9bb92c1b202fd9ceb1719717e67f87b22ff937fafae235",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "99dc04c85e5c96498f79d1f208affde1c1e67c326e3b1f5991dbb2fcdef19cbd",
+        "prefix_inference_log_sha256": "28175bc8dd5248172977adb607164fb1a8916c627e38613342be72dce50d718a",
+        "source_runtime": {
+          "temperature": 0,
+          "seed": 42,
+          "max_tokens": 4096
+        },
+        "source_served_models": [
+          "gpt-4.1-2025-04-14"
+        ]
+      },
+      "original_source_files_verified": [
+        "manifest.json",
+        "prefix-history.json",
+        "multi_turn_long_context_12.api.json",
+        "multi_turn_long_context_12.full.json"
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_16",
+      "status": "pass",
+      "runs": 9,
+      "shared_signature": {
+        "dataset_entry_sha256": "3d6532ecb12569c2f0de9b82f864ae586901c45f33e26caf59cfb8b15fdf6143",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "179d9b3ad00c1415b8e23629f9e7f7968962de21968c68a38b251895a948f455",
+        "user_suffix_sha256": "ff2218f2df2de64bc0eb01c2c36be200cd0bc8aa6aaddea83ae00a3c95815fc0",
+        "prefix_replay_sha256": "e1943d26a1e276a9dc4bc7f2c0a6cef713accb77187bba671528e9c5e964d3c4",
+        "prefix_inference_log_sha256": "aadcad312ad66a69f5bd0909900fa4a17d4758e41ee95c97ca13aa68ea05ab1d",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_source_files_verified": [
+        "manifest.json",
+        "prefix-history.json",
+        "multi_turn_base_16.api.json",
+        "multi_turn_base_16.full.json"
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_29",
+      "status": "pass",
+      "runs": 9,
+      "shared_signature": {
+        "dataset_entry_sha256": "3c90ab94c7fbbffa36e9754bf1c4c33fa8a74a9138e6435b584cd1f814e61a54",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "3bbbb74819c70e25f2bc31704fa7684801de136305756a2043b9fbbd5c1d602f",
+        "user_suffix_sha256": "94058c48a119d72bf46a0acd0c3a3b0827dc31cc881729a2ebdd4d82c0989f09",
+        "prefix_replay_sha256": "722dcd3faec845ad28e27ae92b5128c05d049ab6a12f15ed51f3beac3ac9e8ac",
+        "prefix_inference_log_sha256": "2f91086ce3072f4abb00d8c384deac500c70b2689b6440bb540599023689ace8",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_source_files_verified": [
+        "manifest.json",
+        "prefix-history.json",
+        "multi_turn_long_context_29.api.json",
+        "multi_turn_long_context_29.full.json"
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_39",
+      "status": "pass",
+      "runs": 9,
+      "shared_signature": {
+        "dataset_entry_sha256": "aa8158bc60945708fb922cf030688da5d7d0e51747124216efa5e9a3737bffce",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "15e63d97997049071c42b7b41356061129d866e7055c839b31a2f95c4252eaf5",
+        "user_suffix_sha256": "5602f2691460fad246b43f546d02f246e5c896760fb70dde288f0c09ff6a1998",
+        "prefix_replay_sha256": "bbce1c581711b4249b544dc2ad4420451c4124830244d0ca661af23788a94fe9",
+        "prefix_inference_log_sha256": "8a3f992d74f806b48a502834c1da2348c93834a226ecc6773b6bc88120f365d6",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_source_files_verified": [
+        "manifest.json",
+        "prefix-history.json",
+        "multi_turn_long_context_39.api.json",
+        "multi_turn_long_context_39.full.json"
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_12",
+      "status": "pass",
+      "runs": 9,
+      "shared_signature": {
+        "dataset_entry_sha256": "35639a36da3ea4342f33046c866598cbe0b79d9c28c3974c6a8c0615853943e2",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "2e0fd41cec6768796e703f25d9fc034af770cd85bef265b2b845c2264080f819",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "dbe70e5ebb3ec1fbbdbb452ab9a92a076372cc60620ed712b949d30b2e2eb00a",
+        "prefix_inference_log_sha256": "9564b8b71444b059a0749de8f21448dd9211b7d41edd353b16b4ded10f959fba",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_source_files_verified": [
+        "manifest.json",
+        "prefix-history.json",
+        "multi_turn_base_12.api.json",
+        "multi_turn_base_12.full.json"
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_12",
+      "status": "pass",
+      "runs": 9,
+      "shared_signature": {
+        "dataset_entry_sha256": "8d9489e95b60008ee5e8822f577c9d2d4640cf02f6cf1dc47a0f7895905b0402",
+        "tools_sha256": "61dc644a1d4901e2aa7a62c7f3251758f6f4b28740056dfc76c09ba68933033a",
+        "history_sha256": "da7f127b36824e30574b9a596f5fc9e3bac6e36dd6578b2a60f1de1858b214c1",
+        "user_suffix_sha256": "05cf617afc7c8415fa11ccf4ded56e64c24b36c0deb1f121f6ad62567a048246",
+        "prefix_replay_sha256": "2e2bcb05e4b27464bbc15fcabdd7d2097dddc2d1fe071c9837a35fcc9788312f",
+        "prefix_inference_log_sha256": "873f95895775aa43a34a17e3380f241dc8c239b8b3fcb51b88f6ee863474d984",
+        "source_runtime": {
+          "reasoning_effort": "medium",
+          "max_completion_tokens": 16384,
+          "seed": 42
+        },
+        "source_served_models": [
+          "gpt-5-mini-2025-08-07"
+        ]
+      },
+      "original_source_files_verified": [
+        "manifest.json",
+        "prefix-history.json",
+        "multi_turn_long_context_12.api.json",
+        "multi_turn_long_context_12.full.json"
+      ]
+    }
+  ],
+  "global_checks": {
+    "expected_trajectories": 81,
+    "manifest_count": 81,
+    "summary_count": 81,
+    "source_files_verified": 39
+  },
+  "input_sha256": {
+    "plan.json": "0976f49436c3ef74e95fb9116329180f532deccd74c72cced39b4cc39a6f473c",
+    "summary.json": "5fa1f1b58524cccc18285223740b411215c5e388eb12081bc0e36c348f24a5ef",
+    "progress.json": "b4f068bb512402353381c92419e1393f9ec56d5c23fb814e5d723c0d7da2634c"
+  },
+  "implementation_directory": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/CS769/scripts",
+  "recomputed_cost_usd": {
+    "gpt-4.1": 0.31654,
+    "gpt-5-mini": 0.1038913
+  },
+  "scope_limits": [
+    "This audit verifies persisted requests, responses, usage and scoring artifacts, not model correctness or the BFCL evaluator implementation.",
+    "Retries logged by the runner count retries before a received response. Provider work whose response was lost cannot be reconstructed or billed exactly from client logs.",
+    "System fingerprints are reported; changing fingerprints are not automatically treated as a model-version mismatch.",
+    "Transport rendering is checked against the hash-verified frozen adapter, not an independent reimplementation of its semantics."
+  ],
+  "totals": {
+    "trajectories": 81,
+    "passed_audit": 81,
+    "unique_live_response_ids": 419,
+    "usage": {
+      "gpt-4.1": {
+        "prompt_tokens": 451402,
+        "completion_tokens": 5197,
+        "total_tokens": 456599,
+        "cached": 418560,
+        "reasoning_subset": 0
+      },
+      "gpt-5-mini": {
+        "prompt_tokens": 973442,
+        "completion_tokens": 32275,
+        "total_tokens": 1005717,
+        "cached": 906752,
+        "reasoning_subset": 23552
+      }
+    },
+    "finish_reason_counts": {
+      "tool_calls": 266,
+      "stop": 153
+    },
+    "length_truncations": 0,
+    "retries": {
+      "gpt-4.1": 0,
+      "gpt-5-mini": 0
+    },
+    "served_models": {
+      "gpt-4.1": [
+        "gpt-4.1-2025-04-14"
+      ],
+      "gpt-5-mini": [
+        "gpt-5-mini-2025-08-07"
+      ]
+    },
+    "system_fingerprints": {
+      "gpt-4.1": [
+        "fp_a265b6cf81"
+      ],
+      "gpt-5-mini": []
+    }
+  }
+}

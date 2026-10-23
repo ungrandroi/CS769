@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-22T16:38:51.924060+00:00",
+  "status": "corrected_after_independent_raw_evidence_review",
+  "previous_report_sha256": "81d1a305ef8cbbba137bcd0990a8a69b4dc35af2bb5d241bdded85f2c4c9e660",
+  "previous_auxiliary_counts": {
+    "identity": 8,
+    "native-graph-index": 13
+  },
+  "corrected_auxiliary_counts": {
+    "identity": 7,
+    "native-graph-index": 11
+  },
+  "excluded_cases": [
+    {
+      "case_id": "0c1f7d877e2fb341fc5d68be",
+      "turn": 1,
+      "model": "gpt-5-mini",
+      "id": "multi_turn_long_context_11",
+      "repeat": 44,
+      "mode": "native-graph-index",
+      "answer_kind": "tweet_draft",
+      "include_in_content_or_numeric_count": false,
+      "reason": "The original user turn asks for a tweet draft. The reviewer label correct_history_based_answer was overly broad; all draft/publication cases are excluded by this narrower metric."
+    },
+    {
+      "case_id": "f12c52444d7847b9f34ee432",
+      "turn": 1,
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_11",
+      "repeat": 42,
+      "mode": "identity",
+      "answer_kind": "tweet_draft",
+      "include_in_content_or_numeric_count": false,
+      "reason": "The original user turn asks for a tweet draft. The reviewer label correct_history_based_answer was overly broad; all draft/publication cases are excluded by this narrower metric."
+    },
+    {
+      "case_id": "d56b7f11d5af9a05f514a2f3",
+      "turn": 1,
+      "model": "gpt-5-mini",
+      "id": "multi_turn_base_11",
+      "repeat": 44,
+      "mode": "native-graph-index",
+      "answer_kind": "tweet_draft",
+      "include_in_content_or_numeric_count": false,
+      "reason": "The original user turn asks for a tweet draft. The reviewer label correct_history_based_answer was overly broad; all draft/publication cases are excluded by this narrower metric."
+    }
+  ],
+  "method": "Independently inspected the exact official error turns and raw prior history in all 21 originally included cases. Excluded three draft requests; remaining 18 include 12 mean=6500 answers, 3 file-error-content answers, 2 exact file-content reproductions, 1 mathematically correct log10(20) computation.",
+  "limits": "long_context_49 seed44 has ambiguous wording about computation of 2; this tally confirms the numerical log10(20) answer for the observed 20 lines, not every interpretation of precision or the whole trajectory.",
+  "unchanged": [
+    "all official BFCL scores",
+    "all success rates and paired differences",
+    "all token counts",
+    "all fees",
+    "the preregistered family-cluster confidence intervals"
+  ],
+  "raw_evidence": "experiment-records/v5-behavior-evidence.json"
+}

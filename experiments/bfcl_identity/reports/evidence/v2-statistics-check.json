@@ -1,0 +1,146 @@
+{
+  "source_sha256": "5fa1f1b58524cccc18285223740b411215c5e388eb12081bc0e36c348f24a5ef",
+  "trajectory_rows": 81,
+  "unique_condition_seed_triples": 27,
+  "condition_checks": [
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_3",
+      "partition": "development",
+      "passes_recomputed": {
+        "identity": 3,
+        "v2-compact": 0,
+        "v2-readable": 0
+      },
+      "reproduced": true,
+      "recovered": false,
+      "paired_loss_seeds": [
+        42,
+        43,
+        44
+      ],
+      "paired_gain_seeds": []
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_3",
+      "partition": "same_family",
+      "passes_recomputed": {
+        "identity": 3,
+        "v2-compact": 0,
+        "v2-readable": 3
+      },
+      "reproduced": true,
+      "recovered": true,
+      "paired_loss_seeds": [],
+      "paired_gain_seeds": []
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_12",
+      "partition": "control",
+      "passes_recomputed": {
+        "identity": 3,
+        "v2-compact": 3,
+        "v2-readable": 3
+      },
+      "reproduced": false,
+      "recovered": false,
+      "paired_loss_seeds": [],
+      "paired_gain_seeds": []
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_12",
+      "partition": "control",
+      "passes_recomputed": {
+        "identity": 3,
+        "v2-compact": 3,
+        "v2-readable": 3
+      },
+      "reproduced": false,
+      "recovered": false,
+      "paired_loss_seeds": [],
+      "paired_gain_seeds": []
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_16",
+      "partition": "other_regression",
+      "passes_recomputed": {
+        "identity": 3,
+        "v2-compact": 3,
+        "v2-readable": 1
+      },
+      "reproduced": false,
+      "recovered": false,
+      "paired_loss_seeds": [
+        42,
+        43
+      ],
+      "paired_gain_seeds": []
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_29",
+      "partition": "development",
+      "passes_recomputed": {
+        "identity": 2,
+        "v2-compact": 1,
+        "v2-readable": 2
+      },
+      "reproduced": true,
+      "recovered": true,
+      "paired_loss_seeds": [],
+      "paired_gain_seeds": []
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_39",
+      "partition": "other_regression",
+      "passes_recomputed": {
+        "identity": 1,
+        "v2-compact": 1,
+        "v2-readable": 1
+      },
+      "reproduced": false,
+      "recovered": false,
+      "paired_loss_seeds": [
+        42
+      ],
+      "paired_gain_seeds": [
+        44
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_12",
+      "partition": "control",
+      "passes_recomputed": {
+        "identity": 3,
+        "v2-compact": 3,
+        "v2-readable": 3
+      },
+      "reproduced": false,
+      "recovered": false,
+      "paired_loss_seeds": [],
+      "paired_gain_seeds": []
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_12",
+      "partition": "control",
+      "passes_recomputed": {
+        "identity": 3,
+        "v2-compact": 3,
+        "v2-readable": 3
+      },
+      "reproduced": false,
+      "recovered": false,
+      "paired_loss_seeds": [],
+      "paired_gain_seeds": []
+    }
+  ],
+  "pairwise_metrics_recomputed_and_verified": true,
+  "three_way_metrics_recomputed_and_verified": true
+}

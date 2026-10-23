@@ -1,0 +1,114 @@
+{
+  "version": "v4-two-gpt-expanded-1",
+  "models": [
+    "gpt-4.1",
+    "gpt-5-mini"
+  ],
+  "claude_enabled": false,
+  "compression": false,
+  "categories": [
+    "multi_turn_base",
+    "multi_turn_long_context"
+  ],
+  "old_families": [
+    1,
+    3,
+    6,
+    9,
+    10,
+    12,
+    16,
+    25,
+    26,
+    29,
+    37,
+    38,
+    39
+  ],
+  "excluded_family": 46,
+  "max_conditions_per_model": 98,
+  "max_regression_conditions_per_model": 26,
+  "max_validation_conditions_per_model": 72,
+  "replicates": {
+    "gpt-4.1": [
+      42
+    ],
+    "gpt-5-mini": [
+      42,
+      43,
+      44
+    ]
+  },
+  "sampling": {
+    "gpt-4.1": {
+      "temperature": 0,
+      "seeds": [
+        42
+      ]
+    },
+    "gpt-5-mini": {
+      "reasoning_effort": "medium",
+      "seeds": [
+        42,
+        43,
+        44
+      ]
+    }
+  },
+  "arms": {
+    "identity": "identity",
+    "preferred_candidate": "native-graph-context",
+    "fallback_candidate": "native-graph-index"
+  },
+  "evidence": "Both arms retain the complete frozen native prefix and all continuation history. One graph index at the first-turn boundary; no graph-rule changes or truncation.",
+  "eligibility": [
+    "official_first_turn_pass",
+    "second_user_turn_exists",
+    "completed_first_turn_boundary",
+    "native_evidence_exact",
+    "nonempty_graph_index"
+  ],
+  "selection": "All eligible conditions in the fixed candidate universe. No filtering by full-task identity or candidate continuation success.",
+  "format_gate": {
+    "policy": "Mandatory reviewed decision artifact after old-set regression and before any new-set model calls.",
+    "preferred": "native-graph-context",
+    "fallback": "native-graph-index",
+    "requirements": [
+      "Every identity-pass/candidate-fail pair reviewed without altering official scores.",
+      "Review assistant/user source misattribution and stale-snapshot misuse.",
+      "Clear reproducible structural regression blocks the preferred format; fallback or unresolved status must be explicitly recorded.",
+      "One common format for both GPT models; no per-model selection using validation outcomes.",
+      "Decision and relevant evidence hashes immutable before new-set screening or continuation."
+    ],
+    "automatic_pass_count_gate": false
+  },
+  "analysis": {
+    "primary_partition": "validation",
+    "secondary_partition": "regression",
+    "estimand": "Candidate minus identity success probability; mean repeats per condition, equal eligible conditions within family, equal eligible families per model, equal 0.5 weights for the two models.",
+    "family_unit": "The numeric task family across categories, seeds, and both models.",
+    "bootstrap": {
+      "draws": 20000,
+      "seed": 769,
+      "method": "Shared-family nonparametric percentile bootstrap, 95% two-sided interval; resample union families jointly, then recompute model means and their equal-weight mean.",
+      "invalid_draw": "Discard a bootstrap draw only if it contains no eligible family for a required model; count and disclose every discard.",
+      "minimum_valid_fraction": 0.95
+    },
+    "minimum_families_per_model": 10,
+    "degenerate_or_small_sample": "Report the descriptive bootstrap interval but use the uninformative possible range [-1,1] for inference and conclude insufficient_evidence. This range is not an estimated bootstrap interval.",
+    "margin": 0.05,
+    "decision": {
+      "noninferior_within_margin": "95% lower bound > -0.05",
+      "material_loss": "95% upper bound < -0.05",
+      "insufficient_evidence": "All other cases or incomplete/unsupported inference."
+    },
+    "interpretation": "Pooled noninferiority supports only the two-model average on eligible FS-containing families. A claim for both individual models requires both model-specific intervals to pass. This purposive inventory does not justify generalization to all BFCL.",
+    "repeated_looks": "No CI-dependent expansion or early success. All preregistered repeats must complete. Diagnostic repeats remain separate.",
+    "infrastructure_failures": "Preserve partial attempts. Do not silently replace a model failure or incomplete run. Incomplete planned samples cannot receive a conclusive primary verdict."
+  },
+  "budget": {
+    "estimated_uncached_usd_ceiling": 30,
+    "interpretation": "Reference estimate, not a guaranteed Azure invoice amount; prefix generation, all requests, retries and diagnostics count against the execution budget."
+  },
+  "scope_stop": "Finalize this full-evidence phase without open-ended prompt tuning; preserve negative or inconclusive results honestly before subsequent compression research."
+}

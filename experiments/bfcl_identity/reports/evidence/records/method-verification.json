@@ -1,0 +1,362 @@
+{
+  "status": "verified_with_qualifications",
+  "workspace": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2",
+  "scope": "仅只读本地源码与已保存实验记录；未联网、未运行模型、未读取凭据。main-source 按提供的 a7f8492981f3962ef7b4e2a5f776edc4e3621bfc 快照审阅。",
+  "claims": [
+    {
+      "id": "identity_and_boundary",
+      "verdict": "confirmed; reject single-memory identity hypothesis",
+      "safe_wording": "最初 identity 保留原始多消息历史（经 Chat/Responses 适配，保留角色和工具调用关联）；只有图分支在第一用户轮完成、第二用户消息加入前，将历史替换为单条 assistant 记忆消息。",
+      "evidence": [
+        {
+          "path": "work/experiment-retrospective/main-source/scripts/workflows/baseline_task.py",
+          "lines": [
+            78,
+            101
+          ]
+        },
+        {
+          "path": "work/experiment-retrospective/main-source/scripts/core/qwen_transport.py",
+          "lines": [
+            20,
+            49
+          ]
+        },
+        {
+          "path": "work/CS769/scripts/workflows/gpt41_task.py",
+          "lines": [
+            201,
+            246
+          ]
+        },
+        {
+          "path": "work/experiment-retrospective/baseline-records/experiments/bfcl_identity/gpt41_experiment/plan.json",
+          "field": "protocol"
+        },
+        {
+          "path": "work/experiment-retrospective/baseline-records/experiments/bfcl_identity/gpt5mini_experiment/plan.json",
+          "field": "protocol"
+        }
+      ],
+      "actual_request_check": {
+        "source": "work/continuation-snapshot/runs/gpt-5-mini/multi_turn_long_context_39/43/{mode}/native.jsonl: first event=request",
+        "identity_roles": [
+          "user",
+          "assistant",
+          "tool",
+          "assistant",
+          "user"
+        ],
+        "v2_compact_roles": [
+          "assistant",
+          "user"
+        ],
+        "v2_readable_roles": [
+          "assistant",
+          "user"
+        ]
+      },
+      "qualification": "不把历史 identity 描写为未经任何适配、全部 provider metadata 逐字一致；其关键区别是保留原生多消息协议，而非单条 memory。"
+    },
+    {
+      "id": "v1_state_transition",
+      "verdict": "confirmed",
+      "safe_wording": "v1-compact 使用可见历史构建状态快照节点，以带工具名、参数、原始返回及证据引用的工具调用边连接相邻状态。",
+      "evidence": [
+        {
+          "path": "work/experiment-retrospective/main-source/scripts/core/state_transition_graph.py",
+          "lines": [
+            38,
+            85
+          ]
+        },
+        {
+          "path": "work/experiment-retrospective/main-source/scripts/core/state_transition_graph.py",
+          "lines": [
+            117,
+            148
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v2_event_graph",
+      "verdict": "confirmed",
+      "safe_wording": "v2-compact 将执行事件、共享对象和版本化事实分开表示；旧事实退出当前有效集合但保留在图中，事件保留工具原始返回。",
+      "evidence": [
+        {
+          "path": "work/experiment-retrospective/main-source/scripts/core/event_graph.py",
+          "lines": [
+            21,
+            29
+          ]
+        },
+        {
+          "path": "work/experiment-retrospective/main-source/scripts/core/event_graph.py",
+          "lines": [
+            76,
+            106
+          ]
+        },
+        {
+          "path": "work/experiment-retrospective/main-source/scripts/core/event_graph.py",
+          "lines": [
+            119,
+            136
+          ]
+        },
+        {
+          "path": "work/experiment-retrospective/main-source/scripts/core/event_graph.py",
+          "lines": [
+            204,
+            215
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compact_evidence_and_risk",
+      "verdict": "confirmed with exact-losslessness boundary",
+      "safe_wording": "两种 compact 分支将完整源消息保存在审计图中，模型收到的是包含用户目标、工具输入与原始返回、assistant 陈述等证据的图文本。compact 是对所投递图数据的可逆序列化，不是按风险删减证据，也不保证比原始历史更省 token。",
+      "evidence": [
+        {
+          "path": "work/experiment-retrospective/main-source/scripts/core/graph_memory_replace.py",
+          "lines": [
+            1,
+            5
+          ]
+        },
+        {
+          "path": "work/experiment-retrospective/main-source/scripts/core/graph_memory_replace.py",
+          "lines": [
+            41,
+            97
+          ]
+        },
+        {
+          "path": "work/experiment-retrospective/main-source/scripts/core/graph_memory_serialization.py",
+          "lines": [
+            1,
+            11
+          ]
+        },
+        {
+          "path": "work/experiment-retrospective/main-source/scripts/core/graph_memory_serialization.py",
+          "lines": [
+            20,
+            39
+          ]
+        },
+        {
+          "path": "work/experiment-retrospective/main-source/scripts/workflows/baseline_task.py",
+          "lines": [
+            23,
+            32
+          ]
+        },
+        {
+          "path": "work/experiment-retrospective/main-source/README.md",
+          "lines": [
+            9,
+            14
+          ]
+        }
+      ],
+      "qualification": "无损 round-trip 断言的对象是 builder.render() 的图 payload，不是整个 provider 原生消息结构。source_messages 不投递；工具参数先解析为 JSON 值（state_transition_graph.py:21–27,66–67；event_graph.py:56–57），原始返回 output_raw 保留，重复的 parsed output 删除；原生消息角色、调用协议包装、raw reasoning/响应元数据并不作为原消息继续投递。应避免写成“逐字无损恢复整个原生历史”，也不能把这种表示改变称为风险驱动信息丢弃。"
+    },
+    {
+      "id": "v2_readable",
+      "verdict": "confirmed with visible-evidence qualification",
+      "safe_wording": "V2-readable 在同一事件图上提供可读状态索引，并按顺序投递完整可见对话文本、原始工具参数与返回；它仍用单条 assistant 记忆消息替换原生历史，CALL/RESULT 的对应关系表现为文本标签。",
+      "evidence": [
+        {
+          "path": "work/CS769/scripts/core/graph_memory_readable.py",
+          "lines": [
+            1,
+            6
+          ]
+        },
+        {
+          "path": "work/CS769/scripts/core/graph_memory_readable.py",
+          "lines": [
+            19,
+            88
+          ]
+        },
+        {
+          "path": "work/CS769/scripts/core/graph_memory_readable.py",
+          "lines": [
+            267,
+            305
+          ]
+        },
+        {
+          "path": "work/CS769/scripts/core/graph_memory_replace.py",
+          "lines": [
+            108,
+            115
+          ]
+        },
+        {
+          "path": "work/CS769/scripts/workflows/gpt41_task.py",
+          "lines": [
+            213,
+            218
+          ]
+        }
+      ],
+      "qualification": "system/developer 指令由 caller 原位保留；readable 不把 opaque reasoning 当作可见原文；不应称“所有 API block/元数据逐字投递”。"
+    },
+    {
+      "id": "v3_b",
+      "verdict": "confirmed",
+      "safe_wording": "V3/B 保留并校验原生多消息历史、角色及工具调用—返回关联，在第一用户轮结束处额外附加一条 assistant 角色的状态图索引；图由规范化可见证据构建，索引引用实际工具调用 ID。",
+      "evidence": [
+        {
+          "path": "work/CS769/scripts/core/graph_memory_native.py",
+          "lines": [
+            59,
+            127
+          ]
+        },
+        {
+          "path": "work/CS769/scripts/core/graph_memory_native.py",
+          "lines": [
+            130,
+            179
+          ]
+        },
+        {
+          "path": "work/CS769/scripts/core/graph_memory_native.py",
+          "lines": [
+            182,
+            225
+          ]
+        },
+        {
+          "path": "work/CS769/scripts/workflows/native_gpt_task.py",
+          "lines": [
+            69,
+            89
+          ]
+        }
+      ],
+      "qualification": "“恢复”指由图中完整 native_evidence 重建多消息，不表示最初 identity 曾经也被拼成单条 memory。"
+    },
+    {
+      "id": "v4_d",
+      "verdict": "correct label to D",
+      "safe_wording": "V4 用户块方案（诊断记录标签 D，mode=native-graph-context）保留完整原生历史，将同一索引连同 application_memory 来源包装前置于第二轮用户消息中；B 的索引仍为独立 assistant 消息。",
+      "evidence": [
+        {
+          "path": "work/CS769/scripts/core/graph_memory_native.py",
+          "lines": [
+            228,
+            252
+          ]
+        },
+        {
+          "path": "work/CS769/scripts/workflows/native_gpt_task.py",
+          "lines": [
+            334,
+            381
+          ]
+        },
+        {
+          "path": "outputs/v4-placement-diagnostic.json",
+          "lines": [
+            10,
+            22
+          ]
+        },
+        {
+          "path": "outputs/v4-diagnostic-protocol.json",
+          "field": "analysis_protocol.placement_scope"
+        }
+      ],
+      "qualification": "不是另造一个独立 user 消息；是在原第二轮 user.content 前加块，原用户文本原样保留。B/D 同时改变 role、wrapper 和来源标签，不能将差异单因果归于 role。不要标成 C。"
+    },
+    {
+      "id": "v5_frozen_b",
+      "verdict": "confirmed",
+      "safe_wording": "V5 冻结同一 B 格式，仅比较 GPT-4.1 和 GPT-5-mini 的 identity 与完整原生历史加 assistant 图索引；不运行 Claude、不做压缩。",
+      "evidence": [
+        {
+          "path": "outputs/v5-b-validation-protocol.json",
+          "lines": [
+            4,
+            14
+          ]
+        },
+        {
+          "path": "outputs/v5-b-validation-results.json",
+          "lines": [
+            16,
+            38
+          ]
+        },
+        {
+          "path": "work/v5-b-validation/runner/scripts/core/graph_memory_native.py",
+          "lines": [
+            218,
+            225
+          ]
+        }
+      ],
+      "local_hash_check": {
+        "files": [
+          "work/CS769/scripts/core/graph_memory_native.py",
+          "work/v5-b-validation/runner/scripts/core/graph_memory_native.py"
+        ],
+        "sha256_identical": "a6b255752afc61e61bd5785889d5b476d778f5d2034f449840e31848f0863c35"
+      },
+      "qualification": "正式结果限定于实际第一轮通过且索引非空的筛选条件，不能代表全 BFCL。"
+    }
+  ],
+  "qwen_name": {
+    "recorded_model_name": "Qwen3.8-27B-Q8_0",
+    "base_model_name": "Qwen3.8-27B",
+    "quantization": "Q8_0",
+    "serving_alias": "bfcl-qwen38-27b",
+    "registry_key": "local/Qwen3.8-27B-Q8-0-FC",
+    "evidence": [
+      {
+        "path": "work/experiment-retrospective/main-source/scripts/core/model_config.py",
+        "lines": [
+          2,
+          11
+        ]
+      },
+      {
+        "path": "work/experiment-retrospective/main-source/scripts/core/local_qwen_tokenizer.py",
+        "lines": [
+          97,
+          101
+        ]
+      },
+      {
+        "path": "work/experiment-retrospective/main-source/scripts/core/local_qwen_tokenizer.py",
+        "lines": [
+          133,
+          138
+        ]
+      },
+      {
+        "path": "work/experiment-retrospective/baseline-records/experiments/bfcl_identity/qwen27b_experiment/plan.json",
+        "field": "model, serving_model"
+      }
+    ],
+    "verification_boundary": "本地代码、实验 plan 和 tokenizer 元数据校验一致使用以上名称；未联网核验官方发布名，也未直接读取远程 GGUF 权重。general.architecture=qwen35 不足以将其改名为 Qwen3.5。"
+  },
+  "token_metric": {
+    "recommended": "每条接入后续跑的平均输入 token；包含续跑中每次请求的全部 input token，相同历史可能被反复计数；不加 output，不重复加入共享首轮实际成本。",
+    "sources": {
+      "baseline": "summary.rows[].continuation_input_tokens；按 model/mode 算术平均",
+      "v2": "outputs/v2-results.json: aggregates[].mean_continuation_input 或 trajectories[].continuation_input",
+      "v3": "outputs/v3-results.json: aggregates[].continuation_input / total；需选择 phase=primary, partition=all，勿重复累计 all 与子分区",
+      "v4": "work/v4-diagnostic-results/summary.json: trajectories[].continuation_input；勿用 outputs/v4-placement-diagnostic.json 的 accounting_notes（该项是 input+output）",
+      "v5": "outputs/v5-b-validation-results.json: audit.tokens.groups[stage=continuation].means.input"
+    },
+    "interpretation": "该量同时受单次输入长度与续跑请求次数影响；不能直接解释为记忆长度或独立压缩率。"
+  }
+}

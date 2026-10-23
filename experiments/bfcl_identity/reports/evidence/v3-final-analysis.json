@@ -1,0 +1,3270 @@
+{
+  "completed_at_utc": "2026-10-21T22:50:06.087723+00:00",
+  "analyzed_at_utc": "2026-10-21T23:02:21.086204+00:00",
+  "experiment": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2",
+  "conclusion": "本轮三个模型汇总通过率均保持或上升，没有逐题净降分；但GPT-5-mini出现一次真实错误写入的新增失败，Claude出现可见的assistant索引位置副作用。小规模结果不构成统计等价或普遍提升的证明。",
+  "scope": "首轮结束时，identity保留原生历史；候选从图中的完整证据重建同一原生历史，并追加一次简短图索引。未压缩，未动态刷新索引。",
+  "aggregates": [
+    {
+      "model": "gpt-4.1",
+      "conditions": 11,
+      "repeats_per_condition": 1,
+      "identity_passed": 7,
+      "index_passed": 7,
+      "trajectories_per_arm": 11,
+      "identity_rate": 0.6363636363636364,
+      "index_rate": 0.6363636363636364,
+      "loss_repeats": 0,
+      "gain_repeats": 0,
+      "negative_conditions": 0,
+      "validation_identity_passed": 5,
+      "validation_index_passed": 5,
+      "validation_trajectories_per_arm": 9
+    },
+    {
+      "model": "gpt-5-mini",
+      "conditions": 16,
+      "repeats_per_condition": 3,
+      "identity_passed": 19,
+      "index_passed": 22,
+      "trajectories_per_arm": 48,
+      "identity_rate": 0.3958333333333333,
+      "index_rate": 0.4583333333333333,
+      "loss_repeats": 1,
+      "gain_repeats": 4,
+      "negative_conditions": 0,
+      "validation_identity_passed": 11,
+      "validation_index_passed": 12,
+      "validation_trajectories_per_arm": 33
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "conditions": 19,
+      "repeats_per_condition": 3,
+      "identity_passed": 32,
+      "index_passed": 37,
+      "trajectories_per_arm": 57,
+      "identity_rate": 0.5614035087719298,
+      "index_rate": 0.6491228070175439,
+      "loss_repeats": 0,
+      "gain_repeats": 5,
+      "negative_conditions": 0,
+      "validation_identity_passed": 18,
+      "validation_index_passed": 19,
+      "validation_trajectories_per_arm": 39
+    }
+  ],
+  "matched_success_input_tokens": [
+    {
+      "model": "gpt-4.1",
+      "joint_success_repeats": 7,
+      "identity_input": 163673,
+      "index_input": 146116,
+      "relative_change": -0.10726876149395437
+    },
+    {
+      "model": "gpt-5-mini",
+      "joint_success_repeats": 18,
+      "identity_input": 332338,
+      "index_input": 311147,
+      "relative_change": -0.06376339750494975
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "joint_success_repeats": 32,
+      "identity_input": 1175690,
+      "index_input": 1186513,
+      "relative_change": 0.009205657954052482
+    }
+  ],
+  "audit": {
+    "status": "complete",
+    "pipeline_status": "complete",
+    "phase": "complete",
+    "trajectories_checked": 232,
+    "planned_primary_trajectories": 232,
+    "claude_eligible_count": 19,
+    "verified": "Each logged live request has a response; exact frozen native prefix and sole index placement; official scores and manifest hashes; replay count; provider token sums; unique live response IDs.",
+    "totals": {
+      "requests": 1927,
+      "retries": 0,
+      "length_truncations": 0
+    }
+  },
+  "frozen_evidence_audit": {
+    "status": "passed",
+    "source_files": 47,
+    "test_files": 19,
+    "prefix_sources": 46,
+    "graph_native_normalized_roundtrips": {
+      "claude-sonnet-5-5": 114,
+      "gpt-4.1": 22,
+      "gpt-5-mini": 96
+    },
+    "reused_claude_trajectories_verified": 4,
+    "derived_evaluation_log_changes": [
+      {
+        "target": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_base_1/primary/2/identity/official-evaluation.log",
+        "reason": "Offline scoring regenerated output paths from the R1 directory to R2; inspected diff contains only these path changes. All model evidence and existing score JSON remain unchanged."
+      }
+    ],
+    "note": "Frozen source snapshots, first-turn evidence, reconstructed full history, and all four copied Claude trajectories verified independently after completion."
+  },
+  "model_reviews": {
+    "gpt-4.1": {
+      "status": "reviewed",
+      "findings": [
+        {
+          "id": "multi_turn_base_9",
+          "official": "Both fail, but at different turns and for different missing expected tool returns.",
+          "identity": "Turn1 creates ArchivedFinalReport2024.txt in Documentation then moves it into Archives. This reaches the requested copied filename but differs from expected cp(FinalReport.txt,Archives),cd(Archives),mv(FinalReport.txt,ArchivedFinalReport2024.txt), so official scorer first fails execution_response_mismatch. On turn2 identity cats archive, treats first sentence as first line, creates unrequested first_line.txt, writes only that sentence, and sorts that temporary file.",
+          "index": "Turn1 recovers from the same two path errors, uses the expected cp/cd/mv sequence, then on turn2 only cats ArchivedFinalReport2024.txt and returns a word-sorted sentence in text; no sort tool call. Official failure moves to missing sorted_content for the archive file.",
+          "interpretation": "Index changes behavior despite equal whole-task failure. Distinguish alternative execution sequence, unnecessary temporary-file write, and text-versus-tool/line-versus-word sorting ambiguity. Do not label both as memory loss or identical failure behavior."
+        },
+        {
+          "id": "multi_turn_base_25 / multi_turn_long_context_25",
+          "official": "Both arms fail because turn2 lacks the expected cd(folder='Research2023') execution result.",
+          "both": "Calls after frozen prefix are identically cp(summary.txt,Research2023), sort(summary.txt), wc(summary.txt,mode='l'). Neither enters Research2023; sort/wc operate on the original rather than the copy. Original and copied contents are identical at this point; both return the same sorted content and line count1.",
+          "interpretation": "Target-directory/procedural mismatch with matching observed content/count. This is not an empty response or premature stop, and does not show graph-induced evidence loss."
+        },
+        {
+          "id": "multi_turn_long_context_26",
+          "official": "Both arms fail: GT expects cat(file3.txt) with 'Nothing important here. Yet another line.'",
+          "evidence": "Frozen first-turn ls and assistant reply list file1.txt,file2.txt,file3.txt followed by30jpg distractors; the last displayed file is image_1912245706439755759.jpg. User asks 'What's inside the last file displayed?' Both arms cat that last jpg, get empty content, then create image_1912245706439755759.docx on the next request.",
+          "interpretation": "Official failure retained, but literal actual-history reference supports the model's choice. There is a mismatch between the expanded long-context display and the unchanged ground-truth referent; do not count this as proven memory/behavior regression. Base26 with only three txt files passes both."
+        },
+        {
+          "id": "multi_turn_base_1",
+          "official": "Both pass.",
+          "trajectory": "After grep(archive/log.txt) error, identity repeats identical ls(a=true)15 times before cd(archive), index repeats3 times. Both then list inside archive, grep(log.txt), tail(log.txt,20).",
+          "metrics": {
+            "requests": [
+              27,
+              15
+            ],
+            "tool_calls": [
+              24,
+              12
+            ],
+            "input": [
+              73772,
+              38608
+            ]
+          },
+          "interpretation": "Observed recovery-loop shortening, not evidence compression; only one seed pair."
+        },
+        {
+          "id": "multi_turn_long_context_1",
+          "official": "Both pass.",
+          "trajectory": "Identity directly cd(archive) then grep(log.txt). Index first grep(archive/log.txt) errors, repeats ls(a=true)5times, then cd(archive), adds ls insidearchive and grep(log.txt). The index text is exactly the same as base1.",
+          "metrics": {
+            "requests": [
+              10,
+              17
+            ],
+            "tool_calls": [
+              7,
+              14
+            ],
+            "input": [
+              24328,
+              45688
+            ]
+          },
+          "interpretation": "A concrete efficiency degradation despite unchanged pass/fail. The same index text has opposite trajectory effects across related conditions, so net token savings are not a stable mechanism claim."
+        },
+        {
+          "id": "multi_turn_long_context_37",
+          "official": "Both pass.",
+          "trajectory": "Identity tries echo to missing1.txt, receives an error, then touch+echo. Index uses touch+echo immediately.",
+          "metrics": {
+            "requests": [
+              6,
+              5
+            ],
+            "tool_calls": [
+              4,
+              3
+            ],
+            "input": [
+              28225,
+              23398
+            ]
+          },
+          "interpretation": "One avoided failed write attempt; no accuracy difference."
+        }
+      ],
+      "limitations": [
+        "GPT-4.1 uses temperature0 and seed42, one primary sample per arm per condition. No outcome discordance means adaptive seeds43/44 were not run; absence of discordance is not evidence of statistical equivalence.",
+        "Validation covers9conditions across fewer task families; repeated base/long variants are related, not independent tasks.",
+        "GPT4 original problematic base3/long_context3 have empty indexes and were offline identity-reconstruction controls only, not formal graph-index recovery cases.",
+        "All original native messages are preserved and first paired wire requests differ only by one index message. Full input fidelity does not guarantee all graph facts are useful or that models use them consistently.",
+        "Tool traces differ in4/11conditions;7/11have exactly equal parsed call name/arguments/turn sequence, with some answer wording differences.",
+        "Official failure scores are preserved. Manual observations qualify semantic meaning without rescoring or dropping failed conditions.",
+        "Token totals are provider-reported continuation usage; frozen first-turn generation is excluded, including for copied artifacts. Current result does not include compact arm."
+      ],
+      "model": "gpt-4.1",
+      "adaptive_conditions": [],
+      "pairs": [
+        {
+          "id": "multi_turn_base_1",
+          "partition": "validation",
+          "historical_identity_pass": true,
+          "identity_passed": true,
+          "index_passed": true,
+          "same_tool_sequence": false,
+          "continuation_input": [
+            73772,
+            38608
+          ],
+          "continuation_output": [
+            505,
+            356
+          ],
+          "requests": [
+            27,
+            15
+          ],
+          "tool_calls": [
+            24,
+            12
+          ],
+          "first_request_input": [
+            2255,
+            2293
+          ],
+          "index_tokens": 34
+        },
+        {
+          "id": "multi_turn_base_12",
+          "partition": "development",
+          "historical_identity_pass": true,
+          "identity_passed": true,
+          "index_passed": true,
+          "same_tool_sequence": true,
+          "continuation_input": [
+            9438,
+            9734
+          ],
+          "continuation_output": [
+            108,
+            108
+          ],
+          "requests": [
+            4,
+            4
+          ],
+          "tool_calls": [
+            2,
+            2
+          ],
+          "first_request_input": [
+            2289,
+            2363
+          ],
+          "index_tokens": 70
+        },
+        {
+          "id": "multi_turn_base_25",
+          "partition": "validation",
+          "historical_identity_pass": false,
+          "identity_passed": false,
+          "index_passed": false,
+          "same_tool_sequence": true,
+          "continuation_input": [
+            14220,
+            14590
+          ],
+          "continuation_output": [
+            115,
+            112
+          ],
+          "requests": [
+            6,
+            6
+          ],
+          "tool_calls": [
+            3,
+            3
+          ],
+          "first_request_input": [
+            2260,
+            2322
+          ],
+          "index_tokens": 58
+        },
+        {
+          "id": "multi_turn_base_26",
+          "partition": "validation",
+          "historical_identity_pass": true,
+          "identity_passed": true,
+          "index_passed": true,
+          "same_tool_sequence": true,
+          "continuation_input": [
+            11834,
+            12136
+          ],
+          "continuation_output": [
+            139,
+            134
+          ],
+          "requests": [
+            5,
+            5
+          ],
+          "tool_calls": [
+            3,
+            3
+          ],
+          "first_request_input": [
+            2280,
+            2338
+          ],
+          "index_tokens": 54
+        },
+        {
+          "id": "multi_turn_base_38",
+          "partition": "validation",
+          "historical_identity_pass": true,
+          "identity_passed": true,
+          "index_passed": true,
+          "same_tool_sequence": true,
+          "continuation_input": [
+            4968,
+            5100
+          ],
+          "continuation_output": [
+            51,
+            54
+          ],
+          "requests": [
+            2,
+            2
+          ],
+          "tool_calls": [
+            1,
+            1
+          ],
+          "first_request_input": [
+            2470,
+            2536
+          ],
+          "index_tokens": 62
+        },
+        {
+          "id": "multi_turn_base_9",
+          "partition": "validation",
+          "historical_identity_pass": false,
+          "identity_passed": false,
+          "index_passed": false,
+          "same_tool_sequence": false,
+          "continuation_input": [
+            37409,
+            26458
+          ],
+          "continuation_output": [
+            370,
+            414
+          ],
+          "requests": [
+            14,
+            10
+          ],
+          "tool_calls": [
+            12,
+            8
+          ],
+          "first_request_input": [
+            2375,
+            2454
+          ],
+          "index_tokens": 75
+        },
+        {
+          "id": "multi_turn_long_context_1",
+          "partition": "validation",
+          "historical_identity_pass": true,
+          "identity_passed": true,
+          "index_passed": true,
+          "same_tool_sequence": false,
+          "continuation_input": [
+            24328,
+            45688
+          ],
+          "continuation_output": [
+            244,
+            383
+          ],
+          "requests": [
+            10,
+            17
+          ],
+          "tool_calls": [
+            7,
+            14
+          ],
+          "first_request_input": [
+            2257,
+            2295
+          ],
+          "index_tokens": 34
+        },
+        {
+          "id": "multi_turn_long_context_12",
+          "partition": "development",
+          "historical_identity_pass": true,
+          "identity_passed": true,
+          "index_passed": true,
+          "same_tool_sequence": true,
+          "continuation_input": [
+            11108,
+            11452
+          ],
+          "continuation_output": [
+            103,
+            107
+          ],
+          "requests": [
+            4,
+            4
+          ],
+          "tool_calls": [
+            2,
+            2
+          ],
+          "first_request_input": [
+            2708,
+            2794
+          ],
+          "index_tokens": 82
+        },
+        {
+          "id": "multi_turn_long_context_25",
+          "partition": "validation",
+          "historical_identity_pass": false,
+          "identity_passed": false,
+          "index_passed": false,
+          "same_tool_sequence": true,
+          "continuation_input": [
+            20591,
+            20931
+          ],
+          "continuation_output": [
+            157,
+            156
+          ],
+          "requests": [
+            6,
+            6
+          ],
+          "tool_calls": [
+            3,
+            3
+          ],
+          "first_request_input": [
+            3030,
+            3087
+          ],
+          "index_tokens": 53
+        },
+        {
+          "id": "multi_turn_long_context_26",
+          "partition": "validation",
+          "historical_identity_pass": false,
+          "identity_passed": false,
+          "index_passed": false,
+          "same_tool_sequence": true,
+          "continuation_input": [
+            12262,
+            12478
+          ],
+          "continuation_output": [
+            145,
+            141
+          ],
+          "requests": [
+            4,
+            4
+          ],
+          "tool_calls": [
+            2,
+            2
+          ],
+          "first_request_input": [
+            2992,
+            3047
+          ],
+          "index_tokens": 51
+        },
+        {
+          "id": "multi_turn_long_context_37",
+          "partition": "validation",
+          "historical_identity_pass": true,
+          "identity_passed": true,
+          "index_passed": true,
+          "same_tool_sequence": false,
+          "continuation_input": [
+            28225,
+            23398
+          ],
+          "continuation_output": [
+            309,
+            277
+          ],
+          "requests": [
+            6,
+            5
+          ],
+          "tool_calls": [
+            4,
+            3
+          ],
+          "first_request_input": [
+            3939,
+            3977
+          ],
+          "index_tokens": 34
+        }
+      ],
+      "stats": {
+        "all": {
+          "conditions": 11,
+          "identity_passed": 7,
+          "index_passed": 7,
+          "continuation_input": [
+            248155,
+            220573
+          ],
+          "continuation_output": [
+            2246,
+            2242
+          ],
+          "requests": [
+            88,
+            78
+          ],
+          "tool_calls": [
+            63,
+            53
+          ]
+        },
+        "development": {
+          "conditions": 2,
+          "identity_passed": 2,
+          "index_passed": 2,
+          "continuation_input": [
+            20546,
+            21186
+          ],
+          "continuation_output": [
+            211,
+            215
+          ],
+          "requests": [
+            8,
+            8
+          ],
+          "tool_calls": [
+            4,
+            4
+          ]
+        },
+        "validation": {
+          "conditions": 9,
+          "identity_passed": 5,
+          "index_passed": 5,
+          "continuation_input": [
+            227609,
+            199387
+          ],
+          "continuation_output": [
+            2035,
+            2027
+          ],
+          "requests": [
+            80,
+            70
+          ],
+          "tool_calls": [
+            59,
+            49
+          ]
+        },
+        "historical_pass": {
+          "conditions": 7,
+          "identity_passed": 7,
+          "index_passed": 7,
+          "continuation_input": [
+            163673,
+            146116
+          ],
+          "continuation_output": [
+            1459,
+            1419
+          ],
+          "requests": [
+            58,
+            52
+          ],
+          "tool_calls": [
+            43,
+            37
+          ]
+        },
+        "historical_fail": {
+          "conditions": 4,
+          "identity_passed": 0,
+          "index_passed": 0,
+          "continuation_input": [
+            84482,
+            74457
+          ],
+          "continuation_output": [
+            787,
+            823
+          ],
+          "requests": [
+            30,
+            26
+          ],
+          "tool_calls": [
+            20,
+            16
+          ]
+        },
+        "both_pass": {
+          "conditions": 7,
+          "identity_passed": 7,
+          "index_passed": 7,
+          "continuation_input": [
+            163673,
+            146116
+          ],
+          "continuation_output": [
+            1459,
+            1419
+          ],
+          "requests": [
+            58,
+            52
+          ],
+          "tool_calls": [
+            43,
+            37
+          ]
+        }
+      },
+      "native_requests_verified": "All22 runs retain original prefix; all11 paired first requests differ only by one exact appended index message; tools and runtime identical",
+      "details": {
+        "multi_turn_base_12/identity": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "echo",
+              "arguments": {
+                "content": "quantum computing",
+                "file_name": "summary.txt"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "wc",
+              "arguments": {
+                "file_name": "summary.txt",
+                "mode": "w"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "d0adcb5801e68886e4eb9eb57d0049b0757192640268333724a999b50b0c0854",
+          "full_sha256": "8739e87aad650bc8a4ec09019df4d1337feeda8ffd9499082c02aae943244da5",
+          "score_sha256": "b9b6b1ae52facdbd8ba937049467a99bde2f9f8bb10a1e7a876817e9d67a7215",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ncwd: \"Documents\"\ninitial directory known entries: \"Documents\" (directory)\n\"Documents\" known entries: \"summary.txt\" (file)\n\"summary.txt\": content@CALL qwen_call_2_0/RESULT qwen_call_2_0\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_base_12/primary/42/identity"
+        },
+        "multi_turn_base_12/native-graph-index": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "echo",
+              "arguments": {
+                "content": "quantum computing",
+                "file_name": "summary.txt"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "wc",
+              "arguments": {
+                "file_name": "summary.txt",
+                "mode": "w"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "3e45698315159017673de3ce5937a346f704c39e689efc5f69afce1e3a73bc48",
+          "full_sha256": "1880bc6b5edff48712d803edc3535b5836f6f3a4d7f8e04b1053e479127c6e24",
+          "score_sha256": "d7f05cd034959a6283e7387836bc5bb871d2a8875982f18e790e38c607a8e27c",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ncwd: \"Documents\"\ninitial directory known entries: \"Documents\" (directory)\n\"Documents\" known entries: \"summary.txt\" (file)\n\"summary.txt\": content@CALL qwen_call_2_0/RESULT qwen_call_2_0\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_base_12/primary/42/native-graph-index"
+        },
+        "multi_turn_long_context_12/native-graph-index": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "echo",
+              "arguments": {
+                "content": "quantum computing",
+                "file_name": "summary.txt"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "wc",
+              "arguments": {
+                "file_name": "summary.txt",
+                "mode": "w"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "55b967d5fabc0f8c202f1c3ae68cf37f5f6f7f41197ee8072b1118763927ef3b",
+          "full_sha256": "9beb35aba147108547906ea3b94daa1eb4b04591774a2d506212b6e652db6b29",
+          "score_sha256": "3adcf0671a6e98d6f3265eed0d5df83fe9a5f7ed30ff7b7c502f5120b1a3d38d",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ncwd: \"Documents\"\ninitial directory known entries: \"Documents\" (directory)\n\"Documents\" known entries: RESULT qwen_call_2_0.current_directory_content + \"summary.txt\" (file)\n\"summary.txt\": content@CALL qwen_call_4_0/RESULT qwen_call_4_0\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_long_context_12/primary/42/native-graph-index"
+        },
+        "multi_turn_long_context_12/identity": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "echo",
+              "arguments": {
+                "content": "quantum computing",
+                "file_name": "summary.txt"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "wc",
+              "arguments": {
+                "file_name": "summary.txt",
+                "mode": "w"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "a63cd371fd15ba5c8063e956502e9f820b9403a533c55abeb2dbfc562138aba0",
+          "full_sha256": "c28d8146fad3162761d6d59a89891b5e2ff775b08ca2b55b572cee0cf051e3a1",
+          "score_sha256": "8b7daf0060cdfb940a68cdf790b7b8a57e61b50ef6d81c061bf95f99fb562429",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ncwd: \"Documents\"\ninitial directory known entries: \"Documents\" (directory)\n\"Documents\" known entries: RESULT qwen_call_2_0.current_directory_content + \"summary.txt\" (file)\n\"summary.txt\": content@CALL qwen_call_4_0/RESULT qwen_call_4_0\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_long_context_12/primary/42/identity"
+        },
+        "multi_turn_base_1/identity": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "cd",
+              "arguments": {
+                "folder": "workspace"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "find",
+              "arguments": {
+                "path": ".",
+                "name": "log.txt"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "mkdir",
+              "arguments": {
+                "dir_name": "archive"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "mv",
+              "arguments": {
+                "source": "log.txt",
+                "destination": "archive"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "grep",
+              "arguments": {
+                "file_name": "archive/log.txt",
+                "pattern": "Error"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "cd",
+              "arguments": {
+                "folder": "archive"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "grep",
+              "arguments": {
+                "file_name": "log.txt",
+                "pattern": "Error"
+              }
+            },
+            {
+              "turn": 3,
+              "name": "tail",
+              "arguments": {
+                "file_name": "log.txt",
+                "lines": 20
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "1f8af7977916f31f919d89cf8960f50be50b9a756ec117e83559d2bad659d75e",
+          "full_sha256": "a9aecc6ae2c331f2e8d3d73f127844dfbb2bf92639a45dd6567bd483ae2a9153",
+          "score_sha256": "4c84916902cb0ed751874df30439e0d995e309c5c20789b2c65b70d174013b8a",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ncwd: \"/alex\" (initial directory)\ninitial directory known entries: \"workspace\"\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_base_1/primary/42/identity"
+        },
+        "multi_turn_base_1/native-graph-index": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "cd",
+              "arguments": {
+                "folder": "workspace"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "find",
+              "arguments": {
+                "path": ".",
+                "name": "log.txt"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "mkdir",
+              "arguments": {
+                "dir_name": "archive"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "mv",
+              "arguments": {
+                "source": "log.txt",
+                "destination": "archive"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "grep",
+              "arguments": {
+                "file_name": "archive/log.txt",
+                "pattern": "Error"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "cd",
+              "arguments": {
+                "folder": "archive"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "grep",
+              "arguments": {
+                "file_name": "log.txt",
+                "pattern": "Error"
+              }
+            },
+            {
+              "turn": 3,
+              "name": "tail",
+              "arguments": {
+                "file_name": "log.txt",
+                "lines": 20
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "1a192f9a20771f7745f0f7873ee8d664d411191457fd4c801dfbd859a834f749",
+          "full_sha256": "d9884a04771f68da8ae296baf0f28cae8c3d536378c59e7f4fa9195ddc3e3571",
+          "score_sha256": "369f6d045457c3f945fc6e2258b29c3fe7f5ff7e0169d4977850a1131bd25c31",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ncwd: \"/alex\" (initial directory)\ninitial directory known entries: \"workspace\"\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_base_1/primary/42/native-graph-index"
+        },
+        "multi_turn_base_9/native-graph-index": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "cp",
+              "arguments": {
+                "source": "FinalReport.txt",
+                "destination": "Archives/ArchivedFinalReport2024.txt"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "cd",
+              "arguments": {
+                "folder": "Archives"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "cp",
+              "arguments": {
+                "source": "../FinalReport.txt",
+                "destination": "ArchivedFinalReport2024.txt"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "cd",
+              "arguments": {
+                "folder": ".."
+              }
+            },
+            {
+              "turn": 1,
+              "name": "cp",
+              "arguments": {
+                "source": "FinalReport.txt",
+                "destination": "Archives"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "cd",
+              "arguments": {
+                "folder": "Archives"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "mv",
+              "arguments": {
+                "source": "FinalReport.txt",
+                "destination": "ArchivedFinalReport2024.txt"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "cat",
+              "arguments": {
+                "file_name": "ArchivedFinalReport2024.txt"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "f999a4d2b8995faa92ebc700567f2aa561039eca25b330a9e4798a1377174982",
+          "full_sha256": "33c069f77651aacb540f394692a641610ec877685c0745985f54c3e65fdab6ad",
+          "score_sha256": "15fc505924bebbd475cb599d641607c6a7f35b5fb0c47a86bed72473544c19aa",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ncwd: \"Documentation\"\ninitial directory known entries: \"Documentation\" (directory)\n\"Documentation\" known entries: \"FinalReport.txt\" (file), \"Archives\"\n\"FinalReport.txt\": content@CALL qwen_call_3_0/RESULT qwen_call_3_0\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_base_9/primary/42/native-graph-index"
+        },
+        "multi_turn_base_9/identity": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "cp",
+              "arguments": {
+                "source": "FinalReport.txt",
+                "destination": "Archives/ArchivedFinalReport2024.txt"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "cd",
+              "arguments": {
+                "folder": "Archives"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "cp",
+              "arguments": {
+                "source": "../FinalReport.txt",
+                "destination": "ArchivedFinalReport2024.txt"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "cd",
+              "arguments": {
+                "folder": ".."
+              }
+            },
+            {
+              "turn": 1,
+              "name": "cp",
+              "arguments": {
+                "source": "FinalReport.txt",
+                "destination": "ArchivedFinalReport2024.txt"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "mv",
+              "arguments": {
+                "source": "ArchivedFinalReport2024.txt",
+                "destination": "Archives"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "cd",
+              "arguments": {
+                "folder": "Archives"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "cat",
+              "arguments": {
+                "file_name": "ArchivedFinalReport2024.txt"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "echo",
+              "arguments": {
+                "content": "This is the final report for the year 2024.",
+                "file_name": "first_line.txt"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "touch",
+              "arguments": {
+                "file_name": "first_line.txt"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "echo",
+              "arguments": {
+                "content": "This is the final report for the year 2024.",
+                "file_name": "first_line.txt"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "sort",
+              "arguments": {
+                "file_name": "first_line.txt"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "d0cfb444184eb59960600b582fb59578a02d951944e433e2aff56804b71dc7ee",
+          "full_sha256": "72b9d26bcd20c0733e959a37472f2826c03afbbc53371d923f1857156e5d7dff",
+          "score_sha256": "a799cfb829b2fdd415c030b860efa0630031455ae84d3755ba9fa860a1a9f93c",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ncwd: \"Documentation\"\ninitial directory known entries: \"Documentation\" (directory)\n\"Documentation\" known entries: \"FinalReport.txt\" (file), \"Archives\"\n\"FinalReport.txt\": content@CALL qwen_call_3_0/RESULT qwen_call_3_0\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_base_9/primary/42/identity"
+        },
+        "multi_turn_base_25/identity": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "cp",
+              "arguments": {
+                "source": "summary.txt",
+                "destination": "Research2023"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "sort",
+              "arguments": {
+                "file_name": "summary.txt"
+              }
+            },
+            {
+              "turn": 3,
+              "name": "wc",
+              "arguments": {
+                "file_name": "summary.txt",
+                "mode": "l"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "a53818d613331bcee6c7f717a3f84ded78ff7e24fdd447ff5facbfeb9e126d8d",
+          "full_sha256": "6fb481b3b77aa13df5ba54447eaa4c7d02832f2deaa457c141c671a0a8a77f6b",
+          "score_sha256": "c692a895210095dcf6bc60525c98d1f78bfce00fa92be6a90757a035e862d5d7",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ninitial directory known entries: \"Research2023\", \"summary.txt\" (file)\n\"summary.txt\": content@CALL qwen_call_1_0/RESULT qwen_call_1_0\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_base_25/primary/42/identity"
+        },
+        "multi_turn_base_25/native-graph-index": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "cp",
+              "arguments": {
+                "source": "summary.txt",
+                "destination": "Research2023"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "sort",
+              "arguments": {
+                "file_name": "summary.txt"
+              }
+            },
+            {
+              "turn": 3,
+              "name": "wc",
+              "arguments": {
+                "file_name": "summary.txt",
+                "mode": "l"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "30a1bac81dbb4526db502735922001e3f2b6fc82e933eacb2825b40b4946ae36",
+          "full_sha256": "76fb922f1f4c4dc4effbcd1f32a9de4f4ae68a42fc829b7d9c72f9b73d61dfaf",
+          "score_sha256": "efd4695d7ad673bcab3f08340af9c9324582cb667370a04f3daea7d3ff2dfd26",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ninitial directory known entries: \"Research2023\", \"summary.txt\" (file)\n\"summary.txt\": content@CALL qwen_call_1_0/RESULT qwen_call_1_0\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_base_25/primary/42/native-graph-index"
+        },
+        "multi_turn_base_26/native-graph-index": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "cat",
+              "arguments": {
+                "file_name": "file3.txt"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "touch",
+              "arguments": {
+                "file_name": "file3.docx"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "echo",
+              "arguments": {
+                "content": "Nothing important here. Yet another line.",
+                "file_name": "file3.docx"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "47f2573d68f0bb9c579d6cdf4739e7ef217be909e87ee4654b3ea48b26fac4be",
+          "full_sha256": "b2f61350406aa40a69d8cf920f77538e27b376d98e493ea67b57afa3f06b968a",
+          "score_sha256": "950e914c218d4d0de8e8770d5803cec8432d0ae1705c02dc54f0411241690898",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ncwd: \"tmp\"\ninitial directory known entries: \"tmp\" (directory)\n\"tmp\" known entries: \"file1.txt\", \"file2.txt\", \"file3.txt\"\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_base_26/primary/42/native-graph-index"
+        },
+        "multi_turn_base_26/identity": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "cat",
+              "arguments": {
+                "file_name": "file3.txt"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "touch",
+              "arguments": {
+                "file_name": "file3.docx"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "echo",
+              "arguments": {
+                "content": "Nothing important here. Yet another line.",
+                "file_name": "file3.docx"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "a3b67b5f3fc02f6a6e0eec84ac6413831c683d020fa48d6ddcf32bd340dbd89e",
+          "full_sha256": "2122fb906444c1c30f53801aa56da348d11631d46a5018c773bb1153a006a8c1",
+          "score_sha256": "b300230fd3dd47dddab415c82dc216fe8a22f4a259bbc4f10abbafa1b7d00c59",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ncwd: \"tmp\"\ninitial directory known entries: \"tmp\" (directory)\n\"tmp\" known entries: \"file1.txt\", \"file2.txt\", \"file3.txt\"\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_base_26/primary/42/identity"
+        },
+        "multi_turn_base_38/identity": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "8eb20e05f4bae25b3512c401c32deca6e6dde7e3385b9ab39b6e3c9298a48a1f",
+          "full_sha256": "46dc81175e85dc6a3bf8f0abe3d91aacfac9b8d18069b1efea85feff67102226",
+          "score_sha256": "af4f89919b9e7708d7fd1d6c5bef3668a3c7518707e88fd8cc869eecea030113",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ninitial directory absent: \"SuperResearch\"\n\"findings_report\" (previously in \"SuperResearch\" (previously in initial directory)): exists=false\n\"SuperResearch\" (previously in initial directory): exists=false\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_base_38/primary/42/identity"
+        },
+        "multi_turn_base_38/native-graph-index": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "6b103a97389d4144d6bcc173e76919dc7177832c698cea60d72ed5d1f69d6b6f",
+          "full_sha256": "57936f077578b89525a8d6c0cf505c6f98543007565af73593006130eacb8b0e",
+          "score_sha256": "6a580be766a4fc2d210d1e97f87a04f4a23d1bfc6c20dc197173767050e99dee",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ninitial directory absent: \"SuperResearch\"\n\"findings_report\" (previously in \"SuperResearch\" (previously in initial directory)): exists=false\n\"SuperResearch\" (previously in initial directory): exists=false\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_base_38/primary/42/native-graph-index"
+        },
+        "multi_turn_long_context_1/native-graph-index": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "cd",
+              "arguments": {
+                "folder": "workspace"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "find",
+              "arguments": {
+                "name": "log.txt"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "mkdir",
+              "arguments": {
+                "dir_name": "archive"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "mv",
+              "arguments": {
+                "source": "log.txt",
+                "destination": "archive"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "grep",
+              "arguments": {
+                "file_name": "archive/log.txt",
+                "pattern": "Error"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "cd",
+              "arguments": {
+                "folder": "archive"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "ls",
+              "arguments": {
+                "a": true
+              }
+            },
+            {
+              "turn": 2,
+              "name": "grep",
+              "arguments": {
+                "file_name": "log.txt",
+                "pattern": "Error"
+              }
+            },
+            {
+              "turn": 3,
+              "name": "tail",
+              "arguments": {
+                "file_name": "log.txt",
+                "lines": 20
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "740ffda8e6bc8e23b175e244c728d93329825ef284a3fafe392f4495f8708467",
+          "full_sha256": "da0ad8599485c6b23d1d8d82edf0345ccb781accd2208cdfb35c6cf7243004aa",
+          "score_sha256": "ac908b2fab2fd166ef7e57092a2d2c0eb798fa191dc5c180ab6f55be7a19935e",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ncwd: \"/alex\" (initial directory)\ninitial directory known entries: \"workspace\"\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_long_context_1/primary/42/native-graph-index"
+        },
+        "multi_turn_long_context_1/identity": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "cd",
+              "arguments": {
+                "folder": "workspace"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "find",
+              "arguments": {
+                "name": "log.txt"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "mkdir",
+              "arguments": {
+                "dir_name": "archive"
+              }
+            },
+            {
+              "turn": 1,
+              "name": "mv",
+              "arguments": {
+                "source": "log.txt",
+                "destination": "archive"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "cd",
+              "arguments": {
+                "folder": "archive"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "grep",
+              "arguments": {
+                "file_name": "log.txt",
+                "pattern": "Error"
+              }
+            },
+            {
+              "turn": 3,
+              "name": "tail",
+              "arguments": {
+                "file_name": "log.txt",
+                "lines": 20
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "30592132ac712e864bf4526a1574e52d80263b2dd2bcaaaa51dd7a9f669655a1",
+          "full_sha256": "d4f17735331181b0c57e4b2a6a5a61bb712b18961bfdf8eb53ab3c1765611b0e",
+          "score_sha256": "28a78e59088f8ae3d57b742526f2e36dc2185cd28f5750e6e8b811d684982355",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ncwd: \"/alex\" (initial directory)\ninitial directory known entries: \"workspace\"\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_long_context_1/primary/42/identity"
+        },
+        "multi_turn_long_context_25/identity": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "cp",
+              "arguments": {
+                "source": "summary.txt",
+                "destination": "Research2023"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "sort",
+              "arguments": {
+                "file_name": "summary.txt"
+              }
+            },
+            {
+              "turn": 3,
+              "name": "wc",
+              "arguments": {
+                "file_name": "summary.txt",
+                "mode": "l"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "603a13df0c268434f3c4ae89f3cafeee6d75fc0bc073b32e951efc93c1434208",
+          "full_sha256": "578d7544d158d39214d7032b5656c8baa6b2c1ac0dc338fc37fa294ec70670f8",
+          "score_sha256": "018b38f955867c244e0d20f8ddd321f9a0fbe5393ea3ad295828316ad4268095",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ninitial directory known entries: \"summary.txt\" (file)\n\"summary.txt\": content@CALL qwen_call_1_0/RESULT qwen_call_1_0\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_long_context_25/primary/42/identity"
+        },
+        "multi_turn_long_context_25/native-graph-index": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "cp",
+              "arguments": {
+                "source": "summary.txt",
+                "destination": "Research2023"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "sort",
+              "arguments": {
+                "file_name": "summary.txt"
+              }
+            },
+            {
+              "turn": 3,
+              "name": "wc",
+              "arguments": {
+                "file_name": "summary.txt",
+                "mode": "l"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "27c27a10c13b3650b0394fa0dcc7f8a8de1eefb19364f73b2b0945af70b29dd3",
+          "full_sha256": "5152315a21a674ef5bca69d23e1e14c053e136cd71f72b4b893be6d62703702b",
+          "score_sha256": "1fa0372dfaafd4a2fd2cf0a2a28d42283411eeca6c22b38a108727c12c2c4d8b",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ninitial directory known entries: \"summary.txt\" (file)\n\"summary.txt\": content@CALL qwen_call_1_0/RESULT qwen_call_1_0\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_long_context_25/primary/42/native-graph-index"
+        },
+        "multi_turn_long_context_26/native-graph-index": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "cat",
+              "arguments": {
+                "file_name": "image_1912245706439755759.jpg"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "touch",
+              "arguments": {
+                "file_name": "image_1912245706439755759.docx"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "16e60fc1ec046598e6a5de5641ba0e3ef444d1203bc6991bc89712e9d4224612",
+          "full_sha256": "04e4036c2597fb4d585db81364e300295680970b64fafd77e8647664b050c9a6",
+          "score_sha256": "2c3c3d05ae5ecb30f9e9de955c078c872d34cfd0ddb36b0801369bfe3c456f2f",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ncwd: \"tmp\"\ninitial directory known entries: \"tmp\" (directory)\n\"tmp\" known entries: RESULT qwen_call_1_0.current_directory_content\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_long_context_26/primary/42/native-graph-index"
+        },
+        "multi_turn_long_context_26/identity": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "cat",
+              "arguments": {
+                "file_name": "image_1912245706439755759.jpg"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "touch",
+              "arguments": {
+                "file_name": "image_1912245706439755759.docx"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "84b2bf136c650b468ce5b7850f5f8d73ef01533a7563dc579234b1c622a9ece5",
+          "full_sha256": "afdf2935253866630394b8d4fb9040dc9c84a407074444651c537946a081a678",
+          "score_sha256": "7b95f1e15ee5547e61a5cf886b6399a8cd7a2012b42dadb3217c12dada479df4",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ncwd: \"tmp\"\ninitial directory known entries: \"tmp\" (directory)\n\"tmp\" known entries: RESULT qwen_call_1_0.current_directory_content\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_long_context_26/primary/42/identity"
+        },
+        "multi_turn_long_context_37/identity": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "grep",
+              "arguments": {
+                "file_name": "dev_summary.txt",
+                "pattern": "server error"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "echo",
+              "arguments": {
+                "content": "However, a server error was detected in the final testing phase.",
+                "file_name": "1.txt"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "touch",
+              "arguments": {
+                "file_name": "1.txt"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "echo",
+              "arguments": {
+                "content": "However, a server error was detected in the final testing phase.",
+                "file_name": "1.txt"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "211dab67edc38877e760e602a70dd5c570f9090d8507c727480b2000e8382fcd",
+          "full_sha256": "ce8c26e2f52268948a2cfcba3076e4fc92e2e0f00fdd629a5a742d2e6858f228",
+          "score_sha256": "2b2f168182c27a058569076ba525b016e4f1923ae93ce143fa51a01b5c730edb",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ninitial directory known entries: RESULT qwen_call_1_0.current_directory_content\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_long_context_37/primary/42/identity"
+        },
+        "multi_turn_long_context_37/native-graph-index": {
+          "calls": [
+            {
+              "turn": 1,
+              "name": "grep",
+              "arguments": {
+                "file_name": "dev_summary.txt",
+                "pattern": "server error"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "touch",
+              "arguments": {
+                "file_name": "1.txt"
+              }
+            },
+            {
+              "turn": 2,
+              "name": "echo",
+              "arguments": {
+                "content": "However, a server error was detected in the final testing phase.",
+                "file_name": "1.txt"
+              }
+            }
+          ],
+          "manifest_retries": 0,
+          "length_truncations": 0,
+          "native_sha256": "28e554c680dd119c4ac5156d26e9a75429098a388ee127ea52b2ec4595205254",
+          "full_sha256": "824c33d58c08ec8dbca197b7673e5032ae9993ce3daee8d38bc3f5ec31caf976",
+          "score_sha256": "6067b4ec3db97a1d1a2ab69c97a1732f58f12c52fc086e9a3ecc6a29624bf2bb",
+          "index": "GRAPH INDEX (snapshot at end of first user turn; references use tool call IDs)\ninitial directory known entries: RESULT qwen_call_1_0.current_directory_content\n",
+          "directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-4.1/multi_turn_long_context_37/primary/42/native-graph-index"
+        }
+      }
+    },
+    "gpt-5-mini": {
+      "source_experiment": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2",
+      "source_summary_sha256": "aa6046da98a6ea6ec24d8cfb74df4b07bb0466475f22eae3f3ab5fe2c1807cf4",
+      "scope": "Read-only review of GPT-5-mini. No API calls, reruns, score changes or frozen-source changes.",
+      "method_A": "identity",
+      "method_B": "native-graph-index",
+      "aggregates": {
+        "all": {
+          "identity": {
+            "passed": 19,
+            "total": 48
+          },
+          "native-graph-index": {
+            "passed": 22,
+            "total": 48
+          },
+          "paired_outcomes": {
+            "both_success": 18,
+            "gain": 4,
+            "loss": 1,
+            "both_failure": 25
+          }
+        },
+        "development": {
+          "identity": {
+            "passed": 8,
+            "total": 15
+          },
+          "native-graph-index": {
+            "passed": 10,
+            "total": 15
+          },
+          "paired_outcomes": {
+            "both_success": 7,
+            "gain": 3,
+            "loss": 1,
+            "both_failure": 4
+          }
+        },
+        "validation": {
+          "identity": {
+            "passed": 11,
+            "total": 33
+          },
+          "native-graph-index": {
+            "passed": 12,
+            "total": 33
+          },
+          "paired_outcomes": {
+            "both_success": 11,
+            "both_failure": 21,
+            "gain": 1
+          }
+        }
+      },
+      "conditions": [
+        {
+          "id": "multi_turn_base_1",
+          "partition": "validation",
+          "identity_passes": 3,
+          "index_passes": 3,
+          "identity_by_seed_42_43_44": [
+            true,
+            true,
+            true
+          ],
+          "index_by_seed_42_43_44": [
+            true,
+            true,
+            true
+          ],
+          "loss_seeds": [],
+          "gain_seeds": [],
+          "historical_identity_pass": true,
+          "delta": 0
+        },
+        {
+          "id": "multi_turn_base_12",
+          "partition": "development",
+          "identity_passes": 3,
+          "index_passes": 3,
+          "identity_by_seed_42_43_44": [
+            true,
+            true,
+            true
+          ],
+          "index_by_seed_42_43_44": [
+            true,
+            true,
+            true
+          ],
+          "loss_seeds": [],
+          "gain_seeds": [],
+          "historical_identity_pass": true,
+          "delta": 0
+        },
+        {
+          "id": "multi_turn_base_16",
+          "partition": "development",
+          "identity_passes": 2,
+          "index_passes": 2,
+          "identity_by_seed_42_43_44": [
+            true,
+            false,
+            true
+          ],
+          "index_by_seed_42_43_44": [
+            true,
+            true,
+            false
+          ],
+          "loss_seeds": [
+            44
+          ],
+          "gain_seeds": [
+            43
+          ],
+          "historical_identity_pass": true,
+          "delta": 0
+        },
+        {
+          "id": "multi_turn_base_25",
+          "partition": "validation",
+          "identity_passes": 2,
+          "index_passes": 2,
+          "identity_by_seed_42_43_44": [
+            false,
+            true,
+            true
+          ],
+          "index_by_seed_42_43_44": [
+            false,
+            true,
+            true
+          ],
+          "loss_seeds": [],
+          "gain_seeds": [],
+          "historical_identity_pass": true,
+          "delta": 0
+        },
+        {
+          "id": "multi_turn_base_26",
+          "partition": "validation",
+          "identity_passes": 0,
+          "index_passes": 1,
+          "identity_by_seed_42_43_44": [
+            false,
+            false,
+            false
+          ],
+          "index_by_seed_42_43_44": [
+            false,
+            true,
+            false
+          ],
+          "loss_seeds": [],
+          "gain_seeds": [
+            43
+          ],
+          "historical_identity_pass": false,
+          "delta": 1
+        },
+        {
+          "id": "multi_turn_base_38",
+          "partition": "validation",
+          "identity_passes": 3,
+          "index_passes": 3,
+          "identity_by_seed_42_43_44": [
+            true,
+            true,
+            true
+          ],
+          "index_by_seed_42_43_44": [
+            true,
+            true,
+            true
+          ],
+          "loss_seeds": [],
+          "gain_seeds": [],
+          "historical_identity_pass": true,
+          "delta": 0
+        },
+        {
+          "id": "multi_turn_base_6",
+          "partition": "validation",
+          "identity_passes": 0,
+          "index_passes": 0,
+          "identity_by_seed_42_43_44": [
+            false,
+            false,
+            false
+          ],
+          "index_by_seed_42_43_44": [
+            false,
+            false,
+            false
+          ],
+          "loss_seeds": [],
+          "gain_seeds": [],
+          "historical_identity_pass": false,
+          "delta": 0
+        },
+        {
+          "id": "multi_turn_base_9",
+          "partition": "validation",
+          "identity_passes": 0,
+          "index_passes": 0,
+          "identity_by_seed_42_43_44": [
+            false,
+            false,
+            false
+          ],
+          "index_by_seed_42_43_44": [
+            false,
+            false,
+            false
+          ],
+          "loss_seeds": [],
+          "gain_seeds": [],
+          "historical_identity_pass": false,
+          "delta": 0
+        },
+        {
+          "id": "multi_turn_long_context_1",
+          "partition": "validation",
+          "identity_passes": 3,
+          "index_passes": 3,
+          "identity_by_seed_42_43_44": [
+            true,
+            true,
+            true
+          ],
+          "index_by_seed_42_43_44": [
+            true,
+            true,
+            true
+          ],
+          "loss_seeds": [],
+          "gain_seeds": [],
+          "historical_identity_pass": true,
+          "delta": 0
+        },
+        {
+          "id": "multi_turn_long_context_12",
+          "partition": "development",
+          "identity_passes": 3,
+          "index_passes": 3,
+          "identity_by_seed_42_43_44": [
+            true,
+            true,
+            true
+          ],
+          "index_by_seed_42_43_44": [
+            true,
+            true,
+            true
+          ],
+          "loss_seeds": [],
+          "gain_seeds": [],
+          "historical_identity_pass": true,
+          "delta": 0
+        },
+        {
+          "id": "multi_turn_long_context_25",
+          "partition": "validation",
+          "identity_passes": 0,
+          "index_passes": 0,
+          "identity_by_seed_42_43_44": [
+            false,
+            false,
+            false
+          ],
+          "index_by_seed_42_43_44": [
+            false,
+            false,
+            false
+          ],
+          "loss_seeds": [],
+          "gain_seeds": [],
+          "historical_identity_pass": false,
+          "delta": 0
+        },
+        {
+          "id": "multi_turn_long_context_26",
+          "partition": "validation",
+          "identity_passes": 0,
+          "index_passes": 0,
+          "identity_by_seed_42_43_44": [
+            false,
+            false,
+            false
+          ],
+          "index_by_seed_42_43_44": [
+            false,
+            false,
+            false
+          ],
+          "loss_seeds": [],
+          "gain_seeds": [],
+          "historical_identity_pass": false,
+          "delta": 0
+        },
+        {
+          "id": "multi_turn_long_context_29",
+          "partition": "development",
+          "identity_passes": 0,
+          "index_passes": 1,
+          "identity_by_seed_42_43_44": [
+            false,
+            false,
+            false
+          ],
+          "index_by_seed_42_43_44": [
+            false,
+            true,
+            false
+          ],
+          "loss_seeds": [],
+          "gain_seeds": [
+            43
+          ],
+          "historical_identity_pass": true,
+          "delta": 1
+        },
+        {
+          "id": "multi_turn_long_context_39",
+          "partition": "development",
+          "identity_passes": 0,
+          "index_passes": 1,
+          "identity_by_seed_42_43_44": [
+            false,
+            false,
+            false
+          ],
+          "index_by_seed_42_43_44": [
+            true,
+            false,
+            false
+          ],
+          "loss_seeds": [],
+          "gain_seeds": [
+            42
+          ],
+          "historical_identity_pass": true,
+          "delta": 1
+        },
+        {
+          "id": "multi_turn_long_context_6",
+          "partition": "validation",
+          "identity_passes": 0,
+          "index_passes": 0,
+          "identity_by_seed_42_43_44": [
+            false,
+            false,
+            false
+          ],
+          "index_by_seed_42_43_44": [
+            false,
+            false,
+            false
+          ],
+          "loss_seeds": [],
+          "gain_seeds": [],
+          "historical_identity_pass": false,
+          "delta": 0
+        },
+        {
+          "id": "multi_turn_long_context_9",
+          "partition": "validation",
+          "identity_passes": 0,
+          "index_passes": 0,
+          "identity_by_seed_42_43_44": [
+            false,
+            false,
+            false
+          ],
+          "index_by_seed_42_43_44": [
+            false,
+            false,
+            false
+          ],
+          "loss_seeds": [],
+          "gain_seeds": [],
+          "historical_identity_pass": false,
+          "delta": 0
+        }
+      ],
+      "paired_discordances": [
+        {
+          "id": "multi_turn_base_16",
+          "seed": 43,
+          "partition": "development",
+          "identity": false,
+          "native_graph_index": true,
+          "kind": "gain"
+        },
+        {
+          "id": "multi_turn_base_16",
+          "seed": 44,
+          "partition": "development",
+          "identity": true,
+          "native_graph_index": false,
+          "kind": "loss"
+        },
+        {
+          "id": "multi_turn_base_26",
+          "seed": 43,
+          "partition": "validation",
+          "identity": false,
+          "native_graph_index": true,
+          "kind": "gain"
+        },
+        {
+          "id": "multi_turn_long_context_29",
+          "seed": 43,
+          "partition": "development",
+          "identity": false,
+          "native_graph_index": true,
+          "kind": "gain"
+        },
+        {
+          "id": "multi_turn_long_context_39",
+          "seed": 42,
+          "partition": "development",
+          "identity": false,
+          "native_graph_index": true,
+          "kind": "gain"
+        }
+      ],
+      "net_decline_conditions": [],
+      "manual_cases": [
+        {
+          "id": "multi_turn_base_16",
+          "seed": 44,
+          "outcome": "loss",
+          "partition": "development",
+          "official_classification": "multi_turn:instance_state_mismatch",
+          "manual_classification": "Real unintended file mutation; not a protocol or scoring-only failure.",
+          "first_response_divergence": "Both native.jsonl line 2 call sort with identical arguments, and line 3 observes exactly one line. At line 4 A prints that single-line content; B says sorted contents are ready and asks how to save/output them.",
+          "first_tool_divergence": "At native.jsonl line 6 (turn=2, third user turn), A calls wc directly; B calls echo to replace spaces between three labelled entries with two newlines, then wc at line 8.",
+          "consequence": "A wc returns 1 (line 7); B wc returns 3 (line 9). The official diagnostic confirms backup content differs from the unchanged one-line ground truth.",
+          "index_evidence": "74 tokens; only cwd archives, known directory entries, and absence of the old research_notes.txt name within archives. No file content, line count, sort, wc, or behavioral instruction occurs in the index.",
+          "causal_limit": "No direct evidence supports anchoring on an incorrect graph fact. A43 performs the identical echo. Same failure also appears in old V2-readable43. The trace is consistent with a shared tendency to reinterpret labelled entries as separate lines and perform an unnecessary write; the index may perturb this choice but a single loss cannot identify the mechanism.",
+          "runs": {
+            "identity": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-5-mini/multi_turn_base_16/primary/44/identity",
+            "native-graph-index": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-5-mini/multi_turn_base_16/primary/44/native-graph-index"
+          }
+        },
+        {
+          "id": "multi_turn_base_16",
+          "seed": 43,
+          "outcome": "gain",
+          "partition": "development",
+          "official_classification": "A multi_turn:instance_state_mismatch; B pass",
+          "manual_classification": "Opposite direction of the same file mutation failure.",
+          "first_response_divergence": "native.jsonl line 4 differs in presentation, while both have identical sort result.",
+          "first_tool_divergence": "native.jsonl line 6: A echo inserts two newlines then wc returns 3; B directly wc returns 1.",
+          "consequence": "Both arms pass 2/3 on this task, but the successful seeds differ. Net zero does not erase the seed44 loss.",
+          "runs": {
+            "identity": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-5-mini/multi_turn_base_16/primary/43/identity",
+            "native-graph-index": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-5-mini/multi_turn_base_16/primary/43/native-graph-index"
+          }
+        },
+        {
+          "id": "multi_turn_long_context_29",
+          "seed": 43,
+          "outcome": "gain",
+          "partition": "development",
+          "official_classification": "A multi_turn:instance_state_mismatch; B pass",
+          "manual_classification": "Resolution of last-question reference changes file content relative to the official target; no missing history was shown.",
+          "first_tool_divergence": "After both du calls return 3354 bytes, native.jsonl line 4: A touch(3354.pdf), B echo(3354 bytes,3354.pdf), which errors because the file does not yet exist. B then pwd/ls/touch/ls recovers.",
+          "decisive_divergence": "Final-turn echo: A native.jsonl line 8 writes the current instruction Finally, in that file, Write my last question in it.; B line 16 writes the preceding question Create a file name based on the number of byte used. It should be in number.pdf format. (with original quotes). The latter matches the official target.",
+          "consequence": "All five failing trajectories on this condition write the current instruction; all six create the correct 3354.pdf. This run is not a rounded byte-count failure.",
+          "causal_limit": "Last question is linguistically ambiguous; official target is preserved. B adds several recovery calls. One passing repeat does not establish robust disambiguation.",
+          "runs": {
+            "identity": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-5-mini/multi_turn_long_context_29/primary/43/identity",
+            "native-graph-index": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-5-mini/multi_turn_long_context_29/primary/43/native-graph-index"
+          }
+        },
+        {
+          "id": "multi_turn_long_context_39",
+          "seed": 42,
+          "outcome": "gain",
+          "partition": "development",
+          "official_classification": "A multi_turn:empty_turn_model_response; B pass",
+          "manual_classification": "Scoring/tool-use requirement rather than a wrong user-visible answer or early abandonment.",
+          "first_tool_divergence": "After cd and a failing echo(styles.css), native.jsonl line 6: A touch(styles.css), B ls; B also retries the failing echo once before touch.",
+          "decisive_divergence": "When asked for the second nonhidden file, A line 22 answers index.html from the previous ls. B line 26 calls ls again then line 28 answers index.html. Both are correct given the actual directory order.",
+          "consequence": "All six runs answer index.html correctly and later display Hello World! from styles.css. Five official failures are empty_turn at this reuse-only turn; only B42 makes the required fresh ls call. Do not call this a semantic repair or manually change the official score.",
+          "runs": {
+            "identity": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-5-mini/multi_turn_long_context_39/primary/42/identity",
+            "native-graph-index": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-5-mini/multi_turn_long_context_39/primary/42/native-graph-index"
+          }
+        },
+        {
+          "id": "multi_turn_base_26",
+          "seed": 43,
+          "outcome": "gain",
+          "partition": "validation",
+          "official_classification": "A multi_turn:empty_turn_model_response; B pass",
+          "manual_classification": "A stops to request confirmation; B completes the filesystem change required by BFCL.",
+          "first_response_divergence": "Both first call cat(file3.txt), with identical content. Native.jsonl line 4 has only wording differences.",
+          "decisive_divergence": "native.jsonl line 6: A asks whether a true Word docx or a plain-text file with docx extension is wanted and performs no call; B attempts echo(file3.docx), handles No such file with touch, then echo and ls.",
+          "consequence": "B creates file3.docx with expected text under the Gorilla simulator. This does not validate an actual Word document encoding.",
+          "causal_limit": "Both arms have many failures on this condition (A0/3 B1/3); only one successful continuation was observed.",
+          "runs": {
+            "identity": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-5-mini/multi_turn_base_26/primary/43/identity",
+            "native-graph-index": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/gpt-5-mini/multi_turn_base_26/primary/43/native-graph-index"
+          }
+        }
+      ],
+      "focal_verification": [
+        {
+          "run": "runs/gpt-5-mini/multi_turn_base_16/primary/42/identity",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_base_16/primary/42/native-graph-index",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_base_16/primary/43/native-graph-index",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_base_16/primary/43/identity",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_base_16/primary/44/identity",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_base_16/primary/44/native-graph-index",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_long_context_29/primary/42/native-graph-index",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_long_context_29/primary/42/identity",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_long_context_29/primary/43/identity",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_long_context_29/primary/43/native-graph-index",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_long_context_29/primary/44/native-graph-index",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_long_context_29/primary/44/identity",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_long_context_39/primary/42/identity",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_long_context_39/primary/42/native-graph-index",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_long_context_39/primary/43/native-graph-index",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_long_context_39/primary/43/identity",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_long_context_39/primary/44/identity",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_long_context_39/primary/44/native-graph-index",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_base_26/primary/42/native-graph-index",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_base_26/primary/42/identity",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_base_26/primary/43/identity",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_base_26/primary/43/native-graph-index",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_base_26/primary/44/native-graph-index",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        },
+        {
+          "run": "runs/gpt-5-mini/multi_turn_base_26/primary/44/identity",
+          "official_score_matches_summary": true,
+          "native_api_full_tool_calls_match": true
+        }
+      ],
+      "official_failure_type_counts": {
+        "identity": {
+          "multi_turn:instance_state_mismatch": 11,
+          "multi_turn:empty_turn_model_response": 8,
+          "multi_turn:execution_response_mismatch": 10
+        },
+        "native-graph-index": {
+          "multi_turn:instance_state_mismatch": 9,
+          "multi_turn:empty_turn_model_response": 8,
+          "multi_turn:execution_response_mismatch": 9
+        }
+      },
+      "limits": [
+        "Three repeats share each model-specific first-turn prefix and are not independent task samples.",
+        "Matched seed numbers do not force identical stochastic streams after histories differ.",
+        "No task has a lower pass count under B, but one paired new failure remains.",
+        "Development families 3,12,16,29,39 must remain separate. The only validation gain is base26 seed43.",
+        "All long39 official failures are retained; manually observed correct answers are a separate diagnostic annotation.",
+        "The selected difficult conditions are not a random BFCL sample; these numbers do not estimate overall BFCL accuracy or establish statistical equivalence.",
+        "Automatic official diagnostic counts outside the four focal conditions are not a completed manual causal taxonomy."
+      ]
+    },
+    "claude-sonnet-5-5": {
+      "model": "claude-sonnet-5-5",
+      "experiment": "v3_native_20261021_r2",
+      "scope": "Read-only analysis of 114 completed Claude continuations. No model calls, rescoring changes, or experiment mutations.",
+      "source_artifacts": [
+        "continuations/summary.json",
+        "continuations/progress.json",
+        "native.jsonl",
+        "api.json",
+        "full.json",
+        "official-score.json",
+        "manifest.json",
+        "frozen prefix evidence and graph"
+      ],
+      "summary": {
+        "conditions": 19,
+        "repeats_per_condition_per_arm": 3,
+        "identity_passed": 32,
+        "index_passed": 37,
+        "denominator_per_arm": 57,
+        "identity_rate": 0.5614035087719298,
+        "index_rate": 0.6491228070175439,
+        "delta_percentage_points": 8.771929824561402,
+        "paired_gains": 5,
+        "paired_losses": 0,
+        "paired_both_pass": 32,
+        "paired_both_fail": 20,
+        "positive_conditions": 3,
+        "negative_conditions": 0,
+        "tied_conditions": 16,
+        "development": {
+          "conditions": 6,
+          "identity_passed": 14,
+          "index_passed": 18,
+          "denominator_per_arm": 18
+        },
+        "validation": {
+          "conditions": 13,
+          "identity_passed": 18,
+          "index_passed": 19,
+          "denominator_per_arm": 39
+        }
+      },
+      "aggregates": [
+        {
+          "model": "claude-sonnet-5-5",
+          "phase": "primary",
+          "partition": "all",
+          "mode": "identity",
+          "passed": 32,
+          "total": 57,
+          "continuation_input": 2479900,
+          "continuation_output": 41843,
+          "requests": 444,
+          "tool_calls": 341
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "phase": "primary",
+          "partition": "all",
+          "mode": "native-graph-index",
+          "passed": 37,
+          "total": 57,
+          "continuation_input": 2577905,
+          "continuation_output": 46354,
+          "requests": 450,
+          "tool_calls": 348
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "phase": "primary",
+          "partition": "development",
+          "mode": "identity",
+          "passed": 14,
+          "total": 18,
+          "continuation_input": 534641,
+          "continuation_output": 10225,
+          "requests": 108,
+          "tool_calls": 96
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "phase": "primary",
+          "partition": "development",
+          "mode": "native-graph-index",
+          "passed": 18,
+          "total": 18,
+          "continuation_input": 570532,
+          "continuation_output": 11575,
+          "requests": 111,
+          "tool_calls": 103
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "phase": "primary",
+          "partition": "validation",
+          "mode": "identity",
+          "passed": 18,
+          "total": 39,
+          "continuation_input": 1945259,
+          "continuation_output": 31618,
+          "requests": 336,
+          "tool_calls": 245
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "phase": "primary",
+          "partition": "validation",
+          "mode": "native-graph-index",
+          "passed": 19,
+          "total": 39,
+          "continuation_input": 2007373,
+          "continuation_output": 34779,
+          "requests": 339,
+          "tool_calls": 245
+        }
+      ],
+      "conditions": [
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_base_1",
+          "phase": "primary",
+          "partition": "validation",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 3,
+            "native-graph-index": 3
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "at_least_two_successes",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_base_10",
+          "phase": "primary",
+          "partition": "validation",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 0,
+            "native-graph-index": 0
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "unstable",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_base_12",
+          "phase": "primary",
+          "partition": "development",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 3,
+            "native-graph-index": 3
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "at_least_two_successes",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_base_25",
+          "phase": "primary",
+          "partition": "validation",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 0,
+            "native-graph-index": 0
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "unstable",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_base_26",
+          "phase": "primary",
+          "partition": "validation",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 3,
+            "native-graph-index": 3
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "at_least_two_successes",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_base_29",
+          "phase": "primary",
+          "partition": "development",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 1,
+            "native-graph-index": 3
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [
+            1,
+            3
+          ],
+          "pass_count_delta": 2,
+          "identity_baseline": "unstable",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_base_37",
+          "phase": "primary",
+          "partition": "validation",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 3,
+            "native-graph-index": 3
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "at_least_two_successes",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_base_38",
+          "phase": "primary",
+          "partition": "validation",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 3,
+            "native-graph-index": 3
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "at_least_two_successes",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_base_39",
+          "phase": "primary",
+          "partition": "development",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 3,
+            "native-graph-index": 3
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "at_least_two_successes",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_base_6",
+          "phase": "primary",
+          "partition": "validation",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 0,
+            "native-graph-index": 1
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [
+            1
+          ],
+          "pass_count_delta": 1,
+          "identity_baseline": "unstable",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_long_context_1",
+          "phase": "primary",
+          "partition": "validation",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 3,
+            "native-graph-index": 3
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "at_least_two_successes",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_long_context_10",
+          "phase": "primary",
+          "partition": "validation",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 0,
+            "native-graph-index": 0
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "unstable",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_long_context_12",
+          "phase": "primary",
+          "partition": "development",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 3,
+            "native-graph-index": 3
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "at_least_two_successes",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_long_context_25",
+          "phase": "primary",
+          "partition": "validation",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 0,
+            "native-graph-index": 0
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "unstable",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_long_context_26",
+          "phase": "primary",
+          "partition": "validation",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 0,
+            "native-graph-index": 0
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "unstable",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_long_context_29",
+          "phase": "primary",
+          "partition": "development",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 1,
+            "native-graph-index": 3
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [
+            1,
+            3
+          ],
+          "pass_count_delta": 2,
+          "identity_baseline": "unstable",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_long_context_37",
+          "phase": "primary",
+          "partition": "validation",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 3,
+            "native-graph-index": 3
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "at_least_two_successes",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_long_context_39",
+          "phase": "primary",
+          "partition": "development",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 3,
+            "native-graph-index": 3
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "at_least_two_successes",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "id": "multi_turn_long_context_6",
+          "phase": "primary",
+          "partition": "validation",
+          "historical_identity_pass": null,
+          "repeats_per_method": 3,
+          "passes": {
+            "identity": 0,
+            "native-graph-index": 0
+          },
+          "paired_loss_repeats": [],
+          "paired_gain_repeats": [],
+          "pass_count_delta": 0,
+          "identity_baseline": "unstable",
+          "manual_review_required": false,
+          "acceptance": "descriptive_only"
+        }
+      ],
+      "paired_gain_cases": [
+        {
+          "id": "multi_turn_base_29",
+          "repeat": 1,
+          "partition": "development",
+          "identity_directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_base_29/primary/1/identity",
+          "index_directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_base_29/primary/1/native-graph-index",
+          "decisive_action": "echo",
+          "user_turn_zero_based": 2,
+          "identity_request_index_zero_based": 5,
+          "index_request_index_zero_based": 5,
+          "mechanism": "Different resolution of \"my last question\": identity wrote the first question-mark sentence, index wrote the preceding user message expected by BFCL. Both histories contain both messages."
+        },
+        {
+          "id": "multi_turn_base_29",
+          "repeat": 3,
+          "partition": "development",
+          "identity_directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_base_29/primary/3/identity",
+          "index_directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_base_29/primary/3/native-graph-index",
+          "decisive_action": "echo",
+          "user_turn_zero_based": 2,
+          "identity_request_index_zero_based": 5,
+          "index_request_index_zero_based": 5,
+          "mechanism": "Different resolution of \"my last question\": identity wrote the first question-mark sentence, index wrote the preceding user message expected by BFCL. Both histories contain both messages."
+        },
+        {
+          "id": "multi_turn_base_6",
+          "repeat": 1,
+          "partition": "validation",
+          "identity_directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_base_6/primary/1/identity",
+          "index_directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_base_6/primary/1/native-graph-index",
+          "decisive_action": "echo",
+          "user_turn_zero_based": 1,
+          "identity_request_index_zero_based": 5,
+          "index_request_index_zero_based": 5,
+          "mechanism": "Identity added line breaks to the quoted statistics; index variant preserved the exact single-line text."
+        },
+        {
+          "id": "multi_turn_long_context_29",
+          "repeat": 1,
+          "partition": "development",
+          "identity_directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_long_context_29/primary/1/identity",
+          "index_directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_long_context_29/primary/1/native-graph-index",
+          "decisive_action": "echo",
+          "user_turn_zero_based": 2,
+          "identity_request_index_zero_based": 6,
+          "index_request_index_zero_based": 6,
+          "mechanism": "Different resolution of \"my last question\": identity wrote the first question-mark sentence, index wrote the preceding user message expected by BFCL. Both histories contain both messages."
+        },
+        {
+          "id": "multi_turn_long_context_29",
+          "repeat": 3,
+          "partition": "development",
+          "identity_directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_long_context_29/primary/3/identity",
+          "index_directory": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_long_context_29/primary/3/native-graph-index",
+          "decisive_action": "echo",
+          "user_turn_zero_based": 2,
+          "identity_request_index_zero_based": 6,
+          "index_request_index_zero_based": 7,
+          "mechanism": "Different resolution of \"my last question\": identity wrote the first question-mark sentence, index wrote the preceding user message expected by BFCL. Both histories contain both messages."
+        }
+      ],
+      "paired_loss_cases": [],
+      "evidence_audit": {
+        "runs": 114,
+        "errors": [],
+        "opaque_blocks": 244,
+        "signature_blocks": 244,
+        "opaque_replayed_blocks": 240,
+        "opaque_replay_transitions": 240,
+        "native_append_transitions": 1200,
+        "all_manifest_verified": true,
+        "checks": [
+          "Exact native prefix reconstruction from graph, including original opaque content blocks",
+          "Exact normalized prefix reconstruction",
+          "Frozen system and tools unchanged",
+          "Every first live request contains the entire original native prefix",
+          "Adjacent native requests preserve previous input and append the original assistant content unchanged",
+          "Manifest native_roundtrip_verified and native_request_verified true for every run"
+        ],
+        "opaque_terminal_note": "244 thinking/signature blocks were observed; 240 have a subsequent request and were verified replayed unchanged. Four terminal blocks have no following request and are not replay opportunities."
+      },
+      "official_failure_types": [
+        [
+          [
+            "identity",
+            "('multi_turn:instance_state_mismatch',)"
+          ],
+          16
+        ],
+        [
+          [
+            "native-graph-index",
+            "('multi_turn:instance_state_mismatch',)"
+          ],
+          11
+        ],
+        [
+          [
+            "identity",
+            "('multi_turn:execution_response_mismatch',)"
+          ],
+          9
+        ],
+        [
+          [
+            "native-graph-index",
+            "('multi_turn:execution_response_mismatch',)"
+          ],
+          9
+        ]
+      ],
+      "failure_mechanisms": [
+        {
+          "conditions": [
+            "multi_turn_base_6",
+            "multi_turn_long_context_6"
+          ],
+          "identity_failures": 6,
+          "index_failures": 5,
+          "type": "literal content mismatch",
+          "detail": "Quoted one-line company statistics were rewritten as three lines. This is unrequested formatting, not missing history or early termination. The sole held-out gain is base_6 repeat 1 preserving the quoted line."
+        },
+        {
+          "conditions": [
+            "multi_turn_base_10",
+            "multi_turn_long_context_10"
+          ],
+          "identity_failures": 6,
+          "index_failures": 6,
+          "type": "filename mismatch",
+          "detail": "Both arms preserve .docx although the requested new name is final_proposal_2024. Representative visible explanation says the extension was kept so the file still opens in Word."
+        },
+        {
+          "conditions": [
+            "multi_turn_base_25",
+            "multi_turn_long_context_25"
+          ],
+          "identity_failures": 6,
+          "index_failures": 6,
+          "type": "execution-response and target-directory requirement",
+          "detail": "After copying summary.txt into Research2023, both arms sort the source summary.txt in the current directory without changing into Research2023. Official diagnostics require current_working_directory=Research2023. This is not an Anthropic API or replay protocol error; identical source/copy content can obscure the target-context discrepancy."
+        },
+        {
+          "conditions": [
+            "multi_turn_long_context_26"
+          ],
+          "identity_failures": 3,
+          "index_failures": 3,
+          "type": "benchmark reference ambiguity",
+          "detail": "The frozen first-turn assistant displays text files followed by images, ending with image_1912245706439755759.jpg. The next user asks what is in the last file displayed. Both arms read that last JPG; BFCL expects file3.txt. Official failures are retained, but this should not be described as clear agent misbehavior or graph regression.",
+          "frozen_prefix_file": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r1/claude/prefixes/multi_turn_long_context_26/native-prefix-history.json",
+          "ground_truth_file": "/home/ruqi/public/CS769/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/possible_answer/BFCL_v4_multi_turn_long_context.json"
+        },
+        {
+          "conditions": [
+            "multi_turn_base_29",
+            "multi_turn_long_context_29"
+          ],
+          "identity_failures": 4,
+          "index_failures": 0,
+          "type": "ambiguous user-message reference",
+          "detail": "Four gains are repeats 1 and 3 of development family 29. Identity writes the first question-mark sentence into the file; index writes the immediately preceding user request. The latter matches BFCL. Index itself lists only cwd and directory entries, so the evidence does not establish that it provided the resolved content. Identity repeat 2 already succeeds in both conditions."
+        }
+      ],
+      "early_stop_or_protocol_failure": {
+        "empty_turn_model_response": 0,
+        "output_length_truncation": 0,
+        "semantic_retries": 0,
+        "note": "All 45 official failures were inspected. They are state or execution-response mismatches, not the early-termination pattern seen in prior compact experiments."
+      },
+      "visible_index_commentary": {
+        "rule": "native.jsonl event=response; response.content block type=text; case-insensitive substring graph index OR internal note; count unique trajectories",
+        "counts": {
+          "identity": 0,
+          "native-graph-index": 10
+        },
+        "cases": [
+          {
+            "id": "multi_turn_base_6",
+            "repeat": 3,
+            "mode": "native-graph-index",
+            "passed": false,
+            "matches": [
+              {
+                "native_file": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_base_6/primary/3/native-graph-index/native.jsonl",
+                "line": 6,
+                "request_index": 7,
+                "turn": 1,
+                "content_block_index": 0,
+                "block_type": "text",
+                "text": "I added your statistics to `Annual_Report_2023.docx` in the `communal` folder. I read the file back to check, and it contains:\n\n```\nCompany Earning: 2000\nCompany Expenditure: 500\nCompany Name: Gorilla\n```\n\nI wrote it as plain text, so a word processor may treat the file differently from a formatted .docx.\n\nAlso, my last message ended with a \"GRAPH INDEX\" block that you didn't ask for. It was an error on my part, so please ignore it."
+              }
+            ]
+          },
+          {
+            "id": "multi_turn_long_context_6",
+            "repeat": 1,
+            "mode": "native-graph-index",
+            "passed": false,
+            "matches": [
+              {
+                "native_file": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_long_context_6/primary/1/native-graph-index/native.jsonl",
+                "line": 6,
+                "request_index": 7,
+                "turn": 1,
+                "content_block_index": 0,
+                "block_type": "text",
+                "text": "I added your statistics to `Annual_Report_2023.docx` in the communal folder. The file now reads:\n\n```\nCompany Earning: 2000\nCompany Expenditure: 500\nCompany Name: Gorilla\n```\n\nMy last message ended with a block labeled \"GRAPH INDEX\". That was a stray internal note, not something you need to act on, so please ignore it.\n\nI wrote the statistics as plain text, so Word may not open the file as a formatted document. I can add more sections or change the layout if you'd like."
+              }
+            ]
+          },
+          {
+            "id": "multi_turn_long_context_6",
+            "repeat": 2,
+            "mode": "native-graph-index",
+            "passed": false,
+            "matches": [
+              {
+                "native_file": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_long_context_6/primary/2/native-graph-index/native.jsonl",
+                "line": 6,
+                "request_index": 7,
+                "turn": 1,
+                "content_block_index": 0,
+                "block_type": "text",
+                "text": "I added the statistics to `Annual_Report_2023.docx` in the communal folder. I read the file back to check, and it contains:\n\n```\nCompany Earning: 2000\nCompany Expenditure: 500\nCompany Name: Gorilla\n```\n\nI wrote the content as plain text. Word may not open it correctly as a real `.docx` file. I can add more details or change the layout if you'd like.\n\nMy previous reply ended with a block labeled \"GRAPH INDEX\". It was stray text and had nothing to do with your request, so please ignore it."
+              }
+            ]
+          },
+          {
+            "id": "multi_turn_long_context_12",
+            "repeat": 1,
+            "mode": "native-graph-index",
+            "passed": true,
+            "matches": [
+              {
+                "native_file": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_long_context_12/primary/1/native-graph-index/native.jsonl",
+                "line": 6,
+                "request_index": 6,
+                "turn": 1,
+                "content_block_index": 0,
+                "block_type": "text",
+                "text": "`summary.txt` in `Documents` now contains only \"quantum computing\". I read the file back to check.\n\nMy last message ended with a \"GRAPH INDEX\" block that you didn't ask for. Please ignore it."
+              }
+            ]
+          },
+          {
+            "id": "multi_turn_long_context_12",
+            "repeat": 3,
+            "mode": "native-graph-index",
+            "passed": true,
+            "matches": [
+              {
+                "native_file": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_long_context_12/primary/3/native-graph-index/native.jsonl",
+                "line": 6,
+                "request_index": 6,
+                "turn": 1,
+                "content_block_index": 0,
+                "block_type": "text",
+                "text": "`summary.txt` in `Documents` now contains only \"quantum computing\". I read the file back to check, and that text is all it holds.\n\nMy previous reply ended with a \"GRAPH INDEX\" block of notes about the directory state. You didn't ask for it, and it didn't belong in my answer. Please ignore it."
+              }
+            ]
+          },
+          {
+            "id": "multi_turn_long_context_26",
+            "repeat": 2,
+            "mode": "native-graph-index",
+            "passed": false,
+            "matches": [
+              {
+                "native_file": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_long_context_26/primary/2/native-graph-index/native.jsonl",
+                "line": 4,
+                "request_index": 5,
+                "turn": 1,
+                "content_block_index": 0,
+                "block_type": "text",
+                "text": "The last file in the list, `image_1912245706439755759.jpg`, is empty. The terminal showed no content for it. It may be a placeholder, or it may not hold readable text. A `.jpg` is normally binary image data, and `cat` can't display that in a useful way anyway.\n\nI can check the other files if you want. `file1.txt`, `file2.txt` and `file3.txt` are the most likely to have readable content.\n\nOne more thing. The end of my previous reply had a \"GRAPH INDEX\" block that you didn't ask for. It was a stray note and isn't part of the directory listing, so please ignore it."
+              }
+            ]
+          },
+          {
+            "id": "multi_turn_long_context_26",
+            "repeat": 3,
+            "mode": "native-graph-index",
+            "passed": false,
+            "matches": [
+              {
+                "native_file": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_long_context_26/primary/3/native-graph-index/native.jsonl",
+                "line": 4,
+                "request_index": 5,
+                "turn": 1,
+                "content_block_index": 0,
+                "block_type": "text",
+                "text": "The last file in the list, `image_1912245706439755759.jpg`, is empty. Its content came back as an empty string. It may be a placeholder, or it may not hold any readable text. `cat` only shows text, so it wouldn't display real image data anyway.\n\nMy previous message ended with a \"GRAPH INDEX\" block. I shouldn't have included it. You didn't ask for it, and you can ignore it."
+              }
+            ]
+          },
+          {
+            "id": "multi_turn_base_38",
+            "repeat": 1,
+            "mode": "native-graph-index",
+            "passed": true,
+            "matches": [
+              {
+                "native_file": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_base_38/primary/1/native-graph-index/native.jsonl",
+                "line": 4,
+                "request_index": 7,
+                "turn": 1,
+                "content_block_index": 1,
+                "block_type": "text",
+                "text": "The current directory is empty, hidden files included.\n\nThe \"GRAPH INDEX\" block at the end of my last message didn't belong there. You didn't ask for it and it wasn't part of my answer, so please ignore it. The deletions themselves happened as I described."
+              }
+            ]
+          },
+          {
+            "id": "multi_turn_base_38",
+            "repeat": 2,
+            "mode": "native-graph-index",
+            "passed": true,
+            "matches": [
+              {
+                "native_file": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_base_38/primary/2/native-graph-index/native.jsonl",
+                "line": 4,
+                "request_index": 7,
+                "turn": 1,
+                "content_block_index": 1,
+                "block_type": "text",
+                "text": "The current directory is empty. It has no files, no directories and no hidden files.\n\nMy last message ended with a \"GRAPH INDEX\" block. It didn't belong there, so please ignore it. The only thing it said was that `findings_report` and `SuperResearch` no longer exist."
+              }
+            ]
+          },
+          {
+            "id": "multi_turn_long_context_39",
+            "repeat": 3,
+            "mode": "native-graph-index",
+            "passed": true,
+            "matches": [
+              {
+                "native_file": "/home/ruqi/public/CS769/experiments/bfcl_identity/v3_native_20261021_r2/continuations/runs/claude-sonnet-5-5/multi_turn_long_context_39/primary/3/native-graph-index/native.jsonl",
+                "line": 12,
+                "request_index": 7,
+                "turn": 1,
+                "content_block_index": 0,
+                "block_type": "text",
+                "text": "I went into `WebDevProjects` and created the three files. I read each one back to check its contents:\n\n- `styles.css` contains \"Hello World!\"\n- `index.html` contains \"Hi World!\"\n- `script.js` contains \"Halo World!\"\n\nMy first attempt to write the files failed because they didn't exist yet. I created them first and then wrote the contents.\n\nI also need to correct my first reply. It ended with a \"GRAPH INDEX\" note that I shouldn't have included, and it doesn't reflect anything you asked for. Please ignore it."
+              }
+            ]
+          }
+        ],
+        "denominators": {
+          "identity": 57,
+          "native-graph-index": 57
+        },
+        "native_graph_index_outcomes": {
+          "passed": 5,
+          "failed": 5
+        },
+        "review": "All ten matches are generated response text blocks, not thinking blocks or request-prefix echoes. They refer to the assistant snapshot as a previous assistant reply or stray internal note. The identical text-only search was applied to all 57 identity and all 57 index trajectories. These are observable placement side effects, not demonstrated causes of official failures; there are no paired losses."
+      },
+      "interpretation_limits": [
+        "No observed additional official loss in this finite sample; this is not a statistical proof of equivalent accuracy.",
+        "Four of five gains occur in one development task family. Validation gain is only one of 39 trials; repeated trials and base/long-context variants are not independent tasks.",
+        "Claude sampling is stochastic, and repeat IDs pair experiment slots, not identical random draws. Differences support descriptive outcomes, not a clean attribution of benefit to indexed facts.",
+        "Native replay and full evidence preservation were verified; adding an assistant-role index still changes the model-visible conversational framing. Ten visible self-correction messages directly expose that framing side effect.",
+        "Ten commentary cases split five official passes and five failures, and no paired losses exist. Do not attribute their failures to the commentary or claim it explains a measured accuracy regression."
+      ]
+    }
+  },
+  "limits": [
+    "232条是重复轨迹，只有46个模型×题目条件；base与long_context同题族也非独立题目。",
+    "GPT-4.1每条件1次；另外两个模型每条件3次。Claude重复编号不表示共享seed。",
+    "各模型题集与首轮资格不同，不用于模型排名；总体比例也不能与上一轮不同题集直接相比。",
+    "新验证题仅GPT-5-mini和Claude各多一次通过；主要增益来自已用于诊断的题族。",
+    "所有官方失败均保留；评分要求和语义任务完成分开解释。",
+    "结果仅覆盖原生历史加图索引，不覆盖纯图替换原始历史或风险驱动压缩。"
+  ],
+  "next_priorities": [
+    "先做索引放置位置的单因素探针，减少被当成上一条assistant回复的现象。保持索引事实和原生工具链一致，不通过添加行为命令掩盖副作用。",
+    "针对base16做预先固定协议的重复/决策点测试，比较不必要写文件的频率；不对单题加答案或禁止某工具的补丁。",
+    "扩大未参与格式选择的验证题，再判断能否稳定保持通过率；当前继续保留完整证据，不进行压缩。"
+  ]
+}

@@ -13,6 +13,10 @@ This project studies graph memory for file-operation tasks in the Berkeley Funct
 
 The graph methods use compact serialization. “Compact” means a more concise encoding of the full graph; it does not guarantee fewer tokens than the original message history. Historical IDs remain unchanged in stored artifacts for reproducibility.
 
+## Experiment Reports
+
+The [report index](experiments/bfcl_identity/reports/README.md) collects the [cross-experiment summary](experiments/bfcl_identity/reports/experiment-summary.md), V2–V5 readable reports, token accounting, and linked evidence. The [V5 frozen-B validation](experiments/bfcl_identity/reports/v5-b-validation-results.md) is the latest completed validation; the early experiments below retain their original scope and results. Markdown is available for GitHub reading, alongside HTML views. Original experiment records and frozen source snapshots remain unchanged.
+
 ## Experiments
 
 | Experiment | Protocol | Status and results |

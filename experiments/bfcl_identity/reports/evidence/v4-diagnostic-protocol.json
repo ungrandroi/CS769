@@ -1,0 +1,800 @@
+{
+  "protocol": {
+    "version": "placement-diagnostic-1",
+    "phase": "diagnostic",
+    "model": "gpt-5-mini",
+    "task_ids": [
+      "multi_turn_base_16",
+      "multi_turn_base_26",
+      "multi_turn_base_39",
+      "multi_turn_long_context_1",
+      "multi_turn_long_context_29",
+      "multi_turn_long_context_39"
+    ],
+    "modes": [
+      "identity",
+      "native-graph-index",
+      "native-graph-context"
+    ],
+    "seeds": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009
+    ],
+    "schedule_seed": 76942,
+    "workers": 3,
+    "blocks": 60,
+    "expected_trajectories": 180,
+    "arm_permutation_repetitions": 10,
+    "within_task_position_balance": "Each arm appears in each position three or four times",
+    "reasoning_effort": "medium",
+    "max_completion_tokens": 16384,
+    "compression": false,
+    "history": "Complete frozen native evidence at every request",
+    "sampling": "Fixed new seeds; no resampling, replacement, or outcome-dependent stopping",
+    "scope": "Placement diagnosis on selected old tasks; not independent validation or a non-inferiority claim",
+    "budget_cap_usd_reference": 5.0,
+    "budget_basis": "Uncached reference prices; not a guarantee of the Azure invoice"
+  },
+  "analysis_protocol": {
+    "version": "placement-diagnostic-1",
+    "model": "gpt-5-mini",
+    "claude_enabled": false,
+    "compression": false,
+    "conditions": [
+      "multi_turn_base_16",
+      "multi_turn_base_26",
+      "multi_turn_base_39",
+      "multi_turn_long_context_1",
+      "multi_turn_long_context_29",
+      "multi_turn_long_context_39"
+    ],
+    "seeds": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009
+    ],
+    "modes": [
+      "identity",
+      "native-graph-index",
+      "native-graph-context"
+    ],
+    "blocks": 60,
+    "trajectories": 180,
+    "unique_families": 5,
+    "sample_scope": "Selected old development cases; not held-out validation.",
+    "sampling": "All 180 trajectories are fresh. Fixed size; no CI-dependent expansion or early favorable stopping.",
+    "scheduling": "Randomize/interleave 60 condition-seed blocks, balance six arm-order permutations globally, and run all three arms of a block near in time. Freeze the scheduling RNG and schedule before calls.",
+    "fixed_inputs": "Same frozen model-owned native prefix, restored state, tool schemas, full evidence, runtime and limits within each block; only the registered delivery format differs.",
+    "primary_diagnostic_contrast": "D minus B (complete delivery format).",
+    "secondary_contrasts": [
+      "B minus A",
+      "D minus A"
+    ],
+    "placement_scope": "B versus D changes both provenance wrapper and role placement; it does not isolate a pure role effect.",
+    "aggregation": "First mean ten repetitions within condition, then equal condition means within family, then equal weight over five families. Also report raw passes out of 60 per arm and every condition out of 10.",
+    "uncertainty": "Descriptive development comparison. No noninferiority verdict or generalization claim from these five selected families; same seed is a block label, not coupled randomness.",
+    "history": "Prior V3/V4 results are context only; never pool them into this fresh diagnostic.",
+    "behavior_review": "Review complete native messages and full state traces for all paired losses/gains and flagged writes, confirmation text, zero-call turns and source attribution. Flags are a review queue, not diagnoses; keep official scores unchanged.",
+    "selection_rule": {
+      "status": "frozen_review_principles_no_automatic_winner",
+      "comparison": "Report every condition, equal-condition and equal-family results, and every paired loss/gain for all three contrasts. Do not add post-hoc numerical winner thresholds.",
+      "review_required": "Review all visible outputs and full state traces, including source attribution and actual file mutations. Trace review must distinguish confirmed structural defects, reproducible behavior differences, isolated differences and unresolved cases without rewriting official scores.",
+      "engineering_preference": "If review finds no clear benefit of D, prefer the smaller change B. This is an engineering preference, not a statistical conclusion of equivalence or noninferiority.",
+      "hold_rule": "If both candidates retain unexplained regressions or reproducible attribution/integrity structural degradation, do not freeze a format; report the unresolved evidence to the user. Missing evidence also prevents a completed review.",
+      "validation_gate": "This diagnostic never automatically authorizes or starts new validation, nor writes an approved format-decision. Recommendation remains pending_review until root/user review."
+    }
+  },
+  "schedule": [
+    {
+      "block_id": "block-000",
+      "schedule_index": 0,
+      "id": "multi_turn_base_26",
+      "seed": 1003,
+      "arms": [
+        "native-graph-index",
+        "native-graph-context",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-001",
+      "schedule_index": 1,
+      "id": "multi_turn_base_39",
+      "seed": 1001,
+      "arms": [
+        "identity",
+        "native-graph-index",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-002",
+      "schedule_index": 2,
+      "id": "multi_turn_base_16",
+      "seed": 1008,
+      "arms": [
+        "identity",
+        "native-graph-context",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-003",
+      "schedule_index": 3,
+      "id": "multi_turn_long_context_29",
+      "seed": 1009,
+      "arms": [
+        "native-graph-context",
+        "identity",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-004",
+      "schedule_index": 4,
+      "id": "multi_turn_long_context_39",
+      "seed": 1007,
+      "arms": [
+        "identity",
+        "native-graph-context",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-005",
+      "schedule_index": 5,
+      "id": "multi_turn_base_16",
+      "seed": 1000,
+      "arms": [
+        "identity",
+        "native-graph-index",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-006",
+      "schedule_index": 6,
+      "id": "multi_turn_base_16",
+      "seed": 1007,
+      "arms": [
+        "native-graph-context",
+        "native-graph-index",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-007",
+      "schedule_index": 7,
+      "id": "multi_turn_long_context_39",
+      "seed": 1001,
+      "arms": [
+        "native-graph-context",
+        "identity",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-008",
+      "schedule_index": 8,
+      "id": "multi_turn_long_context_29",
+      "seed": 1008,
+      "arms": [
+        "identity",
+        "native-graph-context",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-009",
+      "schedule_index": 9,
+      "id": "multi_turn_long_context_1",
+      "seed": 1007,
+      "arms": [
+        "identity",
+        "native-graph-index",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-010",
+      "schedule_index": 10,
+      "id": "multi_turn_long_context_39",
+      "seed": 1003,
+      "arms": [
+        "native-graph-index",
+        "native-graph-context",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-011",
+      "schedule_index": 11,
+      "id": "multi_turn_long_context_29",
+      "seed": 1003,
+      "arms": [
+        "identity",
+        "native-graph-index",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-012",
+      "schedule_index": 12,
+      "id": "multi_turn_long_context_1",
+      "seed": 1001,
+      "arms": [
+        "identity",
+        "native-graph-context",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-013",
+      "schedule_index": 13,
+      "id": "multi_turn_base_26",
+      "seed": 1005,
+      "arms": [
+        "identity",
+        "native-graph-index",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-014",
+      "schedule_index": 14,
+      "id": "multi_turn_base_26",
+      "seed": 1000,
+      "arms": [
+        "native-graph-context",
+        "identity",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-015",
+      "schedule_index": 15,
+      "id": "multi_turn_base_16",
+      "seed": 1002,
+      "arms": [
+        "native-graph-context",
+        "identity",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-016",
+      "schedule_index": 16,
+      "id": "multi_turn_long_context_39",
+      "seed": 1004,
+      "arms": [
+        "native-graph-context",
+        "native-graph-index",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-017",
+      "schedule_index": 17,
+      "id": "multi_turn_base_39",
+      "seed": 1005,
+      "arms": [
+        "native-graph-context",
+        "native-graph-index",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-018",
+      "schedule_index": 18,
+      "id": "multi_turn_long_context_39",
+      "seed": 1009,
+      "arms": [
+        "identity",
+        "native-graph-index",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-019",
+      "schedule_index": 19,
+      "id": "multi_turn_base_26",
+      "seed": 1001,
+      "arms": [
+        "native-graph-index",
+        "identity",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-020",
+      "schedule_index": 20,
+      "id": "multi_turn_long_context_1",
+      "seed": 1002,
+      "arms": [
+        "native-graph-index",
+        "native-graph-context",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-021",
+      "schedule_index": 21,
+      "id": "multi_turn_long_context_39",
+      "seed": 1008,
+      "arms": [
+        "native-graph-index",
+        "identity",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-022",
+      "schedule_index": 22,
+      "id": "multi_turn_long_context_39",
+      "seed": 1005,
+      "arms": [
+        "identity",
+        "native-graph-context",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-023",
+      "schedule_index": 23,
+      "id": "multi_turn_long_context_1",
+      "seed": 1009,
+      "arms": [
+        "native-graph-context",
+        "identity",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-024",
+      "schedule_index": 24,
+      "id": "multi_turn_base_16",
+      "seed": 1001,
+      "arms": [
+        "native-graph-index",
+        "identity",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-025",
+      "schedule_index": 25,
+      "id": "multi_turn_long_context_29",
+      "seed": 1001,
+      "arms": [
+        "native-graph-context",
+        "identity",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-026",
+      "schedule_index": 26,
+      "id": "multi_turn_base_16",
+      "seed": 1005,
+      "arms": [
+        "identity",
+        "native-graph-context",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-027",
+      "schedule_index": 27,
+      "id": "multi_turn_base_39",
+      "seed": 1002,
+      "arms": [
+        "native-graph-index",
+        "identity",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-028",
+      "schedule_index": 28,
+      "id": "multi_turn_base_26",
+      "seed": 1009,
+      "arms": [
+        "native-graph-context",
+        "identity",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-029",
+      "schedule_index": 29,
+      "id": "multi_turn_long_context_1",
+      "seed": 1003,
+      "arms": [
+        "native-graph-index",
+        "native-graph-context",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-030",
+      "schedule_index": 30,
+      "id": "multi_turn_long_context_1",
+      "seed": 1008,
+      "arms": [
+        "native-graph-context",
+        "identity",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-031",
+      "schedule_index": 31,
+      "id": "multi_turn_base_39",
+      "seed": 1000,
+      "arms": [
+        "identity",
+        "native-graph-index",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-032",
+      "schedule_index": 32,
+      "id": "multi_turn_long_context_1",
+      "seed": 1005,
+      "arms": [
+        "identity",
+        "native-graph-index",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-033",
+      "schedule_index": 33,
+      "id": "multi_turn_base_39",
+      "seed": 1006,
+      "arms": [
+        "native-graph-context",
+        "identity",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-034",
+      "schedule_index": 34,
+      "id": "multi_turn_base_16",
+      "seed": 1006,
+      "arms": [
+        "native-graph-context",
+        "identity",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-035",
+      "schedule_index": 35,
+      "id": "multi_turn_base_39",
+      "seed": 1004,
+      "arms": [
+        "identity",
+        "native-graph-context",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-036",
+      "schedule_index": 36,
+      "id": "multi_turn_base_26",
+      "seed": 1007,
+      "arms": [
+        "identity",
+        "native-graph-index",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-037",
+      "schedule_index": 37,
+      "id": "multi_turn_base_16",
+      "seed": 1004,
+      "arms": [
+        "identity",
+        "native-graph-index",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-038",
+      "schedule_index": 38,
+      "id": "multi_turn_long_context_1",
+      "seed": 1006,
+      "arms": [
+        "native-graph-index",
+        "identity",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-039",
+      "schedule_index": 39,
+      "id": "multi_turn_long_context_29",
+      "seed": 1005,
+      "arms": [
+        "native-graph-context",
+        "native-graph-index",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-040",
+      "schedule_index": 40,
+      "id": "multi_turn_base_39",
+      "seed": 1003,
+      "arms": [
+        "identity",
+        "native-graph-context",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-041",
+      "schedule_index": 41,
+      "id": "multi_turn_base_26",
+      "seed": 1008,
+      "arms": [
+        "native-graph-context",
+        "native-graph-index",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-042",
+      "schedule_index": 42,
+      "id": "multi_turn_long_context_29",
+      "seed": 1002,
+      "arms": [
+        "native-graph-index",
+        "native-graph-context",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-043",
+      "schedule_index": 43,
+      "id": "multi_turn_base_16",
+      "seed": 1009,
+      "arms": [
+        "native-graph-index",
+        "native-graph-context",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-044",
+      "schedule_index": 44,
+      "id": "multi_turn_base_39",
+      "seed": 1008,
+      "arms": [
+        "native-graph-index",
+        "native-graph-context",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-045",
+      "schedule_index": 45,
+      "id": "multi_turn_base_26",
+      "seed": 1004,
+      "arms": [
+        "identity",
+        "native-graph-context",
+        "native-graph-index"
+      ]
+    },
+    {
+      "block_id": "block-046",
+      "schedule_index": 46,
+      "id": "multi_turn_long_context_39",
+      "seed": 1006,
+      "arms": [
+        "native-graph-index",
+        "identity",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-047",
+      "schedule_index": 47,
+      "id": "multi_turn_base_39",
+      "seed": 1009,
+      "arms": [
+        "native-graph-index",
+        "identity",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-048",
+      "schedule_index": 48,
+      "id": "multi_turn_base_26",
+      "seed": 1002,
+      "arms": [
+        "native-graph-index",
+        "native-graph-context",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-049",
+      "schedule_index": 49,
+      "id": "multi_turn_long_context_29",
+      "seed": 1006,
+      "arms": [
+        "native-graph-index",
+        "identity",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-050",
+      "schedule_index": 50,
+      "id": "multi_turn_base_39",
+      "seed": 1007,
+      "arms": [
+        "native-graph-context",
+        "native-graph-index",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-051",
+      "schedule_index": 51,
+      "id": "multi_turn_long_context_1",
+      "seed": 1004,
+      "arms": [
+        "native-graph-context",
+        "native-graph-index",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-052",
+      "schedule_index": 52,
+      "id": "multi_turn_long_context_29",
+      "seed": 1007,
+      "arms": [
+        "native-graph-index",
+        "identity",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-053",
+      "schedule_index": 53,
+      "id": "multi_turn_long_context_29",
+      "seed": 1004,
+      "arms": [
+        "native-graph-context",
+        "native-graph-index",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-054",
+      "schedule_index": 54,
+      "id": "multi_turn_long_context_39",
+      "seed": 1002,
+      "arms": [
+        "native-graph-index",
+        "native-graph-context",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-055",
+      "schedule_index": 55,
+      "id": "multi_turn_base_16",
+      "seed": 1003,
+      "arms": [
+        "native-graph-index",
+        "native-graph-context",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-056",
+      "schedule_index": 56,
+      "id": "multi_turn_base_26",
+      "seed": 1006,
+      "arms": [
+        "native-graph-index",
+        "identity",
+        "native-graph-context"
+      ]
+    },
+    {
+      "block_id": "block-057",
+      "schedule_index": 57,
+      "id": "multi_turn_long_context_39",
+      "seed": 1000,
+      "arms": [
+        "native-graph-context",
+        "native-graph-index",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-058",
+      "schedule_index": 58,
+      "id": "multi_turn_long_context_1",
+      "seed": 1000,
+      "arms": [
+        "native-graph-context",
+        "native-graph-index",
+        "identity"
+      ]
+    },
+    {
+      "block_id": "block-059",
+      "schedule_index": 59,
+      "id": "multi_turn_long_context_29",
+      "seed": 1000,
+      "arms": [
+        "identity",
+        "native-graph-context",
+        "native-graph-index"
+      ]
+    }
+  ],
+  "parent_budget": {
+    "ledger_path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v4_gpt_20261021/run/budget.json",
+    "ledger_sha256": "73b127fa2440664f13c0b43a3372de2de14c5c841deb373d4156d675df173102",
+    "cap_usd_reference": 30.0,
+    "committed_nanodollars": 2434889500,
+    "committed_usd_reference": 2.4348895,
+    "diagnostic_allocation_usd_reference": 5.0,
+    "policy": "Old ledger is read-only. Any change stops scheduling; future phases deduct diagnostic actual spend."
+  },
+  "launch": {
+    "pid": 1927691,
+    "started_at_utc": "2026-10-22T02:14:52.131158+00:00",
+    "phase": "diagnostic",
+    "expected_trajectories": 180,
+    "workers": 3,
+    "session_detached": true,
+    "stdin": "/dev/null",
+    "log": "/home/ruqi/public/CS769/experiments/bfcl_identity/v4_placement_diagnostic_20261022/background.log",
+    "plan_sha256": "ad5bc295e9ed1b574ad843ff7678a531fa2a784eece6d61d92c11888c52fdb24",
+    "claude_enabled": false,
+    "new_validation_authorized": false,
+    "next_step": "Complete all 180, review success and behavior, then consider format recommendation; never start new validation."
+  },
+  "checks": {
+    "tests": 25,
+    "subtests": 6,
+    "offline_mock_trajectories": 36,
+    "paid_preflight_requests": 0,
+    "detached_verified": {
+      "alive": true,
+      "state": "S",
+      "ppid": 1,
+      "session": 1927691,
+      "tty": 0
+    }
+  }
+}

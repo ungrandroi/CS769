@@ -1,0 +1,2855 @@
+{
+  "computed_at": "2026-10-21T23:09:33.074620+00:00",
+  "source_file": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/outputs/v3-results.json",
+  "source_sha256": "aa6046da98a6ea6ec24d8cfb74df4b07bb0466475f22eae3f3ab5fe2c1807cf4",
+  "scope": "232 formal continuation trajectories after the first-turn boundary, cumulative provider-reported input plus output. Replayed first-turn generation is excluded. No API calls were made for this analysis.",
+  "notes": [
+    "Input includes cached input and repeated tool definitions/history on each request. Counts are not dollar costs.",
+    "GPT reasoning output is a subset of completion/output tokens and is never added again. Claude separate reasoning count is unavailable, not zero.",
+    "Equivalent-whole-task figures add the frozen prefix generation usage once per trajectory; these are not new billed usage for this experiment.",
+    "Joint-success selection uses the same model, condition, and repeat identifier in both methods; Claude repeat labels do not imply coupled randomness.",
+    "Per-trajectory median relative changes differ from percentage changes in summed tokens.",
+    "Tokenizer and task pools differ across models; use within-model A/B comparisons."
+  ],
+  "models": {
+    "gpt-4.1": {
+      "all": {
+        "paired_trajectories": 11,
+        "arms": {
+          "identity": {
+            "continuation_input": 248155,
+            "continuation_output": 2246,
+            "requests": 88,
+            "tool_calls": 63,
+            "first_request_input": 28855,
+            "equivalent_whole_input": 353177,
+            "equivalent_whole_output": 4682,
+            "cached_input_subset": 228736,
+            "cache_creation_input_subset": 0,
+            "reasoning_output_subset": 0,
+            "total": 250401,
+            "equivalent_whole_total": 357859,
+            "per_trajectory": {
+              "continuation_input": 22559.545454545456,
+              "continuation_output": 204.1818181818182,
+              "total": 22763.727272727272,
+              "requests": 8.0,
+              "equivalent_whole_total": 32532.636363636364
+            },
+            "median_total": 14335
+          },
+          "native-graph-index": {
+            "continuation_input": 220573,
+            "continuation_output": 2242,
+            "requests": 78,
+            "tool_calls": 53,
+            "first_request_input": 29506,
+            "equivalent_whole_input": 325595,
+            "equivalent_whole_output": 4678,
+            "cached_input_subset": 200960,
+            "cache_creation_input_subset": 0,
+            "reasoning_output_subset": 0,
+            "total": 222815,
+            "equivalent_whole_total": 330273,
+            "per_trajectory": {
+              "continuation_input": 20052.090909090908,
+              "continuation_output": 203.8181818181818,
+              "total": 20255.909090909092,
+              "requests": 7.090909090909091,
+              "equivalent_whole_total": 30024.81818181818
+            },
+            "median_total": 14702
+          }
+        },
+        "relative_change": {
+          "continuation_input": -0.11114827426406881,
+          "continuation_output": -0.0017809439002671734,
+          "total": -0.11016729166417072,
+          "requests": -0.11363636363636365,
+          "equivalent_whole_total": -0.07708622669822474
+        },
+        "per_pair_changes": {
+          "cheaper": 3,
+          "same": 0,
+          "more": 8,
+          "median_relative_change": 0.02480581307942864
+        }
+      },
+      "joint_success": {
+        "paired_trajectories": 7,
+        "arms": {
+          "identity": {
+            "continuation_input": 163673,
+            "continuation_output": 1459,
+            "requests": 58,
+            "tool_calls": 43,
+            "first_request_input": 18198,
+            "equivalent_whole_input": 237295,
+            "equivalent_whole_output": 3015,
+            "cached_input_subset": 151296,
+            "cache_creation_input_subset": 0,
+            "reasoning_output_subset": 0,
+            "total": 165132,
+            "equivalent_whole_total": 240310,
+            "per_trajectory": {
+              "continuation_input": 23381.85714285714,
+              "continuation_output": 208.42857142857142,
+              "total": 23590.285714285714,
+              "requests": 8.285714285714286,
+              "equivalent_whole_total": 34330.0
+            },
+            "median_total": 11973
+          },
+          "native-graph-index": {
+            "continuation_input": 146116,
+            "continuation_output": 1419,
+            "requests": 52,
+            "tool_calls": 37,
+            "first_request_input": 18596,
+            "equivalent_whole_input": 219738,
+            "equivalent_whole_output": 2975,
+            "cached_input_subset": 135936,
+            "cache_creation_input_subset": 0,
+            "reasoning_output_subset": 0,
+            "total": 147535,
+            "equivalent_whole_total": 222713,
+            "per_trajectory": {
+              "continuation_input": 20873.714285714286,
+              "continuation_output": 202.71428571428572,
+              "total": 21076.428571428572,
+              "requests": 7.428571428571429,
+              "equivalent_whole_total": 31816.14285714286
+            },
+            "median_total": 12270
+          }
+        },
+        "relative_change": {
+          "continuation_input": -0.10726876149395437,
+          "continuation_output": -0.027416038382453767,
+          "total": -0.10656323426107595,
+          "requests": -0.10344827586206895,
+          "equivalent_whole_total": -0.07322624942782241
+        },
+        "per_pair_changes": {
+          "cheaper": 2,
+          "same": 0,
+          "more": 5,
+          "median_relative_change": 0.02689778840406465
+        }
+      },
+      "first_request_input_overhead": {
+        "min": 38,
+        "max": 86,
+        "mean": 59.18181818181818,
+        "median": 58,
+        "count": 11,
+        "meaning": "Measured provider input-token difference for the first post-boundary request, including index text plus its message framing. Not a count of graph backend storage."
+      },
+      "index_body_tokens": {
+        "tokenizer": "o200k_base",
+        "min": 34,
+        "max": 82,
+        "mean": 55.18181818181818
+      }
+    },
+    "gpt-5-mini": {
+      "all": {
+        "paired_trajectories": 48,
+        "arms": {
+          "identity": {
+            "continuation_input": 1408903,
+            "continuation_output": 57775,
+            "requests": 454,
+            "tool_calls": 337,
+            "first_request_input": 128301,
+            "equivalent_whole_input": 1968694,
+            "equivalent_whole_output": 76879,
+            "cached_input_subset": 1317120,
+            "cache_creation_input_subset": 0,
+            "reasoning_output_subset": 42752,
+            "total": 1466678,
+            "equivalent_whole_total": 2045573,
+            "per_trajectory": {
+              "continuation_input": 29352.145833333332,
+              "continuation_output": 1203.6458333333333,
+              "total": 30555.791666666668,
+              "requests": 9.458333333333334,
+              "equivalent_whole_total": 42616.104166666664
+            },
+            "median_total": 28798.5
+          },
+          "native-graph-index": {
+            "continuation_input": 1267474,
+            "continuation_output": 54246,
+            "requests": 413,
+            "tool_calls": 293,
+            "first_request_input": 131547,
+            "equivalent_whole_input": 1827265,
+            "equivalent_whole_output": 73350,
+            "cached_input_subset": 1180672,
+            "cache_creation_input_subset": 0,
+            "reasoning_output_subset": 40384,
+            "total": 1321720,
+            "equivalent_whole_total": 1900615,
+            "per_trajectory": {
+              "continuation_input": 26405.708333333332,
+              "continuation_output": 1130.125,
+              "total": 27535.833333333332,
+              "requests": 8.604166666666666,
+              "equivalent_whole_total": 39596.145833333336
+            },
+            "median_total": 28007.0
+          }
+        },
+        "relative_change": {
+          "continuation_input": -0.10038235421459107,
+          "continuation_output": -0.06108178277801812,
+          "total": -0.09883423628090149,
+          "requests": -0.0903083700440529,
+          "equivalent_whole_total": -0.07086425172799993
+        },
+        "per_pair_changes": {
+          "cheaper": 25,
+          "same": 0,
+          "more": 23,
+          "median_relative_change": -0.01748105361432667
+        }
+      },
+      "joint_success": {
+        "paired_trajectories": 18,
+        "arms": {
+          "identity": {
+            "continuation_input": 332338,
+            "continuation_output": 12069,
+            "requests": 126,
+            "tool_calls": 86,
+            "first_request_input": 44716,
+            "equivalent_whole_input": 516908,
+            "equivalent_whole_output": 18838,
+            "cached_input_subset": 310272,
+            "cache_creation_input_subset": 0,
+            "reasoning_output_subset": 8320,
+            "total": 344407,
+            "equivalent_whole_total": 535746,
+            "per_trajectory": {
+              "continuation_input": 18463.222222222223,
+              "continuation_output": 670.5,
+              "total": 19133.722222222223,
+              "requests": 7.0,
+              "equivalent_whole_total": 29763.666666666668
+            },
+            "median_total": 11753.5
+          },
+          "native-graph-index": {
+            "continuation_input": 311147,
+            "continuation_output": 8792,
+            "requests": 117,
+            "tool_calls": 76,
+            "first_request_input": 45860,
+            "equivalent_whole_input": 495717,
+            "equivalent_whole_output": 15561,
+            "cached_input_subset": 292480,
+            "cache_creation_input_subset": 0,
+            "reasoning_output_subset": 5568,
+            "total": 319939,
+            "equivalent_whole_total": 511278,
+            "per_trajectory": {
+              "continuation_input": 17285.944444444445,
+              "continuation_output": 488.44444444444446,
+              "total": 17774.38888888889,
+              "requests": 6.5,
+              "equivalent_whole_total": 28404.333333333332
+            },
+            "median_total": 12236.0
+          }
+        },
+        "relative_change": {
+          "continuation_input": -0.06376339750494975,
+          "continuation_output": -0.27152208136548184,
+          "total": -0.07104385218651188,
+          "requests": -0.0714285714285714,
+          "equivalent_whole_total": -0.04567089628294008
+        },
+        "per_pair_changes": {
+          "cheaper": 6,
+          "same": 0,
+          "more": 12,
+          "median_relative_change": 0.023870107950383357
+        }
+      },
+      "first_request_input_overhead": {
+        "min": 36,
+        "max": 106,
+        "mean": 67.625,
+        "median": 66.0,
+        "count": 48,
+        "meaning": "Measured provider input-token difference for the first post-boundary request, including index text plus its message framing. Not a count of graph backend storage."
+      },
+      "index_body_tokens": {
+        "tokenizer": "o200k_base",
+        "min": 30,
+        "max": 100,
+        "mean": 61.625
+      }
+    },
+    "claude-sonnet-5-5": {
+      "all": {
+        "paired_trajectories": 57,
+        "arms": {
+          "identity": {
+            "continuation_input": 2479900,
+            "continuation_output": 41843,
+            "requests": 444,
+            "tool_calls": 341,
+            "first_request_input": 284886,
+            "equivalent_whole_input": 3424186,
+            "equivalent_whole_output": 65150,
+            "cached_input_subset": 0,
+            "cache_creation_input_subset": 0,
+            "reasoning_output_subset": null,
+            "total": 2521743,
+            "equivalent_whole_total": 3489336,
+            "per_trajectory": {
+              "continuation_input": 43507.01754385965,
+              "continuation_output": 734.0877192982456,
+              "total": 44241.10526315789,
+              "requests": 7.7894736842105265,
+              "equivalent_whole_total": 61216.42105263158
+            },
+            "median_total": 40834
+          },
+          "native-graph-index": {
+            "continuation_input": 2577905,
+            "continuation_output": 46354,
+            "requests": 450,
+            "tool_calls": 348,
+            "first_request_input": 290841,
+            "equivalent_whole_input": 3522191,
+            "equivalent_whole_output": 69661,
+            "cached_input_subset": 0,
+            "cache_creation_input_subset": 0,
+            "reasoning_output_subset": null,
+            "total": 2624259,
+            "equivalent_whole_total": 3591852,
+            "per_trajectory": {
+              "continuation_input": 45226.40350877193,
+              "continuation_output": 813.2280701754386,
+              "total": 46039.63157894737,
+              "requests": 7.894736842105263,
+              "equivalent_whole_total": 63014.94736842105
+            },
+            "median_total": 41357
+          }
+        },
+        "relative_change": {
+          "continuation_input": 0.03951973869914105,
+          "continuation_output": 0.10780775756996386,
+          "total": 0.04065283417065091,
+          "requests": 0.013513513513513598,
+          "equivalent_whole_total": 0.02937980177317412
+        },
+        "per_pair_changes": {
+          "cheaper": 10,
+          "same": 0,
+          "more": 47,
+          "median_relative_change": 0.026190597333876076
+        }
+      },
+      "joint_success": {
+        "paired_trajectories": 32,
+        "arms": {
+          "identity": {
+            "continuation_input": 1175690,
+            "continuation_output": 20144,
+            "requests": 212,
+            "tool_calls": 180,
+            "first_request_input": 160636,
+            "equivalent_whole_input": 1665695,
+            "equivalent_whole_output": 35187,
+            "cached_input_subset": 0,
+            "cache_creation_input_subset": 0,
+            "reasoning_output_subset": null,
+            "total": 1195834,
+            "equivalent_whole_total": 1700882,
+            "per_trajectory": {
+              "continuation_input": 36740.3125,
+              "continuation_output": 629.5,
+              "total": 37369.8125,
+              "requests": 6.625,
+              "equivalent_whole_total": 53152.5625
+            },
+            "median_total": 29728.0
+          },
+          "native-graph-index": {
+            "continuation_input": 1186513,
+            "continuation_output": 22172,
+            "requests": 212,
+            "tool_calls": 182,
+            "first_request_input": 163535,
+            "equivalent_whole_input": 1676518,
+            "equivalent_whole_output": 37215,
+            "cached_input_subset": 0,
+            "cache_creation_input_subset": 0,
+            "reasoning_output_subset": null,
+            "total": 1208685,
+            "equivalent_whole_total": 1713733,
+            "per_trajectory": {
+              "continuation_input": 37078.53125,
+              "continuation_output": 692.875,
+              "total": 37771.40625,
+              "requests": 6.625,
+              "equivalent_whole_total": 53554.15625
+            },
+            "median_total": 36131.5
+          }
+        },
+        "relative_change": {
+          "continuation_input": 0.009205657954052482,
+          "continuation_output": 0.10067513899920577,
+          "total": 0.010746474845170884,
+          "requests": 0.0,
+          "equivalent_whole_total": 0.007555491797784919
+        },
+        "per_pair_changes": {
+          "cheaper": 6,
+          "same": 0,
+          "more": 26,
+          "median_relative_change": 0.0241233417024721
+        }
+      },
+      "first_request_input_overhead": {
+        "min": 54,
+        "max": 201,
+        "mean": 104.47368421052632,
+        "median": 93,
+        "count": 57,
+        "meaning": "Measured provider input-token difference for the first post-boundary request, including index text plus its message framing. Not a count of graph backend storage."
+      },
+      "index_body_tokens": null
+    }
+  },
+  "conditions": [
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_1",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 73772,
+            "output": 505,
+            "total": 74277,
+            "requests": 27
+          },
+          "native-graph-index": {
+            "input": 38608,
+            "output": 356,
+            "total": 38964,
+            "requests": 15
+          },
+          "first_input_overhead": 38
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_12",
+      "partition": "development",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 9438,
+            "output": 108,
+            "total": 9546,
+            "requests": 4
+          },
+          "native-graph-index": {
+            "input": 9734,
+            "output": 108,
+            "total": 9842,
+            "requests": 4
+          },
+          "first_input_overhead": 74
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_25",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 14220,
+            "output": 115,
+            "total": 14335,
+            "requests": 6
+          },
+          "native-graph-index": {
+            "input": 14590,
+            "output": 112,
+            "total": 14702,
+            "requests": 6
+          },
+          "first_input_overhead": 62
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_26",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 11834,
+            "output": 139,
+            "total": 11973,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 12136,
+            "output": 134,
+            "total": 12270,
+            "requests": 5
+          },
+          "first_input_overhead": 58
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_38",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 4968,
+            "output": 51,
+            "total": 5019,
+            "requests": 2
+          },
+          "native-graph-index": {
+            "input": 5100,
+            "output": 54,
+            "total": 5154,
+            "requests": 2
+          },
+          "first_input_overhead": 66
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_9",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 37409,
+            "output": 370,
+            "total": 37779,
+            "requests": 14
+          },
+          "native-graph-index": {
+            "input": 26458,
+            "output": 414,
+            "total": 26872,
+            "requests": 10
+          },
+          "first_input_overhead": 79
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_1",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 24328,
+            "output": 244,
+            "total": 24572,
+            "requests": 10
+          },
+          "native-graph-index": {
+            "input": 45688,
+            "output": 383,
+            "total": 46071,
+            "requests": 17
+          },
+          "first_input_overhead": 38
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_12",
+      "partition": "development",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 11108,
+            "output": 103,
+            "total": 11211,
+            "requests": 4
+          },
+          "native-graph-index": {
+            "input": 11452,
+            "output": 107,
+            "total": 11559,
+            "requests": 4
+          },
+          "first_input_overhead": 86
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_25",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 20591,
+            "output": 157,
+            "total": 20748,
+            "requests": 6
+          },
+          "native-graph-index": {
+            "input": 20931,
+            "output": 156,
+            "total": 21087,
+            "requests": 6
+          },
+          "first_input_overhead": 57
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_26",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 12262,
+            "output": 145,
+            "total": 12407,
+            "requests": 4
+          },
+          "native-graph-index": {
+            "input": 12478,
+            "output": 141,
+            "total": 12619,
+            "requests": 4
+          },
+          "first_input_overhead": 55
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_37",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 28225,
+            "output": 309,
+            "total": 28534,
+            "requests": 6
+          },
+          "native-graph-index": {
+            "input": 23398,
+            "output": 277,
+            "total": 23675,
+            "requests": 5
+          },
+          "first_input_overhead": 38
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_1",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 31168,
+            "output": 684,
+            "total": 31852,
+            "requests": 12
+          },
+          "native-graph-index": {
+            "input": 25833,
+            "output": 799,
+            "total": 26632,
+            "requests": 10
+          },
+          "first_input_overhead": 40
+        },
+        {
+          "repeat": 43,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 34197,
+            "output": 868,
+            "total": 35065,
+            "requests": 13
+          },
+          "native-graph-index": {
+            "input": 31684,
+            "output": 873,
+            "total": 32557,
+            "requests": 12
+          },
+          "first_input_overhead": 40
+        },
+        {
+          "repeat": 44,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 28208,
+            "output": 937,
+            "total": 29145,
+            "requests": 11
+          },
+          "native-graph-index": {
+            "input": 28634,
+            "output": 886,
+            "total": 29520,
+            "requests": 11
+          },
+          "first_input_overhead": 40
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_12",
+      "partition": "development",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 9884,
+            "output": 281,
+            "total": 10165,
+            "requests": 4
+          },
+          "native-graph-index": {
+            "input": 10188,
+            "output": 153,
+            "total": 10341,
+            "requests": 4
+          },
+          "first_input_overhead": 76
+        },
+        {
+          "repeat": 43,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 9888,
+            "output": 219,
+            "total": 10107,
+            "requests": 4
+          },
+          "native-graph-index": {
+            "input": 10188,
+            "output": 215,
+            "total": 10403,
+            "requests": 4
+          },
+          "first_input_overhead": 76
+        },
+        {
+          "repeat": 44,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 9884,
+            "output": 277,
+            "total": 10161,
+            "requests": 4
+          },
+          "native-graph-index": {
+            "input": 10188,
+            "output": 281,
+            "total": 10469,
+            "requests": 4
+          },
+          "first_input_overhead": 76
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_16",
+      "partition": "development",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 11364,
+            "output": 480,
+            "total": 11844,
+            "requests": 4
+          },
+          "native-graph-index": {
+            "input": 11746,
+            "output": 844,
+            "total": 12590,
+            "requests": 4
+          },
+          "first_input_overhead": 80
+        },
+        {
+          "repeat": 43,
+          "identity_passed": false,
+          "index_passed": true,
+          "identity": {
+            "input": 14493,
+            "output": 970,
+            "total": 15463,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 11760,
+            "output": 844,
+            "total": 12604,
+            "requests": 4
+          },
+          "first_input_overhead": 80
+        },
+        {
+          "repeat": 44,
+          "identity_passed": true,
+          "index_passed": false,
+          "identity": {
+            "input": 11474,
+            "output": 621,
+            "total": 12095,
+            "requests": 4
+          },
+          "native-graph-index": {
+            "input": 14746,
+            "output": 592,
+            "total": 15338,
+            "requests": 5
+          },
+          "first_input_overhead": 80
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_25",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 12382,
+            "output": 1440,
+            "total": 13822,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 20797,
+            "output": 868,
+            "total": 21665,
+            "requests": 8
+          },
+          "first_input_overhead": 64
+        },
+        {
+          "repeat": 43,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 22979,
+            "output": 915,
+            "total": 23894,
+            "requests": 9
+          },
+          "native-graph-index": {
+            "input": 20799,
+            "output": 481,
+            "total": 21280,
+            "requests": 8
+          },
+          "first_input_overhead": 64
+        },
+        {
+          "repeat": 44,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 29339,
+            "output": 3453,
+            "total": 32792,
+            "requests": 11
+          },
+          "native-graph-index": {
+            "input": 20809,
+            "output": 598,
+            "total": 21407,
+            "requests": 8
+          },
+          "first_input_overhead": 64
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_26",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 20935,
+            "output": 1057,
+            "total": 21992,
+            "requests": 8
+          },
+          "native-graph-index": {
+            "input": 7664,
+            "output": 519,
+            "total": 8183,
+            "requests": 3
+          },
+          "first_input_overhead": 60
+        },
+        {
+          "repeat": 43,
+          "identity_passed": false,
+          "index_passed": true,
+          "identity": {
+            "input": 7473,
+            "output": 505,
+            "total": 7978,
+            "requests": 3
+          },
+          "native-graph-index": {
+            "input": 18537,
+            "output": 1077,
+            "total": 19614,
+            "requests": 7
+          },
+          "first_input_overhead": 60
+        },
+        {
+          "repeat": 44,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 7470,
+            "output": 619,
+            "total": 8089,
+            "requests": 3
+          },
+          "native-graph-index": {
+            "input": 25845,
+            "output": 1630,
+            "total": 27475,
+            "requests": 9
+          },
+          "first_input_overhead": 60
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_38",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 5146,
+            "output": 42,
+            "total": 5188,
+            "requests": 2
+          },
+          "native-graph-index": {
+            "input": 7973,
+            "output": 128,
+            "total": 8101,
+            "requests": 3
+          },
+          "first_input_overhead": 68
+        },
+        {
+          "repeat": 43,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 7769,
+            "output": 132,
+            "total": 7901,
+            "requests": 3
+          },
+          "native-graph-index": {
+            "input": 5282,
+            "output": 39,
+            "total": 5321,
+            "requests": 2
+          },
+          "first_input_overhead": 68
+        },
+        {
+          "repeat": 44,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 5146,
+            "output": 42,
+            "total": 5188,
+            "requests": 2
+          },
+          "native-graph-index": {
+            "input": 5282,
+            "output": 105,
+            "total": 5387,
+            "requests": 2
+          },
+          "first_input_overhead": 68
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_6",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 61816,
+            "output": 1342,
+            "total": 63158,
+            "requests": 20
+          },
+          "native-graph-index": {
+            "input": 38939,
+            "output": 1419,
+            "total": 40358,
+            "requests": 13
+          },
+          "first_input_overhead": 102
+        },
+        {
+          "repeat": 43,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 42061,
+            "output": 1339,
+            "total": 43400,
+            "requests": 14
+          },
+          "native-graph-index": {
+            "input": 43413,
+            "output": 1949,
+            "total": 45362,
+            "requests": 14
+          },
+          "first_input_overhead": 102
+        },
+        {
+          "repeat": 44,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 45122,
+            "output": 1466,
+            "total": 46588,
+            "requests": 15
+          },
+          "native-graph-index": {
+            "input": 43289,
+            "output": 1546,
+            "total": 44835,
+            "requests": 14
+          },
+          "first_input_overhead": 102
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_9",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 45855,
+            "output": 2569,
+            "total": 48424,
+            "requests": 16
+          },
+          "native-graph-index": {
+            "input": 44163,
+            "output": 2650,
+            "total": 46813,
+            "requests": 15
+          },
+          "first_input_overhead": 81
+        },
+        {
+          "repeat": 43,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 42621,
+            "output": 3721,
+            "total": 46342,
+            "requests": 15
+          },
+          "native-graph-index": {
+            "input": 30893,
+            "output": 2263,
+            "total": 33156,
+            "requests": 11
+          },
+          "first_input_overhead": 81
+        },
+        {
+          "repeat": 44,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 56055,
+            "output": 4977,
+            "total": 61032,
+            "requests": 19
+          },
+          "native-graph-index": {
+            "input": 28082,
+            "output": 3028,
+            "total": 31110,
+            "requests": 10
+          },
+          "first_input_overhead": 81
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_1",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 35542,
+            "output": 1047,
+            "total": 36589,
+            "requests": 13
+          },
+          "native-graph-index": {
+            "input": 25833,
+            "output": 991,
+            "total": 26824,
+            "requests": 10
+          },
+          "first_input_overhead": 40
+        },
+        {
+          "repeat": 43,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 29676,
+            "output": 963,
+            "total": 30639,
+            "requests": 11
+          },
+          "native-graph-index": {
+            "input": 31626,
+            "output": 1052,
+            "total": 32678,
+            "requests": 12
+          },
+          "first_input_overhead": 40
+        },
+        {
+          "repeat": 44,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 28208,
+            "output": 1008,
+            "total": 29216,
+            "requests": 11
+          },
+          "native-graph-index": {
+            "input": 30108,
+            "output": 709,
+            "total": 30817,
+            "requests": 11
+          },
+          "first_input_overhead": 40
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_12",
+      "partition": "development",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 11312,
+            "output": 351,
+            "total": 11663,
+            "requests": 4
+          },
+          "native-graph-index": {
+            "input": 11666,
+            "output": 216,
+            "total": 11882,
+            "requests": 4
+          },
+          "first_input_overhead": 88
+        },
+        {
+          "repeat": 43,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 11314,
+            "output": 152,
+            "total": 11466,
+            "requests": 4
+          },
+          "native-graph-index": {
+            "input": 11654,
+            "output": 210,
+            "total": 11864,
+            "requests": 4
+          },
+          "first_input_overhead": 88
+        },
+        {
+          "repeat": 44,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 11314,
+            "output": 218,
+            "total": 11532,
+            "requests": 4
+          },
+          "native-graph-index": {
+            "input": 11654,
+            "output": 212,
+            "total": 11866,
+            "requests": 4
+          },
+          "first_input_overhead": 88
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_25",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 38387,
+            "output": 1702,
+            "total": 40089,
+            "requests": 9
+          },
+          "native-graph-index": {
+            "input": 27623,
+            "output": 916,
+            "total": 28539,
+            "requests": 7
+          },
+          "first_input_overhead": 59
+        },
+        {
+          "repeat": 43,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 27136,
+            "output": 720,
+            "total": 27856,
+            "requests": 7
+          },
+          "native-graph-index": {
+            "input": 33776,
+            "output": 1109,
+            "total": 34885,
+            "requests": 8
+          },
+          "first_input_overhead": 59
+        },
+        {
+          "repeat": 44,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 55305,
+            "output": 4065,
+            "total": 59370,
+            "requests": 12
+          },
+          "native-graph-index": {
+            "input": 44354,
+            "output": 3751,
+            "total": 48105,
+            "requests": 10
+          },
+          "first_input_overhead": 59
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_26",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 23398,
+            "output": 1409,
+            "total": 24807,
+            "requests": 7
+          },
+          "native-graph-index": {
+            "input": 31693,
+            "output": 1512,
+            "total": 33205,
+            "requests": 9
+          },
+          "first_input_overhead": 57
+        },
+        {
+          "repeat": 43,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 27009,
+            "output": 1347,
+            "total": 28356,
+            "requests": 8
+          },
+          "native-graph-index": {
+            "input": 24391,
+            "output": 1483,
+            "total": 25874,
+            "requests": 7
+          },
+          "first_input_overhead": 57
+        },
+        {
+          "repeat": 44,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 26916,
+            "output": 1536,
+            "total": 28452,
+            "requests": 8
+          },
+          "native-graph-index": {
+            "input": 6515,
+            "output": 817,
+            "total": 7332,
+            "requests": 2
+          },
+          "first_input_overhead": 57
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_29",
+      "partition": "development",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 12376,
+            "output": 442,
+            "total": 12818,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 12604,
+            "output": 956,
+            "total": 13560,
+            "requests": 5
+          },
+          "first_input_overhead": 44
+        },
+        {
+          "repeat": 43,
+          "identity_passed": false,
+          "index_passed": true,
+          "identity": {
+            "input": 12352,
+            "output": 500,
+            "total": 12852,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 29840,
+            "output": 1057,
+            "total": 30897,
+            "requests": 10
+          },
+          "first_input_overhead": 44
+        },
+        {
+          "repeat": 44,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 12359,
+            "output": 632,
+            "total": 12991,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 12593,
+            "output": 376,
+            "total": 12969,
+            "requests": 5
+          },
+          "first_input_overhead": 44
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_39",
+      "partition": "development",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": false,
+          "index_passed": true,
+          "identity": {
+            "input": 33544,
+            "output": 842,
+            "total": 34386,
+            "requests": 13
+          },
+          "native-graph-index": {
+            "input": 42919,
+            "output": 1410,
+            "total": 44329,
+            "requests": 16
+          },
+          "first_input_overhead": 36
+        },
+        {
+          "repeat": 43,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 33488,
+            "output": 761,
+            "total": 34249,
+            "requests": 13
+          },
+          "native-graph-index": {
+            "input": 33991,
+            "output": 1030,
+            "total": 35021,
+            "requests": 13
+          },
+          "first_input_overhead": 36
+        },
+        {
+          "repeat": 44,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 36338,
+            "output": 1054,
+            "total": 37392,
+            "requests": 14
+          },
+          "native-graph-index": {
+            "input": 34006,
+            "output": 892,
+            "total": 34898,
+            "requests": 13
+          },
+          "first_input_overhead": 36
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_6",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 59200,
+            "output": 1667,
+            "total": 60867,
+            "requests": 15
+          },
+          "native-graph-index": {
+            "input": 57221,
+            "output": 1335,
+            "total": 58556,
+            "requests": 15
+          },
+          "first_input_overhead": 106
+        },
+        {
+          "repeat": 43,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 71750,
+            "output": 1161,
+            "total": 72911,
+            "requests": 19
+          },
+          "native-graph-index": {
+            "input": 54516,
+            "output": 1158,
+            "total": 55674,
+            "requests": 14
+          },
+          "first_input_overhead": 106
+        },
+        {
+          "repeat": 44,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 63495,
+            "output": 1415,
+            "total": 64910,
+            "requests": 16
+          },
+          "native-graph-index": {
+            "input": 55201,
+            "output": 1676,
+            "total": 56877,
+            "requests": 14
+          },
+          "first_input_overhead": 106
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_9",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 42,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 42903,
+            "output": 2658,
+            "total": 45561,
+            "requests": 12
+          },
+          "native-graph-index": {
+            "input": 39982,
+            "output": 2653,
+            "total": 42635,
+            "requests": 11
+          },
+          "first_input_overhead": 81
+        },
+        {
+          "repeat": 43,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 81117,
+            "output": 1443,
+            "total": 82560,
+            "requests": 19
+          },
+          "native-graph-index": {
+            "input": 39952,
+            "output": 2342,
+            "total": 42294,
+            "requests": 11
+          },
+          "first_input_overhead": 81
+        },
+        {
+          "repeat": 44,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 51735,
+            "output": 1726,
+            "total": 53461,
+            "requests": 14
+          },
+          "native-graph-index": {
+            "input": 47022,
+            "output": 2596,
+            "total": 49618,
+            "requests": 13
+          },
+          "first_input_overhead": 81
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_1",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 55549,
+            "output": 885,
+            "total": 56434,
+            "requests": 11
+          },
+          "native-graph-index": {
+            "input": 51235,
+            "output": 915,
+            "total": 52150,
+            "requests": 10
+          },
+          "first_input_overhead": 62
+        },
+        {
+          "repeat": 2,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 55698,
+            "output": 902,
+            "total": 56600,
+            "requests": 11
+          },
+          "native-graph-index": {
+            "input": 56925,
+            "output": 994,
+            "total": 57919,
+            "requests": 11
+          },
+          "first_input_overhead": 62
+        },
+        {
+          "repeat": 3,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 56075,
+            "output": 1008,
+            "total": 57083,
+            "requests": 11
+          },
+          "native-graph-index": {
+            "input": 51141,
+            "output": 867,
+            "total": 52008,
+            "requests": 10
+          },
+          "first_input_overhead": 62
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_10",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 77226,
+            "output": 1390,
+            "total": 78616,
+            "requests": 14
+          },
+          "native-graph-index": {
+            "input": 79192,
+            "output": 1483,
+            "total": 80675,
+            "requests": 14
+          },
+          "first_input_overhead": 93
+        },
+        {
+          "repeat": 2,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 77101,
+            "output": 1324,
+            "total": 78425,
+            "requests": 14
+          },
+          "native-graph-index": {
+            "input": 79930,
+            "output": 1374,
+            "total": 81304,
+            "requests": 14
+          },
+          "first_input_overhead": 93
+        },
+        {
+          "repeat": 3,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 76512,
+            "output": 1276,
+            "total": 77788,
+            "requests": 14
+          },
+          "native-graph-index": {
+            "input": 86628,
+            "output": 1612,
+            "total": 88240,
+            "requests": 15
+          },
+          "first_input_overhead": 93
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_12",
+      "partition": "development",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 23630,
+            "output": 280,
+            "total": 23910,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 24384,
+            "output": 285,
+            "total": 24669,
+            "requests": 5
+          },
+          "first_input_overhead": 150
+        },
+        {
+          "repeat": 2,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 23630,
+            "output": 282,
+            "total": 23912,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 24376,
+            "output": 271,
+            "total": 24647,
+            "requests": 5
+          },
+          "first_input_overhead": 150
+        },
+        {
+          "repeat": 3,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 23630,
+            "output": 288,
+            "total": 23918,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 24380,
+            "output": 288,
+            "total": 24668,
+            "requests": 5
+          },
+          "first_input_overhead": 150
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_25",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 28548,
+            "output": 672,
+            "total": 29220,
+            "requests": 6
+          },
+          "native-graph-index": {
+            "input": 34841,
+            "output": 790,
+            "total": 35631,
+            "requests": 7
+          },
+          "first_input_overhead": 119
+        },
+        {
+          "repeat": 2,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 28447,
+            "output": 615,
+            "total": 29062,
+            "requests": 6
+          },
+          "native-graph-index": {
+            "input": 34838,
+            "output": 766,
+            "total": 35604,
+            "requests": 7
+          },
+          "first_input_overhead": 119
+        },
+        {
+          "repeat": 3,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 28474,
+            "output": 640,
+            "total": 29114,
+            "requests": 6
+          },
+          "native-graph-index": {
+            "input": 34966,
+            "output": 752,
+            "total": 35718,
+            "requests": 7
+          },
+          "first_input_overhead": 119
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_26",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 29348,
+            "output": 382,
+            "total": 29730,
+            "requests": 6
+          },
+          "native-graph-index": {
+            "input": 30115,
+            "output": 438,
+            "total": 30553,
+            "requests": 6
+          },
+          "first_input_overhead": 91
+        },
+        {
+          "repeat": 2,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 24544,
+            "output": 379,
+            "total": 24923,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 35604,
+            "output": 528,
+            "total": 36132,
+            "requests": 7
+          },
+          "first_input_overhead": 91
+        },
+        {
+          "repeat": 3,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 29348,
+            "output": 378,
+            "total": 29726,
+            "requests": 6
+          },
+          "native-graph-index": {
+            "input": 35584,
+            "output": 547,
+            "total": 36131,
+            "requests": 7
+          },
+          "first_input_overhead": 91
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_29",
+      "partition": "development",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": false,
+          "index_passed": true,
+          "identity": {
+            "input": 18151,
+            "output": 415,
+            "total": 18566,
+            "requests": 4
+          },
+          "native-graph-index": {
+            "input": 18452,
+            "output": 380,
+            "total": 18832,
+            "requests": 4
+          },
+          "first_input_overhead": 62
+        },
+        {
+          "repeat": 2,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 18267,
+            "output": 521,
+            "total": 18788,
+            "requests": 4
+          },
+          "native-graph-index": {
+            "input": 18458,
+            "output": 393,
+            "total": 18851,
+            "requests": 4
+          },
+          "first_input_overhead": 62
+        },
+        {
+          "repeat": 3,
+          "identity_passed": false,
+          "index_passed": true,
+          "identity": {
+            "input": 18182,
+            "output": 431,
+            "total": 18613,
+            "requests": 4
+          },
+          "native-graph-index": {
+            "input": 18452,
+            "output": 400,
+            "total": 18852,
+            "requests": 4
+          },
+          "first_input_overhead": 62
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_37",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 26254,
+            "output": 731,
+            "total": 26985,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 26712,
+            "output": 796,
+            "total": 27508,
+            "requests": 5
+          },
+          "first_input_overhead": 67
+        },
+        {
+          "repeat": 2,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 26295,
+            "output": 776,
+            "total": 27071,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 21000,
+            "output": 790,
+            "total": 21790,
+            "requests": 4
+          },
+          "first_input_overhead": 67
+        },
+        {
+          "repeat": 3,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 26229,
+            "output": 756,
+            "total": 26985,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 32683,
+            "output": 964,
+            "total": 33647,
+            "requests": 6
+          },
+          "first_input_overhead": 67
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_38",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 10174,
+            "output": 72,
+            "total": 10246,
+            "requests": 2
+          },
+          "native-graph-index": {
+            "input": 10380,
+            "output": 228,
+            "total": 10608,
+            "requests": 2
+          },
+          "first_input_overhead": 103
+        },
+        {
+          "repeat": 2,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 10174,
+            "output": 72,
+            "total": 10246,
+            "requests": 2
+          },
+          "native-graph-index": {
+            "input": 10380,
+            "output": 237,
+            "total": 10617,
+            "requests": 2
+          },
+          "first_input_overhead": 103
+        },
+        {
+          "repeat": 3,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 10174,
+            "output": 74,
+            "total": 10248,
+            "requests": 2
+          },
+          "native-graph-index": {
+            "input": 10380,
+            "output": 88,
+            "total": 10468,
+            "requests": 2
+          },
+          "first_input_overhead": 103
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_39",
+      "partition": "development",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 47426,
+            "output": 1063,
+            "total": 48489,
+            "requests": 9
+          },
+          "native-graph-index": {
+            "input": 47786,
+            "output": 1031,
+            "total": 48817,
+            "requests": 9
+          },
+          "first_input_overhead": 54
+        },
+        {
+          "repeat": 2,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 47344,
+            "output": 1036,
+            "total": 48380,
+            "requests": 9
+          },
+          "native-graph-index": {
+            "input": 40461,
+            "output": 790,
+            "total": 41251,
+            "requests": 8
+          },
+          "first_input_overhead": 54
+        },
+        {
+          "repeat": 3,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 40102,
+            "output": 788,
+            "total": 40890,
+            "requests": 8
+          },
+          "native-graph-index": {
+            "input": 40561,
+            "output": 796,
+            "total": 41357,
+            "requests": 8
+          },
+          "first_input_overhead": 54
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_6",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": false,
+          "index_passed": true,
+          "identity": {
+            "input": 69863,
+            "output": 937,
+            "total": 70800,
+            "requests": 13
+          },
+          "native-graph-index": {
+            "input": 71959,
+            "output": 916,
+            "total": 72875,
+            "requests": 13
+          },
+          "first_input_overhead": 172
+        },
+        {
+          "repeat": 2,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 64095,
+            "output": 900,
+            "total": 64995,
+            "requests": 12
+          },
+          "native-graph-index": {
+            "input": 79549,
+            "output": 1110,
+            "total": 80659,
+            "requests": 14
+          },
+          "first_input_overhead": 172
+        },
+        {
+          "repeat": 3,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 76191,
+            "output": 1032,
+            "total": 77223,
+            "requests": 14
+          },
+          "native-graph-index": {
+            "input": 73259,
+            "output": 1024,
+            "total": 74283,
+            "requests": 13
+          },
+          "first_input_overhead": 172
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_1",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 59862,
+            "output": 999,
+            "total": 60861,
+            "requests": 11
+          },
+          "native-graph-index": {
+            "input": 60512,
+            "output": 953,
+            "total": 61465,
+            "requests": 11
+          },
+          "first_input_overhead": 62
+        },
+        {
+          "repeat": 2,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 59829,
+            "output": 957,
+            "total": 60786,
+            "requests": 11
+          },
+          "native-graph-index": {
+            "input": 51351,
+            "output": 931,
+            "total": 52282,
+            "requests": 10
+          },
+          "first_input_overhead": 62
+        },
+        {
+          "repeat": 3,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 60173,
+            "output": 1028,
+            "total": 61201,
+            "requests": 11
+          },
+          "native-graph-index": {
+            "input": 60363,
+            "output": 939,
+            "total": 61302,
+            "requests": 11
+          },
+          "first_input_overhead": 62
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_10",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 82769,
+            "output": 1304,
+            "total": 84073,
+            "requests": 14
+          },
+          "native-graph-index": {
+            "input": 87828,
+            "output": 1667,
+            "total": 89495,
+            "requests": 14
+          },
+          "first_input_overhead": 117
+        },
+        {
+          "repeat": 2,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 90632,
+            "output": 1426,
+            "total": 92058,
+            "requests": 15
+          },
+          "native-graph-index": {
+            "input": 86230,
+            "output": 1469,
+            "total": 87699,
+            "requests": 14
+          },
+          "first_input_overhead": 117
+        },
+        {
+          "repeat": 3,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 84189,
+            "output": 1422,
+            "total": 85611,
+            "requests": 14
+          },
+          "native-graph-index": {
+            "input": 86709,
+            "output": 1503,
+            "total": 88212,
+            "requests": 14
+          },
+          "first_input_overhead": 117
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_12",
+      "partition": "development",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 25805,
+            "output": 287,
+            "total": 26092,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 27502,
+            "output": 486,
+            "total": 27988,
+            "requests": 5
+          },
+          "first_input_overhead": 191
+        },
+        {
+          "repeat": 2,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 25805,
+            "output": 292,
+            "total": 26097,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 27035,
+            "output": 394,
+            "total": 27429,
+            "requests": 5
+          },
+          "first_input_overhead": 191
+        },
+        {
+          "repeat": 3,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 25805,
+            "output": 303,
+            "total": 26108,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 27051,
+            "output": 417,
+            "total": 27468,
+            "requests": 5
+          },
+          "first_input_overhead": 191
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_25",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 40098,
+            "output": 736,
+            "total": 40834,
+            "requests": 6
+          },
+          "native-graph-index": {
+            "input": 40973,
+            "output": 709,
+            "total": 41682,
+            "requests": 6
+          },
+          "first_input_overhead": 125
+        },
+        {
+          "repeat": 2,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 40184,
+            "output": 782,
+            "total": 40966,
+            "requests": 6
+          },
+          "native-graph-index": {
+            "input": 41011,
+            "output": 670,
+            "total": 41681,
+            "requests": 6
+          },
+          "first_input_overhead": 125
+        },
+        {
+          "repeat": 3,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 40257,
+            "output": 822,
+            "total": 41079,
+            "requests": 6
+          },
+          "native-graph-index": {
+            "input": 41053,
+            "output": 732,
+            "total": 41785,
+            "requests": 6
+          },
+          "first_input_overhead": 125
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_26",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 29048,
+            "output": 556,
+            "total": 29604,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 23599,
+            "output": 503,
+            "total": 24102,
+            "requests": 4
+          },
+          "first_input_overhead": 109
+        },
+        {
+          "repeat": 2,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 28778,
+            "output": 497,
+            "total": 29275,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 29981,
+            "output": 715,
+            "total": 30696,
+            "requests": 5
+          },
+          "first_input_overhead": 109
+        },
+        {
+          "repeat": 3,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 22807,
+            "output": 366,
+            "total": 23173,
+            "requests": 4
+          },
+          "native-graph-index": {
+            "input": 29755,
+            "output": 571,
+            "total": 30326,
+            "requests": 5
+          },
+          "first_input_overhead": 109
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_29",
+      "partition": "development",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": false,
+          "index_passed": true,
+          "identity": {
+            "input": 23113,
+            "output": 609,
+            "total": 23722,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 23505,
+            "output": 529,
+            "total": 24034,
+            "requests": 5
+          },
+          "first_input_overhead": 62
+        },
+        {
+          "repeat": 2,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 23106,
+            "output": 515,
+            "total": 23621,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 23564,
+            "output": 664,
+            "total": 24228,
+            "requests": 5
+          },
+          "first_input_overhead": 62
+        },
+        {
+          "repeat": 3,
+          "identity_passed": false,
+          "index_passed": true,
+          "identity": {
+            "input": 23039,
+            "output": 560,
+            "total": 23599,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 32227,
+            "output": 893,
+            "total": 33120,
+            "requests": 6
+          },
+          "first_input_overhead": 62
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_37",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 72097,
+            "output": 930,
+            "total": 73027,
+            "requests": 7
+          },
+          "native-graph-index": {
+            "input": 50933,
+            "output": 792,
+            "total": 51725,
+            "requests": 5
+          },
+          "first_input_overhead": 91
+        },
+        {
+          "repeat": 2,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 61082,
+            "output": 809,
+            "total": 61891,
+            "requests": 6
+          },
+          "native-graph-index": {
+            "input": 61810,
+            "output": 857,
+            "total": 62667,
+            "requests": 6
+          },
+          "first_input_overhead": 91
+        },
+        {
+          "repeat": 3,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 50629,
+            "output": 796,
+            "total": 51425,
+            "requests": 5
+          },
+          "native-graph-index": {
+            "input": 51509,
+            "output": 935,
+            "total": 52444,
+            "requests": 5
+          },
+          "first_input_overhead": 91
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_39",
+      "partition": "development",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 47477,
+            "output": 1034,
+            "total": 48511,
+            "requests": 9
+          },
+          "native-graph-index": {
+            "input": 48559,
+            "output": 1162,
+            "total": 49721,
+            "requests": 9
+          },
+          "first_input_overhead": 54
+        },
+        {
+          "repeat": 2,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 39955,
+            "output": 748,
+            "total": 40703,
+            "requests": 8
+          },
+          "native-graph-index": {
+            "input": 48215,
+            "output": 1114,
+            "total": 49329,
+            "requests": 9
+          },
+          "first_input_overhead": 54
+        },
+        {
+          "repeat": 3,
+          "identity_passed": true,
+          "index_passed": true,
+          "identity": {
+            "input": 40174,
+            "output": 773,
+            "total": 40947,
+            "requests": 8
+          },
+          "native-graph-index": {
+            "input": 55564,
+            "output": 1282,
+            "total": 56846,
+            "requests": 10
+          },
+          "first_input_overhead": 54
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_6",
+      "partition": "validation",
+      "pairs": [
+        {
+          "repeat": 1,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 76376,
+            "output": 928,
+            "total": 77304,
+            "requests": 13
+          },
+          "native-graph-index": {
+            "input": 87994,
+            "output": 1252,
+            "total": 89246,
+            "requests": 14
+          },
+          "first_input_overhead": 201
+        },
+        {
+          "repeat": 2,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 77032,
+            "output": 1024,
+            "total": 78056,
+            "requests": 13
+          },
+          "native-graph-index": {
+            "input": 87478,
+            "output": 1186,
+            "total": 88664,
+            "requests": 14
+          },
+          "first_input_overhead": 201
+        },
+        {
+          "repeat": 3,
+          "identity_passed": false,
+          "index_passed": false,
+          "identity": {
+            "input": 83098,
+            "output": 1035,
+            "total": 84133,
+            "requests": 14
+          },
+          "native-graph-index": {
+            "input": 80983,
+            "output": 1176,
+            "total": 82159,
+            "requests": 13
+          },
+          "first_input_overhead": 201
+        }
+      ]
+    }
+  ],
+  "formal_usage_totals": {
+    "continuation_input": 8202910,
+    "continuation_output": 204706,
+    "total": 8407616,
+    "requests": 1927
+  },
+  "claude_prefix_screening_separate": {
+    "prompt_tokens": 421040,
+    "completion_tokens": 10078,
+    "total_tokens": 431118
+  },
+  "additional_setup_usage": "Connectivity and tool-smoke calls are outside the formal-trajectory totals; not inventoried here."
+}

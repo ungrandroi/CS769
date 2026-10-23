@@ -1,0 +1,71 @@
+{
+  "status": "complete",
+  "conclusion": "表示膨胀显著改善；成功率保持仍未达成，暂不进入风险压缩。",
+  "implementation": "从现有事件图生成已知状态索引和完整可见历史证据视图；审计字段留在后台，不加入准行为提醒，不做风险压缩。",
+  "formal": {
+    "conditions": 9,
+    "methods": 3,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "trajectories": 81,
+    "unique_live_responses": 419,
+    "api_errors": 0,
+    "retries": 0,
+    "length_truncations": 0
+  },
+  "scope": "仅GPT-4.1/GPT-5-mini续跑。history1000为9份既有Qwen前缀的离线token检查，无新Qwen推理。",
+  "interpretation": [
+    "4.1恢复1/2个本轮复现掉点条件，mini恢复1/1。形式上的半数恢复门槛通过，但不等于原始历史准确率达标。",
+    "恢复条件分别属于same_family与development；other_regression没有可评估的复现退化分母，mini的base16新增失败。",
+    "共同成功token分析条件性筛选了成功交集，不能替代全部成功率；三方共同成功交集主要由控制题组成。",
+    "三次seed是固定条件的重复，不是独立题目；本结果不是完整BFCL总体性能估计。"
+  ],
+  "manual_failure_review": [
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_3",
+      "scope": "formal seed42 detail plus aggregate outcomes",
+      "finding": "原文在相同cp错误后cd重试成功，readable转向询问确认；三次正式readable均未通过。"
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_16",
+      "seed": 42,
+      "finding": "一行字符串包含Line N标签；readable无wc错答3行，官方empty_turn。"
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_16",
+      "seed": 43,
+      "finding": "readable用echo插入换行后wc=3，错误改写文件；官方instance_state_mismatch。"
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_16",
+      "seed": 44,
+      "finding": "readable直接wc=1，正确通过。"
+    },
+    {
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_39",
+      "scope": "all 9 trajectories",
+      "finding": "9条回答都正确并继续下一轮cat；6条因本轮没有重新ls被官方判empty_turn。三组各1/3，保留官方分数，不将其归类为真实停止或答错。"
+    }
+  ],
+  "probe_review": "126条探针记录包含115个唯一实际请求，11条native与identity字节相同而复用。人工修正du({})默认human_readable=false的12条自动分类；原始自动标签与人工标签均保留，正式BFCL评分未变。",
+  "next_priority": "图保留为事件、关系和证据存储，从图恢复原生user/assistant/tool消息；状态索引单独开关做消融。该方向需要验证，当前不能把角色格式确定为唯一根因。",
+  "artifacts": {
+    "official_results": "v2-results.json",
+    "trajectories": "v2-trajectories.csv",
+    "case_success": "v2-success-by-case.csv",
+    "offline_tokens": "v2-offline-tokens.csv",
+    "matched_success": "v2-matched-success.json",
+    "probe_review": "v2-probe-review.csv",
+    "verification": "v2-verification.json",
+    "statistics_check": "v2-statistics-check.json",
+    "code_patch": "v2-readable.patch"
+  }
+}

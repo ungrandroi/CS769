@@ -1,0 +1,19 @@
+{
+  "environment": "ins04",
+  "local_credential_file_exists": false,
+  "credential_file_exists": true,
+  "credential_file_mode": "0o600",
+  "http_status": 200,
+  "model": "claude-sonnet-5-5",
+  "text": "OK",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 17,
+    "output_tokens": 4,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  },
+  "requests": 1,
+  "retries": 0,
+  "scope": "Minimal text connectivity check only; no BFCL or tool-use execution."
+}

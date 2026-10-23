@@ -1,0 +1,365 @@
+{
+  "model": "gpt-5-mini",
+  "source_scope": "Only the fresh fixed 180 diagnostic trajectories.",
+  "conditions": [
+    {
+      "id": "multi_turn_base_16",
+      "family": 16,
+      "passes_out_of_10": {
+        "identity": 9,
+        "native-graph-index": 6,
+        "native-graph-context": 7
+      },
+      "rates": {
+        "identity": 0.9,
+        "native-graph-index": 0.6,
+        "native-graph-context": 0.7
+      },
+      "contrasts": [
+        {
+          "candidate": "native-graph-index",
+          "reference": "identity",
+          "gains": [
+            1005
+          ],
+          "losses": [
+            1002,
+            1003,
+            1004,
+            1009
+          ]
+        },
+        {
+          "candidate": "native-graph-context",
+          "reference": "identity",
+          "gains": [
+            1005
+          ],
+          "losses": [
+            1000,
+            1004,
+            1007
+          ]
+        },
+        {
+          "candidate": "native-graph-context",
+          "reference": "native-graph-index",
+          "gains": [
+            1002,
+            1003,
+            1009
+          ],
+          "losses": [
+            1000,
+            1007
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multi_turn_base_26",
+      "family": 26,
+      "passes_out_of_10": {
+        "identity": 2,
+        "native-graph-index": 7,
+        "native-graph-context": 6
+      },
+      "rates": {
+        "identity": 0.2,
+        "native-graph-index": 0.7,
+        "native-graph-context": 0.6
+      },
+      "contrasts": [
+        {
+          "candidate": "native-graph-index",
+          "reference": "identity",
+          "gains": [
+            1000,
+            1001,
+            1002,
+            1003,
+            1008,
+            1009
+          ],
+          "losses": [
+            1005
+          ]
+        },
+        {
+          "candidate": "native-graph-context",
+          "reference": "identity",
+          "gains": [
+            1000,
+            1001,
+            1002,
+            1007,
+            1009
+          ],
+          "losses": [
+            1005
+          ]
+        },
+        {
+          "candidate": "native-graph-context",
+          "reference": "native-graph-index",
+          "gains": [
+            1007
+          ],
+          "losses": [
+            1003,
+            1008
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multi_turn_base_39",
+      "family": 39,
+      "passes_out_of_10": {
+        "identity": 2,
+        "native-graph-index": 0,
+        "native-graph-context": 0
+      },
+      "rates": {
+        "identity": 0.2,
+        "native-graph-index": 0.0,
+        "native-graph-context": 0.0
+      },
+      "contrasts": [
+        {
+          "candidate": "native-graph-index",
+          "reference": "identity",
+          "gains": [],
+          "losses": [
+            1002,
+            1009
+          ]
+        },
+        {
+          "candidate": "native-graph-context",
+          "reference": "identity",
+          "gains": [],
+          "losses": [
+            1002,
+            1009
+          ]
+        },
+        {
+          "candidate": "native-graph-context",
+          "reference": "native-graph-index",
+          "gains": [],
+          "losses": []
+        }
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_1",
+      "family": 1,
+      "passes_out_of_10": {
+        "identity": 9,
+        "native-graph-index": 9,
+        "native-graph-context": 9
+      },
+      "rates": {
+        "identity": 0.9,
+        "native-graph-index": 0.9,
+        "native-graph-context": 0.9
+      },
+      "contrasts": [
+        {
+          "candidate": "native-graph-index",
+          "reference": "identity",
+          "gains": [
+            1004
+          ],
+          "losses": [
+            1002
+          ]
+        },
+        {
+          "candidate": "native-graph-context",
+          "reference": "identity",
+          "gains": [
+            1004
+          ],
+          "losses": [
+            1009
+          ]
+        },
+        {
+          "candidate": "native-graph-context",
+          "reference": "native-graph-index",
+          "gains": [
+            1002
+          ],
+          "losses": [
+            1009
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_29",
+      "family": 29,
+      "passes_out_of_10": {
+        "identity": 4,
+        "native-graph-index": 3,
+        "native-graph-context": 1
+      },
+      "rates": {
+        "identity": 0.4,
+        "native-graph-index": 0.3,
+        "native-graph-context": 0.1
+      },
+      "contrasts": [
+        {
+          "candidate": "native-graph-index",
+          "reference": "identity",
+          "gains": [
+            1005,
+            1006
+          ],
+          "losses": [
+            1001,
+            1004,
+            1008
+          ]
+        },
+        {
+          "candidate": "native-graph-context",
+          "reference": "identity",
+          "gains": [
+            1009
+          ],
+          "losses": [
+            1001,
+            1004,
+            1007,
+            1008
+          ]
+        },
+        {
+          "candidate": "native-graph-context",
+          "reference": "native-graph-index",
+          "gains": [
+            1009
+          ],
+          "losses": [
+            1005,
+            1006,
+            1007
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multi_turn_long_context_39",
+      "family": 39,
+      "passes_out_of_10": {
+        "identity": 6,
+        "native-graph-index": 2,
+        "native-graph-context": 1
+      },
+      "rates": {
+        "identity": 0.6,
+        "native-graph-index": 0.2,
+        "native-graph-context": 0.1
+      },
+      "contrasts": [
+        {
+          "candidate": "native-graph-index",
+          "reference": "identity",
+          "gains": [],
+          "losses": [
+            1000,
+            1006,
+            1007,
+            1009
+          ]
+        },
+        {
+          "candidate": "native-graph-context",
+          "reference": "identity",
+          "gains": [],
+          "losses": [
+            1000,
+            1003,
+            1006,
+            1007,
+            1009
+          ]
+        },
+        {
+          "candidate": "native-graph-context",
+          "reference": "native-graph-index",
+          "gains": [],
+          "losses": [
+            1003
+          ]
+        }
+      ]
+    }
+  ],
+  "families": [
+    {
+      "family": 1,
+      "rates": {
+        "identity": 0.9,
+        "native-graph-index": 0.9,
+        "native-graph-context": 0.9
+      }
+    },
+    {
+      "family": 16,
+      "rates": {
+        "identity": 0.9,
+        "native-graph-index": 0.6,
+        "native-graph-context": 0.7
+      }
+    },
+    {
+      "family": 26,
+      "rates": {
+        "identity": 0.2,
+        "native-graph-index": 0.7,
+        "native-graph-context": 0.6
+      }
+    },
+    {
+      "family": 29,
+      "rates": {
+        "identity": 0.4,
+        "native-graph-index": 0.3,
+        "native-graph-context": 0.1
+      }
+    },
+    {
+      "family": 39,
+      "rates": {
+        "identity": 0.4,
+        "native-graph-index": 0.1,
+        "native-graph-context": 0.05
+      }
+    }
+  ],
+  "totals_out_of_60": {
+    "identity": 32,
+    "native-graph-index": 27,
+    "native-graph-context": 24
+  },
+  "equal_condition_rates": {
+    "identity": 0.5333333333333333,
+    "native-graph-index": 0.45,
+    "native-graph-context": 0.4
+  },
+  "equal_five_family_rates": {
+    "identity": 0.56,
+    "native-graph-index": 0.52,
+    "native-graph-context": 0.47
+  },
+  "interpretation": "Selected development cases; no noninferiority or pure-role causal claim.",
+  "source": {
+    "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/v4-diagnostic-results/summary.json",
+    "sha256": "4564389f87332f09af69e05a523a1658228d77dcc627d56ebe7a2221a7d2d649"
+  }
+}

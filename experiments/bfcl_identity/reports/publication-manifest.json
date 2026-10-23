@@ -1,0 +1,748 @@
+{
+  "version": "report-publication-1",
+  "published_at": "2026-10-23",
+  "base_branch": "ruqi",
+  "base_commit": "faba438ede65526fec2c7c5532300602fbfa1892",
+  "scope": "Readable reports and reporting attachments only; original experiment directories are unchanged.",
+  "relative_path_base": "experiments/bfcl_identity/reports/",
+  "source_mapping": {
+    "experiment-summary.html": "experiment-summary.html",
+    "experiment-evidence.html": "experiment-evidence.html",
+    "v2-readable.html": "v2-readable.html",
+    "v3-findings.html": "v3-findings.html",
+    "v3-token-statistics.html": "v3-token-statistics.html",
+    "v4-regression-review.html": "v4-regression-review.html",
+    "v4-placement-diagnostic.html": "v4-placement-diagnostic.html",
+    "v5-b-validation-results.html": "v5-b-validation-results.html",
+    "v2-results.json": "evidence/v2-results.json",
+    "v2-findings.json": "evidence/v2-findings.json",
+    "v2-verification.json": "evidence/v2-verification.json",
+    "v2-trajectories.csv": "evidence/v2-trajectories.csv",
+    "v2-success-by-case.csv": "evidence/v2-success-by-case.csv",
+    "v2-offline-tokens.csv": "evidence/v2-offline-tokens.csv",
+    "v2-matched-success.json": "evidence/v2-matched-success.json",
+    "v2-probe-review.csv": "evidence/v2-probe-review.csv",
+    "v2-statistics-check.json": "evidence/v2-statistics-check.json",
+    "v3-results.json": "evidence/v3-results.json",
+    "v3-final-analysis.json": "evidence/v3-final-analysis.json",
+    "v3-token-statistics.json": "evidence/v3-token-statistics.json",
+    "v3-success-by-case.csv": "evidence/v3-success-by-case.csv",
+    "v4-regression-review.json": "evidence/v4-regression-review.json",
+    "v4-feedback-audit.json": "evidence/v4-feedback-audit.json",
+    "v4-protocol.json": "evidence/v4-protocol.json",
+    "v4-placement-diagnostic.json": "evidence/v4-placement-diagnostic.json",
+    "v4-diagnostic-integrity.json": "evidence/v4-diagnostic-integrity.json",
+    "v4-diagnostic-behavior-review.json": "evidence/v4-diagnostic-behavior-review.json",
+    "v4-diagnostic-protocol.json": "evidence/v4-diagnostic-protocol.json",
+    "v4-diagnostic-independent-stats.json": "evidence/v4-diagnostic-independent-stats.json",
+    "v4-diagnostic-format-recommendation.json": "evidence/v4-diagnostic-format-recommendation.json",
+    "v5-b-validation-results.json": "evidence/v5-b-validation-results.json",
+    "v5-b-validation-audit.json": "evidence/v5-b-validation-audit.json",
+    "v5-b-validation-protocol.json": "evidence/v5-b-validation-protocol.json",
+    "experiment-summary-data.json": "evidence/experiment-summary-data.json",
+    "claude-connectivity.json": "evidence/claude-connectivity.json",
+    "bfcl-gpt41-coverage.json": "evidence/bfcl-gpt41-coverage.json",
+    "experiment-records/original-gpt-4.1-source.json": "evidence/records/original-gpt-4.1-source.json",
+    "experiment-records/baseline.txt": "baseline.txt",
+    "experiment-records/event_graph_dedup_offline.txt": "event_graph_dedup_offline.txt",
+    "experiment-records/diagnostic-gpt-5-mini-source.json": "evidence/records/diagnostic-gpt-5-mini-source.json",
+    "experiment-records/v2-gpt-5-mini-source.json": "evidence/records/v2-gpt-5-mini-source.json",
+    "experiment-records/v5-behavior-evidence.json": "evidence/records/v5-behavior-evidence.json",
+    "experiment-records/v5-gpt-5-mini-source.json": "evidence/records/v5-gpt-5-mini-source.json",
+    "experiment-records/v4-gpt-5-mini-source.json": "evidence/records/v4-gpt-5-mini-source.json",
+    "experiment-records/v3-gpt-5-mini-source.json": "evidence/records/v3-gpt-5-mini-source.json",
+    "experiment-records/method-verification.json": "evidence/records/method-verification.json",
+    "experiment-records/v2-offline-body-accounting.md": "evidence/records/v2-offline-body-accounting.md",
+    "experiment-records/model_comparison.md": "model_comparison.md",
+    "experiment-records/v3-claude-sonnet-5-5-source.json": "evidence/records/v3-claude-sonnet-5-5-source.json",
+    "experiment-records/dedup-Qwen3.8-27B-Q8_0-source.json": "evidence/records/dedup-Qwen3.8-27B-Q8_0-source.json",
+    "experiment-records/event_graph_dedup_eval.txt": "event_graph_dedup_eval.txt",
+    "experiment-records/original-gpt-5-mini-source.json": "evidence/records/original-gpt-5-mini-source.json",
+    "experiment-records/original-Qwen3.8-27B-Q8_0-source.json": "evidence/records/original-Qwen3.8-27B-Q8_0-source.json",
+    "experiment-records/v3-gpt-4.1-source.json": "evidence/records/v3-gpt-4.1-source.json",
+    "experiment-records/gpt41_rerun.md": "gpt41_rerun.md",
+    "experiment-records/v2-gpt-4.1-source.json": "evidence/records/v2-gpt-4.1-source.json",
+    "experiment-records/v4-gpt-4.1-source.json": "evidence/records/v4-gpt-4.1-source.json",
+    "experiment-records/v5-gpt-4.1-source.json": "evidence/records/v5-gpt-4.1-source.json",
+    "experiment-records/gpt5mini_rerun.md": "gpt5mini_rerun.md",
+    "experiment-records/v5-auxiliary-correction.json": "evidence/records/v5-auxiliary-correction.json",
+    "experiment-records/v2-offline-frozen.json": "evidence/records/v2-offline-frozen.json",
+    "experiment-records/v2-findings.json": "evidence/v2-findings.json"
+  },
+  "unchanged_attachment_copies": [
+    {
+      "source": "outputs/v2-results.json",
+      "published": "evidence/v2-results.json",
+      "sha256": "5fa1f1b58524cccc18285223740b411215c5e388eb12081bc0e36c348f24a5ef",
+      "bytes": 337360,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v2-findings.json",
+      "published": "evidence/v2-findings.json",
+      "sha256": "dc696aaf23ba47f1e3b70b366f1ed8c9b8b36da1237ffc019e00e658f9550a4f",
+      "bytes": 3313,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v2-verification.json",
+      "published": "evidence/v2-verification.json",
+      "sha256": "eb4b0d7f5001de1d3d218c3df7524fa54fb689701e1ee7a13784cf5449224327",
+      "bytes": 133669,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v2-trajectories.csv",
+      "published": "evidence/v2-trajectories.csv",
+      "sha256": "146d3e18146b5261bfff3e84f93991bf24d2ddf3aa7c020b7868e6b52272b329",
+      "bytes": 271908,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v2-success-by-case.csv",
+      "published": "evidence/v2-success-by-case.csv",
+      "sha256": "47cac79aa9cc657236b634fc5da59c2c68421a4c102a25c52c19252c9e09c525",
+      "bytes": 838,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v2-offline-tokens.csv",
+      "published": "evidence/v2-offline-tokens.csv",
+      "sha256": "589fa061c67639b65bc482b347633173043e830f971afe7cb7e1a5efbfafaea3",
+      "bytes": 10506,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v2-matched-success.json",
+      "published": "evidence/v2-matched-success.json",
+      "sha256": "64dfddf9cb1fa7fbb26dd88c6d4a30f99472f641f380d529e7788d4e5f037c04",
+      "bytes": 53686,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v2-probe-review.csv",
+      "published": "evidence/v2-probe-review.csv",
+      "sha256": "712fcbf4b205d3d455bbde27260654725a54c49b3620bc76106dad842452694d",
+      "bytes": 40591,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v2-statistics-check.json",
+      "published": "evidence/v2-statistics-check.json",
+      "sha256": "b3cfe63fc95edd56344969db6c82e6b3504cd2f678ea2ea602a936209491f852",
+      "bytes": 3443,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v3-results.json",
+      "published": "evidence/v3-results.json",
+      "sha256": "aa6046da98a6ea6ec24d8cfb74df4b07bb0466475f22eae3f3ab5fe2c1807cf4",
+      "bytes": 1790413,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v3-final-analysis.json",
+      "published": "evidence/v3-final-analysis.json",
+      "sha256": "dc238e5cb81d0ca1931b9d57dd1860312be10b190b1dc73603460875641f97a3",
+      "bytes": 124178,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v3-token-statistics.json",
+      "published": "evidence/v3-token-statistics.json",
+      "sha256": "4c29635457f6e4395324824812d91acef158265dea2acb57b39dc90235ba9264",
+      "bytes": 75647,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v3-success-by-case.csv",
+      "published": "evidence/v3-success-by-case.csv",
+      "sha256": "e67fad2fd48937953f4047fae09df3fcadf9acd666ee029d87753eab7a7ca8f9",
+      "bytes": 2983,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v4-regression-review.json",
+      "published": "evidence/v4-regression-review.json",
+      "sha256": "7dc82e2f8df52a4bb2263676cd0d02a19a22224a6eca2a27d72d05730eb36f35",
+      "bytes": 630247,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v4-feedback-audit.json",
+      "published": "evidence/v4-feedback-audit.json",
+      "sha256": "f0e179416ec18fbb3eb66fabf894b3f05ad02f76089ff0e7c1df7d450dcad8b2",
+      "bytes": 374425,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v4-protocol.json",
+      "published": "evidence/v4-protocol.json",
+      "sha256": "9e372ce6098e7ec5bfe35ac8ca3fcc8918ee262787abb29cb4a241887b7ec0d3",
+      "bytes": 4630,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v4-placement-diagnostic.json",
+      "published": "evidence/v4-placement-diagnostic.json",
+      "sha256": "b741a3f7d48f4b0fd1c66b634adfad7a9275a43a794a18d9370fbea695253b5c",
+      "bytes": 41335,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v4-diagnostic-integrity.json",
+      "published": "evidence/v4-diagnostic-integrity.json",
+      "sha256": "657942dd772df5283942bcf380d065a401ca5ad8f4a572cef155ce57854bf559",
+      "bytes": 327799,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v4-diagnostic-behavior-review.json",
+      "published": "evidence/v4-diagnostic-behavior-review.json",
+      "sha256": "63a439a6df90f5743d2c0754c48c397f271fd6b88feef4a9d26e38cde1087e18",
+      "bytes": 2133149,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v4-diagnostic-protocol.json",
+      "published": "evidence/v4-diagnostic-protocol.json",
+      "sha256": "0aa87e783416f22a13cefe528483c408c76574ce30d2bd6766c2e426166b9420",
+      "bytes": 20358,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v4-diagnostic-independent-stats.json",
+      "published": "evidence/v4-diagnostic-independent-stats.json",
+      "sha256": "b04f5ce42c6bef06ad1c6cec73d4d1479c44adba83eed3f809de7129176183f1",
+      "bytes": 7854,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v4-diagnostic-format-recommendation.json",
+      "published": "evidence/v4-diagnostic-format-recommendation.json",
+      "sha256": "6848fc78b9de090a8d2a6e8f2e4c4bdde6e9bfc2f120322314d8e30770585911",
+      "bytes": 788,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v5-b-validation-results.json",
+      "published": "evidence/v5-b-validation-results.json",
+      "sha256": "304b9ad41840d6172bbb179f3d829dde6ffc9cea48822242a52817389edb0219",
+      "bytes": 374565,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v5-b-validation-audit.json",
+      "published": "evidence/v5-b-validation-audit.json",
+      "sha256": "97bcd55e3367be5a5ce5022c0cd04192fc5257e528268ca7ed4f3f0a0cf076db",
+      "bytes": 78064,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/v5-b-validation-protocol.json",
+      "published": "evidence/v5-b-validation-protocol.json",
+      "sha256": "b0275ebe8cfed78dc1623b3c99bb36a2fc1a4d8f9686cc01a6ed7810df0f4e4f",
+      "bytes": 14654,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-summary-data.json",
+      "published": "evidence/experiment-summary-data.json",
+      "sha256": "28b42d371a9be679a4417373cc88d47dfaa70a0c5474c3ef1be8fd25514e460e",
+      "bytes": 55217,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/claude-connectivity.json",
+      "published": "evidence/claude-connectivity.json",
+      "sha256": "26f141cad570b71088ecb702d874b606c8d641cc743cd01d6b1268747e4790c8",
+      "bytes": 491,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/bfcl-gpt41-coverage.json",
+      "published": "evidence/bfcl-gpt41-coverage.json",
+      "sha256": "c05f51bb39b3de69caad1cecb469b8b537b66dfb99cae8895161f8779c29d0d4",
+      "bytes": 6157,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/original-gpt-4.1-source.json",
+      "published": "evidence/records/original-gpt-4.1-source.json",
+      "sha256": "7430683a655c8bb720a6d406244ca92871f89b44f9166b2948a3cb2e75d5a684",
+      "bytes": 47115,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/diagnostic-gpt-5-mini-source.json",
+      "published": "evidence/records/diagnostic-gpt-5-mini-source.json",
+      "sha256": "4564389f87332f09af69e05a523a1658228d77dcc627d56ebe7a2221a7d2d649",
+      "bytes": 1310340,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/v2-gpt-5-mini-source.json",
+      "published": "evidence/records/v2-gpt-5-mini-source.json",
+      "sha256": "5fa1f1b58524cccc18285223740b411215c5e388eb12081bc0e36c348f24a5ef",
+      "bytes": 337360,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/v5-behavior-evidence.json",
+      "published": "evidence/records/v5-behavior-evidence.json",
+      "sha256": "b5170c9aabacd8e87e2d490d7721596a9f03e279eea0f49f965724b583e3db49",
+      "bytes": 8124738,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/v5-gpt-5-mini-source.json",
+      "published": "evidence/records/v5-gpt-5-mini-source.json",
+      "sha256": "0d0f8158ad6a1b3f16091bbb9ce1e58dca640d6e0ec9bc0d4334a2f4a6558458",
+      "bytes": 3312360,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/v4-gpt-5-mini-source.json",
+      "published": "evidence/records/v4-gpt-5-mini-source.json",
+      "sha256": "2984782f320464ce9d9c5879536eb27ab31665532b4d0bc0b9d8fbb57f4c0808",
+      "bytes": 1148424,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/v3-gpt-5-mini-source.json",
+      "published": "evidence/records/v3-gpt-5-mini-source.json",
+      "sha256": "aa6046da98a6ea6ec24d8cfb74df4b07bb0466475f22eae3f3ab5fe2c1807cf4",
+      "bytes": 1790413,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/method-verification.json",
+      "published": "evidence/records/method-verification.json",
+      "sha256": "8a708b4f3715d8b8f8b69427246f332ab7929d2050dfc182a946c5bdfd59ee13",
+      "bytes": 13129,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/v2-offline-body-accounting.md",
+      "published": "evidence/records/v2-offline-body-accounting.md",
+      "sha256": "9d0f49386b7fe63466a18a60fcdf49c77d1141821f4be8a7b308ac966b63785d",
+      "bytes": 3269,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/v3-claude-sonnet-5-5-source.json",
+      "published": "evidence/records/v3-claude-sonnet-5-5-source.json",
+      "sha256": "aa6046da98a6ea6ec24d8cfb74df4b07bb0466475f22eae3f3ab5fe2c1807cf4",
+      "bytes": 1790413,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/dedup-Qwen3.8-27B-Q8_0-source.json",
+      "published": "evidence/records/dedup-Qwen3.8-27B-Q8_0-source.json",
+      "sha256": "5a59b9ad42d1cf4f23ef47f807ddd529cefee239ef7d78d9f80d481143cf4a5c",
+      "bytes": 13401,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/original-gpt-5-mini-source.json",
+      "published": "evidence/records/original-gpt-5-mini-source.json",
+      "sha256": "65c9abdb556880eea1e901551251b244f4a65c6b7a7181da15384c536149dfdb",
+      "bytes": 47357,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/original-Qwen3.8-27B-Q8_0-source.json",
+      "published": "evidence/records/original-Qwen3.8-27B-Q8_0-source.json",
+      "sha256": "fe3503467cd105c169916863aadeb0f1be0ee6501264f07895f4c9b5f5ecc1d0",
+      "bytes": 75532,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/v3-gpt-4.1-source.json",
+      "published": "evidence/records/v3-gpt-4.1-source.json",
+      "sha256": "aa6046da98a6ea6ec24d8cfb74df4b07bb0466475f22eae3f3ab5fe2c1807cf4",
+      "bytes": 1790413,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/v2-gpt-4.1-source.json",
+      "published": "evidence/records/v2-gpt-4.1-source.json",
+      "sha256": "5fa1f1b58524cccc18285223740b411215c5e388eb12081bc0e36c348f24a5ef",
+      "bytes": 337360,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/v4-gpt-4.1-source.json",
+      "published": "evidence/records/v4-gpt-4.1-source.json",
+      "sha256": "2984782f320464ce9d9c5879536eb27ab31665532b4d0bc0b9d8fbb57f4c0808",
+      "bytes": 1148424,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/v5-gpt-4.1-source.json",
+      "published": "evidence/records/v5-gpt-4.1-source.json",
+      "sha256": "0d0f8158ad6a1b3f16091bbb9ce1e58dca640d6e0ec9bc0d4334a2f4a6558458",
+      "bytes": 3312360,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/v5-auxiliary-correction.json",
+      "published": "evidence/records/v5-auxiliary-correction.json",
+      "sha256": "172ab2f6105cd462a32d7790b15037fcf21501efe301dfc1bf129402f2877d8a",
+      "bytes": 2658,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/v2-offline-frozen.json",
+      "published": "evidence/records/v2-offline-frozen.json",
+      "sha256": "dab0bc776035bb3737bf2650db9649e6fcce1015cbd12e84dfa9b3839bd7c3bf",
+      "bytes": 238287,
+      "content_unchanged": true
+    },
+    {
+      "source": "outputs/experiment-records/v2-findings.json",
+      "published": "evidence/v2-findings.json",
+      "sha256": "dc696aaf23ba47f1e3b70b366f1ed8c9b8b36da1237ffc019e00e658f9550a4f",
+      "bytes": 3313,
+      "content_unchanged": true
+    }
+  ],
+  "presentation_changes": [
+    "Add repository-relative navigation and Markdown views of existing HTML reports.",
+    "Create a V2 readable view from existing findings, official aggregates and offline accounting.",
+    "Label earlier reports as historical snapshots; scope V3 preservation language to observed counts.",
+    "Retain the V5 auxiliary correction from 8/13 to 7/11; do not change official scores."
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "2087efcf81dafc8f572f68df52b4feb316162e69931fc6e34d85aaaf92e16b0e",
+      "bytes": 111
+    },
+    {
+      "path": "README.md",
+      "sha256": "a2c0a28d2157b80eca6ee929e758cac563aa2798ba217011ebfe06279ba01427",
+      "bytes": 3069
+    },
+    {
+      "path": "evidence/README.md",
+      "sha256": "3b3c9eb31e143fb47da32c51e9e58969b99badad5211ed15ccfb3597894bbc80",
+      "bytes": 1409
+    },
+    {
+      "path": "evidence/bfcl-gpt41-coverage.json",
+      "sha256": "c05f51bb39b3de69caad1cecb469b8b537b66dfb99cae8895161f8779c29d0d4",
+      "bytes": 6157
+    },
+    {
+      "path": "evidence/claude-connectivity.json",
+      "sha256": "26f141cad570b71088ecb702d874b606c8d641cc743cd01d6b1268747e4790c8",
+      "bytes": 491
+    },
+    {
+      "path": "evidence/experiment-summary-data.json",
+      "sha256": "28b42d371a9be679a4417373cc88d47dfaa70a0c5474c3ef1be8fd25514e460e",
+      "bytes": 55217
+    },
+    {
+      "path": "evidence/records/dedup-Qwen3.8-27B-Q8_0-source.json",
+      "sha256": "5a59b9ad42d1cf4f23ef47f807ddd529cefee239ef7d78d9f80d481143cf4a5c",
+      "bytes": 13401
+    },
+    {
+      "path": "evidence/records/diagnostic-gpt-5-mini-source.json",
+      "sha256": "4564389f87332f09af69e05a523a1658228d77dcc627d56ebe7a2221a7d2d649",
+      "bytes": 1310340
+    },
+    {
+      "path": "evidence/records/method-verification.json",
+      "sha256": "8a708b4f3715d8b8f8b69427246f332ab7929d2050dfc182a946c5bdfd59ee13",
+      "bytes": 13129
+    },
+    {
+      "path": "evidence/records/original-Qwen3.8-27B-Q8_0-source.json",
+      "sha256": "fe3503467cd105c169916863aadeb0f1be0ee6501264f07895f4c9b5f5ecc1d0",
+      "bytes": 75532
+    },
+    {
+      "path": "evidence/records/original-gpt-4.1-source.json",
+      "sha256": "7430683a655c8bb720a6d406244ca92871f89b44f9166b2948a3cb2e75d5a684",
+      "bytes": 47115
+    },
+    {
+      "path": "evidence/records/original-gpt-5-mini-source.json",
+      "sha256": "65c9abdb556880eea1e901551251b244f4a65c6b7a7181da15384c536149dfdb",
+      "bytes": 47357
+    },
+    {
+      "path": "evidence/records/v2-gpt-4.1-source.json",
+      "sha256": "5fa1f1b58524cccc18285223740b411215c5e388eb12081bc0e36c348f24a5ef",
+      "bytes": 337360
+    },
+    {
+      "path": "evidence/records/v2-gpt-5-mini-source.json",
+      "sha256": "5fa1f1b58524cccc18285223740b411215c5e388eb12081bc0e36c348f24a5ef",
+      "bytes": 337360
+    },
+    {
+      "path": "evidence/records/v2-offline-body-accounting.md",
+      "sha256": "9d0f49386b7fe63466a18a60fcdf49c77d1141821f4be8a7b308ac966b63785d",
+      "bytes": 3269
+    },
+    {
+      "path": "evidence/records/v2-offline-frozen.json",
+      "sha256": "dab0bc776035bb3737bf2650db9649e6fcce1015cbd12e84dfa9b3839bd7c3bf",
+      "bytes": 238287
+    },
+    {
+      "path": "evidence/records/v3-claude-sonnet-5-5-source.json",
+      "sha256": "aa6046da98a6ea6ec24d8cfb74df4b07bb0466475f22eae3f3ab5fe2c1807cf4",
+      "bytes": 1790413
+    },
+    {
+      "path": "evidence/records/v3-gpt-4.1-source.json",
+      "sha256": "aa6046da98a6ea6ec24d8cfb74df4b07bb0466475f22eae3f3ab5fe2c1807cf4",
+      "bytes": 1790413
+    },
+    {
+      "path": "evidence/records/v3-gpt-5-mini-source.json",
+      "sha256": "aa6046da98a6ea6ec24d8cfb74df4b07bb0466475f22eae3f3ab5fe2c1807cf4",
+      "bytes": 1790413
+    },
+    {
+      "path": "evidence/records/v4-gpt-4.1-source.json",
+      "sha256": "2984782f320464ce9d9c5879536eb27ab31665532b4d0bc0b9d8fbb57f4c0808",
+      "bytes": 1148424
+    },
+    {
+      "path": "evidence/records/v4-gpt-5-mini-source.json",
+      "sha256": "2984782f320464ce9d9c5879536eb27ab31665532b4d0bc0b9d8fbb57f4c0808",
+      "bytes": 1148424
+    },
+    {
+      "path": "evidence/records/v5-auxiliary-correction.json",
+      "sha256": "172ab2f6105cd462a32d7790b15037fcf21501efe301dfc1bf129402f2877d8a",
+      "bytes": 2658
+    },
+    {
+      "path": "evidence/records/v5-behavior-evidence.json",
+      "sha256": "b5170c9aabacd8e87e2d490d7721596a9f03e279eea0f49f965724b583e3db49",
+      "bytes": 8124738
+    },
+    {
+      "path": "evidence/records/v5-gpt-4.1-source.json",
+      "sha256": "0d0f8158ad6a1b3f16091bbb9ce1e58dca640d6e0ec9bc0d4334a2f4a6558458",
+      "bytes": 3312360
+    },
+    {
+      "path": "evidence/records/v5-gpt-5-mini-source.json",
+      "sha256": "0d0f8158ad6a1b3f16091bbb9ce1e58dca640d6e0ec9bc0d4334a2f4a6558458",
+      "bytes": 3312360
+    },
+    {
+      "path": "evidence/v2-findings.json",
+      "sha256": "dc696aaf23ba47f1e3b70b366f1ed8c9b8b36da1237ffc019e00e658f9550a4f",
+      "bytes": 3313
+    },
+    {
+      "path": "evidence/v2-matched-success.json",
+      "sha256": "64dfddf9cb1fa7fbb26dd88c6d4a30f99472f641f380d529e7788d4e5f037c04",
+      "bytes": 53686
+    },
+    {
+      "path": "evidence/v2-offline-tokens.csv",
+      "sha256": "589fa061c67639b65bc482b347633173043e830f971afe7cb7e1a5efbfafaea3",
+      "bytes": 10506
+    },
+    {
+      "path": "evidence/v2-probe-review.csv",
+      "sha256": "712fcbf4b205d3d455bbde27260654725a54c49b3620bc76106dad842452694d",
+      "bytes": 40591
+    },
+    {
+      "path": "evidence/v2-results.json",
+      "sha256": "5fa1f1b58524cccc18285223740b411215c5e388eb12081bc0e36c348f24a5ef",
+      "bytes": 337360
+    },
+    {
+      "path": "evidence/v2-statistics-check.json",
+      "sha256": "b3cfe63fc95edd56344969db6c82e6b3504cd2f678ea2ea602a936209491f852",
+      "bytes": 3443
+    },
+    {
+      "path": "evidence/v2-success-by-case.csv",
+      "sha256": "47cac79aa9cc657236b634fc5da59c2c68421a4c102a25c52c19252c9e09c525",
+      "bytes": 838
+    },
+    {
+      "path": "evidence/v2-trajectories.csv",
+      "sha256": "146d3e18146b5261bfff3e84f93991bf24d2ddf3aa7c020b7868e6b52272b329",
+      "bytes": 271908
+    },
+    {
+      "path": "evidence/v2-verification.json",
+      "sha256": "eb4b0d7f5001de1d3d218c3df7524fa54fb689701e1ee7a13784cf5449224327",
+      "bytes": 133669
+    },
+    {
+      "path": "evidence/v3-final-analysis.json",
+      "sha256": "dc238e5cb81d0ca1931b9d57dd1860312be10b190b1dc73603460875641f97a3",
+      "bytes": 124178
+    },
+    {
+      "path": "evidence/v3-results.json",
+      "sha256": "aa6046da98a6ea6ec24d8cfb74df4b07bb0466475f22eae3f3ab5fe2c1807cf4",
+      "bytes": 1790413
+    },
+    {
+      "path": "evidence/v3-success-by-case.csv",
+      "sha256": "e67fad2fd48937953f4047fae09df3fcadf9acd666ee029d87753eab7a7ca8f9",
+      "bytes": 2983
+    },
+    {
+      "path": "evidence/v3-token-statistics.json",
+      "sha256": "4c29635457f6e4395324824812d91acef158265dea2acb57b39dc90235ba9264",
+      "bytes": 75647
+    },
+    {
+      "path": "evidence/v4-diagnostic-behavior-review.json",
+      "sha256": "63a439a6df90f5743d2c0754c48c397f271fd6b88feef4a9d26e38cde1087e18",
+      "bytes": 2133149
+    },
+    {
+      "path": "evidence/v4-diagnostic-format-recommendation.json",
+      "sha256": "6848fc78b9de090a8d2a6e8f2e4c4bdde6e9bfc2f120322314d8e30770585911",
+      "bytes": 788
+    },
+    {
+      "path": "evidence/v4-diagnostic-independent-stats.json",
+      "sha256": "b04f5ce42c6bef06ad1c6cec73d4d1479c44adba83eed3f809de7129176183f1",
+      "bytes": 7854
+    },
+    {
+      "path": "evidence/v4-diagnostic-integrity.json",
+      "sha256": "657942dd772df5283942bcf380d065a401ca5ad8f4a572cef155ce57854bf559",
+      "bytes": 327799
+    },
+    {
+      "path": "evidence/v4-diagnostic-protocol.json",
+      "sha256": "0aa87e783416f22a13cefe528483c408c76574ce30d2bd6766c2e426166b9420",
+      "bytes": 20358
+    },
+    {
+      "path": "evidence/v4-feedback-audit.json",
+      "sha256": "f0e179416ec18fbb3eb66fabf894b3f05ad02f76089ff0e7c1df7d450dcad8b2",
+      "bytes": 374425
+    },
+    {
+      "path": "evidence/v4-placement-diagnostic.json",
+      "sha256": "b741a3f7d48f4b0fd1c66b634adfad7a9275a43a794a18d9370fbea695253b5c",
+      "bytes": 41335
+    },
+    {
+      "path": "evidence/v4-protocol.json",
+      "sha256": "9e372ce6098e7ec5bfe35ac8ca3fcc8918ee262787abb29cb4a241887b7ec0d3",
+      "bytes": 4630
+    },
+    {
+      "path": "evidence/v4-regression-review.json",
+      "sha256": "7dc82e2f8df52a4bb2263676cd0d02a19a22224a6eca2a27d72d05730eb36f35",
+      "bytes": 630247
+    },
+    {
+      "path": "evidence/v5-b-validation-audit.json",
+      "sha256": "97bcd55e3367be5a5ce5022c0cd04192fc5257e528268ca7ed4f3f0a0cf076db",
+      "bytes": 78064
+    },
+    {
+      "path": "evidence/v5-b-validation-protocol.json",
+      "sha256": "b0275ebe8cfed78dc1623b3c99bb36a2fc1a4d8f9686cc01a6ed7810df0f4e4f",
+      "bytes": 14654
+    },
+    {
+      "path": "evidence/v5-b-validation-results.json",
+      "sha256": "304b9ad41840d6172bbb179f3d829dde6ffc9cea48822242a52817389edb0219",
+      "bytes": 374565
+    },
+    {
+      "path": "experiment-evidence.html",
+      "sha256": "ce24dd3c78ec445a97810c31277f413bc694ac38c13eebd7c35c83319331503e",
+      "bytes": 176680
+    },
+    {
+      "path": "experiment-evidence.md",
+      "sha256": "1c3e5d1e810584ae9c37674041189e160b639bf501c613a01f5248e80e065c68",
+      "bytes": 112340
+    },
+    {
+      "path": "experiment-summary.html",
+      "sha256": "cf0b2e07742b646042a9eeae0c830b655a444f4d85f71b1d0f48685b114b6157",
+      "bytes": 13607
+    },
+    {
+      "path": "experiment-summary.md",
+      "sha256": "501370e0bba7225980ba16527446ae1fc47e36f19ec6a7211ed857bfab48d084",
+      "bytes": 9326
+    },
+    {
+      "path": "v2-readable.html",
+      "sha256": "82d2d57d4eb6a6b3bd22ccb4e80c0b459b9d871939b73e99124bc02f0fec87d9",
+      "bytes": 6093
+    },
+    {
+      "path": "v2-readable.md",
+      "sha256": "4942d3f0d8089af40e97560fc47c577e568df39d26b03388edf92788a35c949e",
+      "bytes": 4921
+    },
+    {
+      "path": "v3-findings.html",
+      "sha256": "2a7e059f4cc98bd60d1e2729ae5e427330eb19800f315c3bad77d6e2c0f06d92",
+      "bytes": 21460
+    },
+    {
+      "path": "v3-findings.md",
+      "sha256": "9512cd43a1dd9359d11f4afb594a0ab1400c6404b1fe2722a64c4847ea8fb9df",
+      "bytes": 16389
+    },
+    {
+      "path": "v3-token-statistics.html",
+      "sha256": "54096b70f9dba08a9363cc774777ca1b5d74a737b7a55655f8c1e487a6490c78",
+      "bytes": 26801
+    },
+    {
+      "path": "v3-token-statistics.md",
+      "sha256": "4aef1a1dc713f6479b0816b53f39cfbc558f797ac7015b1bf8158d1453dcf993",
+      "bytes": 16724
+    },
+    {
+      "path": "v4-placement-diagnostic.html",
+      "sha256": "209f6fc114e5f5a6d85e8ee7e3dc9ef8a2b317f563ea2bb3e203db91e20a1136",
+      "bytes": 24985
+    },
+    {
+      "path": "v4-placement-diagnostic.md",
+      "sha256": "972c26a96d2a30a9a590f384cc3d5a6e3df72a5c80f0a7c6e725b46f26757bc4",
+      "bytes": 20001
+    },
+    {
+      "path": "v4-regression-review.html",
+      "sha256": "10f09e49e295103cbe793b67c357de5a7bfd4e00d9b6c7a3eff04863b8e9c43f",
+      "bytes": 27348
+    },
+    {
+      "path": "v4-regression-review.md",
+      "sha256": "95ee2871d5859851d43018ffaffce317af7af5d7786eee55959f2150515dfe95",
+      "bytes": 21694
+    },
+    {
+      "path": "v5-b-validation-results.html",
+      "sha256": "84650c2ca5e63cffd534797ec375b737d19e4580383a0648be189c0074ee1c54",
+      "bytes": 35746
+    },
+    {
+      "path": "v5-b-validation-results.md",
+      "sha256": "e5e14353b6f5360a35cce44bd6ee4d11bc285cf10af41221806dec7f1c0f24df",
+      "bytes": 25144
+    }
+  ]
+}

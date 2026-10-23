@@ -1,0 +1,10 @@
+model,task,partition,original_passes,compact_passes,readable_passes,repeats,regression_reproduced,recovered,control,paired_loss_seeds,paired_gain_seeds
+gpt-4.1,multi_turn_base_3,development,3,0,0,3,True,False,,"[42, 43, 44]",[]
+gpt-4.1,multi_turn_long_context_3,same_family,3,0,3,3,True,True,,[],[]
+gpt-4.1,multi_turn_base_12,control,3,3,3,3,False,False,pass,[],[]
+gpt-4.1,multi_turn_long_context_12,control,3,3,3,3,False,False,pass,[],[]
+gpt-5-mini,multi_turn_base_16,other_regression,3,3,1,3,False,False,,"[42, 43]",[]
+gpt-5-mini,multi_turn_long_context_29,development,2,1,2,3,True,True,,[],[]
+gpt-5-mini,multi_turn_long_context_39,other_regression,1,1,1,3,False,False,,[42],[44]
+gpt-5-mini,multi_turn_base_12,control,3,3,3,3,False,False,pass,[],[]
+gpt-5-mini,multi_turn_long_context_12,control,3,3,3,3,False,False,pass,[],[]

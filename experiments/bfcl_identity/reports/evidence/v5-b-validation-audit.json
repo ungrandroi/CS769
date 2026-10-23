@@ -1,0 +1,3147 @@
+{
+  "version": "independent-v5-complete-audit-1",
+  "created_at": "2026-10-22T15:00:12.100009+00:00",
+  "scope": {
+    "completed_prefixes": 144,
+    "completed_continuations": 348,
+    "all_prefix_artifact_hashes_checked": 1870,
+    "native_requests_checked": 3197,
+    "native_responses_checked": 3197,
+    "continuation_manifest_and_official_score_hashes_checked": 348,
+    "verification": "Full 492 completed trajectories read; every native usage record reconciled to ledger. Prefix/native/tool boundary invariants checked on all continuation requests. Official outcomes unchanged. No model calls.",
+    "boundary_of_claim": "Eligible actual first-turn-pass, nonempty-index FS-containing new families; not all BFCL. Statistical report is separate from semantic behavior review.",
+    "completed_vs_attempts": "492 completed trajectories include 144 successfully completed prefix executions and 348 continuations. One earlier import failure before any model request is retained separately in recovery evidence and was not a sampled model outcome; this audit does not recalculate that prior recovery determination."
+  },
+  "source_hashes": {
+    "plan.json": "bafdcc4a3c5e009727bbe1a1a8e79b8aa318475ed9a03eeed5ba6aec37ff5fa1",
+    "budget.json": "cd694d44f4f560762ac4a9807b07a4f49fd6a1f8173387eafbc06cddfba726ed",
+    "validation/summary.json": "0d0f8158ad6a1b3f16091bbb9ce1e58dca640d6e0ec9bc0d4334a2f4a6558458",
+    "validation/eligibility.json": "45a78edc903ba78e194481f86fb8a51265afc315392396c1910c4362d48d3de3",
+    "validation/continuation-plan.json": "10576055bb39ec3d2fb8ce0ad0ef59cbbf1a920cd810e677d28db9ec6f9ac04e",
+    "validation/progress.json": "fe4e79d3b9ed8b1520e81df561abc920551fc9e91ea6a93bcb3d75b8003b1579",
+    "screening-progress.json": "be9bd872cb2b267969b3b68a7d811003deea879da3f0cd45990d45e9eeec8f22"
+  },
+  "issues": [],
+  "audit_passed": true,
+  "coverage": [
+    {
+      "model": "gpt-4.1",
+      "screened": 72,
+      "first_turn_pass": 58,
+      "boundary_reached": 72,
+      "native_replay_verified": 72,
+      "index_nonempty": 53,
+      "eligible_conditions": 45,
+      "eligible_families": 25,
+      "excluded": 27,
+      "overlapping_exclusion_reasons": {
+        "official_first_turn_failed": 14,
+        "empty_graph_index": 19
+      },
+      "primary_exclusion_reasons": {
+        "official_first_turn_failed": 14,
+        "empty_graph_index": 13
+      },
+      "eligible_by_category": {
+        "multi_turn_long_context": 23,
+        "multi_turn_base": 22
+      },
+      "eligible_mixed_tool_conditions": 45,
+      "excluded_conditions": [
+        {
+          "id": "multi_turn_base_0",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_2",
+          "reasons": [
+            "official_first_turn_failed",
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_2",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_8",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_8",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_13",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_18",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_19",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_19",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_base_22",
+          "reasons": [
+            "official_first_turn_failed",
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_22",
+          "reasons": [
+            "official_first_turn_failed",
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_24",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_base_27",
+          "reasons": [
+            "official_first_turn_failed",
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_base_28",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_28",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_base_34",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_34",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_base_36",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_36",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_41",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_41",
+          "reasons": [
+            "official_first_turn_failed",
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_base_42",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_42",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_45",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_45",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_base_47",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_47",
+          "reasons": [
+            "official_first_turn_failed",
+            "empty_graph_index"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "screened": 72,
+      "first_turn_pass": 51,
+      "boundary_reached": 71,
+      "native_replay_verified": 71,
+      "index_nonempty": 60,
+      "eligible_conditions": 43,
+      "eligible_families": 25,
+      "excluded": 29,
+      "overlapping_exclusion_reasons": {
+        "official_first_turn_failed": 21,
+        "completed_first_turn_boundary_not_reached": 1,
+        "native_evidence_not_verified": 1,
+        "empty_graph_index": 12
+      },
+      "primary_exclusion_reasons": {
+        "official_first_turn_failed": 21,
+        "empty_graph_index": 8
+      },
+      "eligible_by_category": {
+        "multi_turn_long_context": 21,
+        "multi_turn_base": 22
+      },
+      "eligible_mixed_tool_conditions": 43,
+      "excluded_conditions": [
+        {
+          "id": "multi_turn_base_0",
+          "reasons": [
+            "official_first_turn_failed",
+            "completed_first_turn_boundary_not_reached",
+            "native_evidence_not_verified",
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_base_2",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_2",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_8",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_8",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_13",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_15",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_15",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_18",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_18",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_19",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_19",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_20",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_23",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_24",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_30",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_34",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_34",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_35",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_36",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_36",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_41",
+          "reasons": [
+            "official_first_turn_failed",
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_41",
+          "reasons": [
+            "official_first_turn_failed",
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_base_42",
+          "reasons": [
+            "official_first_turn_failed",
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_42",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_45",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_45",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_base_47",
+          "reasons": [
+            "empty_graph_index"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_47",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        }
+      ]
+    }
+  ],
+  "success": {
+    "raw_counts": [
+      {
+        "model": "gpt-4.1",
+        "mode": "identity",
+        "passed": 28,
+        "total": 45,
+        "rate": 0.6222222222222222
+      },
+      {
+        "model": "gpt-4.1",
+        "mode": "native-graph-index",
+        "passed": 28,
+        "total": 45,
+        "rate": 0.6222222222222222
+      },
+      {
+        "model": "gpt-5-mini",
+        "mode": "identity",
+        "passed": 51,
+        "total": 129,
+        "rate": 0.3953488372093023
+      },
+      {
+        "model": "gpt-5-mini",
+        "mode": "native-graph-index",
+        "passed": 44,
+        "total": 129,
+        "rate": 0.34108527131782945
+      }
+    ],
+    "family_weighted_by_model": [
+      {
+        "model": "gpt-4.1",
+        "eligible_families": 25,
+        "rates": {
+          "identity": 0.6,
+          "native-graph-index": 0.6
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "eligible_families": 25,
+        "rates": {
+          "identity": 0.44,
+          "native-graph-index": 0.38666666666666666
+        },
+        "delta": -0.053333333333333344
+      }
+    ],
+    "primary_equal_model_equal_family_rates": {
+      "identity": 0.52,
+      "native-graph-index": 0.4933333333333333
+    },
+    "primary_delta": -0.026666666666666727,
+    "raw_combined": {
+      "identity": {
+        "passed": 79,
+        "total": 174
+      },
+      "native-graph-index": {
+        "passed": 72,
+        "total": 174
+      }
+    },
+    "bootstrap": {
+      "draws": 20000,
+      "seed": 769,
+      "union_families": 27,
+      "invalid_pooled_draws": 0,
+      "confidence": 0.95,
+      "margin": 0.05,
+      "independent_results": {
+        "gpt-4.1": {
+          "estimate": 0.0,
+          "descriptive_bootstrap_95_interval": [
+            -0.08,
+            0.08
+          ],
+          "inference_interval": [
+            -0.08,
+            0.08
+          ],
+          "limitations": [],
+          "verdict": "insufficient_evidence",
+          "valid_draws": 20000
+        },
+        "gpt-5-mini": {
+          "estimate": -0.05333333333333334,
+          "descriptive_bootstrap_95_interval": [
+            -0.1346153846153846,
+            0.038461538461538464
+          ],
+          "inference_interval": [
+            -0.1346153846153846,
+            0.038461538461538464
+          ],
+          "limitations": [],
+          "verdict": "insufficient_evidence",
+          "valid_draws": 20000
+        },
+        "pooled": {
+          "estimate": -0.02666666666666667,
+          "descriptive_bootstrap_95_interval": [
+            -0.07807692307692307,
+            0.024167572463768036
+          ],
+          "inference_interval": [
+            -0.07807692307692307,
+            0.024167572463768036
+          ],
+          "limitations": [],
+          "verdict": "insufficient_evidence",
+          "valid_draws": 20000
+        }
+      }
+    },
+    "pair_counts": {
+      "gpt-4.1": {
+        "joint_fail": 15,
+        "gain": 2,
+        "joint_pass": 26,
+        "loss": 2
+      },
+      "gpt-5-mini": {
+        "joint_fail": 72,
+        "loss": 13,
+        "gain": 6,
+        "joint_pass": 38
+      }
+    },
+    "all_paired_differences": [
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_14",
+        "family": 14,
+        "repeat": 42,
+        "identity_passed": false,
+        "candidate_passed": true,
+        "outcome": "gain"
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_17",
+        "family": 17,
+        "repeat": 42,
+        "identity_passed": true,
+        "candidate_passed": false,
+        "outcome": "loss"
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_21",
+        "family": 21,
+        "repeat": 42,
+        "identity_passed": true,
+        "candidate_passed": false,
+        "outcome": "loss"
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_35",
+        "family": 35,
+        "repeat": 42,
+        "identity_passed": false,
+        "candidate_passed": true,
+        "outcome": "gain"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_13",
+        "family": 13,
+        "repeat": 42,
+        "identity_passed": true,
+        "candidate_passed": false,
+        "outcome": "loss"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_13",
+        "family": 13,
+        "repeat": 43,
+        "identity_passed": true,
+        "candidate_passed": false,
+        "outcome": "loss"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_13",
+        "family": 13,
+        "repeat": 44,
+        "identity_passed": false,
+        "candidate_passed": true,
+        "outcome": "gain"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_14",
+        "family": 14,
+        "repeat": 44,
+        "identity_passed": true,
+        "candidate_passed": false,
+        "outcome": "loss"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_17",
+        "family": 17,
+        "repeat": 42,
+        "identity_passed": false,
+        "candidate_passed": true,
+        "outcome": "gain"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_27",
+        "family": 27,
+        "repeat": 42,
+        "identity_passed": false,
+        "candidate_passed": true,
+        "outcome": "gain"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_27",
+        "family": 27,
+        "repeat": 44,
+        "identity_passed": true,
+        "candidate_passed": false,
+        "outcome": "loss"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_31",
+        "family": 31,
+        "repeat": 44,
+        "identity_passed": true,
+        "candidate_passed": false,
+        "outcome": "loss"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_35",
+        "family": 35,
+        "repeat": 43,
+        "identity_passed": true,
+        "candidate_passed": false,
+        "outcome": "loss"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_40",
+        "family": 40,
+        "repeat": 42,
+        "identity_passed": true,
+        "candidate_passed": false,
+        "outcome": "loss"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_40",
+        "family": 40,
+        "repeat": 44,
+        "identity_passed": true,
+        "candidate_passed": false,
+        "outcome": "loss"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_7",
+        "family": 7,
+        "repeat": 44,
+        "identity_passed": true,
+        "candidate_passed": false,
+        "outcome": "loss"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_0",
+        "family": 0,
+        "repeat": 43,
+        "identity_passed": true,
+        "candidate_passed": false,
+        "outcome": "loss"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_17",
+        "family": 17,
+        "repeat": 43,
+        "identity_passed": false,
+        "candidate_passed": true,
+        "outcome": "gain"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_21",
+        "family": 21,
+        "repeat": 43,
+        "identity_passed": true,
+        "candidate_passed": false,
+        "outcome": "loss"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_21",
+        "family": 21,
+        "repeat": 44,
+        "identity_passed": true,
+        "candidate_passed": false,
+        "outcome": "loss"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_24",
+        "family": 24,
+        "repeat": 42,
+        "identity_passed": false,
+        "candidate_passed": true,
+        "outcome": "gain"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_24",
+        "family": 24,
+        "repeat": 43,
+        "identity_passed": false,
+        "candidate_passed": true,
+        "outcome": "gain"
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_7",
+        "family": 7,
+        "repeat": 42,
+        "identity_passed": true,
+        "candidate_passed": false,
+        "outcome": "loss"
+      }
+    ],
+    "conditions": [
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_11",
+        "family": 11,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_13",
+        "family": 13,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_14",
+        "family": 14,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 1.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_15",
+        "family": 15,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_17",
+        "family": 17,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_20",
+        "family": 20,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_21",
+        "family": 21,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_23",
+        "family": 23,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_24",
+        "family": 24,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_30",
+        "family": 30,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_31",
+        "family": 31,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_32",
+        "family": 32,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_33",
+        "family": 33,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_35",
+        "family": 35,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_4",
+        "family": 4,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_40",
+        "family": 40,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_43",
+        "family": 43,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_44",
+        "family": 44,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_48",
+        "family": 48,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_49",
+        "family": 49,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_5",
+        "family": 5,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_base_7",
+        "family": 7,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_0",
+        "family": 0,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_11",
+        "family": 11,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_14",
+        "family": 14,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_15",
+        "family": 15,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_17",
+        "family": 17,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 0.0
+        },
+        "delta": -1.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_18",
+        "family": 18,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_20",
+        "family": 20,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_21",
+        "family": 21,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 0.0
+        },
+        "delta": -1.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_23",
+        "family": 23,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_27",
+        "family": 27,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_30",
+        "family": 30,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_31",
+        "family": 31,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_32",
+        "family": 32,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_33",
+        "family": 33,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_35",
+        "family": 35,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 1.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_4",
+        "family": 4,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_40",
+        "family": 40,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_43",
+        "family": 43,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_44",
+        "family": 44,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_48",
+        "family": 48,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_49",
+        "family": 49,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_5",
+        "family": 5,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_7",
+        "family": 7,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 1
+        },
+        "repeats": 1,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_11",
+        "family": 11,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_13",
+        "family": 13,
+        "passes": {
+          "identity": 2,
+          "native-graph-index": 1
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.6666666666666666,
+          "native-graph-index": 0.3333333333333333
+        },
+        "delta": -0.3333333333333333
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_14",
+        "family": 14,
+        "passes": {
+          "identity": 3,
+          "native-graph-index": 2
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 0.6666666666666666
+        },
+        "delta": -0.33333333333333337
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_17",
+        "family": 17,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 1
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.3333333333333333
+        },
+        "delta": 0.3333333333333333
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_20",
+        "family": 20,
+        "passes": {
+          "identity": 3,
+          "native-graph-index": 3
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_21",
+        "family": 21,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_22",
+        "family": 22,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_27",
+        "family": 27,
+        "passes": {
+          "identity": 2,
+          "native-graph-index": 2
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.6666666666666666,
+          "native-graph-index": 0.6666666666666666
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_28",
+        "family": 28,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_30",
+        "family": 30,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_31",
+        "family": 31,
+        "passes": {
+          "identity": 2,
+          "native-graph-index": 1
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.6666666666666666,
+          "native-graph-index": 0.3333333333333333
+        },
+        "delta": -0.3333333333333333
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_32",
+        "family": 32,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_33",
+        "family": 33,
+        "passes": {
+          "identity": 3,
+          "native-graph-index": 3
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_35",
+        "family": 35,
+        "passes": {
+          "identity": 3,
+          "native-graph-index": 2
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 0.6666666666666666
+        },
+        "delta": -0.33333333333333337
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_4",
+        "family": 4,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_40",
+        "family": 40,
+        "passes": {
+          "identity": 3,
+          "native-graph-index": 1
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 0.3333333333333333
+        },
+        "delta": -0.6666666666666667
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_43",
+        "family": 43,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_44",
+        "family": 44,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_48",
+        "family": 48,
+        "passes": {
+          "identity": 3,
+          "native-graph-index": 3
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_49",
+        "family": 49,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_5",
+        "family": 5,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_base_7",
+        "family": 7,
+        "passes": {
+          "identity": 3,
+          "native-graph-index": 2
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 0.6666666666666666
+        },
+        "delta": -0.33333333333333337
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_0",
+        "family": 0,
+        "passes": {
+          "identity": 3,
+          "native-graph-index": 2
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 0.6666666666666666
+        },
+        "delta": -0.33333333333333337
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_11",
+        "family": 11,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_14",
+        "family": 14,
+        "passes": {
+          "identity": 3,
+          "native-graph-index": 3
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_17",
+        "family": 17,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 1
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.3333333333333333
+        },
+        "delta": 0.3333333333333333
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_21",
+        "family": 21,
+        "passes": {
+          "identity": 2,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.6666666666666666,
+          "native-graph-index": 0.0
+        },
+        "delta": -0.6666666666666666
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_22",
+        "family": 22,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_23",
+        "family": 23,
+        "passes": {
+          "identity": 3,
+          "native-graph-index": 3
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_24",
+        "family": 24,
+        "passes": {
+          "identity": 1,
+          "native-graph-index": 3
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.3333333333333333,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.6666666666666667
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_27",
+        "family": 27,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_28",
+        "family": 28,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_31",
+        "family": 31,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_32",
+        "family": 32,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_33",
+        "family": 33,
+        "passes": {
+          "identity": 3,
+          "native-graph-index": 3
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_4",
+        "family": 4,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_40",
+        "family": 40,
+        "passes": {
+          "identity": 3,
+          "native-graph-index": 3
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_43",
+        "family": 43,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_44",
+        "family": 44,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_48",
+        "family": 48,
+        "passes": {
+          "identity": 3,
+          "native-graph-index": 3
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_49",
+        "family": 49,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_5",
+        "family": 5,
+        "passes": {
+          "identity": 0,
+          "native-graph-index": 0
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "id": "multi_turn_long_context_7",
+        "family": 7,
+        "passes": {
+          "identity": 3,
+          "native-graph-index": 2
+        },
+        "repeats": 3,
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 0.6666666666666666
+        },
+        "delta": -0.33333333333333337
+      }
+    ],
+    "families": [
+      {
+        "model": "gpt-4.1",
+        "family": 0,
+        "conditions": [
+          "multi_turn_long_context_0"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 4,
+        "conditions": [
+          "multi_turn_base_4",
+          "multi_turn_long_context_4"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 5,
+        "conditions": [
+          "multi_turn_base_5",
+          "multi_turn_long_context_5"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 7,
+        "conditions": [
+          "multi_turn_base_7",
+          "multi_turn_long_context_7"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 11,
+        "conditions": [
+          "multi_turn_base_11",
+          "multi_turn_long_context_11"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 13,
+        "conditions": [
+          "multi_turn_base_13"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 14,
+        "conditions": [
+          "multi_turn_base_14",
+          "multi_turn_long_context_14"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.5
+        },
+        "delta": 0.5
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 15,
+        "conditions": [
+          "multi_turn_base_15",
+          "multi_turn_long_context_15"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 17,
+        "conditions": [
+          "multi_turn_base_17",
+          "multi_turn_long_context_17"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 0.5
+        },
+        "delta": -0.5
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 18,
+        "conditions": [
+          "multi_turn_long_context_18"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 20,
+        "conditions": [
+          "multi_turn_base_20",
+          "multi_turn_long_context_20"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 21,
+        "conditions": [
+          "multi_turn_base_21",
+          "multi_turn_long_context_21"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 0.5
+        },
+        "delta": -0.5
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 23,
+        "conditions": [
+          "multi_turn_base_23",
+          "multi_turn_long_context_23"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 24,
+        "conditions": [
+          "multi_turn_base_24"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 27,
+        "conditions": [
+          "multi_turn_long_context_27"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 30,
+        "conditions": [
+          "multi_turn_base_30",
+          "multi_turn_long_context_30"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 31,
+        "conditions": [
+          "multi_turn_base_31",
+          "multi_turn_long_context_31"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 32,
+        "conditions": [
+          "multi_turn_base_32",
+          "multi_turn_long_context_32"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 33,
+        "conditions": [
+          "multi_turn_base_33",
+          "multi_turn_long_context_33"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 35,
+        "conditions": [
+          "multi_turn_base_35",
+          "multi_turn_long_context_35"
+        ],
+        "rates": {
+          "identity": 0.5,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.5
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 40,
+        "conditions": [
+          "multi_turn_base_40",
+          "multi_turn_long_context_40"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 43,
+        "conditions": [
+          "multi_turn_base_43",
+          "multi_turn_long_context_43"
+        ],
+        "rates": {
+          "identity": 0.5,
+          "native-graph-index": 0.5
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 44,
+        "conditions": [
+          "multi_turn_base_44",
+          "multi_turn_long_context_44"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 48,
+        "conditions": [
+          "multi_turn_base_48",
+          "multi_turn_long_context_48"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "family": 49,
+        "conditions": [
+          "multi_turn_base_49",
+          "multi_turn_long_context_49"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 0,
+        "conditions": [
+          "multi_turn_long_context_0"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 0.6666666666666666
+        },
+        "delta": -0.33333333333333337
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 4,
+        "conditions": [
+          "multi_turn_base_4",
+          "multi_turn_long_context_4"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 5,
+        "conditions": [
+          "multi_turn_base_5",
+          "multi_turn_long_context_5"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 7,
+        "conditions": [
+          "multi_turn_base_7",
+          "multi_turn_long_context_7"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 0.6666666666666666
+        },
+        "delta": -0.33333333333333337
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 11,
+        "conditions": [
+          "multi_turn_base_11",
+          "multi_turn_long_context_11"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 13,
+        "conditions": [
+          "multi_turn_base_13"
+        ],
+        "rates": {
+          "identity": 0.6666666666666666,
+          "native-graph-index": 0.3333333333333333
+        },
+        "delta": -0.3333333333333333
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 14,
+        "conditions": [
+          "multi_turn_base_14",
+          "multi_turn_long_context_14"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 0.8333333333333333
+        },
+        "delta": -0.16666666666666669
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 17,
+        "conditions": [
+          "multi_turn_base_17",
+          "multi_turn_long_context_17"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.3333333333333333
+        },
+        "delta": 0.3333333333333333
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 20,
+        "conditions": [
+          "multi_turn_base_20"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 21,
+        "conditions": [
+          "multi_turn_base_21",
+          "multi_turn_long_context_21"
+        ],
+        "rates": {
+          "identity": 0.3333333333333333,
+          "native-graph-index": 0.0
+        },
+        "delta": -0.3333333333333333
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 22,
+        "conditions": [
+          "multi_turn_base_22",
+          "multi_turn_long_context_22"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 23,
+        "conditions": [
+          "multi_turn_long_context_23"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 24,
+        "conditions": [
+          "multi_turn_long_context_24"
+        ],
+        "rates": {
+          "identity": 0.3333333333333333,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.6666666666666667
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 27,
+        "conditions": [
+          "multi_turn_base_27",
+          "multi_turn_long_context_27"
+        ],
+        "rates": {
+          "identity": 0.3333333333333333,
+          "native-graph-index": 0.3333333333333333
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 28,
+        "conditions": [
+          "multi_turn_base_28",
+          "multi_turn_long_context_28"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 30,
+        "conditions": [
+          "multi_turn_base_30"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 31,
+        "conditions": [
+          "multi_turn_base_31",
+          "multi_turn_long_context_31"
+        ],
+        "rates": {
+          "identity": 0.3333333333333333,
+          "native-graph-index": 0.16666666666666666
+        },
+        "delta": -0.16666666666666666
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 32,
+        "conditions": [
+          "multi_turn_base_32",
+          "multi_turn_long_context_32"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 33,
+        "conditions": [
+          "multi_turn_base_33",
+          "multi_turn_long_context_33"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 35,
+        "conditions": [
+          "multi_turn_base_35"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 0.6666666666666666
+        },
+        "delta": -0.33333333333333337
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 40,
+        "conditions": [
+          "multi_turn_base_40",
+          "multi_turn_long_context_40"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 0.6666666666666666
+        },
+        "delta": -0.33333333333333337
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 43,
+        "conditions": [
+          "multi_turn_base_43",
+          "multi_turn_long_context_43"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 44,
+        "conditions": [
+          "multi_turn_base_44",
+          "multi_turn_long_context_44"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 48,
+        "conditions": [
+          "multi_turn_base_48",
+          "multi_turn_long_context_48"
+        ],
+        "rates": {
+          "identity": 1.0,
+          "native-graph-index": 1.0
+        },
+        "delta": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "family": 49,
+        "conditions": [
+          "multi_turn_base_49",
+          "multi_turn_long_context_49"
+        ],
+        "rates": {
+          "identity": 0.0,
+          "native-graph-index": 0.0
+        },
+        "delta": 0.0
+      }
+    ]
+  },
+  "tokens": {
+    "groups": [
+      {
+        "model": "gpt-4.1",
+        "stage": "prefix",
+        "group": "eligible",
+        "trajectories": 45,
+        "totals": {
+          "input": 521262,
+          "output": 6386,
+          "total": 527648,
+          "cached_input_subset": 473984,
+          "reasoning_output_subset": 0,
+          "requests": 158,
+          "tool_calls": 122,
+          "retries": 0
+        },
+        "means": {
+          "input": 11583.6,
+          "output": 141.9111111111111,
+          "total": 11725.511111111111,
+          "cached_input_subset": 10532.977777777778,
+          "reasoning_output_subset": 0.0,
+          "requests": 3.511111111111111,
+          "tool_calls": 2.7111111111111112,
+          "retries": 0.0
+        }
+      },
+      {
+        "model": "gpt-4.1",
+        "stage": "prefix",
+        "group": "excluded",
+        "trajectories": 27,
+        "totals": {
+          "input": 344645,
+          "output": 3826,
+          "total": 348471,
+          "cached_input_subset": 317056,
+          "reasoning_output_subset": 0,
+          "requests": 103,
+          "tool_calls": 78,
+          "retries": 0
+        },
+        "means": {
+          "input": 12764.62962962963,
+          "output": 141.7037037037037,
+          "total": 12906.333333333334,
+          "cached_input_subset": 11742.814814814816,
+          "reasoning_output_subset": 0.0,
+          "requests": 3.814814814814815,
+          "tool_calls": 2.888888888888889,
+          "retries": 0.0
+        }
+      },
+      {
+        "model": "gpt-4.1",
+        "stage": "continuation",
+        "group": "identity",
+        "trajectories": 45,
+        "totals": {
+          "input": 1104574,
+          "output": 16287,
+          "total": 1120861,
+          "cached_input_subset": 1034624,
+          "reasoning_output_subset": 0,
+          "requests": 285,
+          "tool_calls": 195,
+          "retries": 0
+        },
+        "means": {
+          "input": 24546.088888888888,
+          "output": 361.93333333333334,
+          "total": 24908.022222222222,
+          "cached_input_subset": 22991.644444444446,
+          "reasoning_output_subset": 0.0,
+          "requests": 6.333333333333333,
+          "tool_calls": 4.333333333333333,
+          "retries": 0.0
+        }
+      },
+      {
+        "model": "gpt-4.1",
+        "stage": "continuation",
+        "group": "native-graph-index",
+        "trajectories": 45,
+        "totals": {
+          "input": 1139433,
+          "output": 18176,
+          "total": 1157609,
+          "cached_input_subset": 1058048,
+          "reasoning_output_subset": 0,
+          "requests": 287,
+          "tool_calls": 201,
+          "retries": 0
+        },
+        "means": {
+          "input": 25320.733333333334,
+          "output": 403.9111111111111,
+          "total": 25724.644444444446,
+          "cached_input_subset": 23512.17777777778,
+          "reasoning_output_subset": 0.0,
+          "requests": 6.377777777777778,
+          "tool_calls": 4.466666666666667,
+          "retries": 0.0
+        }
+      },
+      {
+        "model": "gpt-5-mini",
+        "stage": "prefix",
+        "group": "eligible",
+        "trajectories": 43,
+        "totals": {
+          "input": 743702,
+          "output": 30380,
+          "total": 774082,
+          "cached_input_subset": 660608,
+          "reasoning_output_subset": 20608,
+          "requests": 212,
+          "tool_calls": 172,
+          "retries": 2
+        },
+        "means": {
+          "input": 17295.39534883721,
+          "output": 706.5116279069767,
+          "total": 18001.906976744187,
+          "cached_input_subset": 15362.976744186046,
+          "reasoning_output_subset": 479.25581395348837,
+          "requests": 4.930232558139535,
+          "tool_calls": 4.0,
+          "retries": 0.046511627906976744
+        }
+      },
+      {
+        "model": "gpt-5-mini",
+        "stage": "prefix",
+        "group": "excluded",
+        "trajectories": 29,
+        "totals": {
+          "input": 597308,
+          "output": 30545,
+          "total": 627853,
+          "cached_input_subset": 549248,
+          "reasoning_output_subset": 17728,
+          "requests": 158,
+          "tool_calls": 131,
+          "retries": 1
+        },
+        "means": {
+          "input": 20596.827586206895,
+          "output": 1053.2758620689656,
+          "total": 21650.103448275862,
+          "cached_input_subset": 18939.58620689655,
+          "reasoning_output_subset": 611.3103448275862,
+          "requests": 5.448275862068965,
+          "tool_calls": 4.517241379310345,
+          "retries": 0.034482758620689655
+        }
+      },
+      {
+        "model": "gpt-5-mini",
+        "stage": "continuation",
+        "group": "identity",
+        "trajectories": 129,
+        "totals": {
+          "input": 4177987,
+          "output": 168232,
+          "total": 4346219,
+          "cached_input_subset": 3839744,
+          "reasoning_output_subset": 116544,
+          "requests": 963,
+          "tool_calls": 689,
+          "retries": 57
+        },
+        "means": {
+          "input": 32387.496124031008,
+          "output": 1304.124031007752,
+          "total": 33691.62015503876,
+          "cached_input_subset": 29765.457364341084,
+          "reasoning_output_subset": 903.4418604651163,
+          "requests": 7.465116279069767,
+          "tool_calls": 5.341085271317829,
+          "retries": 0.4418604651162791
+        }
+      },
+      {
+        "model": "gpt-5-mini",
+        "stage": "continuation",
+        "group": "native-graph-index",
+        "trajectories": 129,
+        "totals": {
+          "input": 4715875,
+          "output": 179654,
+          "total": 4895529,
+          "cached_input_subset": 4359168,
+          "reasoning_output_subset": 121600,
+          "requests": 1031,
+          "tool_calls": 768,
+          "retries": 59
+        },
+        "means": {
+          "input": 36557.17054263566,
+          "output": 1392.6666666666667,
+          "total": 37949.83720930233,
+          "cached_input_subset": 33792.0,
+          "reasoning_output_subset": 942.6356589147287,
+          "requests": 7.992248062015504,
+          "tool_calls": 5.953488372093023,
+          "retries": 0.4573643410852713
+        }
+      }
+    ],
+    "comparisons": [
+      {
+        "model": "gpt-4.1",
+        "trajectories_per_arm": 45,
+        "mean_delta_B_minus_A": {
+          "input": 774.644444444446,
+          "output": 41.97777777777776,
+          "total": 816.6222222222241,
+          "cached_input_subset": 520.5333333333328,
+          "reasoning_output_subset": 0.0,
+          "requests": 0.044444444444445175,
+          "tool_calls": 0.13333333333333375,
+          "retries": 0.0
+        },
+        "percent_change_B_over_A": {
+          "input": 3.155877288438802,
+          "output": 11.598207159083929,
+          "total": 3.278551042457556,
+          "cached_input_subset": 2.2640108870468856,
+          "reasoning_output_subset": null,
+          "requests": 0.7017543859649145,
+          "tool_calls": 3.076923076923088,
+          "retries": null
+        },
+        "request_and_hypothetical_whole_means": {
+          "identity": {
+            "first_request_input": 3495.1555555555556,
+            "equivalent_whole_input": 36129.688888888886,
+            "equivalent_whole_output": 503.84444444444443
+          },
+          "native-graph-index": {
+            "first_request_input": 3549.177777777778,
+            "equivalent_whole_input": 36904.333333333336,
+            "equivalent_whole_output": 545.8222222222222
+          }
+        },
+        "first_request_mean_delta_B_minus_A": 54.022222222222354
+      },
+      {
+        "model": "gpt-5-mini",
+        "trajectories_per_arm": 129,
+        "mean_delta_B_minus_A": {
+          "input": 4169.674418604649,
+          "output": 88.54263565891483,
+          "total": 4258.217054263565,
+          "cached_input_subset": 4026.542635658916,
+          "reasoning_output_subset": 39.19379844961236,
+          "requests": 0.5271317829457365,
+          "tool_calls": 0.612403100775194,
+          "retries": 0.01550387596899222
+        },
+        "percent_change_B_over_A": {
+          "input": 12.874333979497777,
+          "output": 6.7894336392600785,
+          "total": 12.638801680265077,
+          "cached_input_subset": 13.527568504566979,
+          "reasoning_output_subset": 4.3382756727073035,
+          "requests": 7.06126687435098,
+          "tool_calls": 11.465892597968065,
+          "retries": 3.50877192982455
+        },
+        "request_and_hypothetical_whole_means": {
+          "identity": {
+            "first_request_input": 3774.5581395348836,
+            "equivalent_whole_input": 49682.891472868214,
+            "equivalent_whole_output": 2010.6356589147288
+          },
+          "native-graph-index": {
+            "first_request_input": 3842.6976744186045,
+            "equivalent_whole_input": 53852.56589147287,
+            "equivalent_whole_output": 2099.1782945736436
+          }
+        },
+        "first_request_mean_delta_B_minus_A": 68.1395348837209
+      }
+    ],
+    "actual_total_input": 13344786,
+    "actual_total_output": 453486,
+    "actual_cached_input_subset": 12292480,
+    "actual_reasoning_output_subset": 276480,
+    "note": "Actual totals count each newly generated prefix once, including excluded conditions. Shared prefixes are not recharged for A/B or repeats. Cached and reasoning tokens are subsets, not additional tokens. Equivalent whole means are hypothetical comparison figures, not actual charges.",
+    "metering_scope": "All reported token totals are observed successful-response usage. The 119 HTTP 429 attempts have no provider usage and are represented only by conservative budget reservations, not invented token counts."
+  },
+  "fees": {
+    "rates": {
+      "gpt-4.1": {
+        "input_per_million": 2.0,
+        "output_per_million": 8.0
+      },
+      "gpt-5-mini": {
+        "input_per_million": 0.25,
+        "output_per_million": 2.0
+      }
+    },
+    "basis": "All prompt tokens charged at frozen uncached reference rates; not a provider invoice.",
+    "attempt_counts": {
+      "settled": 3197,
+      "uncertain": 119
+    },
+    "uncertain_http_status_counts": {
+      "429": 119
+    },
+    "settled_usd_reference": 9.953568,
+    "retained_uncertain_usd_reference": 5.59667425,
+    "committed_usd_reference": 15.55024225,
+    "new_run_cap_usd_reference": 24.505534,
+    "prior_committed_usd_reference": 5.494466,
+    "combined_committed_usd_reference": 21.04470825,
+    "remaining_original_30usd_reference": 8.95529175,
+    "groups": [
+      {
+        "model": "gpt-4.1",
+        "group": "continuation_identity",
+        "settled_attempts": 285,
+        "settled_nanodollars": 2339444000,
+        "actual_input_tokens": 1104574,
+        "actual_output_tokens": 16287,
+        "settled_usd_reference": 2.339444,
+        "uncertain_or_reserved_usd_reference": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "group": "continuation_native-graph-index",
+        "settled_attempts": 287,
+        "settled_nanodollars": 2424274000,
+        "actual_input_tokens": 1139433,
+        "actual_output_tokens": 18176,
+        "settled_usd_reference": 2.424274,
+        "uncertain_or_reserved_usd_reference": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "group": "prefix_eligible",
+        "settled_attempts": 158,
+        "settled_nanodollars": 1093612000,
+        "actual_input_tokens": 521262,
+        "actual_output_tokens": 6386,
+        "settled_usd_reference": 1.093612,
+        "uncertain_or_reserved_usd_reference": 0.0
+      },
+      {
+        "model": "gpt-4.1",
+        "group": "prefix_excluded",
+        "settled_attempts": 103,
+        "settled_nanodollars": 719898000,
+        "actual_input_tokens": 344645,
+        "actual_output_tokens": 3826,
+        "settled_usd_reference": 0.719898,
+        "uncertain_or_reserved_usd_reference": 0.0
+      },
+      {
+        "model": "gpt-5-mini",
+        "group": "continuation_identity",
+        "settled_attempts": 963,
+        "settled_nanodollars": 1380960750,
+        "actual_input_tokens": 4177987,
+        "actual_output_tokens": 168232,
+        "uncertain_attempts": 57,
+        "uncertain_or_reserved_nanodollars": 2639643750,
+        "settled_usd_reference": 1.38096075,
+        "uncertain_or_reserved_usd_reference": 2.63964375
+      },
+      {
+        "model": "gpt-5-mini",
+        "group": "continuation_native-graph-index",
+        "settled_attempts": 1031,
+        "settled_nanodollars": 1538276750,
+        "actual_input_tokens": 4715875,
+        "actual_output_tokens": 179654,
+        "uncertain_attempts": 59,
+        "uncertain_or_reserved_nanodollars": 2824103750,
+        "settled_usd_reference": 1.53827675,
+        "uncertain_or_reserved_usd_reference": 2.82410375
+      },
+      {
+        "model": "gpt-5-mini",
+        "group": "prefix_eligible",
+        "settled_attempts": 212,
+        "settled_nanodollars": 246685500,
+        "actual_input_tokens": 743702,
+        "actual_output_tokens": 30380,
+        "uncertain_attempts": 2,
+        "uncertain_or_reserved_nanodollars": 88356250,
+        "settled_usd_reference": 0.2466855,
+        "uncertain_or_reserved_usd_reference": 0.08835625
+      },
+      {
+        "model": "gpt-5-mini",
+        "group": "prefix_excluded",
+        "settled_attempts": 158,
+        "settled_nanodollars": 210417000,
+        "actual_input_tokens": 597308,
+        "actual_output_tokens": 30545,
+        "uncertain_attempts": 1,
+        "uncertain_or_reserved_nanodollars": 44570500,
+        "settled_usd_reference": 0.210417,
+        "uncertain_or_reserved_usd_reference": 0.0445705
+      }
+    ],
+    "interpretation": "Successful response usage priced at frozen uncached reference rates; not actual provider invoice. HTTP429/unmetered attempt reservations are retained conservatively, not verified charges and not assumed free."
+  },
+  "remote_saved_audit": "/home/ruqi/public/CS769/experiments/bfcl_identity/v5_b_validation_20261022/postrun-audit/independent-stats-usage-20261022T150012.json"
+}
