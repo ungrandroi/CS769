@@ -1,0 +1,88 @@
+{
+  "version": "g5-development-token-summary-v1",
+  "scope": "All fixed development A/G runs, 4 conditions/model x 3 executions. Descriptive only; not held-out evidence or independent sample N=12. Shared prefix omitted from continuation tokens; fees separately include it once.",
+  "sources": [
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-round-05-final/analysis.json",
+      "sha256": "7315a96195347faf24295a17ead6d8f159ea3ff1ef19c833908050a35c15e07c"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-round-05-confirmation-final/analysis.json",
+      "sha256": "69a6b40adffdcf652e79fb4019a57a5607050d2c7a35d08a3297e5b366b8416f"
+    }
+  ],
+  "rows": [
+    {
+      "model": "gpt-4.1",
+      "arm": "identity",
+      "runs": 12,
+      "unique_conditions": 4,
+      "passes": 12,
+      "continuation_tokens_sum": {
+        "input": 245548,
+        "output": 2101,
+        "total": 247649
+      },
+      "continuation_tokens_mean": {
+        "input": 20462.333333333332,
+        "output": 175.08333333333334,
+        "total": 20637.416666666668
+      },
+      "continuation_requests": 72
+    },
+    {
+      "model": "gpt-4.1",
+      "arm": "graph-evidence",
+      "runs": 12,
+      "unique_conditions": 4,
+      "passes": 12,
+      "continuation_tokens_sum": {
+        "input": 265808,
+        "output": 2277,
+        "total": 268085
+      },
+      "continuation_tokens_mean": {
+        "input": 22150.666666666668,
+        "output": 189.75,
+        "total": 22340.416666666668
+      },
+      "continuation_requests": 71
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "arm": "identity",
+      "runs": 12,
+      "unique_conditions": 4,
+      "passes": 12,
+      "continuation_tokens_sum": {
+        "input": 399612,
+        "output": 4533,
+        "total": 404145
+      },
+      "continuation_tokens_mean": {
+        "input": 33301.0,
+        "output": 377.75,
+        "total": 33678.75
+      },
+      "continuation_requests": 63
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "arm": "graph-evidence",
+      "runs": 12,
+      "unique_conditions": 4,
+      "passes": 12,
+      "continuation_tokens_sum": {
+        "input": 476434,
+        "output": 5458,
+        "total": 481892
+      },
+      "continuation_tokens_mean": {
+        "input": 39702.833333333336,
+        "output": 454.8333333333333,
+        "total": 40157.666666666664
+      },
+      "continuation_requests": 71
+    }
+  ]
+}

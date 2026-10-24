@@ -1,0 +1,170 @@
+{
+  "version": "g5-campaign02-primary-token-summary-v1",
+  "rows": [
+    {
+      "model": "gpt-4.1",
+      "arm": "identity",
+      "conditions": 11,
+      "distinct_families": 11,
+      "passed": 6,
+      "continuation_tokens_sum": {
+        "input": 262699,
+        "output": 4609,
+        "total": 267308
+      },
+      "continuation_tokens_mean": {
+        "input": 23881.727272727272,
+        "output": 419.0,
+        "total": 24300.727272727272
+      },
+      "requests_mean": 6.454545454545454,
+      "tool_calls_mean": 4.7272727272727275,
+      "condition_ids": [
+        "multi_turn_base_25",
+        "multi_turn_base_26",
+        "multi_turn_base_35",
+        "multi_turn_base_47",
+        "multi_turn_base_7",
+        "multi_turn_base_8",
+        "multi_turn_long_context_17",
+        "multi_turn_long_context_19",
+        "multi_turn_long_context_34",
+        "multi_turn_long_context_49",
+        "multi_turn_long_context_5"
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "arm": "graph-evidence",
+      "conditions": 11,
+      "distinct_families": 11,
+      "passed": 7,
+      "continuation_tokens_sum": {
+        "input": 301828,
+        "output": 4280,
+        "total": 306108
+      },
+      "continuation_tokens_mean": {
+        "input": 27438.909090909092,
+        "output": 389.09090909090907,
+        "total": 27828.0
+      },
+      "requests_mean": 7.090909090909091,
+      "tool_calls_mean": 5.363636363636363,
+      "condition_ids": [
+        "multi_turn_base_25",
+        "multi_turn_base_26",
+        "multi_turn_base_35",
+        "multi_turn_base_47",
+        "multi_turn_base_7",
+        "multi_turn_base_8",
+        "multi_turn_long_context_17",
+        "multi_turn_long_context_19",
+        "multi_turn_long_context_34",
+        "multi_turn_long_context_49",
+        "multi_turn_long_context_5"
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "arm": "identity",
+      "conditions": 12,
+      "distinct_families": 12,
+      "passed": 9,
+      "continuation_tokens_sum": {
+        "input": 514311,
+        "output": 8296,
+        "total": 522607
+      },
+      "continuation_tokens_mean": {
+        "input": 42859.25,
+        "output": 691.3333333333334,
+        "total": 43550.583333333336
+      },
+      "requests_mean": 5.916666666666667,
+      "tool_calls_mean": 4.166666666666667,
+      "condition_ids": [
+        "multi_turn_base_25",
+        "multi_turn_base_26",
+        "multi_turn_base_27",
+        "multi_turn_base_35",
+        "multi_turn_base_38",
+        "multi_turn_base_47",
+        "multi_turn_base_7",
+        "multi_turn_long_context_17",
+        "multi_turn_long_context_19",
+        "multi_turn_long_context_34",
+        "multi_turn_long_context_49",
+        "multi_turn_long_context_5"
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "arm": "graph-evidence",
+      "conditions": 12,
+      "distinct_families": 12,
+      "passed": 9,
+      "continuation_tokens_sum": {
+        "input": 554658,
+        "output": 9551,
+        "total": 564209
+      },
+      "continuation_tokens_mean": {
+        "input": 46221.5,
+        "output": 795.9166666666666,
+        "total": 47017.416666666664
+      },
+      "requests_mean": 6.0,
+      "tool_calls_mean": 4.25,
+      "condition_ids": [
+        "multi_turn_base_25",
+        "multi_turn_base_26",
+        "multi_turn_base_27",
+        "multi_turn_base_35",
+        "multi_turn_base_38",
+        "multi_turn_base_47",
+        "multi_turn_base_7",
+        "multi_turn_long_context_17",
+        "multi_turn_long_context_19",
+        "multi_turn_long_context_34",
+        "multi_turn_long_context_49",
+        "multi_turn_long_context_5"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "model": "gpt-4.1",
+      "same_conditions": true,
+      "per_arm_n": 11,
+      "mean_total_token_relative_change": 0.1451509120565042,
+      "mean_input_token_relative_change": 0.14894993890345987,
+      "mean_requests_change": 0.6363636363636367
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "same_conditions": true,
+      "per_arm_n": 12,
+      "mean_total_token_relative_change": 0.07960475079744422,
+      "mean_input_token_relative_change": 0.07844864294172194,
+      "mean_requests_change": 0.08333333333333304
+    }
+  ],
+  "sources": [
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-continuations-final/analysis.json",
+      "sha256": "cb1c5ce9175b71d98074afbc9e0daca31153304da3591cf8f57472ef2fe0061d"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch02-continuations-final/analysis.json",
+      "sha256": "11cd9513403792f754fe2318e04540d0e1f1e3a66ce27d99022d75d228af9793"
+    }
+  ],
+  "scope": "Only repeat1 continuations from the two frozen C2 validation batches; no development, C1, shared-prefix generation or diagnostic repeats.",
+  "token_basis": "Provider usage input plus output summed across every continuation request; includes repeatedly transmitted history/tools and reported reasoning output. Cached input is not subtracted.",
+  "limitations": [
+    "Token differences include both representation overhead and subsequent behavior/tool-loop differences.",
+    "Shared first-turn generation and all failures/retries remain in the separate cumulative cost ledger.",
+    "This descriptive summary does not grant goal completion or alter official scores."
+  ]
+}

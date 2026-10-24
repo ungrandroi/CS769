@@ -1,0 +1,91 @@
+{
+  "version": "g5-implementation-record-v1",
+  "created_at": "2026-10-24T02:54:42.885404+00:00",
+  "candidate_version": "G5-episodic-evidence-only",
+  "scope": {
+    "only_new_runner_modified": true,
+    "parent_runner": "runner-g4",
+    "candidate_runner": "runner-g5",
+    "ssh_used": false,
+    "paid_api_calls": 0,
+    "new_holdout_read": false,
+    "old_experiment_files_modified": false,
+    "protected_vendor_equal": true,
+    "budget_source_equal": true
+  },
+  "source_delta": {
+    "core/graph_memory_evidence.py": {
+      "parent": "2af48d2e8192f9d73b9c9a71c38f973732099cd1ff382bb42d73489bf4cf2841",
+      "candidate": "b548cddb71c65186ec9ab9a8f1e6cf74d096ec3d9fce2319b986320c9c6f4b91"
+    },
+    "workflows/graph_claude_task.py": {
+      "parent": "bd8b60e1bbd35829e4f25f54544b18f6293107f3f66de03fd6e309344e1b5718",
+      "candidate": "679e48a2222c1ceda2e1700d0e307c42a24bd60cfff8be171eb58f1d2eb85ce1"
+    },
+    "workflows/graph_gpt_task.py": {
+      "parent": "1ec79d0ee3a576b7b45267b1542f82338504032c332e08ab6656877b3bebe0a6",
+      "candidate": "943ea280db91580af97b2df581f177ea73d13f6ef6961964d5013468ff95bcd0"
+    }
+  },
+  "design": {
+    "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/round-05-mechanism-review.json",
+    "sha256": "a5451941985c2bc546f3fa7a68b1ddd9da580aac648113a0f6bee5900f30727e"
+  },
+  "api": {
+    "builder": "build_evidence_graph(..., include_entity_origin=False, episodic_only=False)",
+    "boolean_contract": "Both exact bool; both True rejected. Defaults and explicit include_entity_origin=True unchanged.",
+    "projection": "episodic_evidence_view(view): only known G0/G4 full view; unknown nodes/relations rejected before projection; complete induced episode/evidence graph.",
+    "view_version": "evidence-graph-g5-episodic-v1",
+    "metadata": "G5 only: delivery_episodic_only is True; delivery_entity_origin absent.",
+    "candidate": "graph-evidence uses episodic_only=True, assistant carrier, chronological-first. G0 uses defaults.",
+    "retained": "All visible evidence fields/types/roles/source refs/ordinals/call ids/groups/native_is_error/episode nodes and exact recorded in_turn/result_of/precedes edges. Full original builder graph remains archived.",
+    "removed": "Uniformly all rule-derived fact/entity nodes and incident edges from inference; fact_order becomes empty. Raw evidence is neither summarized nor omitted. This is not lossless relative to the full parent semantic graph.",
+    "renderer": "Same graph-only evidence encoding and fences, scope tag, episode/call labels, chronological order. Only semantic appendix is absent and static legend describes remaining schema."
+  },
+  "strict_audit": [
+    "Exact episode/call/result/recorded-order edge structure and sequence, including missing, duplicate and invented edges.",
+    "No derived/unknown nodes or nonempty fact_order; typed source fields, exact roles/ordinals/episode references, unique paired call IDs, nonempty string group metadata and bool native error attribute.",
+    "Against supplied native evidence, exact original group assignment and is_error presence/value. All prior visible reconstruction/hash/native comparison checks retained.",
+    "Default G0 and G4 legacy checks untouched; only explicit G5 invokes strict event-schema validator."
+  ],
+  "tests": {
+    "new_suite": "test_graph_episodic_evidence.py",
+    "suite_hashes": {
+      "test_graph_episodic_evidence.py": "2064558a5943caadda4d36bc1f1d21f27b025b26539b9610a9d3bc6fbcd71a69",
+      "test_graph_assistant_carrier.py": "319528f0263f7597492b424ad9228938f5b3e59be856b6b4149857c76ee07079",
+      "test_graph_evidence_layout.py": "a527ada6d97ae21ef4026214dbf9401db27fa7a259596bd987dedab92ad91209",
+      "test_graph_entity_origin.py": "fdc10a511ccd9fa7e9144c1a35ca712b4415d476303aacb0697eebd71fc84f67"
+    },
+    "candidate_expectation_updates": {
+      "test_graph_assistant_carrier.py": "Replace current-candidate G4 origin-only expectation with exact G5 induced-view expectation; identity/G0/raw/native/wire checks unchanged.",
+      "test_graph_evidence_layout.py": "Update only current-candidate projection in eight-prefix adapter test; G0/G1 segment permutation and 39 golden checks unchanged.",
+      "test_graph_entity_origin.py": "Update only current-candidate adapter integration to G5; all explicit G4 origin API/render/golden tests retained."
+    },
+    "executed_suites": [
+      "test_graph_memory_evidence",
+      "test_graph_evidence_layout",
+      "test_graph_assistant_carrier",
+      "test_graph_entity_origin",
+      "test_graph_episodic_evidence"
+    ],
+    "tests_run": 38,
+    "subtests": 248,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "python": "/Users/susu/anaconda3/envs/torch/bin/python",
+    "python_version_family": "3.9",
+    "environment": {
+      "PYTHONPATH": "runner-g5/scripts:runner-g5/vendor/gorilla/berkeley-function-call-leaderboard",
+      "TRANSFORMERS_OFFLINE": "1",
+      "HF_HOME": "/private/tmp/codex-g4-huggingface"
+    },
+    "archive": "Existing pilot archive containing run-r1; 39 G0 bodies + eight fixed development prefixes only. No new heldout sample.",
+    "server_gate": "Root must still run the full frozen server no-skip preflight, including unchanged provider/budget/scheduler suites, before any paid dispatch."
+  },
+  "limitations": [
+    "No claim of success-rate improvement or derived-state causal interference.",
+    "Only complete visible evidence is lossless; derived semantic layer is intentionally omitted.",
+    "Any independent review blocker requires a recorded source revision before deployment; no source-equivalence exceptions."
+  ]
+}

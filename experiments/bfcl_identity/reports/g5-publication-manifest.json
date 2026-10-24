@@ -1,0 +1,243 @@
+{
+  "version": "g5-report-publication-v1",
+  "as_of": "2026-10-24",
+  "raw_records_modified": false,
+  "model_calls": 0,
+  "publication_scope": "G5 report, supporting evidence copies and report index pointers only",
+  "experiment_execution_remains_paused": true,
+  "source_copies": [
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-development-decision.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/round-05-development-decision.json",
+      "sha256": "e014bb71ecbbed5031ee40f8864b9c3417641c9543209fb910a258c6bfdbc7f3",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-development-token-summary.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/round-05-development-token-summary.json",
+      "sha256": "c8e04b4ed7479eeeb1fbdc9f2e36d2b953aef7339c8a5335a2ab43590e77291a",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/campaign01-qualification-closure.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/campaign01-qualification-closure.json",
+      "sha256": "0a416dbebc2b9e356d5fc58ee1b984a01b6b5b9a6a53962215079c82b80497d4",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/campaign02-final-scientific-decision.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/campaign02-final-scientific-decision.json",
+      "sha256": "ee08d83528e33fa8f887b63e990c5bcbc2a176b2c7cbf074b1fa1e9d53678f21",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/campaign02-primary-token-summary.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/campaign02-primary-token-summary.json",
+      "sha256": "f70499f26e2398ff6d80a8fb86d6947f54dfaefb7ba15e3e3055025bc9f88788",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/campaign02-qualification-summary.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/campaign02-qualification-summary.json",
+      "sha256": "00a2be548f93c95aef5b4a2482628ce9ed52cc74ac822e787c6ea5a481e69481",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/campaign02-batch01-completion-decision.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/campaign02-batch01-completion-decision.json",
+      "sha256": "7c0892eb3668389822c08491d6ea675dc31b6cbcf2a44d8ef42806e8e1455e96",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/campaign02-batch02-completion-decision.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/campaign02-batch02-completion-decision.json",
+      "sha256": "8c379f2e6ce40c4b598788b3307a00980d4fa4d3c9992be5b82b3630aed239f8",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/campaign02-batch01-continuations-behavior-review.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/campaign02-batch01-continuations-behavior-review.json",
+      "sha256": "0f2dd1c619e5225b7a4efea6253cb2c377829be03cc4a82a28c32b27b512832a",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/campaign02-batch02-continuations-behavior-review.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/campaign02-batch02-continuations-behavior-review.json",
+      "sha256": "54f616ac331df092f2ce578e4977b43a5ae5ae0370d6b1e5db4643ddfd49e08c",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/campaign02-batch01-discordance-confirmation-behavior-review.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/campaign02-batch01-discordance-confirmation-behavior-review.json",
+      "sha256": "7eb6c4e9a200dcbd026c1e2cca5656761f9e2e55bc641de6a1e31fb1cb40c2b6",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/registered-decision-rules.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/registered-decision-rules.json",
+      "sha256": "99cc5157b6949f89e19bce6aeb3c1e198616fec213ce6360c8386c1c59b041d4",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/g5-final-method-scope-review.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/g5-final-method-scope-review.json",
+      "sha256": "ae0b0ade5e735c7951f236f6b130b001c3624cd5d922f940638092ae5867101e",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/round-05-mechanism-review.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/round-05-mechanism-review.json",
+      "sha256": "a5451941985c2bc546f3fa7a68b1ddd9da580aac648113a0f6bee5900f30727e",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/g5-implementation-record.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/g5-implementation-record.json",
+      "sha256": "481f3e61b07f16985332cb93f77d7cedff58a032214312d2ea36fc257356ee1e",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-continuations-final/analysis.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/campaign02-batch01-analysis.json",
+      "sha256": "cb1c5ce9175b71d98074afbc9e0daca31153304da3591cf8f57472ef2fe0061d",
+      "byte_identical": true
+    },
+    {
+      "source": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch02-continuations-final/analysis.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g5/campaign02-batch02-analysis.json",
+      "sha256": "11cd9513403792f754fe2318e04540d0e1f1e3a66ce27d99022d75d228af9793",
+      "byte_identical": true
+    }
+  ],
+  "checks": {
+    "primary_runs_recomputed": 46,
+    "development_counts_checked": true,
+    "copied_sources_byte_identical": true,
+    "original_official_scores_verified": 46,
+    "local_relative_links_checked": 224,
+    "missing_relative_links": 0,
+    "secret_pattern_findings": 0
+  },
+  "files": [
+    {
+      "path": "experiments/bfcl_identity/reports/README.md",
+      "sha256": "204df0838be95f2643bf0f2ec7645843923300cfca0b415ed3605a4e0abaa6db",
+      "bytes": 3778
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/README.md",
+      "sha256": "b1c356a454272e72f61d0e0ebd49cec90958658c655f047e86c1f223202551b7",
+      "bytes": 2298
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/campaign01-qualification-closure.json",
+      "sha256": "0a416dbebc2b9e356d5fc58ee1b984a01b6b5b9a6a53962215079c82b80497d4",
+      "bytes": 3892
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/campaign02-batch01-analysis.json",
+      "sha256": "cb1c5ce9175b71d98074afbc9e0daca31153304da3591cf8f57472ef2fe0061d",
+      "bytes": 598015
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/campaign02-batch01-completion-decision.json",
+      "sha256": "7c0892eb3668389822c08491d6ea675dc31b6cbcf2a44d8ef42806e8e1455e96",
+      "bytes": 110576
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/campaign02-batch01-continuations-behavior-review.json",
+      "sha256": "0f2dd1c619e5225b7a4efea6253cb2c377829be03cc4a82a28c32b27b512832a",
+      "bytes": 203899
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/campaign02-batch01-discordance-confirmation-behavior-review.json",
+      "sha256": "7eb6c4e9a200dcbd026c1e2cca5656761f9e2e55bc641de6a1e31fb1cb40c2b6",
+      "bytes": 41654
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/campaign02-batch02-analysis.json",
+      "sha256": "11cd9513403792f754fe2318e04540d0e1f1e3a66ce27d99022d75d228af9793",
+      "bytes": 477763
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/campaign02-batch02-completion-decision.json",
+      "sha256": "8c379f2e6ce40c4b598788b3307a00980d4fa4d3c9992be5b82b3630aed239f8",
+      "bytes": 103904
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/campaign02-batch02-continuations-behavior-review.json",
+      "sha256": "54f616ac331df092f2ce578e4977b43a5ae5ae0370d6b1e5db4643ddfd49e08c",
+      "bytes": 195144
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/campaign02-final-scientific-decision.json",
+      "sha256": "ee08d83528e33fa8f887b63e990c5bcbc2a176b2c7cbf074b1fa1e9d53678f21",
+      "bytes": 4556
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/campaign02-primary-token-summary.json",
+      "sha256": "f70499f26e2398ff6d80a8fb86d6947f54dfaefb7ba15e3e3055025bc9f88788",
+      "bytes": 5520
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/campaign02-qualification-summary.json",
+      "sha256": "00a2be548f93c95aef5b4a2482628ce9ed52cc74ac822e787c6ea5a481e69481",
+      "bytes": 5241
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/g5-final-method-scope-review.json",
+      "sha256": "ae0b0ade5e735c7951f236f6b130b001c3624cd5d922f940638092ae5867101e",
+      "bytes": 22164
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/g5-implementation-record.json",
+      "sha256": "481f3e61b07f16985332cb93f77d7cedff58a032214312d2ea36fc257356ee1e",
+      "bytes": 5691
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/primary-runs.csv",
+      "sha256": "3a5ac63297958c2960ab07020ed8a2fe696c3ec74f877ba79980a43b263f7829",
+      "bytes": 6740
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/registered-decision-rules.json",
+      "sha256": "99cc5157b6949f89e19bce6aeb3c1e198616fec213ce6360c8386c1c59b041d4",
+      "bytes": 22008
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/round-05-development-decision.json",
+      "sha256": "e014bb71ecbbed5031ee40f8864b9c3417641c9543209fb910a258c6bfdbc7f3",
+      "bytes": 147865
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/round-05-development-token-summary.json",
+      "sha256": "c8e04b4ed7479eeeb1fbdc9f2e36d2b953aef7339c8a5335a2ab43590e77291a",
+      "bytes": 2591
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g5/round-05-mechanism-review.json",
+      "sha256": "a5451941985c2bc546f3fa7a68b1ddd9da580aac648113a0f6bee5900f30727e",
+      "bytes": 25364
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/experiment-summary.html",
+      "sha256": "b2b42e47731f08bca124f4366eb9e4f9f69ce2c7acd77f4f33401ca637a46b51",
+      "bytes": 13969
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/experiment-summary.md",
+      "sha256": "c86bd9455d2b0c5fe923cda50831159a4bc1d510a94b11012c5413ca5a2c934e",
+      "bytes": 9631
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/g5-graph-replacement.html",
+      "sha256": "71e92d2fa50894915f1c93a72a98de599493e09db5b6d365418fb71eb5d4b4fb",
+      "bytes": 10166
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/g5-graph-replacement.md",
+      "sha256": "9b375475d638b6d02f02826f9a7e29ef889b3f53efff081444a781e365a5c967",
+      "bytes": 8479
+    }
+  ]
+}

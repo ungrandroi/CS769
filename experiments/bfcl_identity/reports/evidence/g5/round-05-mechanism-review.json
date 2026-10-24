@@ -1,0 +1,385 @@
+{
+  "version": "round-05-mechanism-review-v1",
+  "created_at": "2026-10-24T02:46:52.642305+00:00",
+  "status": "root_selected_bounded_schema_layer_ablation_no_performance_claim",
+  "candidate": "G5-episodic-evidence-only",
+  "goal_complete": false,
+  "scope": {
+    "new_holdout_accessed": false,
+    "private_thinking_used": false,
+    "model_api_calls": 0,
+    "ssh_used": false,
+    "implementation_in_this_review": false,
+    "raw_evidence_or_evaluator_modified": false,
+    "primary_paper_verification": "Reuse the already verified targeted review and conceptual addendum; no new broad survey."
+  },
+  "g4_result": {
+    "gpt-4.1": {
+      "identity": 4,
+      "g0": 3,
+      "g4": 3,
+      "conditions_per_arm": 4,
+      "candidate_loss": "multi_turn_base_43"
+    },
+    "claude-sonnet-5-5": {
+      "identity": 4,
+      "g0": 3,
+      "g4": 4,
+      "conditions_per_arm": 4,
+      "candidate_loss": null
+    },
+    "decision": "G4 fails the predeclared screen; no confirmation. All eight candidate official outcomes match the preceding G3 lockfix screen, but single repetitions cannot establish zero effect."
+  },
+  "verified_failures": [
+    {
+      "model": "gpt-4.1",
+      "condition": "multi_turn_base_43",
+      "arm": "G4",
+      "official": "multi_turn:execution_response_mismatch at turn 2; missing cd-to-Documents and successful file-content tool results.",
+      "visible_behavior": "First continuation finds ./Documents/annual_report.txt correctly. On the next user request, cat(annual_report.txt) fails. The assistant identifies Documents as the location and asks whether to navigate and show the contents, rather than continuing. Contemporary identity suffers the same initial cat error, then cd and cat succeed.",
+      "exact_visible_excerpt": "Would you like me to navigate into the Documents directory and display the contents of annual_report.txt for you?",
+      "inference_boundary": "This is a failure to continue after an understood path error, not demonstrated loss of the path. The path and failed cat result arise after graph replacement in the preserved native continuation. The replaced prefix contains only ls, its Documents/Reports result, and original visible text. G3 has the same visible stopping pattern."
+    },
+    {
+      "model": "gpt-4.1",
+      "condition": "multi_turn_base_43",
+      "arm": "G0",
+      "official": "Earliest mismatch is turn 1: find returns Documents/annual_report.txt instead of the expected ./Documents/annual_report.txt.",
+      "visible_behavior": "The model searches Documents and Reports separately. In turn 2, cat with Documents/annual_report.txt gets Invalid character, after which it asks whether to try a different method.",
+      "inference_boundary": "Distinguish official path-string mismatch from later substantive failure to retrieve content. The broader graph-role/representation combination is not isolated by this trace."
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "condition": "multi_turn_long_context_31",
+      "arm": "G0",
+      "official": "Turn 1 execution mismatch: missing mean tool result {result:3288.0}.",
+      "visible_behavior": "Calls cd and find(Reports) together, receives a relative-directory error, retries find successfully, then wc gives 3288. It answers the correct mean for a single file but never calls mean. G4 does cd/ls, wc, mean and passes.",
+      "inference_boundary": "This is not empty_turn, absence of tools, or evidence loss. The preceding G3 G0 run has the identical first-request hash but takes cd/ls/wc without the find detour, showing visible trajectory variation without a first-request change."
+    }
+  ],
+  "cross_round_controls": {
+    "g3_to_g4_identity_first_request_hashes_equal": "8/8",
+    "g3_to_g4_g0_first_request_hashes_equal": "8/8",
+    "g3_to_g4_candidate_first_request_hashes_equal": "0/8, as expected for origin visibility",
+    "official_outcomes_equal": "24/24 across corresponding arms",
+    "tools_system_current_user_prefix_nonmessage_parameter_hashes_equal": "24/24 across corresponding runs",
+    "causal_limit": "There is no contemporary G3 arm in G4; matching outcomes across separate runs do not prove the origin factor has no effect."
+  },
+  "critical_judgment": {
+    "recommendation": "Use one complete-visible-evidence episodic schema as the fifth bounded development candidate. Prefer this to qualified-fact rearrangement for this round.",
+    "why": "It tests a distinct structural assumption: whether the model needs, or is disrupted by, the uniformly duplicated rule-derived state/entity layer. Qualified facts would further elaborate that same layer; the visible failures do not establish missing fact provenance or wrong state bindings.",
+    "strength": "Low confidence of repairing base43. No contradictory derived fact has been identified. The assistant understands where the file is, so a state-readability explanation is incomplete. The original assistant invitation to ask for future actions remains in all formats and must remain preserved. Role effects, interpretation, and sampling are alternatives.",
+    "cost_boundary": "A schema change needs stronger offline contract tests but no new extraction model or paid preparation. Run only the existing fixed 24 continuation screen if all gates pass; do not add a mechanism experiment or choose holdouts by outcomes."
+  },
+  "single_factor_contract": {
+    "parent": "G4: assistant carrier, chronological-first, identical raw evidence labels/fences/strings.",
+    "change": "Uniformly exclude all rule-derived fact and entity nodes and every dependent relation from the inference schema. Preserve all episode and visible-evidence nodes and their in_turn/result_of/precedes edges exactly. Correct only the schema legend to describe the surviving graph.",
+    "losslessness": "Lossless with respect to complete visible source evidence, not lossless with respect to the complete prior semantic/event graph. The delivered view intentionally lacks precomputed entity binding/existence/version/state joins. Retaining the original full graph in the archive does not make the delivered graph semantically lossless.",
+    "not_stage_two_compression": "No evidence is selected by risk, recency, task relevance, pass/fail, or length; no observation, text, error, repetition, call, result, or original field is shortened, summarized, merged or omitted. Fewer annotation tokens are a schema ablation consequence, not evidence-compression success.",
+    "graph_identity": "The delivered graph must still be a typed addressable event graph: episode membership, call/result linkage, source_role and source_ref provenance, call IDs/groups, and recorded order. A bare prose transcript wrapper or graph-decoded native-role replay is not this candidate.",
+    "archival_boundary": "Keep original builder graph and normalized/native archives intact for auditing. Rendering must depend only on the new self-contained inference graph; poison/removal of archival payloads must not change it.",
+    "legend": "Same memory_graph scope and closing tag. Remove only references to entities/fact versions and the fact-interval explanation. Keep recorded-order/call-group meaning. No behavioral command, authorization advice, retry hint or task-specific command name.",
+    "unknown_parallel_cases": "Unknown tools still yield exact evidence nodes; errors and native_is_error remain. Parallel group IDs and observed order stay exact; precedes denotes recorded sequence, not execution dependency. Unexpected node/edge kinds must fail closed rather than silently erase evidence.",
+    "candidate_api": "build_evidence_graph(..., include_entity_origin=False, episodic_only=False); G5 uses episodic_only=True. Exact bool validation, conflicting True flags rejected. New view evidence-graph-g5-episodic-v1 and delivery_episodic_only=True; G0/G4 explicit old APIs unchanged."
+  },
+  "offline_acceptance": [
+    "All raw records reconstruct exactly, including bytes/types/source roles/references/tool IDs/group/error attributes/order/episode boundaries; compare normalized and provider-visible originals under the accepted old-thinking rule.",
+    "Every retained node is byte-for-byte equal to its G4/default-parent counterpart; retained edges equal the full induced episodic edge set; zero facts/entities or dangling references and empty fact_order.",
+    "Raw rendered evidence segments, labels and order are byte-identical to parent; only uniform semantic appendix absence and accurate fixed legend may differ.",
+    "All eight frozen prefixes and 39 archived G0 goldens remain valid; G0 outputs/default API and explicit G4 origin API stay unchanged.",
+    "Graph-only poison tests; duplicate/missing result links, malformed IDs, unsupported categories, missing raw fields, invalid flags/version fail closed. Existing budget/tool/provider continuation/eval contracts unchanged."
+  ],
+  "predictions_and_falsifiers": [
+    {
+      "claim": "If the rule-derived layer is unnecessary for this small continuation task, full evidence may preserve scores without it.",
+      "falsifier": "Any registered A-pass/G5-fail rejects the screen; retained evidence alone does not guarantee behavior."
+    },
+    {
+      "claim": "If derived annotations contribute to state overinterpretation, an event-only candidate might reduce related source/state mistakes.",
+      "falsifier": "The same informed confirmation stop, unchanged official losses, or new state confusion is negative evidence for this candidate; do not tune clauses to repair one case."
+    },
+    {
+      "claim": "No claim of isolated causal effect from the scheduled arms.",
+      "limit": "A/G0/G5 changes both role and layer between G0 and G5. Historical G4→G5 is not a randomized contemporaneous contrast. Keep the existing arms/gates and report only candidate behavior with the mechanistic hypothesis clearly separated."
+    }
+  ],
+  "literature_boundary": {
+    "sources": [
+      {
+        "id": "AriGraph",
+        "url": "https://www.ijcai.org/proceedings/2025/0002.pdf",
+        "locator": "Section 2; observation/semantic memory distinction",
+        "supports": "Episodic observations and semantic relations are distinct layers; not evidence that removing semantic facts improves BFCL."
+      },
+      {
+        "id": "PROV-DM",
+        "url": "https://www.w3.org/TR/prov-dm/",
+        "locator": "Sections 2.2.1.2 and 5.2.1",
+        "supports": "Explicit entities/activities/provenance can represent source links; not an LLM performance result."
+      },
+      {
+        "id": "Talk like a Graph",
+        "url": "https://arxiv.org/html/2310.04560v1",
+        "locator": "Section 3, graph encoding",
+        "supports": "Encoding can affect graph-task performance; not a BFCL guarantee or reason to search indefinitely."
+      }
+    ],
+    "full_verification_record": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/next-graph-representation-literature-review.json",
+      "sha256": "9e947406ead0fab4690bf957a7ac4c4405458aacec9076167b25fb57c67e27c7"
+    }
+  },
+  "protocol": [
+    "G5 is fifth of maximum six registered representation candidates. Schema change must be named in the new manifest and audits; do not pretend it satisfies the old full-parent-view identity contract.",
+    "Fixed A/G0/G5 one repetition, four conditions/model, randomized 24; unchanged official evaluation and score/behavior gates. G4 failure forbids G4 confirmation.",
+    "No new holdout reads before development freeze, no changed tools/sampling/task strategy, no native replay, no regression-specific patches. Retain every round and failure.",
+    "Only a fully reviewed screen may permit the unchanged fixed A/G5 confirmation; development pass is not overall goal completion. Parent enforces cumulative GPT $20 / Claude $30 stop-and-ask caps."
+  ],
+  "source_refs": {
+    "g4_analysis": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-round-04-final/analysis.json",
+      "sha256": "ccd08e824728338e24d7bfe8f1ee8458251c2405a95876b9f32a384f9c20a0ff"
+    },
+    "g3_analysis": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-g3-lockfix-screen-final/analysis.json",
+      "sha256": "b37e9f089593ca386bdebe414fe790787a587f380c5620b8d771ef405605bf49"
+    },
+    "g4_core": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/runner-g4/scripts/core/graph_memory_evidence.py",
+      "sha256": "2af48d2e8192f9d73b9c9a71c38f973732099cd1ff382bb42d73489bf4cf2841"
+    },
+    "literature": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/next-graph-representation-literature-review.json",
+      "sha256": "9e947406ead0fab4690bf957a7ac4c4405458aacec9076167b25fb57c67e27c7"
+    },
+    "registered_rules": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/registered-decision-rules.json",
+      "sha256": "99cc5157b6949f89e19bce6aeb3c1e198616fec213ce6360c8386c1c59b041d4"
+    }
+  },
+  "visible_trace_refs": {
+    "round-04/gpt-4.1/multi_turn_base_43/identity": {
+      "official_score": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/gpt-4.1/multi_turn_base_43/1/identity/official-score.json",
+        "sha256": "1cb39f8b3fa1abc8b83495aa3ba595d72f81e8f1501b9aca90d63a4be07fd17d"
+      },
+      "visible_trace": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/gpt-4.1/multi_turn_base_43/1/identity/multi_turn_base_43.full.json",
+        "sha256": "993ca0e477cd28d5e0faeb3b880c3fc48799c67c42ce5ea59dbd3bf8e9dc47fb"
+      },
+      "visible_trace_selector": "metadata.inference_log: turn dictionaries, only user/assistant/tool entries; exclude inference_input and thinking/redacted_thinking blocks"
+    },
+    "round-04/gpt-4.1/multi_turn_base_43/graph-evidence": {
+      "official_score": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence/official-score.json",
+        "sha256": "5622b8e5e479b4ee944162a79ce17129c4f70bfbf847277f8a4527740a84c842"
+      },
+      "visible_trace": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence/multi_turn_base_43.full.json",
+        "sha256": "c8abcabf3ea663e37331ae643d5d221815de59e90a3aed0777bcb6e3a205de43"
+      },
+      "visible_trace_selector": "metadata.inference_log: turn dictionaries, only user/assistant/tool entries; exclude inference_input and thinking/redacted_thinking blocks"
+    },
+    "round-04/gpt-4.1/multi_turn_base_43/graph-evidence-g0": {
+      "official_score": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/official-score.json",
+        "sha256": "51ae1dd1246223b30bffe91c9b6cbd0599dc70e5e95e3d823efb648abfbfa872"
+      },
+      "visible_trace": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/multi_turn_base_43.full.json",
+        "sha256": "47200bec61ab1701e25cf3ee093c5bfddc4c6e7d448812f813181e61400318b3"
+      },
+      "visible_trace_selector": "metadata.inference_log: turn dictionaries, only user/assistant/tool entries; exclude inference_input and thinking/redacted_thinking blocks"
+    },
+    "g3-lockfix-screen/gpt-4.1/multi_turn_base_43/graph-evidence": {
+      "official_score": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/g3-lockfix-screen/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence/official-score.json",
+        "sha256": "53daad1c9065afcda4099e061e46358fe4edc94038cf71b021674fbc8e332ccf"
+      },
+      "visible_trace": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/g3-lockfix-screen/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence/multi_turn_base_43.full.json",
+        "sha256": "9fa4d7136a2cd9058359c4ff8bde512715630848ebc1eeabb52ef1e2e7b75ce4"
+      },
+      "visible_trace_selector": "metadata.inference_log: turn dictionaries, only user/assistant/tool entries; exclude inference_input and thinking/redacted_thinking blocks"
+    },
+    "round-04/claude-sonnet-5-5/multi_turn_long_context_31/graph-evidence-g0": {
+      "official_score": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/official-score.json",
+        "sha256": "69c0a0581f527629d8a0024ef275bc635c45e173ef2b02d1a3a074ad1d0d4aff"
+      },
+      "visible_trace": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.full.json",
+        "sha256": "757bd371d268491e167802f9f53756af322f5cacf67465fb0a6de0a0320cb08e"
+      },
+      "visible_trace_selector": "metadata.inference_log: turn dictionaries, only user/assistant/tool entries; exclude inference_input and thinking/redacted_thinking blocks"
+    },
+    "round-04/claude-sonnet-5-5/multi_turn_long_context_31/graph-evidence": {
+      "official_score": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence/official-score.json",
+        "sha256": "5dd869ce4daf5b998323eeb2c2dd25e7c2a240447c55a60cd3698d49d33cd176"
+      },
+      "visible_trace": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence/multi_turn_long_context_31.full.json",
+        "sha256": "f2998fc909c8fcf647c73d75a0eccfd24bf57e4e010933accdd47a4f5c156210"
+      },
+      "visible_trace_selector": "metadata.inference_log: turn dictionaries, only user/assistant/tool entries; exclude inference_input and thinking/redacted_thinking blocks"
+    },
+    "g3-lockfix-screen/claude-sonnet-5-5/multi_turn_long_context_31/graph-evidence-g0": {
+      "official_score": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/g3-lockfix-screen/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/official-score.json",
+        "sha256": "078ed19d956300333ed673bfb4c2eaa56535f50cd52766b95f452b1c78a1bbef"
+      },
+      "visible_trace": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/g3-lockfix-screen/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.full.json",
+        "sha256": "4c11ca269aad6e16f6208e59ff4265805342f62dd2305b62b243a327052e0088"
+      },
+      "visible_trace_selector": "metadata.inference_log: turn dictionaries, only user/assistant/tool entries; exclude inference_input and thinking/redacted_thinking blocks"
+    }
+  },
+  "projection_inventory_from_existing_prefixes": [
+    {
+      "model": "gpt-4.1",
+      "condition": "multi_turn_base_43",
+      "raw_evidence_records_retained": 4,
+      "current_nodes": 13,
+      "episodic_nodes": 5,
+      "current_edges": 18,
+      "episodic_edges": 8,
+      "retained_edge_types": {
+        "in_turn": 4,
+        "precedes": 3,
+        "result_of": 1
+      },
+      "source": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence/multi_turn_base_43.graph.json",
+        "sha256": "8446f5c4a63c2e30c8a08512eac5b55345a794ede2775d39359b624b41025d8a"
+      }
+    },
+    {
+      "model": "gpt-4.1",
+      "condition": "multi_turn_long_context_31",
+      "raw_evidence_records_retained": 16,
+      "current_nodes": 32,
+      "episodic_nodes": 17,
+      "current_edges": 71,
+      "episodic_edges": 38,
+      "retained_edge_types": {
+        "in_turn": 16,
+        "precedes": 15,
+        "result_of": 7
+      },
+      "source": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence/multi_turn_long_context_31.graph.json",
+        "sha256": "ca638d08c167779c535f706c864c818c319443d99972709904ac154889bf2ee5"
+      }
+    },
+    {
+      "model": "gpt-4.1",
+      "condition": "multi_turn_base_3",
+      "raw_evidence_records_retained": 4,
+      "current_nodes": 7,
+      "episodic_nodes": 5,
+      "current_edges": 8,
+      "episodic_edges": 8,
+      "retained_edge_types": {
+        "in_turn": 4,
+        "precedes": 3,
+        "result_of": 1
+      },
+      "source": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence/multi_turn_base_3.graph.json",
+        "sha256": "b080f0ddd89a09bfcb857d9557af96dc26df6035ef28b46d15bd2d3781e3b4bd"
+      }
+    },
+    {
+      "model": "gpt-4.1",
+      "condition": "multi_turn_base_12",
+      "raw_evidence_records_retained": 10,
+      "current_nodes": 23,
+      "episodic_nodes": 11,
+      "current_edges": 48,
+      "episodic_edges": 23,
+      "retained_edge_types": {
+        "in_turn": 10,
+        "precedes": 9,
+        "result_of": 4
+      },
+      "source": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence/multi_turn_base_12.graph.json",
+        "sha256": "642dd3f4c87ac5b8d0c20139e31a78562f885bffbdf00b69183816d510083138"
+      }
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "condition": "multi_turn_base_43",
+      "raw_evidence_records_retained": 4,
+      "current_nodes": 13,
+      "episodic_nodes": 5,
+      "current_edges": 18,
+      "episodic_edges": 8,
+      "retained_edge_types": {
+        "in_turn": 4,
+        "precedes": 3,
+        "result_of": 1
+      },
+      "source": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence/multi_turn_base_43.graph.json",
+        "sha256": "c3fb41c04a7cdc7433b18dec9ee80ca20e9670d9ec7a049de1ff58ec281d5cdc"
+      }
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "condition": "multi_turn_long_context_31",
+      "raw_evidence_records_retained": 16,
+      "current_nodes": 32,
+      "episodic_nodes": 17,
+      "current_edges": 71,
+      "episodic_edges": 38,
+      "retained_edge_types": {
+        "in_turn": 16,
+        "precedes": 15,
+        "result_of": 7
+      },
+      "source": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence/multi_turn_long_context_31.graph.json",
+        "sha256": "716256d1be76b3743711a222442298bd0b506eaa03243b8b060a2484585e2e74"
+      }
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "condition": "multi_turn_base_3",
+      "raw_evidence_records_retained": 4,
+      "current_nodes": 7,
+      "episodic_nodes": 5,
+      "current_edges": 8,
+      "episodic_edges": 8,
+      "retained_edge_types": {
+        "in_turn": 4,
+        "precedes": 3,
+        "result_of": 1
+      },
+      "source": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence/multi_turn_base_3.graph.json",
+        "sha256": "2f9462c1b7bca31e70338b16f520b18973a9b576514c0244fcc5285a06cdb025"
+      }
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "condition": "multi_turn_base_12",
+      "raw_evidence_records_retained": 9,
+      "current_nodes": 22,
+      "episodic_nodes": 10,
+      "current_edges": 41,
+      "episodic_edges": 20,
+      "retained_edge_types": {
+        "in_turn": 9,
+        "precedes": 8,
+        "result_of": 3
+      },
+      "source": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-04/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence/multi_turn_base_12.graph.json",
+        "sha256": "779c62caa524db38a3f18fe3b804421f6d3172b61a02f638b904842e2e633658"
+      }
+    }
+  ]
+}

@@ -1,0 +1,541 @@
+{
+  "version": "continuous-graph-replacement-decision-rules-v1",
+  "created_at": "2026-10-24T00:57:29.014538+00:00",
+  "status": "preregistered_before_any_iteration_candidate_api_calls",
+  "no_api_requests": true,
+  "no_runner_or_eval_changes": true,
+  "goal_statement": "在完整可见证据、不压缩、不改eval的前提下，图替代候选经小规模重复开发及两批未参与调格式的固定验证，在两个模型上均保持原生历史官方通过数，并没有确认的新增退化。该结论是锁定范围的小规模操作性达成，不是全部BFCL总体非劣证明。",
+  "precommitment_requirements": [
+    "在查看首轮候选结果之前锁定规则与hash；若已查看，明确本文件是结果后提出的准则，只用于下一未查看波次。",
+    "不能因结果不好改门槛、删题、换seed或把官方失败改为语义通过。",
+    "当前G0旧开发、旧验证，以及本轮所有曾用于选择格式的条件均为开发证据；使用过的题族不回到验证。",
+    "本文件限定最多两次冻结验证campaign，不能重开一批又一批直到偶然全过。"
+  ],
+  "development_rules": {
+    "microbatch_1": {
+      "conditions": [
+        "multi_turn_base_43",
+        "multi_turn_long_context_31",
+        "multi_turn_base_3",
+        "multi_turn_base_12"
+      ],
+      "models": [
+        "gpt-4.1",
+        "claude-sonnet-5-5"
+      ],
+      "arms": [
+        "identity",
+        "G0",
+        "candidate"
+      ],
+      "repetitions": 1,
+      "total_continuations": 24
+    },
+    "same_prefix": "复用已合格并校验一致的每模型前缀；同一波次各臂随机交错，不拿旧A代替本轮A。",
+    "candidate_screen": "每个模型候选官方通过数须不低于同期A，且没有新的A通过/候选失败，才进入固定开发确认。若未达，审查失败后改变一个通用表示因素，形成新版本，不能只重跑候选直到通过。",
+    "stable_candidate_confirmation": "同一个未修改候选对固定四条件再做两次A/候选配对续跑；四条件全部重复，不能只重复对候选有利的条件。连同首轮，每条件A/候选各3次；初筛G0不必再重复。",
+    "dev_freeze_gate": [
+      "两个模型各自在12条开发续跑上候选通过数不低于A。",
+      "每模型至少有2个条件的A通过>=2/3，保证保持率检查有可保留的成功例。",
+      "没有条件满足A>=2/3且候选<=1/3；所有A通过/候选失败仍列出，不用多数表决抹掉。",
+      "全部内容完整性、图独立渲染、出站工具链以及源码冻结审计通过。",
+      "已确认的错误文件写入、对象/来源混淆或未授权额外副作用若在A无同类证据而候选重复出现，不得靠其他题的收益抵消。"
+    ],
+    "selection_if_no_gain_over_G0": "候选与G0持平仍可成为保留率候选，但不能宣称新改动机制有效；若成本和复杂度无优势，优先保留较简单已验证表示。选择依据在冻结记录中说明。",
+    "version_limit": "当前预注册周期最多6个新格式候选；每个都有改动/预测/完整性条件。达到6个仍无可冻结候选，做方法瓶颈审查并预注册下一个有限开发周期，goal保持未达且继续；在已授权预算和范围内不必仅因轮数再请求许可，但不得靠不断打开新验证题碰运气。",
+    "sampling_caution": "沿用GPT temperature 0/seed 42与Claude既定thinking设置；重复只检查实际运行稳定性，不把固定seed重复当独立随机样本，也不通过换温度增强可挑选的随机性。"
+  },
+  "validation_design": {
+    "recommended_size": "每个冻结候选两批，各6个条件/模型，每条件来自不同题族；两个模型尽量同题，但各自独立生成一次前缀。两批合计目标12个不同题族/模型、24条A/G续跑/模型，两个模型共48条续跑。",
+    "eligibility": "仅第一轮官方通过、边界完整、工具链兼容和证据可核验决定资格，不看A或候选续跑表现。图索引为空不能排除。",
+    "reserves": "每批先运行固定6个候选前缀，若任一模型不足6个合格条件，按同批预定2个reserve顺序补前缀，仅补不足的模型。不得因后续A/G失败补题。",
+    "minimum_information": "每模型每批至少5个合格条件，两批至少10个不同题族；两批首次A续跑合计至少6个官方成功。低于这些数值判信息不足，不根据低A成功率另选题。",
+    "primary_score": "每条件首次A/G续跑为主结果。两个模型分别分析；不合并模型掩盖单模型退化，不把重复算新题族。",
+    "batch_gates": [
+      "批1全部完成前不提前停止一个看起来不好的候选，只能因预算、运行错误或完整性问题停止。",
+      "批1每模型G通过数均不低于A，并完成不一致配对诊断后，候选不修改直接进入批2。",
+      "批1首次结果G低于A，即本campaign未满足目标；可先完成其诊断，不消耗批2以寻找抵消收益。未打开的批2在本周期保持未用；下一campaign只使用其独立预定清单，不按结果临时选择。",
+      "批2采用同一格式、同一采样/工具/eval协议；若失败也不得倒回修改批1/批2候选。"
+    ],
+    "discordance_confirmation": {
+      "trigger": "对首次A/G结果不一致的全部条件对称触发，包括A赢和G赢；不能只确认候选输的题或只挑显著病例。",
+      "action": "同一冻结格式、共享原前缀，A/G分别补2次，随机交错，原始首次结果仍为主表。",
+      "confirmed_regression": "三次A>=2/3且G<=1/3时，记为确认的操作性新增退化，无论语义答案是否合理；盲审解释类型，不决定官方分数。",
+      "isolated_discordance": "未满足确认阈值仍保留为单次不一致，不能报告零新增失败；只可说无经此规则确认的新增退化。",
+      "no_score_replacement": "补跑不覆盖首跑，不把首跑失败改为多数通过，不与新题不加区分地汇总。"
+    },
+    "goal_completion_gate": [
+      "同一个冻结候选完整通过两批验证；每个模型每批首次G通过数均>=A。",
+      "达到最小信息量；两个模型无上述确认的新退化，无未解决完整性/协议问题。",
+      "完整披露所有版本、失败campaign、首跑分歧、确认重复、筛选排除及费用；独立审查能从原始记录重算。",
+      "将goal记为这轮锁定小规模范围内的通过率保持已达成，同时明确不是全BFCL非劣证明；不以等待极窄95%CI无限推迟结论。",
+      "进入压缩或扩大领域须作为下一研究步骤另定计划，不把它们算进本goal。"
+    ],
+    "failure_after_freeze": "任何冻结验证失败即记campaign未达；相关已打开题族转为开发，所有结果永久保留。最多再开发一个新候选并进行第二个独立campaign；两campaign都失败或验证候选耗尽，向用户报告阶段瓶颈，goal继续未达，但不自动无限追加独立验证。",
+    "uncertainty_reporting": "报告按题族的配对差值区间及全部discordances；小样本区间仅描述，不以不显著/零宽bootstrap称总体无损。"
+  },
+  "holdout_selection": {
+    "read_scope": "仅阅读dataset id、involved_classes、question列表长度；未阅读任何possible_answer/GT文件、未查看候选或未使用题目的成功率。",
+    "metadata_files": [
+      {
+        "file": "work/graph-replacement-iterations/runner/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_base.json",
+        "sha256": "1a21a995d06fd6f20ba55de7bced30ef953ec35e998f502ec2ecf4d66ef1c43a"
+      },
+      {
+        "file": "work/graph-replacement-iterations/runner/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_long_context.json",
+        "sha256": "78c3268c5cc8e97c0f4ec6c811b3b9a2bba14323b1830b7a874b06d822749324"
+      }
+    ],
+    "candidate_family_range": [
+      0,
+      49
+    ],
+    "exclusions": {
+      "already_seen_graph_development_or_validation": [
+        1,
+        3,
+        4,
+        11,
+        12,
+        16,
+        20,
+        23,
+        29,
+        31,
+        39,
+        43
+      ],
+      "archived_graph_integrity_examples": [
+        10,
+        15,
+        37
+      ],
+      "single_user_turn": [
+        46
+      ]
+    },
+    "selection_seed": "graph-replacement-independent-batches-20261023-v1",
+    "algorithm": "各批主选6题族，按SHA256(seed:primary:family)排序从FS-only、Math、Twitter、Message、Ticket、Math各取一个未选题族；所有4批主选先锁定。批内用SHA256(seed:batchN-category:family)排序，再交替分配base/long_context。剩余题族以SHA256(seed:reserve:family)排序，依序给各批2个reserve并分配base、long_context。",
+    "history_disclosure": "这些题可能有历史B或别的实验记录；这里称未用于本次图替代调格式的锁定题，不声称从未被任何旧研究见过。",
+    "batches": [
+      {
+        "campaign": 1,
+        "batch": 1,
+        "primary": [
+          {
+            "family": 36,
+            "classes": [
+              "GorillaFileSystem",
+              "MathAPI"
+            ],
+            "user_turns": 3,
+            "stratum": "MathAPI",
+            "category": "base",
+            "id": "multi_turn_base_36"
+          },
+          {
+            "family": 6,
+            "classes": [
+              "GorillaFileSystem"
+            ],
+            "user_turns": 5,
+            "stratum": "GorillaFileSystem",
+            "category": "long_context",
+            "id": "multi_turn_long_context_6"
+          },
+          {
+            "family": 24,
+            "classes": [
+              "TicketAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 4,
+            "stratum": "TicketAPI",
+            "category": "base",
+            "id": "multi_turn_base_24"
+          },
+          {
+            "family": 30,
+            "classes": [
+              "TwitterAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 2,
+            "stratum": "TwitterAPI",
+            "category": "long_context",
+            "id": "multi_turn_long_context_30"
+          },
+          {
+            "family": 14,
+            "classes": [
+              "MessageAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 4,
+            "stratum": "MessageAPI",
+            "category": "base",
+            "id": "multi_turn_base_14"
+          },
+          {
+            "family": 42,
+            "classes": [
+              "GorillaFileSystem",
+              "MathAPI"
+            ],
+            "user_turns": 3,
+            "stratum": "MathAPI",
+            "category": "long_context",
+            "id": "multi_turn_long_context_42"
+          }
+        ],
+        "reserves": [
+          {
+            "family": 0,
+            "classes": [
+              "TwitterAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 4,
+            "stratum": "TwitterAPI",
+            "category": "base",
+            "id": "multi_turn_base_0"
+          },
+          {
+            "family": 32,
+            "classes": [
+              "GorillaFileSystem",
+              "MathAPI"
+            ],
+            "user_turns": 2,
+            "stratum": "MathAPI",
+            "category": "long_context",
+            "id": "multi_turn_long_context_32"
+          }
+        ]
+      },
+      {
+        "campaign": 1,
+        "batch": 2,
+        "primary": [
+          {
+            "family": 48,
+            "classes": [
+              "TicketAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 3,
+            "stratum": "TicketAPI",
+            "category": "base",
+            "id": "multi_turn_base_48"
+          },
+          {
+            "family": 22,
+            "classes": [
+              "TwitterAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 4,
+            "stratum": "TwitterAPI",
+            "category": "long_context",
+            "id": "multi_turn_long_context_22"
+          },
+          {
+            "family": 40,
+            "classes": [
+              "MessageAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 4,
+            "stratum": "MessageAPI",
+            "category": "base",
+            "id": "multi_turn_base_40"
+          },
+          {
+            "family": 28,
+            "classes": [
+              "GorillaFileSystem",
+              "MathAPI"
+            ],
+            "user_turns": 3,
+            "stratum": "MathAPI",
+            "category": "long_context",
+            "id": "multi_turn_long_context_28"
+          },
+          {
+            "family": 9,
+            "classes": [
+              "GorillaFileSystem"
+            ],
+            "user_turns": 3,
+            "stratum": "GorillaFileSystem",
+            "category": "base",
+            "id": "multi_turn_base_9"
+          },
+          {
+            "family": 44,
+            "classes": [
+              "GorillaFileSystem",
+              "MathAPI"
+            ],
+            "user_turns": 3,
+            "stratum": "MathAPI",
+            "category": "long_context",
+            "id": "multi_turn_long_context_44"
+          }
+        ],
+        "reserves": [
+          {
+            "family": 21,
+            "classes": [
+              "TwitterAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 3,
+            "stratum": "TwitterAPI",
+            "category": "base",
+            "id": "multi_turn_base_21"
+          },
+          {
+            "family": 41,
+            "classes": [
+              "MessageAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 2,
+            "stratum": "MessageAPI",
+            "category": "long_context",
+            "id": "multi_turn_long_context_41"
+          }
+        ]
+      },
+      {
+        "campaign": 2,
+        "batch": 1,
+        "primary": [
+          {
+            "family": 27,
+            "classes": [
+              "TicketAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 3,
+            "stratum": "TicketAPI",
+            "category": "base",
+            "id": "multi_turn_base_27"
+          },
+          {
+            "family": 49,
+            "classes": [
+              "GorillaFileSystem",
+              "MathAPI"
+            ],
+            "user_turns": 4,
+            "stratum": "MathAPI",
+            "category": "long_context",
+            "id": "multi_turn_long_context_49"
+          },
+          {
+            "family": 26,
+            "classes": [
+              "GorillaFileSystem"
+            ],
+            "user_turns": 3,
+            "stratum": "GorillaFileSystem",
+            "category": "base",
+            "id": "multi_turn_base_26"
+          },
+          {
+            "family": 34,
+            "classes": [
+              "GorillaFileSystem",
+              "MathAPI"
+            ],
+            "user_turns": 2,
+            "stratum": "MathAPI",
+            "category": "long_context",
+            "id": "multi_turn_long_context_34"
+          },
+          {
+            "family": 7,
+            "classes": [
+              "TwitterAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 3,
+            "stratum": "TwitterAPI",
+            "category": "base",
+            "id": "multi_turn_base_7"
+          },
+          {
+            "family": 17,
+            "classes": [
+              "MessageAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 3,
+            "stratum": "MessageAPI",
+            "category": "long_context",
+            "id": "multi_turn_long_context_17"
+          }
+        ],
+        "reserves": [
+          {
+            "family": 8,
+            "classes": [
+              "TwitterAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 4,
+            "stratum": "TwitterAPI",
+            "category": "base",
+            "id": "multi_turn_base_8"
+          },
+          {
+            "family": 18,
+            "classes": [
+              "TwitterAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 3,
+            "stratum": "TwitterAPI",
+            "category": "long_context",
+            "id": "multi_turn_long_context_18"
+          }
+        ]
+      },
+      {
+        "campaign": 2,
+        "batch": 2,
+        "primary": [
+          {
+            "family": 47,
+            "classes": [
+              "GorillaFileSystem",
+              "MathAPI"
+            ],
+            "user_turns": 3,
+            "stratum": "MathAPI",
+            "category": "base",
+            "id": "multi_turn_base_47"
+          },
+          {
+            "family": 2,
+            "classes": [
+              "TicketAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 5,
+            "stratum": "TicketAPI",
+            "category": "long_context",
+            "id": "multi_turn_long_context_2"
+          },
+          {
+            "family": 25,
+            "classes": [
+              "GorillaFileSystem"
+            ],
+            "user_turns": 4,
+            "stratum": "GorillaFileSystem",
+            "category": "base",
+            "id": "multi_turn_base_25"
+          },
+          {
+            "family": 19,
+            "classes": [
+              "MessageAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 3,
+            "stratum": "MessageAPI",
+            "category": "long_context",
+            "id": "multi_turn_long_context_19"
+          },
+          {
+            "family": 35,
+            "classes": [
+              "GorillaFileSystem",
+              "MathAPI"
+            ],
+            "user_turns": 3,
+            "stratum": "MathAPI",
+            "category": "base",
+            "id": "multi_turn_base_35"
+          },
+          {
+            "family": 13,
+            "classes": [
+              "TwitterAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 2,
+            "stratum": "TwitterAPI",
+            "category": "long_context",
+            "id": "multi_turn_long_context_13"
+          }
+        ],
+        "reserves": [
+          {
+            "family": 38,
+            "classes": [
+              "GorillaFileSystem"
+            ],
+            "user_turns": 2,
+            "stratum": "GorillaFileSystem",
+            "category": "base",
+            "id": "multi_turn_base_38"
+          },
+          {
+            "family": 5,
+            "classes": [
+              "TwitterAPI",
+              "GorillaFileSystem"
+            ],
+            "user_turns": 4,
+            "stratum": "TwitterAPI",
+            "category": "long_context",
+            "id": "multi_turn_long_context_5"
+          }
+        ]
+      }
+    ],
+    "important_lock_note": "此为建议列表；root采用前须确认自己/其他并行agent没有已用其中题族调格式。若有，应在任何候选续跑前通过相同metadata-only规则重建一次并记录排除，不能在看结果后换题。"
+  },
+  "budget_and_stop": {
+    "cumulative_spend_before_iterations_usd": {
+      "gpt-4.1": 3.08299,
+      "claude-sonnet-5-5": 5.157844
+    },
+    "cumulative_caps_usd": {
+      "gpt-4.1": 20,
+      "claude-sonnet-5-5": 30
+    },
+    "remaining_at_start_usd": {
+      "gpt-4.1": 16.91701,
+      "claude-sonnet-5-5": 24.842156
+    },
+    "reference_unit_continuation_usd_from_pilot_validation": {
+      "gpt-4.1": 0.047549,
+      "claude-sonnet-5-5": 0.09176333333333332
+    },
+    "reference_one_48_trajectory_two_batch_campaign_plus_24_prefixes_usd": {
+      "gpt-4.1": 1.439168,
+      "claude-sonnet-5-5": 2.723074
+    },
+    "reference_note": "这里只是上一轮实测均值外推，不含reserve前缀/补跑，图长度和推理输出可能变，不能当报价。",
+    "dispatch_rule": "新请求前以累计结算+在途/未知预留+本请求保守预留检查各模型独立cap；禁止越线、借另一模型预算、遗漏旧pilot费用或未知失败请求。",
+    "planning_rule": "每轮前更新剩余预算与预计续跑/前缀数；若两批验证及合理补跑预算不足，先汇报并问用户，不把只能付一批的结果提前称目标达到。",
+    "no_unlimited_search": "达到预算阈值必须问用户；达到两次独立campaign或6格式周期上限时先做方法审查并记录下一有限周期，不自动连续开holdout直到偶然成功，也不因单周期结束把goal标完成。",
+    "progress": "约每30分钟报告当前goal仍活跃/是否达到、版本与总完成量、累计费用、退化和下一动作；预算/协议/完整性问题立即说明。"
+  },
+  "why_this_balances_speed_and_evidence": "开发每波仅4条件，验证每批仅6条件，既保留快速迭代，也要求同一冻结候选跨两批题族重现；预先限制候选与独立验证次数，避免把模型随机波动当成目标达成。",
+  "locked_at": "2026-10-24T00:58:20.665614+00:00",
+  "root_adoption": {
+    "first_round_api_calls_at_lock": 0,
+    "rules_apply_from": "round-01",
+    "candidate_results_seen": false,
+    "authorization": "User explicitly requests persistent goal pursuit with small-data rounds and parallel subagents; cumulative spending thresholds unchanged.",
+    "heldout_scope": "Not used for this G0/G1 graph-replacement tuning; prior B or historical general experiments may exist and are disclosed.",
+    "completion_claim_limit": "Empirical accuracy preservation on the locked small validation scope; never claim proof on all BFCL or all future tasks.",
+    "after_failed_validation_cycles": "Do a documented methodological review before any further independent validation; do not mark goal complete. Preserve all failed cycles and request user input if scope/budget must change."
+  }
+}

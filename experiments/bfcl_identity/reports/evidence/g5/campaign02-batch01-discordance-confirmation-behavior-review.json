@@ -1,0 +1,559 @@
+{
+  "version": "g5-c2b1-diagnostic-source-verified-blind-review-v1",
+  "created_at": "2026-10-24T04:31:12.314704+00:00",
+  "complete_for_analysis_snapshot": true,
+  "reviewed_trajectories": 4,
+  "expected_trajectories": 4,
+  "source_integrity_and_quotes_verified": true,
+  "quote_count": 12,
+  "verified_artifact_count": 61,
+  "analysis": {
+    "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/analysis.json",
+    "sha256": "8b9df09e3257baa156e52bde20fc518baa24164c88297def67395de03c267a54"
+  },
+  "mapping": {
+    "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/private-map.json",
+    "sha256": "ade8f8fc958511687b1668fe9f3eb5d67c80e2a160716be2451da66f0be9cb71"
+  },
+  "reviews": [
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/campaign02-batch01-discordance-blind-review-a.json",
+      "sha256": "938896fda51693ecd4912033ebf69f0e40da83355865ba3b208bef21ad5c7ca9"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/campaign02-batch01-discordance-blind-review-b.json",
+      "sha256": "f325d77d837cfb916a6d748baea6bad8913fc17711fc5f1ca509e9d3ed41c98d"
+    }
+  ],
+  "cases": [
+    {
+      "review_id": "4ddaa645604923d5b3",
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_17",
+      "repeat": 2,
+      "arm": "graph-evidence",
+      "official_passed_unchanged": false,
+      "flags": {
+        "blocking_confirmation": false,
+        "extra_or_wrong_write": true,
+        "repeated_loop": false,
+        "source_confusion": false,
+        "semantic_correct_but_no_tool": false
+      },
+      "blind_annotation": {
+        "case_id": "4ddaa645604923d5b3",
+        "flags": {
+          "blocking_confirmation": false,
+          "extra_or_wrong_write": true,
+          "repeated_loop": false,
+          "source_confusion": false,
+          "semantic_correct_but_no_tool": false
+        },
+        "findings": [
+          {
+            "turn": 1,
+            "event_quote": "{\"matches\": [\"./test_report.docx\"]}",
+            "reason": "After the Kelly filename search returned no matches, the agent searched for test, read the discovered report, and presented its contents including score 96. This is successful recovery from an empty search, not a repeated loop or explicit tool-error recovery."
+          },
+          {
+            "turn": 2,
+            "event_quote": "Kelly Total Score: 96\n\nThe company's financials for the year reflect a period of steady growth and consistent revenue generation, with both top-line and bottom-line figures showing improvement compared to the previous year.",
+            "reason": "The decoded send_message payload starts with the correct score but continues with the full financial report, exceeding the requested Kelly Total Score: total_score format. This supports extra_or_wrong_write for excess message content, not a wrong recipient."
+          },
+          {
+            "turn": 2,
+            "event_quote": "{\"sent_status\": true, \"message_id\": {\"new_id\": 67410}, \"message\": \"Message sent to 'USR005' successfully.\"}",
+            "reason": "Kelly was added, her USR005 ID resolved, and one message successfully sent; the sent-message listing and final state include that payload. The agent listed all three visible communications. No blocking confirmation, repeated send, source misattribution, or whole-turn no-tool behavior is visible."
+          }
+        ]
+      },
+      "review_source": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/campaign02-batch01-discordance-blind-review-a.json",
+        "sha256": "938896fda51693ecd4912033ebf69f0e40da83355865ba3b208bef21ad5c7ca9"
+      },
+      "official_score": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/graph-evidence/official-score.json",
+        "sha256": "3f22094f5ad134171a3955d79452da106cf5db07003817878b3687f0c16a20f3"
+      }
+    },
+    {
+      "review_id": "6d40ad06fcef1c9430",
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_17",
+      "repeat": 3,
+      "arm": "identity",
+      "official_passed_unchanged": false,
+      "flags": {
+        "blocking_confirmation": true,
+        "extra_or_wrong_write": false,
+        "repeated_loop": false,
+        "source_confusion": false,
+        "semantic_correct_but_no_tool": false
+      },
+      "blind_annotation": {
+        "case_id": "6d40ad06fcef1c9430",
+        "flags": {
+          "blocking_confirmation": true,
+          "extra_or_wrong_write": false,
+          "repeated_loop": false,
+          "source_confusion": false,
+          "semantic_correct_but_no_tool": false
+        },
+        "findings": [
+          {
+            "turn": 1,
+            "event_quote": "{\"matches\": [\"./test_report.docx\"]}",
+            "reason": "After the Kelly search returned no matches, the agent changed the search to test, read the report, and presented its contents including score 96. The changed search is useful recovery, not a repeated loop."
+          },
+          {
+            "turn": 2,
+            "event_quote": "{\"error\": \"Receiver ID 'Kelly' not found.\"}",
+            "reason": "The attempted message text exactly matched Kelly Total Score: 96, but send_message used Kelly as receiver_id and failed. The contact result supplied USR005; the final state contains the new contact and only the two original communications, so no extra or incorrect message write was committed."
+          },
+          {
+            "turn": 2,
+            "event_quote": "Would you like me to resend the message to Kelly using her correct user ID?",
+            "reason": "After the explicit send error, the agent stopped for confirmation instead of using the returned USR005 ID to complete the already requested send. It accurately disclosed failure and listed the existing communications, but delivery remained incomplete. Other tools ran in this turn, so missing recovery is not whole-turn no-tool behavior; no repeated loop or explicit source misattribution is visible."
+          }
+        ]
+      },
+      "review_source": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/campaign02-batch01-discordance-blind-review-a.json",
+        "sha256": "938896fda51693ecd4912033ebf69f0e40da83355865ba3b208bef21ad5c7ca9"
+      },
+      "official_score": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/identity/official-score.json",
+        "sha256": "e93014fc07e2892cb918e4a2238659b61deec6fbc4e244fe946a35a4a87cf268"
+      }
+    },
+    {
+      "review_id": "8a7e0fc05595d80044",
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_17",
+      "repeat": 3,
+      "arm": "graph-evidence",
+      "official_passed_unchanged": false,
+      "flags": {
+        "blocking_confirmation": true,
+        "extra_or_wrong_write": false,
+        "repeated_loop": false,
+        "source_confusion": false,
+        "semantic_correct_but_no_tool": false
+      },
+      "blind_annotation": {
+        "case_id": "8a7e0fc05595d80044",
+        "flags": {
+          "blocking_confirmation": true,
+          "extra_or_wrong_write": false,
+          "repeated_loop": false,
+          "source_confusion": false,
+          "semantic_correct_but_no_tool": false
+        },
+        "findings": [
+          {
+            "turn": 1,
+            "event_quote": "{\"file_name\":\"test_report.docx\"}",
+            "reason": "Changed the search term after an empty Kelly search, found the report, read it with cat, and returned its score and report content. This is adaptive retrieval, not a repeated loop or a no-tool answer."
+          },
+          {
+            "turn": 2,
+            "event_quote": "{\"error\": \"Receiver ID 'Kelly' not found.\"}",
+            "reason": "The attempted message used Kelly as receiver_id despite the API requiring an ID. Its content matched the requested Kelly Total Score: 96 format, but the send failed. Contact creation succeeded and prior communications were listed. The final state contains no new message, so no successful extra or wrong write is established."
+          },
+          {
+            "turn": 2,
+            "event_quote": "If you’d like to send the report to Kelly, I can look up her user ID and resend the message. Would you like me to do that?",
+            "reason": "Stopped for confirmation after the explicit send error even though dispatch was already requested and add_contact had returned USR005. No recovery send appears. Tools were used in this turn; the unfinished send is not a whole-turn no-tool answer."
+          }
+        ]
+      },
+      "review_source": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/campaign02-batch01-discordance-blind-review-b.json",
+        "sha256": "f325d77d837cfb916a6d748baea6bad8913fc17711fc5f1ca509e9d3ed41c98d"
+      },
+      "official_score": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/graph-evidence/official-score.json",
+        "sha256": "7f692c31c028e8815a216eb8701f8a81ad3b9afc0dabedab5db8066c55e544fd"
+      }
+    },
+    {
+      "review_id": "9593d4dd704af0feec",
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_17",
+      "repeat": 2,
+      "arm": "identity",
+      "official_passed_unchanged": false,
+      "flags": {
+        "blocking_confirmation": false,
+        "extra_or_wrong_write": true,
+        "repeated_loop": false,
+        "source_confusion": false,
+        "semantic_correct_but_no_tool": false
+      },
+      "blind_annotation": {
+        "case_id": "9593d4dd704af0feec",
+        "flags": {
+          "blocking_confirmation": false,
+          "extra_or_wrong_write": true,
+          "repeated_loop": false,
+          "source_confusion": false,
+          "semantic_correct_but_no_tool": false
+        },
+        "findings": [
+          {
+            "turn": 1,
+            "event_quote": "{\"file_name\":\"test_report.docx\"}",
+            "reason": "Recovered from two empty searches by listing the directory, then read and returned the discovered report. Different searches followed by listing are adaptive recovery, not a repeated loop."
+          },
+          {
+            "turn": 2,
+            "event_quote": "Kelly Total Score: 96\n\nThe company's financials for the year reflect a period of steady growth and consistent revenue generation, with both top-line and bottom-line figures showing improvement compared to the previous year.",
+            "reason": "Decoded send_message content starts with the correct score but appends the financial report beyond the user-specified Kelly Total Score: total_score format. This supports extra message content, not a wrong recipient or duplicate send."
+          },
+          {
+            "turn": 2,
+            "event_quote": "Message sent to 'USR005' successfully.",
+            "reason": "Added Kelly, resolved USR005, and successfully sent the overlong message; the final state also records it. Retrieved prior communications and included the new send in the final list. No blocking confirmation, source misattribution, repeated loop, or whole-turn no-tool behavior is visible."
+          }
+        ]
+      },
+      "review_source": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/campaign02-batch01-discordance-blind-review-b.json",
+        "sha256": "f325d77d837cfb916a6d748baea6bad8913fc17711fc5f1ca509e9d3ed41c98d"
+      },
+      "official_score": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/identity/official-score.json",
+        "sha256": "9f53376f4552b074afa20eece48eba1834c07351cadd44d4a2ae38f2c53aa0ba"
+      }
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "4ddaa645604923d5b3",
+      "turn": 1,
+      "scope": "continuation",
+      "quote": "{\"matches\": [\"./test_report.docx\"]}",
+      "matches": [
+        {
+          "pointer": "/trace/0/steps/2/messages/1/content",
+          "offset": 0
+        }
+      ],
+      "packet": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/4ddaa645604923d5b3.json",
+        "sha256": "f095b745d94b0d72ff7dc9a2d293268cbded9040849524de928276653e43d04c"
+      }
+    },
+    {
+      "review_id": "4ddaa645604923d5b3",
+      "turn": 2,
+      "scope": "continuation",
+      "quote": "Kelly Total Score: 96\n\nThe company's financials for the year reflect a period of steady growth and consistent revenue generation, with both top-line and bottom-line figures showing improvement compared to the previous year.",
+      "matches": [
+        {
+          "pointer": "/trace/0/steps/2/messages/0/content/0/send_message@decoded-json/message",
+          "offset": 0
+        },
+        {
+          "pointer": "/trace/0/steps/3/messages/1/content@decoded-json/messages/USR005/0",
+          "offset": 0
+        },
+        {
+          "pointer": "/state_after_turn/0/state/content/inbox/2/USR005",
+          "offset": 0
+        },
+        {
+          "pointer": "/native/2/message/tool_calls/0/function/arguments@decoded-json/message",
+          "offset": 0
+        }
+      ],
+      "packet": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/4ddaa645604923d5b3.json",
+        "sha256": "f095b745d94b0d72ff7dc9a2d293268cbded9040849524de928276653e43d04c"
+      }
+    },
+    {
+      "review_id": "4ddaa645604923d5b3",
+      "turn": 2,
+      "scope": "continuation",
+      "quote": "{\"sent_status\": true, \"message_id\": {\"new_id\": 67410}, \"message\": \"Message sent to 'USR005' successfully.\"}",
+      "matches": [
+        {
+          "pointer": "/trace/0/steps/2/messages/1/content",
+          "offset": 0
+        }
+      ],
+      "packet": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/4ddaa645604923d5b3.json",
+        "sha256": "f095b745d94b0d72ff7dc9a2d293268cbded9040849524de928276653e43d04c"
+      }
+    },
+    {
+      "review_id": "6d40ad06fcef1c9430",
+      "turn": 1,
+      "scope": "continuation",
+      "quote": "{\"matches\": [\"./test_report.docx\"]}",
+      "matches": [
+        {
+          "pointer": "/trace/0/steps/2/messages/1/content",
+          "offset": 0
+        }
+      ],
+      "packet": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/6d40ad06fcef1c9430.json",
+        "sha256": "9b6d4b0c84ce3ec54d9597c3210077c0370b2e0bcc43fca425e8d515127efc60"
+      }
+    },
+    {
+      "review_id": "6d40ad06fcef1c9430",
+      "turn": 2,
+      "scope": "continuation",
+      "quote": "{\"error\": \"Receiver ID 'Kelly' not found.\"}",
+      "matches": [
+        {
+          "pointer": "/trace/0/steps/0/messages/2/content",
+          "offset": 0
+        }
+      ],
+      "packet": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/6d40ad06fcef1c9430.json",
+        "sha256": "9b6d4b0c84ce3ec54d9597c3210077c0370b2e0bcc43fca425e8d515127efc60"
+      }
+    },
+    {
+      "review_id": "6d40ad06fcef1c9430",
+      "turn": 2,
+      "scope": "continuation",
+      "quote": "Would you like me to resend the message to Kelly using her correct user ID?",
+      "matches": [
+        {
+          "pointer": "/trace/0/steps/1/messages/0/content",
+          "offset": 322
+        },
+        {
+          "pointer": "/native/1/message/content",
+          "offset": 322
+        }
+      ],
+      "packet": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/6d40ad06fcef1c9430.json",
+        "sha256": "9b6d4b0c84ce3ec54d9597c3210077c0370b2e0bcc43fca425e8d515127efc60"
+      }
+    },
+    {
+      "review_id": "8a7e0fc05595d80044",
+      "turn": 1,
+      "scope": "continuation",
+      "quote": "{\"file_name\":\"test_report.docx\"}",
+      "matches": [
+        {
+          "pointer": "/trace/0/steps/3/messages/0/content/0/cat",
+          "offset": 0
+        },
+        {
+          "pointer": "/native/3/message/tool_calls/0/function/arguments",
+          "offset": 0
+        }
+      ],
+      "packet": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/8a7e0fc05595d80044.json",
+        "sha256": "e18335404de09eed86aeb957df10128685c3375e2e6eb44f2ca15b55511a6365"
+      }
+    },
+    {
+      "review_id": "8a7e0fc05595d80044",
+      "turn": 2,
+      "scope": "continuation",
+      "quote": "{\"error\": \"Receiver ID 'Kelly' not found.\"}",
+      "matches": [
+        {
+          "pointer": "/trace/0/steps/0/messages/2/content",
+          "offset": 0
+        }
+      ],
+      "packet": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/8a7e0fc05595d80044.json",
+        "sha256": "e18335404de09eed86aeb957df10128685c3375e2e6eb44f2ca15b55511a6365"
+      }
+    },
+    {
+      "review_id": "8a7e0fc05595d80044",
+      "turn": 2,
+      "scope": "continuation",
+      "quote": "If you’d like to send the report to Kelly, I can look up her user ID and resend the message. Would you like me to do that?",
+      "matches": [
+        {
+          "pointer": "/trace/0/steps/1/messages/0/content",
+          "offset": 442
+        },
+        {
+          "pointer": "/native/1/message/content",
+          "offset": 442
+        }
+      ],
+      "packet": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/8a7e0fc05595d80044.json",
+        "sha256": "e18335404de09eed86aeb957df10128685c3375e2e6eb44f2ca15b55511a6365"
+      }
+    },
+    {
+      "review_id": "9593d4dd704af0feec",
+      "turn": 1,
+      "scope": "continuation",
+      "quote": "{\"file_name\":\"test_report.docx\"}",
+      "matches": [
+        {
+          "pointer": "/trace/0/steps/4/messages/0/content/0/cat",
+          "offset": 0
+        },
+        {
+          "pointer": "/native/4/message/tool_calls/0/function/arguments",
+          "offset": 0
+        }
+      ],
+      "packet": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/9593d4dd704af0feec.json",
+        "sha256": "01cae54a0d50a342644ec8cff7224f7a0b385e7c16fff56452d3ce8715d24a8d"
+      }
+    },
+    {
+      "review_id": "9593d4dd704af0feec",
+      "turn": 2,
+      "scope": "continuation",
+      "quote": "Kelly Total Score: 96\n\nThe company's financials for the year reflect a period of steady growth and consistent revenue generation, with both top-line and bottom-line figures showing improvement compared to the previous year.",
+      "matches": [
+        {
+          "pointer": "/trace/0/steps/1/messages/0/content/0/send_message@decoded-json/message",
+          "offset": 0
+        },
+        {
+          "pointer": "/state_after_turn/0/state/content/inbox/2/USR005",
+          "offset": 0
+        },
+        {
+          "pointer": "/native/1/message/tool_calls/0/function/arguments@decoded-json/message",
+          "offset": 0
+        }
+      ],
+      "packet": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/9593d4dd704af0feec.json",
+        "sha256": "01cae54a0d50a342644ec8cff7224f7a0b385e7c16fff56452d3ce8715d24a8d"
+      }
+    },
+    {
+      "review_id": "9593d4dd704af0feec",
+      "turn": 2,
+      "scope": "continuation",
+      "quote": "Message sent to 'USR005' successfully.",
+      "matches": [
+        {
+          "pointer": "/trace/0/steps/1/messages/1/content",
+          "offset": 67
+        },
+        {
+          "pointer": "/trace/0/steps/1/messages/1/content@decoded-json/message",
+          "offset": 0
+        }
+      ],
+      "packet": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/9593d4dd704af0feec.json",
+        "sha256": "01cae54a0d50a342644ec8cff7224f7a0b385e7c16fff56452d3ce8715d24a8d"
+      }
+    }
+  ],
+  "verified_hashes": {
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/graph-evidence/manifest.json": "2fdcbe076a57a89076248efdf06d6664ac64c15a6e867fadb7c0b7a78e6cd689",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/graph-evidence/official-score.json": "3f22094f5ad134171a3955d79452da106cf5db07003817878b3687f0c16a20f3",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/graph-evidence/native.jsonl": "bc8d242bd394381e2ac40798151bb99d6cbe274b0a9d0821f28118117e8d8f22",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/graph-evidence/multi_turn_long_context_17.full.json": "b96e7697ca2e8f82394a7fc19f708a68f76c679b67ac77d86b7c233b20d55a11",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-prefixes/runs/gpt-4.1/multi_turn_long_context_17/1/identity/manifest.json": "1a705dd897a36d6bdb5e2cb6910c725f340a713e808c7036b7f47b9d998dd1f7",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/graph-evidence/multi_turn_long_context_17.api.jsonl": "490bb193ceb07255d87159f659f0374651fc884b8c8ecc18208bf6b36ab211dd",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/graph-evidence/prefix-history.json": "46ccfe29f70027c5220af1172b6de07fa31d19ad1ff6877d239ada0463a7b116",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/graph-evidence/multi_turn_long_context_17.graph.json": "c0c8869d2cae74b0c73470051950826f3c35ee8cabb2aa0d0cd12b50caa5cd42",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/graph-evidence/prefix-native.json": "bd132e7dbf8e7962802d5e958789d89fa2e16b81632b82e06f7ddf85939758ae",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/graph-evidence/native-prefix-history.json": "bd132e7dbf8e7962802d5e958789d89fa2e16b81632b82e06f7ddf85939758ae",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/graph-evidence/native-context.json": "c6b3c3e913f3acb8ea4289ad81dce846ba09f2633f49f66f40534a244cd80545",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/graph-evidence/multi_turn_long_context_17.index.txt": "adbda41b2c463ecba5dfddd89271326bc1a634f1afd9e37c10f74ea53ba91a43",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/graph-evidence/user-suffix.json": "d7fadcbbe506bcc54536d874c23b173587817c789e950173fd33b9cf219ba769",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/graph-evidence/projected-user-suffix.json": "d7fadcbbe506bcc54536d874c23b173587817c789e950173fd33b9cf219ba769",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/graph-evidence/multi_turn_long_context_17.api.json": "cf8f62f738851ba881bcfbf70fdc2b7fa41b65fd1e29545446a079a754a8181d",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/4ddaa645604923d5b3.json": "f095b745d94b0d72ff7dc9a2d293268cbded9040849524de928276653e43d04c",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/identity/manifest.json": "fc6432a25fc6f5099a462038b423e4f6f886a7e2abfe75a6d950ac2ce0354fea",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/identity/official-score.json": "e93014fc07e2892cb918e4a2238659b61deec6fbc4e244fe946a35a4a87cf268",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/identity/native.jsonl": "28a36450e714c979890adfe01217fe10cabfc12c48dd69f5d7a1e29233f4dd66",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/identity/multi_turn_long_context_17.full.json": "7a4836977c39bcbfe7bc670553fc2fa88c5daf8fd771e78f933852fc2e20eba6",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/identity/multi_turn_long_context_17.api.jsonl": "4c4eaadabb999848274f168278552269ed00249e7c5deeb321ea369ff1ca9d04",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/identity/prefix-history.json": "46ccfe29f70027c5220af1172b6de07fa31d19ad1ff6877d239ada0463a7b116",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/identity/multi_turn_long_context_17.graph.json": "3ea15c44a9b11107f4e37b58814be2bd8adb794d68298403ee7917fad89757cd",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/identity/prefix-native.json": "bd132e7dbf8e7962802d5e958789d89fa2e16b81632b82e06f7ddf85939758ae",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/identity/native-prefix-history.json": "bd132e7dbf8e7962802d5e958789d89fa2e16b81632b82e06f7ddf85939758ae",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/identity/native-context.json": "c6b3c3e913f3acb8ea4289ad81dce846ba09f2633f49f66f40534a244cd80545",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/identity/multi_turn_long_context_17.index.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/identity/user-suffix.json": "d7fadcbbe506bcc54536d874c23b173587817c789e950173fd33b9cf219ba769",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/identity/projected-user-suffix.json": "d7fadcbbe506bcc54536d874c23b173587817c789e950173fd33b9cf219ba769",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/identity/multi_turn_long_context_17.api.json": "525d5c5a3edc594d4197787eecc00d16d71f149eb96dc3bcacbb8f100c959369",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/6d40ad06fcef1c9430.json": "9b6d4b0c84ce3ec54d9597c3210077c0370b2e0bcc43fca425e8d515127efc60",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/graph-evidence/manifest.json": "3557315f8753feea446779471513612deeadd773188443e811a4dd45bbc87d16",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/graph-evidence/official-score.json": "7f692c31c028e8815a216eb8701f8a81ad3b9afc0dabedab5db8066c55e544fd",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/graph-evidence/native.jsonl": "a61159c4e207d0331aabbe577b2641e6708ef7ef25fe48618a6512da2d228785",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/graph-evidence/multi_turn_long_context_17.full.json": "059d4f63c4c1c86d2899d66f63034b9a622081fbf502988b12060217189f53b5",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/graph-evidence/multi_turn_long_context_17.api.jsonl": "9c3665139133c314132293dd88138be8ea2c08880188a79b9bbbabc62a992868",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/graph-evidence/prefix-history.json": "46ccfe29f70027c5220af1172b6de07fa31d19ad1ff6877d239ada0463a7b116",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/graph-evidence/multi_turn_long_context_17.graph.json": "c0c8869d2cae74b0c73470051950826f3c35ee8cabb2aa0d0cd12b50caa5cd42",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/graph-evidence/prefix-native.json": "bd132e7dbf8e7962802d5e958789d89fa2e16b81632b82e06f7ddf85939758ae",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/graph-evidence/native-prefix-history.json": "bd132e7dbf8e7962802d5e958789d89fa2e16b81632b82e06f7ddf85939758ae",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/graph-evidence/native-context.json": "c6b3c3e913f3acb8ea4289ad81dce846ba09f2633f49f66f40534a244cd80545",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/graph-evidence/multi_turn_long_context_17.index.txt": "adbda41b2c463ecba5dfddd89271326bc1a634f1afd9e37c10f74ea53ba91a43",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/graph-evidence/user-suffix.json": "d7fadcbbe506bcc54536d874c23b173587817c789e950173fd33b9cf219ba769",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/graph-evidence/projected-user-suffix.json": "d7fadcbbe506bcc54536d874c23b173587817c789e950173fd33b9cf219ba769",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/3/graph-evidence/multi_turn_long_context_17.api.json": "3eea650fa59af706bb1dc13248734b9654cfb143a4b7dac9b7ef978a2c30384a",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/8a7e0fc05595d80044.json": "e18335404de09eed86aeb957df10128685c3375e2e6eb44f2ca15b55511a6365",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/identity/manifest.json": "a219c2359eda0d4d48aef3bb1e3b9c2adfea6807f9813664f38aab44a94990c1",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/identity/official-score.json": "9f53376f4552b074afa20eece48eba1834c07351cadd44d4a2ae38f2c53aa0ba",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/identity/native.jsonl": "a7ddc1465f33ab0735cef86775807923791dd8c225f60f9973127562820e0e2c",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/identity/multi_turn_long_context_17.full.json": "bb627a5c52cc6f9281a4ab9c1f41260d709b299a4e8693f5c07a4d623d6de990",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/identity/multi_turn_long_context_17.api.jsonl": "8589e1bf5096ef1a1c4c0e4e41071b6528d20982cb19645e5f7a5e5f89fef847",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/identity/prefix-history.json": "46ccfe29f70027c5220af1172b6de07fa31d19ad1ff6877d239ada0463a7b116",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/identity/multi_turn_long_context_17.graph.json": "3ea15c44a9b11107f4e37b58814be2bd8adb794d68298403ee7917fad89757cd",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/identity/prefix-native.json": "bd132e7dbf8e7962802d5e958789d89fa2e16b81632b82e06f7ddf85939758ae",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/identity/native-prefix-history.json": "bd132e7dbf8e7962802d5e958789d89fa2e16b81632b82e06f7ddf85939758ae",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/identity/native-context.json": "c6b3c3e913f3acb8ea4289ad81dce846ba09f2633f49f66f40534a244cd80545",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/identity/multi_turn_long_context_17.index.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/identity/user-suffix.json": "d7fadcbbe506bcc54536d874c23b173587817c789e950173fd33b9cf219ba769",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/identity/projected-user-suffix.json": "d7fadcbbe506bcc54536d874c23b173587817c789e950173fd33b9cf219ba769",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-discordance-confirmation/runs/gpt-4.1/multi_turn_long_context_17/2/identity/multi_turn_long_context_17.api.json": "e7bc19410e03e40dbaca5c8cdbc255c8c7fde92e6660193a6354e00004990bda",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-campaign02-batch01-discordance-confirmation-final/blind-packets/9593d4dd704af0feec.json": "01cae54a0d50a342644ec8cff7224f7a0b385e7c16fff56452d3ce8715d24a8d"
+  },
+  "flags_by_model_arm": [
+    {
+      "model": "gpt-4.1",
+      "arm": "graph-evidence",
+      "counts": {
+        "blocking_confirmation": 1,
+        "extra_or_wrong_write": 1,
+        "repeated_loop": 0,
+        "source_confusion": 0,
+        "semantic_correct_but_no_tool": 0
+      }
+    },
+    {
+      "model": "gpt-4.1",
+      "arm": "identity",
+      "counts": {
+        "blocking_confirmation": 1,
+        "extra_or_wrong_write": 1,
+        "repeated_loop": 0,
+        "source_confusion": 0,
+        "semantic_correct_but_no_tool": 0
+      }
+    }
+  ],
+  "adjudication_pending": true,
+  "progression_authorized": false,
+  "goal_complete": false,
+  "limitations": [
+    "Two disjoint AI label-hidden reviews, not independent human/double annotation.",
+    "Source verification and this join are unblinded; original annotations and official scores remain unchanged.",
+    "Ambiguous task semantics and simulator format limitations are reported separately; behavior flags cannot rescore BFCL."
+  ]
+}

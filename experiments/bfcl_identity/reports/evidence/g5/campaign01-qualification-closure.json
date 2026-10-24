@@ -1,0 +1,115 @@
+{
+  "version": "g5-campaign-qualification-closure-v1",
+  "created_at": "2026-10-24T03:56:00.377722+00:00",
+  "campaign": 1,
+  "status": "qualification_insufficient",
+  "closed": true,
+  "integrity_passed": true,
+  "candidate_version": "G5-episodic-evidence-only",
+  "context_contract": "g5-complete-visible-event-view-v1",
+  "qualified_counts": {
+    "gpt-4.1": 4,
+    "claude-sonnet-5-5": 6
+  },
+  "per_model": {
+    "gpt-4.1": {
+      "qualified_count": 4,
+      "qualified_conditions": [
+        "multi_turn_base_14",
+        "multi_turn_long_context_30",
+        "multi_turn_base_24",
+        "multi_turn_long_context_32"
+      ],
+      "exclusions": [
+        {
+          "id": "multi_turn_long_context_6",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_36",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_long_context_42",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        },
+        {
+          "id": "multi_turn_base_0",
+          "reasons": [
+            "official_first_turn_failed"
+          ]
+        }
+      ],
+      "attempted_reserves": 2,
+      "remaining_reserves": 0,
+      "target": 6,
+      "minimum": 5
+    },
+    "claude-sonnet-5-5": {
+      "qualified_count": 6,
+      "qualified_conditions": [
+        "multi_turn_long_context_6",
+        "multi_turn_long_context_42",
+        "multi_turn_base_14",
+        "multi_turn_long_context_30",
+        "multi_turn_base_24",
+        "multi_turn_base_36"
+      ],
+      "exclusions": [],
+      "attempted_reserves": 0,
+      "remaining_reserves": 2,
+      "target": 6,
+      "minimum": 5
+    }
+  },
+  "minimum_per_model_per_batch": 5,
+  "attempt_count_consumed": 1,
+  "continuations_executed": 0,
+  "candidate_AG_outcomes_seen": false,
+  "batch2_opened": false,
+  "goal_complete": false,
+  "candidate_changed": false,
+  "registered_rules_changed": false,
+  "basis": {
+    "final_selection": {
+      "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/campaign01-batch01-final-qualification-selection.json",
+      "sha256": "189ce494164fed267bde9f7ad14d68fcfd27197db104dae8ab86cc7b8c94027c"
+    },
+    "completed_budget": {
+      "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/campaign01-batch01-reserve02-prefixes-completed-budget.json",
+      "sha256": "853280fc7a54c397ced0b6b20d966a3615e71598f93142a5fe4a84f6f22b4a72"
+    },
+    "registered_rules": {
+      "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/registered-decision-rules.json",
+      "sha256": "99cc5157b6949f89e19bce6aeb3c1e198616fec213ce6360c8386c1c59b041d4"
+    },
+    "frozen_development_decision": {
+      "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-development-decision.json",
+      "sha256": "e014bb71ecbbed5031ee40f8864b9c3417641c9543209fb910a258c6bfdbc7f3"
+    },
+    "selector_source": {
+      "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/select-campaign01-batch01-reserves-g5.py",
+      "sha256": "a0a169b75d7182de17b3a35e11df6e763d5da08ee3a32cdf531078b6c51ce847"
+    }
+  },
+  "prefix_attempted_conditions": 14,
+  "prefix_requests": {
+    "gpt-4.1": 33,
+    "claude-sonnet-5-5": 25
+  },
+  "campaign_reference_cost_usd": {
+    "gpt-4.1": 0.235508,
+    "claude-sonnet-5-5": 0.35237
+  },
+  "cumulative_reference_cost_usd": {
+    "gpt-4.1": 7.66122,
+    "claude-sonnet-5-5": 12.917676
+  },
+  "interpretation": "Qualification shortfall before any graph-replacement continuation; neither candidate degradation nor accuracy preservation was measured in this campaign. No threshold relaxation, extra reserve, batch pooling, or continuation dispatch."
+}

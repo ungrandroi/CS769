@@ -1,0 +1,133 @@
+{
+  "version": "g5-campaign02-final-scientific-decision-v1",
+  "campaign": 2,
+  "candidate_version": "G5-episodic-evidence-only",
+  "context_contract": "g5-complete-visible-event-view-v1",
+  "status": "achieved",
+  "operational_goal_criteria_met": true,
+  "eligible_to_mark_goal_complete": true,
+  "batches": [
+    {
+      "batch": 1,
+      "models": {
+        "gpt-4.1": {
+          "conditions": 6,
+          "A_passes": 2,
+          "G_passes": 3,
+          "A_only": 0,
+          "G_only": 1
+        },
+        "claude-sonnet-5-5": {
+          "conditions": 6,
+          "A_passes": 5,
+          "G_passes": 5,
+          "A_only": 0,
+          "G_only": 0
+        }
+      }
+    },
+    {
+      "batch": 2,
+      "models": {
+        "gpt-4.1": {
+          "conditions": 5,
+          "A_passes": 4,
+          "G_passes": 4,
+          "A_only": 0,
+          "G_only": 0
+        },
+        "claude-sonnet-5-5": {
+          "conditions": 6,
+          "A_passes": 4,
+          "G_passes": 4,
+          "A_only": 0,
+          "G_only": 0
+        }
+      }
+    }
+  ],
+  "models": {
+    "gpt-4.1": {
+      "conditions": 11,
+      "A_passes": 6,
+      "G_passes": 7,
+      "A_only": 0,
+      "G_only": 1,
+      "distinct_families": 11
+    },
+    "claude-sonnet-5-5": {
+      "conditions": 12,
+      "A_passes": 9,
+      "G_passes": 9,
+      "A_only": 0,
+      "G_only": 0,
+      "distinct_families": 12
+    }
+  },
+  "discordances": [
+    {
+      "batch": 1,
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_17",
+      "first_A_passed": false,
+      "first_G_passed": true,
+      "three_run_A_passes": 0,
+      "three_run_G_passes": 1,
+      "confirmed_regression": false
+    }
+  ],
+  "failed_gates": [],
+  "insufficient_information": [],
+  "pending": [],
+  "primary_scores_replaced": false,
+  "models_pooled": false,
+  "C1_pooled": false,
+  "new_campaign_authorized": false,
+  "goal_tool_invoked": false,
+  "scope": "Locked small-sample operational preservation only; not population noninferiority or all-BFCL proof.",
+  "limitations": [
+    "Fixed-seed repeated calls are stability diagnostics, not new independent families.",
+    "All first discordances remain visible, including those not confirmed as regressions.",
+    "Compression, broader domains and another validation campaign are not authorized by this decision."
+  ],
+  "inputs": {
+    "batch1_decision": {
+      "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/campaign02-batch01-completion-decision.json",
+      "sha256": "7c0892eb3668389822c08491d6ea675dc31b6cbcf2a44d8ef42806e8e1455e96"
+    },
+    "batch1_source": {
+      "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/review-campaign02-batch01-completion-g5.py",
+      "sha256": "aba70fe148177e624d4cf0bad5c997164b7b59347a582f5d377844e001f832e0"
+    },
+    "batch1_review": {
+      "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/design/campaign02-batch01-completion-independent-review.json",
+      "sha256": "aeb43c4756d8cd81b503545b18ecd0f3c5c0f9e99fca77407b0d625a4d0d388e"
+    },
+    "batch2_decision": {
+      "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/campaign02-batch02-completion-decision.json",
+      "sha256": "8c379f2e6ce40c4b598788b3307a00980d4fa4d3c9992be5b82b3630aed239f8"
+    },
+    "batch2_source": {
+      "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/review-campaign02-batch02-completion-g5.py",
+      "sha256": "40bd9e213e3bff1a6f1dd68297c74714f320269be11f5a8a747d7778357a7b2e"
+    },
+    "batch2_review": {
+      "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/design/campaign02-batch02-completion-independent-review.json",
+      "sha256": "f11a72026db8bf611937605f5949e29fb2794fce18ee54ff06d3a8ee64c255ba"
+    }
+  },
+  "rules": {
+    "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/registered-decision-rules.json",
+    "sha256": "99cc5157b6949f89e19bce6aeb3c1e198616fec213ce6360c8386c1c59b041d4"
+  },
+  "source": {
+    "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/review-campaign02-final-scientific-decision-g5.py",
+    "sha256": "95c57e7a14c7421849ae8e8ea4a0cccc8dea22f40f114ae8d4a537a7e5486c80"
+  },
+  "cumulative_reference_cost_usd": {
+    "gpt-4.1": 9.466962,
+    "claude-sonnet-5-5": 15.921166
+  },
+  "complete_batch_evidence_recomputed": true,
+  "network_dispatched": false
+}

@@ -1,0 +1,547 @@
+{
+  "version": "g5-final-method-scope-review-v1",
+  "created_at": "2026-10-24T05:02:23.204044+00:00",
+  "reviewer": "/root/report_method_verifier",
+  "status": "complete",
+  "method_review_passed": true,
+  "decision": "G5 method claims supported within complete-visible-evidence, one-boundary replacement scope; no conclusion on final behavioral/scientific acceptance.",
+  "review_scope": {
+    "read_only_except_this_report": true,
+    "network_calls": 0,
+    "model_calls": 0,
+    "credentials_read": false,
+    "new_tests_run": false,
+    "frozen_sources_modified": false,
+    "method": "Independent source inspection, selected source hashes checked against saved preflight, and read-only verification of existing request-audit checks. No broad re-audit or retesting."
+  },
+  "findings": [
+    {
+      "claim": "G5 truly replaces the completed native prefix; no native bypass",
+      "verdict": "supported",
+      "details": "GPT sends retained system/developer instructions plus exactly one assistant graph text; Claude replaces its separate outbound messages list with one assistant text block. Current user text is appended unchanged. Only delivery/evidence_view/evidence_audit enter renderer; source_messages/native_evidence are excluded. The old full graph remains an audit artifact, not an extra inference channel.",
+      "sources": [
+        {
+          "source": "gpt_runner",
+          "lines": [
+            69,
+            100
+          ]
+        },
+        {
+          "source": "gpt_runner",
+          "lines": [
+            350,
+            418
+          ]
+        },
+        {
+          "source": "claude_runner",
+          "lines": [
+            36,
+            66
+          ]
+        },
+        {
+          "source": "claude_runner",
+          "lines": [
+            177,
+            201
+          ]
+        },
+        {
+          "source": "claude_runner",
+          "lines": [
+            251,
+            274
+          ]
+        },
+        {
+          "source": "core",
+          "lines": [
+            417,
+            434
+          ]
+        },
+        {
+          "source": "wire_auditor",
+          "lines": [
+            334,
+            380
+          ]
+        }
+      ],
+      "important_distinction": "Claude BFCL normalized request/input still retains source_history for scorer/executor replay (line 268), but post_messages receives native constructed from the replaced messages list (lines 253,274). This internal normalized tape is not a model-visible bypass."
+    },
+    {
+      "claim": "G5 preserves complete visible source evidence",
+      "verdict": "supported within declared evidence boundary",
+      "details": "Typed user/assistant text, tool names and arguments, tool returns, roles, source references, IDs, call groups, errors, episode membership and recorded order survive. Strings remain unchanged render segments; non-string values are JSON rendered with types preserved. Reconstructed graph records are checked against normalized evidence and provider-visible semantics. System instructions remain separate. Opaque thinking and provider metadata are outside the visible-evidence claim.",
+      "sources": [
+        {
+          "source": "core",
+          "lines": [
+            36,
+            148
+          ]
+        },
+        {
+          "source": "core",
+          "lines": [
+            198,
+            219
+          ]
+        },
+        {
+          "source": "core",
+          "lines": [
+            437,
+            486
+          ]
+        },
+        {
+          "source": "core",
+          "lines": [
+            489,
+            531
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "G5 is an episodic evidence graph rather than the richer semantic graph",
+      "verdict": "supported; minimal is descriptive, not a proven minimum",
+      "details": "Projection uniformly removes entity/fact nodes and incident edges, sets fact_order=[]; retained categories are episode/user_request/assistant_statement/tool_call/tool_result. Relations are in_turn/precedes/result_of. No task-specific relevance or outcome-based selection. It intentionally omits precomputed entity binding/existence/state/version joins. Retaining the richer archive does not make the delivered semantic graph lossless.",
+      "sources": [
+        {
+          "source": "core",
+          "lines": [
+            293,
+            321
+          ]
+        },
+        {
+          "source": "core",
+          "lines": [
+            324,
+            414
+          ]
+        },
+        {
+          "source": "design",
+          "field": "single_factor_contract"
+        },
+        {
+          "source": "report_generator",
+          "lines": [
+            32,
+            37
+          ]
+        }
+      ],
+      "safe_name": "完整可见证据的精简事件图（episodic evidence graph）",
+      "limit": "Do not claim mathematically minimal storage, token-optimal graph, or preserved rich semantic state graph."
+    },
+    {
+      "claim": "No compression",
+      "verdict": "supported only for original visible evidence; qualify wording",
+      "details": "There is no evidence summarization, truncation, risk selection, compact codec or token-budget pruning in the G5 outbound renderer. However G5 is a deliberate schema-layer ablation of the richer graph, so an unqualified claim that nothing at all was removed would be false. Current report explicitly states the semantic-graph qualification, which is accurate.",
+      "sources": [
+        {
+          "source": "core",
+          "lines": [
+            293,
+            321
+          ]
+        },
+        {
+          "source": "core",
+          "lines": [
+            489,
+            569
+          ]
+        },
+        {
+          "source": "iteration_runner",
+          "lines": [
+            29,
+            30
+          ]
+        },
+        {
+          "source": "report_generator",
+          "lines": [
+            36,
+            36
+          ]
+        },
+        {
+          "source": "report_generator",
+          "lines": [
+            245,
+            245
+          ]
+        }
+      ],
+      "suggested_wording": "保留完整可见证据，不做摘要、截断或风险压缩；统一省略派生语义层。"
+    },
+    {
+      "claim": "Official evaluation/tools unchanged",
+      "verdict": "supported by saved integrity evidence and selected hash verification",
+      "details": "Official scorer wrapper and evaluator/tool implementation match saved protected hashes. Existing complete wire audits report 544 protected files and 62 frozen/current Python files with no mismatches; request checks verify the same tools/runtime/non-message parameters. This review does not reinterpret official scores or make a behavioral pass decision.",
+      "sources": [
+        {
+          "source": "iteration_runner",
+          "lines": [
+            204,
+            219
+          ]
+        },
+        {
+          "source": "preflight",
+          "field": "protected_sources_unchanged, implementation_sha256, protected_sha256"
+        },
+        {
+          "source": "batch1_wire_audit",
+          "field": "source_freeze, cross_arm_checks"
+        },
+        {
+          "source": "batch2_wire_audit",
+          "field": "source_freeze, cross_arm_checks"
+        }
+      ]
+    },
+    {
+      "claim": "Claude old thinking is handled symmetrically",
+      "verdict": "supported; should be explicit in public method note",
+      "details": "A removes thinking/redacted_thinking only from the completed prefix; G5 excludes the same opaque blocks from its visible evidence view. Originals remain archived. Newly generated continuation responses append the complete raw content blocks unchanged, including new thinking. Old thinking is therefore absent in both arms, not an advantage given to one arm.",
+      "sources": [
+        {
+          "source": "claude_runner",
+          "lines": [
+            17,
+            33
+          ]
+        },
+        {
+          "source": "claude_runner",
+          "lines": [
+            60,
+            64
+          ]
+        },
+        {
+          "source": "core",
+          "lines": [
+            125,
+            148
+          ]
+        },
+        {
+          "source": "claude_runner",
+          "lines": [
+            276,
+            289
+          ]
+        },
+        {
+          "source": "wire_auditor",
+          "lines": [
+            219,
+            224
+          ]
+        }
+      ],
+      "suggested_wording": "Claude 两组均移除已完成首轮的 thinking/redacted_thinking，续跑中新生成的内容块原样保留。"
+    },
+    {
+      "claim": "One-boundary scope",
+      "verdict": "supported",
+      "details": "Replacement occurs only before user turn 2 (turn==1 in the hook). All later user/assistant/tool interactions remain native and accumulate behind the frozen memory. This does not establish a recurrent graph-only agent, multi-boundary replacement, long-horizon graph state maintenance or full-BFCL equivalence.",
+      "sources": [
+        {
+          "source": "gpt_runner",
+          "lines": [
+            373,
+            418
+          ]
+        },
+        {
+          "source": "claude_runner",
+          "lines": [
+            212,
+            222
+          ]
+        },
+        {
+          "source": "claude_runner",
+          "lines": [
+            251,
+            289
+          ]
+        },
+        {
+          "source": "report_generator",
+          "lines": [
+            245,
+            245
+          ]
+        }
+      ]
+    },
+    {
+      "claim": "Current report G5 description agrees with implementation",
+      "verdict": "supported with disclosure improvements",
+      "details": "Generator and HTML both correctly distinguish visible-evidence losslessness from rich-graph losslessness, preserve assistant carrier and chronological evidence, and disclose one-boundary limitation. Neither inspected version claims goal completion from first scores alone. The method review does not supersede the pending final behavior gate.",
+      "sources": [
+        {
+          "source": "report_generator",
+          "lines": [
+            32,
+            37
+          ]
+        },
+        {
+          "source": "report_generator",
+          "lines": [
+            245,
+            245
+          ]
+        },
+        {
+          "source": "report_html",
+          "field": "方法与达成标准 / G5 paragraph"
+        }
+      ],
+      "observed_html_one_line": 1
+    }
+  ],
+  "unsupported_claims_found": [],
+  "wording_clarifications": [
+    {
+      "priority": "recommended",
+      "location": "make-iteration-report.py:245 and corresponding HTML method paragraph",
+      "change": "Clarify 不压缩 refers to original visible evidence; the already-disclosed semantic-layer ablation remains intentional."
+    },
+    {
+      "priority": "recommended",
+      "location": "method paragraph / A baseline description",
+      "change": "Explicitly disclose symmetric removal of completed-prefix Claude thinking/redacted_thinking and preservation of new continuation blocks."
+    },
+    {
+      "priority": "scope_limit",
+      "change": "Use 精简事件证据图 rather than asserting formal minimality or rich semantic-graph preservation."
+    }
+  ],
+  "new_read_only_verification": {
+    "selected_source_hashes_match_frozen_preflight": {
+      "core": true,
+      "gpt_runner": true,
+      "claude_runner": true,
+      "iteration_runner": true,
+      "score_wrapper": true,
+      "event_builder": true,
+      "eval_runner": true,
+      "multi_turn_checker": true,
+      "filesystem_tools": true
+    },
+    "all_selected_hashes_match": true,
+    "G_required_existing_wire_checks": [
+      "only_declared_episodic_schema_projection",
+      "visible_evidence_roundtrip_exact",
+      "no_archive_in_inference_view",
+      "renderer_archive_independent",
+      "first_request_exact_no_history_bypass",
+      "all_requests_no_server_history_bypass",
+      "all_requests_tools_exact_prefix",
+      "all_requests_runtime_exact",
+      "all_requests_keep_complete_boundary"
+    ],
+    "existing_audits": {
+      "development_wire_audit": {
+        "passed_for_checked_scope": true,
+        "full_iteration_audit": true,
+        "scope": {
+          "completed_trajectories_checked": 24,
+          "planned_trajectories": 24,
+          "pending_trajectories_not_audited": 0,
+          "native_response_bridges_checked": 139,
+          "official_executor_tool_outputs_checked": 109,
+          "tool_cycles_checked": 97,
+          "assistant_replay_transitions_checked": 115,
+          "terminal_responses_without_following_request": 24,
+          "actual_requests_checked": 139,
+          "retry_attempts_checked": 0,
+          "opaque_thinking_blocks_replayed_exactly": 6
+        },
+        "issues": [],
+        "source_freeze": {
+          "protected_files_checked": 544,
+          "protected_hash_mismatches": [],
+          "frozen_and_current_python_files_checked": 62,
+          "current_python_hash_mismatches": []
+        },
+        "G_required_checks_all_true": true,
+        "G_trajectories": 8,
+        "cross_arm_checks_passed": true
+      },
+      "batch1_wire_audit": {
+        "passed_for_checked_scope": true,
+        "full_iteration_audit": true,
+        "scope": {
+          "completed_trajectories_checked": 24,
+          "planned_trajectories": 24,
+          "pending_trajectories_not_audited": 0,
+          "native_response_bridges_checked": 154,
+          "official_executor_tool_outputs_checked": 122,
+          "tool_cycles_checked": 104,
+          "assistant_replay_transitions_checked": 130,
+          "terminal_responses_without_following_request": 24,
+          "actual_requests_checked": 154,
+          "retry_attempts_checked": 0,
+          "opaque_thinking_blocks_replayed_exactly": 13
+        },
+        "issues": [],
+        "source_freeze": {
+          "protected_files_checked": 544,
+          "protected_hash_mismatches": [],
+          "frozen_and_current_python_files_checked": 62,
+          "current_python_hash_mismatches": []
+        },
+        "G_required_checks_all_true": true,
+        "G_trajectories": 12,
+        "cross_arm_checks_passed": true
+      },
+      "batch2_wire_audit": {
+        "passed_for_checked_scope": true,
+        "full_iteration_audit": true,
+        "scope": {
+          "completed_trajectories_checked": 22,
+          "planned_trajectories": 22,
+          "pending_trajectories_not_audited": 0,
+          "native_response_bridges_checked": 138,
+          "official_executor_tool_outputs_checked": 90,
+          "tool_cycles_checked": 88,
+          "assistant_replay_transitions_checked": 116,
+          "terminal_responses_without_following_request": 22,
+          "actual_requests_checked": 138,
+          "retry_attempts_checked": 0,
+          "opaque_thinking_blocks_replayed_exactly": 10
+        },
+        "issues": [],
+        "source_freeze": {
+          "protected_files_checked": 544,
+          "protected_hash_mismatches": [],
+          "frozen_and_current_python_files_checked": 62,
+          "current_python_hash_mismatches": []
+        },
+        "G_required_checks_all_true": true,
+        "G_trajectories": 11,
+        "cross_arm_checks_passed": true
+      }
+    },
+    "saved_preflight": {
+      "passed": true,
+      "unit_tests_passed": 78,
+      "subtests_run": 314,
+      "failures": 0,
+      "errors": 0,
+      "network_attempts": 0,
+      "protected_sources_unchanged": true
+    },
+    "preflight_tests_not_rerun": true
+  },
+  "limitations": [
+    "Application-side archived payload and implementation evidence; provider-internal behavior was not inspected.",
+    "Visible evidence excludes opaque thinking/provider metadata; GPT bridge may normalize protocol IDs while preserving matching tool exchanges.",
+    "No new model execution, score recalculation or behavioral adjudication was performed.",
+    "Method scope is one completed first-turn prefix; later native continuations remain in context."
+  ],
+  "source_references": {
+    "report_generator": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/g5-method-reviewed-report-snapshot/make-iteration-report.py",
+      "sha256": "30789f3002444bd63e36d8ad7a4cac73ce1b8b257003497a8eb7b7330361891c"
+    },
+    "report_html": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/g5-method-reviewed-report-snapshot/graph-replacement-iterations.html",
+      "sha256": "ab96b11a42b4141a0acc3b2694033e3b5f022cc71d62b36f4135326cbdc4ad25"
+    },
+    "core": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/runner-g5/scripts/core/graph_memory_evidence.py",
+      "sha256": "3fed98d65d054dca782c0242524f8c33db68621a78efae4b3192d8e727572c49"
+    },
+    "gpt_runner": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/runner-g5/scripts/workflows/graph_gpt_task.py",
+      "sha256": "943ea280db91580af97b2df581f177ea73d13f6ef6961964d5013468ff95bcd0"
+    },
+    "claude_runner": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/runner-g5/scripts/workflows/graph_claude_task.py",
+      "sha256": "679e48a2222c1ceda2e1700d0e307c42a24bd60cfff8be171eb58f1d2eb85ce1"
+    },
+    "iteration_runner": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/runner-g5/scripts/workflows/graph_iteration_run.py",
+      "sha256": "cf4e63454b46f520aa1ab402bf15c4afaa8dca6174692cd5f36bd902af35d608"
+    },
+    "score_wrapper": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/runner-g5/scripts/core/qwen_official_score.py",
+      "sha256": "b66af5c7b65596d2096ea49e8891efd92066e034ce500e1667723fd69db546bd"
+    },
+    "event_builder": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/runner-g5/scripts/core/event_graph.py",
+      "sha256": "34fabec02adde9aeb610a24dd08a44bccacb26bd7555b6c106d9b06f2ddcc10a"
+    },
+    "wire_auditor": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/audit-iteration-wire-g5.py",
+      "sha256": "3f12b9b81d3527c153ea90716fdf6b2fb8753569970c4dd21c38d45de1f92f7f"
+    },
+    "design": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/round-05-mechanism-review.json",
+      "sha256": "a5451941985c2bc546f3fa7a68b1ddd9da580aac648113a0f6bee5900f30727e"
+    },
+    "implementation_record": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/g5-implementation-record.json",
+      "sha256": "481f3e61b07f16985332cb93f77d7cedff58a032214312d2ea36fc257356ee1e"
+    },
+    "preflight": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-preflight-v2.json",
+      "sha256": "62fa51e01858daf21fe68e07f21fa22603bafbd34391da0434b703bde356d342"
+    },
+    "offline_evidence_audit": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-offline-evidence-audit-v2.json",
+      "sha256": "b73bcb035e71fba351c815402b2cffd17b1efe41f7403567d844cd66a0b2bfab"
+    },
+    "development_wire_audit": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-wire-audit.json",
+      "sha256": "3bd4a57846b172030aa3e513ee2364bc0c69bcd6650660c0cc0c188c37b145ca"
+    },
+    "batch1_wire_audit": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-continuations-wire-audit.json",
+      "sha256": "61a40fdb136b9cc0539fe034c68ddb48ce09f2c946d3c456ef6e041a9248a7a8"
+    },
+    "batch2_wire_audit": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch02-continuations-wire-audit.json",
+      "sha256": "1103781f7d7ad424e064c9708d2eb59a5aad08229cc96d91e7430ac0ce74537b"
+    },
+    "frozen_adoption": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/campaign02-frozen-g5-adoption.json",
+      "sha256": "9d5dcd46abca61b02602d176ca51fd02f9a78d3dcf3840ca505ca54943baa1dc"
+    },
+    "registered_rules": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/registered-decision-rules.json",
+      "sha256": "99cc5157b6949f89e19bce6aeb3c1e198616fec213ce6360c8386c1c59b041d4"
+    },
+    "eval_runner": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/runner-g5/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/eval_runner.py",
+      "sha256": "b1033684908819ccb312d4d0e2c563359d69247412f00206013b2292b0e3ce81"
+    },
+    "multi_turn_checker": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/runner-g5/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/multi_turn_eval/multi_turn_checker.py",
+      "sha256": "b3b787515eda3bf0e365e39634a8fc7f831763f010f716d35d86f96fd5aab1b5"
+    },
+    "filesystem_tools": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/runner-g5/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/multi_turn_eval/func_source_code/gorilla_file_system.py",
+      "sha256": "84173750930b09aaa31b90547c9bd79ce75714682608b35e78a9c1ea259faf2b"
+    }
+  },
+  "scientific_acceptance": "not decided here; final behavior and cross-batch gates remain separate",
+  "goal_complete": false
+}

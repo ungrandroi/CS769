@@ -1,0 +1,2322 @@
+{
+  "version": "graph-g5-confirmation-decision-v1",
+  "context_contract": "g5-complete-visible-event-view-v1",
+  "status": "pass",
+  "dev_freeze_passed": true,
+  "goal_complete": false,
+  "reasons": [],
+  "scope": "Fixed development confirmation only; never overall goal completion. Official scores unchanged.",
+  "candidate_version": "G5-episodic-evidence-only",
+  "paired_graph_context_checks": [
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "repeat": 1,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/identity/multi_turn_base_3.graph.json",
+        "sha256": "7a97c1d1715b792db1f104dc50e8db211e648ce12abb192c4ab8059ea5e2cb81"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/identity/multi_turn_base_3.graph.json",
+        "sha256": "7a97c1d1715b792db1f104dc50e8db211e648ce12abb192c4ab8059ea5e2cb81"
+      },
+      "actual_graph_view_sha256": "e1899b64c64dac80fc133b9bb8ceef6ff680c5bc543a2dd518d8dba476825e96",
+      "shared_parent_graph_view_sha256": "e1899b64c64dac80fc133b9bb8ceef6ff680c5bc543a2dd518d8dba476825e96",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_12",
+      "repeat": 1,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence/multi_turn_base_12.graph.json",
+        "sha256": "e72a3d9e4fb660b0eec1ba2d56423fa3c75d96cbf624b755007494006b88670a"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/identity/multi_turn_base_12.graph.json",
+        "sha256": "5a1c335bbca930fe90191679a3c4ede333780921c2deaa70416521900b1335a9"
+      },
+      "actual_graph_view_sha256": "b6302a8d82572864ae17f969b2df7c653b2854026cc3a245e87abe96a668c321",
+      "shared_parent_graph_view_sha256": "027aa041b1f4c693b8d6530f96c9730d55d0e307a1e5a8c45e310f07e82e4ee3",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "repeat": 1,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence/multi_turn_base_3.graph.json",
+        "sha256": "85163994c61670ba1e3b944c4afa96bf3727718039fe224f0c670ae18f812da7"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/identity/multi_turn_base_3.graph.json",
+        "sha256": "7a97c1d1715b792db1f104dc50e8db211e648ce12abb192c4ab8059ea5e2cb81"
+      },
+      "actual_graph_view_sha256": "25546f0ca3302792621ee52f073882ad1265b6289a822d7639489111ecda5794",
+      "shared_parent_graph_view_sha256": "e1899b64c64dac80fc133b9bb8ceef6ff680c5bc543a2dd518d8dba476825e96",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/multi_turn_base_3.graph.json",
+        "sha256": "f31a33aa6ba52d304b2805c86138bf011df94d1616419a6021486b80daae2f68"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/identity/multi_turn_base_3.graph.json",
+        "sha256": "7a97c1d1715b792db1f104dc50e8db211e648ce12abb192c4ab8059ea5e2cb81"
+      },
+      "actual_graph_view_sha256": "e1899b64c64dac80fc133b9bb8ceef6ff680c5bc543a2dd518d8dba476825e96",
+      "shared_parent_graph_view_sha256": "e1899b64c64dac80fc133b9bb8ceef6ff680c5bc543a2dd518d8dba476825e96",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_12",
+      "repeat": 1,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/identity/multi_turn_base_12.graph.json",
+        "sha256": "5a1c335bbca930fe90191679a3c4ede333780921c2deaa70416521900b1335a9"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/identity/multi_turn_base_12.graph.json",
+        "sha256": "5a1c335bbca930fe90191679a3c4ede333780921c2deaa70416521900b1335a9"
+      },
+      "actual_graph_view_sha256": "027aa041b1f4c693b8d6530f96c9730d55d0e307a1e5a8c45e310f07e82e4ee3",
+      "shared_parent_graph_view_sha256": "027aa041b1f4c693b8d6530f96c9730d55d0e307a1e5a8c45e310f07e82e4ee3",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/multi_turn_base_12.graph.json",
+        "sha256": "b9296ceb421506a983b100df5d6efe1a566a69aa8883d4ebfdff326d634e1b76"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/identity/multi_turn_base_12.graph.json",
+        "sha256": "915aaad4d650cbc32a721cdac57f8fee096dbc2ad9f80799a651c5392091c76e"
+      },
+      "actual_graph_view_sha256": "3f292a29f3773961dd517d6334d4184a7fff8fa42143ef9867d98275bc14603f",
+      "shared_parent_graph_view_sha256": "3f292a29f3773961dd517d6334d4184a7fff8fa42143ef9867d98275bc14603f",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_12",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/multi_turn_base_12.graph.json",
+        "sha256": "03e808981a5702c16a46e21083af779314062a7d897231face2965eb34dac8aa"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/identity/multi_turn_base_12.graph.json",
+        "sha256": "5a1c335bbca930fe90191679a3c4ede333780921c2deaa70416521900b1335a9"
+      },
+      "actual_graph_view_sha256": "027aa041b1f4c693b8d6530f96c9730d55d0e307a1e5a8c45e310f07e82e4ee3",
+      "shared_parent_graph_view_sha256": "027aa041b1f4c693b8d6530f96c9730d55d0e307a1e5a8c45e310f07e82e4ee3",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "repeat": 1,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/identity/multi_turn_base_12.graph.json",
+        "sha256": "915aaad4d650cbc32a721cdac57f8fee096dbc2ad9f80799a651c5392091c76e"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/identity/multi_turn_base_12.graph.json",
+        "sha256": "915aaad4d650cbc32a721cdac57f8fee096dbc2ad9f80799a651c5392091c76e"
+      },
+      "actual_graph_view_sha256": "3f292a29f3773961dd517d6334d4184a7fff8fa42143ef9867d98275bc14603f",
+      "shared_parent_graph_view_sha256": "3f292a29f3773961dd517d6334d4184a7fff8fa42143ef9867d98275bc14603f",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "repeat": 1,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence/multi_turn_base_12.graph.json",
+        "sha256": "6438cb0262556616b82526c1db0decbb54d98dfe7a240b07a703ccec82754660"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/identity/multi_turn_base_12.graph.json",
+        "sha256": "915aaad4d650cbc32a721cdac57f8fee096dbc2ad9f80799a651c5392091c76e"
+      },
+      "actual_graph_view_sha256": "7daff6f673372acddd37dbc22615d60714144d4bdb1fe0fd72572ddc43308299",
+      "shared_parent_graph_view_sha256": "3f292a29f3773961dd517d6334d4184a7fff8fa42143ef9867d98275bc14603f",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_31",
+      "repeat": 1,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "9ea3536ca8758923383ba52765a9bac6c4e037fa2fb54797b355e781d79143bd"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "9ea3536ca8758923383ba52765a9bac6c4e037fa2fb54797b355e781d79143bd"
+      },
+      "actual_graph_view_sha256": "d316250fa3f6a696885cdd164e6b59b8de5f757fc31208fe8765cfda33034ed0",
+      "shared_parent_graph_view_sha256": "d316250fa3f6a696885cdd164e6b59b8de5f757fc31208fe8765cfda33034ed0",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_31",
+      "repeat": 1,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence/multi_turn_long_context_31.graph.json",
+        "sha256": "43893229bf9fc0363237d5728d03b3561b393083e229af0144434c6c0be9c884"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "dee8e5279f50341ed8311ef6bd2cdaf31478c0c6f1b0953ae18654ed005135cb"
+      },
+      "actual_graph_view_sha256": "fba6d8a0153ac8ec74376f1767c3c5dbabc0b60ec974d6088bcd7a9087c1798d",
+      "shared_parent_graph_view_sha256": "5592154466b444a1bd5cbbb725c1196278fd088f8522b9d55274611f0fdf80df",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_31",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.graph.json",
+        "sha256": "afe8f6bd4d29d017aaf9fb78195a62b9a78f5fc8a862ee14373a37c2bc0cd2c9"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "9ea3536ca8758923383ba52765a9bac6c4e037fa2fb54797b355e781d79143bd"
+      },
+      "actual_graph_view_sha256": "d316250fa3f6a696885cdd164e6b59b8de5f757fc31208fe8765cfda33034ed0",
+      "shared_parent_graph_view_sha256": "d316250fa3f6a696885cdd164e6b59b8de5f757fc31208fe8765cfda33034ed0",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_31",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.graph.json",
+        "sha256": "cd7b69adb2f8686b6e94164236a05e7e0553e68d6f53072b4fa6552bc6d83a0b"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "dee8e5279f50341ed8311ef6bd2cdaf31478c0c6f1b0953ae18654ed005135cb"
+      },
+      "actual_graph_view_sha256": "5592154466b444a1bd5cbbb725c1196278fd088f8522b9d55274611f0fdf80df",
+      "shared_parent_graph_view_sha256": "5592154466b444a1bd5cbbb725c1196278fd088f8522b9d55274611f0fdf80df",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_31",
+      "repeat": 1,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence/multi_turn_long_context_31.graph.json",
+        "sha256": "82167d2b0dcb31fbc2043e5d78ccf761e3b66b3c2b26a5ce6fa51bac570701bf"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "9ea3536ca8758923383ba52765a9bac6c4e037fa2fb54797b355e781d79143bd"
+      },
+      "actual_graph_view_sha256": "ea9f9997b4865dd90a2579c8ebc40f6b524dc1c86847352f856b247f370cfa62",
+      "shared_parent_graph_view_sha256": "d316250fa3f6a696885cdd164e6b59b8de5f757fc31208fe8765cfda33034ed0",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_31",
+      "repeat": 1,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "dee8e5279f50341ed8311ef6bd2cdaf31478c0c6f1b0953ae18654ed005135cb"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "dee8e5279f50341ed8311ef6bd2cdaf31478c0c6f1b0953ae18654ed005135cb"
+      },
+      "actual_graph_view_sha256": "5592154466b444a1bd5cbbb725c1196278fd088f8522b9d55274611f0fdf80df",
+      "shared_parent_graph_view_sha256": "5592154466b444a1bd5cbbb725c1196278fd088f8522b9d55274611f0fdf80df",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_3",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/multi_turn_base_3.graph.json",
+        "sha256": "c3a25fab9c11a3740a1d2c7bd22566e112c922d28e3034e3e1d5c1fba4d4a9bb"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/identity/multi_turn_base_3.graph.json",
+        "sha256": "4ae84640e8d7a199bdc2577dcb524a039a1401889f0b4a5624c9b2efade4b56a"
+      },
+      "actual_graph_view_sha256": "6f2a2bab4ea60b7271962d83cecf60d39d7dcc4cc0b55f81416e35bbaa28722b",
+      "shared_parent_graph_view_sha256": "6f2a2bab4ea60b7271962d83cecf60d39d7dcc4cc0b55f81416e35bbaa28722b",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_43",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/multi_turn_base_43.graph.json",
+        "sha256": "8db734d01b7bff3f4cc001434ea17ff8005b7ec335c3061ef20dc0b342a144ae"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/identity/multi_turn_base_43.graph.json",
+        "sha256": "fa4d57130d4b56e2731d4bf3277240b5fd0357039262e30899d5c7a24b837dd2"
+      },
+      "actual_graph_view_sha256": "54505cb333ff072d915c959024916a4e5cad285a4681948bdc3922e6d6ef8eae",
+      "shared_parent_graph_view_sha256": "54505cb333ff072d915c959024916a4e5cad285a4681948bdc3922e6d6ef8eae",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_3",
+      "repeat": 1,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence/multi_turn_base_3.graph.json",
+        "sha256": "2f128bf282c3d4526e050c03c40c05dac5cfd6abd7a0cd54af3f2fc2eb76a879"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/identity/multi_turn_base_3.graph.json",
+        "sha256": "4ae84640e8d7a199bdc2577dcb524a039a1401889f0b4a5624c9b2efade4b56a"
+      },
+      "actual_graph_view_sha256": "e791566bed1a47a0f0a2a68f30aa424338be6e9848898f605973784ff2c5b139",
+      "shared_parent_graph_view_sha256": "6f2a2bab4ea60b7271962d83cecf60d39d7dcc4cc0b55f81416e35bbaa28722b",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_43",
+      "repeat": 1,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/identity/multi_turn_base_43.graph.json",
+        "sha256": "fa4d57130d4b56e2731d4bf3277240b5fd0357039262e30899d5c7a24b837dd2"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/identity/multi_turn_base_43.graph.json",
+        "sha256": "fa4d57130d4b56e2731d4bf3277240b5fd0357039262e30899d5c7a24b837dd2"
+      },
+      "actual_graph_view_sha256": "54505cb333ff072d915c959024916a4e5cad285a4681948bdc3922e6d6ef8eae",
+      "shared_parent_graph_view_sha256": "54505cb333ff072d915c959024916a4e5cad285a4681948bdc3922e6d6ef8eae",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_3",
+      "repeat": 1,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/identity/multi_turn_base_3.graph.json",
+        "sha256": "4ae84640e8d7a199bdc2577dcb524a039a1401889f0b4a5624c9b2efade4b56a"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/identity/multi_turn_base_3.graph.json",
+        "sha256": "4ae84640e8d7a199bdc2577dcb524a039a1401889f0b4a5624c9b2efade4b56a"
+      },
+      "actual_graph_view_sha256": "6f2a2bab4ea60b7271962d83cecf60d39d7dcc4cc0b55f81416e35bbaa28722b",
+      "shared_parent_graph_view_sha256": "6f2a2bab4ea60b7271962d83cecf60d39d7dcc4cc0b55f81416e35bbaa28722b",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_43",
+      "repeat": 1,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence/multi_turn_base_43.graph.json",
+        "sha256": "e50913645bc7d5c49729890e0d06cedd0aafb0e5dcf46ccf8626c77eec80a782"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/identity/multi_turn_base_43.graph.json",
+        "sha256": "fa4d57130d4b56e2731d4bf3277240b5fd0357039262e30899d5c7a24b837dd2"
+      },
+      "actual_graph_view_sha256": "4d4c307a00d0bcb92dbc8e2a69a19555b55a3fc46cd280907e63e245a273c82c",
+      "shared_parent_graph_view_sha256": "54505cb333ff072d915c959024916a4e5cad285a4681948bdc3922e6d6ef8eae",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_43",
+      "repeat": 1,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/identity/multi_turn_base_43.graph.json",
+        "sha256": "7a3e4d627c0e4bbd83e9d84337aba0a42582b93822a888856b37903d673b2f55"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/identity/multi_turn_base_43.graph.json",
+        "sha256": "7a3e4d627c0e4bbd83e9d84337aba0a42582b93822a888856b37903d673b2f55"
+      },
+      "actual_graph_view_sha256": "36e77d57ba421e529da0e4bcfe734ba42ff7020c5fa5e19d9f7cbe5a2ff72683",
+      "shared_parent_graph_view_sha256": "36e77d57ba421e529da0e4bcfe734ba42ff7020c5fa5e19d9f7cbe5a2ff72683",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_43",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/multi_turn_base_43.graph.json",
+        "sha256": "901ee45f8b2b9f3641c254d9adaf9ad5d8e25204c1a943c16284fef39d5bb358"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/identity/multi_turn_base_43.graph.json",
+        "sha256": "7a3e4d627c0e4bbd83e9d84337aba0a42582b93822a888856b37903d673b2f55"
+      },
+      "actual_graph_view_sha256": "36e77d57ba421e529da0e4bcfe734ba42ff7020c5fa5e19d9f7cbe5a2ff72683",
+      "shared_parent_graph_view_sha256": "36e77d57ba421e529da0e4bcfe734ba42ff7020c5fa5e19d9f7cbe5a2ff72683",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_43",
+      "repeat": 1,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence/multi_turn_base_43.graph.json",
+        "sha256": "b703b6603f5e715316a919bcbaba144902c2218b57ed8f5bbd265b7325520041"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/identity/multi_turn_base_43.graph.json",
+        "sha256": "7a3e4d627c0e4bbd83e9d84337aba0a42582b93822a888856b37903d673b2f55"
+      },
+      "actual_graph_view_sha256": "a7c5b5448512dec47af359d8da36f02799b724e2ff243815e10bfd754d37b19e",
+      "shared_parent_graph_view_sha256": "36e77d57ba421e529da0e4bcfe734ba42ff7020c5fa5e19d9f7cbe5a2ff72683",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "screen"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "repeat": 2,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/2/identity/multi_turn_base_12.graph.json",
+        "sha256": "915aaad4d650cbc32a721cdac57f8fee096dbc2ad9f80799a651c5392091c76e"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/2/identity/multi_turn_base_12.graph.json",
+        "sha256": "915aaad4d650cbc32a721cdac57f8fee096dbc2ad9f80799a651c5392091c76e"
+      },
+      "actual_graph_view_sha256": "3f292a29f3773961dd517d6334d4184a7fff8fa42143ef9867d98275bc14603f",
+      "shared_parent_graph_view_sha256": "3f292a29f3773961dd517d6334d4184a7fff8fa42143ef9867d98275bc14603f",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_3",
+      "repeat": 3,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/3/graph-evidence/multi_turn_base_3.graph.json",
+        "sha256": "2f128bf282c3d4526e050c03c40c05dac5cfd6abd7a0cd54af3f2fc2eb76a879"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/3/identity/multi_turn_base_3.graph.json",
+        "sha256": "4ae84640e8d7a199bdc2577dcb524a039a1401889f0b4a5624c9b2efade4b56a"
+      },
+      "actual_graph_view_sha256": "e791566bed1a47a0f0a2a68f30aa424338be6e9848898f605973784ff2c5b139",
+      "shared_parent_graph_view_sha256": "6f2a2bab4ea60b7271962d83cecf60d39d7dcc4cc0b55f81416e35bbaa28722b",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "repeat": 2,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/2/graph-evidence/multi_turn_base_12.graph.json",
+        "sha256": "6438cb0262556616b82526c1db0decbb54d98dfe7a240b07a703ccec82754660"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/2/identity/multi_turn_base_12.graph.json",
+        "sha256": "915aaad4d650cbc32a721cdac57f8fee096dbc2ad9f80799a651c5392091c76e"
+      },
+      "actual_graph_view_sha256": "7daff6f673372acddd37dbc22615d60714144d4bdb1fe0fd72572ddc43308299",
+      "shared_parent_graph_view_sha256": "3f292a29f3773961dd517d6334d4184a7fff8fa42143ef9867d98275bc14603f",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_3",
+      "repeat": 3,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/3/identity/multi_turn_base_3.graph.json",
+        "sha256": "4ae84640e8d7a199bdc2577dcb524a039a1401889f0b4a5624c9b2efade4b56a"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/3/identity/multi_turn_base_3.graph.json",
+        "sha256": "4ae84640e8d7a199bdc2577dcb524a039a1401889f0b4a5624c9b2efade4b56a"
+      },
+      "actual_graph_view_sha256": "6f2a2bab4ea60b7271962d83cecf60d39d7dcc4cc0b55f81416e35bbaa28722b",
+      "shared_parent_graph_view_sha256": "6f2a2bab4ea60b7271962d83cecf60d39d7dcc4cc0b55f81416e35bbaa28722b",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_31",
+      "repeat": 3,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/3/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "dee8e5279f50341ed8311ef6bd2cdaf31478c0c6f1b0953ae18654ed005135cb"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/3/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "dee8e5279f50341ed8311ef6bd2cdaf31478c0c6f1b0953ae18654ed005135cb"
+      },
+      "actual_graph_view_sha256": "5592154466b444a1bd5cbbb725c1196278fd088f8522b9d55274611f0fdf80df",
+      "shared_parent_graph_view_sha256": "5592154466b444a1bd5cbbb725c1196278fd088f8522b9d55274611f0fdf80df",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_31",
+      "repeat": 3,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/3/graph-evidence/multi_turn_long_context_31.graph.json",
+        "sha256": "43893229bf9fc0363237d5728d03b3561b393083e229af0144434c6c0be9c884"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/3/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "dee8e5279f50341ed8311ef6bd2cdaf31478c0c6f1b0953ae18654ed005135cb"
+      },
+      "actual_graph_view_sha256": "fba6d8a0153ac8ec74376f1767c3c5dbabc0b60ec974d6088bcd7a9087c1798d",
+      "shared_parent_graph_view_sha256": "5592154466b444a1bd5cbbb725c1196278fd088f8522b9d55274611f0fdf80df",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_3",
+      "repeat": 2,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/2/graph-evidence/multi_turn_base_3.graph.json",
+        "sha256": "2f128bf282c3d4526e050c03c40c05dac5cfd6abd7a0cd54af3f2fc2eb76a879"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/2/identity/multi_turn_base_3.graph.json",
+        "sha256": "4ae84640e8d7a199bdc2577dcb524a039a1401889f0b4a5624c9b2efade4b56a"
+      },
+      "actual_graph_view_sha256": "e791566bed1a47a0f0a2a68f30aa424338be6e9848898f605973784ff2c5b139",
+      "shared_parent_graph_view_sha256": "6f2a2bab4ea60b7271962d83cecf60d39d7dcc4cc0b55f81416e35bbaa28722b",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "repeat": 3,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/3/graph-evidence/multi_turn_base_12.graph.json",
+        "sha256": "6438cb0262556616b82526c1db0decbb54d98dfe7a240b07a703ccec82754660"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/3/identity/multi_turn_base_12.graph.json",
+        "sha256": "915aaad4d650cbc32a721cdac57f8fee096dbc2ad9f80799a651c5392091c76e"
+      },
+      "actual_graph_view_sha256": "7daff6f673372acddd37dbc22615d60714144d4bdb1fe0fd72572ddc43308299",
+      "shared_parent_graph_view_sha256": "3f292a29f3773961dd517d6334d4184a7fff8fa42143ef9867d98275bc14603f",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_3",
+      "repeat": 2,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/2/identity/multi_turn_base_3.graph.json",
+        "sha256": "4ae84640e8d7a199bdc2577dcb524a039a1401889f0b4a5624c9b2efade4b56a"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/2/identity/multi_turn_base_3.graph.json",
+        "sha256": "4ae84640e8d7a199bdc2577dcb524a039a1401889f0b4a5624c9b2efade4b56a"
+      },
+      "actual_graph_view_sha256": "6f2a2bab4ea60b7271962d83cecf60d39d7dcc4cc0b55f81416e35bbaa28722b",
+      "shared_parent_graph_view_sha256": "6f2a2bab4ea60b7271962d83cecf60d39d7dcc4cc0b55f81416e35bbaa28722b",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "repeat": 3,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/3/identity/multi_turn_base_12.graph.json",
+        "sha256": "915aaad4d650cbc32a721cdac57f8fee096dbc2ad9f80799a651c5392091c76e"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/3/identity/multi_turn_base_12.graph.json",
+        "sha256": "915aaad4d650cbc32a721cdac57f8fee096dbc2ad9f80799a651c5392091c76e"
+      },
+      "actual_graph_view_sha256": "3f292a29f3773961dd517d6334d4184a7fff8fa42143ef9867d98275bc14603f",
+      "shared_parent_graph_view_sha256": "3f292a29f3773961dd517d6334d4184a7fff8fa42143ef9867d98275bc14603f",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_31",
+      "repeat": 2,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/2/graph-evidence/multi_turn_long_context_31.graph.json",
+        "sha256": "43893229bf9fc0363237d5728d03b3561b393083e229af0144434c6c0be9c884"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/2/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "dee8e5279f50341ed8311ef6bd2cdaf31478c0c6f1b0953ae18654ed005135cb"
+      },
+      "actual_graph_view_sha256": "fba6d8a0153ac8ec74376f1767c3c5dbabc0b60ec974d6088bcd7a9087c1798d",
+      "shared_parent_graph_view_sha256": "5592154466b444a1bd5cbbb725c1196278fd088f8522b9d55274611f0fdf80df",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_12",
+      "repeat": 2,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/2/graph-evidence/multi_turn_base_12.graph.json",
+        "sha256": "e72a3d9e4fb660b0eec1ba2d56423fa3c75d96cbf624b755007494006b88670a"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/2/identity/multi_turn_base_12.graph.json",
+        "sha256": "5a1c335bbca930fe90191679a3c4ede333780921c2deaa70416521900b1335a9"
+      },
+      "actual_graph_view_sha256": "b6302a8d82572864ae17f969b2df7c653b2854026cc3a245e87abe96a668c321",
+      "shared_parent_graph_view_sha256": "027aa041b1f4c693b8d6530f96c9730d55d0e307a1e5a8c45e310f07e82e4ee3",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_31",
+      "repeat": 2,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/2/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "dee8e5279f50341ed8311ef6bd2cdaf31478c0c6f1b0953ae18654ed005135cb"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/2/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "dee8e5279f50341ed8311ef6bd2cdaf31478c0c6f1b0953ae18654ed005135cb"
+      },
+      "actual_graph_view_sha256": "5592154466b444a1bd5cbbb725c1196278fd088f8522b9d55274611f0fdf80df",
+      "shared_parent_graph_view_sha256": "5592154466b444a1bd5cbbb725c1196278fd088f8522b9d55274611f0fdf80df",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_12",
+      "repeat": 2,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/2/identity/multi_turn_base_12.graph.json",
+        "sha256": "5a1c335bbca930fe90191679a3c4ede333780921c2deaa70416521900b1335a9"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/2/identity/multi_turn_base_12.graph.json",
+        "sha256": "5a1c335bbca930fe90191679a3c4ede333780921c2deaa70416521900b1335a9"
+      },
+      "actual_graph_view_sha256": "027aa041b1f4c693b8d6530f96c9730d55d0e307a1e5a8c45e310f07e82e4ee3",
+      "shared_parent_graph_view_sha256": "027aa041b1f4c693b8d6530f96c9730d55d0e307a1e5a8c45e310f07e82e4ee3",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_31",
+      "repeat": 3,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/3/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "9ea3536ca8758923383ba52765a9bac6c4e037fa2fb54797b355e781d79143bd"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/3/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "9ea3536ca8758923383ba52765a9bac6c4e037fa2fb54797b355e781d79143bd"
+      },
+      "actual_graph_view_sha256": "d316250fa3f6a696885cdd164e6b59b8de5f757fc31208fe8765cfda33034ed0",
+      "shared_parent_graph_view_sha256": "d316250fa3f6a696885cdd164e6b59b8de5f757fc31208fe8765cfda33034ed0",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_43",
+      "repeat": 2,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/2/identity/multi_turn_base_43.graph.json",
+        "sha256": "fa4d57130d4b56e2731d4bf3277240b5fd0357039262e30899d5c7a24b837dd2"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/2/identity/multi_turn_base_43.graph.json",
+        "sha256": "fa4d57130d4b56e2731d4bf3277240b5fd0357039262e30899d5c7a24b837dd2"
+      },
+      "actual_graph_view_sha256": "54505cb333ff072d915c959024916a4e5cad285a4681948bdc3922e6d6ef8eae",
+      "shared_parent_graph_view_sha256": "54505cb333ff072d915c959024916a4e5cad285a4681948bdc3922e6d6ef8eae",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_31",
+      "repeat": 3,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/3/graph-evidence/multi_turn_long_context_31.graph.json",
+        "sha256": "82167d2b0dcb31fbc2043e5d78ccf761e3b66b3c2b26a5ce6fa51bac570701bf"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/3/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "9ea3536ca8758923383ba52765a9bac6c4e037fa2fb54797b355e781d79143bd"
+      },
+      "actual_graph_view_sha256": "ea9f9997b4865dd90a2579c8ebc40f6b524dc1c86847352f856b247f370cfa62",
+      "shared_parent_graph_view_sha256": "d316250fa3f6a696885cdd164e6b59b8de5f757fc31208fe8765cfda33034ed0",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_43",
+      "repeat": 2,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/2/graph-evidence/multi_turn_base_43.graph.json",
+        "sha256": "e50913645bc7d5c49729890e0d06cedd0aafb0e5dcf46ccf8626c77eec80a782"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/2/identity/multi_turn_base_43.graph.json",
+        "sha256": "fa4d57130d4b56e2731d4bf3277240b5fd0357039262e30899d5c7a24b837dd2"
+      },
+      "actual_graph_view_sha256": "4d4c307a00d0bcb92dbc8e2a69a19555b55a3fc46cd280907e63e245a273c82c",
+      "shared_parent_graph_view_sha256": "54505cb333ff072d915c959024916a4e5cad285a4681948bdc3922e6d6ef8eae",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_43",
+      "repeat": 3,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/3/graph-evidence/multi_turn_base_43.graph.json",
+        "sha256": "e50913645bc7d5c49729890e0d06cedd0aafb0e5dcf46ccf8626c77eec80a782"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/3/identity/multi_turn_base_43.graph.json",
+        "sha256": "fa4d57130d4b56e2731d4bf3277240b5fd0357039262e30899d5c7a24b837dd2"
+      },
+      "actual_graph_view_sha256": "4d4c307a00d0bcb92dbc8e2a69a19555b55a3fc46cd280907e63e245a273c82c",
+      "shared_parent_graph_view_sha256": "54505cb333ff072d915c959024916a4e5cad285a4681948bdc3922e6d6ef8eae",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_12",
+      "repeat": 3,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/3/identity/multi_turn_base_12.graph.json",
+        "sha256": "5a1c335bbca930fe90191679a3c4ede333780921c2deaa70416521900b1335a9"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/3/identity/multi_turn_base_12.graph.json",
+        "sha256": "5a1c335bbca930fe90191679a3c4ede333780921c2deaa70416521900b1335a9"
+      },
+      "actual_graph_view_sha256": "027aa041b1f4c693b8d6530f96c9730d55d0e307a1e5a8c45e310f07e82e4ee3",
+      "shared_parent_graph_view_sha256": "027aa041b1f4c693b8d6530f96c9730d55d0e307a1e5a8c45e310f07e82e4ee3",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_12",
+      "repeat": 3,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/3/graph-evidence/multi_turn_base_12.graph.json",
+        "sha256": "e72a3d9e4fb660b0eec1ba2d56423fa3c75d96cbf624b755007494006b88670a"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/3/identity/multi_turn_base_12.graph.json",
+        "sha256": "5a1c335bbca930fe90191679a3c4ede333780921c2deaa70416521900b1335a9"
+      },
+      "actual_graph_view_sha256": "b6302a8d82572864ae17f969b2df7c653b2854026cc3a245e87abe96a668c321",
+      "shared_parent_graph_view_sha256": "027aa041b1f4c693b8d6530f96c9730d55d0e307a1e5a8c45e310f07e82e4ee3",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_43",
+      "repeat": 3,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/3/identity/multi_turn_base_43.graph.json",
+        "sha256": "fa4d57130d4b56e2731d4bf3277240b5fd0357039262e30899d5c7a24b837dd2"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/3/identity/multi_turn_base_43.graph.json",
+        "sha256": "fa4d57130d4b56e2731d4bf3277240b5fd0357039262e30899d5c7a24b837dd2"
+      },
+      "actual_graph_view_sha256": "54505cb333ff072d915c959024916a4e5cad285a4681948bdc3922e6d6ef8eae",
+      "shared_parent_graph_view_sha256": "54505cb333ff072d915c959024916a4e5cad285a4681948bdc3922e6d6ef8eae",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "repeat": 3,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/3/identity/multi_turn_base_3.graph.json",
+        "sha256": "7a97c1d1715b792db1f104dc50e8db211e648ce12abb192c4ab8059ea5e2cb81"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/3/identity/multi_turn_base_3.graph.json",
+        "sha256": "7a97c1d1715b792db1f104dc50e8db211e648ce12abb192c4ab8059ea5e2cb81"
+      },
+      "actual_graph_view_sha256": "e1899b64c64dac80fc133b9bb8ceef6ff680c5bc543a2dd518d8dba476825e96",
+      "shared_parent_graph_view_sha256": "e1899b64c64dac80fc133b9bb8ceef6ff680c5bc543a2dd518d8dba476825e96",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_43",
+      "repeat": 3,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/3/identity/multi_turn_base_43.graph.json",
+        "sha256": "7a3e4d627c0e4bbd83e9d84337aba0a42582b93822a888856b37903d673b2f55"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/3/identity/multi_turn_base_43.graph.json",
+        "sha256": "7a3e4d627c0e4bbd83e9d84337aba0a42582b93822a888856b37903d673b2f55"
+      },
+      "actual_graph_view_sha256": "36e77d57ba421e529da0e4bcfe734ba42ff7020c5fa5e19d9f7cbe5a2ff72683",
+      "shared_parent_graph_view_sha256": "36e77d57ba421e529da0e4bcfe734ba42ff7020c5fa5e19d9f7cbe5a2ff72683",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "repeat": 3,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/3/graph-evidence/multi_turn_base_3.graph.json",
+        "sha256": "85163994c61670ba1e3b944c4afa96bf3727718039fe224f0c670ae18f812da7"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/3/identity/multi_turn_base_3.graph.json",
+        "sha256": "7a97c1d1715b792db1f104dc50e8db211e648ce12abb192c4ab8059ea5e2cb81"
+      },
+      "actual_graph_view_sha256": "25546f0ca3302792621ee52f073882ad1265b6289a822d7639489111ecda5794",
+      "shared_parent_graph_view_sha256": "e1899b64c64dac80fc133b9bb8ceef6ff680c5bc543a2dd518d8dba476825e96",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_43",
+      "repeat": 3,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/3/graph-evidence/multi_turn_base_43.graph.json",
+        "sha256": "b703b6603f5e715316a919bcbaba144902c2218b57ed8f5bbd265b7325520041"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/3/identity/multi_turn_base_43.graph.json",
+        "sha256": "7a3e4d627c0e4bbd83e9d84337aba0a42582b93822a888856b37903d673b2f55"
+      },
+      "actual_graph_view_sha256": "a7c5b5448512dec47af359d8da36f02799b724e2ff243815e10bfd754d37b19e",
+      "shared_parent_graph_view_sha256": "36e77d57ba421e529da0e4bcfe734ba42ff7020c5fa5e19d9f7cbe5a2ff72683",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "repeat": 2,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/2/graph-evidence/multi_turn_base_3.graph.json",
+        "sha256": "85163994c61670ba1e3b944c4afa96bf3727718039fe224f0c670ae18f812da7"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/2/identity/multi_turn_base_3.graph.json",
+        "sha256": "7a97c1d1715b792db1f104dc50e8db211e648ce12abb192c4ab8059ea5e2cb81"
+      },
+      "actual_graph_view_sha256": "25546f0ca3302792621ee52f073882ad1265b6289a822d7639489111ecda5794",
+      "shared_parent_graph_view_sha256": "e1899b64c64dac80fc133b9bb8ceef6ff680c5bc543a2dd518d8dba476825e96",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "repeat": 2,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/2/identity/multi_turn_base_3.graph.json",
+        "sha256": "7a97c1d1715b792db1f104dc50e8db211e648ce12abb192c4ab8059ea5e2cb81"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/2/identity/multi_turn_base_3.graph.json",
+        "sha256": "7a97c1d1715b792db1f104dc50e8db211e648ce12abb192c4ab8059ea5e2cb81"
+      },
+      "actual_graph_view_sha256": "e1899b64c64dac80fc133b9bb8ceef6ff680c5bc543a2dd518d8dba476825e96",
+      "shared_parent_graph_view_sha256": "e1899b64c64dac80fc133b9bb8ceef6ff680c5bc543a2dd518d8dba476825e96",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_43",
+      "repeat": 2,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/2/identity/multi_turn_base_43.graph.json",
+        "sha256": "7a3e4d627c0e4bbd83e9d84337aba0a42582b93822a888856b37903d673b2f55"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/2/identity/multi_turn_base_43.graph.json",
+        "sha256": "7a3e4d627c0e4bbd83e9d84337aba0a42582b93822a888856b37903d673b2f55"
+      },
+      "actual_graph_view_sha256": "36e77d57ba421e529da0e4bcfe734ba42ff7020c5fa5e19d9f7cbe5a2ff72683",
+      "shared_parent_graph_view_sha256": "36e77d57ba421e529da0e4bcfe734ba42ff7020c5fa5e19d9f7cbe5a2ff72683",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_43",
+      "repeat": 2,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/2/graph-evidence/multi_turn_base_43.graph.json",
+        "sha256": "b703b6603f5e715316a919bcbaba144902c2218b57ed8f5bbd265b7325520041"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/2/identity/multi_turn_base_43.graph.json",
+        "sha256": "7a3e4d627c0e4bbd83e9d84337aba0a42582b93822a888856b37903d673b2f55"
+      },
+      "actual_graph_view_sha256": "a7c5b5448512dec47af359d8da36f02799b724e2ff243815e10bfd754d37b19e",
+      "shared_parent_graph_view_sha256": "36e77d57ba421e529da0e4bcfe734ba42ff7020c5fa5e19d9f7cbe5a2ff72683",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_31",
+      "repeat": 2,
+      "mode": "graph-evidence",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/2/graph-evidence/multi_turn_long_context_31.graph.json",
+        "sha256": "82167d2b0dcb31fbc2043e5d78ccf761e3b66b3c2b26a5ce6fa51bac570701bf"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/2/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "9ea3536ca8758923383ba52765a9bac6c4e037fa2fb54797b355e781d79143bd"
+      },
+      "actual_graph_view_sha256": "ea9f9997b4865dd90a2579c8ebc40f6b524dc1c86847352f856b247f370cfa62",
+      "shared_parent_graph_view_sha256": "d316250fa3f6a696885cdd164e6b59b8de5f757fc31208fe8765cfda33034ed0",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_31",
+      "repeat": 2,
+      "mode": "identity",
+      "actual_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/2/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "9ea3536ca8758923383ba52765a9bac6c4e037fa2fb54797b355e781d79143bd"
+      },
+      "paired_A_graph_source": {
+        "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/2/identity/multi_turn_long_context_31.graph.json",
+        "sha256": "9ea3536ca8758923383ba52765a9bac6c4e037fa2fb54797b355e781d79143bd"
+      },
+      "actual_graph_view_sha256": "d316250fa3f6a696885cdd164e6b59b8de5f757fc31208fe8765cfda33034ed0",
+      "shared_parent_graph_view_sha256": "d316250fa3f6a696885cdd164e6b59b8de5f757fc31208fe8765cfda33034ed0",
+      "exact_projection_or_control_equality": true,
+      "source_stage": "confirmation"
+    }
+  ],
+  "counts": {
+    "all_runs": 56,
+    "gate_runs": 48,
+    "g0_control_runs": 8
+  },
+  "screen": [
+    {
+      "model": "gpt-4.1",
+      "pairs": 4,
+      "A_passes": 4,
+      "G_passes": 4,
+      "loss_conditions": [],
+      "passed": true
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "pairs": 4,
+      "A_passes": 4,
+      "G_passes": 4,
+      "loss_conditions": [],
+      "passed": true
+    }
+  ],
+  "models": [
+    {
+      "model": "gpt-4.1",
+      "condition_rows": [
+        {
+          "id": "multi_turn_base_43",
+          "A": [
+            true,
+            true,
+            true
+          ],
+          "G": [
+            true,
+            true,
+            true
+          ],
+          "A_passes": 3,
+          "G_passes": 3,
+          "condition_regression": false
+        },
+        {
+          "id": "multi_turn_long_context_31",
+          "A": [
+            true,
+            true,
+            true
+          ],
+          "G": [
+            true,
+            true,
+            true
+          ],
+          "A_passes": 3,
+          "G_passes": 3,
+          "condition_regression": false
+        },
+        {
+          "id": "multi_turn_base_3",
+          "A": [
+            true,
+            true,
+            true
+          ],
+          "G": [
+            true,
+            true,
+            true
+          ],
+          "A_passes": 3,
+          "G_passes": 3,
+          "condition_regression": false
+        },
+        {
+          "id": "multi_turn_base_12",
+          "A": [
+            true,
+            true,
+            true
+          ],
+          "G": [
+            true,
+            true,
+            true
+          ],
+          "A_passes": 3,
+          "G_passes": 3,
+          "condition_regression": false
+        }
+      ],
+      "A_passes": 12,
+      "G_passes": 12,
+      "paired_denominator": 12,
+      "reference_success_conditions": 4,
+      "gates": {
+        "aggregate_preservation": true,
+        "reference_success_floor": true,
+        "no_condition_regression": true
+      }
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "condition_rows": [
+        {
+          "id": "multi_turn_base_43",
+          "A": [
+            true,
+            true,
+            true
+          ],
+          "G": [
+            true,
+            true,
+            true
+          ],
+          "A_passes": 3,
+          "G_passes": 3,
+          "condition_regression": false
+        },
+        {
+          "id": "multi_turn_long_context_31",
+          "A": [
+            true,
+            true,
+            true
+          ],
+          "G": [
+            true,
+            true,
+            true
+          ],
+          "A_passes": 3,
+          "G_passes": 3,
+          "condition_regression": false
+        },
+        {
+          "id": "multi_turn_base_3",
+          "A": [
+            true,
+            true,
+            true
+          ],
+          "G": [
+            true,
+            true,
+            true
+          ],
+          "A_passes": 3,
+          "G_passes": 3,
+          "condition_regression": false
+        },
+        {
+          "id": "multi_turn_base_12",
+          "A": [
+            true,
+            true,
+            true
+          ],
+          "G": [
+            true,
+            true,
+            true
+          ],
+          "A_passes": 3,
+          "G_passes": 3,
+          "condition_regression": false
+        }
+      ],
+      "A_passes": 12,
+      "G_passes": 12,
+      "paired_denominator": 12,
+      "reference_success_conditions": 4,
+      "gates": {
+        "aggregate_preservation": true,
+        "reference_success_floor": true,
+        "no_condition_regression": true
+      }
+    }
+  ],
+  "discordances": [],
+  "g0_controls": [
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_3",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "passed": true,
+      "artifact_sources": {
+        "manifest.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/manifest.json",
+          "sha256": "11735bff417839a4992f7d6d008a7df28ec142ad8abfafec08d5a49c8286f49c"
+        },
+        "official-score.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/official-score.json",
+          "sha256": "1a204b8b1e3ffee251ee542504457539eddb1a0de92d4c5daa31cea386c173fd"
+        },
+        "native.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/native.jsonl",
+          "sha256": "7e290781068ac97538cc56f7b9d46226ce8b53cc82365fe491fc90b4eb092ac3"
+        },
+        "multi_turn_base_3.full.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/multi_turn_base_3.full.json",
+          "sha256": "b72b05dad4eef91b830e6d2df7a1d9c7a31e0a7baeeed881f33f0e0f7f7cd1fa"
+        },
+        "shared-prefix-manifest": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v6_graph_replacement_20261023/run-r1/screen-development/runs/gpt-4.1/multi_turn_base_3/identity/manifest.json",
+          "sha256": "3f041a5858fd23dba0dfdd22ea29e49f9bb018538451e2c58be241c51de7ce58"
+        },
+        "multi_turn_base_3.api.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/multi_turn_base_3.api.jsonl",
+          "sha256": "0ad209230afc7ae9f989505a632d557d3672e0e8f460168d525e3c82fc265607"
+        },
+        "prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/prefix-history.json",
+          "sha256": "d889bd99310e5d00e75d3902841bee27d443663e01f88ebc2feee5e3f30c6028"
+        },
+        "multi_turn_base_3.graph.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/multi_turn_base_3.graph.json",
+          "sha256": "f31a33aa6ba52d304b2805c86138bf011df94d1616419a6021486b80daae2f68"
+        },
+        "prefix-native.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/prefix-native.json",
+          "sha256": "cbb81fc2d4ad057eb2fbb4265965e6760de9ec6b0de4ae214a4706ecb695377f"
+        },
+        "native-prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/native-prefix-history.json",
+          "sha256": "cbb81fc2d4ad057eb2fbb4265965e6760de9ec6b0de4ae214a4706ecb695377f"
+        },
+        "native-context.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/native-context.json",
+          "sha256": "10ce62075a7e9b7594961414b2e200ccf588a13d4f23525c84235b7bdf90f994"
+        },
+        "multi_turn_base_3.index.txt": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/multi_turn_base_3.index.txt",
+          "sha256": "d12082251f44aaa9bb10ba51fbf4aab9055afcfb527edea78371e1ecbfa93ce7"
+        },
+        "user-suffix.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/user-suffix.json",
+          "sha256": "b954144a238c48ce672e21304229181abe5ca6549fdf885ce8dd35252a6ebac3"
+        },
+        "projected-user-suffix.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/projected-user-suffix.json",
+          "sha256": "b954144a238c48ce672e21304229181abe5ca6549fdf885ce8dd35252a6ebac3"
+        },
+        "multi_turn_base_3.api.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/multi_turn_base_3.api.json",
+          "sha256": "d22e5d386c8547ec49920bad17a9a8cd0f91a4a20645e72c511e94245827456f"
+        }
+      }
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_12",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "passed": true,
+      "artifact_sources": {
+        "manifest.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/manifest.json",
+          "sha256": "1b6b39c4a687229ed38e32d8110077440f7df743da68587f1e6906fbb556ccd5"
+        },
+        "official-score.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/official-score.json",
+          "sha256": "052f66880bd4a540c994e442801b5b1267e756fbf6a91d87d97b6318638d149b"
+        },
+        "native.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/native.jsonl",
+          "sha256": "4a899dbffcf487d82c2b3a1dbb7b874fbeb7db538544b66053da1c6294017fe2"
+        },
+        "multi_turn_base_12.full.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/multi_turn_base_12.full.json",
+          "sha256": "c8ed2c0979c843f3377ad23ed0b8b65c0b301af75d4934dc1a99cc5641987337"
+        },
+        "shared-prefix-manifest": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v6_graph_replacement_20261023/run-r1/screen-development/runs/gpt-4.1/multi_turn_base_12/identity/manifest.json",
+          "sha256": "ffa408246d95f85ebe3bc17855581b81477af8d5b9c170e9df4a22c532561e53"
+        },
+        "multi_turn_base_12.api.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/multi_turn_base_12.api.jsonl",
+          "sha256": "2653ab2ba8ee480fc1ddea87386c8a87d1b3df5015bb2d0aeea433faa5c38b72"
+        },
+        "prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/prefix-history.json",
+          "sha256": "cb6a829d7b2120afc3acad957037989aee6f4919b67eaf6dbabeece143fc57ca"
+        },
+        "multi_turn_base_12.graph.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/multi_turn_base_12.graph.json",
+          "sha256": "b9296ceb421506a983b100df5d6efe1a566a69aa8883d4ebfdff326d634e1b76"
+        },
+        "prefix-native.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/prefix-native.json",
+          "sha256": "d4d5f79a070a3f44a340786cdb90ca9e525c75be85eee768774b603155d7b7ac"
+        },
+        "native-prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/native-prefix-history.json",
+          "sha256": "d4d5f79a070a3f44a340786cdb90ca9e525c75be85eee768774b603155d7b7ac"
+        },
+        "native-context.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/native-context.json",
+          "sha256": "10ce62075a7e9b7594961414b2e200ccf588a13d4f23525c84235b7bdf90f994"
+        },
+        "multi_turn_base_12.index.txt": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/multi_turn_base_12.index.txt",
+          "sha256": "01527bc2ce41f7f9da0d351a1589a8afafe21568cbb4276912987c829bf7f972"
+        },
+        "user-suffix.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/user-suffix.json",
+          "sha256": "b9cda567fea0b79aecf97b866b7a62ad8a00841b7184983d6b2d23237a59fb90"
+        },
+        "projected-user-suffix.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/projected-user-suffix.json",
+          "sha256": "b9cda567fea0b79aecf97b866b7a62ad8a00841b7184983d6b2d23237a59fb90"
+        },
+        "multi_turn_base_12.api.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/multi_turn_base_12.api.json",
+          "sha256": "9d64edffd06cf057970fd104203f854bc7d2e1dc9ec967410b7f9958ec573cc9"
+        }
+      }
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_12",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "passed": true,
+      "artifact_sources": {
+        "manifest.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/manifest.json",
+          "sha256": "35c2a2903ba7113b22d67283eda939137118c422e387e8fb348a972b646534ac"
+        },
+        "official-score.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/official-score.json",
+          "sha256": "89acec17197ebf97c2da32dd724d02be3f832a4eb3b145714fdcd24bcfbcf649"
+        },
+        "native.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/native.jsonl",
+          "sha256": "a5219d58d4b9885579e18bc6e1395f64e4a2b6740053eba0e0560195b9145e10"
+        },
+        "multi_turn_base_12.full.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/multi_turn_base_12.full.json",
+          "sha256": "77ee943337e6ef04cd925e87d0606bcdec92cd768a820e864b6ab98ac1eee6a4"
+        },
+        "evidence-audit.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/evidence-audit.json",
+          "sha256": "71ed3dccdd0d65ae28e2dacd280dddddc4f7e32c43520456fef2bd24b7516db7"
+        },
+        "shared-prefix-manifest": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v6_graph_replacement_20261023/run-r1/screen-development/runs/claude-sonnet-5-5/multi_turn_base_12/identity/manifest.json",
+          "sha256": "0d362701f23709e390369f8e6fdca4dc7dde1c9b04e2f8b813471db24723ec47"
+        },
+        "multi_turn_base_12.api.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/multi_turn_base_12.api.jsonl",
+          "sha256": "d0f6b6569f9200c7327d2e4c9d8331b9c2256d5f0c6efebb26633db3327ad2b5"
+        },
+        "prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/prefix-history.json",
+          "sha256": "278a26fdc08c17cf1504f6a88ebd5f16fdc10805da8029a58b99e4abda5ffaad"
+        },
+        "native-prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/native-prefix-history.json",
+          "sha256": "7a089515351dec2c8bdda2102ee5cf214fccaf542b7d96fbd4818aa359ef716f"
+        },
+        "native-visible-prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/native-visible-prefix-history.json",
+          "sha256": "33ecb73115258fc672f1de15700f1dd8ad7e007d91c40bc3ad91dddcd64e5547"
+        },
+        "native-context.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/native-context.json",
+          "sha256": "64d2090e188a032d219054fdd3081b24267f0eead288944d0182ad589c9e5582"
+        },
+        "multi_turn_base_12.graph.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/multi_turn_base_12.graph.json",
+          "sha256": "03e808981a5702c16a46e21083af779314062a7d897231face2965eb34dac8aa"
+        },
+        "multi_turn_base_12.memory.txt": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/multi_turn_base_12.memory.txt",
+          "sha256": "e99df3120afed31a871c063d3bca2ee4cecab6d69c18f216ff534c9b08f6fa07"
+        },
+        "user-suffix.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/user-suffix.json",
+          "sha256": "b9cda567fea0b79aecf97b866b7a62ad8a00841b7184983d6b2d23237a59fb90"
+        },
+        "multi_turn_base_12.api.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/multi_turn_base_12.api.json",
+          "sha256": "9be60d94e7ab02e24611d04b0e8385b787b129f5eb257d88a8df7bf809460376"
+        }
+      }
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_31",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "passed": true,
+      "artifact_sources": {
+        "manifest.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/manifest.json",
+          "sha256": "48d69236e49252f2885a35501bf2eedb684f7ea8a380bb4401f55d0b2689e829"
+        },
+        "official-score.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/official-score.json",
+          "sha256": "c93c261438dafa6909e5a020afb6e8eaa297f3d767ce17412d45f59c720705ee"
+        },
+        "native.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/native.jsonl",
+          "sha256": "c4d12ad1b434028fed00e6891fb3bb28c48face0d51d804aa2a9160970dbb61f"
+        },
+        "multi_turn_long_context_31.full.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.full.json",
+          "sha256": "34c5b8041e997b7efeb08d95055e7b549b198aa6222bc9c8a31004cb5c74d74d"
+        },
+        "evidence-audit.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/evidence-audit.json",
+          "sha256": "0f7c486717200f210ed9cb89d196415e71c0b676c2485dcdfbf2b598c11ccbb4"
+        },
+        "shared-prefix-manifest": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v6_graph_replacement_20261023/run-r1/screen-validation/runs/claude-sonnet-5-5/multi_turn_long_context_31/identity/manifest.json",
+          "sha256": "9d2c88acec3a8e14222142de37a8d7dfab94ebdb97e0b6f1d86781b4cdd7a4da"
+        },
+        "multi_turn_long_context_31.api.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.api.jsonl",
+          "sha256": "077a451e0a31e13eed6d11a4f404a61d8fe100353e403d05049479151ec9141b"
+        },
+        "prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/prefix-history.json",
+          "sha256": "b89e95606a4878690579847d8eb0387134148e561924ce5823a8b2575008bf78"
+        },
+        "native-prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/native-prefix-history.json",
+          "sha256": "b473108e1c61cb399997f4c30bbe9ae59f39b2f164c3471e10a4e8c91285a674"
+        },
+        "native-visible-prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/native-visible-prefix-history.json",
+          "sha256": "b473108e1c61cb399997f4c30bbe9ae59f39b2f164c3471e10a4e8c91285a674"
+        },
+        "native-context.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/native-context.json",
+          "sha256": "f06c195bb9ec8afba0cef978c8f39ac32c481fb923d6cd36cd548d4e0a9b0ab1"
+        },
+        "multi_turn_long_context_31.graph.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.graph.json",
+          "sha256": "afe8f6bd4d29d017aaf9fb78195a62b9a78f5fc8a862ee14373a37c2bc0cd2c9"
+        },
+        "multi_turn_long_context_31.memory.txt": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.memory.txt",
+          "sha256": "0ffaa320199444858749ebbce49be55e479630efc99c6c8de24c5bd7d257b345"
+        },
+        "user-suffix.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/user-suffix.json",
+          "sha256": "68e5b72b51d8ab6c403b70b5d6b6dfa6d7d31e921bf29d5072d5451b2a9c15f0"
+        },
+        "multi_turn_long_context_31.api.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.api.json",
+          "sha256": "6a5fa2c620381c63e85deb38e49b47e16526dd80b2b00221639a961e08da030c"
+        }
+      }
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_31",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "passed": true,
+      "artifact_sources": {
+        "manifest.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/manifest.json",
+          "sha256": "ddaa92a92944603b6aa5bb54acf3b4483f4e1f60b8f37b9832e32d1c4efd3081"
+        },
+        "official-score.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/official-score.json",
+          "sha256": "bf6471d97d6c57970ab27f4ce94edf6a89c998d8865946fbc9224660ca66c7c0"
+        },
+        "native.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/native.jsonl",
+          "sha256": "d76dfbe9d9a13e2d5c21af70affe055d9c1865b204ca7296a65df38dfc07e9d5"
+        },
+        "multi_turn_long_context_31.full.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.full.json",
+          "sha256": "627c56a30584389f9cabf0948a9fd1593575543e41cf3de5cd931826d0c36684"
+        },
+        "shared-prefix-manifest": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v6_graph_replacement_20261023/run-r1/screen-validation/runs/gpt-4.1/multi_turn_long_context_31/identity/manifest.json",
+          "sha256": "f8ee0282cccd787dad287eaa6a9f20d04e6daec3962435df50e2295cdcae8cd2"
+        },
+        "multi_turn_long_context_31.api.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.api.jsonl",
+          "sha256": "5e4baa180ffac56a549e803b12b6af594b8877ff5c0d4d827ac2ff0816747615"
+        },
+        "prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/prefix-history.json",
+          "sha256": "3f61de2f918d2b3cd9b29342f054ab66aa69435027830ca09ece571cbeef86e4"
+        },
+        "multi_turn_long_context_31.graph.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.graph.json",
+          "sha256": "cd7b69adb2f8686b6e94164236a05e7e0553e68d6f53072b4fa6552bc6d83a0b"
+        },
+        "prefix-native.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/prefix-native.json",
+          "sha256": "36b1f6a8f4c1d2494bc6db833886c073a93962105a168df0ddc76da0bc90387a"
+        },
+        "native-prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/native-prefix-history.json",
+          "sha256": "36b1f6a8f4c1d2494bc6db833886c073a93962105a168df0ddc76da0bc90387a"
+        },
+        "native-context.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/native-context.json",
+          "sha256": "4e00f7f98a207ecdec013ab2c06a681f149a1cc43a7912f327111f6611e3c3cb"
+        },
+        "multi_turn_long_context_31.index.txt": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.index.txt",
+          "sha256": "5d6fbd809220e587cce6ba0bbf17b8bbff487b6e50bc2f0c1c219a979c3668df"
+        },
+        "user-suffix.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/user-suffix.json",
+          "sha256": "68e5b72b51d8ab6c403b70b5d6b6dfa6d7d31e921bf29d5072d5451b2a9c15f0"
+        },
+        "projected-user-suffix.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/projected-user-suffix.json",
+          "sha256": "68e5b72b51d8ab6c403b70b5d6b6dfa6d7d31e921bf29d5072d5451b2a9c15f0"
+        },
+        "multi_turn_long_context_31.api.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.api.json",
+          "sha256": "a72c8a7bf0be5039cf447940ee626f5e7dba62a0eb24075213c2266d5448ff55"
+        }
+      }
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_3",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "passed": true,
+      "artifact_sources": {
+        "manifest.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/manifest.json",
+          "sha256": "0066de20658e36987e9000bf624a257f318bd2fdf8c092bfac70bb5db4b8f4a5"
+        },
+        "official-score.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/official-score.json",
+          "sha256": "9ffe848443911c528568e79d1b1ae222534fc8bb374a85c61822f98f67b91fc9"
+        },
+        "native.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/native.jsonl",
+          "sha256": "9ccdad229e1a3e899642073320dee1e70f7aa4664684f3415795a1d459415db5"
+        },
+        "multi_turn_base_3.full.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/multi_turn_base_3.full.json",
+          "sha256": "1c3e93c5116b162e2b5a107379d67990695f2d9274306691923c7a76c0c7a5f8"
+        },
+        "evidence-audit.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/evidence-audit.json",
+          "sha256": "34d40b6236b4c3f6ea6e5dd5545d0ef1957510156d63c77846d73b06c922c5cb"
+        },
+        "shared-prefix-manifest": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v6_graph_replacement_20261023/run-r1/screen-development/runs/claude-sonnet-5-5/multi_turn_base_3/identity/manifest.json",
+          "sha256": "4e49a5d16708bed70023ecbe6a24f5be440049957a2ff6abd843e4b7fc9a5ff3"
+        },
+        "multi_turn_base_3.api.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/multi_turn_base_3.api.jsonl",
+          "sha256": "1ddb0a88ae19e5b1a21d29a6558719b620e2dd22f9e639795925b48f45ebadce"
+        },
+        "prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/prefix-history.json",
+          "sha256": "6747d9d8f5e5402099e67d063e08a8be8bed3d92c5a207570f9a5c9263723ee4"
+        },
+        "native-prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/native-prefix-history.json",
+          "sha256": "29483e96846884b66030d8137ca26077ea53a9ebb26163d0200f4ec691970afb"
+        },
+        "native-visible-prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/native-visible-prefix-history.json",
+          "sha256": "29483e96846884b66030d8137ca26077ea53a9ebb26163d0200f4ec691970afb"
+        },
+        "native-context.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/native-context.json",
+          "sha256": "64d2090e188a032d219054fdd3081b24267f0eead288944d0182ad589c9e5582"
+        },
+        "multi_turn_base_3.graph.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/multi_turn_base_3.graph.json",
+          "sha256": "c3a25fab9c11a3740a1d2c7bd22566e112c922d28e3034e3e1d5c1fba4d4a9bb"
+        },
+        "multi_turn_base_3.memory.txt": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/multi_turn_base_3.memory.txt",
+          "sha256": "fc46ab0437868aeb71fff434ad894d7cc45d30bbf0efa21b47de89aeb4990c6b"
+        },
+        "user-suffix.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/user-suffix.json",
+          "sha256": "b954144a238c48ce672e21304229181abe5ca6549fdf885ce8dd35252a6ebac3"
+        },
+        "multi_turn_base_3.api.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/multi_turn_base_3.api.json",
+          "sha256": "d3f715fb293e76a19e9466bb0037df3a62565c36e1be5cc2d0b41b8ae5a1bbd2"
+        }
+      }
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_43",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "passed": false,
+      "artifact_sources": {
+        "manifest.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/manifest.json",
+          "sha256": "57dab4897145fcbcfd1075309cbf243e451227288c970888821e3ba895e88008"
+        },
+        "official-score.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/official-score.json",
+          "sha256": "ce6c2e389efd08a8d822d7e0f2fa6bfebd14df9360a7d23741f8c8c515ec3f31"
+        },
+        "native.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/native.jsonl",
+          "sha256": "83112de6d9cb9ff1c501282791dcc05fd2c4545bcad1070b2f4b242a92ab4787"
+        },
+        "multi_turn_base_43.full.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/multi_turn_base_43.full.json",
+          "sha256": "3a4f7bb41c4d57c44f762c03e4ada0e8cf8bf938d9e6032ec9d5e00fa2857531"
+        },
+        "shared-prefix-manifest": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v6_graph_replacement_20261023/run-r1/screen-validation/runs/gpt-4.1/multi_turn_base_43/identity/manifest.json",
+          "sha256": "c083b45446d10f30e8707d0e43f75ac937bc381492c780ada94d1ac90028b5e5"
+        },
+        "multi_turn_base_43.api.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/multi_turn_base_43.api.jsonl",
+          "sha256": "9ff34d46d09f9e0a4abe8161f19af5a6572632bf8aea11d4d3ebd8e7ed06d8a9"
+        },
+        "prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/prefix-history.json",
+          "sha256": "db7028a25945289cfaddd2eae0b25c0976d0c628a73e1225229a90621acb55a8"
+        },
+        "multi_turn_base_43.graph.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/multi_turn_base_43.graph.json",
+          "sha256": "8db734d01b7bff3f4cc001434ea17ff8005b7ec335c3061ef20dc0b342a144ae"
+        },
+        "prefix-native.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/prefix-native.json",
+          "sha256": "4349bd3c1d8ae78d3e918c060b3caa4e52592b22c61c02fe0b724d31ef68ccb6"
+        },
+        "native-prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/native-prefix-history.json",
+          "sha256": "4349bd3c1d8ae78d3e918c060b3caa4e52592b22c61c02fe0b724d31ef68ccb6"
+        },
+        "native-context.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/native-context.json",
+          "sha256": "c6b3c3e913f3acb8ea4289ad81dce846ba09f2633f49f66f40534a244cd80545"
+        },
+        "multi_turn_base_43.index.txt": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/multi_turn_base_43.index.txt",
+          "sha256": "8116134a63501758a2b1155a1614b0ff9aa85ddc9dd6d1b056afea37a012e5f4"
+        },
+        "user-suffix.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/user-suffix.json",
+          "sha256": "9594a2a6b0651ca57f422b2f34c5dfc0fd075239d2a97e750101abd91ebbcdd2"
+        },
+        "projected-user-suffix.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/projected-user-suffix.json",
+          "sha256": "9594a2a6b0651ca57f422b2f34c5dfc0fd075239d2a97e750101abd91ebbcdd2"
+        },
+        "multi_turn_base_43.api.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/multi_turn_base_43.api.json",
+          "sha256": "6963ed86d03beae5c8791ad752cb00d06c5d5837a3a5cc0047e175cc0d4298bb"
+        }
+      }
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_43",
+      "repeat": 1,
+      "mode": "graph-evidence-g0",
+      "passed": true,
+      "artifact_sources": {
+        "manifest.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/manifest.json",
+          "sha256": "37e023c79a231775a79de5dad21cf5bfb78ed07ca3f4d7322de5f0bb974700c3"
+        },
+        "official-score.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/official-score.json",
+          "sha256": "dde61b79f5882d8253e7bd10312a4806b51fa94e90f77a6c6ecf4f8246601339"
+        },
+        "native.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/native.jsonl",
+          "sha256": "ca699fb14265834af082a6708b6064f1fa01fa89c24a8d1d648527f2ebba9f79"
+        },
+        "multi_turn_base_43.full.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/multi_turn_base_43.full.json",
+          "sha256": "d476c068308af1ca44e7166103c1a6ebcd69e89151028ac7dcd9d2cf8aeef37c"
+        },
+        "evidence-audit.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/evidence-audit.json",
+          "sha256": "48d1c8b24780741972b4fa5deb2bd30b0279f6c884b40f631eca7b9c1882dfe3"
+        },
+        "shared-prefix-manifest": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v6_graph_replacement_20261023/run-r1/screen-validation/runs/claude-sonnet-5-5/multi_turn_base_43/identity/manifest.json",
+          "sha256": "fd7c6a0fb61a915eef676a3470f5228b1e07f619fa3411f2e3f06d359a4560eb"
+        },
+        "multi_turn_base_43.api.jsonl": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/multi_turn_base_43.api.jsonl",
+          "sha256": "f3dbe905dba2d26a95c1a612ae385a78e314e401842e9dd3382cf063bd63b8a5"
+        },
+        "prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/prefix-history.json",
+          "sha256": "e04a8f294e4ef994772e304f9ef043fdd4b1b6cb91da6c22de65ad344548d90d"
+        },
+        "native-prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/native-prefix-history.json",
+          "sha256": "f85fa4ad3b9a5ed4f6f97340ad5965c148fcf1feb901a6d3aa71541d3b0c2ce3"
+        },
+        "native-visible-prefix-history.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/native-visible-prefix-history.json",
+          "sha256": "f85fa4ad3b9a5ed4f6f97340ad5965c148fcf1feb901a6d3aa71541d3b0c2ce3"
+        },
+        "native-context.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/native-context.json",
+          "sha256": "dffe49e276e9567e455eb73628a2249fbccd02fca27efb9a23bba14066ea8d71"
+        },
+        "multi_turn_base_43.graph.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/multi_turn_base_43.graph.json",
+          "sha256": "901ee45f8b2b9f3641c254d9adaf9ad5d8e25204c1a943c16284fef39d5bb358"
+        },
+        "multi_turn_base_43.memory.txt": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/multi_turn_base_43.memory.txt",
+          "sha256": "ff74e655118bdf5b76ba5e4043af7f1c1141b1da30db88213d6de9b41ae1d43e"
+        },
+        "user-suffix.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/user-suffix.json",
+          "sha256": "9594a2a6b0651ca57f422b2f34c5dfc0fd075239d2a97e750101abd91ebbcdd2"
+        },
+        "multi_turn_base_43.api.json": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/multi_turn_base_43.api.json",
+          "sha256": "fc46918365154c61685bf5af8877369299d4f14ef69df7b37693bcd5622db4bc"
+        }
+      }
+    }
+  ],
+  "review_gates": {
+    "behavior": {
+      "status": "complete",
+      "passed": true,
+      "source": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-development-behavior-gate.json",
+        "sha256": "43adf60eaabc6ebd77fe9bdddab19049430f84de91adeb5b5891e85199e5dc61"
+      },
+      "references": [
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-development-confirmation-review.json",
+          "sha256": "18039d537f1e8df93e7fb4b9c1a3db1b2312dc8d709b2a00a56cdf81fb4c1ec8"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-confirmation-blind-quote-check.json",
+          "sha256": "16082f545ec867cea6ecf4d56eee44e71f577211b8601e15a2c7c9991a7f96bd"
+        }
+      ],
+      "reason": "All 48 paired A/G continuation reviews contain none of the five prespecified behavior flags; official results unchanged."
+    },
+    "independent_audit": {
+      "status": "complete",
+      "passed": true,
+      "source": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-development-independent-audit-gate.json",
+        "sha256": "1be5fb7becd78fa6b8bc09acedcbbbe0f7e29ace5dea40ed0e079760f233bf8b"
+      },
+      "references": [
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-development-confirmation-review.json",
+          "sha256": "18039d537f1e8df93e7fb4b9c1a3db1b2312dc8d709b2a00a56cdf81fb4c1ec8"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-confirmation-blind-quote-check.json",
+          "sha256": "16082f545ec867cea6ecf4d56eee44e71f577211b8601e15a2c7c9991a7f96bd"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-wire-audit.json",
+          "sha256": "3bd4a57846b172030aa3e513ee2364bc0c69bcd6650660c0cc0c188c37b145ca"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation-wire-audit.json",
+          "sha256": "9cef645dafca9d5393347fbe4caef596ad82143ee1872129f1aa815bed251f16"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-confirmation-repeat-label-supplement.json",
+          "sha256": "590e3807198bb4c6bd510b5eb00312088d1dd74572242c286dfd99b0520880ce"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/round05-confirmation-repeat-provenance-independent-review.json",
+          "sha256": "131342bd0c99f84f6176f28fe25bb386efddfe55639192592efc2b5e6e398d02"
+        }
+      ],
+      "reason": "Full evidence/context and all-request audits cover 56 trajectories. The original missing-GPT-repeat check remains failed; an independently reviewed pinned supplement re-runs all frozen checks unchanged and validates all 32 distinct scheduled executions without waiving any other failure."
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/registered-decision-rules.json",
+      "sha256": "99cc5157b6949f89e19bce6aeb3c1e198616fec213ce6360c8386c1c59b041d4"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-round-05-final/analysis.json",
+      "sha256": "7315a96195347faf24295a17ead6d8f159ea3ff1ef19c833908050a35c15e07c"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/plan.json",
+      "sha256": "94b11ba2d5877a3edd2fc6d209b8e5ffe59a4203e9391ccad8861ec2751db024"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/analyze-confirmation-g5.py",
+      "sha256": "fad69557635170c69c493cb27bc4bf355cb737994d71c57e460ca65cc711f9cb"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-preflight-v2.json",
+      "sha256": "62fa51e01858daf21fe68e07f21fa22603bafbd34391da0434b703bde356d342"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_3/1/identity/multi_turn_base_3.graph.json",
+      "sha256": "7a97c1d1715b792db1f104dc50e8db211e648ce12abb192c4ab8059ea5e2cb81"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_3/1/identity/official-score.json",
+      "sha256": "801eafe1f4b99669857eaf0acbfca1a4f70d1975460bccba8550958c3363c493"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence/multi_turn_base_12.graph.json",
+      "sha256": "e72a3d9e4fb660b0eec1ba2d56423fa3c75d96cbf624b755007494006b88670a"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence/official-score.json",
+      "sha256": "410dec34c114c2a43e175bccea69cb1054fdcfa44748d93632634b2ccc21ee80"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence/multi_turn_base_3.graph.json",
+      "sha256": "85163994c61670ba1e3b944c4afa96bf3727718039fe224f0c670ae18f812da7"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence/official-score.json",
+      "sha256": "c29521c8a4af203c43bbfd499478715aa6f01aafa8edf5ec53e488393086a40b"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/multi_turn_base_3.graph.json",
+      "sha256": "f31a33aa6ba52d304b2805c86138bf011df94d1616419a6021486b80daae2f68"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_3/1/graph-evidence-g0/official-score.json",
+      "sha256": "1a204b8b1e3ffee251ee542504457539eddb1a0de92d4c5daa31cea386c173fd"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/identity/multi_turn_base_12.graph.json",
+      "sha256": "5a1c335bbca930fe90191679a3c4ede333780921c2deaa70416521900b1335a9"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/identity/official-score.json",
+      "sha256": "83ea32c6a73ad06f944143552d59fe54c891dd7bb7e0e9ca6425d93d200bec75"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/multi_turn_base_12.graph.json",
+      "sha256": "b9296ceb421506a983b100df5d6efe1a566a69aa8883d4ebfdff326d634e1b76"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence-g0/official-score.json",
+      "sha256": "052f66880bd4a540c994e442801b5b1267e756fbf6a91d87d97b6318638d149b"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/multi_turn_base_12.graph.json",
+      "sha256": "03e808981a5702c16a46e21083af779314062a7d897231face2965eb34dac8aa"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_12/1/graph-evidence-g0/official-score.json",
+      "sha256": "89acec17197ebf97c2da32dd724d02be3f832a4eb3b145714fdcd24bcfbcf649"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_12/1/identity/multi_turn_base_12.graph.json",
+      "sha256": "915aaad4d650cbc32a721cdac57f8fee096dbc2ad9f80799a651c5392091c76e"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_12/1/identity/official-score.json",
+      "sha256": "b1a43c14ba0b730cd5a584117ace610f9585760b20c4456698848c31ff3eed02"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence/multi_turn_base_12.graph.json",
+      "sha256": "6438cb0262556616b82526c1db0decbb54d98dfe7a240b07a703ccec82754660"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_12/1/graph-evidence/official-score.json",
+      "sha256": "e3dd3fffc62de88df60232041a6fef15b5d202697d22b3ff04cd4fd695e61b62"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/identity/multi_turn_long_context_31.graph.json",
+      "sha256": "9ea3536ca8758923383ba52765a9bac6c4e037fa2fb54797b355e781d79143bd"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/identity/official-score.json",
+      "sha256": "06a6bcebca43f054289c2b64ba6bca7506c7cea7e332f5ef9cabf8256fc19815"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence/multi_turn_long_context_31.graph.json",
+      "sha256": "43893229bf9fc0363237d5728d03b3561b393083e229af0144434c6c0be9c884"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence/official-score.json",
+      "sha256": "3952e0827b6fa3e51bc0c89a5e2c6861aaa71481ac54f600a8f03109b9e4495b"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.graph.json",
+      "sha256": "afe8f6bd4d29d017aaf9fb78195a62b9a78f5fc8a862ee14373a37c2bc0cd2c9"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence-g0/official-score.json",
+      "sha256": "c93c261438dafa6909e5a020afb6e8eaa297f3d767ce17412d45f59c720705ee"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/multi_turn_long_context_31.graph.json",
+      "sha256": "cd7b69adb2f8686b6e94164236a05e7e0553e68d6f53072b4fa6552bc6d83a0b"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/graph-evidence-g0/official-score.json",
+      "sha256": "bf6471d97d6c57970ab27f4ce94edf6a89c998d8865946fbc9224660ca66c7c0"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence/multi_turn_long_context_31.graph.json",
+      "sha256": "82167d2b0dcb31fbc2043e5d78ccf761e3b66b3c2b26a5ce6fa51bac570701bf"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_long_context_31/1/graph-evidence/official-score.json",
+      "sha256": "da22f06927b4dc775ac4407cfdd0eb2ecc8b0542bfe965c25b96a5cf9ff7dd28"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/identity/multi_turn_long_context_31.graph.json",
+      "sha256": "dee8e5279f50341ed8311ef6bd2cdaf31478c0c6f1b0953ae18654ed005135cb"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_long_context_31/1/identity/official-score.json",
+      "sha256": "0d8a033580c10f1264ba5cf7a995c69800ae549127044beac036224a9669923d"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/multi_turn_base_3.graph.json",
+      "sha256": "c3a25fab9c11a3740a1d2c7bd22566e112c922d28e3034e3e1d5c1fba4d4a9bb"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence-g0/official-score.json",
+      "sha256": "9ffe848443911c528568e79d1b1ae222534fc8bb374a85c61822f98f67b91fc9"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/multi_turn_base_43.graph.json",
+      "sha256": "8db734d01b7bff3f4cc001434ea17ff8005b7ec335c3061ef20dc0b342a144ae"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence-g0/official-score.json",
+      "sha256": "ce6c2e389efd08a8d822d7e0f2fa6bfebd14df9360a7d23741f8c8c515ec3f31"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence/multi_turn_base_3.graph.json",
+      "sha256": "2f128bf282c3d4526e050c03c40c05dac5cfd6abd7a0cd54af3f2fc2eb76a879"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/graph-evidence/official-score.json",
+      "sha256": "ca304da9af6eaec0fa1c5f7124cbbaee1906fc7d34b9ae507c8740588ddaca7b"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_43/1/identity/multi_turn_base_43.graph.json",
+      "sha256": "fa4d57130d4b56e2731d4bf3277240b5fd0357039262e30899d5c7a24b837dd2"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_43/1/identity/official-score.json",
+      "sha256": "58d1f0712dc1992ff4cd3e93cf9ab714cbe009e48117a9b1a9d459c12785cc1e"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/identity/multi_turn_base_3.graph.json",
+      "sha256": "4ae84640e8d7a199bdc2577dcb524a039a1401889f0b4a5624c9b2efade4b56a"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_3/1/identity/official-score.json",
+      "sha256": "6441cec9dd95b5be07bc26528cdbbe98083914320de961bbdf9a9249164921ea"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence/multi_turn_base_43.graph.json",
+      "sha256": "e50913645bc7d5c49729890e0d06cedd0aafb0e5dcf46ccf8626c77eec80a782"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/gpt-4.1/multi_turn_base_43/1/graph-evidence/official-score.json",
+      "sha256": "90da7ae8b1fb93d4a16007f2d841d613079bb02e64a67ea1f2f447e30e4d60a8"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/identity/multi_turn_base_43.graph.json",
+      "sha256": "7a3e4d627c0e4bbd83e9d84337aba0a42582b93822a888856b37903d673b2f55"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/identity/official-score.json",
+      "sha256": "b09774535ac479e1264903980f24f0a345c1a7af76dd2eda89ba776dcd051aa7"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/multi_turn_base_43.graph.json",
+      "sha256": "901ee45f8b2b9f3641c254d9adaf9ad5d8e25204c1a943c16284fef39d5bb358"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence-g0/official-score.json",
+      "sha256": "dde61b79f5882d8253e7bd10312a4806b51fa94e90f77a6c6ecf4f8246601339"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence/multi_turn_base_43.graph.json",
+      "sha256": "b703b6603f5e715316a919bcbaba144902c2218b57ed8f5bbd265b7325520041"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05/runs/claude-sonnet-5-5/multi_turn_base_43/1/graph-evidence/official-score.json",
+      "sha256": "0d4b787d176321dd600672a77a429e7c717ab3405ea86a3494b2272fc958ae7b"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/analysis-round-05-confirmation-final/analysis.json",
+      "sha256": "69a6b40adffdcf652e79fb4019a57a5607050d2c7a35d08a3297e5b366b8416f"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/plan.json",
+      "sha256": "854c36a1379622a4c8ce5d0a7508aa0163d4c556eb8a6337faeb3684c8a520f3"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/2/identity/multi_turn_base_12.graph.json",
+      "sha256": "915aaad4d650cbc32a721cdac57f8fee096dbc2ad9f80799a651c5392091c76e"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/2/identity/official-score.json",
+      "sha256": "b2ddaa3a46f97a55fd37dc44d0a98e05b105b3663394c7cd940142c7f0d060cc"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/3/graph-evidence/multi_turn_base_3.graph.json",
+      "sha256": "2f128bf282c3d4526e050c03c40c05dac5cfd6abd7a0cd54af3f2fc2eb76a879"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/3/graph-evidence/official-score.json",
+      "sha256": "238d9868b9a93e97335af0952d367f0942161e818c887975d3f5b374cbae6992"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/2/graph-evidence/multi_turn_base_12.graph.json",
+      "sha256": "6438cb0262556616b82526c1db0decbb54d98dfe7a240b07a703ccec82754660"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/2/graph-evidence/official-score.json",
+      "sha256": "c810164866d4e221806a18b751acf3898fc1a2dc3c119aec26cfa8bce7a51dde"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/3/identity/multi_turn_base_3.graph.json",
+      "sha256": "4ae84640e8d7a199bdc2577dcb524a039a1401889f0b4a5624c9b2efade4b56a"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/3/identity/official-score.json",
+      "sha256": "b19e4e7cc7920b41fa2fc0821a0f53de5f10c3ca649dc219a460c7aa9d1778fe"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/3/identity/multi_turn_long_context_31.graph.json",
+      "sha256": "dee8e5279f50341ed8311ef6bd2cdaf31478c0c6f1b0953ae18654ed005135cb"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/3/identity/official-score.json",
+      "sha256": "7234bf39b6cfd6b47ac4300e672301cdb1561a7cb7e5348b8fe2bdd65aae826d"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/3/graph-evidence/multi_turn_long_context_31.graph.json",
+      "sha256": "43893229bf9fc0363237d5728d03b3561b393083e229af0144434c6c0be9c884"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/3/graph-evidence/official-score.json",
+      "sha256": "b00aad8186a39e3738476d8e7e1b846411100affa83e465a8f75b0a21bc4bce4"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/2/graph-evidence/multi_turn_base_3.graph.json",
+      "sha256": "2f128bf282c3d4526e050c03c40c05dac5cfd6abd7a0cd54af3f2fc2eb76a879"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/2/graph-evidence/official-score.json",
+      "sha256": "9757c2e1c506d0342eb1a89cae7c3e93f5302b5f2f9825dd87661c7d15ba96ae"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/3/graph-evidence/multi_turn_base_12.graph.json",
+      "sha256": "6438cb0262556616b82526c1db0decbb54d98dfe7a240b07a703ccec82754660"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/3/graph-evidence/official-score.json",
+      "sha256": "93acb54b1e48a7e2dd926a3282d70dca73de84dc92a75afc6daa17d076889e20"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/2/identity/multi_turn_base_3.graph.json",
+      "sha256": "4ae84640e8d7a199bdc2577dcb524a039a1401889f0b4a5624c9b2efade4b56a"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_3/2/identity/official-score.json",
+      "sha256": "076845e3df45e1e88d1624ffdb984c3708a8cb9b814a5e55b9c1f8d566bf6aba"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/3/identity/multi_turn_base_12.graph.json",
+      "sha256": "915aaad4d650cbc32a721cdac57f8fee096dbc2ad9f80799a651c5392091c76e"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_12/3/identity/official-score.json",
+      "sha256": "bd85a4fd7412f6ee0a3791b01ce274e0a0b3a75d20892bc3789aa90b42e4b93e"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/2/graph-evidence/multi_turn_long_context_31.graph.json",
+      "sha256": "43893229bf9fc0363237d5728d03b3561b393083e229af0144434c6c0be9c884"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/2/graph-evidence/official-score.json",
+      "sha256": "f1ab117ca3e387d68b682b92cb71ddffbe5ea3f38353cd267a24f579f3c07897"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/2/graph-evidence/multi_turn_base_12.graph.json",
+      "sha256": "e72a3d9e4fb660b0eec1ba2d56423fa3c75d96cbf624b755007494006b88670a"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/2/graph-evidence/official-score.json",
+      "sha256": "9220d5d7191e2361e37c6c20bedb4f1e6ed31614d2d81355ce87f72bd37f160f"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/2/identity/multi_turn_long_context_31.graph.json",
+      "sha256": "dee8e5279f50341ed8311ef6bd2cdaf31478c0c6f1b0953ae18654ed005135cb"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_long_context_31/2/identity/official-score.json",
+      "sha256": "480ed530df6cf63dfea521bdc2f8ee1feb5328dcf4499442029e53191a751898"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/2/identity/multi_turn_base_12.graph.json",
+      "sha256": "5a1c335bbca930fe90191679a3c4ede333780921c2deaa70416521900b1335a9"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/2/identity/official-score.json",
+      "sha256": "6ec2554c11fb2d95261ed049df6f79ec8c7b58967fe05749ecc89eec50e59c2a"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/3/identity/multi_turn_long_context_31.graph.json",
+      "sha256": "9ea3536ca8758923383ba52765a9bac6c4e037fa2fb54797b355e781d79143bd"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/3/identity/official-score.json",
+      "sha256": "7528d644c56b686696524bab53b571fea0c4cfa131835ca6ac0821b578c3cbfa"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/2/identity/multi_turn_base_43.graph.json",
+      "sha256": "fa4d57130d4b56e2731d4bf3277240b5fd0357039262e30899d5c7a24b837dd2"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/2/identity/official-score.json",
+      "sha256": "529372cc7bf7a8196bd6e5cebd098ce9a287515cc242e6bcf3c5697c3f4c7ecf"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/3/graph-evidence/multi_turn_long_context_31.graph.json",
+      "sha256": "82167d2b0dcb31fbc2043e5d78ccf761e3b66b3c2b26a5ce6fa51bac570701bf"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/3/graph-evidence/official-score.json",
+      "sha256": "74069b49dd18cb222060dceb7b00480a8c48ace19a2a10ecbfefcc934b7e2426"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/2/graph-evidence/multi_turn_base_43.graph.json",
+      "sha256": "e50913645bc7d5c49729890e0d06cedd0aafb0e5dcf46ccf8626c77eec80a782"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/2/graph-evidence/official-score.json",
+      "sha256": "fd512bbefc32a128a8457cce7d432d84e6d390b585f254b7a543299f1058dd78"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/3/graph-evidence/multi_turn_base_43.graph.json",
+      "sha256": "e50913645bc7d5c49729890e0d06cedd0aafb0e5dcf46ccf8626c77eec80a782"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/3/graph-evidence/official-score.json",
+      "sha256": "c10fd3ffd1ee6cce06afece30d2b2083475d7f2ad3e238908d6ddcba8f61db0b"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/3/identity/multi_turn_base_12.graph.json",
+      "sha256": "5a1c335bbca930fe90191679a3c4ede333780921c2deaa70416521900b1335a9"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/3/identity/official-score.json",
+      "sha256": "67d78cc63da3e28caf200b35333127dc3e82825573ba1d6005a15fee66d1b9a1"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/3/graph-evidence/multi_turn_base_12.graph.json",
+      "sha256": "e72a3d9e4fb660b0eec1ba2d56423fa3c75d96cbf624b755007494006b88670a"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_12/3/graph-evidence/official-score.json",
+      "sha256": "f422c208f7f7aacba53500e009776db2501e96f505e38189d5563135f56503ed"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/3/identity/multi_turn_base_43.graph.json",
+      "sha256": "fa4d57130d4b56e2731d4bf3277240b5fd0357039262e30899d5c7a24b837dd2"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_43/3/identity/official-score.json",
+      "sha256": "a87f8e46ab15dbd10edd495f3bcabfb3e54eb06bdefce9b569b35ab60f595a2b"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/3/identity/multi_turn_base_3.graph.json",
+      "sha256": "7a97c1d1715b792db1f104dc50e8db211e648ce12abb192c4ab8059ea5e2cb81"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/3/identity/official-score.json",
+      "sha256": "850a1168a2be1ddbe7b6f1a920c0a99d1b6b27f087fb90d16bad6d0e8ed7977b"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/3/identity/multi_turn_base_43.graph.json",
+      "sha256": "7a3e4d627c0e4bbd83e9d84337aba0a42582b93822a888856b37903d673b2f55"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/3/identity/official-score.json",
+      "sha256": "58001e5c60baf58c7bf2266c4e92ebb7563023f46c0dd373161d93531ae533f8"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/3/graph-evidence/multi_turn_base_3.graph.json",
+      "sha256": "85163994c61670ba1e3b944c4afa96bf3727718039fe224f0c670ae18f812da7"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/3/graph-evidence/official-score.json",
+      "sha256": "2f15cb4dc858ebddfc02495491814ea4eb427fe4f78fb48d6359700e80d90863"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/3/graph-evidence/multi_turn_base_43.graph.json",
+      "sha256": "b703b6603f5e715316a919bcbaba144902c2218b57ed8f5bbd265b7325520041"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/3/graph-evidence/official-score.json",
+      "sha256": "ba7141ffcfa01a560103f4e68fbf41149a50d0f383f07c3513682da64149cc91"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/2/graph-evidence/multi_turn_base_3.graph.json",
+      "sha256": "85163994c61670ba1e3b944c4afa96bf3727718039fe224f0c670ae18f812da7"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/2/graph-evidence/official-score.json",
+      "sha256": "71386b66771a32a7eabe5bc19eabe375fbac659f37f20191631f1be9013eb754"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/2/identity/multi_turn_base_3.graph.json",
+      "sha256": "7a97c1d1715b792db1f104dc50e8db211e648ce12abb192c4ab8059ea5e2cb81"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/gpt-4.1/multi_turn_base_3/2/identity/official-score.json",
+      "sha256": "3f840815c09921faa4354707e342b41a28599f394557d08de905302fee14975c"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/2/identity/multi_turn_base_43.graph.json",
+      "sha256": "7a3e4d627c0e4bbd83e9d84337aba0a42582b93822a888856b37903d673b2f55"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/2/identity/official-score.json",
+      "sha256": "047d09e6587e17903c14da1cb220e8f1679315cc45c8d90a2d847332e056b565"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/2/graph-evidence/multi_turn_base_43.graph.json",
+      "sha256": "b703b6603f5e715316a919bcbaba144902c2218b57ed8f5bbd265b7325520041"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_base_43/2/graph-evidence/official-score.json",
+      "sha256": "04a493e2ad6568ec92da11256d027df054ebf1c608f92710d5543a74eb1e893c"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/2/graph-evidence/multi_turn_long_context_31.graph.json",
+      "sha256": "82167d2b0dcb31fbc2043e5d78ccf761e3b66b3c2b26a5ce6fa51bac570701bf"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/2/graph-evidence/official-score.json",
+      "sha256": "33491fb9c0b98413f84f3be07ac82a972257b4cf0128c991de0ea7c31545d8b5"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/2/identity/multi_turn_long_context_31.graph.json",
+      "sha256": "9ea3536ca8758923383ba52765a9bac6c4e037fa2fb54797b355e781d79143bd"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation/runs/claude-sonnet-5-5/multi_turn_long_context_31/2/identity/official-score.json",
+      "sha256": "1324b43c6653a94f3e48390ae6a128d2b4cb252ac5025a3c6f96ac93d5607c3b"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-development-behavior-gate.json",
+      "sha256": "43adf60eaabc6ebd77fe9bdddab19049430f84de91adeb5b5891e85199e5dc61"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-development-confirmation-review.json",
+      "sha256": "18039d537f1e8df93e7fb4b9c1a3db1b2312dc8d709b2a00a56cdf81fb4c1ec8"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-confirmation-blind-quote-check.json",
+      "sha256": "16082f545ec867cea6ecf4d56eee44e71f577211b8601e15a2c7c9991a7f96bd"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-development-independent-audit-gate.json",
+      "sha256": "1be5fb7becd78fa6b8bc09acedcbbbe0f7e29ace5dea40ed0e079760f233bf8b"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-wire-audit.json",
+      "sha256": "3bd4a57846b172030aa3e513ee2364bc0c69bcd6650660c0cc0c188c37b145ca"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/round-05-confirmation-wire-audit.json",
+      "sha256": "9cef645dafca9d5393347fbe4caef596ad82143ee1872129f1aa815bed251f16"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/round-05-confirmation-repeat-label-supplement.json",
+      "sha256": "590e3807198bb4c6bd510b5eb00312088d1dd74572242c286dfd99b0520880ce"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/design/round05-confirmation-repeat-provenance-independent-review.json",
+      "sha256": "131342bd0c99f84f6176f28fe25bb386efddfe55639192592efc2b5e6e398d02"
+    }
+  ]
+}

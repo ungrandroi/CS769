@@ -1,0 +1,115 @@
+{
+  "version": "c2-qualification-rollup-v1",
+  "scope": "Campaign2 only, batch1+batch2 including all registered reserves; no continuation outcomes used",
+  "groups": {
+    "gpt-4.1": {
+      "attempted": 15,
+      "qualified": 11,
+      "excluded": 4,
+      "input_tokens": 154514,
+      "output_tokens": 1880,
+      "reference_usd": 0.324068,
+      "exclusions": [
+        {
+          "stage": "campaign02-batch01-prefixes",
+          "id": "multi_turn_base_27",
+          "reasons": [
+            "official_first_turn_failed"
+          ],
+          "official_score": {
+            "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/campaign02-batch01-prefixes/runs/gpt-4.1/multi_turn_base_27/1/identity/first-turn-score.json",
+            "sha256": "494b2e480e21851f6f729156be075f16fb61d7bf90c8d16f064d2ef5fa0aef52"
+          }
+        },
+        {
+          "stage": "campaign02-batch02-prefixes",
+          "id": "multi_turn_long_context_2",
+          "reasons": [
+            "official_first_turn_failed"
+          ],
+          "official_score": {
+            "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/campaign02-batch02-prefixes/runs/gpt-4.1/multi_turn_long_context_2/1/identity/first-turn-score.json",
+            "sha256": "aa9a71dd4f3fcfc96d3b61b0a86e88bf5d313fc97fd0a9e5de063ed1ace802ba"
+          }
+        },
+        {
+          "stage": "campaign02-batch02-prefixes",
+          "id": "multi_turn_long_context_13",
+          "reasons": [
+            "official_first_turn_failed"
+          ],
+          "official_score": {
+            "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/campaign02-batch02-prefixes/runs/gpt-4.1/multi_turn_long_context_13/1/identity/first-turn-score.json",
+            "sha256": "aed95910170af15db8ceb4945a590dfe673fd2a08ae6087467a9a001f81e6ca4"
+          }
+        },
+        {
+          "stage": "campaign02-batch02-reserve01-prefixes",
+          "id": "multi_turn_base_38",
+          "reasons": [
+            "official_first_turn_failed"
+          ],
+          "official_score": {
+            "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/campaign02-batch02-reserve01-prefixes/runs/gpt-4.1/multi_turn_base_38/1/identity/first-turn-score.json",
+            "sha256": "0c717ddb4052cd3627c789c6ad8e256cb640bf027538ba5edbb761b7ad96b4ae"
+          }
+        }
+      ]
+    },
+    "claude-sonnet-5-5": {
+      "attempted": 14,
+      "qualified": 12,
+      "excluded": 2,
+      "input_tokens": 321891,
+      "output_tokens": 4330,
+      "reference_usd": 0.687082,
+      "exclusions": [
+        {
+          "stage": "campaign02-batch02-prefixes",
+          "id": "multi_turn_long_context_2",
+          "reasons": [
+            "official_first_turn_failed"
+          ],
+          "official_score": {
+            "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/campaign02-batch02-prefixes/runs/claude-sonnet-5-5/multi_turn_long_context_2/1/identity/first-turn-score.json",
+            "sha256": "2d8290cf208c391f1a8ac512e91ed0a0fc445f41833924d9fea20fa05a355dda"
+          }
+        },
+        {
+          "stage": "campaign02-batch02-prefixes",
+          "id": "multi_turn_long_context_13",
+          "reasons": [
+            "official_first_turn_failed"
+          ],
+          "official_score": {
+            "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v7_graph_iterations_20261023/campaign02-batch02-prefixes/runs/claude-sonnet-5-5/multi_turn_long_context_13/1/identity/first-turn-score.json",
+            "sha256": "046461516d04b0ba9e2deb0d703d0631d9a06bf8587ed78afc731c21f0270889"
+          }
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-prefixes-qualification-audit.json",
+      "sha256": "0b15608d8fd608b2bd46a3f3a42a84f1b0295bae6a0c6af53e7b86d354dc1389"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch01-reserve01-prefixes-qualification-audit.json",
+      "sha256": "baa07bc53988c82b88b9292a2b8e99319d216c79404f446062528ec2419cfab5"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch02-prefixes-qualification-audit.json",
+      "sha256": "aa81023616c70dde5dcc056d91c1a7182d3902ec6a65223ef73b9962835513fc"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch02-reserve01-prefixes-qualification-audit.json",
+      "sha256": "38510bd835aaad13e524b26d93d5cd116133d359f1ce3f6446ae802b6e8da572"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-replacement-iterations/archive/campaign02-batch02-reserve02-prefixes-qualification-audit.json",
+      "sha256": "0285521803be99a25cb0dfcc06b4f4c883ecef0e0c8a90e6d9df1e0bf141c6cf"
+    }
+  ],
+  "original_records_modified": false
+}
