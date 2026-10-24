@@ -1,0 +1,421 @@
+{
+  "version": "g9-report-publication-v1",
+  "base_commit": "4e883f7a626e5ef219c6941ee98dc33eaa79eb94",
+  "model_calls": 0,
+  "original_records_modified": false,
+  "source_copies": [
+    {
+      "source": "analysis/dev02-structural-repeat-independent-audit.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/dev02-structural-repeat-independent-audit.json",
+      "sha256": "e922b99b50fc914320a316f8180895b0139901d6b4e5e042435838ae092a55b4",
+      "byte_identical": true
+    },
+    {
+      "source": "analysis/g9-expanded-unmasked-summary.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-unmasked-summary.json",
+      "sha256": "e87d469b64d8f4c4fc2eff6922b6dd6efe55b26c40cbf4ac91233e4e9003ceb7",
+      "byte_identical": true
+    },
+    {
+      "source": "design/g9-expanded-increment-scope-v1.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-increment-scope-v1.json",
+      "sha256": "88b38ba1509894feed88d6867e24b51f3ce4a5fb2d0263b1cb8f3e9eb0bbf90f",
+      "byte_identical": true
+    },
+    {
+      "source": "design/g9-expanded-fixed12-selection-v1.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-fixed12-selection-v1.json",
+      "sha256": "ee6beca92af72d65a726912a93a3ec378397a76d148b20ecdf0ec2c0743bedea",
+      "byte_identical": true
+    },
+    {
+      "source": "analysis/g9-expanded-blind-labels.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-blind-labels.json",
+      "sha256": "73910e1d6132090397b80dc2d36e2d03aa55666fdb4d74b6016521ed164fa0a3",
+      "byte_identical": true
+    },
+    {
+      "source": "analysis/g9-expanded-blind-merge-freeze.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-blind-merge-freeze.json",
+      "sha256": "cee3e292489de40e1f6a2288a28d9e0a3279098bc4b0fefdff23281cd1d9aa8e",
+      "byte_identical": true
+    },
+    {
+      "source": "analysis/g9-expanded-behavior-explanation-v2.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-behavior-explanation-v2.json",
+      "sha256": "864b68ade6b91c68406179600c21f4e8b431a397e3c45af6249455c727bba3c2",
+      "byte_identical": true
+    },
+    {
+      "source": "analysis/g9-expanded-pre-unmask-cost-summary.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-pre-unmask-cost-summary.json",
+      "sha256": "56d54e538b16e7ddb5f769bedad66fe6c06412696275f17a5437ddf6bfcabb9a",
+      "byte_identical": true
+    },
+    {
+      "source": "analysis/g9-independent-unmasked-summary.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-unmasked-summary.json",
+      "sha256": "a758eccb0340175c0c6fc2aaec4c8b977a137e2ce52dd0cb6a2a80320ca66186",
+      "byte_identical": true
+    },
+    {
+      "source": "design/g9-independent-increment-scope-v1.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-increment-scope-v1.json",
+      "sha256": "f1a327b2c500821ca2fd77e2ed65b18c3743816a531aeebe6afacb28cfb18b8f",
+      "byte_identical": true
+    },
+    {
+      "source": "design/g9-independent-fixed12-selection-v1.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-fixed12-selection-v1.json",
+      "sha256": "870416b5060fa0862e2f9082dbaf109473cf0e004f0c6e75a75d59247476eace",
+      "byte_identical": true
+    },
+    {
+      "source": "analysis/g9-independent-blind-labels.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-blind-labels.json",
+      "sha256": "a4fb8b64688a7b63b69513d0afa998f92deeeb1e6bf83d9c75fb8c0544b1fed0",
+      "byte_identical": true
+    },
+    {
+      "source": "analysis/g9-independent-blind-recovery-freeze.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-blind-recovery-freeze.json",
+      "sha256": "c0482600f1732640716896c52bcb35bad2d39b58f7cc9c1f5a74136869943fef",
+      "byte_identical": true
+    },
+    {
+      "source": "analysis/g9-independent-behavior-token-explanation.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-behavior-token-explanation.json",
+      "sha256": "764101fee1a6cd219bfbbafd3f75b16d1c45a66e555fcb85410f978a8942a068",
+      "byte_identical": true
+    },
+    {
+      "source": "analysis/g9-independent-first-request-tokens.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-first-request-tokens.json",
+      "sha256": "8bea75907c88b660aaaca52ccd89a5ee6f980b535e679f39d3ce5fb855a5ef12",
+      "byte_identical": true
+    },
+    {
+      "source": "analysis/g9-expanded-behavior-explanation.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-behavior-explanation.json",
+      "sha256": "b4980ea7f38f9db2b3d58849123a663e9954bf70f1850a8dc2ef0d6075b92cf7",
+      "byte_identical": true
+    },
+    {
+      "source": "analysis/g9-expanded-independent-results-review.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-independent-results-review.json",
+      "sha256": "79750071f3b988655dfc85710424af558cbb99608457822b3970c8d8f88113d7",
+      "byte_identical": true
+    },
+    {
+      "source": "research/g5-g8-g9-base194-input-evidence.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g5-g8-g9-base194-input-evidence.json",
+      "sha256": "1fc6ce2c3c605c5db7bf4263b8b055e2c483d96ccbbf638b1d7a07ce7b7cc3fc",
+      "byte_identical": true
+    },
+    {
+      "source": "research/g5-g8-g9-base194-E-memory.txt",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g5-g8-g9-base194-E-memory.txt",
+      "sha256": "48788f3d258bfe1434b47647a04481884c75bbc81773b9901bb1e5abcbc73f41",
+      "byte_identical": true
+    },
+    {
+      "source": "research/g5-g8-g9-base194-R-memory.txt",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g5-g8-g9-base194-R-memory.txt",
+      "sha256": "aef1d8135fcdeb54490bb347076b0eedfc8df9c0cd80fdb8192342fc1bb069e2",
+      "byte_identical": true
+    },
+    {
+      "source": "analysis/g9-independent-report-grounding-review.json",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-report-grounding-review.json",
+      "sha256": "c646491a74f65d5b5098370677c9afbd356f17c665a38aa08a80dbb6e504b45a",
+      "byte_identical": true
+    }
+  ],
+  "derived_or_relinked": [
+    {
+      "source": "analysis/g9-expansion-feasibility-metadata-budget-v1.json",
+      "source_sha256": "c3b79848ca58b5a0b8b001f477c24de36f3148245152f421bf37f7dc53024c8e",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/g9-expansion-feasibility-projection.json",
+      "meaning": "Exact selected fields; omits the large filename census, not a new screening run."
+    },
+    {
+      "source": "analysis/ind04-g9-continuation-k2-ledger-after.json",
+      "source_sha256": "30f8e94013440b2116fc788ea92c49c2631af35caf905f242e752fa9b18dd321",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/ind04-g9-continuation-k2-budget-totals.json",
+      "meaning": "Recomputed sums of immutable ledger reservations; uncached reference prices, not invoice amounts. Full ledger stays archived."
+    },
+    {
+      "source": "analysis/ext04-g9-continuation-k2-ledger-after.json",
+      "source_sha256": "a7471d6d5f709395441bf20014f3f88b112385b2c1348a6347fc45d410f820d6",
+      "published": "experiments/bfcl_identity/reports/evidence/g9/ext04-g9-continuation-k2-budget-totals.json",
+      "meaning": "Recomputed sums of immutable ledger reservations; uncached reference prices, not invoice amounts. Full ledger stays archived."
+    },
+    {
+      "source": "research/g9-expanded-validation-results.md",
+      "source_sha256": "024e1c2184dd903048a7154cd02573a6aa6d525e6b93b72a0076dae643792d9c",
+      "published": "experiments/bfcl_identity/reports/g9-expanded-validation-results.md",
+      "meaning": "Reviewed report text retained; local citations remapped to published evidence and navigation added to main report."
+    },
+    {
+      "source": "research/g9-independent-validation-results.md",
+      "source_sha256": "51aeec2e6393132fa5ef03b86610e3a416efaf6c941be3c63c533db572e810ac",
+      "published": "experiments/bfcl_identity/reports/g9-independent-validation-results.md",
+      "meaning": "Reviewed report text retained; local citations remapped to published evidence and navigation added to main report."
+    },
+    {
+      "source": "research/g9-expanded-behavior-explanation-v2.md",
+      "source_sha256": "717c95afa643a4083719345c15b8b96955ba54a19ebbf034aaa1686202d18423",
+      "published": "experiments/bfcl_identity/reports/g9-expanded-behavior-explanation-v2.md",
+      "meaning": "Reviewed report text retained; local citations remapped to published evidence and navigation added to main report."
+    },
+    {
+      "source": "research/g9-expanded-behavior-explanation.md",
+      "source_sha256": "d5e7040d548cbbeb890b935e67fb0cf0d3660d755764f0eee243e6661a0ee5b7",
+      "published": "experiments/bfcl_identity/reports/g9-expanded-behavior-explanation.md",
+      "meaning": "Reviewed report text retained; local citations remapped to published evidence and navigation added to main report."
+    },
+    {
+      "source": "research/g9-expanded-independent-results-review.md",
+      "source_sha256": "84a7715935c11b22ea76750264047d2547a22f0dfa534e3c36b77f0acab1b44f",
+      "published": "experiments/bfcl_identity/reports/g9-expanded-independent-results-review.md",
+      "meaning": "Reviewed report text retained; local citations remapped to published evidence and navigation added to main report."
+    },
+    {
+      "source": "research/g9-independent-report-grounding-review.md",
+      "source_sha256": "958615c162be9eec36e8bc57cc891effca5c9f7f222fca615188e9546018f334",
+      "published": "experiments/bfcl_identity/reports/g9-independent-report-grounding-review.md",
+      "meaning": "Reviewed report text retained; local citations remapped to published evidence and navigation added to main report."
+    },
+    {
+      "source": "research/g9-expansion-two-arm-budget-addendum-v1.md",
+      "source_sha256": "b9b264224f6247532a915a45f3dfbe7f3a2494f6485c4d6de4e65e97a1e0d1b2",
+      "published": "experiments/bfcl_identity/reports/g9-expansion-two-arm-budget-addendum-v1.md",
+      "meaning": "Reviewed report text retained; local citations remapped to published evidence and navigation added to main report."
+    },
+    {
+      "source": "research/g5-g8-g9-base194-method-note.md",
+      "source_sha256": "defa8451399471fca065a65f0fdcfedc7f112151dbca81082ca8d5941375b938",
+      "published": "experiments/bfcl_identity/reports/g9-structure-method.md",
+      "meaning": "Short publication explanation drawn from the reviewed method note and byte-identical instance evidence; no new experimental claims."
+    }
+  ],
+  "checks": {
+    "source_copies_byte_identical": true,
+    "official_counts_recomputed": true,
+    "links_checked": 248,
+    "existing_tree_targets": [
+      "experiments/bfcl_identity/reports/baseline.txt",
+      "experiments/bfcl_identity/reports/event_graph_dedup_eval.txt",
+      "experiments/bfcl_identity/reports/event_graph_dedup_offline.txt",
+      "experiments/bfcl_identity/reports/evidence/README.md",
+      "experiments/bfcl_identity/reports/evidence/experiment-summary-data.json",
+      "experiments/bfcl_identity/reports/evidence/g5/README.md",
+      "experiments/bfcl_identity/reports/evidence/records/v5-auxiliary-correction.json",
+      "experiments/bfcl_identity/reports/experiment-evidence.html",
+      "experiments/bfcl_identity/reports/experiment-evidence.md",
+      "experiments/bfcl_identity/reports/g5-graph-replacement.html",
+      "experiments/bfcl_identity/reports/g5-graph-replacement.md",
+      "experiments/bfcl_identity/reports/g5-publication-manifest.json",
+      "experiments/bfcl_identity/reports/g9-publication-manifest.json",
+      "experiments/bfcl_identity/reports/gpt41_rerun.md",
+      "experiments/bfcl_identity/reports/gpt5mini_rerun.md",
+      "experiments/bfcl_identity/reports/model_comparison.md",
+      "experiments/bfcl_identity/reports/publication-manifest.json",
+      "experiments/bfcl_identity/reports/v2-readable.html",
+      "experiments/bfcl_identity/reports/v2-readable.md",
+      "experiments/bfcl_identity/reports/v3-findings.html",
+      "experiments/bfcl_identity/reports/v3-findings.md",
+      "experiments/bfcl_identity/reports/v3-token-statistics.html",
+      "experiments/bfcl_identity/reports/v3-token-statistics.md",
+      "experiments/bfcl_identity/reports/v4-placement-diagnostic.html",
+      "experiments/bfcl_identity/reports/v4-placement-diagnostic.md",
+      "experiments/bfcl_identity/reports/v4-regression-review.html",
+      "experiments/bfcl_identity/reports/v4-regression-review.md",
+      "experiments/bfcl_identity/reports/v5-b-validation-results.html",
+      "experiments/bfcl_identity/reports/v5-b-validation-results.md"
+    ],
+    "credential_pattern_findings": 0
+  },
+  "files": [
+    {
+      "path": "experiments/bfcl_identity/reports/README.md",
+      "sha256": "ab49dfffb5ae445c589bc46eb1f4b06c74e7a207243b0535d3ebf4ec5b693ac7",
+      "bytes": 4286
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/README.md",
+      "sha256": "e702ef9ddbf5c78748a0541e787c6108eaf19da8c4af8cfa5c7cb80a34298c27",
+      "bytes": 1744
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/dev02-structural-repeat-independent-audit.json",
+      "sha256": "e922b99b50fc914320a316f8180895b0139901d6b4e5e042435838ae092a55b4",
+      "bytes": 68863
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/ext04-g9-continuation-k2-budget-totals.json",
+      "sha256": "dc3ac7c63d6efd560154da8161c6025ad290d081bfc9ed16a77bb424aee69ecb",
+      "bytes": 1044
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g5-g8-g9-base194-E-memory.txt",
+      "sha256": "48788f3d258bfe1434b47647a04481884c75bbc81773b9901bb1e5abcbc73f41",
+      "bytes": 4556
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g5-g8-g9-base194-R-memory.txt",
+      "sha256": "aef1d8135fcdeb54490bb347076b0eedfc8df9c0cd80fdb8192342fc1bb069e2",
+      "bytes": 4988
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g5-g8-g9-base194-input-evidence.json",
+      "sha256": "1fc6ce2c3c605c5db7bf4263b8b055e2c483d96ccbbf638b1d7a07ce7b7cc3fc",
+      "bytes": 32086
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-behavior-explanation-v2.json",
+      "sha256": "864b68ade6b91c68406179600c21f4e8b431a397e3c45af6249455c727bba3c2",
+      "bytes": 51284
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-behavior-explanation.json",
+      "sha256": "b4980ea7f38f9db2b3d58849123a663e9954bf70f1850a8dc2ef0d6075b92cf7",
+      "bytes": 46635
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-blind-labels.json",
+      "sha256": "73910e1d6132090397b80dc2d36e2d03aa55666fdb4d74b6016521ed164fa0a3",
+      "bytes": 270675
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-blind-merge-freeze.json",
+      "sha256": "cee3e292489de40e1f6a2288a28d9e0a3279098bc4b0fefdff23281cd1d9aa8e",
+      "bytes": 1753
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-fixed12-selection-v1.json",
+      "sha256": "ee6beca92af72d65a726912a93a3ec378397a76d148b20ecdf0ec2c0743bedea",
+      "bytes": 3993
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-increment-scope-v1.json",
+      "sha256": "88b38ba1509894feed88d6867e24b51f3ce4a5fb2d0263b1cb8f3e9eb0bbf90f",
+      "bytes": 8190
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-independent-results-review.json",
+      "sha256": "79750071f3b988655dfc85710424af558cbb99608457822b3970c8d8f88113d7",
+      "bytes": 220340
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-pre-unmask-cost-summary.json",
+      "sha256": "56d54e538b16e7ddb5f769bedad66fe6c06412696275f17a5437ddf6bfcabb9a",
+      "bytes": 2183
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-expanded-unmasked-summary.json",
+      "sha256": "e87d469b64d8f4c4fc2eff6922b6dd6efe55b26c40cbf4ac91233e4e9003ceb7",
+      "bytes": 516820
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-expansion-feasibility-projection.json",
+      "sha256": "2c7747c0c8db78fee6e6c59f8a506534e7611621491f1cf2396478c7d45bbc2f",
+      "bytes": 5150
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-behavior-token-explanation.json",
+      "sha256": "764101fee1a6cd219bfbbafd3f75b16d1c45a66e555fcb85410f978a8942a068",
+      "bytes": 115510
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-blind-labels.json",
+      "sha256": "a4fb8b64688a7b63b69513d0afa998f92deeeb1e6bf83d9c75fb8c0544b1fed0",
+      "bytes": 529105
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-blind-recovery-freeze.json",
+      "sha256": "c0482600f1732640716896c52bcb35bad2d39b58f7cc9c1f5a74136869943fef",
+      "bytes": 888
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-first-request-tokens.json",
+      "sha256": "8bea75907c88b660aaaca52ccd89a5ee6f980b535e679f39d3ce5fb855a5ef12",
+      "bytes": 67463
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-fixed12-selection-v1.json",
+      "sha256": "870416b5060fa0862e2f9082dbaf109473cf0e004f0c6e75a75d59247476eace",
+      "bytes": 3986
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-increment-scope-v1.json",
+      "sha256": "f1a327b2c500821ca2fd77e2ed65b18c3743816a531aeebe6afacb28cfb18b8f",
+      "bytes": 7770
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-report-grounding-review.json",
+      "sha256": "c646491a74f65d5b5098370677c9afbd356f17c665a38aa08a80dbb6e504b45a",
+      "bytes": 11406
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/g9-independent-unmasked-summary.json",
+      "sha256": "a758eccb0340175c0c6fc2aaec4c8b977a137e2ce52dd0cb6a2a80320ca66186",
+      "bytes": 699224
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9/ind04-g9-continuation-k2-budget-totals.json",
+      "sha256": "05b9a232ecb68930813b4d6681f6f6936e749448752268a559d85159a4636ef0",
+      "bytes": 1043
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/experiment-summary.html",
+      "sha256": "7193a623addc08e0bc5ff57ebadad250753df8eac07f59f3bc3f0950dc29edee",
+      "bytes": 14308
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/experiment-summary.md",
+      "sha256": "923171b9559bb19a53b6c126f026a3dde2096849ab16417e00a5fc4a76e3ecf6",
+      "bytes": 9918
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/g9-expanded-behavior-explanation-v2.md",
+      "sha256": "352e8092e37ff17cd21b94491b622401550d61019596d0beed3c2f1b690ede5d",
+      "bytes": 4190
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/g9-expanded-behavior-explanation.md",
+      "sha256": "3fac0923b373fc52ec619dc583dc32669d2e5604ce1ae3020aed0d0c17db1a0c",
+      "bytes": 3552
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/g9-expanded-independent-results-review.md",
+      "sha256": "3e6a9a7002466f42363a73f6a9864cc246b9bdbabaf84b83abbe74ffbcb0fbc8",
+      "bytes": 2442
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/g9-expanded-validation-results.md",
+      "sha256": "da1a298b35ad7856b3bf4ca74c71e655a53853724afd7c6b85f3f0c44cf10d0d",
+      "bytes": 9150
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/g9-expansion-two-arm-budget-addendum-v1.md",
+      "sha256": "2aa7b3feb00f0606d9f322b36437c4665f854f37423a4cec16753c2d5c64d3eb",
+      "bytes": 5468
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/g9-independent-report-grounding-review.md",
+      "sha256": "958615c162be9eec36e8bc57cc891effca5c9f7f222fca615188e9546018f334",
+      "bytes": 3720
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/g9-independent-validation-results.md",
+      "sha256": "c939b68005409b67f87f0bbe0f1f7275b8681b2f4450c841b2fda30ce698ac2f",
+      "bytes": 8283
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/g9-structure-method.md",
+      "sha256": "f620af3cfbdba2c1f7821cc9f31bc93ff1046716ac35c2b47f1aa1379fd7ac05",
+      "bytes": 2237
+    }
+  ]
+}

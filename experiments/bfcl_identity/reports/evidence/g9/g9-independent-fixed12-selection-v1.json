@@ -1,0 +1,176 @@
+{
+  "version": "g9-independent-fixed12-selection-v1",
+  "selected_before_candidate_results": true,
+  "scope_registration": {
+    "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v9_graph_exploration_20261024/design/g9-independent-increment-scope-v1.json",
+    "sha256": "f1a327b2c500821ca2fd77e2ed65b18c3743816a531aeebe6afacb28cfb18b8f"
+  },
+  "metadata_only": true,
+  "early_conditions": [
+    "multi_turn_long_context_79",
+    "multi_turn_long_context_157"
+  ],
+  "early_boundary_turns": 2,
+  "longer_conditions": [
+    "multi_turn_base_71",
+    "multi_turn_base_59",
+    "multi_turn_long_context_80",
+    "multi_turn_long_context_138",
+    "multi_turn_base_123",
+    "multi_turn_base_121",
+    "multi_turn_long_context_111",
+    "multi_turn_long_context_167",
+    "multi_turn_long_context_162",
+    "multi_turn_base_165"
+  ],
+  "longer_boundary_turns": 3,
+  "conditions": [
+    {
+      "id": "multi_turn_long_context_79",
+      "family": 79,
+      "domain": "vehicle",
+      "user_turns": 3,
+      "involved_classes": [
+        "VehicleControlAPI"
+      ],
+      "boundary_turns": 2
+    },
+    {
+      "id": "multi_turn_base_71",
+      "family": 71,
+      "domain": "vehicle",
+      "user_turns": 5,
+      "involved_classes": [
+        "VehicleControlAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_base_59",
+      "family": 59,
+      "domain": "vehicle",
+      "user_turns": 5,
+      "involved_classes": [
+        "VehicleControlAPI",
+        "MathAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_80",
+      "family": 80,
+      "domain": "vehicle",
+      "user_turns": 5,
+      "involved_classes": [
+        "VehicleControlAPI",
+        "MathAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_138",
+      "family": 138,
+      "domain": "trading",
+      "user_turns": 5,
+      "involved_classes": [
+        "MessageAPI",
+        "TradingBot"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_base_123",
+      "family": 123,
+      "domain": "trading",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_base_121",
+      "family": 121,
+      "domain": "trading",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_111",
+      "family": 111,
+      "domain": "trading",
+      "user_turns": 4,
+      "involved_classes": [
+        "MessageAPI",
+        "TradingBot"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_157",
+      "family": 157,
+      "domain": "travel",
+      "user_turns": 3,
+      "involved_classes": [
+        "MathAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 2
+    },
+    {
+      "id": "multi_turn_long_context_167",
+      "family": 167,
+      "domain": "travel",
+      "user_turns": 5,
+      "involved_classes": [
+        "TravelAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_162",
+      "family": 162,
+      "domain": "travel",
+      "user_turns": 6,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_base_165",
+      "family": 165,
+      "domain": "travel",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3
+    }
+  ],
+  "models": [
+    "gpt-4.1",
+    "claude-sonnet-5-5"
+  ],
+  "arms": [
+    "identity",
+    "graph-record-view-base",
+    "graph-record-view-full"
+  ],
+  "repeat_labels": [
+    1
+  ],
+  "stage_schedule_seeds": {
+    "ind01-g9-prefix-k3": 202610241201,
+    "ind02-g9-prefix-k2": 202610241202,
+    "ind03-g9-continuation-k3": 202610241203,
+    "ind04-g9-continuation-k2": 202610241204
+  },
+  "no_replacement": true,
+  "no_zero_index_exclusion": true
+}

@@ -1,0 +1,1595 @@
+{
+  "version": "completed-diagnostic-repeat-audit-v1",
+  "created_at": "2026-10-24T07:46:12.110950+00:00",
+  "stage": "dev02-structural-repeat",
+  "original_stage": "dev02-structural-longer",
+  "trajectory_count": 40,
+  "all_checks_passed": true,
+  "failed_checks": [],
+  "verified": [
+    {
+      "key": "gpt-4.1/multi_turn_base_43/boundary-2/3/graph-g5-reference",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "ef3dca036b6fe34f2229a00c691e5977ca84bdcea6c607894f757c36d9c84124",
+      "original_first_request_sha256": "ef3dca036b6fe34f2229a00c691e5977ca84bdcea6c607894f757c36d9c84124",
+      "original_key": "gpt-4.1/multi_turn_base_43/boundary-2/1/graph-g5-reference",
+      "manifest_sha256": "71bff1773b80cb4e731466ef0b7708b7123eef8a0c2445429d08935a036a94ba",
+      "score_sha256": "9a179103d42e954631a7f2ccbfd14528285c976a52e538804870cdd720d804c5"
+    },
+    {
+      "key": "gpt-4.1/multi_turn_base_43/boundary-2/3/graph-observations",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "ef3dca036b6fe34f2229a00c691e5977ca84bdcea6c607894f757c36d9c84124",
+      "original_first_request_sha256": "ef3dca036b6fe34f2229a00c691e5977ca84bdcea6c607894f757c36d9c84124",
+      "original_key": "gpt-4.1/multi_turn_base_43/boundary-2/1/graph-observations",
+      "manifest_sha256": "64db3a2992b5a55653126269acf9ce077f58b9609584ef4b7f10ca8fb1408fb2",
+      "score_sha256": "c673b48f6226aa8b959a9988ca94e9b1878c1b5aa19d9d4dcdc35e4a0eb48438"
+    },
+    {
+      "key": "gpt-4.1/multi_turn_base_43/boundary-2/3/identity",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "0331f3e15347db4f5a74f2d6c933852d4fb483abe925fe7d761aa7e08f719c70",
+      "original_first_request_sha256": "0331f3e15347db4f5a74f2d6c933852d4fb483abe925fe7d761aa7e08f719c70",
+      "original_key": "gpt-4.1/multi_turn_base_43/boundary-2/1/identity",
+      "manifest_sha256": "912e38a758686a5b4a1eeb2522f3fd3cd16d2d4d0aa651fb2f6ab4fa49c6d2a9",
+      "score_sha256": "c92a60c797db00146ae3a0955e1d2d01d1ac4f64f700b54678e14167d967b835"
+    },
+    {
+      "key": "gpt-4.1/multi_turn_base_43/boundary-2/3/graph-payload-addresses",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "55a4b1b1386e57dbc95f8b2bf12d796ed1e721db1a2ca95029236de764952c3c",
+      "original_first_request_sha256": "55a4b1b1386e57dbc95f8b2bf12d796ed1e721db1a2ca95029236de764952c3c",
+      "original_key": "gpt-4.1/multi_turn_base_43/boundary-2/1/graph-payload-addresses",
+      "manifest_sha256": "54140de36c27269b5079101a6f56dbea3153f8cfb35c6ecfd590b939274f33cf",
+      "score_sha256": "ff78b5e4330cc86430567e9ab954c333143a07ca590d4a3fbb06ce0e02f2bc4c"
+    },
+    {
+      "key": "gpt-4.1/multi_turn_long_context_128/boundary-2/2/graph-payload-addresses",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "af476af66a3c26bf1580778b9428c9c942284c226c3ae4945d5ca4ce80aaafa9",
+      "original_first_request_sha256": "af476af66a3c26bf1580778b9428c9c942284c226c3ae4945d5ca4ce80aaafa9",
+      "original_key": "gpt-4.1/multi_turn_long_context_128/boundary-2/1/graph-payload-addresses",
+      "manifest_sha256": "59b9a06d4522b9cf49f8ae9ba7b46ce94a4c1b1855b05f8f832976fa65e17bcd",
+      "score_sha256": "1027d682ca09283c98fd8924c8f84d47be74828bf56fb978418734185d3db984"
+    },
+    {
+      "key": "gpt-4.1/multi_turn_long_context_128/boundary-2/2/graph-g5-reference",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "dea1340bdcd7affbbc5726839f58268e4d569f712bbac5548bd1b046ec013729",
+      "original_first_request_sha256": "dea1340bdcd7affbbc5726839f58268e4d569f712bbac5548bd1b046ec013729",
+      "original_key": "gpt-4.1/multi_turn_long_context_128/boundary-2/1/graph-g5-reference",
+      "manifest_sha256": "78365572a1b12582af9685b5ebbcb6d08bda950a62563eb1365392161b443659",
+      "score_sha256": "f658dfe265d992009812a43651c2c4a31bc629464cd849bbad548a19275530d2"
+    },
+    {
+      "key": "gpt-4.1/multi_turn_long_context_128/boundary-2/2/graph-observations",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "dea1340bdcd7affbbc5726839f58268e4d569f712bbac5548bd1b046ec013729",
+      "original_first_request_sha256": "dea1340bdcd7affbbc5726839f58268e4d569f712bbac5548bd1b046ec013729",
+      "original_key": "gpt-4.1/multi_turn_long_context_128/boundary-2/1/graph-observations",
+      "manifest_sha256": "e9e72059321e81f559fb83884e5f2263cff9cad58ddb23f9cdfcf7b66a5cf192",
+      "score_sha256": "4f4ee9d4e06d4c94a3e09b207ba7adb7228bf2bc2898ba484497805cf8b3af63"
+    },
+    {
+      "key": "gpt-4.1/multi_turn_long_context_128/boundary-2/2/identity",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "a55db8ea37957220ef10342a71cdb046d391db4eac832d29d3756eda2c776ef0",
+      "original_first_request_sha256": "a55db8ea37957220ef10342a71cdb046d391db4eac832d29d3756eda2c776ef0",
+      "original_key": "gpt-4.1/multi_turn_long_context_128/boundary-2/1/identity",
+      "manifest_sha256": "4c3c53fe627836d4708ddc4dd8c26f6c83dffd357740607b9e32af3097688ebf",
+      "score_sha256": "ed8a254e0a5c88013892e0c88d5bb533a9ab99bf33690e51583535d6fa3d1e56"
+    },
+    {
+      "key": "gpt-4.1/multi_turn_long_context_128/boundary-2/3/identity",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "a55db8ea37957220ef10342a71cdb046d391db4eac832d29d3756eda2c776ef0",
+      "original_first_request_sha256": "a55db8ea37957220ef10342a71cdb046d391db4eac832d29d3756eda2c776ef0",
+      "original_key": "gpt-4.1/multi_turn_long_context_128/boundary-2/1/identity",
+      "manifest_sha256": "6cb2053bc87570efa3b6e0a1925df1a9c46b088d9f537e8ce58448c6ef5c304c",
+      "score_sha256": "c380a956673b849cc35ab61b8f45f6f96281bc612a06b3a5a5c031613c23633f"
+    },
+    {
+      "key": "gpt-4.1/multi_turn_long_context_128/boundary-2/3/graph-payload-addresses",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "af476af66a3c26bf1580778b9428c9c942284c226c3ae4945d5ca4ce80aaafa9",
+      "original_first_request_sha256": "af476af66a3c26bf1580778b9428c9c942284c226c3ae4945d5ca4ce80aaafa9",
+      "original_key": "gpt-4.1/multi_turn_long_context_128/boundary-2/1/graph-payload-addresses",
+      "manifest_sha256": "fc2878470f9bd8088e8c78f6f695e4788e9df53b317f91d8895ec16993053d51",
+      "score_sha256": "3bcab0abaeb02372f44d7a7032374643efee30a4ee783123f3a34528263b19ce"
+    },
+    {
+      "key": "gpt-4.1/multi_turn_long_context_128/boundary-2/3/graph-g5-reference",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "dea1340bdcd7affbbc5726839f58268e4d569f712bbac5548bd1b046ec013729",
+      "original_first_request_sha256": "dea1340bdcd7affbbc5726839f58268e4d569f712bbac5548bd1b046ec013729",
+      "original_key": "gpt-4.1/multi_turn_long_context_128/boundary-2/1/graph-g5-reference",
+      "manifest_sha256": "370fa88e677165540970842af04ee6f4b04010560c2fe1ad227ea20e774fd5f2",
+      "score_sha256": "2b3027c9f92953238b3f50b796ce7ad73089beae486f495ac6e2f572e75c8ee8"
+    },
+    {
+      "key": "gpt-4.1/multi_turn_long_context_128/boundary-2/3/graph-observations",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "dea1340bdcd7affbbc5726839f58268e4d569f712bbac5548bd1b046ec013729",
+      "original_first_request_sha256": "dea1340bdcd7affbbc5726839f58268e4d569f712bbac5548bd1b046ec013729",
+      "original_key": "gpt-4.1/multi_turn_long_context_128/boundary-2/1/graph-observations",
+      "manifest_sha256": "68ae31a97b104278eaea94bf45aeb86dc12217e6de1d8733f54c09816fcc015f",
+      "score_sha256": "4715bf4f447b5a43b918bf23118bdb18e07aad91d02415872f0db4328a81cda7"
+    },
+    {
+      "key": "gpt-4.1/multi_turn_base_43/boundary-2/2/graph-observations",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "ef3dca036b6fe34f2229a00c691e5977ca84bdcea6c607894f757c36d9c84124",
+      "original_first_request_sha256": "ef3dca036b6fe34f2229a00c691e5977ca84bdcea6c607894f757c36d9c84124",
+      "original_key": "gpt-4.1/multi_turn_base_43/boundary-2/1/graph-observations",
+      "manifest_sha256": "7dca9e471264812d3a9545d2b6d93b6e709e2211d1bfb58f739e909f6199925a",
+      "score_sha256": "5c45cac75598dca41430e2f91c392d724313c77d9a8a331c15d7696b728449e4"
+    },
+    {
+      "key": "gpt-4.1/multi_turn_base_43/boundary-2/2/identity",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "0331f3e15347db4f5a74f2d6c933852d4fb483abe925fe7d761aa7e08f719c70",
+      "original_first_request_sha256": "0331f3e15347db4f5a74f2d6c933852d4fb483abe925fe7d761aa7e08f719c70",
+      "original_key": "gpt-4.1/multi_turn_base_43/boundary-2/1/identity",
+      "manifest_sha256": "cee1ab8716398995b73191e447e5d2b310ce30eb633e566db3c944e333b95a2b",
+      "score_sha256": "058a16b251749254ad987f482b3c874926d31602843850442dd7d181f00db9da"
+    },
+    {
+      "key": "gpt-4.1/multi_turn_base_43/boundary-2/2/graph-payload-addresses",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "55a4b1b1386e57dbc95f8b2bf12d796ed1e721db1a2ca95029236de764952c3c",
+      "original_first_request_sha256": "55a4b1b1386e57dbc95f8b2bf12d796ed1e721db1a2ca95029236de764952c3c",
+      "original_key": "gpt-4.1/multi_turn_base_43/boundary-2/1/graph-payload-addresses",
+      "manifest_sha256": "1015f241f40b3e48bbf5c51103d1601698d434fea9d65d8b042ee6cb054a87ad",
+      "score_sha256": "208655c6463fdf82153912c9f4ed73df3234340dd72ed6cde4efb4bd69a08521"
+    },
+    {
+      "key": "gpt-4.1/multi_turn_base_43/boundary-2/2/graph-g5-reference",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "ef3dca036b6fe34f2229a00c691e5977ca84bdcea6c607894f757c36d9c84124",
+      "original_first_request_sha256": "ef3dca036b6fe34f2229a00c691e5977ca84bdcea6c607894f757c36d9c84124",
+      "original_key": "gpt-4.1/multi_turn_base_43/boundary-2/1/graph-g5-reference",
+      "manifest_sha256": "fb659a3f31992283f43d5a1b1101aba37c07ec44a5484ee23a73c31671e19154",
+      "score_sha256": "6a6d7e44a64b13662d273e47ea94802bd154a2ace3f9ceca60d7ef4837fad42e"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/2/graph-observations",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "0bf28b57bd2b123df7e2b8bd74c41aaba416ecf710722b9f8983d2cc6c6cb0a1",
+      "original_first_request_sha256": "0bf28b57bd2b123df7e2b8bd74c41aaba416ecf710722b9f8983d2cc6c6cb0a1",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/1/graph-observations",
+      "manifest_sha256": "f10aa098f02a808db0da9c5d764b1fa5d370d7c68619adf5380896f549e3ad6f",
+      "score_sha256": "12c3f1cc7d3d6e1a831a79065b2f205a0e4a465eb90461fd967ec172744119fe"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/2/identity",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "92d7342dd4486fc9f76ba1fc2ced740db56349d2a7d54bd7e29ca103c6b63e03",
+      "original_first_request_sha256": "92d7342dd4486fc9f76ba1fc2ced740db56349d2a7d54bd7e29ca103c6b63e03",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/1/identity",
+      "manifest_sha256": "470597b688c6eae44318bd19a2f15b6559f5f52b3e858dce7b367be10dd69697",
+      "score_sha256": "d9be0e741fb69558c7a644419641525531a22b0dbc3bc3fe94602731cfe041e2"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/2/graph-g5-reference",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "0bf28b57bd2b123df7e2b8bd74c41aaba416ecf710722b9f8983d2cc6c6cb0a1",
+      "original_first_request_sha256": "0bf28b57bd2b123df7e2b8bd74c41aaba416ecf710722b9f8983d2cc6c6cb0a1",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/1/graph-g5-reference",
+      "manifest_sha256": "63ee0e3112a8df79d8d3938a2ecca37064a4624ad7a6aed3ac30a429ebd3ad5b",
+      "score_sha256": "a650ab73d1feed68fa40a3e5fdb7a20adc5fb6af1345991db2a3f93ea95089e4"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/2/graph-payload-addresses",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "d6aa8b6606d5bce717b9c69efb952a6486581acc6bbf562d2af335fef84cf696",
+      "original_first_request_sha256": "d6aa8b6606d5bce717b9c69efb952a6486581acc6bbf562d2af335fef84cf696",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/1/graph-payload-addresses",
+      "manifest_sha256": "dacc1c84b4f05113fed9fe4460526a9a3b61465b601ea62a6cff78278fd1690e",
+      "score_sha256": "168ca0096d75aee6775573a22f7d0bc410245b7f006c16864f67a3aea4fe28d3"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/3/graph-payload-addresses",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "edaa49d037d2b84ef6f012bbefdc5996a860559072c4f7d4d702af57104f257d",
+      "original_first_request_sha256": "edaa49d037d2b84ef6f012bbefdc5996a860559072c4f7d4d702af57104f257d",
+      "original_key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/1/graph-payload-addresses",
+      "manifest_sha256": "fad041011b0ea2b1566374c199d410e4297629f8dca8bddb0b24fc96fb9653e0",
+      "score_sha256": "4d7b0445b0b4b4dfe345e336aa6587a6c0ebe4ab653a40fc7c1730fb01ba2091"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/3/graph-observations",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "0682e9d41a95272151c6820d3cb01043ea3fda34ca0e1f63187faaba676a5959",
+      "original_first_request_sha256": "0682e9d41a95272151c6820d3cb01043ea3fda34ca0e1f63187faaba676a5959",
+      "original_key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/1/graph-observations",
+      "manifest_sha256": "e9426b5cbe4628c65de69a655ea80b47fd863eb87ad8641baad8ae5d56a69829",
+      "score_sha256": "5eb3ce93741154360e9bac7cf970e8b6e6d37dad788c7b3b56316988f4b84a6f"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/3/identity",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "469e4689df3bdeb7d611b732a218c99efa7e97c54f90e1a70370adf847de26e0",
+      "original_first_request_sha256": "469e4689df3bdeb7d611b732a218c99efa7e97c54f90e1a70370adf847de26e0",
+      "original_key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/1/identity",
+      "manifest_sha256": "28deddf4e8d923291beb2e66da7be6294ce2b3a3c61e4be171cba9ffb534087d",
+      "score_sha256": "174807504692da4d44e2fc2416583c1a40204191a7cd7fa5200a597ff7b70cdc"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/3/graph-g5-reference",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "0682e9d41a95272151c6820d3cb01043ea3fda34ca0e1f63187faaba676a5959",
+      "original_first_request_sha256": "0682e9d41a95272151c6820d3cb01043ea3fda34ca0e1f63187faaba676a5959",
+      "original_key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/1/graph-g5-reference",
+      "manifest_sha256": "fb8ba25319bdd9f74bfb3d27164cd7592cb17328ec0acdad2aa0808ffade6637",
+      "score_sha256": "c1d7dae0e311d4d8d6cf2a57090b8b7b9d4c0d719e5fe8bb24a2da1a854ea634"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/3/graph-payload-addresses",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "b75cdb82e6817144e73ea433c31efa290796ad51de578d675e8fe219e1d62da6",
+      "original_first_request_sha256": "b75cdb82e6817144e73ea433c31efa290796ad51de578d675e8fe219e1d62da6",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/1/graph-payload-addresses",
+      "manifest_sha256": "7f39349cfe28cac5a8ed94402012c609ce1fc7920ee56db07ffe1af3f19aee11",
+      "score_sha256": "5220621019feb3c5f911a1a4305c38a343f47d7c44384bd188a0cc609a1dfc8e"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/3/graph-observations",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "753b4ca2be4af5fbb3431e93b5bec1965c3f42c93286317b5eee5f27c1130c28",
+      "original_first_request_sha256": "753b4ca2be4af5fbb3431e93b5bec1965c3f42c93286317b5eee5f27c1130c28",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/1/graph-observations",
+      "manifest_sha256": "5b5145545b9f017523142ddcec7d19c8f3a0670f08efa015f06703ad36115acb",
+      "score_sha256": "2d5d2e36504cafd8ad365d93ab8cd21a20da3033c34011ec141ceebe6fc828df"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/3/identity",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "ba2a1648814a63ee013977ece29ce5e98abcc333ebf1ec65836faff8974f5733",
+      "original_first_request_sha256": "ba2a1648814a63ee013977ece29ce5e98abcc333ebf1ec65836faff8974f5733",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/1/identity",
+      "manifest_sha256": "a30ff75768c43ab01959fa76b4995ae131bfdf61e772e25d07b74156bb9cc2a2",
+      "score_sha256": "2c6d2b15223fac3c7138e5801a66544a47abbcd27f79a9efc9af82d189102362"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/3/graph-g5-reference",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "9d1b8bae9ca9a001ee227d7349e95e5ad9ac42b1773fd0629553cdf160a8519d",
+      "original_first_request_sha256": "9d1b8bae9ca9a001ee227d7349e95e5ad9ac42b1773fd0629553cdf160a8519d",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/1/graph-g5-reference",
+      "manifest_sha256": "af1aed8ef2be8e16cc509362e6833bb61bcaf48d2c8a419362b757a94d858314",
+      "score_sha256": "d69d1b8a055ff2fa33117be24ceb3b8dc37b8694c818b60aa560a4865bc61107"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/3/graph-g5-reference",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "0bf28b57bd2b123df7e2b8bd74c41aaba416ecf710722b9f8983d2cc6c6cb0a1",
+      "original_first_request_sha256": "0bf28b57bd2b123df7e2b8bd74c41aaba416ecf710722b9f8983d2cc6c6cb0a1",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/1/graph-g5-reference",
+      "manifest_sha256": "96a322422814f8d7d1074e6b3b8d20b7a63322bd342a9f1da523266d943e4785",
+      "score_sha256": "1eaac7ec3b04c34964c9a1f79939b7a79acb2b023f07f134b5c37f76689dffaa"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/3/graph-payload-addresses",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "d6aa8b6606d5bce717b9c69efb952a6486581acc6bbf562d2af335fef84cf696",
+      "original_first_request_sha256": "d6aa8b6606d5bce717b9c69efb952a6486581acc6bbf562d2af335fef84cf696",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/1/graph-payload-addresses",
+      "manifest_sha256": "cd2aadb260007b0c7fcbe7bf16f82ed5643ec7461c523f9ef1729e3c2e4d3843",
+      "score_sha256": "b5d9f5206921f2d089cd23992d2e979548db24ef3204aa8c9ed53995028fe595"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/3/graph-observations",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "0bf28b57bd2b123df7e2b8bd74c41aaba416ecf710722b9f8983d2cc6c6cb0a1",
+      "original_first_request_sha256": "0bf28b57bd2b123df7e2b8bd74c41aaba416ecf710722b9f8983d2cc6c6cb0a1",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/1/graph-observations",
+      "manifest_sha256": "b7dea30a3cc96692099a0290ebe3ab8e61fa55143b299c99d15fd4a35e6967de",
+      "score_sha256": "bcab548f9be1174704380a09b4a892aee60f50dc00ef9fa900ade23e3a1a665e"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/3/identity",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "92d7342dd4486fc9f76ba1fc2ced740db56349d2a7d54bd7e29ca103c6b63e03",
+      "original_first_request_sha256": "92d7342dd4486fc9f76ba1fc2ced740db56349d2a7d54bd7e29ca103c6b63e03",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_128/boundary-2/1/identity",
+      "manifest_sha256": "1827798500cdb6b1ff9450db39596e4705e84ce809d34a2c4557712122e8245e",
+      "score_sha256": "b1048d6567140cbc5dea7d852d0fbbe18d9980e086944de2249b60b22c5e2f03"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/2/identity",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "469e4689df3bdeb7d611b732a218c99efa7e97c54f90e1a70370adf847de26e0",
+      "original_first_request_sha256": "469e4689df3bdeb7d611b732a218c99efa7e97c54f90e1a70370adf847de26e0",
+      "original_key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/1/identity",
+      "manifest_sha256": "c1b8a8207c50a516aab2e4fb163bf5b0f09ec804263ea7d3d71d5fb0f6cab1ec",
+      "score_sha256": "1df985539cc445066bfe96be7dc8eed341d5fd39a15576b3d2cdcbf640a62385"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/2/graph-g5-reference",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "0682e9d41a95272151c6820d3cb01043ea3fda34ca0e1f63187faaba676a5959",
+      "original_first_request_sha256": "0682e9d41a95272151c6820d3cb01043ea3fda34ca0e1f63187faaba676a5959",
+      "original_key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/1/graph-g5-reference",
+      "manifest_sha256": "91aa8261dcf5298d71cb379ef8b751e436bb5b8efdda9e10b9b4d3a716298030",
+      "score_sha256": "356642c6d01fefdbbc6aca833f20680ab31ce5fde8536ec73fc83c67ea1d37a5"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/2/graph-payload-addresses",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "edaa49d037d2b84ef6f012bbefdc5996a860559072c4f7d4d702af57104f257d",
+      "original_first_request_sha256": "edaa49d037d2b84ef6f012bbefdc5996a860559072c4f7d4d702af57104f257d",
+      "original_key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/1/graph-payload-addresses",
+      "manifest_sha256": "b3fac57c5352a84c3bf6f101768f27b6deff893b9b2d8779669b6c030f1f937c",
+      "score_sha256": "61936351ff43d25a93eb92a66e80fdb6c01dfcdf2cf0dd5593763d10a6dc03c9"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/2/graph-observations",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "0682e9d41a95272151c6820d3cb01043ea3fda34ca0e1f63187faaba676a5959",
+      "original_first_request_sha256": "0682e9d41a95272151c6820d3cb01043ea3fda34ca0e1f63187faaba676a5959",
+      "original_key": "claude-sonnet-5-5/multi_turn_base_43/boundary-2/1/graph-observations",
+      "manifest_sha256": "38678ae60bcd24472a677dd68bab46083078cf5e9a322bb8d89b9ea26537f6f2",
+      "score_sha256": "21e228cbe81b02bef1c20446f3c09d71960d381c35a3e53588eb68dbd52a0f14"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/2/graph-observations",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "753b4ca2be4af5fbb3431e93b5bec1965c3f42c93286317b5eee5f27c1130c28",
+      "original_first_request_sha256": "753b4ca2be4af5fbb3431e93b5bec1965c3f42c93286317b5eee5f27c1130c28",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/1/graph-observations",
+      "manifest_sha256": "a618e361b17a631301657c4623b785879c271ff9e9e9015c3fea48aeeaad9416",
+      "score_sha256": "25cdf7bfafada0daf02843f0ea5cea0678f36e7df3d14c67dc88b5aadbfd42c8"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/2/identity",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "ba2a1648814a63ee013977ece29ce5e98abcc333ebf1ec65836faff8974f5733",
+      "original_first_request_sha256": "ba2a1648814a63ee013977ece29ce5e98abcc333ebf1ec65836faff8974f5733",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/1/identity",
+      "manifest_sha256": "406f511d2fe3b69b914f713ce496ba31d28a5b23ede19dbef61df1fdb9b371d6",
+      "score_sha256": "132a0d09d036cfe54342d6b65076b038aea59eee82108cfc926b9f94eccd0f79"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/2/graph-g5-reference",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "9d1b8bae9ca9a001ee227d7349e95e5ad9ac42b1773fd0629553cdf160a8519d",
+      "original_first_request_sha256": "9d1b8bae9ca9a001ee227d7349e95e5ad9ac42b1773fd0629553cdf160a8519d",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/1/graph-g5-reference",
+      "manifest_sha256": "40041c0e73aff65c836a4cde6f532925fe868acbd3b361695915eb8d9133974b",
+      "score_sha256": "432daf14c1d856e62b6b6f58686571f8fcd165de1f1c4fe4c1fb47fafe68ce78"
+    },
+    {
+      "key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/2/graph-payload-addresses",
+      "checks": {
+        "diagnostic_label_separate": true,
+        "first_request_exactly_original_same_arm": true,
+        "completed_prefix_files_exactly_original": true,
+        "runtime_same_as_original": true,
+        "manifest_matches_controller_pin": true,
+        "score_matches_controller_pin": true,
+        "official_result_matches_controller_and_summary": true,
+        "request_hashes_match_ledger": true,
+        "settled_attempts_equal_responses": true,
+        "settled_tokens_equal_provider": true,
+        "manifest_tokens_equal_provider": true,
+        "cached_subset_equal_provider": true,
+        "settled_cost_matches_frozen_uncached_rates": true,
+        "no_live_prefix_recharge": true
+      },
+      "first_request_sha256": "b75cdb82e6817144e73ea433c31efa290796ad51de578d675e8fe219e1d62da6",
+      "original_first_request_sha256": "b75cdb82e6817144e73ea433c31efa290796ad51de578d675e8fe219e1d62da6",
+      "original_key": "claude-sonnet-5-5/multi_turn_long_context_54/boundary-2/1/graph-payload-addresses",
+      "manifest_sha256": "6d57aac9a6179fd520955c285b69719d1a2ca91f6e09fbccb5b20b2ab2b32975",
+      "score_sha256": "753acd06917f8ecd00feec51b2ea21644aa449d192df00600db906e03daa41c3"
+    }
+  ],
+  "task_level_repeatability": [
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_43",
+      "boundary_turns": 2,
+      "arm": "graph-g5-reference",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 2,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 3,
+          "passed": true,
+          "official_error_types": {}
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_43",
+      "boundary_turns": 2,
+      "arm": "graph-observations",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 2,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 3,
+          "passed": true,
+          "official_error_types": {}
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_43",
+      "boundary_turns": 2,
+      "arm": "graph-payload-addresses",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 2,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 3,
+          "passed": true,
+          "official_error_types": {}
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_base_43",
+      "boundary_turns": 2,
+      "arm": "identity",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 2,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 3,
+          "passed": true,
+          "official_error_types": {}
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_128",
+      "boundary_turns": 2,
+      "arm": "graph-g5-reference",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 2,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 3,
+          "passed": true,
+          "official_error_types": {}
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_128",
+      "boundary_turns": 2,
+      "arm": "graph-observations",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 2,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 3,
+          "passed": true,
+          "official_error_types": {}
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_128",
+      "boundary_turns": 2,
+      "arm": "graph-payload-addresses",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 2,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 3,
+          "passed": true,
+          "official_error_types": {}
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_128",
+      "boundary_turns": 2,
+      "arm": "identity",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 2,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 3,
+          "passed": true,
+          "official_error_types": {}
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_54",
+      "boundary_turns": 2,
+      "arm": "graph-g5-reference",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 2,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 3,
+          "passed": true,
+          "official_error_types": {}
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_54",
+      "boundary_turns": 2,
+      "arm": "graph-observations",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 2,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:instance_state_mismatch": 1
+          }
+        },
+        {
+          "repeat": 3,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:instance_state_mismatch": 1
+          }
+        }
+      ],
+      "passed": 1,
+      "total": 3
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_54",
+      "boundary_turns": 2,
+      "arm": "graph-payload-addresses",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:instance_state_mismatch": 1
+          }
+        },
+        {
+          "repeat": 2,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:instance_state_mismatch": 1
+          }
+        },
+        {
+          "repeat": 3,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:instance_state_mismatch": 1
+          }
+        }
+      ],
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "id": "multi_turn_long_context_54",
+      "boundary_turns": 2,
+      "arm": "identity",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 2,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 3,
+          "passed": true,
+          "official_error_types": {}
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_43",
+      "boundary_turns": 2,
+      "arm": "graph-g5-reference",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:execution_response_mismatch": 1
+          }
+        },
+        {
+          "repeat": 2,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:execution_response_mismatch": 1
+          }
+        },
+        {
+          "repeat": 3,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:execution_response_mismatch": 1
+          }
+        }
+      ],
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_43",
+      "boundary_turns": 2,
+      "arm": "graph-observations",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:execution_response_mismatch": 1
+          }
+        },
+        {
+          "repeat": 2,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:execution_response_mismatch": 1
+          }
+        },
+        {
+          "repeat": 3,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:execution_response_mismatch": 1
+          }
+        }
+      ],
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_43",
+      "boundary_turns": 2,
+      "arm": "graph-payload-addresses",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:execution_response_mismatch": 1
+          }
+        },
+        {
+          "repeat": 2,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:execution_response_mismatch": 1
+          }
+        },
+        {
+          "repeat": 3,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:execution_response_mismatch": 1
+          }
+        }
+      ],
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_base_43",
+      "boundary_turns": 2,
+      "arm": "identity",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 2,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 3,
+          "passed": true,
+          "official_error_types": {}
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_128",
+      "boundary_turns": 2,
+      "arm": "graph-g5-reference",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 2,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 3,
+          "passed": true,
+          "official_error_types": {}
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_128",
+      "boundary_turns": 2,
+      "arm": "graph-observations",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 2,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 3,
+          "passed": true,
+          "official_error_types": {}
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_128",
+      "boundary_turns": 2,
+      "arm": "graph-payload-addresses",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 2,
+          "passed": true,
+          "official_error_types": {}
+        },
+        {
+          "repeat": 3,
+          "passed": true,
+          "official_error_types": {}
+        }
+      ],
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "model": "gpt-4.1",
+      "id": "multi_turn_long_context_128",
+      "boundary_turns": 2,
+      "arm": "identity",
+      "scope": "task-level diagnostic repeatability; not an independent validation sample",
+      "observations": [
+        {
+          "repeat": 1,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:empty_turn_model_response": 1
+          }
+        },
+        {
+          "repeat": 2,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:empty_turn_model_response": 1
+          }
+        },
+        {
+          "repeat": 3,
+          "passed": false,
+          "official_error_types": {
+            "multi_turn:empty_turn_model_response": 1
+          }
+        }
+      ],
+      "passed": 0,
+      "total": 3
+    }
+  ],
+  "stage_accounting": {
+    "claude-sonnet-5-5": {
+      "attempts": 103,
+      "settled_attempts": 103,
+      "uncertain_attempts": 0,
+      "inflight_attempts": 0,
+      "input_tokens": 1966012,
+      "output_tokens": 13357,
+      "cached_input_subset": 0,
+      "settled_nanodollars": 4065594000,
+      "uncertain_nanodollars": 0
+    },
+    "gpt-4.1": {
+      "attempts": 88,
+      "settled_attempts": 83,
+      "uncertain_attempts": 5,
+      "inflight_attempts": 0,
+      "input_tokens": 1043263,
+      "output_tokens": 3237,
+      "cached_input_subset": 1035008,
+      "settled_nanodollars": 2112422000,
+      "uncertain_nanodollars": 1034000000
+    }
+  },
+  "selection_registration": {
+    "source": {
+      "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v9_graph_exploration_20261024/design/k2-discordance-diagnostic.json",
+      "sha256": "fcceef03c55d9e7f7bea2d940b41f7c59f19f3b44ac83f2fba7c0e254c073595"
+    },
+    "ids_field": "longer_conditions",
+    "boundary_turns": 2,
+    "selected_ids": [
+      "multi_turn_base_43",
+      "multi_turn_long_context_54",
+      "multi_turn_long_context_128"
+    ],
+    "excluded_prefixes": [
+      {
+        "model": "gpt-4.1",
+        "id": "multi_turn_long_context_54",
+        "boundary_turns": 2,
+        "reasons": [
+          "official_prefix_failed"
+        ],
+        "prefix_manifest": {
+          "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v9_graph_exploration_20261024/dev02-prefix-longer/runs/gpt-4.1/multi_turn_long_context_54/boundary-2/1/identity/manifest.json",
+          "sha256": "45162982b7df4d1c432cac2359f245e3d28d487100f34e1e18d96d7165255e67"
+        }
+      }
+    ],
+    "prefix_eligibility": {
+      "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v9_graph_exploration_20261024/dev02-prefix-longer/eligibility.json",
+      "sha256": "7f50752340c4c169ef547e06277eb6b20c7a8992b03350f72e93f767500fa89b"
+    }
+  },
+  "source_hashes": {
+    "stage_plan": "4d2f7b6e71fcedcc127b416de9e2a44ddc307b487ca0b1308e17dc7699cda974",
+    "original_plan": "f47227c3d2cd911cb4efe0273b8b4252ebd5c1d4a5781b3e5f6910866868a61a",
+    "ledger_snapshot": "80e13a7bddb3bd6c7450c9d94d4830d56cc2799c352693e2d1e0c1ffe1cf506f",
+    "transport_audit": "ad07372ee9a89ba9c4fac90d7deae094191900e2543b0b4205251417935fd44a",
+    "analysis_script": "2c7aed7830df26499189672d47d9426d235cabfdd0ffb72ef68dd30bda50f0ce"
+  },
+  "limits": [
+    "Same request parameters are audited, not a claim that provider sampling is deterministic.",
+    "Settled USD is frozen uncached standard-rate budget accounting, not an invoice; cached input is already part of total input.",
+    "Per-task repeatability appends repeat labels to original outcomes without replacing primary results or treating repeats as independent task families.",
+    "No provider calls, automatic retries, ledger edits, evaluator changes or new scores."
+  ]
+}

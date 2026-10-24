@@ -1,0 +1,236 @@
+{
+  "version": "g9-independent-report-grounding-review-v1",
+  "reviewed_at_utc": "2026-10-24T14:52:07.189325+00:00",
+  "reviewer": "independent report_sentence_grounding subagent",
+  "report": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/research/g9-independent-validation-results.md",
+  "report_sha256": "49785e0700fd2d4cee7d2d313f24b8a6ad047dcc98393682bc87d2339d61cfdd",
+  "status": "needs_two_minor_clarifications",
+  "summary": "主数值、分母、配对和费用核对通过；两处表述需明确模型归属及 Claude 可见历史边界。没有发现支持普遍通过率保持、关联机制有效或压缩节省的证据，报告目前也未如此声称。",
+  "no_api_calls": true,
+  "no_experiments_started": true,
+  "report_and_raw_records_modified": false,
+  "new_query_candidates_read": false,
+  "relative_links": {
+    "occurrences": 18,
+    "unique_targets": 10,
+    "all_exist": true
+  },
+  "source_sha256": {
+    "analysis/g9-independent-unmasked-summary.json": "a758eccb0340175c0c6fc2aaec4c8b977a137e2ce52dd0cb6a2a80320ca66186",
+    "research/exploration-decision-log-through-g13.md": "e98e0337c05fc462825a8cba943872f8f710b5da8e7eaf180dd38f346dccfb33",
+    "research/g5-g8-g9-base194-method-note.md": "defa8451399471fca065a65f0fdcfedc7f112151dbca81082ca8d5941375b938",
+    "design/g9-independent-increment-scope-v1.json": "f1a327b2c500821ca2fd77e2ed65b18c3743816a531aeebe6afacb28cfb18b8f",
+    "design/g9-independent-fixed12-selection-v1.json": "870416b5060fa0862e2f9082dbaf109473cf0e004f0c6e75a75d59247476eace",
+    "analysis/g9-independent-blind-labels.json": "a4fb8b64688a7b63b69513d0afa998f92deeeb1e6bf83d9c75fb8c0544b1fed0",
+    "analysis/g9-independent-blind-recovery-freeze.json": "c0482600f1732640716896c52bcb35bad2d39b58f7cc9c1f5a74136869943fef",
+    "analysis/g9-independent-behavior-token-explanation.json": "764101fee1a6cd219bfbbafd3f75b16d1c45a66e555fcb85410f978a8942a068",
+    "analysis/g9-independent-first-request-tokens.json": "8bea75907c88b660aaaca52ccd89a5ee6f980b535e679f39d3ce5fb855a5ef12",
+    "analysis/ind04-g9-continuation-k2-ledger-after.json": "30f8e94013440b2116fc788ea92c49c2631af35caf905f242e752fa9b18dd321",
+    "analysis/g9-independent-visible-blind-packet.json": "7d916501ce6336ef975bbbe4ffd3743f8e4a778c631d66a78f60fed383e45111"
+  },
+  "recomputed": {
+    "original_official_scores": 66,
+    "raw_provider_responses": 263,
+    "blind_coverage": {
+      "evidence_pointers": 723,
+      "verbatim_excerpts": 429,
+      "decoded_subsets": 183,
+      "cases": 22,
+      "trajectories": 66,
+      "user_turns": 111,
+      "tool_calls": 183
+    },
+    "token_and_cost_table": [
+      {
+        "model": "gpt-4.1",
+        "arm": "identity",
+        "n": 10,
+        "first_input_mean": 6233.5,
+        "trajectory_total_token_mean": 29943.7,
+        "settled_reference_usd": 0.613472
+      },
+      {
+        "model": "gpt-4.1",
+        "arm": "graph-record-view-base",
+        "n": 10,
+        "first_input_mean": 6749,
+        "trajectory_total_token_mean": 31281,
+        "settled_reference_usd": 0.635772
+      },
+      {
+        "model": "gpt-4.1",
+        "arm": "graph-record-view-full",
+        "n": 10,
+        "first_input_mean": 6791,
+        "trajectory_total_token_mean": 31970.9,
+        "settled_reference_usd": 0.65449
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "arm": "identity",
+        "n": 12,
+        "first_input_mean": 11952.666666666666,
+        "trajectory_total_token_mean": 84106.5,
+        "settled_reference_usd": 2.112444
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "arm": "graph-record-view-base",
+        "n": 12,
+        "first_input_mean": 12780.75,
+        "trajectory_total_token_mean": 61996.916666666664,
+        "settled_reference_usd": 1.580062
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "arm": "graph-record-view-full",
+        "n": 12,
+        "first_input_mean": 12845,
+        "trajectory_total_token_mean": 58970.833333333336,
+        "settled_reference_usd": 1.49882
+      }
+    ],
+    "calculation_errors": []
+  },
+  "findings": [
+    {
+      "id": "G9-RG-01",
+      "severity": "minor",
+      "status": "requires_clarification",
+      "line": 31,
+      "quote": "Claude A/R 当轮先澄清而未调工具，E 虽调用兑换仍未设置预算。E 另出现把兑换后 20580 写入预算的参数分歧",
+      "issue": "第二个 E 实为 GPT E；连续叙述易误归为 Claude E。GPT E 原评分为预算状态不匹配，GPT A/R 是缺少预期兑换结果，宜分别列明。",
+      "evidence": {
+        "GPT_E": "case-014 / trajectory-003 / turn 4: compute_exchange_rate(value=2940) returns 20580; set_budget_limit(20580); official instance_state_mismatch",
+        "Claude_E": "case-001 / trajectory-001 / turn 4: compute_exchange_rate(value=400) returns 2800; clarification; no set_budget_limit across continuation",
+        "raw_paths": [
+          "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_162/boundary-3/1/graph-record-view-base/native.jsonl",
+          "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_162/boundary-3/1/graph-record-view-base/official-score.json",
+          "analysis/g9-independent-visible-blind-packet.json"
+        ]
+      },
+      "suggestion": "GPT A/R 缺少官方期望的兑换返回；GPT E 还把 20580 设为预算，官方报预算状态不匹配。Claude A/R 当轮澄清而未调工具；Claude E 兑换 400→2800 后澄清，未设置预算。"
+    },
+    {
+      "id": "G9-RG-02",
+      "severity": "minor",
+      "status": "requires_qualification",
+      "line": 7,
+      "quote": "A 是完整原生历史 identity",
+      "issue": "对 Claude 而言应限定为完整可见原生历史；已结束前缀的 thinking 被三组统一移除。不能把完整解读为原生 opaque thinking 也原样送入。",
+      "evidence": {
+        "manifest_intervention": "Complete native visible history with completed-prefix thinking omitted",
+        "thinking_policy": "omit_completed_prefix_thinking_preserve_new_turn_blocks",
+        "old_thinking_removed": true,
+        "raw_path": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_165/boundary-3/1/identity/manifest.json"
+      },
+      "suggestion": "A 是完整可见原生历史 identity；Claude 已结束前缀的 thinking 在三组中统一移除。"
+    }
+  ],
+  "claim_checks": [
+    {
+      "lines": [
+        3,
+        65
+      ],
+      "status": "supported_with_scope",
+      "claim": "本样本 R/A 逐题一致，未观察到新增掉点；没有可归因的关联边成功率增益；不宣称普遍保持或整体完成。",
+      "basis": "66 原评分和 22 配对条件核对；每模型仅 4 活跃交易条件、一次重复；唯一 Claude R/E 增益首请求完全相同；现有 base_43 缺口在开发记录保留。",
+      "limit": "未观察到收益不等于证明结构无收益；12 题族不是 22 个独立题族，也不是 66 个独立样本。"
+    },
+    {
+      "lines": [
+        7
+      ],
+      "status": "qualification_required",
+      "claim": "同完整图的 E/R 视图、G8 内容所有权、G9 支持、图替换前缀、关闭 G7 显示、原工具协议。",
+      "basis": "22 对 E/R record_inference 完全相同；44 图 record_audit.ok=true，record_visible_observations=false；冻结渲染与接入代码吻合。A 的 Claude thinking 限定见 G9-RG-02。"
+    },
+    {
+      "lines": [
+        9,
+        15,
+        16,
+        18,
+        20
+      ],
+      "status": "supported",
+      "claim": "12 家族、每域 4、10 k3/2 k2；24 前缀；GPT 10/12、Claude 12/12 合格；30+36 续跑；官方分数和活跃分层。",
+      "basis": "固定清单、24 原 prefix-score 及其 SHA、66 原 official-score 及其 SHA 独立核对；实际 44 图的激活计数、22 对 first request 比较。"
+    },
+    {
+      "lines": [
+        24
+      ],
+      "status": "supported_by_frozen_record_and_recomputed_coverage",
+      "claim": "先盲标签，额度中断后恢复检查并冻结；22/66/111/183 和 723/429/183。",
+      "basis": "复核原 packet 与 labels；所有证据指向、逐字摘录和参数子集通过；当前 labels SHA 与 recovery freeze 一致。",
+      "limit": "平台中断及 freeze 前未揭盲的时间事实由冻结恢复记录报告，本审计未取得独立平台事件日志；未将恢复校验称为新一轮独立审查。"
+    },
+    {
+      "lines": [
+        28,
+        29,
+        30,
+        32,
+        33,
+        35
+      ],
+      "status": "supported",
+      "claim": "其余失败原因、同轮恢复/确认、base_71 多 1 工具及 2 模型请求、无可确认 R 独有错对象。",
+      "basis": "逐项对照盲 packet 中实际请求、调用、返回、文字及原官方诊断；base_71 A/E/R 原请求数为 6/8/8，工具数 8/9/9。"
+    },
+    {
+      "lines": [
+        31
+      ],
+      "status": "clarification_required",
+      "claim": "long_context_162 共失败及 20580 预算参数。",
+      "basis": "原工具调用支持事实，但报告模型主语和官方诊断应分清；见 G9-RG-01。"
+    },
+    {
+      "lines": [
+        39,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        50
+      ],
+      "status": "supported",
+      "claim": "首请求、全续跑 token 及按组已结算参考费用；42/64.25 增量；Claude 558490/226984 和 R−A 中位数 +2350.5。",
+      "basis": "66 轨迹的 263 条 provider response usage 逐条重新求和，首请求对账；lc138 差值 -331506，其他 11 条 R−A 差值合计 +29878。",
+      "limit": "token 包含工具及后续轨迹差异，已知 usage 不含 HTTP 429 未知 usage；组费用为合计，token 为均值；不是记忆正文压缩率。"
+    },
+    {
+      "lines": [
+        54,
+        55,
+        56,
+        57,
+        59,
+        61
+      ],
+      "status": "supported",
+      "claim": "前缀/续跑/阶段/全 campaign 费用与预留；无 pending；确定性构图不发模型请求。",
+      "basis": "按 run_key 重算冻结账本；GPT 429 uncertain 预留 201766000 纳美元；原冻结参考单价计算包括 GPT 缓存输入，不作为真实账单或实时价格验证。",
+      "limit": "CPU 时间未测量；历史语义构图费用属于 campaign，不重复混入本阶段。"
+    }
+  ],
+  "timing_evidence_limit": "恢复阶段的计数和冻结 hash 已独立校验；中断原因与先标签后揭盲的历史时间顺序以冻结记录为来源，未独立访问平台日志。",
+  "resolution_records": [
+    {
+      "at_utc": "2026-10-24T14:57:17.994127+00:00",
+      "reviewed_report_sha256": "51aeec2e6393132fa5ef03b86610e3a416efaf6c941be3c63c533db572e810ac",
+      "scope": "Only the two requested wording edits at lines 7 and 31; prior review retained unchanged.",
+      "status": "pass",
+      "resolved_findings": [
+        "G9-RG-01",
+        "G9-RG-02"
+      ],
+      "verification": "Line 7 now limits identity to visible native history and explicitly states symmetric omission of completed-prefix Claude thinking; line 31 explicitly attributes 20580 budget to GPT E and separates official GPT A/R exchange-response mismatch from GPT E budget-state mismatch. Both match previously checked original manifests and trajectories."
+    }
+  ]
+}

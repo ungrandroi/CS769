@@ -1,0 +1,69 @@
+{
+  "version": "g9-expanded-pre-unmask-cost-summary-v1",
+  "ledger_sha256": "a7471d6d5f709395441bf20014f3f88b112385b2c1348a6347fc45d410f820d6",
+  "campaign": {
+    "version": "graph-replacement-budget-v1",
+    "models": {
+      "gpt-4.1": {
+        "cap_usd_reference": 25.0,
+        "settled_usd_reference": 18.327114,
+        "reserved_or_uncertain_usd_reference": 3.070038,
+        "committed_usd_reference": 21.397152,
+        "remaining_usd_reference": 3.602848,
+        "requests_settled": 1420,
+        "requests_uncertain": 15,
+        "requests_in_flight": 0,
+        "halted": false,
+        "halt_reason": null
+      },
+      "claude-sonnet-5-5": {
+        "cap_usd_reference": 50.0,
+        "settled_usd_reference": 39.576554,
+        "reserved_or_uncertain_usd_reference": 0.0,
+        "committed_usd_reference": 39.576554,
+        "remaining_usd_reference": 10.423446,
+        "requests_settled": 1569,
+        "requests_uncertain": 0,
+        "requests_in_flight": 0,
+        "halted": false,
+        "halt_reason": null
+      }
+    },
+    "total_committed_usd_reference": 60.973706,
+    "basis": "Frozen uncached reference costs; all prefix, smoke, development, validation, excluded-prefix and retry attempts count. Unknown usage retains the entire reservation. Not a provider invoice guarantee."
+  },
+  "expansion_cost_by_model_kind": {
+    "gpt-4.1/prefix": {
+      "attempts": 83,
+      "settled_usd": 0.992434,
+      "unknown_reserved_usd": 0.0
+    },
+    "gpt-4.1/excluded_prefix": {
+      "attempts": 25,
+      "settled_usd": 0.183596,
+      "unknown_reserved_usd": 0.0
+    },
+    "claude-sonnet-5-5/prefix": {
+      "attempts": 99,
+      "settled_usd": 2.176146,
+      "unknown_reserved_usd": 0.0
+    },
+    "claude-sonnet-5-5/excluded_prefix": {
+      "attempts": 15,
+      "settled_usd": 0.291048,
+      "unknown_reserved_usd": 0.0
+    },
+    "gpt-4.1/continuation": {
+      "attempts": 55,
+      "settled_usd": 1.086924,
+      "unknown_reserved_usd": 0.0
+    },
+    "claude-sonnet-5-5/continuation": {
+      "attempts": 68,
+      "settled_usd": 2.070786,
+      "unknown_reserved_usd": 0.0
+    }
+  },
+  "no_candidate_scores_read": true,
+  "invoice": false
+}

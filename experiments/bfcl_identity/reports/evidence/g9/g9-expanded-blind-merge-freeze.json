@@ -1,0 +1,35 @@
+{
+  "version": "g9-expanded-blind-merge-freeze-v1",
+  "created_at_utc": "2026-10-24T17:43:54.934514+00:00",
+  "source_parts": [
+    {
+      "part": "a",
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-blind-labels-part-a.json",
+      "sha256": "474045affed49a7c3585dc20d3810868c43430e3d48b00d62e14dedfbfadaef1",
+      "reviewer": "expanded_blind_a"
+    },
+    {
+      "part": "b",
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-blind-labels-part-b.json",
+      "sha256": "7f787076caef06797cb326f1d8e4ab7f7bf427b6b63777154fe52d8d60ada6cf",
+      "reviewer": "expanded_blind_b"
+    },
+    {
+      "part": "c",
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-blind-labels-part-c.json",
+      "sha256": "ff85002eaa6f566ae6e18a6cbcdcdb4943096ced169e9e4d4b2fe83e67d35ddb",
+      "reviewer": "expanded_blind_c"
+    }
+  ],
+  "merged_path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-blind-labels.json",
+  "merged_sha256": "73910e1d6132090397b80dc2d36e2d03aa55666fdb4d74b6016521ed164fa0a3",
+  "packet_sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+  "validator_sha256": "bca37a5289c0867791a64e0c30888ec294dcba705ae8581ad6006ef2f5b1e659",
+  "all_cases_preserved_verbatim": true,
+  "complete_grounded_labels_validated_before_private_key_or_scores": true,
+  "scope": {
+    "case_count": 18,
+    "trajectory_count": 36,
+    "observed_turn_count": 58
+  }
+}

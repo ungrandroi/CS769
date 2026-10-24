@@ -1,0 +1,177 @@
+{
+  "version": "g9-expanded-fixed12-selection-v1",
+  "selected_before_candidate_results": true,
+  "scope_registration": {
+    "path": "/home/ruqi/public/CS769/experiments/bfcl_identity/v9_graph_exploration_20261024/design/g9-expanded-increment-scope-v1.json",
+    "sha256": "88b38ba1509894feed88d6867e24b51f3ce4a5fb2d0263b1cb8f3e9eb0bbf90f"
+  },
+  "metadata_only": true,
+  "early_conditions": [
+    "multi_turn_base_73",
+    "multi_turn_base_124"
+  ],
+  "early_boundary_turns": 2,
+  "longer_conditions": [
+    "multi_turn_base_81",
+    "multi_turn_base_95",
+    "multi_turn_long_context_60",
+    "multi_turn_base_135",
+    "multi_turn_long_context_107",
+    "multi_turn_long_context_112",
+    "multi_turn_long_context_196",
+    "multi_turn_long_context_190",
+    "multi_turn_long_context_170",
+    "multi_turn_long_context_188"
+  ],
+  "longer_boundary_turns": 3,
+  "conditions": [
+    {
+      "id": "multi_turn_base_81",
+      "family": 81,
+      "domain": "vehicle",
+      "user_turns": 4,
+      "involved_classes": [
+        "VehicleControlAPI",
+        "MathAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_base_95",
+      "family": 95,
+      "domain": "vehicle",
+      "user_turns": 5,
+      "involved_classes": [
+        "MessageAPI",
+        "VehicleControlAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_60",
+      "family": 60,
+      "domain": "vehicle",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "VehicleControlAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_base_73",
+      "family": 73,
+      "domain": "vehicle",
+      "user_turns": 3,
+      "involved_classes": [
+        "VehicleControlAPI"
+      ],
+      "boundary_turns": 2
+    },
+    {
+      "id": "multi_turn_base_135",
+      "family": 135,
+      "domain": "trading",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_107",
+      "family": 107,
+      "domain": "trading",
+      "user_turns": 5,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_base_124",
+      "family": 124,
+      "domain": "trading",
+      "user_turns": 3,
+      "involved_classes": [
+        "TradingBot",
+        "MathAPI"
+      ],
+      "boundary_turns": 2
+    },
+    {
+      "id": "multi_turn_long_context_112",
+      "family": 112,
+      "domain": "trading",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot",
+        "MathAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_196",
+      "family": 196,
+      "domain": "travel",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_190",
+      "family": 190,
+      "domain": "travel",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_170",
+      "family": 170,
+      "domain": "travel",
+      "user_turns": 6,
+      "involved_classes": [
+        "TwitterAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_188",
+      "family": 188,
+      "domain": "travel",
+      "user_turns": 6,
+      "involved_classes": [
+        "TwitterAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3
+    }
+  ],
+  "models": [
+    "gpt-4.1",
+    "claude-sonnet-5-5"
+  ],
+  "arms": [
+    "identity",
+    "graph-record-view-full"
+  ],
+  "repeat_labels": [
+    1
+  ],
+  "stage_schedule_seeds": {
+    "ext01-g9-prefix-k3": 202610241701,
+    "ext02-g9-prefix-k2": 202610241702,
+    "ext03-g9-continuation-k3": 202610241703,
+    "ext04-g9-continuation-k2": 202610241704
+  },
+  "no_replacement": true,
+  "no_zero_index_exclusion": true
+}

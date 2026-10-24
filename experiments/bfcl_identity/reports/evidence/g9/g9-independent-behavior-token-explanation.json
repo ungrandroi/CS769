@@ -1,0 +1,2925 @@
+{
+  "version": "g9-independent-behavior-token-explanation-v1",
+  "at_utc": "2026-10-24T14:43:41.444503+00:00",
+  "sources": {
+    "analysis/g9-independent-unmasked-summary.json": "a758eccb0340175c0c6fc2aaec4c8b977a137e2ce52dd0cb6a2a80320ca66186",
+    "analysis/g9-independent-blind-labels.json": "a4fb8b64688a7b63b69513d0afa998f92deeeb1e6bf83d9c75fb8c0544b1fed0",
+    "analysis/g9-independent-first-request-tokens.json": "8bea75907c88b660aaaca52ccd89a5ee6f980b535e679f39d3ce5fb855a5ef12"
+  },
+  "official_score_source_sha256": {
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_167/boundary-3/1/graph-record-view-full/official-score.json": "abb7db89912434c9920a5bf203ee3283acff7ac2f2ebf85c9c7798dc425836f2",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_167/boundary-3/1/graph-record-view-base/official-score.json": "327ce895da7fbdd395b99e6f61da17df9ad0604472d0af10676987fbe42e22f7",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_167/boundary-3/1/identity/official-score.json": "7862d853ca0228f6a7feead0261248da3932c58338d3081c010d39316ab40a8c",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_165/boundary-3/1/graph-record-view-base/official-score.json": "0f4aed1863274984fe195920a8354881cadd48b44162446ecd9f9ffb088ea867",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_165/boundary-3/1/identity/official-score.json": "f3817ffc1fc9de69f9fcd0e7dd7205145921481269930c8b3b3631f54b4d1636",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_165/boundary-3/1/graph-record-view-full/official-score.json": "be4838244d11c601d12789e1e3f09f34986f90a6e625129b9652d70b9df94d2f",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_71/boundary-3/1/graph-record-view-base/official-score.json": "a2a9b101e9cafde380d8b70f750e258940a049a36688bb59e0c6060e402b18d8",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_71/boundary-3/1/identity/official-score.json": "7ce778deee8637dcb026b95fe6d01182c4037d6835ec1bd683135c2a61acebd7",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_71/boundary-3/1/graph-record-view-full/official-score.json": "0763774fe18c9cafb3496a8ca39a92da0b5987919a1275eb18df4f3247b37ac2",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_162/boundary-3/1/identity/official-score.json": "099ba2654207d86151c921370dd986c80a13811442a00163c6d31b2f8c08ebb0",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_162/boundary-3/1/graph-record-view-full/official-score.json": "b1ede91e2b01218b9ae1eda22abefdafc374a6691ef990f2a64973f429656aa1",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_162/boundary-3/1/graph-record-view-base/official-score.json": "2573d1a15f2f968a6eefac83c0f517dd63abafa911189be828122662944d5415",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_165/boundary-3/1/graph-record-view-base/official-score.json": "0969c92fa7305dd8a9acff1fa52e2cbab15327b08528c7625d016abbe2d48cbc",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_165/boundary-3/1/identity/official-score.json": "6d94546ca6e5c5c49b0cb098f0586d72961e196455e25d9cc0458947916348a5",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_165/boundary-3/1/graph-record-view-full/official-score.json": "6895ac3158a63d5194baad595a4370c56d076dbd4b70545ae481d238b4d78730",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_80/boundary-3/1/graph-record-view-base/official-score.json": "b9089473f47bb750bb3d231490ee83f2843d270ddd8ea1034c5acdf99353674f",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_80/boundary-3/1/identity/official-score.json": "1682b9554b7142254ab118205e8c7d0e95d1d25d5369e34a72f07ea2409e2799",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_80/boundary-3/1/graph-record-view-full/official-score.json": "e8785b8fb8b8e0f47de18e3678d85a896c9540fad021d87420fc327c0eec58c2",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_111/boundary-3/1/identity/official-score.json": "6b2ddc0602642e38423dc114c18a862dc85a87beb4b8896996829bed616b7ad0",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_111/boundary-3/1/graph-record-view-full/official-score.json": "7f5f1a174448a06ff6a4510c35133ebb4228c51a7e1ea9996f76324109d95af2",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_111/boundary-3/1/graph-record-view-base/official-score.json": "2ab40ae9ac1cfed5f8c9cd3486eae2373e840f120dbe59a98eb43d06012294bd",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_138/boundary-3/1/identity/official-score.json": "05ffd471e5db018a592c441d69d16e35b5ce15b22f02f423d046c57adcc9d040",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_138/boundary-3/1/graph-record-view-full/official-score.json": "1cbe441b94940a4ddbb73dbfceafe4e88e3b6d1a1735f37e10f93f3771804c4a",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_138/boundary-3/1/graph-record-view-base/official-score.json": "166289bd98af01158b74230fa4248d02934c13adc075578593a12b781033de9a",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_162/boundary-3/1/identity/official-score.json": "f31bb41958576140d2afd2a73f2ee075556a2a55bf2644007c2db713835cf68d",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_162/boundary-3/1/graph-record-view-full/official-score.json": "3ab6f59bdcfa83ddf132eb5c304befb2298598faddddb9fbf7dfd958b6bec3aa",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_162/boundary-3/1/graph-record-view-base/official-score.json": "e9314ba61c0e2176efb8e3b2fb868c618a189d8a91afd08e82e1ddf9823b2712",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_138/boundary-3/1/identity/official-score.json": "1aac41c8a01ab5bd9a7fef575169c674d5da96f09580c11de03d6c2fc3fae57a",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_138/boundary-3/1/graph-record-view-full/official-score.json": "41eeb1c1c6cdcbc37a5da38b236a15c936293542ef80dd62302b237a36c5a1c8",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_138/boundary-3/1/graph-record-view-base/official-score.json": "0e480332c23f533d9943d0d8e47aa101a26cfc246d61f34a525ef2e81021aeb6",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_59/boundary-3/1/graph-record-view-base/official-score.json": "b9523d93f3ebdfc91124ee159f14951f569149853dfd048166b6a3a8481f5ad9",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_59/boundary-3/1/identity/official-score.json": "36a6b0c519b977dac0d8704119e7bc8bf4acd9efb9347643daa2a9be9588f181",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_59/boundary-3/1/graph-record-view-full/official-score.json": "5eb816d67af127f95c3ecc974bac65b6eaae38c334584d87dd0f0fdbe7f406a3",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_123/boundary-3/1/graph-record-view-base/official-score.json": "dcc2a098a4aeba602ced2978315fcea3968d7cae5f9924f42cb7bf904af06fb1",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_123/boundary-3/1/identity/official-score.json": "5c940a814521b88b026f883453050d71df513f1b7208217582aca1f1794dfa27",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_123/boundary-3/1/graph-record-view-full/official-score.json": "5efaa22a8ebc26346be27f0ba0b6a0d1073fd19b2f8554b10812047220c1876c",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_59/boundary-3/1/graph-record-view-full/official-score.json": "490d1bf7821a75ad2bde0b0a4d106320a5a5f2f51b0387144fe64ed18e86b6c7",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_59/boundary-3/1/graph-record-view-base/official-score.json": "c06706914b0c6a7ac30d8ee6560883d1b79adf32ff26e7f1f8f8ddb5995cdaa7",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_59/boundary-3/1/identity/official-score.json": "165feb83bb95a8df847f2c042e096e77ac5c20a8832537a5c518610a90f3ac0a",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_167/boundary-3/1/identity/official-score.json": "657f45e9d54057b3fbdcde9045cac220c6b0dc86e521d49067246bd28c2c5f8e",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_167/boundary-3/1/graph-record-view-full/official-score.json": "07680d42fd36a647b635b127c160bd985d27a7a5ada2e2fd20f8a91017e82866",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_167/boundary-3/1/graph-record-view-base/official-score.json": "39060f78472ef9666fb86a854729fcb4a0a4a27eb6d3d964b113c531c53489df",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_121/boundary-3/1/graph-record-view-full/official-score.json": "8622a5e9c14a82768dc90f0dc820e71c3d9797986f122686d54984d81d219dc2",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_121/boundary-3/1/graph-record-view-base/official-score.json": "8f2923a9d86abc7b0af1ec5c8d007b1f60d0c69f32557c2e9ebace12b223b998",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_121/boundary-3/1/identity/official-score.json": "54d9b2e6a0acd5c718c906e374b4af521262e0cc41aae76880de4aab4a483df1",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_121/boundary-3/1/graph-record-view-full/official-score.json": "b01b07cd2cd5087fe52c207cdbea8ede022cdbf54d66e60c64ab982ba8c151eb",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_121/boundary-3/1/graph-record-view-base/official-score.json": "eeac28976ae5eb974f6cb0faf0d4b392a40324f5e259509de01230092e1bd7dd",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_121/boundary-3/1/identity/official-score.json": "6ede65372e087c72ea937e18fe69179d943923f7d1a8d3685798a1b615f1d5af",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_80/boundary-3/1/graph-record-view-full/official-score.json": "aafc901a768db8c5aeda45046c51bc9a5b3f43e653237e55314b08fe785ef103",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_80/boundary-3/1/graph-record-view-base/official-score.json": "d2905dac15ed99b05bf03d8473b57add2f38b13bfa316016525ed0c700477116",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_80/boundary-3/1/identity/official-score.json": "96cadf02cd637907278edb87171dfca3ef5e19f4348229722823703650719f9f",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_123/boundary-3/1/graph-record-view-full/official-score.json": "b31db62c65a003db92c5222e3f2efff1b8efed77ff40347140674b55d3a6a0b4",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_123/boundary-3/1/graph-record-view-base/official-score.json": "97be98961c92b36a2d5689525b35d90c5c9889010f65a1ce9ac9a45531f2b89f",
+    "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_123/boundary-3/1/identity/official-score.json": "8b4106d196a8b03cb5cd51e4324da291db8312d3662970c8e0181f05c5d34c2f",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_111/boundary-3/1/graph-record-view-full/official-score.json": "9299e55bd894c8bee4e19ae2e00e1c27800a08515ad7fc2c9df5dd55e75ad429",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_111/boundary-3/1/graph-record-view-base/official-score.json": "6a943cf575802b5d8ccd5bedf834dada3680069c46c0178a92934df48462dc70",
+    "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_111/boundary-3/1/identity/official-score.json": "b7de92522b2731b2ff226a8a6b77a4ce34c80584455e7f9899e23b5731879cd5",
+    "ind04-g9-continuation-k2/runs/claude-sonnet-5-5/multi_turn_long_context_157/boundary-2/1/graph-record-view-full/official-score.json": "52c8085f91c8ee149c4f7a947dc4f3e09959203388168914e42c6173f2c1f886",
+    "ind04-g9-continuation-k2/runs/claude-sonnet-5-5/multi_turn_long_context_157/boundary-2/1/identity/official-score.json": "2d9c89d5d1de4ffacb8a8b2b95e91310d97b6a808260d0e2949f9598428fac8c",
+    "ind04-g9-continuation-k2/runs/claude-sonnet-5-5/multi_turn_long_context_157/boundary-2/1/graph-record-view-base/official-score.json": "28713ddfd99e4bd06295f95e32b674299d1916db29bf78c291adadaf5b2ffa79",
+    "ind04-g9-continuation-k2/runs/gpt-4.1/multi_turn_long_context_157/boundary-2/1/graph-record-view-base/official-score.json": "2cbb3b7aadaf5062104e28d747a81efacf9bb1fe52b2ccaf15e810ba244cbe03",
+    "ind04-g9-continuation-k2/runs/gpt-4.1/multi_turn_long_context_157/boundary-2/1/graph-record-view-full/official-score.json": "c90f4e7cd41d966448de697de145bf104031403785e770c93da5d93d5457e165",
+    "ind04-g9-continuation-k2/runs/gpt-4.1/multi_turn_long_context_157/boundary-2/1/identity/official-score.json": "1270c899c4e5405a655e39bfd458981d62498f3cf75afe1f703afe45f97076b2",
+    "ind04-g9-continuation-k2/runs/claude-sonnet-5-5/multi_turn_long_context_79/boundary-2/1/identity/official-score.json": "6e8d53a8fb86da047f9723003d210ad369191c52ac3661ca77ee16b3423f375a",
+    "ind04-g9-continuation-k2/runs/claude-sonnet-5-5/multi_turn_long_context_79/boundary-2/1/graph-record-view-base/official-score.json": "bd776446190bcab61cf650e1f3eb17013068a1172b9f7d983ed838c6b6d7b1e4",
+    "ind04-g9-continuation-k2/runs/claude-sonnet-5-5/multi_turn_long_context_79/boundary-2/1/graph-record-view-full/official-score.json": "a9da72e719c21c68f6a3a44410f7f83c0f28d7525cf246ef1326f73eebc83ccc"
+  },
+  "rows": [
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_167",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-005",
+      "anonymous_id": "trajectory-002",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_167/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "cancel_booking"
+          ],
+          "labels": [],
+          "rationale": "对前缀最新booking3426812实际取消，cancel_status=true；未误取消历史LA12345。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "retrieve_invoice"
+          ],
+          "labels": [
+            "tool_error_unrecovered"
+          ],
+          "rationale": "仍引用正确的刚取消booking3426812检索发票，返回Booking not found，未在同轮恢复。后续替代文档/帮助是可选建议，不是要求确认后继续同一取票动作。",
+          "uncertainties": [
+            "工具只给未找到；由取消导致发票永久不可得是解释，未由额外查询验证。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_167",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": true,
+      "case": "case-005",
+      "anonymous_id": "trajectory-001",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_167/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "cancel_booking"
+          ],
+          "labels": [],
+          "rationale": "对前缀最新booking3426812实际取消，cancel_status=true；未误取消历史LA12345。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "retrieve_invoice"
+          ],
+          "labels": [
+            "tool_error_unrecovered"
+          ],
+          "rationale": "仍引用正确的刚取消booking3426812检索发票，返回Booking not found，未在同轮恢复。后续替代文档/帮助是可选建议，不是要求确认后继续同一取票动作。",
+          "uncertainties": [
+            "工具只给未找到；由取消导致发票永久不可得是解释，未由额外查询验证。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_167",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-005",
+      "anonymous_id": "trajectory-003",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_167/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "cancel_booking"
+          ],
+          "labels": [],
+          "rationale": "对前缀最新booking3426812实际取消，cancel_status=true；未误取消历史LA12345。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "retrieve_invoice"
+          ],
+          "labels": [
+            "tool_error_unrecovered"
+          ],
+          "rationale": "仍引用正确的刚取消booking3426812检索发票，返回Booking not found，未在同轮恢复。后续替代文档/帮助是可选建议，不是要求确认后继续同一取票动作。",
+          "uncertainties": [
+            "工具只给未找到；由取消导致发票永久不可得是解释，未由额外查询验证。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_165",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": true,
+      "case": "case-008",
+      "anonymous_id": "trajectory-003",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_165/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "retrieve_invoice"
+          ],
+          "labels": [],
+          "rationale": "实际检索同一3426812发票并展示290及交易号，未改预订。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "contact_customer_support"
+          ],
+          "labels": [],
+          "rationale": "实际向支持发送3426812的850/290差异及要求核查，支持只回复已收到；最终也明确尚未解决。",
+          "uncertainties": [
+            "支持未返回解决结果。",
+            "实际消息额外包含生日和护照；当前要求all necessary details，无法仅据此判定此内容必要或越权。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_165",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-008",
+      "anonymous_id": "trajectory-002",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_165/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "retrieve_invoice"
+          ],
+          "labels": [],
+          "rationale": "实际检索同一3426812发票并展示290及交易号，未改预订。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "contact_customer_support"
+          ],
+          "labels": [],
+          "rationale": "实际向支持发送3426812的850/290差异及要求核查，支持只回复已收到；最终也明确尚未解决。",
+          "uncertainties": [
+            "支持未返回解决结果。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_165",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-008",
+      "anonymous_id": "trajectory-001",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_165/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "retrieve_invoice"
+          ],
+          "labels": [],
+          "rationale": "实际检索同一3426812发票并展示290及交易号，未改预订。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "contact_customer_support"
+          ],
+          "labels": [],
+          "rationale": "实际向支持发送3426812的850/290差异及要求核查，支持只回复已收到；最终也明确尚未解决。",
+          "uncertainties": [
+            "支持未返回解决结果。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_71",
+      "domain": "vehicle",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": true,
+      "case": "case-006",
+      "anonymous_id": "trajectory-001",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_71/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 9,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "displayCarStatus",
+            "displayCarStatus",
+            "displayCarStatus",
+            "displayCarStatus",
+            "pressBrakePedal",
+            "startEngine",
+            "lockDoors",
+            "startEngine"
+          ],
+          "labels": [
+            "same_turn_tool_error_recovery",
+            "post_action_optional_question"
+          ],
+          "rationale": "先检查显示四门未锁，仍首次START报门锁错误；随后同轮锁四门并重试START返回running。最后释放刹车/导航建议发生在启动完成之后。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "set_navigation"
+          ],
+          "labels": [],
+          "rationale": "实际set_navigation使用完整指定Crescent Hollow, Spring, TX并返回Navigating；没有将旧Stonebrook目的地当新目标。无绕路约束的执行效果不能由返回验证。",
+          "uncertainties": [
+            "返回只确认目的地，未提供路线或detour参数执行结果。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_71",
+      "domain": "vehicle",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-006",
+      "anonymous_id": "trajectory-003",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_71/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 8,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "displayCarStatus",
+            "displayCarStatus",
+            "displayCarStatus",
+            "displayCarStatus",
+            "lockDoors",
+            "pressBrakePedal",
+            "startEngine"
+          ],
+          "labels": [],
+          "rationale": "查询门锁/刹车/引擎后先锁门并压下刹车，再START直接返回running，没有可见工具错误。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "set_navigation"
+          ],
+          "labels": [],
+          "rationale": "实际set_navigation使用完整指定Crescent Hollow, Spring, TX并返回Navigating；没有将旧Stonebrook目的地当新目标。无绕路约束的执行效果不能由返回验证。",
+          "uncertainties": [
+            "返回只确认目的地，未提供路线或detour参数执行结果。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_71",
+      "domain": "vehicle",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-006",
+      "anonymous_id": "trajectory-002",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_71/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 9,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "displayCarStatus",
+            "displayCarStatus",
+            "displayCarStatus",
+            "displayCarStatus",
+            "pressBrakePedal",
+            "startEngine",
+            "lockDoors",
+            "startEngine"
+          ],
+          "labels": [
+            "same_turn_tool_error_recovery",
+            "post_action_optional_question"
+          ],
+          "rationale": "先检查显示四门未锁，仍首次START报门锁错误；随后同轮锁四门并重试START返回running。最后释放刹车/导航建议发生在启动完成之后。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "set_navigation"
+          ],
+          "labels": [],
+          "rationale": "实际set_navigation使用完整指定Crescent Hollow, Spring, TX并返回Navigating；没有将旧Stonebrook目的地当新目标。无绕路约束的执行效果不能由返回验证。",
+          "uncertainties": [
+            "返回只确认目的地，未提供路线或detour参数执行结果。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_162",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": false,
+      "case": "case-014",
+      "anonymous_id": "trajectory-001",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_162/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:execution_response_mismatch",
+          "message": "Model response execution results so far does not contain all the ground truth response execution results for turn 3.",
+          "state_difference_keys": [],
+          "missing_items": [
+            "{\"exchanged_value\": 2940.0}"
+          ]
+        }
+      ],
+      "observed_tool_calls": 4,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "compute_exchange_rate",
+            "set_budget_limit"
+          ],
+          "labels": [],
+          "rationale": "把2940作为USD金额兑换得到20580，实际预算设置仍为2940，返回2940；未暂停确认。",
+          "uncertainties": [
+            "RMS/RMB及2940的币种意图不明确；记录实际参数而不新增官方正确性判决。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "book_flight"
+          ],
+          "labels": [],
+          "rationale": "使用指定card6749及前缀路线日期实际book_flight，返回booking_status=true与3426812。",
+          "uncertainties": []
+        },
+        {
+          "turn": 6,
+          "tool_sequence": [
+            "close_ticket"
+          ],
+          "labels": [],
+          "rationale": "实际关闭指定458219并返回成功；无其他状态写入。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_162",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": false,
+      "case": "case-014",
+      "anonymous_id": "trajectory-002",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_162/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:execution_response_mismatch",
+          "message": "Model response execution results so far does not contain all the ground truth response execution results for turn 3.",
+          "state_difference_keys": [],
+          "missing_items": [
+            "{\"exchanged_value\": 2940.0}"
+          ]
+        }
+      ],
+      "observed_tool_calls": 4,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "compute_exchange_rate",
+            "set_budget_limit"
+          ],
+          "labels": [],
+          "rationale": "把2940作为USD金额兑换得到20580，实际预算设置仍为2940，返回2940；未暂停确认。",
+          "uncertainties": [
+            "RMS/RMB及2940的币种意图不明确；记录实际参数而不新增官方正确性判决。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "book_flight"
+          ],
+          "labels": [],
+          "rationale": "使用指定card6749及前缀路线日期实际book_flight，返回booking_status=true与3426812。",
+          "uncertainties": []
+        },
+        {
+          "turn": 6,
+          "tool_sequence": [
+            "close_ticket"
+          ],
+          "labels": [],
+          "rationale": "实际关闭指定458219并返回成功；无其他状态写入。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_162",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": false,
+      "case": "case-014",
+      "anonymous_id": "trajectory-003",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_162/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:instance_state_mismatch",
+          "message": "Model instance for TravelAPI does not match the state with ground truth instance.",
+          "state_difference_keys": [
+            "budget_limit"
+          ],
+          "missing_items": []
+        }
+      ],
+      "observed_tool_calls": 4,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "compute_exchange_rate",
+            "set_budget_limit"
+          ],
+          "labels": [
+            "parameter_amount_divergence"
+          ],
+          "rationale": "兑换2940得到20580后，将兑换结果20580写入budget_limit；这与另外两轨迹使用原数2940的参数来源不同，最终又把预算称RMB。",
+          "uncertainties": [
+            "当前请求to2940同时提到兑换，币种和目标数意图有歧义；这里只明确写入20580，不以其他组行为作为正确答案。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "book_flight"
+          ],
+          "labels": [
+            "pause_or_confirmation_after_error",
+            "tool_error_unrecovered"
+          ],
+          "rationale": "指定card6749的book_flight返回booking_status=false及Balance is less than budget limit；本轮未调预算、查余额或换卡重试，而请求用户选择。后续第6轮只关票据，没有补订。",
+          "uncertainties": []
+        },
+        {
+          "turn": 6,
+          "tool_sequence": [
+            "close_ticket"
+          ],
+          "labels": [],
+          "rationale": "实际关闭指定458219并返回成功；无其他状态写入。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_165",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": true,
+      "case": "case-004",
+      "anonymous_id": "trajectory-002",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_165/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "retrieve_invoice"
+          ],
+          "labels": [],
+          "rationale": "用已完成前缀的booking3426812和原token检索invoice，显示290美元与既定日期路线/交易号。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "contact_customer_support"
+          ],
+          "labels": [],
+          "rationale": "实际向支持发送同一booking的850预期/290发票差异与交易号，返回message received；只证明已联系，未证明问题已解决。",
+          "uncertainties": [
+            "支持仅确认收到，未返回修正或解决结果。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_165",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-004",
+      "anonymous_id": "trajectory-003",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_165/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "retrieve_invoice"
+          ],
+          "labels": [],
+          "rationale": "用已完成前缀的booking3426812和原token检索invoice，显示290美元与既定日期路线/交易号。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "contact_customer_support"
+          ],
+          "labels": [],
+          "rationale": "实际向支持发送同一booking的850预期/290发票差异与交易号，返回message received；只证明已联系，未证明问题已解决。",
+          "uncertainties": [
+            "支持仅确认收到，未返回修正或解决结果。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_165",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-004",
+      "anonymous_id": "trajectory-001",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_165/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "retrieve_invoice"
+          ],
+          "labels": [],
+          "rationale": "用已完成前缀的booking3426812和原token检索invoice，显示290美元与既定日期路线/交易号。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "contact_customer_support"
+          ],
+          "labels": [],
+          "rationale": "实际向支持发送同一booking的850预期/290发票差异与交易号，返回message received；只证明已联系，未证明问题已解决。",
+          "uncertainties": [
+            "支持仅确认收到，未返回修正或解决结果。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_80",
+      "domain": "vehicle",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": false,
+      "case": "case-020",
+      "anonymous_id": "trajectory-003",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_80/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:instance_state_mismatch",
+          "message": "Model instance for VehicleControlAPI does not match the state with ground truth instance.",
+          "state_difference_keys": [
+            "engine_state",
+            "brakePedalStatus"
+          ],
+          "missing_items": []
+        }
+      ],
+      "observed_tool_calls": 3,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "lockDoors",
+            "startEngine"
+          ],
+          "labels": [
+            "pause_or_confirmation_after_error",
+            "tool_error_unrecovered"
+          ],
+          "rationale": "锁门成功后START报刹车未压；没有pressBrakePedal或重试，转为询问是否替用户压刹车并启动。下一用户轮只计算均值，未修复启动。",
+          "uncertainties": [
+            "本轮动作暂停但轨迹继续第5轮，不标整任务提前结束。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "mean"
+          ],
+          "labels": [],
+          "rationale": "实际mean四个指定距离返回452.5；前轮引擎未在此轮补启动。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_80",
+      "domain": "vehicle",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": false,
+      "case": "case-020",
+      "anonymous_id": "trajectory-001",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_80/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:instance_state_mismatch",
+          "message": "Model instance for VehicleControlAPI does not match the state with ground truth instance.",
+          "state_difference_keys": [
+            "engine_state",
+            "brakePedalStatus"
+          ],
+          "missing_items": []
+        }
+      ],
+      "observed_tool_calls": 3,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "lockDoors",
+            "startEngine"
+          ],
+          "labels": [
+            "pause_or_confirmation_after_error",
+            "tool_error_unrecovered"
+          ],
+          "rationale": "锁门成功后START报刹车未压；没有pressBrakePedal或重试，转为询问是否替用户压刹车并启动。下一用户轮只计算均值，未修复启动。",
+          "uncertainties": [
+            "本轮动作暂停但轨迹继续第5轮，不标整任务提前结束。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "mean"
+          ],
+          "labels": [],
+          "rationale": "实际mean四个指定距离返回452.5；前轮引擎未在此轮补启动。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_80",
+      "domain": "vehicle",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": false,
+      "case": "case-020",
+      "anonymous_id": "trajectory-002",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_80/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:instance_state_mismatch",
+          "message": "Model instance for VehicleControlAPI does not match the state with ground truth instance.",
+          "state_difference_keys": [
+            "engine_state",
+            "brakePedalStatus"
+          ],
+          "missing_items": []
+        }
+      ],
+      "observed_tool_calls": 3,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "lockDoors",
+            "startEngine"
+          ],
+          "labels": [
+            "pause_or_confirmation_after_error",
+            "tool_error_unrecovered"
+          ],
+          "rationale": "锁门成功后START报刹车未压；没有pressBrakePedal或重试，转为询问是否替用户压刹车并启动。下一用户轮只计算均值，未修复启动。",
+          "uncertainties": [
+            "本轮动作暂停但轨迹继续第5轮，不标整任务提前结束。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "mean"
+          ],
+          "labels": [],
+          "rationale": "实际mean四个指定距离返回452.5；前轮引擎未在此轮补启动。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_111",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-007",
+      "anonymous_id": "trajectory-003",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_111/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "view_messages_sent"
+          ],
+          "labels": [
+            "partial_visible_summary"
+          ],
+          "rationale": "实际view_messages_sent返回包含刚发给Jane的信息及历史嵌套消息；无新发送。最终摘要未列两个Could you upload the file?项。",
+          "uncertainties": [
+            "嵌套USR键未给完整发送方向契约，不能把最终每条收件人归属当已验证，也不判实际错发。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_111",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-007",
+      "anonymous_id": "trajectory-001",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_111/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "view_messages_sent"
+          ],
+          "labels": [],
+          "rationale": "实际view_messages_sent返回包含刚发给Jane的信息及历史嵌套消息；无新发送。最终列出包括两个upload项的多条内容。",
+          "uncertainties": [
+            "嵌套USR键未给完整发送方向契约，不能把最终每条收件人归属当已验证，也不判实际错发。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_111",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": true,
+      "case": "case-007",
+      "anonymous_id": "trajectory-002",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_111/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "view_messages_sent"
+          ],
+          "labels": [],
+          "rationale": "实际view_messages_sent返回包含刚发给Jane的信息及历史嵌套消息；无新发送。最终列出包括两个upload项的多条内容。",
+          "uncertainties": [
+            "嵌套USR键未给完整发送方向契约，不能把最终每条收件人归属当已验证，也不判实际错发。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_138",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": false,
+      "case": "case-022",
+      "anonymous_id": "trajectory-001",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_138/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:instance_state_mismatch",
+          "message": "Model instance for MessageAPI does not match the state with ground truth instance.",
+          "state_difference_keys": [
+            "generated_ids",
+            "inbox",
+            "message_count"
+          ],
+          "missing_items": []
+        }
+      ],
+      "observed_tool_calls": 5,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "get_order_details",
+            "get_transaction_history"
+          ],
+          "labels": [
+            "blocking_confirmation_before_send"
+          ],
+          "rationale": "重新查询同一订单仍Open后，实际没有send_message，要求用户在准确更新/等成交/坚持原句之间选择。工具未报错；这是因内容真实性而暂缓已请求发送，不是工具失败恢复。",
+          "uncertainties": [
+            "用户明确指定的completed消息与可见Open冲突；记录未发送，不以此裁定策略合理性或官方分。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "view_messages_sent",
+            "list_users",
+            "get_user_id"
+          ],
+          "labels": [
+            "clarification_after_no_matching_target"
+          ],
+          "rationale": "view_messages_sent只显示USR005的不同文字，Sarah查得USR006且本轨迹未向她发送；没有delete_message，要求澄清是否其实指USR005。避免猜测删除错误收件人，原撤回动作没有实际执行。",
+          "uncertainties": [
+            "不把USR005相似主题消息认作Sarah目标，也不据当前记录断言所有其他会话均无Sarah消息。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_138",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": false,
+      "case": "case-022",
+      "anonymous_id": "trajectory-003",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_138/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:instance_state_mismatch",
+          "message": "Model instance for MessageAPI does not match the state with ground truth instance.",
+          "state_difference_keys": [
+            "generated_ids",
+            "inbox",
+            "message_count"
+          ],
+          "missing_items": []
+        }
+      ],
+      "observed_tool_calls": 4,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "get_order_details",
+            "message_get_login_status",
+            "get_user_id"
+          ],
+          "labels": [
+            "blocking_confirmation_before_send"
+          ],
+          "rationale": "重新查询同一订单仍Open后，实际没有send_message，要求用户在准确更新/等成交/坚持原句之间选择。工具未报错；这是因内容真实性而暂缓已请求发送，不是工具失败恢复。",
+          "uncertainties": [
+            "用户明确指定的completed消息与可见Open冲突；记录未发送，不以此裁定策略合理性或官方分。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "view_messages_sent"
+          ],
+          "labels": [
+            "clarification_after_no_matching_target"
+          ],
+          "rationale": "view_messages_sent只显示USR005的不同文字，Sarah查得USR006且本轨迹未向她发送；没有delete_message，要求澄清是否其实指USR005。避免猜测删除错误收件人，原撤回动作没有实际执行。",
+          "uncertainties": [
+            "不把USR005相似主题消息认作Sarah目标，也不据当前记录断言所有其他会话均无Sarah消息。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_138",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": false,
+      "case": "case-022",
+      "anonymous_id": "trajectory-002",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_138/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:instance_state_mismatch",
+          "message": "Model instance for MessageAPI does not match the state with ground truth instance.",
+          "state_difference_keys": [
+            "generated_ids",
+            "inbox",
+            "message_count"
+          ],
+          "missing_items": []
+        }
+      ],
+      "observed_tool_calls": 4,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "get_order_details",
+            "message_get_login_status",
+            "get_user_id"
+          ],
+          "labels": [
+            "blocking_confirmation_before_send"
+          ],
+          "rationale": "重新查询同一订单仍Open后，实际没有send_message，要求用户在准确更新/等成交/坚持原句之间选择。工具未报错；这是因内容真实性而暂缓已请求发送，不是工具失败恢复。",
+          "uncertainties": [
+            "用户明确指定的completed消息与可见Open冲突；记录未发送，不以此裁定策略合理性或官方分。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "view_messages_sent"
+          ],
+          "labels": [
+            "clarification_after_no_matching_target"
+          ],
+          "rationale": "view_messages_sent只显示USR005的不同文字，Sarah查得USR006且本轨迹未向她发送；没有delete_message，要求澄清是否其实指USR005。避免猜测删除错误收件人，原撤回动作没有实际执行。",
+          "uncertainties": [
+            "不把USR005相似主题消息认作Sarah目标，也不据当前记录断言所有其他会话均无Sarah消息。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_162",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": false,
+      "case": "case-001",
+      "anonymous_id": "trajectory-002",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_162/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:empty_turn_model_response",
+          "message": "Model response list is empty for turn 3",
+          "state_difference_keys": [],
+          "missing_items": []
+        }
+      ],
+      "observed_tool_calls": 3,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [],
+          "labels": [
+            "blocking_clarification_before_action",
+            "zero_tool_turn"
+          ],
+          "rationale": "预算设置未执行；要求澄清RMS/RMB和2940含义。此处未发生工具报错，属于动作前澄清；后续仍未见预算补设。本轮没有工具调用。",
+          "uncertainties": [
+            "RMS的目标币种及2940的单位存在可见歧义；不把澄清本身判成官方失败。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "book_flight"
+          ],
+          "labels": [],
+          "rationale": "按可见既定航线、日期和指定card6749实际订票成功；此前预算仍未设置。旅客核验未执行，但本轮没有提供姓名/生日/护照，不判错误对象。",
+          "uncertainties": [
+            "文字称未核验旅客；可见信息不足以裁定是否另需核验。"
+          ]
+        },
+        {
+          "turn": 6,
+          "tool_sequence": [
+            "get_ticket",
+            "close_ticket"
+          ],
+          "labels": [],
+          "rationale": "实际关闭用户指定458219；其他预算或旅客问题的附带提醒没有阻塞本轮关闭。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_162",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": false,
+      "case": "case-001",
+      "anonymous_id": "trajectory-003",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_162/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:empty_turn_model_response",
+          "message": "Model response list is empty for turn 3",
+          "state_difference_keys": [],
+          "missing_items": []
+        }
+      ],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [],
+          "labels": [
+            "blocking_clarification_before_action",
+            "zero_tool_turn"
+          ],
+          "rationale": "预算设置未执行；要求澄清RMS/RMB和2940含义。此处未发生工具报错，属于动作前澄清；后续仍未见预算补设。本轮没有工具调用。",
+          "uncertainties": [
+            "RMS的目标币种及2940的单位存在可见歧义；不把澄清本身判成官方失败。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "book_flight"
+          ],
+          "labels": [],
+          "rationale": "按可见既定航线、日期和指定card6749实际订票成功；此前预算仍未设置。旅客核验未执行，但本轮没有提供姓名/生日/护照，不判错误对象。",
+          "uncertainties": [
+            "文字称未核验旅客；可见信息不足以裁定是否另需核验。"
+          ]
+        },
+        {
+          "turn": 6,
+          "tool_sequence": [
+            "close_ticket"
+          ],
+          "labels": [],
+          "rationale": "实际关闭用户指定458219；其他预算或旅客问题的附带提醒没有阻塞本轮关闭。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_162",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": false,
+      "case": "case-001",
+      "anonymous_id": "trajectory-001",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_162/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:instance_state_mismatch",
+          "message": "Model instance for TravelAPI does not match the state with ground truth instance.",
+          "state_difference_keys": [
+            "budget_limit"
+          ],
+          "missing_items": []
+        }
+      ],
+      "observed_tool_calls": 5,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "compute_exchange_rate"
+          ],
+          "labels": [
+            "blocking_clarification_before_action"
+          ],
+          "rationale": "预算设置未执行；要求澄清RMS/RMB和2940含义。此处未发生工具报错，属于动作前澄清；后续仍未见预算补设。先按400美元执行了一次兑换，得到2800。",
+          "uncertainties": [
+            "RMS的目标币种及2940的单位存在可见歧义；不把澄清本身判成官方失败。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "get_credit_card_balance",
+            "get_all_credit_cards",
+            "book_flight"
+          ],
+          "labels": [],
+          "rationale": "按可见既定航线、日期和指定card6749实际订票成功；此前预算仍未设置。旅客核验未执行，但本轮没有提供姓名/生日/护照，不判错误对象。",
+          "uncertainties": [
+            "文字称未核验旅客；可见信息不足以裁定是否另需核验。"
+          ]
+        },
+        {
+          "turn": 6,
+          "tool_sequence": [
+            "close_ticket"
+          ],
+          "labels": [],
+          "rationale": "实际关闭用户指定458219；其他预算或旅客问题的附带提醒没有阻塞本轮关闭。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_138",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-013",
+      "anonymous_id": "trajectory-003",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_138/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 4,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "list_users",
+            "get_user_id",
+            "send_message"
+          ],
+          "labels": [],
+          "rationale": "实际查Sarah用户ID为USR006，发送用户指定原句并返回sent_status=true。原句声称completed与前缀Open不一致，但该文字本身由用户明确指定；不据此判错收件人或额外发送。",
+          "uncertainties": [
+            "成功发送不证明订单已成交；最终文字把发送说成交易成功证据，超出工具返回。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "delete_message"
+          ],
+          "labels": [],
+          "rationale": "对刚实际发消息的USR006调用delete_message，返回该收件人latest message deleted；本轮没有其他发送。",
+          "uncertainties": [
+            "返回按收件人latest描述，不提供被删message_id；可见期间没有另一条给USR006的新消息。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_138",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-013",
+      "anonymous_id": "trajectory-001",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_138/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 4,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "list_users",
+            "get_user_id",
+            "send_message"
+          ],
+          "labels": [],
+          "rationale": "实际查Sarah用户ID为USR006，发送用户指定原句并返回sent_status=true。原句声称completed与前缀Open不一致，但该文字本身由用户明确指定；不据此判错收件人或额外发送。",
+          "uncertainties": [
+            "成功发送不证明订单已成交；最终文字把发送说成交易成功证据，超出工具返回。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "delete_message"
+          ],
+          "labels": [],
+          "rationale": "对刚实际发消息的USR006调用delete_message，返回该收件人latest message deleted；本轮没有其他发送。",
+          "uncertainties": [
+            "返回按收件人latest描述，不提供被删message_id；可见期间没有另一条给USR006的新消息。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_138",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": true,
+      "case": "case-013",
+      "anonymous_id": "trajectory-002",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_138/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 4,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "list_users",
+            "get_user_id",
+            "send_message"
+          ],
+          "labels": [],
+          "rationale": "实际查Sarah用户ID为USR006，发送用户指定原句并返回sent_status=true。原句声称completed与前缀Open不一致，但该文字本身由用户明确指定；不据此判错收件人或额外发送。",
+          "uncertainties": [
+            "成功发送不证明订单已成交；最终文字把发送说成交易成功证据，超出工具返回。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "delete_message"
+          ],
+          "labels": [],
+          "rationale": "对刚实际发消息的USR006调用delete_message，返回该收件人latest message deleted；本轮没有其他发送。",
+          "uncertainties": [
+            "返回按收件人latest描述，不提供被删message_id；可见期间没有另一条给USR006的新消息。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_59",
+      "domain": "vehicle",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": false,
+      "case": "case-011",
+      "anonymous_id": "trajectory-003",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_59/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:instance_state_mismatch",
+          "message": "Model instance for VehicleControlAPI does not match the state with ground truth instance.",
+          "state_difference_keys": [
+            "engine_state",
+            "remainingUnlockedDoors",
+            "doorStatus",
+            "brakePedalStatus"
+          ],
+          "missing_items": []
+        }
+      ],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "startEngine"
+          ],
+          "labels": [
+            "pause_or_confirmation_after_error",
+            "tool_error_unrecovered"
+          ],
+          "rationale": "首次START明确报四门未锁；本轮没有lockDoors或重试，而询问是否先锁门。下一用户轮继续处理数学请求，但也未补启动。",
+          "uncertainties": [
+            "此处是启动动作暂停，不是整条轨迹提前结束，后续第5轮可见。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "logarithm"
+          ],
+          "labels": [],
+          "rationale": "以既有距离980、用户明确base20、precision10调用logarithm并返回约2.299121531134；没有恢复前轮启动。",
+          "uncertainties": [
+            "工具数值返回以mpf文本呈现；不推演燃油效率的实际意义。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_59",
+      "domain": "vehicle",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": false,
+      "case": "case-011",
+      "anonymous_id": "trajectory-001",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_59/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:instance_state_mismatch",
+          "message": "Model instance for VehicleControlAPI does not match the state with ground truth instance.",
+          "state_difference_keys": [
+            "engine_state",
+            "remainingUnlockedDoors",
+            "doorStatus",
+            "brakePedalStatus"
+          ],
+          "missing_items": []
+        }
+      ],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "startEngine"
+          ],
+          "labels": [
+            "pause_or_confirmation_after_error",
+            "tool_error_unrecovered"
+          ],
+          "rationale": "首次START明确报四门未锁；本轮没有lockDoors或重试，而询问是否先锁门。下一用户轮继续处理数学请求，但也未补启动。",
+          "uncertainties": [
+            "此处是启动动作暂停，不是整条轨迹提前结束，后续第5轮可见。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "logarithm"
+          ],
+          "labels": [],
+          "rationale": "以既有距离980、用户明确base20、precision10调用logarithm并返回约2.299121531134；没有恢复前轮启动。",
+          "uncertainties": [
+            "工具数值返回以mpf文本呈现；不推演燃油效率的实际意义。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_59",
+      "domain": "vehicle",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": false,
+      "case": "case-011",
+      "anonymous_id": "trajectory-002",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_59/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:instance_state_mismatch",
+          "message": "Model instance for VehicleControlAPI does not match the state with ground truth instance.",
+          "state_difference_keys": [
+            "engine_state",
+            "remainingUnlockedDoors",
+            "doorStatus",
+            "brakePedalStatus"
+          ],
+          "missing_items": []
+        }
+      ],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "startEngine"
+          ],
+          "labels": [
+            "pause_or_confirmation_after_error",
+            "tool_error_unrecovered"
+          ],
+          "rationale": "首次START明确报四门未锁；本轮没有lockDoors或重试，而询问是否先锁门。下一用户轮继续处理数学请求，但也未补启动。",
+          "uncertainties": [
+            "此处是启动动作暂停，不是整条轨迹提前结束，后续第5轮可见。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "logarithm"
+          ],
+          "labels": [],
+          "rationale": "以既有距离980、用户明确base20、precision10调用logarithm并返回约2.299121531134；没有恢复前轮启动。",
+          "uncertainties": [
+            "工具数值返回以mpf文本呈现；不推演燃油效率的实际意义。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_123",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": true,
+      "case": "case-003",
+      "anonymous_id": "trajectory-002",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_123/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "trading_logout"
+          ],
+          "labels": [],
+          "rationale": "trading_logout实际返回Logged out successfully；没有错误或未完成动作。",
+          "uncertainties": [
+            "未额外检查账户全部挂单；不采信文字对其他未查询状态的扩大断言。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_123",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-003",
+      "anonymous_id": "trajectory-001",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_123/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "trading_logout"
+          ],
+          "labels": [],
+          "rationale": "trading_logout实际返回Logged out successfully；没有错误或未完成动作。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_123",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-003",
+      "anonymous_id": "trajectory-003",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_123/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "trading_logout"
+          ],
+          "labels": [],
+          "rationale": "trading_logout实际返回Logged out successfully；没有错误或未完成动作。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_59",
+      "domain": "vehicle",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-021",
+      "anonymous_id": "trajectory-001",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_59/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 6,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "startEngine",
+            "lockDoors",
+            "startEngine",
+            "pressBrakePedal",
+            "startEngine"
+          ],
+          "labels": [
+            "same_turn_tool_error_recovery"
+          ],
+          "rationale": "首次START报门未锁，锁门后第二次START报刹车未压；同轮压刹车第三次START返回running。两次不同错误均实际修复，未要求事前确认。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "logarithm"
+          ],
+          "labels": [
+            "post_action_optional_question"
+          ],
+          "rationale": "以历史距离980和用户明确base20/precision10调用logarithm，返回约2.299121531134；对此前fuel措辞的解释在计算后，不阻塞动作。",
+          "uncertainties": [
+            "不把模型对燃油统计意义的附加说明当工具证明。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_59",
+      "domain": "vehicle",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": true,
+      "case": "case-021",
+      "anonymous_id": "trajectory-002",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_59/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 6,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "startEngine",
+            "lockDoors",
+            "startEngine",
+            "pressBrakePedal",
+            "startEngine"
+          ],
+          "labels": [
+            "same_turn_tool_error_recovery"
+          ],
+          "rationale": "首次START报门未锁，锁门后第二次START报刹车未压；同轮压刹车第三次START返回running。两次不同错误均实际修复，未要求事前确认。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "logarithm"
+          ],
+          "labels": [
+            "post_action_optional_question"
+          ],
+          "rationale": "以历史距离980和用户明确base20/precision10调用logarithm，返回约2.299121531134；对此前fuel措辞的解释在计算后，不阻塞动作。",
+          "uncertainties": [
+            "不把模型对燃油统计意义的附加说明当工具证明。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_59",
+      "domain": "vehicle",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-021",
+      "anonymous_id": "trajectory-003",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_59/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 6,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "startEngine",
+            "lockDoors",
+            "startEngine",
+            "pressBrakePedal",
+            "startEngine"
+          ],
+          "labels": [
+            "same_turn_tool_error_recovery"
+          ],
+          "rationale": "首次START报门未锁，锁门后第二次START报刹车未压；同轮压刹车第三次START返回running。两次不同错误均实际修复，未要求事前确认。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "logarithm"
+          ],
+          "labels": [
+            "post_action_optional_question"
+          ],
+          "rationale": "以历史距离980和用户明确base20/precision10调用logarithm，返回约2.299121531134；对此前fuel措辞的解释在计算后，不阻塞动作。",
+          "uncertainties": [
+            "不把模型对燃油统计意义的附加说明当工具证明。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_167",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-016",
+      "anonymous_id": "trajectory-003",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_167/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "cancel_booking"
+          ],
+          "labels": [],
+          "rationale": "实际取消前缀最新booking3426812并返回cancel_status=true，未动历史LA12345。",
+          "uncertainties": [
+            "取消返回没有退款状态，不据附带建议判退款已经发生。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "retrieve_invoice"
+          ],
+          "labels": [
+            "tool_error_unrecovered",
+            "post_error_alternative_offer"
+          ],
+          "rationale": "对正确的取消booking检索invoice报Booking not found，未再次调用恢复；随后提供来自历史的预订摘要并区分非官方invoice。联系支持/查历史作为替代选项提出，未实际执行。",
+          "uncertainties": [
+            "取消导致删除只被模型推测；未额外验证。",
+            "提议联系支持的确认不同于报错后要求授权重试同一既定动作，不计硬阻塞确认。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_167",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-016",
+      "anonymous_id": "trajectory-001",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_167/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "cancel_booking"
+          ],
+          "labels": [],
+          "rationale": "实际取消前缀最新booking3426812并返回cancel_status=true，未动历史LA12345。",
+          "uncertainties": [
+            "取消返回没有退款状态，不据附带建议判退款已经发生。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "retrieve_invoice"
+          ],
+          "labels": [
+            "tool_error_unrecovered",
+            "post_error_alternative_offer"
+          ],
+          "rationale": "对正确的取消booking检索invoice报Booking not found，未再次调用恢复；随后提供来自历史的预订摘要并区分非官方invoice。联系支持/查历史作为替代选项提出，未实际执行。",
+          "uncertainties": [
+            "取消导致删除只被模型推测；未额外验证。",
+            "提议联系支持的确认不同于报错后要求授权重试同一既定动作，不计硬阻塞确认。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_167",
+      "domain": "travel",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": true,
+      "case": "case-016",
+      "anonymous_id": "trajectory-002",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_167/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "cancel_booking"
+          ],
+          "labels": [],
+          "rationale": "实际取消前缀最新booking3426812并返回cancel_status=true，未动历史LA12345。",
+          "uncertainties": [
+            "取消返回没有退款状态，不据附带建议判退款已经发生。"
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "retrieve_invoice"
+          ],
+          "labels": [
+            "tool_error_unrecovered",
+            "post_error_alternative_offer"
+          ],
+          "rationale": "对正确的取消booking检索invoice报Booking not found，未再次调用恢复；随后提供来自历史的预订摘要并区分非官方invoice。联系支持/查历史作为替代选项提出，未实际执行。",
+          "uncertainties": [
+            "取消导致删除只被模型推测；未额外验证。",
+            "提议联系支持的确认不同于报错后要求授权重试同一既定动作，不计硬阻塞确认。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_121",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-015",
+      "anonymous_id": "trajectory-003",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_121/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "withdraw_funds",
+            "get_account_info"
+          ],
+          "labels": [
+            "additional_readonly_check"
+          ],
+          "rationale": "实际提取500并返回余额34500。同时只读查询账户确认34500；未修改订单。",
+          "uncertainties": [
+            "取消/减仓/注资仅为完成后的建议，没有实际调用。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_121",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": true,
+      "case": "case-015",
+      "anonymous_id": "trajectory-001",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_121/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "withdraw_funds",
+            "get_order_details"
+          ],
+          "labels": [
+            "additional_readonly_check"
+          ],
+          "rationale": "实际提取500并返回余额34500。同时只读检查原订单仍Open。",
+          "uncertainties": [
+            "取消/减仓/注资仅为完成后的建议，没有实际调用。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_121",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-015",
+      "anonymous_id": "trajectory-002",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_base_121/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "withdraw_funds"
+          ],
+          "labels": [],
+          "rationale": "实际提取500并返回余额34500。先计算资金余量，然后提款；未取消或缩减订单。",
+          "uncertainties": [
+            "取消/减仓/注资仅为完成后的建议，没有实际调用。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_121",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": false,
+      "case": "case-012",
+      "anonymous_id": "trajectory-002",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_121/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:execution_response_mismatch",
+          "message": "Model response execution results so far does not contain all the ground truth response execution results for turn 3.",
+          "state_difference_keys": [],
+          "missing_items": [
+            "{\"account_id\": 12345, \"balance\": 35000.0, \"binding_card\": 1974202140965533}"
+          ]
+        }
+      ],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "withdraw_funds"
+          ],
+          "labels": [],
+          "rationale": "按用户金额500实际withdraw_funds成功并返回34500余额；无额外资金/订单操作。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_121",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": false,
+      "case": "case-012",
+      "anonymous_id": "trajectory-003",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_121/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:execution_response_mismatch",
+          "message": "Model response execution results so far does not contain all the ground truth response execution results for turn 3.",
+          "state_difference_keys": [],
+          "missing_items": [
+            "{\"account_id\": 12345, \"balance\": 35000.0, \"binding_card\": 1974202140965533}"
+          ]
+        }
+      ],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "withdraw_funds"
+          ],
+          "labels": [],
+          "rationale": "按用户金额500实际withdraw_funds成功并返回34500余额；无额外资金/订单操作。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_121",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": false,
+      "case": "case-012",
+      "anonymous_id": "trajectory-001",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_121/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:execution_response_mismatch",
+          "message": "Model response execution results so far does not contain all the ground truth response execution results for turn 3.",
+          "state_difference_keys": [],
+          "missing_items": [
+            "{\"account_id\": 12345, \"balance\": 35000.0, \"binding_card\": 1974202140965533}"
+          ]
+        }
+      ],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "withdraw_funds"
+          ],
+          "labels": [],
+          "rationale": "按用户金额500实际withdraw_funds成功并返回34500余额；无额外资金/订单操作。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_80",
+      "domain": "vehicle",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-017",
+      "anonymous_id": "trajectory-003",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_80/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 5,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "lockDoors",
+            "startEngine",
+            "pressBrakePedal",
+            "startEngine"
+          ],
+          "labels": [
+            "same_turn_tool_error_recovery",
+            "post_action_optional_question"
+          ],
+          "rationale": "先锁四门，再START报刹车未压；同轮压下刹车后重试返回running，完整完成锁门和启动。之后释放刹车建议不阻塞启动。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "mean"
+          ],
+          "labels": [],
+          "rationale": "mean使用用户给出的750/320/450/290并返回452.5；附带燃油估算或释放刹车建议未产生额外操作。",
+          "uncertainties": [
+            "附带燃油效率推算不是额外工具验证或新的车辆状态证据。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_80",
+      "domain": "vehicle",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": true,
+      "case": "case-017",
+      "anonymous_id": "trajectory-001",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_80/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 5,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "lockDoors",
+            "startEngine",
+            "pressBrakePedal",
+            "startEngine"
+          ],
+          "labels": [
+            "same_turn_tool_error_recovery",
+            "post_action_optional_question"
+          ],
+          "rationale": "先锁四门，再START报刹车未压；同轮压下刹车后重试返回running，完整完成锁门和启动。之后释放刹车建议不阻塞启动。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "mean"
+          ],
+          "labels": [],
+          "rationale": "mean使用用户给出的750/320/450/290并返回452.5；附带燃油估算或释放刹车建议未产生额外操作。",
+          "uncertainties": [
+            "附带燃油效率推算不是额外工具验证或新的车辆状态证据。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_80",
+      "domain": "vehicle",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-017",
+      "anonymous_id": "trajectory-002",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_80/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 5,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "lockDoors",
+            "startEngine",
+            "pressBrakePedal",
+            "startEngine"
+          ],
+          "labels": [
+            "same_turn_tool_error_recovery",
+            "post_action_optional_question"
+          ],
+          "rationale": "先锁四门，再START报刹车未压；同轮压下刹车后重试返回running，完整完成锁门和启动。之后释放刹车建议不阻塞启动。",
+          "uncertainties": []
+        },
+        {
+          "turn": 5,
+          "tool_sequence": [
+            "mean"
+          ],
+          "labels": [],
+          "rationale": "mean使用用户给出的750/320/450/290并返回452.5；附带燃油估算或释放刹车建议未产生额外操作。",
+          "uncertainties": [
+            "附带燃油效率推算不是额外工具验证或新的车辆状态证据。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_123",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-019",
+      "anonymous_id": "trajectory-001",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_123/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "trading_logout"
+          ],
+          "labels": [],
+          "rationale": "trading_logout实际返回Logged out successfully；没有错误或额外操作。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_123",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": true,
+      "case": "case-019",
+      "anonymous_id": "trajectory-003",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_123/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "trading_logout"
+          ],
+          "labels": [],
+          "rationale": "trading_logout实际返回Logged out successfully；没有错误或额外操作。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_123",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-019",
+      "anonymous_id": "trajectory-002",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/gpt-4.1/multi_turn_base_123/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "trading_logout"
+          ],
+          "labels": [],
+          "rationale": "trading_logout实际返回Logged out successfully；没有错误或额外操作。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_111",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-018",
+      "anonymous_id": "trajectory-002",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_111/boundary-3/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "view_messages_sent"
+          ],
+          "labels": [],
+          "rationale": "实际view_messages_sent后完整列出刚发Jane消息、旧嵌套条目及两个upload条目；明确说明嵌套发件/收件归属不确定，未发送或删除任何消息。",
+          "uncertainties": [
+            "工具记录结构不能唯一确定所有旧条目的方向；不推断收件回复。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_111",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-base",
+      "passed": true,
+      "case": "case-018",
+      "anonymous_id": "trajectory-003",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_111/boundary-3/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "view_messages_sent"
+          ],
+          "labels": [],
+          "rationale": "实际view_messages_sent后完整列出刚发Jane消息、旧嵌套条目及两个upload条目；明确说明嵌套发件/收件归属不确定，未发送或删除任何消息。",
+          "uncertainties": [
+            "工具记录结构不能唯一确定所有旧条目的方向；不推断收件回复。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_111",
+      "domain": "trading",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-018",
+      "anonymous_id": "trajectory-001",
+      "record_active": true,
+      "R_E_first_request_exact_equal": false,
+      "official_score_source": "ind03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_111/boundary-3/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 4,
+          "tool_sequence": [
+            "view_messages_sent"
+          ],
+          "labels": [],
+          "rationale": "实际view_messages_sent后完整列出刚发Jane消息、旧嵌套条目及两个upload条目；明确说明嵌套发件/收件归属不确定，未发送或删除任何消息。",
+          "uncertainties": [
+            "工具记录结构不能唯一确定所有旧条目的方向；不推断收件回复。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_157",
+      "domain": "travel",
+      "boundary_turns": 2,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-010",
+      "anonymous_id": "trajectory-002",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind04-g9-continuation-k2/runs/claude-sonnet-5-5/multi_turn_long_context_157/boundary-2/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 3,
+          "tool_sequence": [
+            "get_flight_cost"
+          ],
+          "labels": [],
+          "rationale": "沿用前缀中的机场说明直接查询CRH→PHV指定日期商务价，没有重新查询Pinehaven机场。据返回列表说明400–4000范围。",
+          "uncertainties": [
+            "PHV到Pinehaven的对应来自前缀assistant说法，本轮未用机场查询独立验证；可见证据未显示错机场。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_157",
+      "domain": "travel",
+      "boundary_turns": 2,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-010",
+      "anonymous_id": "trajectory-003",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind04-g9-continuation-k2/runs/claude-sonnet-5-5/multi_turn_long_context_157/boundary-2/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 4,
+      "turns": [
+        {
+          "turn": 3,
+          "tool_sequence": [
+            "get_flight_cost",
+            "min_value",
+            "max_value",
+            "mean"
+          ],
+          "labels": [
+            "additional_readonly_computation"
+          ],
+          "rationale": "沿用前缀中的机场说明直接查询CRH→PHV指定日期商务价，没有重新查询Pinehaven机场。随后算min/max/mean并据结果说明。",
+          "uncertainties": [
+            "PHV到Pinehaven的对应来自前缀assistant说法，本轮未用机场查询独立验证；可见证据未显示错机场。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_157",
+      "domain": "travel",
+      "boundary_turns": 2,
+      "arm": "graph-record-view-base",
+      "passed": true,
+      "case": "case-010",
+      "anonymous_id": "trajectory-001",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind04-g9-continuation-k2/runs/claude-sonnet-5-5/multi_turn_long_context_157/boundary-2/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 3,
+          "tool_sequence": [
+            "get_flight_cost"
+          ],
+          "labels": [],
+          "rationale": "沿用前缀中的机场说明直接查询CRH→PHV指定日期商务价，没有重新查询Pinehaven机场。据返回列表说明400–4000范围。",
+          "uncertainties": [
+            "PHV到Pinehaven的对应来自前缀assistant说法，本轮未用机场查询独立验证；可见证据未显示错机场。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_157",
+      "domain": "travel",
+      "boundary_turns": 2,
+      "arm": "graph-record-view-base",
+      "passed": true,
+      "case": "case-009",
+      "anonymous_id": "trajectory-002",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind04-g9-continuation-k2/runs/gpt-4.1/multi_turn_long_context_157/boundary-2/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 3,
+          "tool_sequence": [
+            "get_nearest_airport_by_city",
+            "get_flight_cost"
+          ],
+          "labels": [],
+          "rationale": "实际查Pinehaven最近机场PHV并查询CRH→PHV指定日期商务价格。直接据价格列表回答400–4000范围。",
+          "uncertainties": [
+            "用户未指定最低/平均/范围，三种统计口径不同，不自行重判官方分。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_157",
+      "domain": "travel",
+      "boundary_turns": 2,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-009",
+      "anonymous_id": "trajectory-001",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind04-g9-continuation-k2/runs/gpt-4.1/multi_turn_long_context_157/boundary-2/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 3,
+      "turns": [
+        {
+          "turn": 3,
+          "tool_sequence": [
+            "get_nearest_airport_by_city",
+            "get_flight_cost",
+            "min_value"
+          ],
+          "labels": [
+            "additional_readonly_computation"
+          ],
+          "rationale": "实际查Pinehaven最近机场PHV并查询CRH→PHV指定日期商务价格。随后min_value返回400，回答最低价。",
+          "uncertainties": [
+            "用户未指定最低/平均/范围，三种统计口径不同，不自行重判官方分。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_157",
+      "domain": "travel",
+      "boundary_turns": 2,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-009",
+      "anonymous_id": "trajectory-003",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind04-g9-continuation-k2/runs/gpt-4.1/multi_turn_long_context_157/boundary-2/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 3,
+      "turns": [
+        {
+          "turn": 3,
+          "tool_sequence": [
+            "get_nearest_airport_by_city",
+            "get_flight_cost",
+            "mean"
+          ],
+          "labels": [
+            "additional_readonly_computation"
+          ],
+          "rationale": "实际查Pinehaven最近机场PHV并查询CRH→PHV指定日期商务价格。随后mean返回1380.915，回答平均约1381。",
+          "uncertainties": [
+            "用户未指定最低/平均/范围，三种统计口径不同，不自行重判官方分。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_79",
+      "domain": "vehicle",
+      "boundary_turns": 2,
+      "arm": "identity",
+      "passed": true,
+      "case": "case-002",
+      "anonymous_id": "trajectory-002",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind04-g9-continuation-k2/runs/claude-sonnet-5-5/multi_turn_long_context_79/boundary-2/1/identity/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 3,
+          "tool_sequence": [
+            "setCruiseControl"
+          ],
+          "labels": [
+            "post_action_optional_question"
+          ],
+          "rationale": "直接设置巡航返回active、65和100；之后询问是否释放刹车是在本轮要求已执行之后，不标阻塞确认。",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_79",
+      "domain": "vehicle",
+      "boundary_turns": 2,
+      "arm": "graph-record-view-base",
+      "passed": false,
+      "case": "case-002",
+      "anonymous_id": "trajectory-001",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind04-g9-continuation-k2/runs/claude-sonnet-5-5/multi_turn_long_context_79/boundary-2/1/graph-record-view-base/official-score.json",
+      "official_diagnostics_summary": [
+        {
+          "error_type": "multi_turn:instance_state_mismatch",
+          "message": "Model instance for VehicleControlAPI does not match the state with ground truth instance.",
+          "state_difference_keys": [
+            "brakePedalStatus"
+          ],
+          "missing_items": []
+        }
+      ],
+      "observed_tool_calls": 2,
+      "turns": [
+        {
+          "turn": 3,
+          "tool_sequence": [
+            "releaseBrakePedal",
+            "setCruiseControl"
+          ],
+          "labels": [
+            "additional_vehicle_state_change"
+          ],
+          "rationale": "先实际释放刹车，再设置65mph/100m巡航，返回active及正确参数。释放刹车是额外车辆状态改变；是否必要由当前可见证据不能确定，不当作错误操作。",
+          "uncertainties": [
+            "没有本轮工具报错证明释放刹车是必要恢复步骤，也不据此判为有害。"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_79",
+      "domain": "vehicle",
+      "boundary_turns": 2,
+      "arm": "graph-record-view-full",
+      "passed": true,
+      "case": "case-002",
+      "anonymous_id": "trajectory-003",
+      "record_active": false,
+      "R_E_first_request_exact_equal": true,
+      "official_score_source": "ind04-g9-continuation-k2/runs/claude-sonnet-5-5/multi_turn_long_context_79/boundary-2/1/graph-record-view-full/official-score.json",
+      "official_diagnostics_summary": [],
+      "observed_tool_calls": 1,
+      "turns": [
+        {
+          "turn": 3,
+          "tool_sequence": [
+            "setCruiseControl"
+          ],
+          "labels": [
+            "post_action_optional_question"
+          ],
+          "rationale": "直接设置巡航返回active、65和100；之后询问是否释放刹车是在本轮要求已执行之后，不标阻塞确认。",
+          "uncertainties": []
+        }
+      ]
+    }
+  ],
+  "paired_trajectory_token_deltas": [
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_121",
+      "A_total_tokens": 10570,
+      "E_total_tokens": 12773,
+      "R_total_tokens": 12988,
+      "R_minus_A": 2418,
+      "R_minus_E": 215
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_123",
+      "A_total_tokens": 9550,
+      "E_total_tokens": 11092,
+      "R_total_tokens": 11495,
+      "R_minus_A": 1945,
+      "R_minus_E": 403
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_165",
+      "A_total_tokens": 33726,
+      "E_total_tokens": 37427,
+      "R_total_tokens": 37648,
+      "R_minus_A": 3922,
+      "R_minus_E": 221
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_59",
+      "A_total_tokens": 73409,
+      "E_total_tokens": 80258,
+      "R_total_tokens": 80051,
+      "R_minus_A": 6642,
+      "R_minus_E": -207
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_71",
+      "A_total_tokens": 38607,
+      "E_total_tokens": 61045,
+      "R_total_tokens": 61482,
+      "R_minus_A": 22875,
+      "R_minus_E": 437
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_111",
+      "A_total_tokens": 17688,
+      "E_total_tokens": 19748,
+      "R_total_tokens": 19971,
+      "R_minus_A": 2283,
+      "R_minus_E": 223
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_138",
+      "A_total_tokens": 558490,
+      "E_total_tokens": 226205,
+      "R_total_tokens": 226984,
+      "R_minus_A": -331506,
+      "R_minus_E": 779
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_157",
+      "A_total_tokens": 34340,
+      "E_total_tokens": 19972,
+      "R_total_tokens": 19992,
+      "R_minus_A": -14348,
+      "R_minus_E": 20
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_162",
+      "A_total_tokens": 66212,
+      "E_total_tokens": 91435,
+      "R_total_tokens": 59712,
+      "R_minus_A": -6500,
+      "R_minus_E": -31723
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_167",
+      "A_total_tokens": 36121,
+      "E_total_tokens": 39105,
+      "R_total_tokens": 39136,
+      "R_minus_A": 3015,
+      "R_minus_E": 31
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_79",
+      "A_total_tokens": 11786,
+      "E_total_tokens": 20086,
+      "R_total_tokens": 13267,
+      "R_minus_A": 1481,
+      "R_minus_E": -6819
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_80",
+      "A_total_tokens": 118779,
+      "E_total_tokens": 124817,
+      "R_total_tokens": 124924,
+      "R_minus_A": 6145,
+      "R_minus_E": 107
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_121",
+      "A_total_tokens": 4191,
+      "E_total_tokens": 5129,
+      "R_total_tokens": 5347,
+      "R_minus_A": 1156,
+      "R_minus_E": 218
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_123",
+      "A_total_tokens": 4215,
+      "E_total_tokens": 5280,
+      "R_total_tokens": 5545,
+      "R_minus_A": 1330,
+      "R_minus_E": 265
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_165",
+      "A_total_tokens": 14829,
+      "E_total_tokens": 17148,
+      "R_total_tokens": 17181,
+      "R_minus_A": 2352,
+      "R_minus_E": 33
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_59",
+      "A_total_tokens": 16184,
+      "E_total_tokens": 18855,
+      "R_total_tokens": 18838,
+      "R_minus_A": 2654,
+      "R_minus_E": -17
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_111",
+      "A_total_tokens": 8913,
+      "E_total_tokens": 10120,
+      "R_total_tokens": 10303,
+      "R_minus_A": 1390,
+      "R_minus_E": 183
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_138",
+      "A_total_tokens": 147310,
+      "E_total_tokens": 150140,
+      "R_total_tokens": 150759,
+      "R_minus_A": 3449,
+      "R_minus_E": 619
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_157",
+      "A_total_tokens": 14756,
+      "E_total_tokens": 9134,
+      "R_total_tokens": 15593,
+      "R_minus_A": 837,
+      "R_minus_E": 6459
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_162",
+      "A_total_tokens": 31226,
+      "E_total_tokens": 34486,
+      "R_total_tokens": 33625,
+      "R_minus_A": 2399,
+      "R_minus_E": -861
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_167",
+      "A_total_tokens": 19497,
+      "E_total_tokens": 21867,
+      "R_total_tokens": 21866,
+      "R_minus_A": 2369,
+      "R_minus_E": -1
+    },
+    {
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_80",
+      "A_total_tokens": 38316,
+      "E_total_tokens": 40651,
+      "R_total_tokens": 40652,
+      "R_minus_A": 2336,
+      "R_minus_E": 1
+    }
+  ],
+  "token_delta_summary": {
+    "gpt-4.1": {
+      "paired_conditions": 10,
+      "mean_R_minus_A": 2027.2,
+      "median_R_minus_A": 2344.0,
+      "mean_R_minus_E": 689.9,
+      "median_R_minus_E": 108.0
+    },
+    "claude-sonnet-5-5": {
+      "paired_conditions": 12,
+      "mean_R_minus_A": -25135.666666666668,
+      "median_R_minus_A": 2350.5,
+      "mean_R_minus_E": -3026.0833333333335,
+      "median_R_minus_E": 161.0
+    }
+  },
+  "limits": [
+    "No labels, evaluation, outcomes, exclusions or source trajectories changed.",
+    "Token differences include downstream call choices; not evidence deletion or compression.",
+    "Same official outcomes can hide behavioral differences; uncertainty labels retained."
+  ]
+}

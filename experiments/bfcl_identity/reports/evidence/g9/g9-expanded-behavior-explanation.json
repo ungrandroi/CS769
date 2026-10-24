@@ -1,0 +1,829 @@
+{
+  "version": "g9-expanded-post-unmask-behavior-explanation-v1",
+  "created_at_utc": "2026-10-24T17:48:10.606145+00:00",
+  "scope": {
+    "registered_task_ids": 12,
+    "registered_families": 12,
+    "registered_model_prefixes": 24,
+    "eligible_model_prefixes": 18,
+    "excluded_model_prefixes": 6,
+    "continuation_trajectories": 36,
+    "repeat_per_arm_condition": 1
+  },
+  "sources": {
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-unmasked-summary.json": "e87d469b64d8f4c4fc2eff6922b6dd6efe55b26c40cbf4ac91233e4e9003ceb7",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-blind-labels.json": "73910e1d6132090397b80dc2d36e2d03aa55666fdb4d74b6016521ed164fa0a3",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-private-blind-key.json": "e695dd55c5e7bf0d0c762eb18fc6881a2834b3dc7abe1fd4da5cf72655b4184e",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_190/boundary-3/1/graph-record-view-full/official-score.json": "0bcf307fa5ac41cd62dc9bb1365c1e80197883af4da0dbb03d2c09f59b084fa0",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_190/boundary-3/1/graph-record-view-full/score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json": "45fcb54a2c0c85cbb731faff7a767dad2c3de2741ab863f827128d8dd0e1d486",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_190/boundary-3/1/identity/official-score.json": "0df10f8f92711dd4c6f65bcabb6d940031c0b8977f95850b98f36f2a6493c7db",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_190/boundary-3/1/identity/score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json": "939d81428630068ae9e6d0bba0b4c341f3d4f7f9f8832f3ee9f9e36875fa9d58",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_188/boundary-3/1/graph-record-view-full/official-score.json": "7862520d7f889ef4e9ba6d5ac4dc35cb98af325aa2262d94eeaa2e49dcd5179d",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_188/boundary-3/1/graph-record-view-full/score/anthropic_claude-sonnet-5-5-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json": "3646a4bddd2652fe2533aea5d597abdc44717694f40164c421591289578948d1",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_188/boundary-3/1/identity/official-score.json": "109e03dc9f3507c2406676516a97d04026709b5aafb86e3f5bc229e6b97cdbdc",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_188/boundary-3/1/identity/score/anthropic_claude-sonnet-5-5-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json": "5c68f9c08488f0569292ade7665a7b4b856487addbaa533c75b61b9dbacc813e",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_196/boundary-3/1/identity/official-score.json": "3109bad4d878f77a4b44f2373d65ff165082a7bf5f2c5a8d1abd1dbb1ed458a4",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_196/boundary-3/1/identity/score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json": "53966e94117e5a74631112103c6f1f2e2b34c25c9f122a400bb9252bc1f49022",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_196/boundary-3/1/graph-record-view-full/official-score.json": "59818a872e97dbf40e350c445bd4141c4d7a22697697357ba42402f36b51bb41",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_196/boundary-3/1/graph-record-view-full/score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json": "ce9b130e792e713823526aab2e68571ee1057e680d6edc70f5f2b6c986f028cb"
+  },
+  "source_policy": "Read after root admitted frozen complete labels and summary. Labels and official outcomes are immutable. No rerun or semantic regrade.",
+  "paired_official_failures": [
+    {
+      "case": "case-013",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_190",
+      "arm": "graph-record-view-full",
+      "passed": false,
+      "score": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_190/boundary-3/1/graph-record-view-full/official-score.json",
+        "sha256": "0bcf307fa5ac41cd62dc9bb1365c1e80197883af4da0dbb03d2c09f59b084fa0"
+      },
+      "checker": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_190/boundary-3/1/graph-record-view-full/score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json",
+        "sha256": "45fcb54a2c0c85cbb731faff7a767dad2c3de2741ab863f827128d8dd0e1d486",
+        "jsonl_line": 2
+      },
+      "official_reason": {
+        "error_type": "multi_turn:instance_state_mismatch",
+        "error_message": "Model instance for TicketAPI does not match the state with ground truth instance.",
+        "state_differences": {
+          "ticket_queue": {
+            "model": [
+              {
+                "ticket_001": {
+                  "title": "Billing Concern",
+                  "priority": "priority-2",
+                  "description": "Detailed exchange with customer support regarding unexpected charge."
+                }
+              },
+              {
+                "id": 1,
+                "title": "Billing Concern",
+                "description": "Detailed exchange with customer support regarding unexpected charge. Customer support did not resolve the concern, and the user wishes to escalate this issue for further review.",
+                "status": "Open",
+                "priority": 2,
+                "created_by": "john"
+              }
+            ],
+            "ground_truth": [
+              {
+                "ticket_001": {
+                  "title": "Billing Concern",
+                  "priority": "priority-2",
+                  "description": "Detailed exchange with customer support regarding unexpected charge."
+                }
+              },
+              {
+                "id": 1,
+                "title": "Billing Concern",
+                "description": "Detailed exchange with customer support regarding unexpected charge.",
+                "status": "Open",
+                "priority": 2,
+                "created_by": "john"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case": "case-013",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_190",
+      "arm": "identity",
+      "passed": false,
+      "score": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_190/boundary-3/1/identity/official-score.json",
+        "sha256": "0df10f8f92711dd4c6f65bcabb6d940031c0b8977f95850b98f36f2a6493c7db"
+      },
+      "checker": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_190/boundary-3/1/identity/score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json",
+        "sha256": "939d81428630068ae9e6d0bba0b4c341f3d4f7f9f8832f3ee9f9e36875fa9d58",
+        "jsonl_line": 2
+      },
+      "official_reason": {
+        "error_type": "multi_turn:instance_state_mismatch",
+        "error_message": "Model instance for TicketAPI does not match the state with ground truth instance.",
+        "state_differences": {
+          "ticket_queue": {
+            "model": [
+              {
+                "ticket_001": {
+                  "title": "Billing Concern",
+                  "priority": "priority-2",
+                  "description": "Detailed exchange with customer support regarding unexpected charge."
+                }
+              },
+              {
+                "id": 1,
+                "title": "Billing Concern",
+                "description": "Detailed exchange with customer support regarding unexpected charge. Customer support did not resolve the concern, and the issue remains unresolved. Please escalate this billing issue for further investigation.",
+                "status": "Open",
+                "priority": 2,
+                "created_by": "john"
+              }
+            ],
+            "ground_truth": [
+              {
+                "ticket_001": {
+                  "title": "Billing Concern",
+                  "priority": "priority-2",
+                  "description": "Detailed exchange with customer support regarding unexpected charge."
+                }
+              },
+              {
+                "id": 1,
+                "title": "Billing Concern",
+                "description": "Detailed exchange with customer support regarding unexpected charge.",
+                "status": "Open",
+                "priority": 2,
+                "created_by": "john"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case": "case-011",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_188",
+      "arm": "graph-record-view-full",
+      "passed": false,
+      "score": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_188/boundary-3/1/graph-record-view-full/official-score.json",
+        "sha256": "7862520d7f889ef4e9ba6d5ac4dc35cb98af325aa2262d94eeaa2e49dcd5179d"
+      },
+      "checker": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_188/boundary-3/1/graph-record-view-full/score/anthropic_claude-sonnet-5-5-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json",
+        "sha256": "3646a4bddd2652fe2533aea5d597abdc44717694f40164c421591289578948d1",
+        "jsonl_line": 2
+      },
+      "official_reason": {
+        "error_type": "multi_turn:execution_response_mismatch",
+        "error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 4.",
+        "missing_items": [
+          "{\"authentication_status\": false}"
+        ]
+      }
+    },
+    {
+      "case": "case-011",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_188",
+      "arm": "identity",
+      "passed": false,
+      "score": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_188/boundary-3/1/identity/official-score.json",
+        "sha256": "109e03dc9f3507c2406676516a97d04026709b5aafb86e3f5bc229e6b97cdbdc"
+      },
+      "checker": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_188/boundary-3/1/identity/score/anthropic_claude-sonnet-5-5-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json",
+        "sha256": "5c68f9c08488f0569292ade7665a7b4b856487addbaa533c75b61b9dbacc813e",
+        "jsonl_line": 2
+      },
+      "official_reason": {
+        "error_type": "multi_turn:execution_response_mismatch",
+        "error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 4.",
+        "missing_items": [
+          "{\"authentication_status\": false}"
+        ]
+      }
+    },
+    {
+      "case": "case-007",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_196",
+      "arm": "identity",
+      "passed": false,
+      "score": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_196/boundary-3/1/identity/official-score.json",
+        "sha256": "3109bad4d878f77a4b44f2373d65ff165082a7bf5f2c5a8d1abd1dbb1ed458a4"
+      },
+      "checker": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_196/boundary-3/1/identity/score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json",
+        "sha256": "53966e94117e5a74631112103c6f1f2e2b34c25c9f122a400bb9252bc1f49022",
+        "jsonl_line": 2
+      },
+      "official_reason": {
+        "error_type": "multi_turn:execution_response_mismatch",
+        "error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 4.",
+        "missing_items": [
+          "{\"id\": 1, \"title\": \"Cancellation Issue\", \"description\": \"Error encountered during flight cancellation process\", \"status\": \"Open\"}"
+        ]
+      }
+    },
+    {
+      "case": "case-007",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_196",
+      "arm": "graph-record-view-full",
+      "passed": false,
+      "score": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_196/boundary-3/1/graph-record-view-full/official-score.json",
+        "sha256": "59818a872e97dbf40e350c445bd4141c4d7a22697697357ba42402f36b51bb41"
+      },
+      "checker": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_196/boundary-3/1/graph-record-view-full/score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json",
+        "sha256": "ce9b130e792e713823526aab2e68571ee1057e680d6edc70f5f2b6c986f028cb",
+        "jsonl_line": 2
+      },
+      "official_reason": {
+        "error_type": "multi_turn:instance_state_mismatch",
+        "error_message": "Model instance for TicketAPI does not match the state with ground truth instance.",
+        "state_differences": {
+          "ticket_queue": {
+            "model": [
+              {
+                "id": 1,
+                "title": "Cancellation Issue",
+                "description": "Error encountered during flight cancellation process",
+                "status": "Open"
+              },
+              {
+                "id": 2,
+                "title": "Cancellation Issue",
+                "description": "Error encountered during flight cancellation process. Please investigate the issue that occurred while attempting to cancel the flight booking from London to Paris(Booking ID: 3426812). Ensure proper tracking and resolution.",
+                "status": "Open",
+                "priority": 3,
+                "created_by": "Michael Thompson"
+              }
+            ],
+            "ground_truth": [
+              {
+                "id": 1,
+                "title": "Cancellation Issue",
+                "description": "Error encountered during flight cancellation process",
+                "status": "Open"
+              },
+              {
+                "id": 2,
+                "title": "Cancellation Issue",
+                "description": "Error encountered during flight cancellation process.",
+                "status": "Open",
+                "priority": 1,
+                "created_by": "Michael Thompson"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "findings": [
+    {
+      "id": "F190",
+      "case": "case-013",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_190",
+      "official_pass": {
+        "identity": false,
+        "graph-record-view-full": false
+      },
+      "finding": "GPT-4.1 lc190: A 与 R 都已联系正确预订的客服，也都创建了工单；两组扩写了要求的 description。官方对两组均报告 TicketAPI instance_state_mismatch，差异是保存的描述不等于标准状态。",
+      "interpretation": "共同的精确字段遵循问题；这对照中不是 R 新增官方掉点。",
+      "evidence": [
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+          "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+          "pointer": "/cases/12/trajectories/0/turns/1/steps/0/events/0/arguments",
+          "quote": "{\"title\":\"Billing Concern\",\"description\":\"Detailed exchange with customer support regarding unexpected charge. Customer support did not resolve the concern, and the issue remains unresolved. Please escalate this billing issue for further investigation.\",\"priority\":2}"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_190/boundary-3/1/identity/score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json",
+          "sha256": "939d81428630068ae9e6d0bba0b4c341f3d4f7f9f8832f3ee9f9e36875fa9d58",
+          "pointer": "/error/error_type",
+          "jsonl_line": 2,
+          "quote": "multi_turn:instance_state_mismatch"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_190/boundary-3/1/identity/score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json",
+          "sha256": "939d81428630068ae9e6d0bba0b4c341f3d4f7f9f8832f3ee9f9e36875fa9d58",
+          "pointer": "/error/details/differences/ticket_queue/ground_truth/1/description",
+          "jsonl_line": 2,
+          "quote": "Detailed exchange with customer support regarding unexpected charge."
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+          "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+          "pointer": "/cases/12/trajectories/1/turns/1/steps/0/events/0/arguments",
+          "quote": "{\"title\":\"Billing Concern\",\"description\":\"Detailed exchange with customer support regarding unexpected charge. Customer support did not resolve the concern, and the user wishes to escalate this issue for further review.\",\"priority\":2}"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_190/boundary-3/1/graph-record-view-full/score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json",
+          "sha256": "45fcb54a2c0c85cbb731faff7a767dad2c3de2741ab863f827128d8dd0e1d486",
+          "pointer": "/error/error_type",
+          "jsonl_line": 2,
+          "quote": "multi_turn:instance_state_mismatch"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_190/boundary-3/1/graph-record-view-full/score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json",
+          "sha256": "45fcb54a2c0c85cbb731faff7a767dad2c3de2741ab863f827128d8dd0e1d486",
+          "pointer": "/error/details/differences/ticket_queue/ground_truth/1/description",
+          "jsonl_line": 2,
+          "quote": "Detailed exchange with customer support regarding unexpected charge."
+        }
+      ],
+      "limits": [
+        "盲审认为“详细往来”与给定固定文本有解释空间；官方失败仍原样保留，不据语义重评为成功。"
+      ]
+    },
+    {
+      "id": "F196",
+      "case": "case-007",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_196",
+      "official_pass": {
+        "identity": false,
+        "graph-record-view-full": false
+      },
+      "finding": "GPT-4.1 lc196: 两组官方均失败，但原因不同。A 使用用户给定的完整描述创建 ID 2 工单；官方随后报缺少历史 ID 1 的创建输出。R 除了创建 ID 2，还扩写 description 并显式设 priority=3（标准状态为1），先触发 TicketAPI 状态不匹配。",
+      "interpretation": "同为 fail 掩盖了 R 独有的参数偏离；不能只报两组失败数相同。R 的描述扩写与优先级修改是直接可见差异，但单次对照不能归因于图机制。",
+      "evidence": [
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+          "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+          "pointer": "/cases/6/trajectories/1/turns/0/steps/0/events/0/arguments",
+          "quote": "{\"title\":\"Cancellation Issue\",\"description\":\"Error encountered during flight cancellation process.\"}"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+          "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+          "pointer": "/cases/6/trajectories/0/turns/0/steps/0/events/0/arguments",
+          "quote": "{\"title\":\"Cancellation Issue\",\"description\":\"Error encountered during flight cancellation process. Please investigate the issue that occurred while attempting to cancel the flight booking from London to Paris (Booking ID: 3426812). Ensure proper tracking and resolution.\",\"priority\":3}"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_196/boundary-3/1/identity/score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json",
+          "sha256": "53966e94117e5a74631112103c6f1f2e2b34c25c9f122a400bb9252bc1f49022",
+          "pointer": "/error/details/missing_items/0",
+          "jsonl_line": 2,
+          "quote": "{\"id\": 1, \"title\": \"Cancellation Issue\", \"description\": \"Error encountered during flight cancellation process\", \"status\": \"Open\"}"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_196/boundary-3/1/graph-record-view-full/score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json",
+          "sha256": "ce9b130e792e713823526aab2e68571ee1057e680d6edc70f5f2b6c986f028cb",
+          "pointer": "/error/details/differences/ticket_queue/ground_truth/1/priority",
+          "jsonl_line": 2,
+          "value": 1
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/gpt-4.1/multi_turn_long_context_196/boundary-3/1/graph-record-view-full/score/azure_gpt-4.1-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json",
+          "sha256": "ce9b130e792e713823526aab2e68571ee1057e680d6edc70f5f2b6c986f028cb",
+          "pointer": "/error/details/differences/ticket_queue/model/1/priority",
+          "jsonl_line": 2,
+          "value": 3
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-blind-labels.json",
+          "sha256": "73910e1d6132090397b80dc2d36e2d03aa55666fdb4d74b6016521ed164fa0a3",
+          "pointer": "/cases/6/trajectories/0/turns/0/extra_side_effect",
+          "value": "unclear"
+        }
+      ],
+      "limits": [
+        "R 的额外字段属于同一次被请求的工单创建，不自动等同新增独立写操作；冻结盲审 extra_side_effect=unclear。",
+        "A 的后续 resolve_ticket(1, \"\") 符合当前明确 ID；不因上轮新建 ID2 就标为错对象。",
+        "仅按原 checker 记录指出历史输出匹配缺口，未修改评测，也未判断该 checker 要求是否合理。"
+      ]
+    },
+    {
+      "id": "F188",
+      "case": "case-011",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_188",
+      "official_pass": {
+        "identity": false,
+        "graph-record-view-full": false
+      },
+      "finding": "Claude lc188: 两组成功发出指定推文，但原 checker 在零基 turn4（可见第5轮）要求执行结果中包含 authentication_status:false；两组都缺少它，因此都报 execution_response_mismatch。",
+      "interpretation": "这是两组共同的官方轨迹要求缺口，不是 empty_turn；后续转推来源问题发生在第6轮，不是本次官方失败原因。",
+      "evidence": [
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_188/boundary-3/1/identity/score/anthropic_claude-sonnet-5-5-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json",
+          "sha256": "5c68f9c08488f0569292ade7665a7b4b856487addbaa533c75b61b9dbacc813e",
+          "pointer": "/error/details/missing_items/0",
+          "jsonl_line": 2,
+          "quote": "{\"authentication_status\": false}"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/ext03-g9-continuation-k3/runs/claude-sonnet-5-5/multi_turn_long_context_188/boundary-3/1/graph-record-view-full/score/anthropic_claude-sonnet-5-5-FC/multi_turn/BFCL_v4_multi_turn_long_context_score.json",
+          "sha256": "3646a4bddd2652fe2533aea5d597abdc44717694f40164c421591289578948d1",
+          "pointer": "/error/details/missing_items/0",
+          "jsonl_line": 2,
+          "quote": "{\"authentication_status\": false}"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+          "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+          "pointer": "/cases/10/trajectories/0/turns/1/steps/0/events/0/result",
+          "quote": "{\"id\": 2, \"username\": \"michael_smith\", \"content\": \"Excited for my upcoming adventure!\", \"tags\": [\"#TravelGoals\"], \"mentions\": [\"@TravelBuddy\"]}"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+          "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+          "pointer": "/cases/10/trajectories/1/turns/1/steps/1/events/0/result",
+          "quote": "{\"id\": 2, \"username\": \"michael_smith\", \"content\": \"Excited for my upcoming adventure!\", \"tags\": [\"#TravelGoals\"], \"mentions\": [\"@TravelBuddy\"]}"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+          "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+          "pointer": "/cases/10/trajectories/1/turns/1/steps/0/events/0/result",
+          "quote": "{\"login_status\": true}"
+        }
+      ],
+      "limits": [
+        "原样保留官方失败，不能因为推文发布成功将其改判通过；也不能把后续来源核对差异当成这次官方失败的因果解释。"
+      ]
+    },
+    {
+      "id": "D188",
+      "case": "case-011",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_188",
+      "official_pass": {
+        "identity": false,
+        "graph-record-view-full": false
+      },
+      "finding": "同一 Claude lc188 第6轮，A 与 R 都按明确 ID0 执行 retweet。A 在写入之后 get_tweet(0)，看到作者 michael_smith 与用户描述的 @TravelInsider 不符；R 没有查原帖，并明确承认来源尚未核对。",
+      "interpretation": "观察到 A 的后置来源核查、R 的未核查差异。冻结盲审 A=wrong_source observed，R=unclear；R 的 observed 计数更低是缺少观察，不能解释成来源准确率更高。",
+      "evidence": [
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+          "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+          "pointer": "/cases/10/trajectories/0/turns/2/steps/0/events/0/arguments",
+          "quote": "{\"tweet_id\": 0}"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+          "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+          "pointer": "/cases/10/trajectories/0/turns/2/steps/1/events/0/result",
+          "quote": "{\"id\": 0, \"username\": \"michael_smith\", \"content\": \"Excited for my upcoming adventure! #TravelGoals @TravelBuddy\", \"tags\": [\"#TravelGoals\"], \"mentions\": [\"@TravelBuddy\"]}"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+          "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+          "pointer": "/cases/10/trajectories/1/turns/2/steps/0/events/0/arguments",
+          "quote": "{\"tweet_id\": 0}"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+          "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+          "pointer": "/cases/10/trajectories/1/turns/2/steps/1/events/0/content/0/text",
+          "quote": "I didn't open the tweet first, so I haven't checked that it's the @TravelInsider post about dream destinations."
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-blind-labels.json",
+          "sha256": "73910e1d6132090397b80dc2d36e2d03aa55666fdb4d74b6016521ed164fa0a3",
+          "pointer": "/cases/10/trajectories/0/turns/2/wrong_object_or_source",
+          "value": "observed"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-blind-labels.json",
+          "sha256": "73910e1d6132090397b80dc2d36e2d03aa55666fdb4d74b6016521ed164fa0a3",
+          "pointer": "/cases/10/trajectories/1/turns/2/wrong_object_or_source",
+          "value": "unclear"
+        }
+      ],
+      "limits": [
+        "不能拿 A 的 get_tweet 返回替 R 判定原帖身份。两组都遵循明示 ID0；用户的 ID 与描述有潜在冲突，真实目标无法从 R 本轨迹确认。",
+        "A 的核查发生在转推后，也没有实际撤销或改转，不能说 A 已修复；单次差异不证明 R 因结构丧失查证能力。"
+      ]
+    },
+    {
+      "id": "P170",
+      "case": "case-001",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_170",
+      "official_pass": {
+        "identity": true,
+        "graph-record-view-full": true
+      },
+      "finding": "GPT-4.1 lc170 两组官方均通过：A 只取消预订；R 取消后另向同一预订客服请求退款，工具返回 Booking not found，随后无重试。两组都没有退款到账证据。",
+      "interpretation": "通过分数未覆盖退款证据完整性；R 独有一次失败的客服尝试且未恢复，但该调用服务于用户明确请求，不能算多余已执行写入或新增官方退化。",
+      "evidence": [
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+          "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+          "pointer": "/cases/0/trajectories/1/turns/0/steps/0/events/0/result",
+          "quote": "{\"cancel_status\": true}"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+          "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+          "pointer": "/cases/0/trajectories/0/turns/0/steps/1/events/0/result",
+          "quote": "{\"error\": \"Booking not found\"}"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+          "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+          "pointer": "/cases/0/trajectories/0/turns/0/steps/2/events/0/content/0/text",
+          "quote": "The refund process should be initiated automatically to your account."
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+          "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+          "pointer": "/cases/0/trajectories/1/turns/0/steps/1/events/0/content/0/text",
+          "quote": "Customer support will process your refund to your account."
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-blind-labels.json",
+          "sha256": "73910e1d6132090397b80dc2d36e2d03aa55666fdb4d74b6016521ed164fa0a3",
+          "pointer": "/cases/0/trajectories/0/turns/0/same_turn_tool_error_recovery",
+          "value": "not_observed"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-blind-labels.json",
+          "sha256": "73910e1d6132090397b80dc2d36e2d03aa55666fdb4d74b6016521ed164fa0a3",
+          "pointer": "/cases/0/trajectories/0/turns/0/pause_or_confirmation_after_error",
+          "value": "not_observed"
+        }
+      ],
+      "limits": [
+        "“报错后未重试”与冻结的“报错后停下索要确认”是不同事件：本轮后者 not_observed；结尾是可选跟进。",
+        "R 客服参数与当前预订一致，不能仅凭 Booking not found 推断为错对象。A 根本未在本轮联系支持，因此不能称其客服处理优于 R。"
+      ]
+    },
+    {
+      "id": "U095",
+      "case": "case-018",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_95",
+      "official_pass": {
+        "identity": true,
+        "graph-record-view-full": true
+      },
+      "finding": "Claude base95 两组官方均通过；两组都查 Emma→USR008、发送980 miles消息并查看已发送消息。工具没有显示当前账号主体，是否使用请求的 USR005 不能确认。",
+      "interpretation": "两组共同未消除的账号来源不确定性；不是 R 独有的已证实错误。",
+      "evidence": [
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-blind-labels.json",
+          "sha256": "73910e1d6132090397b80dc2d36e2d03aa55666fdb4d74b6016521ed164fa0a3",
+          "pointer": "/cases/17/trajectories/1/turns/0/wrong_object_or_source",
+          "value": "unclear"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-blind-labels.json",
+          "sha256": "73910e1d6132090397b80dc2d36e2d03aa55666fdb4d74b6016521ed164fa0a3",
+          "pointer": "/cases/17/trajectories/1/turns/1/wrong_object_or_source",
+          "value": "unclear"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-blind-labels.json",
+          "sha256": "73910e1d6132090397b80dc2d36e2d03aa55666fdb4d74b6016521ed164fa0a3",
+          "pointer": "/cases/17/trajectories/0/turns/0/wrong_object_or_source",
+          "value": "unclear"
+        },
+        {
+          "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-blind-labels.json",
+          "sha256": "73910e1d6132090397b80dc2d36e2d03aa55666fdb4d74b6016521ed164fa0a3",
+          "pointer": "/cases/17/trajectories/0/turns/1/wrong_object_or_source",
+          "value": "unclear"
+        }
+      ],
+      "limits": [
+        "收件人列表中出现 USR005 不能证明发件人身份，也不能证明用了错误账号。"
+      ]
+    }
+  ],
+  "behavior_counts": [
+    {
+      "model": "gpt-4.1",
+      "arm": "identity",
+      "trajectory_count": 8,
+      "observed_turn_count": 13,
+      "official_pass_count": 6,
+      "frozen_blind_status_counts": {
+        "zero_tool_turn": {
+          "turn_counts": {
+            "False": 13
+          },
+          "trajectory_counts": {
+            "False": 8
+          }
+        },
+        "pause_or_confirmation_after_error": {
+          "turn_counts": {
+            "not_observed": 13
+          },
+          "trajectory_counts": {
+            "not_observed": 8
+          }
+        },
+        "wrong_object_or_source": {
+          "turn_counts": {
+            "not_observed": 13
+          },
+          "trajectory_counts": {
+            "not_observed": 8
+          }
+        },
+        "extra_side_effect": {
+          "turn_counts": {
+            "not_observed": 13
+          },
+          "trajectory_counts": {
+            "not_observed": 8
+          }
+        },
+        "same_turn_tool_error_recovery": {
+          "turn_counts": {
+            "not_applicable": 13
+          },
+          "trajectory_counts": {
+            "not_applicable": 8
+          }
+        }
+      },
+      "explicit_error_key_tool_results": []
+    },
+    {
+      "model": "gpt-4.1",
+      "arm": "graph-record-view-full",
+      "trajectory_count": 8,
+      "observed_turn_count": 13,
+      "official_pass_count": 6,
+      "frozen_blind_status_counts": {
+        "zero_tool_turn": {
+          "turn_counts": {
+            "False": 13
+          },
+          "trajectory_counts": {
+            "False": 8
+          }
+        },
+        "pause_or_confirmation_after_error": {
+          "turn_counts": {
+            "not_observed": 13
+          },
+          "trajectory_counts": {
+            "not_observed": 8
+          }
+        },
+        "wrong_object_or_source": {
+          "turn_counts": {
+            "not_observed": 13
+          },
+          "trajectory_counts": {
+            "not_observed": 8
+          }
+        },
+        "extra_side_effect": {
+          "turn_counts": {
+            "not_observed": 12,
+            "unclear": 1
+          },
+          "trajectory_counts": {
+            "not_observed": 8,
+            "unclear": 1
+          }
+        },
+        "same_turn_tool_error_recovery": {
+          "turn_counts": {
+            "not_applicable": 12,
+            "not_observed": 1
+          },
+          "trajectory_counts": {
+            "not_applicable": 8,
+            "not_observed": 1
+          }
+        }
+      },
+      "explicit_error_key_tool_results": [
+        {
+          "case": "case-001",
+          "task": "multi_turn_long_context_170",
+          "turn": 4,
+          "tool": "contact_customer_support",
+          "evidence": {
+            "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/analysis/g9-expanded-visible-blind-packet.json",
+            "sha256": "f571af8cfb231f98158d41ecbf8fbe3db1242a3408b959dca45c57f90b669052",
+            "pointer": "/cases/0/trajectories/0/turns/0/steps/1/events/0/result",
+            "quote": "{\"error\": \"Booking not found\"}"
+          }
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "arm": "identity",
+      "trajectory_count": 10,
+      "observed_turn_count": 16,
+      "official_pass_count": 9,
+      "frozen_blind_status_counts": {
+        "zero_tool_turn": {
+          "turn_counts": {
+            "False": 16
+          },
+          "trajectory_counts": {
+            "False": 10
+          }
+        },
+        "pause_or_confirmation_after_error": {
+          "turn_counts": {
+            "not_observed": 16
+          },
+          "trajectory_counts": {
+            "not_observed": 10
+          }
+        },
+        "wrong_object_or_source": {
+          "turn_counts": {
+            "not_observed": 13,
+            "observed": 1,
+            "unclear": 2
+          },
+          "trajectory_counts": {
+            "not_observed": 9,
+            "observed": 1,
+            "unclear": 1
+          }
+        },
+        "extra_side_effect": {
+          "turn_counts": {
+            "not_observed": 16
+          },
+          "trajectory_counts": {
+            "not_observed": 10
+          }
+        },
+        "same_turn_tool_error_recovery": {
+          "turn_counts": {
+            "not_applicable": 16
+          },
+          "trajectory_counts": {
+            "not_applicable": 10
+          }
+        }
+      },
+      "explicit_error_key_tool_results": []
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "arm": "graph-record-view-full",
+      "trajectory_count": 10,
+      "observed_turn_count": 16,
+      "official_pass_count": 9,
+      "frozen_blind_status_counts": {
+        "zero_tool_turn": {
+          "turn_counts": {
+            "False": 16
+          },
+          "trajectory_counts": {
+            "False": 10
+          }
+        },
+        "pause_or_confirmation_after_error": {
+          "turn_counts": {
+            "not_observed": 16
+          },
+          "trajectory_counts": {
+            "not_observed": 10
+          }
+        },
+        "wrong_object_or_source": {
+          "turn_counts": {
+            "not_observed": 13,
+            "unclear": 3
+          },
+          "trajectory_counts": {
+            "not_observed": 9,
+            "unclear": 2
+          }
+        },
+        "extra_side_effect": {
+          "turn_counts": {
+            "not_observed": 16
+          },
+          "trajectory_counts": {
+            "not_observed": 10
+          }
+        },
+        "same_turn_tool_error_recovery": {
+          "turn_counts": {
+            "not_applicable": 16
+          },
+          "trajectory_counts": {
+            "not_applicable": 10
+          }
+        }
+      },
+      "explicit_error_key_tool_results": []
+    }
+  ],
+  "count_definitions": {
+    "unit": "Visible continuation user-turn, with separate trajectory counts; shared prefixes and unobserved turns excluded.",
+    "zero_tool_turn": "Exact frozen boolean, independently grounded in tool inventory.",
+    "error_stop": "Frozen pause_or_confirmation_after_error observed. This does not equate every optional closing offer or unretried error with a blocking confirmation.",
+    "wrong_source": "Observed and unclear reported separately; absence of a verification tool is not proof of correct source.",
+    "explicit_error_key_tool_results": "Additional deterministic count of continuation tool result JSON dictionaries with nonempty error field, not a new semantic label."
+  },
+  "conclusion": "8 GPT condition pairs and 10 Claude pairs have equal official outcomes (6/8 and9/10 each arm), but equal official scores do not establish behavioral equivalence or noninferiority. R-only ticket parameter deviation and an unretried support error remain concrete follow-up cases.",
+  "non_claims": [
+    "No official regression or recovery in these18 paired conditions; not a claim that all individual behaviors are equal.",
+    "No semantic success rate or label edits after unmasking.",
+    "No causal attribution to record graph from one operational repeat.",
+    "No overall BFCL pass-rate preservation claim."
+  ]
+}

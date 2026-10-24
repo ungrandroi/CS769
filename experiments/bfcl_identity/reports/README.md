@@ -1,5 +1,7 @@
 # BFCL 图记忆实验报告
 
+最新结果见 [G9 扩大验证](g9-expanded-validation-results.md)：新增 GPT 6/8 对 6/8、Claude 9/10 对 9/10；完整图替代历史、不压缩。两批累计与行为差异均在报告内，未宣称总体非劣或结构收益。
+
 最新图替代结果见 [G5 小规模验证](g5-graph-replacement.md)：图替代完整原生前缀，尚未压缩；开发与冻结验证分开报告。
 
 此前 V2–V5 阶段先读 [实验总报告](experiment-summary.md)：方法定义、统一 token 口径、各阶段模型与样本数、官方通过率以及结论边界。每项结论链接到 [详细证据索引](experiment-evidence.md)；总表精确值见 [汇总数据](evidence/experiment-summary-data.json)。
@@ -13,6 +15,7 @@
 | V4 回归 | [旧集回归](v4-regression-review.md) / [HTML](v4-regression-review.html) | A 与 D：D 将索引放入第二轮用户消息的 application_memory 块；两 GPT |
 | V4 诊断 | [180 条放置诊断](v4-placement-diagnostic.md) / [HTML](v4-placement-diagnostic.html) | GPT-5-mini，A/B/D 随机交错；随后保留 B 作为验证格式 |
 | V5 | [冻结 B 的新题验证](v5-b-validation-results.md) / [HTML](v5-b-validation-results.html) | 两 GPT；筛选 144 个模型×条件，完成 348 条续跑；通过率、行为、token、费用 |
+| G9 | [新增验证](g9-expanded-validation-results.md) / [上一批](g9-independent-validation-results.md) / [结构示例](g9-structure-method.md) | GPT-4.1／Claude；两批不同新题，配对成绩、行为、token、费用；[附件](evidence/g9/README.md) |
 | G5 | [完整事件图替代历史](g5-graph-replacement.md) / [HTML](g5-graph-replacement.html) | GPT-4.1／Claude；开发各 4 题族 × 3 次，冻结验证分别 11／12 题族；完整证据、不压缩、官方 eval 不变 |
 | 证据 | [逐句证据索引](experiment-evidence.md) / [HTML](experiment-evidence.html) | 方法代码节选、各阶段来源与计数解释 |
 

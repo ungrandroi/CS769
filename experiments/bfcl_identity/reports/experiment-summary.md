@@ -1,5 +1,7 @@
 # 图记忆表示实验简报
 
+> 后续更新（2026-10-24）：[G9 扩大验证与两批累计](g9-expanded-validation-results.md) 已发布：两批独立题中，identity/G9 分别为 GPT 12/18、Claude 19/22，逐题通过情况一致；仍有个别参数行为差异，尚未证明总体保率或压缩效果。
+
 [报告目录](README.md) · [GitHub 阅读版](experiment-summary.md)
 
 截至 2026-10-22 · 已完成的 BFCL 实验 · 每个引用均连接至具体实验记录或代码证据

@@ -1,0 +1,19 @@
+{
+  "version": "g9-independent-blind-recovery-freeze-v1",
+  "frozen_at_utc": "2026-10-24T14:39:41.646104+00:00",
+  "packet_sha256": "7d916501ce6336ef975bbbe4ffd3743f8e4a778c631d66a78f60fed383e45111",
+  "labels_sha256": "a4fb8b64688a7b63b69513d0afa998f92deeeb1e6bf83d9c75fb8c0544b1fed0",
+  "cases": 22,
+  "trajectories": 66,
+  "observed_turns": 111,
+  "tool_calls": 183,
+  "evidence_pointers_verified": 723,
+  "verbatim_excerpts_verified": 429,
+  "decoded_call_subsets_verified": 183,
+  "frozen_label_schema_passed": true,
+  "agent_interruption": "Reviewer reported platform usage limit after writing complete labels; narrative review file absent. Root recovered and hash-froze the already complete frozen_before_unmask artifact without changing any labels.",
+  "root_relabeling": false,
+  "private_key_or_scores_read_before_freeze": false,
+  "api_calls": 0,
+  "all_checks_passed": true
+}

@@ -1,0 +1,219 @@
+{
+  "version": "g9-expanded-increment-scope-v1",
+  "status": "frozen_for_independent_review_before_opening",
+  "at_utc": "2026-10-24T16:58:05.469673+00:00",
+  "basis": "Continue authorized12h exploration and latest user request for broader G9 validation, within unchanged caps/deadline.",
+  "scope": "Original frozen G9 R versus identity A on12 previously unexposed recorded families,4each vehicle/trading/travel. NoG15 changes.",
+  "holdout_question_or_answer_content_read": false,
+  "source_pins": {
+    "authorization.json": "41f7f15db6abcbb6e22a971a9f5bb46472108d98eef05ea7bde59d274918a8b3",
+    "analysis/g9-expansion-feasibility-metadata-budget-v1.json": "c3b79848ca58b5a0b8b001f477c24de36f3148245152f421bf37f7dc53024c8e",
+    "design/holdout-reservation.json": "1968a9aa6b94b5297846ee804431e6f28f7c8e246d20e75820c4cd8f98314c9d",
+    "analysis/dev12-postrun-ledger-snapshot.json": "55ca72827f3e105146d28b7ec5517c4d03789d87febb9eeb52bf8b0872eae1fb",
+    "analysis/g9-independent-unmasked-summary.json": "a758eccb0340175c0c6fc2aaec4c8b977a137e2ce52dd0cb6a2a80320ca66186",
+    "analysis/dev12-query-layout-unmasked-summary.json": "162c4763b071b39f2254c56f581bbb1f9a0f9ec133f7507e05df461520a6f485",
+    "analysis/active-record-deployment-preflight-01.json": "462d020777ca38af00b23fb29ff20f0c8bb8634a8751a78eff85c40aef592563"
+  },
+  "candidate": {
+    "version": "G9-active-record-views-v1",
+    "runner": "runner-g9-active-views",
+    "arms": [
+      "identity",
+      "graph-record-view-full"
+    ],
+    "repeat_labels": [
+      1
+    ],
+    "gpt_sampling": {
+      "temperature": 0,
+      "seed": 42
+    },
+    "claude_inference": "unchanged adaptive settings; no seed; old thinking symmetric handling",
+    "graph_carrier": "single assistant compiled graph replacing completed prefix; no completed nativehistory alongside graph",
+    "complete_visible_evidence": true,
+    "compression": false,
+    "eval_modified": false,
+    "observations_layer_visible": false,
+    "code_changes_from_dev11": false
+  },
+  "conditions": [
+    {
+      "id": "multi_turn_base_81",
+      "family": 81,
+      "domain": "vehicle",
+      "user_turns": 4,
+      "involved_classes": [
+        "VehicleControlAPI",
+        "MathAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_base_95",
+      "family": 95,
+      "domain": "vehicle",
+      "user_turns": 5,
+      "involved_classes": [
+        "MessageAPI",
+        "VehicleControlAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_60",
+      "family": 60,
+      "domain": "vehicle",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "VehicleControlAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_base_73",
+      "family": 73,
+      "domain": "vehicle",
+      "user_turns": 3,
+      "involved_classes": [
+        "VehicleControlAPI"
+      ],
+      "boundary_turns": 2
+    },
+    {
+      "id": "multi_turn_base_135",
+      "family": 135,
+      "domain": "trading",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_107",
+      "family": 107,
+      "domain": "trading",
+      "user_turns": 5,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_base_124",
+      "family": 124,
+      "domain": "trading",
+      "user_turns": 3,
+      "involved_classes": [
+        "TradingBot",
+        "MathAPI"
+      ],
+      "boundary_turns": 2
+    },
+    {
+      "id": "multi_turn_long_context_112",
+      "family": 112,
+      "domain": "trading",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot",
+        "MathAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_196",
+      "family": 196,
+      "domain": "travel",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_190",
+      "family": 190,
+      "domain": "travel",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_170",
+      "family": 170,
+      "domain": "travel",
+      "user_turns": 6,
+      "involved_classes": [
+        "TwitterAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3
+    },
+    {
+      "id": "multi_turn_long_context_188",
+      "family": 188,
+      "domain": "travel",
+      "user_turns": 6,
+      "involved_classes": [
+        "TwitterAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3
+    }
+  ],
+  "models": [
+    "gpt-4.1",
+    "claude-sonnet-5-5"
+  ],
+  "max_prefixes": 24,
+  "max_continuations": 48,
+  "denominator_policy": "All12IDs x2models retained. Complete official first native prefix qualification only. No replacement, regeneratedprefix, relation-active or zero-index exclusions.",
+  "execution_order": [
+    "ext01-g9-prefix-k3",
+    "ext02-g9-prefix-k2",
+    "ext03-g9-continuation-k3",
+    "ext04-g9-continuation-k2"
+  ],
+  "batching_reason": "Reuse frozen original k3 and k1/k2 preparer/launchers without modifying any runner, tool, eval or inference; all24 prefixes finish and qualify before any continuation.",
+  "schedule_seeds": [
+    202610241701,
+    202610241702,
+    202610241703,
+    202610241704
+  ],
+  "budget_entry_remaining_usd": {
+    "gpt-4.1": 5.682206,
+    "claude-sonnet-5-5": 14.670378
+  },
+  "budget_policy": "Same cumulative$25/$50caps and olduncertainreserves. Frozen reference uncachedrates. No concurrentpaidconstructor. Stage baselines/accounting retained; exact request reserve may stop even if forecast passed.",
+  "time_policy": {
+    "latest_prefix_start_utc": "2026-10-24T17:30:00Z",
+    "latest_continuation_start_utc": "2026-10-24T17:50:00Z",
+    "campaign_deadline_utc": "2026-10-24T18:29:00Z",
+    "extension": "Ask in advance if finalexperiment/review requiresmoretime; no silentextension.",
+    "planning_model_runtime_minutes": "25-40, excludingaudit/review; notguaranteed"
+  },
+  "stop_rules": [
+    "Source/request/tool/eval/ledger integrity failure stops newdispatch forreview.",
+    "Existing perattempt reserveguard preserves cumulativeGPT$25/Claude$50caps and allunknownreserves; no borrowing/reset/outputlimitchanges. Ask if capapproaches or requestcannotbefunded.",
+    "No outcome-based additions/exclusions/adaptiverepeats/sameholdoutrepairs. Retain missing/partial and screeningexclusions.",
+    "Confirmed repeated R-only wrongobject/unrequestedeffect in>=2independentconditions triggersreview before nextdispatch.",
+    "No newpaidstages afterdeadline; askinadvance if moretime needed."
+  ],
+  "analysis": {
+    "primary": "Per-model paired RminusA officialcontinuation passrate, wins/losses, bydomain/boundary. Both eligibleconditional and allattemptedprefixdenominators reported.",
+    "secondary": "Relationshipactivation includingzerojoins; firstrequest+wholetrajectorytokens; prefix/continuation/uncertaincosts; source-quoted blindbehaviorlabels before officialscoreunmask.",
+    "gate": "Descriptive freshsmall sample. Zero observedlosses doesnot proveoverallpreservation. No posthocnoninferioritymargin orsemanticregrade. Reportpriorindependentbatch separately.",
+    "known_failure_retained": "GPTbase43k2 A3/3vsG5graph0/3 remains; newthree-domainresults do not erasegap orautomaticallyauthorizecompression."
+  },
+  "supersedes_only": "Preliminary16familyfour-domain andthreearm expansion sketch; no existing results, frozenruntime or authorization changed.",
+  "no_fresh_filesystem_reason": "All49multi-user-turn families0..49 except singleturn46 have recorded prior exposure. Existing filesystem results remain separate.",
+  "selection": "First remaining eligible families in original unopened reserve order, metadata-only complete exposure scan; onebase/longvariant perfamily; k3if>=4turns elsek2if3.",
+  "budget_scope_decision": "TwoarmsA/R instead of preliminaryA/E/R to preserve funds for broader validation; earlier independentstudy already compared E/R, no new superiorityclaim."
+}

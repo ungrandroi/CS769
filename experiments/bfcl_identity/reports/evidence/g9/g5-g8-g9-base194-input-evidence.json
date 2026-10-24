@@ -1,0 +1,1059 @@
+{
+  "scope": "One existing GPT-4.1 base194 completed-3-turn prefix only; no continuation/current question/scores/GT/holdout/API",
+  "source_prefix_directory": "server-snapshots/dev04-prefix-deeper/runs/gpt-4.1/multi_turn_base_194/boundary-3/1/identity",
+  "source_sha256": {
+    "server-snapshots/dev04-prefix-deeper/runs/gpt-4.1/multi_turn_base_194/boundary-3/1/identity/manifest.json": "69c57a92d82e12b478e4f8413889cb45a11a28cc305e688b9434d86e8503da01",
+    "server-snapshots/dev04-prefix-deeper/runs/gpt-4.1/multi_turn_base_194/boundary-3/1/identity/prefix-history.json": "5b3e2e828bc1cb0c2a9de03ff9fed6b15428b63f592ca9c0d32b9fa80ca2319a",
+    "server-snapshots/dev04-prefix-deeper/runs/gpt-4.1/multi_turn_base_194/boundary-3/1/identity/native-prefix-history.json": "a20f71371b35493be5f99298d219dd13e4fa0a3b95ef1aee57af6c04f5257681",
+    "server-snapshots/dev04-prefix-deeper/runs/gpt-4.1/multi_turn_base_194/boundary-3/1/identity/native-context.json": "1585d7834b76a310c8b8cebd857d26028f847be40e88912c4327ef08644caa35"
+  },
+  "snapshot_input_pins_verified": true,
+  "source_code_sha256": {
+    "runner-g9-active-views/scripts/workflows/graph_gpt_task.py": "3fa6cb67c9853584f8bef3b5a9d67f15823c0771d8153ecaa64224e2c89d9e67",
+    "runner-g9-active-views/scripts/core/graph_memory_evidence.py": "3fed98d65d054dca782c0242524f8c33db68621a78efae4b3192d8e727572c49",
+    "runner-g9-active-views/scripts/core/graph_memory_payload.py": "4b9097831c584fa4ae9602b5c3833c582f12523eaa4f6466c4cf12e4fb0507ba",
+    "runner-g9-active-views/scripts/core/graph_memory_records.py": "e106cbd1e1a03a6538c79f60b3a1cf2de41161348fb3b4e75e14c0a76b1781f9",
+    "runner-g9-active-views/scripts/core/graph_memory_record_views.py": "d97442e735fbdf1d09a0e8ec5630346242d5ac46eb00c7362c594c2e81cff4cc",
+    "runner-g9-active-views/scripts/core/graph_memory_record_render.py": "dadee99c3c353a3e1c56829de2b0b1e020ff56c998de26de9d98c75eebb09256",
+    "runner-g9-active-views/scripts/core/graph_memory_record_visibility.py": "293c5cd3557a23a471cf65d82e4f782ff5f6f733882d9839e0b49b8d963fd8f8",
+    "runner-g9-active-views/scripts/core/graph_memory_observed.py": "9a661b46518e9880643f2b2f9f3e09bb8f37b7f255447679ff1e8b94af156a4b",
+    "runner-g9-active-views/scripts/core/graph_memory_structured.py": "37886246760c19eb37c8824a0aac9ab0111f4bec494a5f28c090b828689f98e4"
+  },
+  "same_complete_record_inference_sha256": "af5e21fb3698af3296c3766b2519836c84d2d6e3004b49894e7941729f1d29bb",
+  "same_complete_graph_for_E_N_R": true,
+  "G7_nodes": 0,
+  "G7_edges": 0,
+  "full_visible_evidence_roundtrip": true,
+  "native_history_not_in_carrier": true,
+  "single_assistant_graph_text": true,
+  "g5_evidence_nodes": 19,
+  "g5_categories": {
+    "episode": 3,
+    "user_request": 3,
+    "tool_call": 5,
+    "tool_result": 5,
+    "assistant_statement": 3
+  },
+  "payload_audit": {
+    "ok": true,
+    "errors": [],
+    "payload_preserved": true,
+    "field_count": 10,
+    "payload_node_count": 221,
+    "fragment_count": 126,
+    "binding_count": 0,
+    "address_count": 25,
+    "lexically_parsed_field_count": 9,
+    "opaque_field_count": 1,
+    "typed_source_field_count": 0,
+    "duplicate_content_owner_count": 0
+  },
+  "payload_field_count": 10,
+  "record_audit": {
+    "ok": true,
+    "errors": [],
+    "payload_preserved": true,
+    "record_count": 3,
+    "occurrence_count": 4,
+    "anchor_count": 2,
+    "join_count": 2,
+    "edge_count": 4,
+    "active": true
+  },
+  "record_layer": {
+    "version": "payload-record-joins-v1",
+    "variant": "record-joins-v1",
+    "ruleset": "bfcl-public-reference-fields-v1",
+    "base_g8_sha256": "3081d80823d9a5c9f340dd595f5ec8237689ebb27715a2ee7c14a42e053667f4",
+    "nodes": [
+      {
+        "id": "g9:r:g8:6:1",
+        "category": "payload_record",
+        "payload_node": "g8:6:1",
+        "event_id": "e9",
+        "field": "arguments",
+        "call": "e9",
+        "role": "argument",
+        "ordinal": 9
+      },
+      {
+        "id": "g9:r:g8:7:1",
+        "category": "payload_record",
+        "payload_node": "g8:7:1",
+        "event_id": "e10",
+        "field": "output",
+        "call": "e9",
+        "role": "result",
+        "ordinal": 10
+      },
+      {
+        "id": "g9:r:g8:8:1",
+        "category": "payload_record",
+        "payload_node": "g8:8:1",
+        "event_id": "e13",
+        "field": "arguments",
+        "call": "e13",
+        "role": "argument",
+        "ordinal": 13
+      },
+      {
+        "id": "g9:o:2028f55e66db8eb2e04b3b5219d6256215506512e173315131658ffea4003dcd",
+        "category": "identifier_occurrence",
+        "record": "g9:r:g8:6:1",
+        "member": "g8:6:10",
+        "payload_node": "g8:6:14",
+        "source": {
+          "event_id": "e9",
+          "field": "arguments",
+          "document_pointer": "",
+          "encoding": "json_text",
+          "pointer": "/card_id",
+          "field_sha256": "71ba310e00732d6e0095a33c6d043b9052dfc65cbf166fda07032af18a1aad47"
+        },
+        "namespace": "travel:card_id",
+        "value_type": "str",
+        "rule_id": "book_flight:argument:/card_id"
+      },
+      {
+        "id": "g9:o:ad54cd6df884e3ccc2481ad28a72aceb20d658f20a3c2e9bad6e9b3456aaa0b6",
+        "category": "identifier_occurrence",
+        "record": "g9:r:g8:8:1",
+        "member": "g8:8:31",
+        "payload_node": "g8:8:35",
+        "source": {
+          "event_id": "e13",
+          "field": "arguments",
+          "document_pointer": "",
+          "encoding": "json_text",
+          "pointer": "/card_id",
+          "field_sha256": "91a1e516720eb8a6a8278a7f6aef899cf9b460d94583dc86e19529bc40fc0de2"
+        },
+        "namespace": "travel:card_id",
+        "value_type": "str",
+        "rule_id": "purchase_insurance:argument:/card_id"
+      },
+      {
+        "id": "g9:o:c5f33fdb7bef07a45c4e95269d768d64a49d8a36a8ecfc2fbed6b2419bf18de7",
+        "category": "identifier_occurrence",
+        "record": "g9:r:g8:7:1",
+        "member": "g8:7:3",
+        "payload_node": "g8:7:8",
+        "source": {
+          "event_id": "e10",
+          "field": "output",
+          "document_pointer": "",
+          "encoding": "json_text",
+          "pointer": "/booking_id",
+          "field_sha256": "bdb4f34e6fba7b2c3b5cf8962eb9924497cd0a5ec8cd192fbea97d8f9d662e23"
+        },
+        "namespace": "travel:booking_id",
+        "value_type": "str",
+        "rule_id": "book_flight:result:/booking_id"
+      },
+      {
+        "id": "g9:o:d36d53175658fef70afdc86d4367dfd66fc95fbde75d071b56e33326ced615d0",
+        "category": "identifier_occurrence",
+        "record": "g9:r:g8:8:1",
+        "member": "g8:8:24",
+        "payload_node": "g8:8:28",
+        "source": {
+          "event_id": "e13",
+          "field": "arguments",
+          "document_pointer": "",
+          "encoding": "json_text",
+          "pointer": "/booking_id",
+          "field_sha256": "91a1e516720eb8a6a8278a7f6aef899cf9b460d94583dc86e19529bc40fc0de2"
+        },
+        "namespace": "travel:booking_id",
+        "value_type": "str",
+        "rule_id": "purchase_insurance:argument:/booking_id"
+      },
+      {
+        "id": "g9:j:dad1752e57090c5be92dd31e5a946015ac523a6838a4b6f639572f23791341c6",
+        "category": "identifier_anchor",
+        "namespace": "travel:card_id",
+        "value_type": "str"
+      },
+      {
+        "id": "g9:j:fb897156a7bf9ff40f83bfef54f2ddf3be35bf3d59bb7b80d0dccd241c0e8ebb",
+        "category": "identifier_anchor",
+        "namespace": "travel:booking_id",
+        "value_type": "str"
+      }
+    ],
+    "edges": [
+      {
+        "from": "g9:o:2028f55e66db8eb2e04b3b5219d6256215506512e173315131658ffea4003dcd",
+        "to": "g9:j:dad1752e57090c5be92dd31e5a946015ac523a6838a4b6f639572f23791341c6",
+        "relation": "same_typed_identifier_member",
+        "supports": [
+          {
+            "event_id": "e9",
+            "field": "arguments",
+            "document_pointer": "",
+            "encoding": "json_text",
+            "pointer": "/card_id",
+            "field_sha256": "71ba310e00732d6e0095a33c6d043b9052dfc65cbf166fda07032af18a1aad47"
+          }
+        ],
+        "id": "g9:x:eab3e82013c905674fb3ace39e895bd4882e7b8a2e9894a75907abc58344daa5"
+      },
+      {
+        "from": "g9:o:ad54cd6df884e3ccc2481ad28a72aceb20d658f20a3c2e9bad6e9b3456aaa0b6",
+        "to": "g9:j:dad1752e57090c5be92dd31e5a946015ac523a6838a4b6f639572f23791341c6",
+        "relation": "same_typed_identifier_member",
+        "supports": [
+          {
+            "event_id": "e13",
+            "field": "arguments",
+            "document_pointer": "",
+            "encoding": "json_text",
+            "pointer": "/card_id",
+            "field_sha256": "91a1e516720eb8a6a8278a7f6aef899cf9b460d94583dc86e19529bc40fc0de2"
+          }
+        ],
+        "id": "g9:x:f1dffb1dc1f3a6cda9965d170ab7533b30ec166fb7ab6aee3dd30a573fa45ace"
+      },
+      {
+        "from": "g9:o:c5f33fdb7bef07a45c4e95269d768d64a49d8a36a8ecfc2fbed6b2419bf18de7",
+        "to": "g9:j:fb897156a7bf9ff40f83bfef54f2ddf3be35bf3d59bb7b80d0dccd241c0e8ebb",
+        "relation": "same_typed_identifier_member",
+        "supports": [
+          {
+            "event_id": "e10",
+            "field": "output",
+            "document_pointer": "",
+            "encoding": "json_text",
+            "pointer": "/booking_id",
+            "field_sha256": "bdb4f34e6fba7b2c3b5cf8962eb9924497cd0a5ec8cd192fbea97d8f9d662e23"
+          }
+        ],
+        "id": "g9:x:ec01a10eeae249098a0743f3821c7c630eaba292d297baa0a138192057b98f4c"
+      },
+      {
+        "from": "g9:o:d36d53175658fef70afdc86d4367dfd66fc95fbde75d071b56e33326ced615d0",
+        "to": "g9:j:fb897156a7bf9ff40f83bfef54f2ddf3be35bf3d59bb7b80d0dccd241c0e8ebb",
+        "relation": "same_typed_identifier_member",
+        "supports": [
+          {
+            "event_id": "e13",
+            "field": "arguments",
+            "document_pointer": "",
+            "encoding": "json_text",
+            "pointer": "/booking_id",
+            "field_sha256": "91a1e516720eb8a6a8278a7f6aef899cf9b460d94583dc86e19529bc40fc0de2"
+          }
+        ],
+        "id": "g9:x:53b251a8b220d77f1a2d49a60d0474f67c11a1f867a5a0d7bfc1943f41a7deee"
+      }
+    ],
+    "eligible_occurrence_count": 5
+  },
+  "booking_output_original": "{\"booking_id\": \"3426812\", \"transaction_id\": \"45451592\", \"booking_status\": true, \"booking_history\": {}}",
+  "booking_output_field": {
+    "event_id": "e10",
+    "field": "output",
+    "root": "g8:7:0",
+    "value_type": "str",
+    "source_kind": "json-text",
+    "lexical_origin": "visible-field-characters",
+    "parse_fallback": null,
+    "text_length": 102,
+    "text_sha256": "975b230c23e7447860b5405732e5440d3330ac289cd7d1ab2ffa12069b0870c4",
+    "typed_value_sha256": "9c5e787c004bfddf92b2321a398bec0655d0fa044c566adc4825ae9edc8bb775"
+  },
+  "booking_object_node": {
+    "id": "g8:7:1",
+    "kind": "object",
+    "span": [
+      0,
+      102
+    ],
+    "parts": [
+      "g8:7:2",
+      "g8:7:3",
+      "g8:7:10",
+      "g8:7:11",
+      "g8:7:12",
+      "g8:7:19",
+      "g8:7:20",
+      "g8:7:21",
+      "g8:7:28",
+      "g8:7:29",
+      "g8:7:30",
+      "g8:7:38"
+    ],
+    "members": [
+      "g8:7:3",
+      "g8:7:12",
+      "g8:7:21",
+      "g8:7:30"
+    ],
+    "commas": [
+      "g8:7:10",
+      "g8:7:19",
+      "g8:7:28"
+    ]
+  },
+  "booking_member_nodes": [
+    {
+      "id": "g8:7:3",
+      "node": {
+        "id": "g8:7:3",
+        "kind": "member",
+        "span": [
+          1,
+          24
+        ],
+        "parts": [
+          "g8:7:4",
+          "g8:7:6",
+          "g8:7:7",
+          "g8:7:8"
+        ],
+        "key": "g8:7:4",
+        "value": "g8:7:8"
+      },
+      "exact_member_text": "\"booking_id\": \"3426812\""
+    },
+    {
+      "id": "g8:7:12",
+      "node": {
+        "id": "g8:7:12",
+        "kind": "member",
+        "span": [
+          26,
+          54
+        ],
+        "parts": [
+          "g8:7:13",
+          "g8:7:15",
+          "g8:7:16",
+          "g8:7:17"
+        ],
+        "key": "g8:7:13",
+        "value": "g8:7:17"
+      },
+      "exact_member_text": "\"transaction_id\": \"45451592\""
+    },
+    {
+      "id": "g8:7:21",
+      "node": {
+        "id": "g8:7:21",
+        "kind": "member",
+        "span": [
+          56,
+          78
+        ],
+        "parts": [
+          "g8:7:22",
+          "g8:7:24",
+          "g8:7:25",
+          "g8:7:26"
+        ],
+        "key": "g8:7:22",
+        "value": "g8:7:26"
+      },
+      "exact_member_text": "\"booking_status\": true"
+    },
+    {
+      "id": "g8:7:30",
+      "node": {
+        "id": "g8:7:30",
+        "kind": "member",
+        "span": [
+          80,
+          101
+        ],
+        "parts": [
+          "g8:7:31",
+          "g8:7:33",
+          "g8:7:34",
+          "g8:7:35"
+        ],
+        "key": "g8:7:31",
+        "value": "g8:7:35"
+      },
+      "exact_member_text": "\"booking_history\": {}"
+    }
+  ],
+  "selected_scalar_node": {
+    "id": "g8:7:8",
+    "kind": "scalar",
+    "span": [
+      15,
+      24
+    ],
+    "parts": [
+      "g8:7:9"
+    ],
+    "scalar_type": "string"
+  },
+  "scalar_leaves": [
+    {
+      "id": "g8:7:9",
+      "kind": "fragment",
+      "span": [
+        15,
+        24
+      ],
+      "lexical_kind": "string",
+      "text": "\"3426812\""
+    }
+  ],
+  "rendered_appendix": {
+    "E": [],
+    "N": [
+      {
+        "kind": "g9_external_references",
+        "text": "\n\nIdentifier links\nLinks group fields with equal typed identifiers recorded in these tool exchanges.\nr0 e9[\"arguments\"] pointer=\"\"\nr1 e10[\"output\"] pointer=\"\"\nr2 e13[\"arguments\"] pointer=\"\"\no0 [r0] e9[\"arguments\"] pointer=\"/card_id\"\no1 [r2] e13[\"arguments\"] pointer=\"/card_id\"\no2 [r1] e10[\"output\"] pointer=\"/booking_id\"\no3 [r2] e13[\"arguments\"] pointer=\"/booking_id\"\nj0 travel:card_id (str)\nj1 travel:booking_id (str)"
+      }
+    ],
+    "R": [
+      {
+        "kind": "g9_external_references",
+        "text": "\n\nIdentifier links\nLinks group fields with equal typed identifiers recorded in these tool exchanges.\nr0 e9[\"arguments\"] pointer=\"\"\nr1 e10[\"output\"] pointer=\"\"\nr2 e13[\"arguments\"] pointer=\"\"\no0 [r0] e9[\"arguments\"] pointer=\"/card_id\"\no1 [r2] e13[\"arguments\"] pointer=\"/card_id\"\no2 [r1] e10[\"output\"] pointer=\"/booking_id\"\no3 [r2] e13[\"arguments\"] pointer=\"/booking_id\"\nj0 travel:card_id (str): o0 o1\nj1 travel:booking_id (str): o2 o3"
+      }
+    ]
+  },
+  "carriers": {
+    "E": {
+      "path": "research/g5-g8-g9-base194-E-memory.txt",
+      "sha256": "48788f3d258bfe1434b47647a04481884c75bbc81773b9901bb1e5abcbc73f41",
+      "characters": 4556,
+      "utf8_bytes": 4556
+    },
+    "N": {
+      "path": "research/g5-g8-g9-base194-N-memory.txt",
+      "sha256": "1937daac4556b72f177cc4c2c2d2a83ed6895d494071f08698ccf963b1d42d0a",
+      "characters": 4974,
+      "utf8_bytes": 4974
+    },
+    "R": {
+      "path": "research/g5-g8-g9-base194-R-memory.txt",
+      "sha256": "aef1d8135fcdeb54490bb347076b0eedfc8df9c0cd80fdb8192342fc1bb069e2",
+      "characters": 4988,
+      "utf8_bytes": 4988
+    }
+  },
+  "N_to_R_added_characters": 14,
+  "offline_projection_previews": {
+    "booking_status": {
+      "removed_member": "g8:7:21",
+      "plan": {
+        "version": "record-member-projection-plan-v1",
+        "base_graph_sha256": "af5e21fb3698af3296c3766b2519836c84d2d6e3004b49894e7941729f1d29bb",
+        "removed_member_ids": [
+          "g8:7:21"
+        ],
+        "payload_plan": {
+          "version": "payload-member-projection-plan-v1",
+          "base_graph_sha256": "3081d80823d9a5c9f340dd595f5ec8237689ebb27715a2ee7c14a42e053667f4",
+          "removed_member_ids": [
+            "g8:7:21"
+          ],
+          "payload_operations": [
+            {
+              "operation": "remove_member_subtree",
+              "node_id": "g8:7:21"
+            },
+            {
+              "operation": "remove_separator",
+              "node_id": "g8:7:19",
+              "container": "g8:7:1"
+            }
+          ],
+          "removed_payload_node_ids": [
+            "g8:7:19",
+            "g8:7:21",
+            "g8:7:22",
+            "g8:7:23",
+            "g8:7:24",
+            "g8:7:25",
+            "g8:7:26",
+            "g8:7:27"
+          ],
+          "removed_content_owner_ids": [
+            "g8:7:19",
+            "g8:7:23",
+            "g8:7:24",
+            "g8:7:25",
+            "g8:7:27"
+          ],
+          "retained_payload_node_ids": [
+            "g8:0:0",
+            "g8:0:1",
+            "g8:0:2",
+            "g8:0:3",
+            "g8:1:0",
+            "g8:2:0",
+            "g8:2:1",
+            "g8:2:2",
+            "g8:2:3",
+            "g8:2:4",
+            "g8:2:5",
+            "g8:2:6",
+            "g8:2:7",
+            "g8:2:8",
+            "g8:2:9",
+            "g8:2:10",
+            "g8:2:11",
+            "g8:2:12",
+            "g8:2:13",
+            "g8:2:14",
+            "g8:2:15",
+            "g8:2:16",
+            "g8:2:17",
+            "g8:2:18",
+            "g8:2:19",
+            "g8:2:20",
+            "g8:2:21",
+            "g8:2:22",
+            "g8:2:23",
+            "g8:2:24",
+            "g8:2:25",
+            "g8:2:26",
+            "g8:2:27",
+            "g8:2:28",
+            "g8:2:29",
+            "g8:2:30",
+            "g8:3:0",
+            "g8:3:1",
+            "g8:3:2",
+            "g8:3:3",
+            "g8:3:4",
+            "g8:3:5",
+            "g8:3:6",
+            "g8:3:7",
+            "g8:3:8",
+            "g8:3:9",
+            "g8:3:10",
+            "g8:3:11",
+            "g8:3:12",
+            "g8:3:13",
+            "g8:3:14",
+            "g8:4:0",
+            "g8:4:1",
+            "g8:4:2",
+            "g8:4:3",
+            "g8:4:4",
+            "g8:4:5",
+            "g8:4:6",
+            "g8:4:7",
+            "g8:4:8",
+            "g8:4:9",
+            "g8:4:10",
+            "g8:4:11",
+            "g8:4:12",
+            "g8:4:13",
+            "g8:4:14",
+            "g8:4:15",
+            "g8:4:16",
+            "g8:5:0",
+            "g8:5:1",
+            "g8:5:2",
+            "g8:5:3",
+            "g8:5:4",
+            "g8:5:5",
+            "g8:5:6",
+            "g8:5:7",
+            "g8:5:8",
+            "g8:5:9",
+            "g8:5:10",
+            "g8:6:0",
+            "g8:6:1",
+            "g8:6:2",
+            "g8:6:3",
+            "g8:6:4",
+            "g8:6:5",
+            "g8:6:6",
+            "g8:6:7",
+            "g8:6:8",
+            "g8:6:9",
+            "g8:6:10",
+            "g8:6:11",
+            "g8:6:12",
+            "g8:6:13",
+            "g8:6:14",
+            "g8:6:15",
+            "g8:6:16",
+            "g8:6:17",
+            "g8:6:18",
+            "g8:6:19",
+            "g8:6:20",
+            "g8:6:21",
+            "g8:6:22",
+            "g8:6:23",
+            "g8:6:24",
+            "g8:6:25",
+            "g8:6:26",
+            "g8:6:27",
+            "g8:6:28",
+            "g8:6:29",
+            "g8:6:30",
+            "g8:6:31",
+            "g8:6:32",
+            "g8:6:33",
+            "g8:6:34",
+            "g8:6:35",
+            "g8:6:36",
+            "g8:6:37",
+            "g8:6:38",
+            "g8:6:39",
+            "g8:6:40",
+            "g8:6:41",
+            "g8:6:42",
+            "g8:6:43",
+            "g8:6:44",
+            "g8:7:0",
+            "g8:7:1",
+            "g8:7:2",
+            "g8:7:3",
+            "g8:7:4",
+            "g8:7:5",
+            "g8:7:6",
+            "g8:7:7",
+            "g8:7:8",
+            "g8:7:9",
+            "g8:7:10",
+            "g8:7:11",
+            "g8:7:12",
+            "g8:7:13",
+            "g8:7:14",
+            "g8:7:15",
+            "g8:7:16",
+            "g8:7:17",
+            "g8:7:18",
+            "g8:7:20",
+            "g8:7:28",
+            "g8:7:29",
+            "g8:7:30",
+            "g8:7:31",
+            "g8:7:32",
+            "g8:7:33",
+            "g8:7:34",
+            "g8:7:35",
+            "g8:7:36",
+            "g8:7:37",
+            "g8:7:38",
+            "g8:8:0",
+            "g8:8:1",
+            "g8:8:2",
+            "g8:8:3",
+            "g8:8:4",
+            "g8:8:5",
+            "g8:8:6",
+            "g8:8:7",
+            "g8:8:8",
+            "g8:8:9",
+            "g8:8:10",
+            "g8:8:11",
+            "g8:8:12",
+            "g8:8:13",
+            "g8:8:14",
+            "g8:8:15",
+            "g8:8:16",
+            "g8:8:17",
+            "g8:8:18",
+            "g8:8:19",
+            "g8:8:20",
+            "g8:8:21",
+            "g8:8:22",
+            "g8:8:23",
+            "g8:8:24",
+            "g8:8:25",
+            "g8:8:26",
+            "g8:8:27",
+            "g8:8:28",
+            "g8:8:29",
+            "g8:8:30",
+            "g8:8:31",
+            "g8:8:32",
+            "g8:8:33",
+            "g8:8:34",
+            "g8:8:35",
+            "g8:8:36",
+            "g8:8:37",
+            "g8:9:0",
+            "g8:9:1",
+            "g8:9:2",
+            "g8:9:3",
+            "g8:9:4",
+            "g8:9:5",
+            "g8:9:6",
+            "g8:9:7",
+            "g8:9:8",
+            "g8:9:9",
+            "g8:9:10",
+            "g8:9:11",
+            "g8:9:12",
+            "g8:9:13",
+            "g8:9:14",
+            "g8:9:15",
+            "g8:9:16",
+            "g8:9:17",
+            "g8:9:18",
+            "g8:9:19"
+          ],
+          "changed_fields": [
+            {
+              "event_id": "e10",
+              "field": "output",
+              "original_root": "g8:7:0",
+              "projected_text_sha256": "e91feff2ddca71c78ce9ea6cbacca7799a7575385dbd633172efea5bd1560518",
+              "original_chars": 102,
+              "projected_chars": 79
+            }
+          ],
+          "required_removed_semantic_node_ids": [],
+          "required_removed_semantic_edge_ids": [],
+          "supported_semantic_node_ids": [],
+          "supported_semantic_edge_ids": [],
+          "supported_bindings": [],
+          "requires_source_label_refresh": true,
+          "requires_projected_graph_audit": true,
+          "order_edges_reconnected": false,
+          "applied": false,
+          "task_preservation_certified": false
+        },
+        "required_removed_record_node_ids": [],
+        "required_removed_record_edge_ids": [],
+        "supported_record_node_ids": [
+          "g9:r:g8:6:1",
+          "g9:r:g8:7:1",
+          "g9:r:g8:8:1",
+          "g9:o:2028f55e66db8eb2e04b3b5219d6256215506512e173315131658ffea4003dcd",
+          "g9:o:ad54cd6df884e3ccc2481ad28a72aceb20d658f20a3c2e9bad6e9b3456aaa0b6",
+          "g9:o:c5f33fdb7bef07a45c4e95269d768d64a49d8a36a8ecfc2fbed6b2419bf18de7",
+          "g9:o:d36d53175658fef70afdc86d4367dfd66fc95fbde75d071b56e33326ced615d0",
+          "g9:j:dad1752e57090c5be92dd31e5a946015ac523a6838a4b6f639572f23791341c6",
+          "g9:j:fb897156a7bf9ff40f83bfef54f2ddf3be35bf3d59bb7b80d0dccd241c0e8ebb"
+        ],
+        "supported_record_edge_ids": [
+          "g9:x:eab3e82013c905674fb3ace39e895bd4882e7b8a2e9894a75907abc58344daa5",
+          "g9:x:f1dffb1dc1f3a6cda9965d170ab7533b30ec166fb7ab6aee3dd30a573fa45ace",
+          "g9:x:ec01a10eeae249098a0743f3821c7c630eaba292d297baa0a138192057b98f4c",
+          "g9:x:53b251a8b220d77f1a2d49a60d0474f67c11a1f867a5a0d7bfc1943f41a7deee"
+        ],
+        "surviving_join_count": 2,
+        "requires_source_label_refresh": true,
+        "requires_projected_graph_audit": true,
+        "applied": false,
+        "task_preservation_certified": false
+      },
+      "field_preview_only": "{\"booking_id\": \"3426812\", \"transaction_id\": \"45451592\" , \"booking_history\": {}}",
+      "not_model_input": true
+    },
+    "booking_id": {
+      "removed_member": "g8:7:3",
+      "plan": {
+        "version": "record-member-projection-plan-v1",
+        "base_graph_sha256": "af5e21fb3698af3296c3766b2519836c84d2d6e3004b49894e7941729f1d29bb",
+        "removed_member_ids": [
+          "g8:7:3"
+        ],
+        "payload_plan": {
+          "version": "payload-member-projection-plan-v1",
+          "base_graph_sha256": "3081d80823d9a5c9f340dd595f5ec8237689ebb27715a2ee7c14a42e053667f4",
+          "removed_member_ids": [
+            "g8:7:3"
+          ],
+          "payload_operations": [
+            {
+              "operation": "remove_member_subtree",
+              "node_id": "g8:7:3"
+            },
+            {
+              "operation": "remove_separator",
+              "node_id": "g8:7:10",
+              "container": "g8:7:1"
+            }
+          ],
+          "removed_payload_node_ids": [
+            "g8:7:10",
+            "g8:7:3",
+            "g8:7:4",
+            "g8:7:5",
+            "g8:7:6",
+            "g8:7:7",
+            "g8:7:8",
+            "g8:7:9"
+          ],
+          "removed_content_owner_ids": [
+            "g8:7:10",
+            "g8:7:5",
+            "g8:7:6",
+            "g8:7:7",
+            "g8:7:9"
+          ],
+          "retained_payload_node_ids": [
+            "g8:0:0",
+            "g8:0:1",
+            "g8:0:2",
+            "g8:0:3",
+            "g8:1:0",
+            "g8:2:0",
+            "g8:2:1",
+            "g8:2:2",
+            "g8:2:3",
+            "g8:2:4",
+            "g8:2:5",
+            "g8:2:6",
+            "g8:2:7",
+            "g8:2:8",
+            "g8:2:9",
+            "g8:2:10",
+            "g8:2:11",
+            "g8:2:12",
+            "g8:2:13",
+            "g8:2:14",
+            "g8:2:15",
+            "g8:2:16",
+            "g8:2:17",
+            "g8:2:18",
+            "g8:2:19",
+            "g8:2:20",
+            "g8:2:21",
+            "g8:2:22",
+            "g8:2:23",
+            "g8:2:24",
+            "g8:2:25",
+            "g8:2:26",
+            "g8:2:27",
+            "g8:2:28",
+            "g8:2:29",
+            "g8:2:30",
+            "g8:3:0",
+            "g8:3:1",
+            "g8:3:2",
+            "g8:3:3",
+            "g8:3:4",
+            "g8:3:5",
+            "g8:3:6",
+            "g8:3:7",
+            "g8:3:8",
+            "g8:3:9",
+            "g8:3:10",
+            "g8:3:11",
+            "g8:3:12",
+            "g8:3:13",
+            "g8:3:14",
+            "g8:4:0",
+            "g8:4:1",
+            "g8:4:2",
+            "g8:4:3",
+            "g8:4:4",
+            "g8:4:5",
+            "g8:4:6",
+            "g8:4:7",
+            "g8:4:8",
+            "g8:4:9",
+            "g8:4:10",
+            "g8:4:11",
+            "g8:4:12",
+            "g8:4:13",
+            "g8:4:14",
+            "g8:4:15",
+            "g8:4:16",
+            "g8:5:0",
+            "g8:5:1",
+            "g8:5:2",
+            "g8:5:3",
+            "g8:5:4",
+            "g8:5:5",
+            "g8:5:6",
+            "g8:5:7",
+            "g8:5:8",
+            "g8:5:9",
+            "g8:5:10",
+            "g8:6:0",
+            "g8:6:1",
+            "g8:6:2",
+            "g8:6:3",
+            "g8:6:4",
+            "g8:6:5",
+            "g8:6:6",
+            "g8:6:7",
+            "g8:6:8",
+            "g8:6:9",
+            "g8:6:10",
+            "g8:6:11",
+            "g8:6:12",
+            "g8:6:13",
+            "g8:6:14",
+            "g8:6:15",
+            "g8:6:16",
+            "g8:6:17",
+            "g8:6:18",
+            "g8:6:19",
+            "g8:6:20",
+            "g8:6:21",
+            "g8:6:22",
+            "g8:6:23",
+            "g8:6:24",
+            "g8:6:25",
+            "g8:6:26",
+            "g8:6:27",
+            "g8:6:28",
+            "g8:6:29",
+            "g8:6:30",
+            "g8:6:31",
+            "g8:6:32",
+            "g8:6:33",
+            "g8:6:34",
+            "g8:6:35",
+            "g8:6:36",
+            "g8:6:37",
+            "g8:6:38",
+            "g8:6:39",
+            "g8:6:40",
+            "g8:6:41",
+            "g8:6:42",
+            "g8:6:43",
+            "g8:6:44",
+            "g8:7:0",
+            "g8:7:1",
+            "g8:7:2",
+            "g8:7:11",
+            "g8:7:12",
+            "g8:7:13",
+            "g8:7:14",
+            "g8:7:15",
+            "g8:7:16",
+            "g8:7:17",
+            "g8:7:18",
+            "g8:7:19",
+            "g8:7:20",
+            "g8:7:21",
+            "g8:7:22",
+            "g8:7:23",
+            "g8:7:24",
+            "g8:7:25",
+            "g8:7:26",
+            "g8:7:27",
+            "g8:7:28",
+            "g8:7:29",
+            "g8:7:30",
+            "g8:7:31",
+            "g8:7:32",
+            "g8:7:33",
+            "g8:7:34",
+            "g8:7:35",
+            "g8:7:36",
+            "g8:7:37",
+            "g8:7:38",
+            "g8:8:0",
+            "g8:8:1",
+            "g8:8:2",
+            "g8:8:3",
+            "g8:8:4",
+            "g8:8:5",
+            "g8:8:6",
+            "g8:8:7",
+            "g8:8:8",
+            "g8:8:9",
+            "g8:8:10",
+            "g8:8:11",
+            "g8:8:12",
+            "g8:8:13",
+            "g8:8:14",
+            "g8:8:15",
+            "g8:8:16",
+            "g8:8:17",
+            "g8:8:18",
+            "g8:8:19",
+            "g8:8:20",
+            "g8:8:21",
+            "g8:8:22",
+            "g8:8:23",
+            "g8:8:24",
+            "g8:8:25",
+            "g8:8:26",
+            "g8:8:27",
+            "g8:8:28",
+            "g8:8:29",
+            "g8:8:30",
+            "g8:8:31",
+            "g8:8:32",
+            "g8:8:33",
+            "g8:8:34",
+            "g8:8:35",
+            "g8:8:36",
+            "g8:8:37",
+            "g8:9:0",
+            "g8:9:1",
+            "g8:9:2",
+            "g8:9:3",
+            "g8:9:4",
+            "g8:9:5",
+            "g8:9:6",
+            "g8:9:7",
+            "g8:9:8",
+            "g8:9:9",
+            "g8:9:10",
+            "g8:9:11",
+            "g8:9:12",
+            "g8:9:13",
+            "g8:9:14",
+            "g8:9:15",
+            "g8:9:16",
+            "g8:9:17",
+            "g8:9:18",
+            "g8:9:19"
+          ],
+          "changed_fields": [
+            {
+              "event_id": "e10",
+              "field": "output",
+              "original_root": "g8:7:0",
+              "projected_text_sha256": "c116aa373255f09cfc780c661fe7ac25b63168db50be541ef3ee19d0d2b0895a",
+              "original_chars": 102,
+              "projected_chars": 78
+            }
+          ],
+          "required_removed_semantic_node_ids": [],
+          "required_removed_semantic_edge_ids": [],
+          "supported_semantic_node_ids": [],
+          "supported_semantic_edge_ids": [],
+          "supported_bindings": [],
+          "requires_source_label_refresh": true,
+          "requires_projected_graph_audit": true,
+          "order_edges_reconnected": false,
+          "applied": false,
+          "task_preservation_certified": false
+        },
+        "required_removed_record_node_ids": [
+          "g9:r:g8:7:1",
+          "g9:o:c5f33fdb7bef07a45c4e95269d768d64a49d8a36a8ecfc2fbed6b2419bf18de7",
+          "g9:o:d36d53175658fef70afdc86d4367dfd66fc95fbde75d071b56e33326ced615d0",
+          "g9:j:fb897156a7bf9ff40f83bfef54f2ddf3be35bf3d59bb7b80d0dccd241c0e8ebb"
+        ],
+        "required_removed_record_edge_ids": [
+          "g9:x:ec01a10eeae249098a0743f3821c7c630eaba292d297baa0a138192057b98f4c",
+          "g9:x:53b251a8b220d77f1a2d49a60d0474f67c11a1f867a5a0d7bfc1943f41a7deee"
+        ],
+        "supported_record_node_ids": [
+          "g9:r:g8:6:1",
+          "g9:r:g8:8:1",
+          "g9:o:2028f55e66db8eb2e04b3b5219d6256215506512e173315131658ffea4003dcd",
+          "g9:o:ad54cd6df884e3ccc2481ad28a72aceb20d658f20a3c2e9bad6e9b3456aaa0b6",
+          "g9:j:dad1752e57090c5be92dd31e5a946015ac523a6838a4b6f639572f23791341c6"
+        ],
+        "supported_record_edge_ids": [
+          "g9:x:eab3e82013c905674fb3ace39e895bd4882e7b8a2e9894a75907abc58344daa5",
+          "g9:x:f1dffb1dc1f3a6cda9965d170ab7533b30ec166fb7ab6aee3dd30a573fa45ace"
+        ],
+        "surviving_join_count": 1,
+        "requires_source_label_refresh": true,
+        "requires_projected_graph_audit": true,
+        "applied": false,
+        "task_preservation_certified": false
+      },
+      "field_preview_only": "{ \"transaction_id\": \"45451592\", \"booking_status\": true, \"booking_history\": {}}",
+      "not_model_input": true
+    }
+  },
+  "graph_unchanged_after_plans": true,
+  "compressed_BFCL_graph_created": false,
+  "proposal_source_sha256": "d1e296edfd1405fbcd4e5d2794407c3cb2fdf6dd49587b7c0c59cd9d38f7e876"
+}
