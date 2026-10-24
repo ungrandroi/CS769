@@ -1,0 +1,253 @@
+{
+  "status": "independent_audit_pass",
+  "completed_at": 1792535495.730311,
+  "scope": "Final read-only artifact, direct codec, official rescoring, native token accounting and statistical audit; no new model inference.",
+  "blocking_findings": [],
+  "experiment_record_counts": {
+    "total": 1344,
+    "development": 252,
+    "development_actual": 182,
+    "development_skip": 70,
+    "evaluation_identity": 156,
+    "evaluation_identity_triggered": 120,
+    "evaluation_identity_untriggered": 36,
+    "evaluation_graph_records": 936,
+    "evaluation_actual_graph": 720,
+    "evaluation_graph_skip": 216
+  },
+  "verification": {
+    "snapshot_files_verified": 177,
+    "development_skipped": 70,
+    "development_actual": 182,
+    "native_requests": 9963,
+    "strict_candidate_decodes": 542,
+    "graph_payload_checks": 902,
+    "official_scores_recomputed": 1058,
+    "evaluation_actual": 876,
+    "evaluation_skipped": 216,
+    "fixed_request_counts": 9963,
+    "fixed_configurations": 19,
+    "native_full_template_samples": 112,
+    "configuration_guard_records": 1344,
+    "per_request_csv_rows": 7029,
+    "per_turn_csv_rows": 1693,
+    "paired_first_request_rows": 360,
+    "paired_statistics_recomputed": 18,
+    "graph_decomposition_rows": 720,
+    "dataset_hashes": 4,
+    "vendor_commit": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "vendor_worktree_clean": true,
+    "tokenizer_metadata_and_library_match": true
+  },
+  "selection_order": {
+    "last_development_finished": 1792506449.9954305,
+    "selection_mtime": 1792506450.1783564,
+    "first_fresh_started": 1792506450.8573136
+  },
+  "results": [
+    {
+      "method": "dedup-baseline",
+      "n": 120,
+      "passed": 49,
+      "first_input": 6709.025,
+      "mean_post_input": 7245.926696848857,
+      "mean_peak_input": 7663.008333333333
+    },
+    {
+      "method": "dedup-optimized",
+      "n": 120,
+      "passed": 49,
+      "first_input": 6613.658333333334,
+      "mean_post_input": 7224.761142072033,
+      "mean_peak_input": 7743.391666666666
+    },
+    {
+      "method": "event-baseline",
+      "n": 120,
+      "passed": 46,
+      "first_input": 7697.191666666667,
+      "mean_post_input": 8122.455771058016,
+      "mean_peak_input": 8497.816666666668
+    },
+    {
+      "method": "event-optimized",
+      "n": 120,
+      "passed": 51,
+      "first_input": 7198.7,
+      "mean_post_input": 7702.4629311485905,
+      "mean_peak_input": 8135.2
+    },
+    {
+      "method": "identity",
+      "n": 120,
+      "passed": 51,
+      "first_input": 4258.491666666667,
+      "mean_post_input": 4655.725555061887,
+      "mean_peak_input": 5018.633333333333
+    },
+    {
+      "method": "state-baseline",
+      "n": 120,
+      "passed": 49,
+      "first_input": 6259.266666666666,
+      "mean_post_input": 6716.657814392715,
+      "mean_peak_input": 7131.616666666667
+    },
+    {
+      "method": "state-optimized",
+      "n": 120,
+      "passed": 51,
+      "first_input": 6029.825,
+      "mean_post_input": 6516.472205209378,
+      "mean_peak_input": 6930.3
+    }
+  ],
+  "conclusions": {
+    "state": {
+      "success_baseline": 49,
+      "success_optimized": 51,
+      "success_identity": 51,
+      "n": 120,
+      "first_input_change_percent": -3.665631756648813,
+      "mean_post_input_change_percent": -2.9804348340386144,
+      "versus_baseline": {
+        "n": 120,
+        "families": 13,
+        "gains": 3,
+        "losses": 1,
+        "unchanged": 116,
+        "success_difference": 0.016666666666666666,
+        "descriptive_exact_mcnemar_p": 0.625,
+        "family_cluster_bootstrap_95_interval": [
+          -0.015267175572519083,
+          0.046296296296296294
+        ],
+        "bootstrap_seed": 574941,
+        "bootstrap_replicates": 10000,
+        "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+      },
+      "versus_identity": {
+        "n": 120,
+        "families": 13,
+        "gains": 8,
+        "losses": 8,
+        "unchanged": 104,
+        "success_difference": 0.0,
+        "descriptive_exact_mcnemar_p": 1,
+        "family_cluster_bootstrap_95_interval": [
+          -0.07462686567164178,
+          0.06504065040650407
+        ],
+        "bootstrap_seed": 574941,
+        "bootstrap_replicates": 10000,
+        "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+      }
+    },
+    "event": {
+      "success_baseline": 46,
+      "success_optimized": 51,
+      "success_identity": 51,
+      "n": 120,
+      "first_input_change_percent": -6.4762797687035185,
+      "mean_post_input_change_percent": -5.17076179603152,
+      "versus_baseline": {
+        "n": 120,
+        "families": 13,
+        "gains": 9,
+        "losses": 4,
+        "unchanged": 107,
+        "success_difference": 0.041666666666666664,
+        "descriptive_exact_mcnemar_p": 0.266845703125,
+        "family_cluster_bootstrap_95_interval": [
+          -0.009259259259259259,
+          0.09482758620689655
+        ],
+        "bootstrap_seed": 574941,
+        "bootstrap_replicates": 10000,
+        "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+      },
+      "versus_identity": {
+        "n": 120,
+        "families": 13,
+        "gains": 8,
+        "losses": 8,
+        "unchanged": 104,
+        "success_difference": 0.0,
+        "descriptive_exact_mcnemar_p": 1,
+        "family_cluster_bootstrap_95_interval": [
+          -0.07964601769911504,
+          0.06569343065693431
+        ],
+        "bootstrap_seed": 574941,
+        "bootstrap_replicates": 10000,
+        "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+      }
+    },
+    "dedup": {
+      "success_baseline": 49,
+      "success_optimized": 49,
+      "success_identity": 51,
+      "n": 120,
+      "first_input_change_percent": -1.4214683454997656,
+      "mean_post_input_change_percent": -0.2921028001294679,
+      "versus_baseline": {
+        "n": 120,
+        "families": 13,
+        "gains": 6,
+        "losses": 6,
+        "unchanged": 108,
+        "success_difference": 0.0,
+        "descriptive_exact_mcnemar_p": 1,
+        "family_cluster_bootstrap_95_interval": [
+          -0.03125,
+          0.03529411764705882
+        ],
+        "bootstrap_seed": 574941,
+        "bootstrap_replicates": 10000,
+        "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+      },
+      "versus_identity": {
+        "n": 120,
+        "families": 13,
+        "gains": 7,
+        "losses": 9,
+        "unchanged": 104,
+        "success_difference": -0.016666666666666666,
+        "descriptive_exact_mcnemar_p": 0.803619384765625,
+        "family_cluster_bootstrap_95_interval": [
+          -0.10526315789473684,
+          0.058823529411764705
+        ],
+        "bootstrap_seed": 574941,
+        "bootstrap_replicates": 10000,
+        "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+      }
+    }
+  },
+  "known_completed_prefix_failure_count": 18,
+  "limitations": [
+    "52 conditions are 13 historically seen families \u00d7 four simulated file-tool conditions. Three fresh seeds are independent repetitions, not 156 independent tasks or a blind unseen-task evaluation.",
+    "The development label in primary tables means six exact task-condition instances. The other 46 conditions still include development families under different conditions. Family-stratified results are separately verified.",
+    "The minimal-explanation grid was adaptively expanded after observing State development outcomes, before Event/Dedup candidate outcomes and all fresh-seed evaluation; amendment preserved and disclosed.",
+    "No pruning, semantic node merging or summarization occurs in these codec candidates. Losslessness is exact typed JSON payload/history restoration, with list and source-message order preserved; JSON object-key spelling/order is not the losslessness criterion.",
+    "Zero outer explanation is not zero inline explanation. Optimized State/Event outer instructions are 32 tokens; Dedup has 0. Inline rules marginal body costs are 54/35/72 tokens respectively; these costs recur in each request while retained.",
+    "Event baseline uses full outer explanation while the selected candidate uses minimal. Final Event comparison measures the selected combined codec-and-explanation optimization, not an isolated codec effect.",
+    "Observed success counts are not noninferiority/equivalence proofs. Paired exact McNemar p-values assume more independence than family clusters provide and are descriptive only; 13-family bootstrap intervals are also small-cluster descriptive uncertainty.",
+    "Only the first post-conversion request is aligned to a common environment/history boundary. Subsequent request ordinals diverge; trajectory means describe actual continued workloads, not matched actions.",
+    "18 triggered trajectories have sufficient evidence of an official failure in an already completed prefix turn. They remain in the primary 120-pair denominator; no detected failure is not proof of a valid prefix.",
+    "Full model weights were not rehashed during this audit. Existing download hash, current metadata/library and clean vendor revision match; source/dependency snapshots are not proof against every possible external runtime change.",
+    "This audit validates this frozen sweep. It does not imply the optimization objective is exhausted: State/Event reductions are modest, Dedup average reduction is negligible and its median per-trajectory ratio worsens."
+  ],
+  "followup": "A separate cleanup agent may now organize active entry points and documentation while preserving visualization/, trajectories, source_code snapshots, and all selection/amendment/audit evidence. No score-based deletion or reruns.",
+  "evidence_files": [
+    "final_check.py",
+    "final-check-evidence.json",
+    "native_fixed_check.py",
+    "native-fixed-evidence.json",
+    "final_reports_check.py",
+    "final-reports-evidence.json",
+    "final-config-guard.json",
+    "preflight.json",
+    "preflight-amendment-1.json"
+  ]
+}

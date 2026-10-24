@@ -1,0 +1,22 @@
+{
+  "pid": 690898,
+  "started_at": 1792455619.6079316,
+  "status": "inference_complete_pending_independent_audit",
+  "completed_stages": [
+    "graph-dev-none-state-pilot",
+    "graph-dev-none",
+    "graph-dev-minimal",
+    "graph-dev-full",
+    "identity-all-none",
+    "graph-final-minimal-state",
+    "graph-final-full-event",
+    "graph-final-none-dedup"
+  ],
+  "current": "graph-final-none-dedup",
+  "selection": {
+    "state": "minimal",
+    "event": "full",
+    "dedup": "none"
+  },
+  "finished_at": 1792478605.6005561
+}

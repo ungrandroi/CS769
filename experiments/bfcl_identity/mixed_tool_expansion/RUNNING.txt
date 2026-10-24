@@ -1,0 +1,35 @@
+Mixed-tool expansion: separately adapted semantic graphs
+
+Active controller: runtime/controller-launch.json
+Current state: runtime/status.json
+Log: runtime/controller.log
+Frozen source: source_code/adapters-v1/
+Independent preflight: preflight-review.json
+Scope and methods: PROTOCOL.md, task-split.json, selection.json
+
+The controller is detached using start_new_session, DEVNULL stdin, and
+append-only file logs. It uses the existing local Qwen service on port11436
+and a single serial GPU queue.
+
+Development: 8 task conditions x 3 seeds =24 Identity runs, each with up to
+6 graph continuations. Before fresh evaluation, the controller waits for
+development-review.json from independent review, matching frozen source,
+protocol, split, encoding selection, vendor pins, and development manifests.
+Waiting for review is not completion and is not a request for new user approval.
+
+After a matching development review passes: 148 conditions x 3 reserved seeds
+=444 fresh Identity runs and at most2664 actual graph continuations. Cases
+that never reach the trigger are recorded separately. The seven arms share
+the new mixed-domain semantic adapter; the old thirteen-family study remains
+separate and unchanged.
+
+Failures persist needs_review and stop. Do not overwrite, delete, or restart
+an incomplete attempt. On a justified resume, reuse the exact launch command,
+cwd and PYTHONPATH, preserving logs and recording a new launch. The controller
+validates completed manifest configuration and launch/source hashes before
+skipping it. Never edit a frozen snapshot or a file bound by preflight hashes.
+
+After inference, the controller automatically checks paired payload/history
+restoration and native token accounting and writes descriptive reports.
+Independent final review is separate work and is persisted as pending.
+Keep visualization/, credentials, all historical trajectories and frozen source.

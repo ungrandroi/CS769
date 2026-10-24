@@ -1,0 +1,778 @@
+{
+  "audit_kind": "independent preflight code and partial artifact audit, not final result audit",
+  "created_at": 1792493928.4681983,
+  "snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v1",
+  "snapshot_files_verified": 42,
+  "dataset_sources_verified": 4,
+  "payload_checks": [
+    {
+      "task": "multi_turn_base_9",
+      "seed": 3301,
+      "method": "state",
+      "variant": "state-tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": 3301,
+      "method": "state",
+      "variant": "state-shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": 3301,
+      "method": "event",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": 3301,
+      "method": "event",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 1103,
+      "method": "state",
+      "variant": "state-tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 1103,
+      "method": "state",
+      "variant": "state-shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 1103,
+      "method": "event",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 1103,
+      "method": "event",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 2207,
+      "method": "state",
+      "variant": "state-tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 2207,
+      "method": "state",
+      "variant": "state-shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 2207,
+      "method": "event",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 2207,
+      "method": "event",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 3301,
+      "method": "state",
+      "variant": "state-tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 3301,
+      "method": "state",
+      "variant": "state-shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 3301,
+      "method": "event",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 3301,
+      "method": "event",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 1103,
+      "method": "state",
+      "variant": "state-tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 1103,
+      "method": "state",
+      "variant": "state-shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 1103,
+      "method": "event",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 1103,
+      "method": "event",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "method": "state",
+      "variant": "state-tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "method": "state",
+      "variant": "state-shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "method": "event",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "method": "event",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 3301,
+      "method": "state",
+      "variant": "state-tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 3301,
+      "method": "state",
+      "variant": "state-shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 3301,
+      "method": "event",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 3301,
+      "method": "event",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 1103,
+      "method": "state",
+      "variant": "state-tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 1103,
+      "method": "state",
+      "variant": "state-shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 1103,
+      "method": "event",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 1103,
+      "method": "event",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 2207,
+      "method": "state",
+      "variant": "state-tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 2207,
+      "method": "state",
+      "variant": "state-shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 2207,
+      "method": "event",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 2207,
+      "method": "event",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 3301,
+      "method": "state",
+      "variant": "state-tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 3301,
+      "method": "state",
+      "variant": "state-shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 3301,
+      "method": "event",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 3301,
+      "method": "event",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 1103,
+      "method": "state",
+      "variant": "state-tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 1103,
+      "method": "state",
+      "variant": "state-shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 1103,
+      "method": "event",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 1103,
+      "method": "event",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 2207,
+      "method": "state",
+      "variant": "state-tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 2207,
+      "method": "state",
+      "variant": "state-shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 2207,
+      "method": "event",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 2207,
+      "method": "event",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 3301,
+      "method": "state",
+      "variant": "state-tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 3301,
+      "method": "state",
+      "variant": "state-shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 3301,
+      "method": "event",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 3301,
+      "method": "event",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "payload_exact": true,
+      "source_order_exact": true,
+      "history_exact": true
+    }
+  ],
+  "completed_artifact_checks": [
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_9/seed2207/state-state-tables-v1-none",
+      "status": "not_triggered",
+      "audit": "pass"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_9/seed1103/state-state-tables-v1-none",
+      "status": "not_triggered",
+      "audit": "pass"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_9/seed3301/state-state-tables-v1-none",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_3/seed2207/state-state-tables-v1-none",
+      "status": "not_triggered",
+      "audit": "pass"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_3/seed1103/state-state-tables-v1-none",
+      "status": "not_triggered",
+      "audit": "pass"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_3/seed3301/state-state-tables-v1-none",
+      "status": "not_triggered",
+      "audit": "pass"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_37/seed2207/state-state-tables-v1-none",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_37/seed1103/state-state-tables-v1-none",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v1"
+    }
+  ],
+  "in_progress": [
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_37/seed3301/state-state-tables-v1-none",
+      "status": "running"
+    }
+  ],
+  "module_locations": {
+    "core.optimized_graph": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v1/scripts/core/optimized_graph.py",
+    "core.lossless_state": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v1/scripts/core/lossless_state.py",
+    "core.lossless_event": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v1/scripts/core/lossless_event.py",
+    "workflows.lossless_audit": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v1/scripts/workflows/lossless_audit.py"
+  },
+  "protocol_tests": 5,
+  "codec_tests": 20,
+  "selection_frozen": false,
+  "fresh_evaluation_started": false
+}

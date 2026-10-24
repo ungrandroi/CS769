@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v1/scripts/workflows/work1000_task.py", line 260, in <module>
+    main()
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v1/scripts/workflows/work1000_task.py", line 240, in main
+    result, metadata = handler.inference(entry, True, False)
+  File "/home/bcao44/bofeng/CS769/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/model_handler/base_handler.py", line 80, in inference
+    return self.inference_multi_turn_FC(
+  File "/home/bcao44/bofeng/CS769/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/model_handler/base_handler.py", line 220, in inference_multi_turn_FC
+    api_response, query_latency = self._query_FC(inference_data)
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v1/scripts/workflows/work1000_task.py", line 163, in query_fc
+    return query(data)
+  File "/home/bcao44/bofeng/CS769/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/model_handler/api_inference/openai_response.py", line 124, in _query_FC
+    return self.generate_with_backoff(**kwargs)
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v1/scripts/workflows/work1000_task.py", line 191, in generate
+    assert req == source[i]['request'], f'Request differs in replay at {i}'
+AssertionError: Request differs in replay at 1
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 0, Step: 1

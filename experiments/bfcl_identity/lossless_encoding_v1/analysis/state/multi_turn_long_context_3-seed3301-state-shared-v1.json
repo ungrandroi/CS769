@@ -1,0 +1,1126 @@
+{
+  "encoding": "state-shared-v1",
+  "decoding": "A $table stores its original list or object: each row maps columns to values, with defaults added; keys name object rows. $literal is unchanged original data. $ref substitutes the exact value in shared_values; references do not merge events or states.",
+  "payload": {
+    "format": "readable-graph-1",
+    "method": "v1-compact",
+    "source_message_columns": {
+      "role:user": [
+        "content"
+      ],
+      "message": [
+        "id",
+        "content"
+      ],
+      "function_call": [
+        "arguments",
+        "call_id",
+        "name",
+        "id"
+      ],
+      "function_call_output": [
+        "call_id",
+        "output"
+      ]
+    },
+    "message_defaults_by_type": {
+      "role:user": {
+        "role": "user"
+      },
+      "message": {
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": null
+      },
+      "function_call": {
+        "type": "function_call",
+        "namespace": null,
+        "status": "completed"
+      },
+      "function_call_output": {
+        "type": "function_call_output"
+      }
+    },
+    "source_messages": {
+      "m0": [
+        "role:user",
+        "As part of my latest photography project, I need to gather files that have 'test' in their name from any folder in my current directory. Could you help me locate those?"
+      ],
+      "m1": [
+        "message",
+        "qwen_msg_0",
+        [
+          {
+            "annotations": [],
+            "text": "I'll help you find files with 'test' in their name. Let me search the current directory and its subdirectories.\n\n",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ]
+      ],
+      "m2": [
+        "function_call",
+        "{\"name\":\"test\"}",
+        "qwen_call_0_0",
+        "find",
+        "qwen_fc_0_0"
+      ],
+      "m3": [
+        "function_call_output",
+        "qwen_call_0_0",
+        "{\"matches\": [\"./projects/photography/test_image1.jpg\", \"./projects/photography/test_document.txt\", \"./projects/photography/backup_tests\"]}"
+      ],
+      "m4": [
+        "message",
+        "qwen_msg_1",
+        [
+          {
+            "annotations": [],
+            "text": "I found the files and folders with 'test' in their name. Here's what I located:\n\n**Files:**\n- `./projects/photography/test_image1.jpg` — an image file (likely relevant to your photography project)\n- `./projects/photography/test_document.txt` — a text document\n\n**Folder:**\n- `./projects/photography/backup_tests` — a directory (not a file)\n\nSo there are **2 files** with 'test' in their name, both located in the `projects/photography/` subdirectory. The `backup_tests` item is a folder rather than a file, so I've listed it separately in case you want to look inside it.\n\nWould you like me to:\n- List the contents of the `backup_tests` folder to see if it contains any files with 'test' in the name?\n- Show you the contents of any of these files?",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ]
+      ],
+      "m5": [
+        "role:user",
+        "After identifying them, the next step is to ensure the images and text files are safely copied into a 'backup_tests' folder right within the same directory. Could that be arranged?"
+      ],
+      "m6": [
+        "message",
+        "qwen_msg_2",
+        [
+          {
+            "annotations": [],
+            "text": "I'll copy the image and text files into the `backup_tests` folder. Let me first check the current directory to confirm the paths.\n\n",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ]
+      ],
+      "m7": [
+        "function_call",
+        "{}",
+        "qwen_call_2_0",
+        "pwd",
+        "qwen_fc_2_0"
+      ],
+      "m8": [
+        "function_call",
+        "{}",
+        "qwen_call_2_1",
+        "ls",
+        "qwen_fc_2_1"
+      ],
+      "m9": [
+        "function_call_output",
+        "qwen_call_2_0",
+        "{\"current_working_directory\": \"/alex\"}"
+      ],
+      "m10": [
+        "function_call_output",
+        "qwen_call_2_1",
+        "{\"current_directory_content\": [\"projects\"]}"
+      ],
+      "m11": [
+        "message",
+        "qwen_msg_3",
+        [
+          {
+            "annotations": [],
+            "text": "Let me navigate into the relevant directory to confirm the files and the `backup_tests` folder.\n\n",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ]
+      ],
+      "m12": [
+        "function_call",
+        "{\"folder\":\"projects\"}",
+        "qwen_call_3_0",
+        "cd",
+        "qwen_fc_3_0"
+      ],
+      "m13": [
+        "function_call_output",
+        "qwen_call_3_0",
+        "{\"current_working_directory\": \"projects\"}"
+      ],
+      "m14": [
+        "function_call",
+        "{\"folder\":\"photography\"}",
+        "qwen_call_4_0",
+        "cd",
+        "qwen_fc_4_0"
+      ],
+      "m15": [
+        "function_call_output",
+        "qwen_call_4_0",
+        "{\"current_working_directory\": \"photography\"}"
+      ],
+      "m16": [
+        "function_call",
+        "{}",
+        "qwen_call_5_0",
+        "ls",
+        "qwen_fc_5_0"
+      ],
+      "m17": [
+        "function_call_output",
+        "qwen_call_5_0",
+        "{\"current_directory_content\": [\"test_image1.jpg\", \"test_document.txt\", \"backup_tests\"]}"
+      ],
+      "m18": [
+        "message",
+        "qwen_msg_6",
+        [
+          {
+            "annotations": [],
+            "text": "Both files and the `backup_tests` folder are confirmed in the current directory. Now I'll copy the image and text files into `backup_tests`.\n\n",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ]
+      ],
+      "m19": [
+        "function_call",
+        "{\"source\":\"test_image1.jpg\",\"destination\":\"backup_tests\"}",
+        "qwen_call_6_0",
+        "cp",
+        "qwen_fc_6_0"
+      ],
+      "m20": [
+        "function_call",
+        "{\"source\":\"test_document.txt\",\"destination\":\"backup_tests\"}",
+        "qwen_call_6_1",
+        "cp",
+        "qwen_fc_6_1"
+      ],
+      "m21": [
+        "function_call_output",
+        "qwen_call_6_0",
+        "{\"result\": \"'test_image1.jpg' copied to 'backup_tests/test_image1.jpg'\"}"
+      ],
+      "m22": [
+        "function_call_output",
+        "qwen_call_6_1",
+        "{\"result\": \"'test_document.txt' copied to 'backup_tests/test_document.txt'\"}"
+      ],
+      "m23": [
+        "message",
+        "qwen_msg_7",
+        [
+          {
+            "annotations": [],
+            "text": "Both files were copied successfully. Let me verify the contents of the `backup_tests` folder to confirm.\n\n",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ]
+      ],
+      "m24": [
+        "function_call",
+        "{\"folder\":\"backup_tests\"}",
+        "qwen_call_7_0",
+        "cd",
+        "qwen_fc_7_0"
+      ],
+      "m25": [
+        "function_call_output",
+        "qwen_call_7_0",
+        "{\"current_working_directory\": \"backup_tests\"}"
+      ],
+      "m26": [
+        "function_call",
+        "{}",
+        "qwen_call_8_0",
+        "ls",
+        "qwen_fc_8_0"
+      ],
+      "m27": [
+        "function_call_output",
+        "qwen_call_8_0",
+        "{\"current_directory_content\": [\"image_344822349461074042.jpg\", \"image_8219547643081662353.jpg\", \"image_5421509146842474663.jpg\", \"image_185391401034246046.jpg\", \"image_6824007961180780019.jpg\", \"image_2994974694593273051.jpg\", \"image_2537728455072851196.jpg\", \"image_2164918946836800275.jpg\", \"image_1745133864906284051.jpg\", \"image_7707563551789432679.jpg\", \"image_8190489168166590809.jpg\", \"image_2385660725381355820.jpg\", \"image_4771211633166048374.jpg\", \"image_3443718094055823214.jpg\", \"image_6838087561356843690.jpg\", \"image_605952633285970710.jpg\", \"image_6341510244180179744.jpg\", \"image_4119241148692325954.jpg\", \"image_5651066601163181955.jpg\", \"image_3747091333751395055.jpg\", \"image_4623743619379194431.jpg\", \"image_5072742684386583099.jpg\", \"image_1978458056362464778.jpg\", \"image_3090346927968358019.jpg\", \"image_7193806748674265039.jpg\", \"image_7169516574395086720.jpg\", \"image_8618240224293913315.jpg\", \"image_5514683852355062444.jpg\", \"image_8749630317332649147.jpg\", \"image_1912245706439755759.jpg\", \"test_image1.jpg\", \"test_document.txt\"]}"
+      ]
+    },
+    "user_requests": [
+      "m0",
+      "m5"
+    ],
+    "unverified_assistant_statements": [
+      "m1",
+      "m4",
+      "m6",
+      "m11",
+      "m18",
+      "m23"
+    ],
+    "state_nodes": {
+      "s0": {
+        "cwd": {
+          "location_id": "l0",
+          "value": null,
+          "evidence": []
+        },
+        "objects": [],
+        "task_completion": "unknown"
+      },
+      "s1": {
+        "inherits": "s0",
+        "changes": {}
+      },
+      "s2": {
+        "inherits": "s1",
+        "changes": {
+          "cwd": {
+            "location_id": "l0",
+            "value": "/alex",
+            "evidence": [
+              "m7",
+              "m9"
+            ]
+          }
+        }
+      },
+      "s3": {
+        "inherits": "s2",
+        "changes": {
+          "objects_updated": [
+            {
+              "object_index": 0,
+              "location_id": "l0",
+              "name": "projects",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m8",
+                  "m10"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "s4": {
+        "inherits": "s3",
+        "changes": {
+          "cwd": {
+            "location_id": "l1",
+            "value": "projects",
+            "evidence": [
+              "m12",
+              "m13"
+            ]
+          },
+          "objects_updated": [
+            {
+              "object_index": 0,
+              "kind": "directory",
+              "evidence": {
+                "exists": [
+                  "m12",
+                  "m13"
+                ],
+                "kind": [
+                  "m12",
+                  "m13"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "s5": {
+        "inherits": "s4",
+        "changes": {
+          "cwd": {
+            "location_id": "l2",
+            "value": "photography",
+            "evidence": [
+              "m14",
+              "m15"
+            ]
+          },
+          "objects_updated": [
+            {
+              "object_index": 1,
+              "location_id": "l1",
+              "name": "photography",
+              "exists": true,
+              "kind": "directory",
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m14",
+                  "m15"
+                ],
+                "kind": [
+                  "m14",
+                  "m15"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "s6": {
+        "inherits": "s5",
+        "changes": {
+          "objects_updated": {
+            "$table": {
+              "columns": [
+                "object_index",
+                "name"
+              ],
+              "defaults": {
+                "location_id": "l2",
+                "exists": true,
+                "kind": null,
+                "content": null,
+                "evidence": {
+                  "exists": [
+                    "m16",
+                    "m17"
+                  ]
+                }
+              },
+              "rows": [
+                [
+                  2,
+                  "test_image1.jpg"
+                ],
+                [
+                  3,
+                  "test_document.txt"
+                ],
+                [
+                  4,
+                  "backup_tests"
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "s7": {
+        "inherits": "s6",
+        "changes": {
+          "objects_updated": [
+            {
+              "object_index": 4,
+              "kind": "directory",
+              "evidence": {
+                "exists": [
+                  "m19",
+                  "m21"
+                ],
+                "kind": [
+                  "m19",
+                  "m21"
+                ]
+              }
+            },
+            {
+              "object_index": 5,
+              "location_id": "l3",
+              "name": "test_image1.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m19",
+                  "m21",
+                  "m16",
+                  "m17"
+                ],
+                "kind": [
+                  "m19",
+                  "m21",
+                  "m16",
+                  "m17"
+                ],
+                "content": [
+                  "m19",
+                  "m21",
+                  "m16",
+                  "m17"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "s8": {
+        "inherits": "s7",
+        "changes": {
+          "objects_updated": [
+            {
+              "object_index": 4,
+              "evidence": {
+                "exists": [
+                  "m20",
+                  "m22"
+                ],
+                "kind": [
+                  "m20",
+                  "m22"
+                ]
+              }
+            },
+            {
+              "object_index": 6,
+              "location_id": "l3",
+              "name": "test_document.txt",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m20",
+                  "m22",
+                  "m16",
+                  "m17"
+                ],
+                "kind": [
+                  "m20",
+                  "m22",
+                  "m16",
+                  "m17"
+                ],
+                "content": [
+                  "m20",
+                  "m22",
+                  "m16",
+                  "m17"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "s9": {
+        "inherits": "s8",
+        "changes": {
+          "cwd": {
+            "location_id": "l3",
+            "value": "backup_tests",
+            "evidence": [
+              "m24",
+              "m25"
+            ]
+          },
+          "objects_updated": [
+            {
+              "object_index": 4,
+              "evidence": {
+                "exists": [
+                  "m24",
+                  "m25"
+                ],
+                "kind": [
+                  "m24",
+                  "m25"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "s10": {
+        "inherits": "s9",
+        "changes": {
+          "objects_updated": [
+            {
+              "object_index": 5,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ],
+                "kind": [
+                  "m19",
+                  "m21",
+                  "m16",
+                  "m17"
+                ],
+                "content": [
+                  "m19",
+                  "m21",
+                  "m16",
+                  "m17"
+                ]
+              }
+            },
+            {
+              "object_index": 6,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ],
+                "kind": [
+                  "m20",
+                  "m22",
+                  "m16",
+                  "m17"
+                ],
+                "content": [
+                  "m20",
+                  "m22",
+                  "m16",
+                  "m17"
+                ]
+              }
+            },
+            {
+              "object_index": 7,
+              "location_id": "l3",
+              "name": "image_344822349461074042.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 8,
+              "location_id": "l3",
+              "name": "image_8219547643081662353.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 9,
+              "location_id": "l3",
+              "name": "image_5421509146842474663.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 10,
+              "location_id": "l3",
+              "name": "image_185391401034246046.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 11,
+              "location_id": "l3",
+              "name": "image_6824007961180780019.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 12,
+              "location_id": "l3",
+              "name": "image_2994974694593273051.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 13,
+              "location_id": "l3",
+              "name": "image_2537728455072851196.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 14,
+              "location_id": "l3",
+              "name": "image_2164918946836800275.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 15,
+              "location_id": "l3",
+              "name": "image_1745133864906284051.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 16,
+              "location_id": "l3",
+              "name": "image_7707563551789432679.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 17,
+              "location_id": "l3",
+              "name": "image_8190489168166590809.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 18,
+              "location_id": "l3",
+              "name": "image_2385660725381355820.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 19,
+              "location_id": "l3",
+              "name": "image_4771211633166048374.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 20,
+              "location_id": "l3",
+              "name": "image_3443718094055823214.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 21,
+              "location_id": "l3",
+              "name": "image_6838087561356843690.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 22,
+              "location_id": "l3",
+              "name": "image_605952633285970710.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 23,
+              "location_id": "l3",
+              "name": "image_6341510244180179744.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 24,
+              "location_id": "l3",
+              "name": "image_4119241148692325954.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 25,
+              "location_id": "l3",
+              "name": "image_5651066601163181955.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 26,
+              "location_id": "l3",
+              "name": "image_3747091333751395055.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 27,
+              "location_id": "l3",
+              "name": "image_4623743619379194431.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 28,
+              "location_id": "l3",
+              "name": "image_5072742684386583099.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 29,
+              "location_id": "l3",
+              "name": "image_1978458056362464778.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 30,
+              "location_id": "l3",
+              "name": "image_3090346927968358019.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 31,
+              "location_id": "l3",
+              "name": "image_7193806748674265039.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 32,
+              "location_id": "l3",
+              "name": "image_7169516574395086720.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 33,
+              "location_id": "l3",
+              "name": "image_8618240224293913315.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 34,
+              "location_id": "l3",
+              "name": "image_5514683852355062444.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 35,
+              "location_id": "l3",
+              "name": "image_8749630317332649147.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            },
+            {
+              "object_index": 36,
+              "location_id": "l3",
+              "name": "image_1912245706439755759.jpg",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m26",
+                  "m27"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "tool_call_edges": {
+      "$table": {
+        "columns": [
+          "from",
+          "to",
+          "tool",
+          "input_message",
+          "return_message"
+        ],
+        "defaults": {
+          "status": "success"
+        },
+        "rows": [
+          [
+            "s0",
+            "s1",
+            "find",
+            "m2",
+            "m3"
+          ],
+          [
+            "s1",
+            "s2",
+            "pwd",
+            "m7",
+            "m9"
+          ],
+          [
+            "s2",
+            "s3",
+            "ls",
+            "m8",
+            "m10"
+          ],
+          [
+            "s3",
+            "s4",
+            "cd",
+            "m12",
+            "m13"
+          ],
+          [
+            "s4",
+            "s5",
+            "cd",
+            "m14",
+            "m15"
+          ],
+          [
+            "s5",
+            "s6",
+            "ls",
+            "m16",
+            "m17"
+          ],
+          [
+            "s6",
+            "s7",
+            "cp",
+            "m19",
+            "m21"
+          ],
+          [
+            "s7",
+            "s8",
+            "cp",
+            "m20",
+            "m22"
+          ],
+          [
+            "s8",
+            "s9",
+            "cd",
+            "m24",
+            "m25"
+          ],
+          [
+            "s9",
+            "s10",
+            "ls",
+            "m26",
+            "m27"
+          ]
+        ],
+        "keys": [
+          "e0",
+          "e1",
+          "e2",
+          "e3",
+          "e4",
+          "e5",
+          "e6",
+          "e7",
+          "e8",
+          "e9"
+        ]
+      }
+    },
+    "locations": [
+      {
+        "id": "l0",
+        "name": null,
+        "parent": null
+      },
+      {
+        "id": "l1",
+        "name": "projects",
+        "parent": "l0"
+      },
+      {
+        "id": "l2",
+        "name": "photography",
+        "parent": "l1"
+      },
+      {
+        "id": "l3",
+        "name": "backup_tests",
+        "parent": "l2"
+      }
+    ],
+    "current_state": "s10"
+  },
+  "shared_values": {}
+}

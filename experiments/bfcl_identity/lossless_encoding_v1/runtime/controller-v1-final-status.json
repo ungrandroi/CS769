@@ -1,0 +1,22 @@
+{
+  "pid": 1776006,
+  "started_at": 1792493819.9043248,
+  "status": "superseded_after_current_task_completed",
+  "completed_jobs": 64,
+  "stages": [
+    "development:state-state-tables-v1-none",
+    "development:state-state-tables-v1-minimal",
+    "development:state-state-shared-v1-none"
+  ],
+  "stage": "development_candidates",
+  "updated_at": 1792496643.5890522,
+  "current": {
+    "task": "multi_turn_long_context_3",
+    "seed": 2207,
+    "label": "state-state-shared-v1-minimal",
+    "destination": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_3/seed2207/state-state-shared-v1-minimal"
+  },
+  "last_completed": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_3/seed1103/state-state-shared-v1-minimal",
+  "superseded_at": 1792496728.1932132,
+  "reason": "Add preregistered short explanation development controls; no model task interrupted"
+}

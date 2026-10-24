@@ -1,0 +1,241 @@
+{
+  "identity_runs": 600,
+  "triggered_prefixes": 417,
+  "untriggered_prefixes": 183,
+  "actual_graph_continuations": 2502,
+  "paired_arm_rows": 2919,
+  "triggered_family_count": 50,
+  "groups": [
+    {
+      "cohort": "all",
+      "arm": "identity",
+      "n": 417,
+      "passed": 171,
+      "success_rate": 0.41007194244604317,
+      "first_input_tokens": 5477.942446043166,
+      "mean_post_input_tokens": 5983.663441649177,
+      "gains_vs_identity": 0,
+      "losses_vs_identity": 0
+    },
+    {
+      "cohort": "all",
+      "arm": "state-baseline",
+      "n": 417,
+      "passed": 168,
+      "success_rate": 0.4028776978417266,
+      "first_input_tokens": 7650.654676258992,
+      "mean_post_input_tokens": 8168.225743882399,
+      "gains_vs_identity": 21,
+      "losses_vs_identity": 24
+    },
+    {
+      "cohort": "all",
+      "arm": "state-optimized",
+      "n": 417,
+      "passed": 168,
+      "success_rate": 0.4028776978417266,
+      "first_input_tokens": 7339.743405275779,
+      "mean_post_input_tokens": 7874.699158886227,
+      "gains_vs_identity": 28,
+      "losses_vs_identity": 31
+    },
+    {
+      "cohort": "all",
+      "arm": "event-baseline",
+      "n": 417,
+      "passed": 166,
+      "success_rate": 0.3980815347721823,
+      "first_input_tokens": 9389.040767386092,
+      "mean_post_input_tokens": 9911.1888548015,
+      "gains_vs_identity": 22,
+      "losses_vs_identity": 27
+    },
+    {
+      "cohort": "all",
+      "arm": "event-optimized",
+      "n": 417,
+      "passed": 176,
+      "success_rate": 0.42206235011990406,
+      "first_input_tokens": 8746.223021582733,
+      "mean_post_input_tokens": 9276.457060946728,
+      "gains_vs_identity": 32,
+      "losses_vs_identity": 27
+    },
+    {
+      "cohort": "all",
+      "arm": "dedup-baseline",
+      "n": 417,
+      "passed": 166,
+      "success_rate": 0.3980815347721823,
+      "first_input_tokens": 8506.707434052758,
+      "mean_post_input_tokens": 9080.588061515695,
+      "gains_vs_identity": 23,
+      "losses_vs_identity": 28
+    },
+    {
+      "cohort": "all",
+      "arm": "dedup-optimized",
+      "n": 417,
+      "passed": 150,
+      "success_rate": 0.3597122302158273,
+      "first_input_tokens": 8274.942446043166,
+      "mean_post_input_tokens": 8963.97391991015,
+      "gains_vs_identity": 25,
+      "losses_vs_identity": 46
+    },
+    {
+      "cohort": "lossless_encoding_v1",
+      "arm": "identity",
+      "n": 120,
+      "passed": 51,
+      "success_rate": 0.425,
+      "first_input_tokens": 4258.491666666667,
+      "mean_post_input_tokens": 4655.725555061887,
+      "gains_vs_identity": 0,
+      "losses_vs_identity": 0
+    },
+    {
+      "cohort": "lossless_encoding_v1",
+      "arm": "state-baseline",
+      "n": 120,
+      "passed": 49,
+      "success_rate": 0.4083333333333333,
+      "first_input_tokens": 6259.266666666666,
+      "mean_post_input_tokens": 6716.657814392715,
+      "gains_vs_identity": 5,
+      "losses_vs_identity": 7
+    },
+    {
+      "cohort": "lossless_encoding_v1",
+      "arm": "state-optimized",
+      "n": 120,
+      "passed": 51,
+      "success_rate": 0.425,
+      "first_input_tokens": 6029.825,
+      "mean_post_input_tokens": 6516.472205209378,
+      "gains_vs_identity": 8,
+      "losses_vs_identity": 8
+    },
+    {
+      "cohort": "lossless_encoding_v1",
+      "arm": "event-baseline",
+      "n": 120,
+      "passed": 46,
+      "success_rate": 0.38333333333333336,
+      "first_input_tokens": 7697.191666666667,
+      "mean_post_input_tokens": 8122.455771058016,
+      "gains_vs_identity": 4,
+      "losses_vs_identity": 9
+    },
+    {
+      "cohort": "lossless_encoding_v1",
+      "arm": "event-optimized",
+      "n": 120,
+      "passed": 51,
+      "success_rate": 0.425,
+      "first_input_tokens": 7198.7,
+      "mean_post_input_tokens": 7702.4629311485905,
+      "gains_vs_identity": 8,
+      "losses_vs_identity": 8
+    },
+    {
+      "cohort": "lossless_encoding_v1",
+      "arm": "dedup-baseline",
+      "n": 120,
+      "passed": 49,
+      "success_rate": 0.4083333333333333,
+      "first_input_tokens": 6709.025,
+      "mean_post_input_tokens": 7245.926696848857,
+      "gains_vs_identity": 7,
+      "losses_vs_identity": 9
+    },
+    {
+      "cohort": "lossless_encoding_v1",
+      "arm": "dedup-optimized",
+      "n": 120,
+      "passed": 49,
+      "success_rate": 0.4083333333333333,
+      "first_input_tokens": 6613.658333333334,
+      "mean_post_input_tokens": 7224.761142072033,
+      "gains_vs_identity": 7,
+      "losses_vs_identity": 9
+    },
+    {
+      "cohort": "mixed_tool_expansion",
+      "arm": "identity",
+      "n": 297,
+      "passed": 120,
+      "success_rate": 0.40404040404040403,
+      "first_input_tokens": 5970.649831649832,
+      "mean_post_input_tokens": 6520.204001886465,
+      "gains_vs_identity": 0,
+      "losses_vs_identity": 0
+    },
+    {
+      "cohort": "mixed_tool_expansion",
+      "arm": "state-baseline",
+      "n": 297,
+      "passed": 119,
+      "success_rate": 0.4006734006734007,
+      "first_input_tokens": 8212.831649831649,
+      "mean_post_input_tokens": 8754.717836605505,
+      "gains_vs_identity": 16,
+      "losses_vs_identity": 17
+    },
+    {
+      "cohort": "mixed_tool_expansion",
+      "arm": "state-optimized",
+      "n": 297,
+      "passed": 117,
+      "success_rate": 0.3939393939393939,
+      "first_input_tokens": 7869.003367003367,
+      "mean_post_input_tokens": 8423.47772602839,
+      "gains_vs_identity": 20,
+      "losses_vs_identity": 23
+    },
+    {
+      "cohort": "mixed_tool_expansion",
+      "arm": "event-baseline",
+      "n": 297,
+      "passed": 120,
+      "success_rate": 0.40404040404040403,
+      "first_input_tokens": 10072.61616161616,
+      "mean_post_input_tokens": 10633.909292677654,
+      "gains_vs_identity": 18,
+      "losses_vs_identity": 18
+    },
+    {
+      "cohort": "mixed_tool_expansion",
+      "arm": "event-optimized",
+      "n": 297,
+      "passed": 125,
+      "success_rate": 0.4208754208754209,
+      "first_input_tokens": 9371.484848484848,
+      "mean_post_input_tokens": 9912.414285107592,
+      "gains_vs_identity": 24,
+      "losses_vs_identity": 19
+    },
+    {
+      "cohort": "mixed_tool_expansion",
+      "arm": "dedup-baseline",
+      "n": 297,
+      "passed": 117,
+      "success_rate": 0.3939393939393939,
+      "first_input_tokens": 9233.04377104377,
+      "mean_post_input_tokens": 9821.865380573003,
+      "gains_vs_identity": 16,
+      "losses_vs_identity": 19
+    },
+    {
+      "cohort": "mixed_tool_expansion",
+      "arm": "dedup-optimized",
+      "n": 297,
+      "passed": 101,
+      "success_rate": 0.3400673400673401,
+      "first_input_tokens": 8946.168350168351,
+      "mean_post_input_tokens": 9666.686153380097,
+      "gains_vs_identity": 18,
+      "losses_vs_identity": 37
+    }
+  ]
+}

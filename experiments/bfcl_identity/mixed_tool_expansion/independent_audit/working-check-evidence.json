@@ -1,0 +1,317 @@
+{
+  "status": "working_tree_checks_pass",
+  "model_calls": 0,
+  "public_contract_synthetic_calls": 47,
+  "roundtrips": [
+    {
+      "method": "state",
+      "payload_exact": true,
+      "history_exact": true,
+      "full_graph_exact": true
+    },
+    {
+      "method": "event",
+      "payload_exact": true,
+      "history_exact": true,
+      "full_graph_exact": true
+    },
+    {
+      "method": "dedup",
+      "payload_exact": true,
+      "history_exact": true,
+      "full_graph_exact": true
+    }
+  ],
+  "mixed_task_wrappers_checked": 3,
+  "tests_passed": 61,
+  "vendor_pins_verified": 123,
+  "legacy_source_matches_prior_freeze": true,
+  "effects": [
+    {
+      "tool": "pwd",
+      "status": "success",
+      "coverage": "filesystem_adapter",
+      "domain": "GorillaFileSystem"
+    },
+    {
+      "tool": "ls",
+      "status": "success",
+      "coverage": "filesystem_adapter",
+      "domain": "GorillaFileSystem"
+    },
+    {
+      "tool": "ticket_login",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TicketAPI"
+    },
+    {
+      "tool": "create_ticket",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TicketAPI"
+    },
+    {
+      "tool": "get_ticket",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TicketAPI"
+    },
+    {
+      "tool": "close_ticket",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TicketAPI"
+    },
+    {
+      "tool": "edit_ticket",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TicketAPI"
+    },
+    {
+      "tool": "resolve_ticket",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TicketAPI"
+    },
+    {
+      "tool": "ticket_login",
+      "status": "error",
+      "coverage": "observation_only",
+      "domain": "TicketAPI"
+    },
+    {
+      "tool": "get_user_tickets",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TicketAPI"
+    },
+    {
+      "tool": "logout",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TicketAPI"
+    },
+    {
+      "tool": "get_user_tickets",
+      "status": "error",
+      "coverage": "observation_only",
+      "domain": "TicketAPI"
+    },
+    {
+      "tool": "ticket_get_login_status",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TicketAPI"
+    },
+    {
+      "tool": "logout",
+      "status": "noop",
+      "coverage": "modeled",
+      "domain": "TicketAPI"
+    },
+    {
+      "tool": "message_get_login_status",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "MessageAPI"
+    },
+    {
+      "tool": "list_users",
+      "status": "success",
+      "coverage": "observation_only",
+      "domain": "MessageAPI"
+    },
+    {
+      "tool": "get_user_id",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "MessageAPI"
+    },
+    {
+      "tool": "message_login",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "MessageAPI"
+    },
+    {
+      "tool": "add_contact",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "MessageAPI"
+    },
+    {
+      "tool": "send_message",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "MessageAPI"
+    },
+    {
+      "tool": "send_message",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "MessageAPI"
+    },
+    {
+      "tool": "delete_message",
+      "status": "success",
+      "coverage": "observation_only",
+      "domain": "MessageAPI"
+    },
+    {
+      "tool": "view_messages_sent",
+      "status": "success",
+      "coverage": "observation_only",
+      "domain": "MessageAPI"
+    },
+    {
+      "tool": "search_messages",
+      "status": "success",
+      "coverage": "observation_only",
+      "domain": "MessageAPI"
+    },
+    {
+      "tool": "get_message_stats",
+      "status": "success",
+      "coverage": "observation_only",
+      "domain": "MessageAPI"
+    },
+    {
+      "tool": "message_login",
+      "status": "error",
+      "coverage": "observation_only",
+      "domain": "MessageAPI"
+    },
+    {
+      "tool": "message_get_login_status",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "MessageAPI"
+    },
+    {
+      "tool": "authenticate_twitter",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "post_tweet",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "get_tweet",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "get_tweet_comments",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "comment",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "mention",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "get_tweet",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "get_tweet_comments",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "follow_user",
+      "status": "success",
+      "coverage": "observation_only",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "follow_user",
+      "status": "noop",
+      "coverage": "observation_only",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "list_all_following",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "unfollow_user",
+      "status": "success",
+      "coverage": "observation_only",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "list_all_following",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "get_user_stats",
+      "status": "success",
+      "coverage": "observation_only",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "retweet",
+      "status": "success",
+      "coverage": "observation_only",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "retweet",
+      "status": "noop",
+      "coverage": "observation_only",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "get_user_tweets",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "search_tweets",
+      "status": "success",
+      "coverage": "modeled",
+      "domain": "TwitterAPI"
+    },
+    {
+      "tool": "mean",
+      "status": "success",
+      "coverage": "observation_only",
+      "domain": "MathAPI"
+    },
+    {
+      "tool": "mean",
+      "status": "error",
+      "coverage": "observation_only",
+      "domain": "MathAPI"
+    }
+  ],
+  "notes": [
+    "Fresh synthetic simulator instances only; no benchmark initial config, future text or ground truth used.",
+    "This is provisional preflight; requires exact frozen-source hash verification before launch."
+  ]
+}

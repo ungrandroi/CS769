@@ -1,0 +1,54 @@
+Lossless graph-memory encoding study
+
+Protocol and preregistration: PROTOCOL.md, task-split.json
+Active controller launch: runtime/controller-launch-v2.json
+Original controller launch (preserved): runtime/controller-launch.json
+Current stage and last completed job: runtime/status.json
+Active controller log: runtime/controller-v2.log
+Frozen execution: source_code/candidates-v2/
+Active candidate registry: candidate-registry-v2.json
+Development amendment: DEVELOPMENT_AMENDMENT_1.md
+First real model response: runtime/first-response-evidence.json
+Postprocessing watcher: runtime/postprocess-launch-v2.json, postprocess-status.json
+Frozen postprocessing: source_code/postprocess-v2/
+
+The detached controller was launched with start_new_session=True, DEVNULL
+stdin, and file logs. It continues independently of the chat turn while the
+host and local Qwen service stay running. It executes only frozen Python
+source. Actual requests and responses are retained per case in native.jsonl.
+
+Stages: old development prefixes and multiple exact codecs/explanations ->
+freeze development selection -> generate 156 fresh Identity trajectories ->
+paired current baselines and selected candidates -> descriptive report.
+Fresh evaluation never starts before candidate selection is frozen.
+
+The current study does not overwrite historical trajectories. Errors persist
+needs_review and stop. Existing incomplete attempts require documented review;
+the controller does not silently retry or overwrite them. Completed attempts
+are skipped during resumption. Saved selection must match original development
+evidence rather than being reselected using evaluation outcomes.
+
+Independent preflight audit runs separately from the GPU queue. Final
+mechanical payload checks, inline-rule token decomposition, and paired
+family-cluster bootstrap analysis run automatically in a second detached
+watcher after inference. Independent review and code cleanup remain separate
+follow-up work; completion
+of inference is not reported as completion of those tasks. Pending follow-up
+is persisted in runtime/pending-followup.json when inference completes.
+
+Before resuming, inspect status and confirm no other controller is running.
+Then require a successful strong configuration audit:
+PYTHONPATH=scripts scripts/bfcl_python.sh -m workflows.lossless_resume_guard \
+  --root experiments/bfcl_identity/lossless_encoding_v1
+This also refuses incomplete attempts; any recovery must first be documented
+and reviewed, never automatically overwrite an attempt.
+Reuse the exact launch command/cwd/PYTHONPATH in controller-launch-v2.json, with
+DEVNULL stdin, append-only logs, start_new_session=True, and a new launch record.
+Never edit source_code/ or frozen candidates. Do not delete visualization/.
+
+Authorized later expansion: runtime/expansion-stage-plan.json.
+Expansion has not started. The current 52 conditions are 13 underlying
+task families under four conditions, not 52 independent task families.
+The next research stage investigates 37 additional families containing
+file tools alongside other tools, after the current study and independent
+audit. Tool-semantic coverage must be audited before any new evaluation.

@@ -1,0 +1,1 @@
+{"status": "pass", "time": 1792535382.2750738, "request_fixed_counts_checked": 9963, "distinct_fixed_configurations": 19, "native_full_render_samples": 112, "scope": "Read-only /apply-template endpoint and vocabulary-only CPU tokenization; no inference requested. Native usage checked independently in final_check.py."}

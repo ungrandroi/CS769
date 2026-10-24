@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "snapshot_hashes_sha256": "f668a3d891c64c325dc0850306daa472347471681bc8c06abc29a697801684fb",
+  "task_split_sha256": "86c832c75efa45b3d180bfbbbaedc56413271f018f998c28be101c0c9abe3a85",
+  "selection_sha256": "26255447f21070503ae0fa4d68f7897545341ebd0f69be3fa38253785409d237",
+  "vendor_pins_sha256": "5ee16bf59a6cdec16cd51a6d582ea18f74ccd121ddefb6f748e71370be0ce04a",
+  "protocol_sha256": "fe0ce7f8a038385461339f870e81a2701a53eecdf5742d934db8804a71114929",
+  "reviewer": "/root/lossless_runner/lossless_independent_audit",
+  "review_type": "independent_preflight_frozen_source_and_semantic_contract_audit",
+  "reviewed_at": 1792536281.2270417,
+  "snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1",
+  "snapshot_files_verified": 53,
+  "vendor_pins_verified": 123,
+  "tests_passed": 61,
+  "public_contract_synthetic_calls": 47,
+  "frozen_import_and_codec_checks": 3,
+  "blocking_findings": [],
+  "working_review": "independent_audit/preflight-working.json",
+  "evidence": "independent_audit/working-check-evidence.json",
+  "scope": "Authorizes development integration only; a separate matching development-review.json gate is mandatory before fresh evaluation. No performance claims and no GPU inference performed by auditor."
+}

@@ -1,0 +1,895 @@
+{
+  "scope": "13 development triggered checkpoints only. Plain memory body includes all visible codec rules; excludes fixed request overhead. No inference.",
+  "codec_sha256": "8b4896610237a61430b685de6e98ac68f8d67157ac472b98d02fbe24195f6807",
+  "tokenizer": {
+    "model": "Qwen3.8-27B",
+    "quantization": "Q8_0",
+    "model_path": "/home/data/models/gguf/Qwen3.8-27B-Q8_0/Qwen3.8-27B-Q8_0.gguf",
+    "model_file_bytes": 28595763648,
+    "model_source": "ggml-org/Qwen3.8-27B-GGUF",
+    "model_revision": "71bc7b627595dc8a91039addd9c791ae548d6747",
+    "model_sha256_from_existing_download_manifest": "aab65c67ef0dad127960efef9247f1832bca105faa1c7a052cc039b223cf86a1",
+    "full_weights_rehashed": false,
+    "metadata_bytes": 10943782,
+    "metadata_sha256": "2622b23ee76fe1550104cd3bbfbc8c598a0b36bd40c8549583af6860db317425",
+    "declared_tensors": 851,
+    "metadata_keys": 40,
+    "library_path": "/home/bcao44/bofeng/CS769/vendor/qwen-tokenizer-631109b34/lib/libllama.so.0.5.0",
+    "library_sha256": "73b89cc3cfd638b9175974fc9337ce6ad5a80272562bd933056948327188f723",
+    "library_commit": "631109b34",
+    "abi_header_url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/include/llama.h",
+    "abi_headers_manifest": "/home/bcao44/bofeng/CS769/vendor/qwen-tokenizer-631109b34/headers-manifest.json",
+    "abi_headers": [
+      {
+        "path": "include/llama.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/include/llama.h",
+        "sha256": "d5cf9203bea63b575e76cba4881f29cfd1b611451578b01582b75b72ecbb04bc"
+      },
+      {
+        "path": "ggml/include/gguf.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/gguf.h",
+        "sha256": "e56714aab702e5ce62ee587a409643c08f7e93e8fbb77f48ef7cc85075f96fa4"
+      },
+      {
+        "path": "ggml/include/ggml.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml.h",
+        "sha256": "12ee71f99db7db9b353bc02b1fbb57c344ee17c01ac5fb7952b41a637a747ea9"
+      },
+      {
+        "path": "ggml/include/ggml-opt.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-opt.h",
+        "sha256": "3586de1bc8a934b5c72339e2b6937b0641e8f149b512231e666f67de0736eea2"
+      },
+      {
+        "path": "ggml/include/ggml-backend.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-backend.h",
+        "sha256": "5791edae1fb7622027621d15bc7a160198bd3b75ed8f96d06cb7b85e2b873756"
+      },
+      {
+        "path": "ggml/include/ggml-alloc.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-alloc.h",
+        "sha256": "d114067f9099c4a0e2bbc0625c676d4894d9cf0ea27168ee072c7de0e71bb51d"
+      },
+      {
+        "path": "ggml/include/ggml-cpu.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-cpu.h",
+        "sha256": "316279e004cdeb8e6ef78599acb602bf79a8abdf897fed9fd1914808c1518c6e"
+      }
+    ],
+    "vocab_only": true,
+    "tensor_weights_loaded": false,
+    "model_context_created": false,
+    "inference_calls": 0,
+    "server_started": false,
+    "tokenizer": {
+      "general.name": "Qwen3.8-27B",
+      "general.architecture": "qwen35",
+      "tokenizer.ggml.model": "gpt2",
+      "tokenizer.ggml.pre": "qwen35",
+      "tokenizer.ggml.add_bos_token": false,
+      "vocab_size": 248320,
+      "merge_count": 247587,
+      "bos_token_id": 248044,
+      "bos_token": "<|endoftext|>",
+      "eos_token_id": 248046,
+      "eos_token": "<|im_end|>"
+    },
+    "chat_template_sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+    "ordinary_text_policy": "add_special=False, parse_special=False; no BOS/EOS or chat framing",
+    "chat_text_policy": "Caller renders embedded GGUF template, then explicitly sets parse_special=True"
+  },
+  "summary": [
+    {
+      "variant": "tables-v1",
+      "checkpoints": 13,
+      "baseline_body_tokens_mean": 5408.615384615385,
+      "encoded_body_tokens_mean": 4956.384615384615,
+      "mean_per_checkpoint_ratio": 0.9480514092161181,
+      "all_payload_history_original_graph_exact": true
+    },
+    {
+      "variant": "shared-v1",
+      "checkpoints": 13,
+      "baseline_body_tokens_mean": 5408.615384615385,
+      "encoded_body_tokens_mean": 4964.615384615385,
+      "mean_per_checkpoint_ratio": 0.9554777792586182,
+      "all_payload_history_original_graph_exact": true
+    },
+    {
+      "variant": "source-json-v1",
+      "checkpoints": 13,
+      "baseline_body_tokens_mean": 5408.615384615385,
+      "encoded_body_tokens_mean": 5000.692307692308,
+      "mean_per_checkpoint_ratio": 0.9657382505539379,
+      "all_payload_history_original_graph_exact": true
+    }
+  ],
+  "rows": [
+    {
+      "task": "multi_turn_base_9",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 3266,
+      "encoded_body_tokens": 3279,
+      "ratio": 1.0039804041641152,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "85e3a951e71c092fb61e326e1180473f02960fcb1f4ed9054253bbbfdcbd9ef0",
+      "encoded_sha256": "af50c69ce2280c712b9046484c25faca3a0676c7c2ad3c882910f0e26ca2c6f9",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 3266,
+      "encoded_body_tokens": 3317,
+      "ratio": 1.0156154317207593,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "85e3a951e71c092fb61e326e1180473f02960fcb1f4ed9054253bbbfdcbd9ef0",
+      "encoded_sha256": "8cd8c02a69d2f95142d3f005577ff9afb99eb2bfa26ee9426359b92ec864a037",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 9
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 3266,
+      "encoded_body_tokens": 3364,
+      "ratio": 1.030006123698714,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "85e3a951e71c092fb61e326e1180473f02960fcb1f4ed9054253bbbfdcbd9ef0",
+      "encoded_sha256": "fc0263f333684b797983f6577b57ef643885a64be2ad3f3405aac3aead1d75b6",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 9
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 2182,
+      "encoded_body_tokens": 2223,
+      "ratio": 1.0187901008249312,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "271c0375c2f8d8ba17f640a588c2e240a911d7ea88df1109de02237a8b7209a0",
+      "encoded_sha256": "688f50a3fa32defa0b6fe7531ee9dfcdd71efeb92760173974d79a70da5a1a87",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 2182,
+      "encoded_body_tokens": 2268,
+      "ratio": 1.0394133822181484,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "271c0375c2f8d8ba17f640a588c2e240a911d7ea88df1109de02237a8b7209a0",
+      "encoded_sha256": "c756963459081ab11bedaaa9a3d6bd7c4299e8b14b93202c44a12823d75a8e53",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 1
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 2182,
+      "encoded_body_tokens": 2315,
+      "ratio": 1.0609532538955087,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "271c0375c2f8d8ba17f640a588c2e240a911d7ea88df1109de02237a8b7209a0",
+      "encoded_sha256": "355f694a0a99e4e76c849a487f71a520906ebea065d3b2a99de0a3575f91e7bb",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 1
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 1997,
+      "encoded_body_tokens": 2038,
+      "ratio": 1.0205307961942915,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "0161cbe8c409f77f374e385e72eb12e1974cad91d3727043db59ac63bc08f14c",
+      "encoded_sha256": "b8f82f34c0a38a0c4bc67f6bfaf612264428bc2f916089dd1e630183292cfb80",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 1997,
+      "encoded_body_tokens": 2083,
+      "ratio": 1.043064596895343,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "0161cbe8c409f77f374e385e72eb12e1974cad91d3727043db59ac63bc08f14c",
+      "encoded_sha256": "04de8435b6e8fe6cb580571cc8bca2a9cd2223cc65d2873459780c648331e617",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 1
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 1997,
+      "encoded_body_tokens": 2130,
+      "ratio": 1.0665998998497748,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "0161cbe8c409f77f374e385e72eb12e1974cad91d3727043db59ac63bc08f14c",
+      "encoded_sha256": "76d620a746fd15df4ebfb387bc478b335fbc1dbe4fa709bef3e846a4cc04a717",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 1
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 2157,
+      "encoded_body_tokens": 2198,
+      "ratio": 1.0190078813166434,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "5818f188fb703264790f1f3125ef1419ef28460674ceb00bf3a84b26a18fb67e",
+      "encoded_sha256": "d8a37c180d6ca8b08431731cd396016120324b4159a40c9b3a106e6473640144",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 2157,
+      "encoded_body_tokens": 2243,
+      "ratio": 1.0398701900788132,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "5818f188fb703264790f1f3125ef1419ef28460674ceb00bf3a84b26a18fb67e",
+      "encoded_sha256": "39a834bcd2498f5a83c4ebaea9ab214ca0e2d25fefd7a975132036c6cfe96b6f",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 1
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 2157,
+      "encoded_body_tokens": 2290,
+      "ratio": 1.061659712563746,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "5818f188fb703264790f1f3125ef1419ef28460674ceb00bf3a84b26a18fb67e",
+      "encoded_sha256": "0c00ada0a344653cb3b4bff70c14ac601e91c1fe2a8e0d04463fbff8cd8cf25b",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 1
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 6426,
+      "encoded_body_tokens": 6046,
+      "ratio": 0.940865234982882,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "9e58c9d16ce7efdd9443d28e390108d84988f88362868ed88171fe72642884a2",
+      "encoded_sha256": "7080668f6b955623d022b6a5ea9c44c1e6dfd41c258b07c6150e771a84b5eef1",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 6426,
+      "encoded_body_tokens": 6094,
+      "ratio": 0.9483348895113601,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "9e58c9d16ce7efdd9443d28e390108d84988f88362868ed88171fe72642884a2",
+      "encoded_sha256": "894f6334e1b35cbbe34461090fcae2f1edbfc51c2adf906194d3a79d88b73260",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 6426,
+      "encoded_body_tokens": 6120,
+      "ratio": 0.9523809523809523,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "9e58c9d16ce7efdd9443d28e390108d84988f88362868ed88171fe72642884a2",
+      "encoded_sha256": "cf6b41d0b8e09880f9af9eb2a81a81f8c6c307962120e84327880738394a162c",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 6396,
+      "encoded_body_tokens": 6016,
+      "ratio": 0.9405878674171357,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "3ebf517acf48d6d279b9fcf8dc330deaa17d2b9129acfb9a77088f4d66329d0d",
+      "encoded_sha256": "1289886cf5a3837e5c8659ece887ae1d8fec199caf2ef5af50a64246a10395eb",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 6396,
+      "encoded_body_tokens": 6064,
+      "ratio": 0.9480925578486554,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "3ebf517acf48d6d279b9fcf8dc330deaa17d2b9129acfb9a77088f4d66329d0d",
+      "encoded_sha256": "a0f6b5aa0add75fcdca4e2eb7c26683f4e509177ccb0594bb95f843286d873c9",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 6396,
+      "encoded_body_tokens": 6090,
+      "ratio": 0.9521575984990619,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "3ebf517acf48d6d279b9fcf8dc330deaa17d2b9129acfb9a77088f4d66329d0d",
+      "encoded_sha256": "53cebebf8e327ada9f4eec35214c066da573b12ca143d44c0cd56ace475b2a01",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 6818,
+      "encoded_body_tokens": 6160,
+      "ratio": 0.9034907597535934,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "2e46b54f97ac95982b2b892e41b2fbc1195b79eba275d3813750f7a6aa7bc05a",
+      "encoded_sha256": "5c4cd1415776b772837e94d18f43dd0b2785307a30e521f0b6832e99a16aa90a",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 6818,
+      "encoded_body_tokens": 6199,
+      "ratio": 0.9092109122909944,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "2e46b54f97ac95982b2b892e41b2fbc1195b79eba275d3813750f7a6aa7bc05a",
+      "encoded_sha256": "1c0cf2eba6f18760d81556159cd8fa7853e0b784241f5a9e110d1fa4fc640926",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 1
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 6818,
+      "encoded_body_tokens": 6225,
+      "ratio": 0.9130243473159284,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "2e46b54f97ac95982b2b892e41b2fbc1195b79eba275d3813750f7a6aa7bc05a",
+      "encoded_sha256": "e75c0ea5fa1f2cce990ea56edaca6ef93a77e4df44cf84711b14790f31462799",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 1
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 3719,
+      "encoded_body_tokens": 3745,
+      "ratio": 1.006991126646948,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "e3aa9f6517dcbf8c0bd8e0d9dd345211cf9a014a8529e15ca4f0a55da85a1fdf",
+      "encoded_sha256": "d34e144500a5757bc8a2c9768f37e301e1c1c2cad8e580a1c33ed8989b16d8f5",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 3719,
+      "encoded_body_tokens": 3804,
+      "ratio": 1.0228556063457919,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "e3aa9f6517dcbf8c0bd8e0d9dd345211cf9a014a8529e15ca4f0a55da85a1fdf",
+      "encoded_sha256": "764311f8181a0518ab070a0f0c5d0bec4a6cabf7be717f2a2c1351db9f65f48d",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 4
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 3719,
+      "encoded_body_tokens": 3851,
+      "ratio": 1.0354934122075827,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "e3aa9f6517dcbf8c0bd8e0d9dd345211cf9a014a8529e15ca4f0a55da85a1fdf",
+      "encoded_sha256": "a738a3ab61b958098705317d62e7b322329264b5c8be9f8be5e43c350c93306f",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 4
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 3446,
+      "encoded_body_tokens": 3498,
+      "ratio": 1.0150899593731864,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "e449037b9fa1d66c05aea6c4c69d62ba7e9ba2b07696dd9da7702ec55fd8a651",
+      "encoded_sha256": "d86220dd668c5286f13f1152465005db5bbd14c603e9f561ef04977bb583a093",
+      "packed_tables": [],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 3446,
+      "encoded_body_tokens": 3539,
+      "ratio": 1.0269878119558908,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "e449037b9fa1d66c05aea6c4c69d62ba7e9ba2b07696dd9da7702ec55fd8a651",
+      "encoded_sha256": "0c3c496ca9e40a3c9c87ff5bf9063ce5ac88315d9d59ad61a8b31af1dc45bc4d",
+      "packed_tables": [],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 3446,
+      "encoded_body_tokens": 3586,
+      "ratio": 1.04062681369704,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "e449037b9fa1d66c05aea6c4c69d62ba7e9ba2b07696dd9da7702ec55fd8a651",
+      "encoded_sha256": "8e7829abd021279f09bb61cb759c16e18f3d9081e42231c7df9980ed41b540b9",
+      "packed_tables": [],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 5096,
+      "encoded_body_tokens": 4468,
+      "ratio": 0.8767660910518054,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "cd1d7c29d7281a6b597c519b0541b6df0f7ecdcdb5b9a0da2ed625785f0753cd",
+      "encoded_sha256": "5eccec171b570bc47e24d013904b90f231e21dfe549ba8d9115d5e703adf786e",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 5096,
+      "encoded_body_tokens": 4509,
+      "ratio": 0.8848116169544741,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "cd1d7c29d7281a6b597c519b0541b6df0f7ecdcdb5b9a0da2ed625785f0753cd",
+      "encoded_sha256": "02401023f9626853d5071fbe0c4c83eea381b01c01758f17fe562e51c8d6bf7e",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 5096,
+      "encoded_body_tokens": 4537,
+      "ratio": 0.8903061224489796,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "cd1d7c29d7281a6b597c519b0541b6df0f7ecdcdb5b9a0da2ed625785f0753cd",
+      "encoded_sha256": "07892da4e2517328d01a65bf3f7265ca94eb5c050ba0bfa01599955758de815c",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 9587,
+      "encoded_body_tokens": 8238,
+      "ratio": 0.8592886200062585,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "bfb09c1ea13ebf8695a83b2c1ad461bc820e57d9865bf21ad82d1c33b587f09a",
+      "encoded_sha256": "67cd517a671ac18087f836698521b037ca110ebb2dcb7024956e4e938422f794",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 9587,
+      "encoded_body_tokens": 8124,
+      "ratio": 0.8473975174715761,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "bfb09c1ea13ebf8695a83b2c1ad461bc820e57d9865bf21ad82d1c33b587f09a",
+      "encoded_sha256": "079058b900e1d730772e7aa3975a0376f08acdcd979cc2925ed79a56151e432b",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 1103,
+      "method": "dedup",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 9587,
+      "encoded_body_tokens": 8151,
+      "ratio": 0.8502138312297903,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "bfb09c1ea13ebf8695a83b2c1ad461bc820e57d9865bf21ad82d1c33b587f09a",
+      "encoded_sha256": "070790b7000b69925bf23acd870bbf93671fcc2c558d67fd5f26973c46ff46a3",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 9624,
+      "encoded_body_tokens": 8275,
+      "ratio": 0.8598295926849543,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "8c8c14a002fa4e20ef2cb02768439608d58238e40f1bd81eb18c1dc6dadef818",
+      "encoded_sha256": "974e14e94d088f98ebf35964722502dc6382d80b4df11a2bf131985d1c04455b",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 9624,
+      "encoded_body_tokens": 8161,
+      "ratio": 0.8479842061512884,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "8c8c14a002fa4e20ef2cb02768439608d58238e40f1bd81eb18c1dc6dadef818",
+      "encoded_sha256": "bf047db2674ed8668bac0a1f2e8e0db77d9ac4758fa8127591ef65621841e1d2",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 2207,
+      "method": "dedup",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 9624,
+      "encoded_body_tokens": 8188,
+      "ratio": 0.8507896924355777,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "8c8c14a002fa4e20ef2cb02768439608d58238e40f1bd81eb18c1dc6dadef818",
+      "encoded_sha256": "cca2f01fc7a7f3a612ef4b92c9f279a1ff33b97c46fc77b2d300b4e9a66cb941",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 9598,
+      "encoded_body_tokens": 8249,
+      "ratio": 0.8594498853927902,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "29cc63b1cc5884f8864303761976f7aa2c92d2e04f9fb963bb517c09373b8353",
+      "encoded_sha256": "6a41ccd7b87ccd13eabec6c02a2d2de974fe5a5d28681c6d417e7cd3978e0c89",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 9598,
+      "encoded_body_tokens": 8135,
+      "ratio": 0.8475724109189414,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "29cc63b1cc5884f8864303761976f7aa2c92d2e04f9fb963bb517c09373b8353",
+      "encoded_sha256": "b20ebd5012e46de4b7e69f8454c41a0d06de78289caa0c2eec4b05e9530afb36",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 3301,
+      "method": "dedup",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 9598,
+      "encoded_body_tokens": 8162,
+      "ratio": 0.8503854969785372,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "29cc63b1cc5884f8864303761976f7aa2c92d2e04f9fb963bb517c09373b8353",
+      "encoded_sha256": "5d8501678f1b9094b61ba9ce6b1cdb66a0c23d97922287bb27e1b9da33960fbe",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 2
+    }
+  ]
+}

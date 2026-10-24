@@ -1,0 +1,5 @@
+{
+  "reason": "Replay stopped before live inference because SDK adds nullable async/caller fields to archived responses. Preserve exact archived history output after normal parse.",
+  "live_requests": 0,
+  "action": "fix adapter; retain original failed attempt; restart same task without score selection"
+}

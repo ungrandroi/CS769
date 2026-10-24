@@ -1,0 +1,155 @@
+{
+  "all": {
+    "dedup-baseline": {
+      "n": 120,
+      "passed": 49,
+      "first_input": 6709.025,
+      "mean_post_input": 7245.926696848857,
+      "mean_peak_input": 7663.008333333333
+    },
+    "dedup-optimized": {
+      "n": 120,
+      "passed": 49,
+      "first_input": 6613.658333333334,
+      "mean_post_input": 7224.761142072033,
+      "mean_peak_input": 7743.391666666666
+    },
+    "event-baseline": {
+      "n": 120,
+      "passed": 46,
+      "first_input": 7697.191666666667,
+      "mean_post_input": 8122.455771058016,
+      "mean_peak_input": 8497.816666666668
+    },
+    "event-optimized": {
+      "n": 120,
+      "passed": 51,
+      "first_input": 7198.7,
+      "mean_post_input": 7702.4629311485905,
+      "mean_peak_input": 8135.2
+    },
+    "identity": {
+      "n": 120,
+      "passed": 51,
+      "first_input": 4258.491666666667,
+      "mean_post_input": 4655.725555061887,
+      "mean_peak_input": 5018.633333333333
+    },
+    "state-baseline": {
+      "n": 120,
+      "passed": 49,
+      "first_input": 6259.266666666666,
+      "mean_post_input": 6716.657814392715,
+      "mean_peak_input": 7131.616666666667
+    },
+    "state-optimized": {
+      "n": 120,
+      "passed": 51,
+      "first_input": 6029.825,
+      "mean_post_input": 6516.472205209378,
+      "mean_peak_input": 6930.3
+    }
+  },
+  "development": {
+    "dedup-baseline": {
+      "n": 18,
+      "passed": 11,
+      "first_input": 7426.888888888889,
+      "mean_post_input": 8389.343473193474,
+      "mean_peak_input": 8968.444444444445
+    },
+    "dedup-optimized": {
+      "n": 18,
+      "passed": 11,
+      "first_input": 7173.388888888889,
+      "mean_post_input": 8345.893209876544,
+      "mean_peak_input": 9212.333333333334
+    },
+    "event-baseline": {
+      "n": 18,
+      "passed": 11,
+      "first_input": 8346.277777777777,
+      "mean_post_input": 9012.921096187763,
+      "mean_peak_input": 9550.222222222223
+    },
+    "event-optimized": {
+      "n": 18,
+      "passed": 12,
+      "first_input": 7596.222222222223,
+      "mean_post_input": 8556.51683625017,
+      "mean_peak_input": 9186.944444444445
+    },
+    "identity": {
+      "n": 18,
+      "passed": 12,
+      "first_input": 4629.722222222223,
+      "mean_post_input": 5326.055825193325,
+      "mean_peak_input": 5822.944444444444
+    },
+    "state-baseline": {
+      "n": 18,
+      "passed": 11,
+      "first_input": 6815.277777777777,
+      "mean_post_input": 7562.666468253969,
+      "mean_peak_input": 8100.166666666667
+    },
+    "state-optimized": {
+      "n": 18,
+      "passed": 10,
+      "first_input": 6530.777777777777,
+      "mean_post_input": 7457.400434981685,
+      "mean_peak_input": 8011.666666666667
+    }
+  },
+  "nondevelopment": {
+    "dedup-baseline": {
+      "n": 102,
+      "passed": 38,
+      "first_input": 6582.343137254902,
+      "mean_post_input": 7044.14726572922,
+      "mean_peak_input": 7432.637254901961
+    },
+    "dedup-optimized": {
+      "n": 102,
+      "passed": 38,
+      "first_input": 6514.882352941177,
+      "mean_post_input": 7026.9143065771195,
+      "mean_peak_input": 7484.166666666667
+    },
+    "event-baseline": {
+      "n": 102,
+      "passed": 35,
+      "first_input": 7582.64705882353,
+      "mean_post_input": 7965.314831329237,
+      "mean_peak_input": 8312.098039215687
+    },
+    "event-optimized": {
+      "n": 102,
+      "passed": 39,
+      "first_input": 7128.549019607844,
+      "mean_post_input": 7551.747536130664,
+      "mean_peak_input": 7949.598039215686
+    },
+    "identity": {
+      "n": 102,
+      "passed": 39,
+      "first_input": 4192.980392156863,
+      "mean_post_input": 4537.431977979868,
+      "mean_peak_input": 4876.696078431372
+    },
+    "state-baseline": {
+      "n": 102,
+      "passed": 38,
+      "first_input": 6161.14705882353,
+      "mean_post_input": 6567.362169593671,
+      "mean_peak_input": 6960.696078431372
+    },
+    "state-optimized": {
+      "n": 102,
+      "passed": 41,
+      "first_input": 5941.421568627451,
+      "mean_post_input": 6350.426047014265,
+      "mean_peak_input": 6739.470588235294
+    }
+  }
+}

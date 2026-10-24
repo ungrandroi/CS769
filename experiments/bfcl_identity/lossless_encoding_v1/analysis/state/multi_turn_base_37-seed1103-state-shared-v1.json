@@ -1,0 +1,383 @@
+{
+  "encoding": "state-shared-v1",
+  "decoding": "A $table stores its original list or object: each row maps columns to values, with defaults added; keys name object rows. $literal is unchanged original data. $ref substitutes the exact value in shared_values; references do not merge events or states.",
+  "payload": {
+    "format": "readable-graph-1",
+    "method": "v1-compact",
+    "source_message_columns": {
+      "role:user": [
+        "content"
+      ],
+      "message": [
+        "id",
+        "content"
+      ],
+      "function_call": [
+        "arguments",
+        "call_id",
+        "name",
+        "id"
+      ],
+      "function_call_output": [
+        "call_id",
+        "output"
+      ]
+    },
+    "message_defaults_by_type": {
+      "role:user": {
+        "role": "user"
+      },
+      "message": {
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": null
+      },
+      "function_call": {
+        "type": "function_call",
+        "namespace": null,
+        "status": "completed"
+      },
+      "function_call_output": {
+        "type": "function_call_output"
+      }
+    },
+    "source_messages": {
+      "m0": [
+        "role:user",
+        "Could you go to temp directory, and for each file in there, count the number of lines."
+      ],
+      "m1": [
+        "message",
+        "qwen_msg_0",
+        [
+          {
+            "annotations": [],
+            "text": "I'll navigate to the temp directory and list its contents first.\n\n",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ]
+      ],
+      "m2": [
+        "function_call",
+        "{\"folder\":\"temp\"}",
+        "qwen_call_0_0",
+        "cd",
+        "qwen_fc_0_0"
+      ],
+      "m3": [
+        "function_call_output",
+        "qwen_call_0_0",
+        "{\"error\": \"cd: 'temp': No such file or directory\"}"
+      ],
+      "m4": [
+        "message",
+        "qwen_msg_1",
+        [
+          {
+            "annotations": [],
+            "text": "Let me check the current directory structure to find the temp directory.\n\n",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ]
+      ],
+      "m5": [
+        "function_call",
+        "{}",
+        "qwen_call_1_0",
+        "pwd",
+        "qwen_fc_1_0"
+      ],
+      "m6": [
+        "function_call",
+        "{}",
+        "qwen_call_1_1",
+        "ls",
+        "qwen_fc_1_1"
+      ],
+      "m7": [
+        "function_call_output",
+        "qwen_call_1_0",
+        "{\"current_working_directory\": \"/temp\"}"
+      ],
+      "m8": [
+        "function_call_output",
+        "qwen_call_1_1",
+        "{\"current_directory_content\": [\"dev_summary.txt\"]}"
+      ],
+      "m9": [
+        "message",
+        "qwen_msg_2",
+        [
+          {
+            "annotations": [],
+            "text": "I'm already in the `/temp` directory, and there's one file there: `dev_summary.txt`. Let me count its lines.\n\n",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ]
+      ],
+      "m10": [
+        "function_call",
+        "{\"file_name\":\"dev_summary.txt\",\"mode\":\"l\"}",
+        "qwen_call_2_0",
+        "wc",
+        "qwen_fc_2_0"
+      ],
+      "m11": [
+        "function_call_output",
+        "qwen_call_2_0",
+        "{\"count\": 1, \"type\": \"lines\"}"
+      ],
+      "m12": [
+        "message",
+        "qwen_msg_3",
+        [
+          {
+            "annotations": [],
+            "text": "Here are the results for the files in the `temp` directory (`/temp`):\n\n| File | Lines |\n|------|-------|\n| `dev_summary.txt` | 1 |\n\nThere is only one file in the temp directory, and it contains **1 line**.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ]
+      ],
+      "m13": [
+        "role:user",
+        "Now, scour through the mysterious 'dev_summary.txt' and hunt for any mentions or whispers of 'server error'."
+      ],
+      "m14": [
+        "function_call",
+        "{\"file_name\":\"dev_summary.txt\",\"pattern\":\"server error\"}",
+        "qwen_call_4_0",
+        "grep",
+        "qwen_fc_4_0"
+      ],
+      "m15": [
+        "function_call_output",
+        "qwen_call_4_0",
+        "{\"matching_lines\": [\"This is a summary of the development process. No server error occurred during the initial phase. However, a server error was detected in the final testing phase. The team is working on resolving the server error. The server error is expected to be fixed by next week. Additional testing will be conducted to ensure no further server errors. The project is on track for completion. The final report will be submitted by the end of the month. The server error has been a major focus. The team is confident in resolving the server error soon.\"]}"
+      ],
+      "m16": [
+        "message",
+        "qwen_msg_5",
+        [
+          {
+            "annotations": [],
+            "text": "I found the mentions. The file is a single long line, and it contains **multiple references to \"server error\"**. Here's what the line says:\n\n> This is a summary of the development process. No server error occurred during the initial phase. However, a server error was detected in the final testing phase. The team is working on resolving the server error. The server error is expected to be fixed by next week. Additional testing will be conducted to ensure no further server errors. The project is on track for completion. The final report will be submitted by the end of the month. The server error has been a major focus. The team is confident in resolving the server error soon.\n\n**Summary of the \"server error\" whispers:**\n- **No** server error during the initial phase.\n- A server error **was detected** in the final testing phase.\n- The team is **working on resolving** it.\n- It is **expected to be fixed by next week**.\n- **Additional testing** will be conducted to ensure no further errors.\n- The server error has been a **major focus**.\n- The team is **confident** in resolving it soon.\n\nSo in total, the phrase \"server error\" appears **7 times** in the file (plus one plural \"server errors\"). The overall tone is reassuring — the issue is known, being actively worked on, and expected to be resolved by next week.",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ]
+      ],
+      "m17": [
+        "role:user",
+        "Make a new file whose name is the number of line but in txt format and append the second sentence containing 'server error' to it."
+      ],
+      "m18": [
+        "message",
+        "qwen_msg_6",
+        [
+          {
+            "annotations": [],
+            "text": "Let me work through this carefully.\n\nThe file has **1 line** (as counted earlier). So the new file name should be `1.txt`.\n\nNow I need to find the **second sentence containing 'server error'**. Let me parse the sentences in the line:\n\n1. \"This is a summary of the development process.\" — no 'server error'\n2. \"No server error occurred during the initial phase.\" — **1st** with 'server error'\n3. \"However, a server error was detected in the final testing phase.\" — **2nd** with 'server error'\n\nSo the second sentence containing 'server error' is: **\"However, a server error was detected in the final testing phase.\"**\n\nLet me create the file and append that sentence to it.\n\n",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ]
+      ],
+      "m19": [
+        "function_call",
+        "{\"file_name\":\"1.txt\"}",
+        "qwen_call_6_0",
+        "touch",
+        "qwen_fc_6_0"
+      ],
+      "m20": [
+        "function_call_output",
+        "qwen_call_6_0",
+        "None"
+      ]
+    },
+    "user_requests": [
+      "m0",
+      "m13",
+      "m17"
+    ],
+    "unverified_assistant_statements": [
+      "m1",
+      "m4",
+      "m9",
+      "m12",
+      "m16",
+      "m18"
+    ],
+    "state_nodes": {
+      "s0": {
+        "cwd": {
+          "location_id": "l0",
+          "value": null,
+          "evidence": []
+        },
+        "objects": [],
+        "task_completion": "unknown"
+      },
+      "s1": {
+        "inherits": "s0",
+        "changes": {}
+      },
+      "s2": {
+        "inherits": "s1",
+        "changes": {
+          "cwd": {
+            "location_id": "l0",
+            "value": "/temp",
+            "evidence": [
+              "m5",
+              "m7"
+            ]
+          }
+        }
+      },
+      "s3": {
+        "inherits": "s2",
+        "changes": {
+          "objects_updated": [
+            {
+              "object_index": 0,
+              "location_id": "l0",
+              "name": "dev_summary.txt",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m6",
+                  "m8"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "s4": {
+        "inherits": "s3",
+        "changes": {}
+      },
+      "s5": {
+        "inherits": "s4",
+        "changes": {}
+      },
+      "s6": {
+        "inherits": "s5",
+        "changes": {
+          "objects_updated": [
+            {
+              "object_index": 1,
+              "location_id": "l0",
+              "name": "1.txt",
+              "exists": true,
+              "kind": "file",
+              "content": "",
+              "evidence": {
+                "exists": [
+                  "m19",
+                  "m20"
+                ],
+                "kind": [
+                  "m19",
+                  "m20"
+                ],
+                "content": [
+                  "m19",
+                  "m20"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "tool_call_edges": {
+      "$table": {
+        "columns": [
+          "from",
+          "to",
+          "tool",
+          "input_message",
+          "return_message",
+          "status"
+        ],
+        "defaults": {},
+        "rows": [
+          [
+            "s0",
+            "s1",
+            "cd",
+            "m2",
+            "m3",
+            "error"
+          ],
+          [
+            "s1",
+            "s2",
+            "pwd",
+            "m5",
+            "m7",
+            "success"
+          ],
+          [
+            "s2",
+            "s3",
+            "ls",
+            "m6",
+            "m8",
+            "success"
+          ],
+          [
+            "s3",
+            "s4",
+            "wc",
+            "m10",
+            "m11",
+            "success"
+          ],
+          [
+            "s4",
+            "s5",
+            "grep",
+            "m14",
+            "m15",
+            "success"
+          ],
+          [
+            "s5",
+            "s6",
+            "touch",
+            "m19",
+            "m20",
+            "success"
+          ]
+        ],
+        "keys": [
+          "e0",
+          "e1",
+          "e2",
+          "e3",
+          "e4",
+          "e5"
+        ]
+      }
+    },
+    "locations": [
+      {
+        "id": "l0",
+        "name": null,
+        "parent": null
+      }
+    ],
+    "current_state": "s6"
+  },
+  "shared_values": {}
+}

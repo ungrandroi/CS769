@@ -1,0 +1,105 @@
+{
+  "status": "independent_development_audit_pass",
+  "reviewed_at": 1792543571.9456599,
+  "snapshot_hashes_sha256": "f668a3d891c64c325dc0850306daa472347471681bc8c06abc29a697801684fb",
+  "task_split_sha256": "86c832c75efa45b3d180bfbbbaedc56413271f018f998c28be101c0c9abe3a85",
+  "selection_sha256": "26255447f21070503ae0fa4d68f7897545341ebd0f69be3fa38253785409d237",
+  "vendor_pins_sha256": "5ee16bf59a6cdec16cd51a6d582ea18f74ccd121ddefb6f748e71370be0ce04a",
+  "protocol_sha256": "fe0ce7f8a038385461339f870e81a2701a53eecdf5742d934db8804a71114929",
+  "development_manifest_sha256": "47c3d7cc4901ffa6e7944e4765891f781052b0f40ece3d3918d855b7c10bc5cf",
+  "controller_stage_at_review": "waiting_for_independent_development_review",
+  "fresh_runs_before_approval": 0,
+  "blocking_findings": [],
+  "checks": {
+    "native_requests": 1796,
+    "graph_payload_checks": 144,
+    "official_scores_recomputed": 168,
+    "direct_codec_decodes": 72,
+    "shared_semantic_pairs": 72,
+    "identity_runs": 24
+  },
+  "native_accounting": {
+    "requests": 1796,
+    "fixed_configurations": 4,
+    "full_template_samples": 28,
+    "model_inference_calls": 0
+  },
+  "groups": {
+    "dedup-baseline": {
+      "n": 24,
+      "passed": 11,
+      "first_input": 8814.041666666666,
+      "mean_post_input": 9689.141508971014
+    },
+    "dedup-optimized": {
+      "n": 24,
+      "passed": 8,
+      "first_input": 8537.583333333334,
+      "mean_post_input": 9429.37179452492
+    },
+    "event-baseline": {
+      "n": 24,
+      "passed": 12,
+      "first_input": 9575.958333333334,
+      "mean_post_input": 10330.158039621881
+    },
+    "event-optimized": {
+      "n": 24,
+      "passed": 14,
+      "first_input": 8861.833333333334,
+      "mean_post_input": 9746.432199573512
+    },
+    "identity": {
+      "n": 24,
+      "passed": 9,
+      "first_input": 5782.833333333333,
+      "mean_post_input": 6547.233686237653
+    },
+    "state-baseline": {
+      "n": 24,
+      "passed": 14,
+      "first_input": 7844.75,
+      "mean_post_input": 8539.86828199034
+    },
+    "state-optimized": {
+      "n": 24,
+      "passed": 14,
+      "first_input": 7572.375,
+      "mean_post_input": 8269.303850493188
+    }
+  },
+  "official_failure_types": {
+    "multi_turn:execution_response_mismatch": 35,
+    "multi_turn:instance_state_mismatch": 49,
+    "multi_turn:empty_turn_model_response": 2
+  },
+  "domain_exposure": {
+    "identity_runs": 24,
+    "all_triggered": true,
+    "nonfilesystem_anywhere": 11,
+    "nonfilesystem_before_conversion": 6,
+    "prefix_nonfilesystem_domains": [
+      "MessageAPI"
+    ],
+    "real_nonfilesystem_graph_branches": 36,
+    "interpretation": "Available mixed-domain tools are not evidence of cross-domain compaction. Only MessageAPI is present in actual converted nonfilesystem prefixes; other domains retain synthetic-contract evidence."
+  },
+  "semantic_review": "Manually checked all six MessageAPI prefixes: visible successful login supports authenticated/current user, failed lookup creates no user facts, successful contact creation stores returned ID and supplied name. Baseline/selected payloads match. No demonstrated adapter defect.",
+  "model_failure_review": "All 86 failed official outcomes reproduce after resetting evaluator simulator instances: 49 state mismatch, 35 response mismatch, 2 empty-turn responses. No adapter exception or payload mismatch. This does not prove representation changes never cause action mistakes.",
+  "limitations": [
+    "Development checks integration, not codec reselection or a score acceptance threshold. No score-based rerun.",
+    "Dedup-selected scores 8/24 versus original 11/24 and Identity 9/24. Lossless decoding does not imply behavioral equivalence.",
+    "Only six prefixes contain non-filesystem operations, all MessageAPI. Report observed prefix/whole-trajectory domains separately from available classes.",
+    "Retained outer explanation and inline rules count each request. Event changes full to minimal explanation as well as encoding.",
+    "Four underlying development families with repeated seeds/conditions do not constitute 24 independent families or establish noninferiority.",
+    "Full weights were not rehashed; native alias, wire sampler, tokenizer metadata/library and preserved runtime service evidence support configuration continuity."
+  ],
+  "evidence": [
+    "development_check.py",
+    "development-check-evidence.json",
+    "development_native_check.py",
+    "development-native-evidence.json",
+    "../reports/development-mechanical-audit.json"
+  ],
+  "decision": "Proceed with the fixed preregistered fresh-seed matrix; independent final audit remains mandatory."
+}

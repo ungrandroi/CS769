@@ -1,0 +1,511 @@
+{
+  "scope": "offline development only; frozen first-turn prefixes, not new threshold checkpoints",
+  "families": [
+    3,
+    9,
+    37
+  ],
+  "rows": [
+    {
+      "task": "multi_turn_base_3",
+      "method": "v1-compact",
+      "old_memory_tokens": 5475,
+      "candidate_none_memory_tokens": 2865,
+      "raw_history_json_tokens": 1791,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 14,
+        "source_messages": 34,
+        "original_nodes": 15,
+        "original_edges": 14,
+        "delivered_facts": 0,
+        "delivered_relations": 0,
+        "delivered_states": 15
+      },
+      "candidate_minimal_memory_tokens": 2898,
+      "candidate_full_memory_tokens": 3017
+    },
+    {
+      "task": "multi_turn_base_3",
+      "method": "v2-compact",
+      "old_memory_tokens": 5613,
+      "candidate_none_memory_tokens": 4204,
+      "raw_history_json_tokens": 1791,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 14,
+        "source_messages": 34,
+        "original_nodes": 46,
+        "original_edges": 117,
+        "delivered_facts": 25,
+        "delivered_relations": 31,
+        "delivered_states": 0
+      },
+      "candidate_minimal_memory_tokens": 4237,
+      "candidate_full_memory_tokens": 4356
+    },
+    {
+      "task": "multi_turn_base_3",
+      "method": "v2-dedup",
+      "old_memory_tokens": 3729,
+      "candidate_none_memory_tokens": 3417,
+      "raw_history_json_tokens": 1791,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 14,
+        "source_messages": 34,
+        "original_nodes": 46,
+        "original_edges": 117,
+        "delivered_facts": 25,
+        "delivered_relations": 31,
+        "delivered_states": 0
+      },
+      "candidate_minimal_memory_tokens": 3450,
+      "candidate_full_memory_tokens": 3569
+    },
+    {
+      "task": "multi_turn_base_9",
+      "method": "v1-compact",
+      "old_memory_tokens": 1061,
+      "candidate_none_memory_tokens": 793,
+      "raw_history_json_tokens": 365,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 3,
+        "source_messages": 8,
+        "original_nodes": 4,
+        "original_edges": 3,
+        "delivered_facts": 0,
+        "delivered_relations": 0,
+        "delivered_states": 4
+      },
+      "candidate_minimal_memory_tokens": 826,
+      "candidate_full_memory_tokens": 945
+    },
+    {
+      "task": "multi_turn_base_9",
+      "method": "v2-compact",
+      "old_memory_tokens": 1746,
+      "candidate_none_memory_tokens": 1196,
+      "raw_history_json_tokens": 365,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 3,
+        "source_messages": 8,
+        "original_nodes": 17,
+        "original_edges": 31,
+        "delivered_facts": 9,
+        "delivered_relations": 6,
+        "delivered_states": 0
+      },
+      "candidate_minimal_memory_tokens": 1229,
+      "candidate_full_memory_tokens": 1348
+    },
+    {
+      "task": "multi_turn_base_9",
+      "method": "v2-dedup",
+      "old_memory_tokens": 1566,
+      "candidate_none_memory_tokens": 985,
+      "raw_history_json_tokens": 365,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 3,
+        "source_messages": 8,
+        "original_nodes": 17,
+        "original_edges": 31,
+        "delivered_facts": 9,
+        "delivered_relations": 6,
+        "delivered_states": 0
+      },
+      "candidate_minimal_memory_tokens": 1018,
+      "candidate_full_memory_tokens": 1137
+    },
+    {
+      "task": "multi_turn_base_37",
+      "method": "v1-compact",
+      "old_memory_tokens": 1337,
+      "candidate_none_memory_tokens": 972,
+      "raw_history_json_tokens": 680,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 4,
+        "source_messages": 13,
+        "original_nodes": 5,
+        "original_edges": 4,
+        "delivered_facts": 0,
+        "delivered_relations": 0,
+        "delivered_states": 5
+      },
+      "candidate_minimal_memory_tokens": 1005,
+      "candidate_full_memory_tokens": 1124
+    },
+    {
+      "task": "multi_turn_base_37",
+      "method": "v2-compact",
+      "old_memory_tokens": 1612,
+      "candidate_none_memory_tokens": 1193,
+      "raw_history_json_tokens": 680,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 4,
+        "source_messages": 13,
+        "original_nodes": 11,
+        "original_edges": 18,
+        "delivered_facts": 4,
+        "delivered_relations": 7,
+        "delivered_states": 0
+      },
+      "candidate_minimal_memory_tokens": 1226,
+      "candidate_full_memory_tokens": 1345
+    },
+    {
+      "task": "multi_turn_base_37",
+      "method": "v2-dedup",
+      "old_memory_tokens": 1564,
+      "candidate_none_memory_tokens": 1120,
+      "raw_history_json_tokens": 680,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 4,
+        "source_messages": 13,
+        "original_nodes": 11,
+        "original_edges": 18,
+        "delivered_facts": 4,
+        "delivered_relations": 7,
+        "delivered_states": 0
+      },
+      "candidate_minimal_memory_tokens": 1153,
+      "candidate_full_memory_tokens": 1272
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "method": "v1-compact",
+      "old_memory_tokens": 4912,
+      "candidate_none_memory_tokens": 4701,
+      "raw_history_json_tokens": 2081,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 8,
+        "source_messages": 21,
+        "original_nodes": 9,
+        "original_edges": 8,
+        "delivered_facts": 0,
+        "delivered_relations": 0,
+        "delivered_states": 9
+      },
+      "candidate_minimal_memory_tokens": 4734,
+      "candidate_full_memory_tokens": 4853
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "method": "v2-compact",
+      "old_memory_tokens": 10650,
+      "candidate_none_memory_tokens": 7764,
+      "raw_history_json_tokens": 2081,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 8,
+        "source_messages": 21,
+        "original_nodes": 122,
+        "original_edges": 214,
+        "delivered_facts": 77,
+        "delivered_relations": 15,
+        "delivered_states": 0
+      },
+      "candidate_minimal_memory_tokens": 7797,
+      "candidate_full_memory_tokens": 7916
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "method": "v2-dedup",
+      "old_memory_tokens": 7090,
+      "candidate_none_memory_tokens": 5999,
+      "raw_history_json_tokens": 2081,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 8,
+        "source_messages": 21,
+        "original_nodes": 122,
+        "original_edges": 214,
+        "delivered_facts": 77,
+        "delivered_relations": 15,
+        "delivered_states": 0
+      },
+      "candidate_minimal_memory_tokens": 6032,
+      "candidate_full_memory_tokens": 6151
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "method": "v1-compact",
+      "old_memory_tokens": 1061,
+      "candidate_none_memory_tokens": 793,
+      "raw_history_json_tokens": 365,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 3,
+        "source_messages": 8,
+        "original_nodes": 4,
+        "original_edges": 3,
+        "delivered_facts": 0,
+        "delivered_relations": 0,
+        "delivered_states": 4
+      },
+      "candidate_minimal_memory_tokens": 826,
+      "candidate_full_memory_tokens": 945
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "method": "v2-compact",
+      "old_memory_tokens": 1746,
+      "candidate_none_memory_tokens": 1196,
+      "raw_history_json_tokens": 365,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 3,
+        "source_messages": 8,
+        "original_nodes": 17,
+        "original_edges": 31,
+        "delivered_facts": 9,
+        "delivered_relations": 6,
+        "delivered_states": 0
+      },
+      "candidate_minimal_memory_tokens": 1229,
+      "candidate_full_memory_tokens": 1348
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "method": "v2-dedup",
+      "old_memory_tokens": 1566,
+      "candidate_none_memory_tokens": 985,
+      "raw_history_json_tokens": 365,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 3,
+        "source_messages": 8,
+        "original_nodes": 17,
+        "original_edges": 31,
+        "delivered_facts": 9,
+        "delivered_relations": 6,
+        "delivered_states": 0
+      },
+      "candidate_minimal_memory_tokens": 1018,
+      "candidate_full_memory_tokens": 1137
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "method": "v1-compact",
+      "old_memory_tokens": 32104,
+      "candidate_none_memory_tokens": 8759,
+      "raw_history_json_tokens": 5866,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 34,
+        "source_messages": 73,
+        "original_nodes": 35,
+        "original_edges": 34,
+        "delivered_facts": 0,
+        "delivered_relations": 0,
+        "delivered_states": 35
+      },
+      "candidate_minimal_memory_tokens": 8792,
+      "candidate_full_memory_tokens": 8911
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "method": "v2-compact",
+      "old_memory_tokens": 13614,
+      "candidate_none_memory_tokens": 11971,
+      "raw_history_json_tokens": 5866,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 34,
+        "source_messages": 73,
+        "original_nodes": 131,
+        "original_edges": 258,
+        "delivered_facts": 64,
+        "delivered_relations": 97,
+        "delivered_states": 0
+      },
+      "candidate_minimal_memory_tokens": 12004,
+      "candidate_full_memory_tokens": 12123
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "method": "v2-dedup",
+      "old_memory_tokens": 9233,
+      "candidate_none_memory_tokens": 10698,
+      "raw_history_json_tokens": 5866,
+      "audit": {
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "semantic_state_fact_event_index_verified": true,
+        "kind": "original messages exact; full graph via deterministic builder",
+        "dictionary_key_order_preserved": false,
+        "calls": 34,
+        "source_messages": 73,
+        "original_nodes": 131,
+        "original_edges": 258,
+        "delivered_facts": 64,
+        "delivered_relations": 97,
+        "delivered_states": 0
+      },
+      "candidate_minimal_memory_tokens": 10731,
+      "candidate_full_memory_tokens": 10850
+    }
+  ],
+  "tokenizer": {
+    "model": "Qwen3.8-27B",
+    "quantization": "Q8_0",
+    "model_path": "/home/data/models/gguf/Qwen3.8-27B-Q8_0/Qwen3.8-27B-Q8_0.gguf",
+    "model_file_bytes": 28595763648,
+    "model_source": "ggml-org/Qwen3.8-27B-GGUF",
+    "model_revision": "71bc7b627595dc8a91039addd9c791ae548d6747",
+    "model_sha256_from_existing_download_manifest": "aab65c67ef0dad127960efef9247f1832bca105faa1c7a052cc039b223cf86a1",
+    "full_weights_rehashed": false,
+    "metadata_bytes": 10943782,
+    "metadata_sha256": "2622b23ee76fe1550104cd3bbfbc8c598a0b36bd40c8549583af6860db317425",
+    "declared_tensors": 851,
+    "metadata_keys": 40,
+    "library_path": "/home/bcao44/bofeng/CS769/vendor/qwen-tokenizer-631109b34/lib/libllama.so.0.5.0",
+    "library_sha256": "73b89cc3cfd638b9175974fc9337ce6ad5a80272562bd933056948327188f723",
+    "library_commit": "631109b34",
+    "abi_header_url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/include/llama.h",
+    "abi_headers_manifest": "/home/bcao44/bofeng/CS769/vendor/qwen-tokenizer-631109b34/headers-manifest.json",
+    "abi_headers": [
+      {
+        "path": "include/llama.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/include/llama.h",
+        "sha256": "d5cf9203bea63b575e76cba4881f29cfd1b611451578b01582b75b72ecbb04bc"
+      },
+      {
+        "path": "ggml/include/gguf.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/gguf.h",
+        "sha256": "e56714aab702e5ce62ee587a409643c08f7e93e8fbb77f48ef7cc85075f96fa4"
+      },
+      {
+        "path": "ggml/include/ggml.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml.h",
+        "sha256": "12ee71f99db7db9b353bc02b1fbb57c344ee17c01ac5fb7952b41a637a747ea9"
+      },
+      {
+        "path": "ggml/include/ggml-opt.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-opt.h",
+        "sha256": "3586de1bc8a934b5c72339e2b6937b0641e8f149b512231e666f67de0736eea2"
+      },
+      {
+        "path": "ggml/include/ggml-backend.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-backend.h",
+        "sha256": "5791edae1fb7622027621d15bc7a160198bd3b75ed8f96d06cb7b85e2b873756"
+      },
+      {
+        "path": "ggml/include/ggml-alloc.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-alloc.h",
+        "sha256": "d114067f9099c4a0e2bbc0625c676d4894d9cf0ea27168ee072c7de0e71bb51d"
+      },
+      {
+        "path": "ggml/include/ggml-cpu.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-cpu.h",
+        "sha256": "316279e004cdeb8e6ef78599acb602bf79a8abdf897fed9fd1914808c1518c6e"
+      }
+    ],
+    "vocab_only": true,
+    "tensor_weights_loaded": false,
+    "model_context_created": false,
+    "inference_calls": 0,
+    "server_started": false,
+    "tokenizer": {
+      "general.name": "Qwen3.8-27B",
+      "general.architecture": "qwen35",
+      "tokenizer.ggml.model": "gpt2",
+      "tokenizer.ggml.pre": "qwen35",
+      "tokenizer.ggml.add_bos_token": false,
+      "vocab_size": 248320,
+      "merge_count": 247587,
+      "bos_token_id": 248044,
+      "bos_token": "<|endoftext|>",
+      "eos_token_id": 248046,
+      "eos_token": "<|im_end|>"
+    },
+    "chat_template_sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+    "ordinary_text_policy": "add_special=False, parse_special=False; no BOS/EOS or chat framing",
+    "chat_text_policy": "Caller renders embedded GGUF template, then explicitly sets parse_special=True"
+  },
+  "builder_sha256": {
+    "state_transition_graph.py": "7de6f78bb509f9df19d4ed825210c83a90fe9e039236e98255227395c53b4369",
+    "event_graph.py": "34fabec02adde9aeb610a24dd08a44bccacb26bd7555b6c106d9b06f2ddcc10a",
+    "optimized_graph.py": "3189448e22d83b4dd3d2ec65dbb52247417d696a7aa1269e19e43d967bd5f925"
+  },
+  "instruction_tokens": {
+    "none": 0,
+    "minimal": 32,
+    "full": 151
+  }
+}

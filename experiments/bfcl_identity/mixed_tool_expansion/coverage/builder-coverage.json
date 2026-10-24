@@ -1,0 +1,1004 @@
+{
+  "method": "static source/contracts and synthetic visible-history builder probes only",
+  "no_model_calls": true,
+  "no_gt_read": true,
+  "no_initial_config_used": true,
+  "classes": {
+    "GorillaFileSystem": {
+      "source": "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/multi_turn_eval/func_source_code/gorilla_file_system.py",
+      "public_methods": {
+        "pwd": 255,
+        "ls": 271,
+        "cd": 286,
+        "mkdir": 329,
+        "touch": 346,
+        "echo": 362,
+        "cat": 388,
+        "find": 410,
+        "wc": 449,
+        "sort": 483,
+        "grep": 504,
+        "du": 526,
+        "tail": 563,
+        "diff": 587,
+        "mv": 619,
+        "rm": 675,
+        "rmdir": 697,
+        "cp": 724
+      },
+      "documented_tools": [
+        "cat",
+        "cd",
+        "cp",
+        "diff",
+        "du",
+        "echo",
+        "find",
+        "grep",
+        "ls",
+        "mkdir",
+        "mv",
+        "pwd",
+        "rm",
+        "rmdir",
+        "sort",
+        "tail",
+        "touch",
+        "wc"
+      ],
+      "filesystem_dispatch_collisions": [],
+      "semantic_adapter": "filesystem partial",
+      "call_return_preserved": true,
+      "v1_tool_edge": true,
+      "v2_execution_event": true,
+      "nonfilesystem_state_facts": null
+    },
+    "TwitterAPI": {
+      "source": "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/multi_turn_eval/func_source_code/posting_api.py",
+      "public_methods": {
+        "authenticate_twitter": 52,
+        "posting_get_login_status": 67,
+        "post_tweet": 76,
+        "retweet": 107,
+        "comment": 131,
+        "mention": 156,
+        "follow_user": 174,
+        "list_all_following": 192,
+        "unfollow_user": 204,
+        "get_tweet": 222,
+        "get_user_tweets": 240,
+        "search_tweets": 256,
+        "get_tweet_comments": 277,
+        "get_user_stats": 292
+      },
+      "documented_tools": [
+        "authenticate_twitter",
+        "comment",
+        "follow_user",
+        "get_tweet",
+        "get_tweet_comments",
+        "get_user_stats",
+        "get_user_tweets",
+        "list_all_following",
+        "mention",
+        "post_tweet",
+        "posting_get_login_status",
+        "retweet",
+        "search_tweets",
+        "unfollow_user"
+      ],
+      "filesystem_dispatch_collisions": [],
+      "semantic_adapter": "none",
+      "call_return_preserved": true,
+      "v1_tool_edge": true,
+      "v2_execution_event": true,
+      "nonfilesystem_state_facts": false
+    },
+    "MathAPI": {
+      "source": "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/multi_turn_eval/func_source_code/math_api.py",
+      "public_methods": {
+        "logarithm": 12,
+        "mean": 37,
+        "standard_deviation": 54,
+        "si_unit_conversion": 73,
+        "imperial_si_conversion": 105,
+        "add": 158,
+        "subtract": 174,
+        "multiply": 190,
+        "divide": 209,
+        "power": 227,
+        "square_root": 243,
+        "absolute_value": 271,
+        "round_number": 286,
+        "percentage": 306,
+        "min_value": 324,
+        "max_value": 341,
+        "sum_values": 358
+      },
+      "documented_tools": [
+        "absolute_value",
+        "add",
+        "divide",
+        "imperial_si_conversion",
+        "logarithm",
+        "max_value",
+        "mean",
+        "min_value",
+        "multiply",
+        "percentage",
+        "power",
+        "round_number",
+        "si_unit_conversion",
+        "square_root",
+        "standard_deviation",
+        "subtract",
+        "sum_values"
+      ],
+      "filesystem_dispatch_collisions": [],
+      "semantic_adapter": "none",
+      "call_return_preserved": true,
+      "v1_tool_edge": true,
+      "v2_execution_event": true,
+      "nonfilesystem_state_facts": false
+    },
+    "MessageAPI": {
+      "source": "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/multi_turn_eval/func_source_code/message_api.py",
+      "public_methods": {
+        "list_users": 119,
+        "get_user_id": 128,
+        "message_login": 142,
+        "message_get_login_status": 161,
+        "send_message": 170,
+        "delete_message": 198,
+        "view_messages_sent": 223,
+        "add_contact": 244,
+        "search_messages": 267,
+        "get_message_stats": 296
+      },
+      "documented_tools": [
+        "add_contact",
+        "delete_message",
+        "get_message_stats",
+        "get_user_id",
+        "list_users",
+        "message_get_login_status",
+        "message_login",
+        "search_messages",
+        "send_message",
+        "view_messages_sent"
+      ],
+      "filesystem_dispatch_collisions": [],
+      "semantic_adapter": "none",
+      "call_return_preserved": true,
+      "v1_tool_edge": true,
+      "v2_execution_event": true,
+      "nonfilesystem_state_facts": false
+    },
+    "TicketAPI": {
+      "source": "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/multi_turn_eval/func_source_code/ticket_api.py",
+      "public_methods": {
+        "create_ticket": 49,
+        "get_ticket": 83,
+        "close_ticket": 103,
+        "resolve_ticket": 121,
+        "edit_ticket": 141,
+        "ticket_login": 193,
+        "ticket_get_login_status": 210,
+        "logout": 220,
+        "get_user_tickets": 232
+      },
+      "documented_tools": [
+        "close_ticket",
+        "create_ticket",
+        "edit_ticket",
+        "get_ticket",
+        "get_user_tickets",
+        "logout",
+        "resolve_ticket",
+        "ticket_get_login_status",
+        "ticket_login"
+      ],
+      "filesystem_dispatch_collisions": [],
+      "semantic_adapter": "none",
+      "call_return_preserved": true,
+      "v1_tool_edge": true,
+      "v2_execution_event": true,
+      "nonfilesystem_state_facts": false
+    }
+  },
+  "categories": {
+    "base": {
+      "mixed_count": 37,
+      "class_counts": {
+        "TwitterAPI": 12,
+        "GorillaFileSystem": 37,
+        "TicketAPI": 5,
+        "MessageAPI": 8,
+        "MathAPI": 12
+      },
+      "families": [
+        0,
+        2,
+        4,
+        5,
+        7,
+        8,
+        11,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "class_sets": {
+        "GorillaFileSystem+TwitterAPI": 12,
+        "GorillaFileSystem+TicketAPI": 5,
+        "GorillaFileSystem+MessageAPI": 8,
+        "GorillaFileSystem+MathAPI": 12
+      }
+    },
+    "long_context": {
+      "mixed_count": 37,
+      "class_counts": {
+        "TwitterAPI": 12,
+        "GorillaFileSystem": 37,
+        "TicketAPI": 5,
+        "MessageAPI": 8,
+        "MathAPI": 12
+      },
+      "families": [
+        0,
+        2,
+        4,
+        5,
+        7,
+        8,
+        11,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "class_sets": {
+        "GorillaFileSystem+TwitterAPI": 12,
+        "GorillaFileSystem+TicketAPI": 5,
+        "GorillaFileSystem+MessageAPI": 8,
+        "GorillaFileSystem+MathAPI": 12
+      }
+    },
+    "miss_func": {
+      "mixed_count": 37,
+      "class_counts": {
+        "TwitterAPI": 12,
+        "GorillaFileSystem": 37,
+        "TicketAPI": 5,
+        "MessageAPI": 8,
+        "MathAPI": 12
+      },
+      "families": [
+        0,
+        2,
+        4,
+        5,
+        7,
+        8,
+        11,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "class_sets": {
+        "GorillaFileSystem+TwitterAPI": 12,
+        "GorillaFileSystem+TicketAPI": 5,
+        "GorillaFileSystem+MessageAPI": 8,
+        "GorillaFileSystem+MathAPI": 12
+      }
+    },
+    "miss_param": {
+      "mixed_count": 37,
+      "class_counts": {
+        "TwitterAPI": 12,
+        "GorillaFileSystem": 37,
+        "TicketAPI": 5,
+        "MessageAPI": 8,
+        "MathAPI": 12
+      },
+      "families": [
+        0,
+        2,
+        4,
+        5,
+        7,
+        8,
+        11,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "class_sets": {
+        "GorillaFileSystem+TwitterAPI": 12,
+        "GorillaFileSystem+TicketAPI": 5,
+        "GorillaFileSystem+MessageAPI": 8,
+        "GorillaFileSystem+MathAPI": 12
+      }
+    }
+  },
+  "probes": [
+    {
+      "class": "MathAPI",
+      "tool": "mean",
+      "fixture_kind": "contract-shaped synthetic visible return; no task execution",
+      "return": {
+        "result": 3.0
+      },
+      "expected_interpretation": "success; no filesystem effects",
+      "v1_status": "success",
+      "v2_status": "success",
+      "v1_cwd_before": "/demo",
+      "v1_cwd_after": {
+        "location_id": "l1",
+        "value": null,
+        "evidence": [
+          "m5",
+          "m6"
+        ]
+      },
+      "v1_objects_after": [
+        {
+          "location_id": "l0",
+          "name": "example.txt",
+          "exists": null,
+          "kind": null,
+          "content": null,
+          "evidence": {
+            "exists": [
+              "m5",
+              "m6"
+            ],
+            "kind": [
+              "m5",
+              "m6"
+            ],
+            "content": [
+              "m5",
+              "m6"
+            ]
+          }
+        }
+      ],
+      "v2_active_facts_after": [
+        {
+          "subject": "session",
+          "predicate": "cwd",
+          "value": {
+            "location_id": "o1",
+            "value": null
+          }
+        }
+      ],
+      "v2_rule": "bfcl-filesystem-v2.0:mean",
+      "exact_source_retained": true
+    },
+    {
+      "class": "MathAPI",
+      "tool": "mean",
+      "fixture_kind": "contract-shaped synthetic visible return; no task execution",
+      "return": {
+        "error": "Cannot calculate mean of an empty list"
+      },
+      "expected_interpretation": "error",
+      "v1_status": "error",
+      "v2_status": "error",
+      "v1_cwd_before": "/demo",
+      "v1_cwd_after": {
+        "location_id": "l1",
+        "value": null,
+        "evidence": [
+          "m5",
+          "m6"
+        ]
+      },
+      "v1_objects_after": [
+        {
+          "location_id": "l0",
+          "name": "example.txt",
+          "exists": null,
+          "kind": null,
+          "content": null,
+          "evidence": {
+            "exists": [
+              "m5",
+              "m6"
+            ],
+            "kind": [
+              "m5",
+              "m6"
+            ],
+            "content": [
+              "m5",
+              "m6"
+            ]
+          }
+        }
+      ],
+      "v2_active_facts_after": [
+        {
+          "subject": "session",
+          "predicate": "cwd",
+          "value": {
+            "location_id": "o1",
+            "value": null
+          }
+        }
+      ],
+      "v2_rule": "bfcl-filesystem-v2.0:mean",
+      "exact_source_retained": true
+    },
+    {
+      "class": "TwitterAPI",
+      "tool": "authenticate_twitter",
+      "fixture_kind": "contract-shaped synthetic visible return; no task execution",
+      "return": {
+        "authentication_status": false
+      },
+      "expected_interpretation": "authentication attempt failed; no success effect",
+      "v1_status": "success",
+      "v2_status": "success",
+      "v1_cwd_before": "/demo",
+      "v1_cwd_after": {
+        "location_id": "l1",
+        "value": null,
+        "evidence": [
+          "m5",
+          "m6"
+        ]
+      },
+      "v1_objects_after": [
+        {
+          "location_id": "l0",
+          "name": "example.txt",
+          "exists": null,
+          "kind": null,
+          "content": null,
+          "evidence": {
+            "exists": [
+              "m5",
+              "m6"
+            ],
+            "kind": [
+              "m5",
+              "m6"
+            ],
+            "content": [
+              "m5",
+              "m6"
+            ]
+          }
+        }
+      ],
+      "v2_active_facts_after": [
+        {
+          "subject": "session",
+          "predicate": "cwd",
+          "value": {
+            "location_id": "o1",
+            "value": null
+          }
+        }
+      ],
+      "v2_rule": "bfcl-filesystem-v2.0:authenticate_twitter",
+      "exact_source_retained": true
+    },
+    {
+      "class": "TwitterAPI",
+      "tool": "get_tweet",
+      "fixture_kind": "contract-shaped synthetic visible return; no task execution",
+      "return": {
+        "id": 4,
+        "username": "example",
+        "content": "sample",
+        "tags": [],
+        "mentions": []
+      },
+      "expected_interpretation": "read observed tweet",
+      "v1_status": "success",
+      "v2_status": "success",
+      "v1_cwd_before": "/demo",
+      "v1_cwd_after": {
+        "location_id": "l1",
+        "value": null,
+        "evidence": [
+          "m5",
+          "m6"
+        ]
+      },
+      "v1_objects_after": [
+        {
+          "location_id": "l0",
+          "name": "example.txt",
+          "exists": null,
+          "kind": null,
+          "content": null,
+          "evidence": {
+            "exists": [
+              "m5",
+              "m6"
+            ],
+            "kind": [
+              "m5",
+              "m6"
+            ],
+            "content": [
+              "m5",
+              "m6"
+            ]
+          }
+        }
+      ],
+      "v2_active_facts_after": [
+        {
+          "subject": "session",
+          "predicate": "cwd",
+          "value": {
+            "location_id": "o1",
+            "value": null
+          }
+        }
+      ],
+      "v2_rule": "bfcl-filesystem-v2.0:get_tweet",
+      "exact_source_retained": true
+    },
+    {
+      "class": "MessageAPI",
+      "tool": "message_login",
+      "fixture_kind": "contract-shaped synthetic visible return; no task execution",
+      "return": {
+        "login_status": false,
+        "message": "User ID 'missing' not found."
+      },
+      "expected_interpretation": "login attempt failed",
+      "v1_status": "success",
+      "v2_status": "success",
+      "v1_cwd_before": "/demo",
+      "v1_cwd_after": {
+        "location_id": "l1",
+        "value": null,
+        "evidence": [
+          "m5",
+          "m6"
+        ]
+      },
+      "v1_objects_after": [
+        {
+          "location_id": "l0",
+          "name": "example.txt",
+          "exists": null,
+          "kind": null,
+          "content": null,
+          "evidence": {
+            "exists": [
+              "m5",
+              "m6"
+            ],
+            "kind": [
+              "m5",
+              "m6"
+            ],
+            "content": [
+              "m5",
+              "m6"
+            ]
+          }
+        }
+      ],
+      "v2_active_facts_after": [
+        {
+          "subject": "session",
+          "predicate": "cwd",
+          "value": {
+            "location_id": "o1",
+            "value": null
+          }
+        }
+      ],
+      "v2_rule": "bfcl-filesystem-v2.0:message_login",
+      "exact_source_retained": true
+    },
+    {
+      "class": "MessageAPI",
+      "tool": "message_get_login_status",
+      "fixture_kind": "contract-shaped synthetic visible return; no task execution",
+      "return": {
+        "login_status": false
+      },
+      "expected_interpretation": "successful observation of logged-out state",
+      "v1_status": "success",
+      "v2_status": "success",
+      "v1_cwd_before": "/demo",
+      "v1_cwd_after": {
+        "location_id": "l1",
+        "value": null,
+        "evidence": [
+          "m5",
+          "m6"
+        ]
+      },
+      "v1_objects_after": [
+        {
+          "location_id": "l0",
+          "name": "example.txt",
+          "exists": null,
+          "kind": null,
+          "content": null,
+          "evidence": {
+            "exists": [
+              "m5",
+              "m6"
+            ],
+            "kind": [
+              "m5",
+              "m6"
+            ],
+            "content": [
+              "m5",
+              "m6"
+            ]
+          }
+        }
+      ],
+      "v2_active_facts_after": [
+        {
+          "subject": "session",
+          "predicate": "cwd",
+          "value": {
+            "location_id": "o1",
+            "value": null
+          }
+        }
+      ],
+      "v2_rule": "bfcl-filesystem-v2.0:message_get_login_status",
+      "exact_source_retained": true
+    },
+    {
+      "class": "TicketAPI",
+      "tool": "ticket_login",
+      "fixture_kind": "contract-shaped synthetic visible return; no task execution",
+      "return": {
+        "success": false
+      },
+      "expected_interpretation": "login attempt failed",
+      "v1_status": "error",
+      "v2_status": "error",
+      "v1_cwd_before": "/demo",
+      "v1_cwd_after": {
+        "location_id": "l1",
+        "value": null,
+        "evidence": [
+          "m5",
+          "m6"
+        ]
+      },
+      "v1_objects_after": [
+        {
+          "location_id": "l0",
+          "name": "example.txt",
+          "exists": null,
+          "kind": null,
+          "content": null,
+          "evidence": {
+            "exists": [
+              "m5",
+              "m6"
+            ],
+            "kind": [
+              "m5",
+              "m6"
+            ],
+            "content": [
+              "m5",
+              "m6"
+            ]
+          }
+        }
+      ],
+      "v2_active_facts_after": [
+        {
+          "subject": "session",
+          "predicate": "cwd",
+          "value": {
+            "location_id": "o1",
+            "value": null
+          }
+        }
+      ],
+      "v2_rule": "bfcl-filesystem-v2.0:ticket_login",
+      "exact_source_retained": true
+    },
+    {
+      "class": "TicketAPI",
+      "tool": "get_user_tickets",
+      "fixture_kind": "contract-shaped synthetic visible return; no task execution",
+      "return": "[{'error': 'User not authenticated. Please log in to view tickets.'}]",
+      "expected_interpretation": "error serialized by BFCL list->str",
+      "v1_status": "success",
+      "v2_status": "success",
+      "v1_cwd_before": "/demo",
+      "v1_cwd_after": {
+        "location_id": "l1",
+        "value": null,
+        "evidence": [
+          "m5",
+          "m6"
+        ]
+      },
+      "v1_objects_after": [
+        {
+          "location_id": "l0",
+          "name": "example.txt",
+          "exists": null,
+          "kind": null,
+          "content": null,
+          "evidence": {
+            "exists": [
+              "m5",
+              "m6"
+            ],
+            "kind": [
+              "m5",
+              "m6"
+            ],
+            "content": [
+              "m5",
+              "m6"
+            ]
+          }
+        }
+      ],
+      "v2_active_facts_after": [
+        {
+          "subject": "session",
+          "predicate": "cwd",
+          "value": {
+            "location_id": "o1",
+            "value": null
+          }
+        }
+      ],
+      "v2_rule": "bfcl-filesystem-v2.0:get_user_tickets",
+      "exact_source_retained": true
+    },
+    {
+      "class": "TicketAPI",
+      "tool": "get_ticket",
+      "fixture_kind": "contract-shaped synthetic visible return; no task execution",
+      "return": {
+        "id": 4,
+        "title": "Example",
+        "description": "sample",
+        "status": "Open",
+        "priority": 1,
+        "created_by": "example"
+      },
+      "expected_interpretation": "read observed ticket",
+      "v1_status": "success",
+      "v2_status": "success",
+      "v1_cwd_before": "/demo",
+      "v1_cwd_after": {
+        "location_id": "l1",
+        "value": null,
+        "evidence": [
+          "m5",
+          "m6"
+        ]
+      },
+      "v1_objects_after": [
+        {
+          "location_id": "l0",
+          "name": "example.txt",
+          "exists": null,
+          "kind": null,
+          "content": null,
+          "evidence": {
+            "exists": [
+              "m5",
+              "m6"
+            ],
+            "kind": [
+              "m5",
+              "m6"
+            ],
+            "content": [
+              "m5",
+              "m6"
+            ]
+          }
+        }
+      ],
+      "v2_active_facts_after": [
+        {
+          "subject": "session",
+          "predicate": "cwd",
+          "value": {
+            "location_id": "o1",
+            "value": null
+          }
+        }
+      ],
+      "v2_rule": "bfcl-filesystem-v2.0:get_ticket",
+      "exact_source_retained": true
+    },
+    {
+      "class": "MathAPI",
+      "tool": "mean",
+      "fixture_kind": "contract-shaped synthetic visible return; no task execution",
+      "return": "Error during execution: missing required argument",
+      "expected_interpretation": "executor error",
+      "v1_status": "success",
+      "v2_status": "success",
+      "v1_cwd_before": "/demo",
+      "v1_cwd_after": {
+        "location_id": "l1",
+        "value": null,
+        "evidence": [
+          "m5",
+          "m6"
+        ]
+      },
+      "v1_objects_after": [
+        {
+          "location_id": "l0",
+          "name": "example.txt",
+          "exists": null,
+          "kind": null,
+          "content": null,
+          "evidence": {
+            "exists": [
+              "m5",
+              "m6"
+            ],
+            "kind": [
+              "m5",
+              "m6"
+            ],
+            "content": [
+              "m5",
+              "m6"
+            ]
+          }
+        }
+      ],
+      "v2_active_facts_after": [
+        {
+          "subject": "session",
+          "predicate": "cwd",
+          "value": {
+            "location_id": "o1",
+            "value": null
+          }
+        }
+      ],
+      "v2_rule": "bfcl-filesystem-v2.0:mean",
+      "exact_source_retained": true
+    }
+  ],
+  "source_sha256": {
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_base.json": "1a21a995d06fd6f20ba55de7bced30ef953ec35e998f502ec2ecf4d66ef1c43a",
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_long_context.json": "78c3268c5cc8e97c0f4ec6c811b3b9a2bba14323b1830b7a874b06d822749324",
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_miss_func.json": "87d28ce10e37d864b72de85d5732eef2a867b241d6c1c99b4ae682c9e3ea921c",
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_miss_param.json": "f0c66dda3795f5f53e3e1c0cc8ba0246b6761c8f58bdba8317203bf451ab8838",
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/multi_turn_eval/func_source_code/gorilla_file_system.py": "84173750930b09aaa31b90547c9bd79ce75714682608b35e78a9c1ea259faf2b",
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/multi_turn_eval/func_source_code/posting_api.py": "32b887aaa37c7167ad9c84ddfa7bbb855c75d3c1edab19ba868aba29acc4cfa1",
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/multi_turn_eval/func_source_code/math_api.py": "abde32cc25e71b2ff3acf4d028a3c005b98409c174aba4abddbfe1c018afb9a8",
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/multi_turn_eval/func_source_code/message_api.py": "cf72af1635654147af17df1891a7fb354549e78a61930139f741a31f4be21121",
+    "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/eval_checker/multi_turn_eval/func_source_code/ticket_api.py": "6a9375aa6425410c07a151aef27f3e44e9ed1023bb5cc5c25f14f4a9b3c99116",
+    "scripts/core/state_transition_graph.py": "7de6f78bb509f9df19d4ed825210c83a90fe9e039236e98255227395c53b4369",
+    "scripts/core/event_graph.py": "34fabec02adde9aeb610a24dd08a44bccacb26bd7555b6c106d9b06f2ddcc10a",
+    "scripts/core/optimized_graph.py": "3189448e22d83b4dd3d2ec65dbb52247417d696a7aa1269e19e43d967bd5f925",
+    "scripts/core/event_graph_dedup.py": "9ad02818207d172411da69d0d18ba1ab40d640c4711f37f564bf77657affd30b"
+  }
+}

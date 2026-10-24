@@ -1,0 +1,37 @@
+Persistent working-history graph experiment
+
+Active frozen implementation: source_code/resume-frozen-v3/
+Local Qwen service: runtime/server-resume.json (PID 686450 at launch)
+Detached controller: runtime/controller-launch.json (PID 690898 at launch)
+Live status: runtime/controller-status.json
+Controller stdout/stderr: runtime/controller.log
+Per-stage logs: runtime/*-controller.log
+Per-case actual requests/responses: tasks/<task>/seed<seed>/<method>-<explanation>/native.jsonl
+
+Stages: one real state/none pilot -> none/minimal/full development ablations ->
+freeze selection from development only -> remaining Identity cases -> selected
+three graph continuations -> automatic descriptive report. Previously completed
+Identity cases and the pilot are reused, never regenerated. Non-triggered graph
+entries have no inference and are not evidence of graph execution.
+
+Both service and controller were launched with start_new_session=True, stdin
+DEVNULL, and file-backed stdout/stderr. They do not depend on an active chat turn.
+The actual interpreter uses only frozen scripts via PYTHONPATH and frozen cwd;
+source hashes are checked around each task. BFCL/tokenizer vendor dependencies
+remain at the pinned project installation.
+
+Resume after process interruption (first inspect any incomplete attempt; never
+start a second concurrent controller): use the command, cwd, and PYTHONPATH in
+runtime/controller-launch.json. Launch with Python subprocess.Popen using
+start_new_session=True, stdin=subprocess.DEVNULL, stdout/stderr to an append-only
+log, PYTHONDONTWRITEBYTECODE=1, PYTHONNOUSERSITE=1. Record the new PID and launch
+record, preserving the previous record. Keep the same frozen snapshot. The
+controller skips completed runs and verifies an existing selection rather than
+reselecting. Existing incomplete/nonempty attempts halt the stage; they require
+review and an explicitly documented recovery, not automatic score-seeking retry.
+
+An exception stops progression and persists needs_review plus error details.
+The automatic final summary is not an independent audit. Independent result
+review and subsequent code cleanup are separate agent work, not promised by this
+background process. Historical records, visualization/, credentials and model
+weights are untouched.

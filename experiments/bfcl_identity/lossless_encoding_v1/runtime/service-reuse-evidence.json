@@ -1,0 +1,16 @@
+{
+  "verified_at": 1792495728.1498144,
+  "server_pid": 686450,
+  "controller_pid": 1776006,
+  "server_and_controller_ppid": 1,
+  "server_sid": 686450,
+  "controller_sid": 1776006,
+  "health": "ok",
+  "model_service_restarted": false,
+  "source_files": {
+    "model-download-manifest.json": "357e1b0276c45a299900e4b1cbe63268fea3b96cdb7f0ab789a202356780e634",
+    "tokenizer-provenance.json": "0a5913b6b9717e042f0dd913fa471e6c591ec1ca6142effe03b1cc591d733284",
+    "server-resume.json": "8c465cca4a7c9af1f5add92b1ab9ae2172257a4cdc586c7316a609e77797292b"
+  },
+  "note": "Reuses the same still-running Qwen process from the baseline study; health, props and slots were saved at this study launch. This records provenance, not a fresh full 28GB weight rehash."
+}

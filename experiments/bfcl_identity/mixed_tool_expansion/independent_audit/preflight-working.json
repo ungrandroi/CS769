@@ -1,0 +1,352 @@
+{
+  "status": "working_tree_pass_pending_frozen_snapshot",
+  "time": 1792536246.0792902,
+  "blocking_findings": [],
+  "reviewed_source_hashes": {
+    "scripts/core/mixed_observations.py": "800d895c2c5d208bcccd5b5f96a87d1837bdc8f360ac66a96bdef5ef071edeb3",
+    "scripts/core/mixed_state_graph.py": "76dba836729458f33689ec1cd583b95ac71aac7e54a5440489a27f69acc37d67",
+    "scripts/core/mixed_event_graph.py": "6083b4f84df0799df0b291a5bfd21d06d6923be7638dfadea98d4b763d771227",
+    "scripts/core/mixed_graph.py": "2d2b647be19c216de0f13a368f2fd031129d45d15f0247f3edd1cbf048246303",
+    "scripts/workflows/mixed_task.py": "d180fe5fcbe0dc95ebb593982b8a69742b1865ee1be6ef4824f5fb16ae3a0eaf",
+    "scripts/workflows/mixed_controller.py": "233b57ddc521b384d309f30d3fd3e10774a1266a1531249c6a2531cbd4bb40e4",
+    "scripts/workflows/mixed_audit.py": "cf9da153da2b88a5ada4626d85ea103fc8750dbd73e8ebc3afa89d5313e48bdd",
+    "scripts/workflows/mixed_report.py": "0485b8a24a5bc1adbfaeb5ec1c0b61556e6682e136b42366750c2ac28c70f4c8"
+  },
+  "checks": {
+    "status": "working_tree_checks_pass",
+    "model_calls": 0,
+    "public_contract_synthetic_calls": 47,
+    "roundtrips": [
+      {
+        "method": "state",
+        "payload_exact": true,
+        "history_exact": true,
+        "full_graph_exact": true
+      },
+      {
+        "method": "event",
+        "payload_exact": true,
+        "history_exact": true,
+        "full_graph_exact": true
+      },
+      {
+        "method": "dedup",
+        "payload_exact": true,
+        "history_exact": true,
+        "full_graph_exact": true
+      }
+    ],
+    "mixed_task_wrappers_checked": 3,
+    "tests_passed": 61,
+    "vendor_pins_verified": 123,
+    "legacy_source_matches_prior_freeze": true,
+    "effects": [
+      {
+        "tool": "pwd",
+        "status": "success",
+        "coverage": "filesystem_adapter",
+        "domain": "GorillaFileSystem"
+      },
+      {
+        "tool": "ls",
+        "status": "success",
+        "coverage": "filesystem_adapter",
+        "domain": "GorillaFileSystem"
+      },
+      {
+        "tool": "ticket_login",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TicketAPI"
+      },
+      {
+        "tool": "create_ticket",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TicketAPI"
+      },
+      {
+        "tool": "get_ticket",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TicketAPI"
+      },
+      {
+        "tool": "close_ticket",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TicketAPI"
+      },
+      {
+        "tool": "edit_ticket",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TicketAPI"
+      },
+      {
+        "tool": "resolve_ticket",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TicketAPI"
+      },
+      {
+        "tool": "ticket_login",
+        "status": "error",
+        "coverage": "observation_only",
+        "domain": "TicketAPI"
+      },
+      {
+        "tool": "get_user_tickets",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TicketAPI"
+      },
+      {
+        "tool": "logout",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TicketAPI"
+      },
+      {
+        "tool": "get_user_tickets",
+        "status": "error",
+        "coverage": "observation_only",
+        "domain": "TicketAPI"
+      },
+      {
+        "tool": "ticket_get_login_status",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TicketAPI"
+      },
+      {
+        "tool": "logout",
+        "status": "noop",
+        "coverage": "modeled",
+        "domain": "TicketAPI"
+      },
+      {
+        "tool": "message_get_login_status",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "MessageAPI"
+      },
+      {
+        "tool": "list_users",
+        "status": "success",
+        "coverage": "observation_only",
+        "domain": "MessageAPI"
+      },
+      {
+        "tool": "get_user_id",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "MessageAPI"
+      },
+      {
+        "tool": "message_login",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "MessageAPI"
+      },
+      {
+        "tool": "add_contact",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "MessageAPI"
+      },
+      {
+        "tool": "send_message",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "MessageAPI"
+      },
+      {
+        "tool": "send_message",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "MessageAPI"
+      },
+      {
+        "tool": "delete_message",
+        "status": "success",
+        "coverage": "observation_only",
+        "domain": "MessageAPI"
+      },
+      {
+        "tool": "view_messages_sent",
+        "status": "success",
+        "coverage": "observation_only",
+        "domain": "MessageAPI"
+      },
+      {
+        "tool": "search_messages",
+        "status": "success",
+        "coverage": "observation_only",
+        "domain": "MessageAPI"
+      },
+      {
+        "tool": "get_message_stats",
+        "status": "success",
+        "coverage": "observation_only",
+        "domain": "MessageAPI"
+      },
+      {
+        "tool": "message_login",
+        "status": "error",
+        "coverage": "observation_only",
+        "domain": "MessageAPI"
+      },
+      {
+        "tool": "message_get_login_status",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "MessageAPI"
+      },
+      {
+        "tool": "authenticate_twitter",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "post_tweet",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "get_tweet",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "get_tweet_comments",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "comment",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "mention",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "get_tweet",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "get_tweet_comments",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "follow_user",
+        "status": "success",
+        "coverage": "observation_only",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "follow_user",
+        "status": "noop",
+        "coverage": "observation_only",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "list_all_following",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "unfollow_user",
+        "status": "success",
+        "coverage": "observation_only",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "list_all_following",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "get_user_stats",
+        "status": "success",
+        "coverage": "observation_only",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "retweet",
+        "status": "success",
+        "coverage": "observation_only",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "retweet",
+        "status": "noop",
+        "coverage": "observation_only",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "get_user_tweets",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "search_tweets",
+        "status": "success",
+        "coverage": "modeled",
+        "domain": "TwitterAPI"
+      },
+      {
+        "tool": "mean",
+        "status": "success",
+        "coverage": "observation_only",
+        "domain": "MathAPI"
+      },
+      {
+        "tool": "mean",
+        "status": "error",
+        "coverage": "observation_only",
+        "domain": "MathAPI"
+      }
+    ],
+    "notes": [
+      "Fresh synthetic simulator instances only; no benchmark initial config, future text or ground truth used.",
+      "This is provisional preflight; requires exact frozen-source hash verification before launch."
+    ]
+  },
+  "protocol_review": {
+    "inventory": "148 conditions, 37 families, 4 conditions each; 8 exact development conditions and 24 Identity seeds, then 444 fresh Identity seeds.",
+    "selection": "Existing state-shared/minimal, event-tables/minimal and dedup-shared/none unchanged from completed lossless study.",
+    "visible_only": "Graph API accepts history only; registry reads/hashes public catalogs/contracts, not per-task state, future messages or answer facts.",
+    "domain_isolation": "Known partner-domain reads, failures and mutations preserve filesystem facts; unknown-domain effects conservatively invalidate assertions.",
+    "outcomes": "False login attempts retain prior session, false status query records logged-out state, false logout/follow/unfollow are no-ops under applicable public contracts.",
+    "identities": "Domain/type/scalar IDs isolate objects; versions and confirmations preserve changes, retirement and return to previous values; unspecified deleted message ID not invented.",
+    "delivery": "All newly declared domain state, object/fact/event support markers and non-derived relation attributes are delivered and audited; selected codecs directly restore payloads.",
+    "review_gates": "Controller binds review to source manifest, task split, fixed selection, protocol and vendor pins; development completion additionally binds manifest digest; fresh evaluation cannot proceed without matching pass.",
+    "execution": "Per-run source/dependency checks, exact complete-attempt provenance validation, no overwrite/automatic failed-score retry; child exceptions fail closed.",
+    "report": "Separate exact development conditions versus all development-family conditions; actual trigger-only graph effect denominator; family-cluster statistics and per-request/turn exports. Event outer explanation contrast disclosed."
+  },
+  "caveats": [
+    "This preflight validates contract extraction and integration, not model performance.",
+    "Public-contract-derived semantic extensions are distinct from lossless encoding. There is no unadapted-transfer arm, so future results cannot isolate adapter effects.",
+    "Observation-only methods do not reconstruct full hidden simulator state; absent entities are not treated as nonexistent.",
+    "Graph snapshots and raw call/return history can still be costly; extra support/delta rules are counted as input and are not free.",
+    "Gate status may be signed only after exact frozen source/dependency/plan hashes are rechecked. Development review remains mandatory before fresh-seed evaluation.",
+    "Automatic mixed_audit is a mechanical wrapper, not final independent audit; later review must independently check native accounting, actual semantic extraction, official scores and paired outcomes."
+  ]
+}

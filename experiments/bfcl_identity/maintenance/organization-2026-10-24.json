@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-24",
+  "changed_documents": [
+    "README.md",
+    "scripts/README.md",
+    "experiments/bfcl_identity/README.md",
+    "experiments/bfcl_identity/ACTIVE_SCOPE.txt",
+    "experiments/bfcl_identity/WORKSPACE.txt",
+    "experiments/bfcl_identity/USAGE.txt"
+  ],
+  "relative_links_checked": 30,
+  "protected_inventory_entries": 241641,
+  "protected_entries_changed": 0,
+  "preservation_check": "Original size, mtime_ns and symlink target matched; metadata verification, not a new content-hash audit. Three explicitly updated top-level scope/navigation documents excluded.",
+  "removed_caches": [
+    {
+      "path": ".pytest_cache",
+      "files": 5,
+      "bytes": 10052
+    },
+    {
+      "path": "scripts/__pycache__",
+      "files": 2,
+      "bytes": 586
+    },
+    {
+      "path": "scripts/core/__pycache__",
+      "files": 30,
+      "bytes": 324977
+    },
+    {
+      "path": "scripts/workflows/__pycache__",
+      "files": 19,
+      "bytes": 121341
+    },
+    {
+      "path": "tests/__pycache__",
+      "files": 14,
+      "bytes": 184706
+    }
+  ],
+  "code_changed": false,
+  "experiment_directories_moved": false,
+  "model_inference_performed": false,
+  "commit_or_push_performed": false
+}

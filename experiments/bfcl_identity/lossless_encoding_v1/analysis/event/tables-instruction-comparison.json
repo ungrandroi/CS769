@@ -1,0 +1,156 @@
+{
+  "candidate": "event-tables-v1",
+  "summary": {
+    "none": {
+      "passed": 8,
+      "total": 13,
+      "first_input_mean": 8453.461538461539,
+      "mean_post_input_macro_mean": 9763.429836829837
+    },
+    "minimal": {
+      "passed": 13,
+      "total": 13,
+      "first_input_mean": 8486.461538461539,
+      "mean_post_input_macro_mean": 9518.733267587113
+    },
+    "full": {
+      "passed": 10,
+      "total": 13,
+      "first_input_mean": 8605.461538461539,
+      "mean_post_input_macro_mean": 9722.932844932844
+    }
+  },
+  "checks": [
+    {
+      "task": "multi_turn_base_37",
+      "seed": "seed1103",
+      "encoded_payload_identical_across_explanations": true,
+      "instruction_tokens": {
+        "none": 0,
+        "minimal": 32,
+        "full": 151
+      }
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": "seed2207",
+      "encoded_payload_identical_across_explanations": true,
+      "instruction_tokens": {
+        "none": 0,
+        "minimal": 32,
+        "full": 151
+      }
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": "seed3301",
+      "encoded_payload_identical_across_explanations": true,
+      "instruction_tokens": {
+        "none": 0,
+        "minimal": 32,
+        "full": 151
+      }
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": "seed3301",
+      "encoded_payload_identical_across_explanations": true,
+      "instruction_tokens": {
+        "none": 0,
+        "minimal": 32,
+        "full": 151
+      }
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": "seed1103",
+      "encoded_payload_identical_across_explanations": true,
+      "instruction_tokens": {
+        "none": 0,
+        "minimal": 32,
+        "full": 151
+      }
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": "seed2207",
+      "encoded_payload_identical_across_explanations": true,
+      "instruction_tokens": {
+        "none": 0,
+        "minimal": 32,
+        "full": 151
+      }
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": "seed3301",
+      "encoded_payload_identical_across_explanations": true,
+      "instruction_tokens": {
+        "none": 0,
+        "minimal": 32,
+        "full": 151
+      }
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": "seed1103",
+      "encoded_payload_identical_across_explanations": true,
+      "instruction_tokens": {
+        "none": 0,
+        "minimal": 32,
+        "full": 151
+      }
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": "seed2207",
+      "encoded_payload_identical_across_explanations": true,
+      "instruction_tokens": {
+        "none": 0,
+        "minimal": 32,
+        "full": 151
+      }
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": "seed3301",
+      "encoded_payload_identical_across_explanations": true,
+      "instruction_tokens": {
+        "none": 0,
+        "minimal": 32,
+        "full": 151
+      }
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": "seed1103",
+      "encoded_payload_identical_across_explanations": true,
+      "instruction_tokens": {
+        "none": 0,
+        "minimal": 32,
+        "full": 151
+      }
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": "seed2207",
+      "encoded_payload_identical_across_explanations": true,
+      "instruction_tokens": {
+        "none": 0,
+        "minimal": 32,
+        "full": 151
+      }
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": "seed3301",
+      "encoded_payload_identical_across_explanations": true,
+      "instruction_tokens": {
+        "none": 0,
+        "minimal": 32,
+        "full": 151
+      }
+    }
+  ],
+  "interpretation": "Same encoded graph, original external instructions varied none/minimal/full. Minimal13/13, full10/13, none8/13 on development only; no monotonic benefit from more instruction. Frozen old full11/13. No stable causal/generalization claim."
+}

@@ -1,0 +1,25 @@
+{
+  "paused_at": 1792496662.070849,
+  "signal": "SIGSTOP to controller PID only; task subprocess continues",
+  "status_at_pause": {
+    "pid": 1776006,
+    "started_at": 1792493819.9043248,
+    "status": "running",
+    "completed_jobs": 64,
+    "stages": [
+      "development:state-state-tables-v1-none",
+      "development:state-state-tables-v1-minimal",
+      "development:state-state-shared-v1-none"
+    ],
+    "stage": "development_candidates",
+    "updated_at": 1792496643.5890522,
+    "current": {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "label": "state-state-shared-v1-minimal",
+      "destination": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_3/seed2207/state-state-shared-v1-minimal"
+    },
+    "last_completed": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_3/seed1103/state-state-shared-v1-minimal"
+  },
+  "reason": "Add minimal external explanation controls for Event and Dedup before any inference on either method; retain all completed attempts and wait for the current attempt to finish."
+}

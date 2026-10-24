@@ -1,0 +1,16 @@
+{
+  "pid": 1776006,
+  "command": [
+    "/home/bcao44/bofeng/CS769/.conda/bfcl/bin/python",
+    "-m",
+    "workflows.lossless_controller",
+    "--root",
+    "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1",
+    "--project",
+    "/home/bcao44/bofeng/CS769"
+  ],
+  "cwd": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v1",
+  "pythonpath": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v1/scripts",
+  "started_at": 1792493819.8800561,
+  "persistent": "start_new_session; DEVNULL stdin; file logs"
+}

@@ -1,0 +1,9 @@
+{
+  "independent_audit_required": true,
+  "code_cleanup_after_audit": true,
+  "preserve": [
+    "visualization/",
+    "frozen trajectories",
+    "source_code/"
+  ]
+}

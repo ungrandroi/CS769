@@ -1,0 +1,19 @@
+{
+  "after_inference_and_postprocess": [
+    "Reactivate independent audit agent to verify every decoded payload and source snapshot, official score parity, paired statistics and token attribution.",
+    "Only after audit passes, spawn a dedicated cleanup agent for new code organization/documentation and remove genuinely unused unfrozen development code.",
+    "Do not delete or regenerate visualization/, old trajectories, source_code snapshots, model files, or credentials.",
+    "Check machine-specific absolute vendor symlinks in frozen snapshots are not accidentally committed.",
+    "Do not claim automatic mechanical checks are an independent final audit."
+  ],
+  "audit_agent": "/root/lossless_runner/lossless_independent_audit",
+  "state_feedback": "analysis/state/live-feedback-first-pass.md",
+  "cleanup_status": "complete",
+  "authorized_expansion_plan": "runtime/expansion-stage-plan.json",
+  "after_current_study_independent_audit": "Advance authorized mixed-file-tool family expansion using coverage audit, development freeze, and new paired evaluation; current frozen run unchanged.",
+  "independent_final_audit_status": "passed",
+  "independent_final_audit": "analysis/independent_audit/final.json",
+  "cleanup_agent": "/root/lossless_runner/lossless_cleanup",
+  "cleanup_report": "analysis/cleanup/README.md",
+  "cleanup_checks": "analysis/cleanup/checks.json"
+}

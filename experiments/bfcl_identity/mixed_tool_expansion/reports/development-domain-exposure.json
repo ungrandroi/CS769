@@ -1,0 +1,981 @@
+{
+  "split": "development",
+  "scope": "actual visible calls; no simulator-state inspection",
+  "caveats": [
+    "Available partner classes do not establish actual non-filesystem memory exposure.",
+    "No model or adapter selection uses this postprocessing.",
+    "Only triggered paired outcomes belong to graph comparisons.",
+    "A domain call can be an error or read-only observation; exposure is not proof of every semantic field."
+  ],
+  "summary": {
+    "all": {
+      "identity_runs": 24,
+      "underlying_families": 4,
+      "triggered_runs": 24,
+      "nonfilesystem_prefix_runs": 6,
+      "nonfilesystem_any_identity_runs": 11,
+      "paired_triggered_success": {
+        "identity": 9,
+        "state-baseline": 14,
+        "state-optimized": 14,
+        "event-baseline": 12,
+        "event-optimized": 14,
+        "dedup-baseline": 11,
+        "dedup-optimized": 8
+      }
+    },
+    "available:MathAPI": {
+      "identity_runs": 6,
+      "underlying_families": 1,
+      "triggered_runs": 6,
+      "nonfilesystem_prefix_runs": 0,
+      "nonfilesystem_any_identity_runs": 5,
+      "paired_triggered_success": {
+        "identity": 2,
+        "state-baseline": 3,
+        "state-optimized": 3,
+        "event-baseline": 3,
+        "event-optimized": 3,
+        "dedup-baseline": 3,
+        "dedup-optimized": 3
+      }
+    },
+    "available:MessageAPI": {
+      "identity_runs": 6,
+      "underlying_families": 1,
+      "triggered_runs": 6,
+      "nonfilesystem_prefix_runs": 6,
+      "nonfilesystem_any_identity_runs": 6,
+      "paired_triggered_success": {
+        "identity": 6,
+        "state-baseline": 6,
+        "state-optimized": 6,
+        "event-baseline": 6,
+        "event-optimized": 6,
+        "dedup-baseline": 4,
+        "dedup-optimized": 4
+      }
+    },
+    "available:TicketAPI": {
+      "identity_runs": 6,
+      "underlying_families": 1,
+      "triggered_runs": 6,
+      "nonfilesystem_prefix_runs": 0,
+      "nonfilesystem_any_identity_runs": 0,
+      "paired_triggered_success": {
+        "identity": 0,
+        "state-baseline": 0,
+        "state-optimized": 0,
+        "event-baseline": 0,
+        "event-optimized": 0,
+        "dedup-baseline": 0,
+        "dedup-optimized": 0
+      }
+    },
+    "available:TwitterAPI": {
+      "identity_runs": 6,
+      "underlying_families": 1,
+      "triggered_runs": 6,
+      "nonfilesystem_prefix_runs": 0,
+      "nonfilesystem_any_identity_runs": 0,
+      "paired_triggered_success": {
+        "identity": 1,
+        "state-baseline": 5,
+        "state-optimized": 5,
+        "event-baseline": 3,
+        "event-optimized": 5,
+        "dedup-baseline": 4,
+        "dedup-optimized": 1
+      }
+    },
+    "category:multi_turn_base": {
+      "identity_runs": 12,
+      "underlying_families": 4,
+      "triggered_runs": 12,
+      "nonfilesystem_prefix_runs": 3,
+      "nonfilesystem_any_identity_runs": 5,
+      "paired_triggered_success": {
+        "identity": 5,
+        "state-baseline": 8,
+        "state-optimized": 7,
+        "event-baseline": 5,
+        "event-optimized": 7,
+        "dedup-baseline": 5,
+        "dedup-optimized": 5
+      }
+    },
+    "category:multi_turn_long_context": {
+      "identity_runs": 12,
+      "underlying_families": 4,
+      "triggered_runs": 12,
+      "nonfilesystem_prefix_runs": 3,
+      "nonfilesystem_any_identity_runs": 6,
+      "paired_triggered_success": {
+        "identity": 4,
+        "state-baseline": 6,
+        "state-optimized": 7,
+        "event-baseline": 7,
+        "event-optimized": 7,
+        "dedup-baseline": 6,
+        "dedup-optimized": 3
+      }
+    },
+    "prefix:MessageAPI": {
+      "identity_runs": 6,
+      "underlying_families": 1,
+      "triggered_runs": 6,
+      "nonfilesystem_prefix_runs": 6,
+      "nonfilesystem_any_identity_runs": 6,
+      "paired_triggered_success": {
+        "identity": 6,
+        "state-baseline": 6,
+        "state-optimized": 6,
+        "event-baseline": 6,
+        "event-optimized": 6,
+        "dedup-baseline": 4,
+        "dedup-optimized": 4
+      }
+    },
+    "prefix:filesystem_only": {
+      "identity_runs": 18,
+      "underlying_families": 3,
+      "triggered_runs": 18,
+      "nonfilesystem_prefix_runs": 0,
+      "nonfilesystem_any_identity_runs": 5,
+      "paired_triggered_success": {
+        "identity": 3,
+        "state-baseline": 8,
+        "state-optimized": 8,
+        "event-baseline": 6,
+        "event-optimized": 8,
+        "dedup-baseline": 7,
+        "dedup-optimized": 4
+      }
+    }
+  },
+  "rows": [
+    {
+      "task": "multi_turn_base_0",
+      "family": 0,
+      "category": "multi_turn_base",
+      "seed": 1103,
+      "available_partner_domains": [
+        "TwitterAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 14
+      },
+      "prefix_methods": {
+        "cat": 1,
+        "cd": 2,
+        "grep": 3,
+        "ls": 5,
+        "mkdir": 1,
+        "mv": 1,
+        "pwd": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 21
+      },
+      "outcomes": {
+        "identity": true,
+        "state-baseline": true,
+        "state-optimized": true,
+        "event-baseline": false,
+        "event-optimized": true,
+        "dedup-baseline": false,
+        "dedup-optimized": false
+      }
+    },
+    {
+      "task": "multi_turn_base_0",
+      "family": 0,
+      "category": "multi_turn_base",
+      "seed": 2207,
+      "available_partner_domains": [
+        "TwitterAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 16
+      },
+      "prefix_methods": {
+        "cd": 4,
+        "grep": 3,
+        "ls": 6,
+        "mkdir": 1,
+        "mv": 1,
+        "pwd": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 22
+      },
+      "outcomes": {
+        "identity": false,
+        "state-baseline": true,
+        "state-optimized": true,
+        "event-baseline": false,
+        "event-optimized": true,
+        "dedup-baseline": false,
+        "dedup-optimized": false
+      }
+    },
+    {
+      "task": "multi_turn_base_0",
+      "family": 0,
+      "category": "multi_turn_base",
+      "seed": 3301,
+      "available_partner_domains": [
+        "TwitterAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 12
+      },
+      "prefix_methods": {
+        "cd": 2,
+        "grep": 1,
+        "ls": 5,
+        "mkdir": 1,
+        "mv": 1,
+        "pwd": 1,
+        "sort": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 16
+      },
+      "outcomes": {
+        "identity": false,
+        "state-baseline": true,
+        "state-optimized": false,
+        "event-baseline": false,
+        "event-optimized": false,
+        "dedup-baseline": true,
+        "dedup-optimized": true
+      }
+    },
+    {
+      "task": "multi_turn_base_14",
+      "family": 14,
+      "category": "multi_turn_base",
+      "seed": 1103,
+      "available_partner_domains": [
+        "MessageAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "MessageAPI",
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "prefix_methods": {
+        "add_contact": 1,
+        "cd": 1,
+        "find": 1,
+        "get_user_id": 1,
+        "grep": 1,
+        "message_login": 1,
+        "tail": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      },
+      "outcomes": {
+        "identity": true,
+        "state-baseline": true,
+        "state-optimized": true,
+        "event-baseline": true,
+        "event-optimized": true,
+        "dedup-baseline": true,
+        "dedup-optimized": false
+      }
+    },
+    {
+      "task": "multi_turn_base_14",
+      "family": 14,
+      "category": "multi_turn_base",
+      "seed": 2207,
+      "available_partner_domains": [
+        "MessageAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "MessageAPI",
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "prefix_methods": {
+        "add_contact": 1,
+        "cd": 1,
+        "find": 1,
+        "get_user_id": 1,
+        "grep": 1,
+        "message_login": 1,
+        "tail": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      },
+      "outcomes": {
+        "identity": true,
+        "state-baseline": true,
+        "state-optimized": true,
+        "event-baseline": true,
+        "event-optimized": true,
+        "dedup-baseline": true,
+        "dedup-optimized": true
+      }
+    },
+    {
+      "task": "multi_turn_base_14",
+      "family": 14,
+      "category": "multi_turn_base",
+      "seed": 3301,
+      "available_partner_domains": [
+        "MessageAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "MessageAPI",
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 2
+      },
+      "prefix_methods": {
+        "cd": 1,
+        "find": 1,
+        "get_user_id": 1,
+        "grep": 1,
+        "message_login": 1,
+        "tail": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      },
+      "outcomes": {
+        "identity": true,
+        "state-baseline": true,
+        "state-optimized": true,
+        "event-baseline": true,
+        "event-optimized": true,
+        "dedup-baseline": false,
+        "dedup-optimized": true
+      }
+    },
+    {
+      "task": "multi_turn_base_15",
+      "family": 15,
+      "category": "multi_turn_base",
+      "seed": 1103,
+      "available_partner_domains": [
+        "MathAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 9
+      },
+      "prefix_methods": {
+        "cat": 1,
+        "echo": 1,
+        "ls": 1,
+        "pwd": 1,
+        "tail": 1,
+        "touch": 1,
+        "wc": 3
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 9,
+        "MathAPI": 1
+      },
+      "outcomes": {
+        "identity": true,
+        "state-baseline": true,
+        "state-optimized": true,
+        "event-baseline": true,
+        "event-optimized": true,
+        "dedup-baseline": true,
+        "dedup-optimized": true
+      }
+    },
+    {
+      "task": "multi_turn_base_15",
+      "family": 15,
+      "category": "multi_turn_base",
+      "seed": 2207,
+      "available_partner_domains": [
+        "MathAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 8
+      },
+      "prefix_methods": {
+        "cat": 1,
+        "echo": 1,
+        "ls": 1,
+        "tail": 1,
+        "touch": 1,
+        "wc": 3
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 9
+      },
+      "outcomes": {
+        "identity": false,
+        "state-baseline": true,
+        "state-optimized": true,
+        "event-baseline": true,
+        "event-optimized": true,
+        "dedup-baseline": true,
+        "dedup-optimized": true
+      }
+    },
+    {
+      "task": "multi_turn_base_15",
+      "family": 15,
+      "category": "multi_turn_base",
+      "seed": 3301,
+      "available_partner_domains": [
+        "MathAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 7
+      },
+      "prefix_methods": {
+        "cat": 1,
+        "echo": 1,
+        "tail": 1,
+        "touch": 1,
+        "wc": 3
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 1
+      },
+      "outcomes": {
+        "identity": false,
+        "state-baseline": false,
+        "state-optimized": false,
+        "event-baseline": false,
+        "event-optimized": false,
+        "dedup-baseline": false,
+        "dedup-optimized": false
+      }
+    },
+    {
+      "task": "multi_turn_base_2",
+      "family": 2,
+      "category": "multi_turn_base",
+      "seed": 1103,
+      "available_partner_domains": [
+        "TicketAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 9
+      },
+      "prefix_methods": {
+        "cat": 1,
+        "cd": 2,
+        "diff": 1,
+        "echo": 3,
+        "ls": 1,
+        "touch": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 22
+      },
+      "outcomes": {
+        "identity": false,
+        "state-baseline": false,
+        "state-optimized": false,
+        "event-baseline": false,
+        "event-optimized": false,
+        "dedup-baseline": false,
+        "dedup-optimized": false
+      }
+    },
+    {
+      "task": "multi_turn_base_2",
+      "family": 2,
+      "category": "multi_turn_base",
+      "seed": 2207,
+      "available_partner_domains": [
+        "TicketAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 8
+      },
+      "prefix_methods": {
+        "cat": 1,
+        "cd": 2,
+        "diff": 1,
+        "echo": 2,
+        "ls": 1,
+        "touch": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 19
+      },
+      "outcomes": {
+        "identity": false,
+        "state-baseline": false,
+        "state-optimized": false,
+        "event-baseline": false,
+        "event-optimized": false,
+        "dedup-baseline": false,
+        "dedup-optimized": false
+      }
+    },
+    {
+      "task": "multi_turn_base_2",
+      "family": 2,
+      "category": "multi_turn_base",
+      "seed": 3301,
+      "available_partner_domains": [
+        "TicketAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 7
+      },
+      "prefix_methods": {
+        "cat": 1,
+        "cd": 2,
+        "echo": 2,
+        "ls": 1,
+        "touch": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 23
+      },
+      "outcomes": {
+        "identity": false,
+        "state-baseline": false,
+        "state-optimized": false,
+        "event-baseline": false,
+        "event-optimized": false,
+        "dedup-baseline": false,
+        "dedup-optimized": false
+      }
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "family": 0,
+      "category": "multi_turn_long_context",
+      "seed": 1103,
+      "available_partner_domains": [
+        "TwitterAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 5
+      },
+      "prefix_methods": {
+        "cd": 1,
+        "ls": 2,
+        "mkdir": 1,
+        "pwd": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 22
+      },
+      "outcomes": {
+        "identity": false,
+        "state-baseline": false,
+        "state-optimized": true,
+        "event-baseline": true,
+        "event-optimized": true,
+        "dedup-baseline": true,
+        "dedup-optimized": false
+      }
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "family": 0,
+      "category": "multi_turn_long_context",
+      "seed": 2207,
+      "available_partner_domains": [
+        "TwitterAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 5
+      },
+      "prefix_methods": {
+        "cd": 1,
+        "ls": 2,
+        "mkdir": 1,
+        "pwd": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 16
+      },
+      "outcomes": {
+        "identity": false,
+        "state-baseline": true,
+        "state-optimized": true,
+        "event-baseline": true,
+        "event-optimized": true,
+        "dedup-baseline": true,
+        "dedup-optimized": false
+      }
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "family": 0,
+      "category": "multi_turn_long_context",
+      "seed": 3301,
+      "available_partner_domains": [
+        "TwitterAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 5
+      },
+      "prefix_methods": {
+        "cd": 1,
+        "ls": 2,
+        "mkdir": 1,
+        "pwd": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 18
+      },
+      "outcomes": {
+        "identity": false,
+        "state-baseline": true,
+        "state-optimized": true,
+        "event-baseline": true,
+        "event-optimized": true,
+        "dedup-baseline": true,
+        "dedup-optimized": false
+      }
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "family": 14,
+      "category": "multi_turn_long_context",
+      "seed": 1103,
+      "available_partner_domains": [
+        "MessageAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "MessageAPI",
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "prefix_methods": {
+        "add_contact": 1,
+        "cd": 1,
+        "find": 1,
+        "get_user_id": 1,
+        "grep": 1,
+        "message_login": 1,
+        "tail": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      },
+      "outcomes": {
+        "identity": true,
+        "state-baseline": true,
+        "state-optimized": true,
+        "event-baseline": true,
+        "event-optimized": true,
+        "dedup-baseline": true,
+        "dedup-optimized": false
+      }
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "family": 14,
+      "category": "multi_turn_long_context",
+      "seed": 2207,
+      "available_partner_domains": [
+        "MessageAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "MessageAPI",
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "prefix_methods": {
+        "add_contact": 1,
+        "cd": 1,
+        "find": 1,
+        "get_user_id": 1,
+        "grep": 1,
+        "message_login": 1,
+        "tail": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      },
+      "outcomes": {
+        "identity": true,
+        "state-baseline": true,
+        "state-optimized": true,
+        "event-baseline": true,
+        "event-optimized": true,
+        "dedup-baseline": true,
+        "dedup-optimized": true
+      }
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "family": 14,
+      "category": "multi_turn_long_context",
+      "seed": 3301,
+      "available_partner_domains": [
+        "MessageAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "MessageAPI",
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 2
+      },
+      "prefix_methods": {
+        "cd": 1,
+        "find": 1,
+        "get_user_id": 1,
+        "grep": 1,
+        "message_login": 1,
+        "tail": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      },
+      "outcomes": {
+        "identity": true,
+        "state-baseline": true,
+        "state-optimized": true,
+        "event-baseline": true,
+        "event-optimized": true,
+        "dedup-baseline": false,
+        "dedup-optimized": true
+      }
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "family": 15,
+      "category": "multi_turn_long_context",
+      "seed": 1103,
+      "available_partner_domains": [
+        "MathAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 3
+      },
+      "prefix_methods": {
+        "ls": 1,
+        "pwd": 1,
+        "touch": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 10,
+        "MathAPI": 1
+      },
+      "outcomes": {
+        "identity": false,
+        "state-baseline": false,
+        "state-optimized": false,
+        "event-baseline": false,
+        "event-optimized": false,
+        "dedup-baseline": false,
+        "dedup-optimized": false
+      }
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "family": 15,
+      "category": "multi_turn_long_context",
+      "seed": 2207,
+      "available_partner_domains": [
+        "MathAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 2
+      },
+      "prefix_methods": {
+        "ls": 1,
+        "touch": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 1
+      },
+      "outcomes": {
+        "identity": true,
+        "state-baseline": true,
+        "state-optimized": true,
+        "event-baseline": true,
+        "event-optimized": true,
+        "dedup-baseline": true,
+        "dedup-optimized": true
+      }
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "family": 15,
+      "category": "multi_turn_long_context",
+      "seed": 3301,
+      "available_partner_domains": [
+        "MathAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 7
+      },
+      "prefix_methods": {
+        "cat": 1,
+        "echo": 1,
+        "tail": 1,
+        "touch": 1,
+        "wc": 3
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 1
+      },
+      "outcomes": {
+        "identity": false,
+        "state-baseline": false,
+        "state-optimized": false,
+        "event-baseline": false,
+        "event-optimized": false,
+        "dedup-baseline": false,
+        "dedup-optimized": false
+      }
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "family": 2,
+      "category": "multi_turn_long_context",
+      "seed": 1103,
+      "available_partner_domains": [
+        "TicketAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 9
+      },
+      "prefix_methods": {
+        "cat": 1,
+        "cd": 2,
+        "diff": 1,
+        "echo": 3,
+        "ls": 1,
+        "touch": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 21
+      },
+      "outcomes": {
+        "identity": false,
+        "state-baseline": false,
+        "state-optimized": false,
+        "event-baseline": false,
+        "event-optimized": false,
+        "dedup-baseline": false,
+        "dedup-optimized": false
+      }
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "family": 2,
+      "category": "multi_turn_long_context",
+      "seed": 2207,
+      "available_partner_domains": [
+        "TicketAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 8
+      },
+      "prefix_methods": {
+        "cat": 1,
+        "cd": 2,
+        "diff": 1,
+        "echo": 2,
+        "ls": 1,
+        "touch": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 21
+      },
+      "outcomes": {
+        "identity": false,
+        "state-baseline": false,
+        "state-optimized": false,
+        "event-baseline": false,
+        "event-optimized": false,
+        "dedup-baseline": false,
+        "dedup-optimized": false
+      }
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "family": 2,
+      "category": "multi_turn_long_context",
+      "seed": 3301,
+      "available_partner_domains": [
+        "TicketAPI"
+      ],
+      "triggered": true,
+      "prefix_exposure": "filesystem_only",
+      "prefix_calls": {
+        "GorillaFileSystem": 7
+      },
+      "prefix_methods": {
+        "cat": 1,
+        "cd": 2,
+        "echo": 2,
+        "ls": 1,
+        "touch": 1
+      },
+      "identity_calls": {
+        "GorillaFileSystem": 23
+      },
+      "outcomes": {
+        "identity": false,
+        "state-baseline": false,
+        "state-optimized": false,
+        "event-baseline": false,
+        "event-optimized": false,
+        "dedup-baseline": false,
+        "dedup-optimized": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "verified_at": 1792455699.2514315,
+  "controller": {
+    "pid": 690898,
+    "started_at": 1792455619.6079316,
+    "status": "running",
+    "completed_stages": [
+      "graph-dev-none-state-pilot"
+    ],
+    "current": "graph-dev-none"
+  },
+  "pilot": {
+    "task": "multi_turn_base_9",
+    "category": "multi_turn_base",
+    "method": "state",
+    "variant": "readable",
+    "explanation": "none",
+    "seed": 3301,
+    "sampling": {
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "repeat_penalty": 1.0
+    },
+    "threshold": 1000,
+    "threshold_metric": "native full minus fixed-only template tokens",
+    "base_url": "http://127.0.0.1:11436/v1",
+    "context": 131072,
+    "max_tokens": 4096,
+    "identity": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/identity",
+    "status": "complete",
+    "triggered": true,
+    "started_at": 1792455620.2841933,
+    "trigger_index": 17,
+    "trigger_turn": 1,
+    "checkpoint_sha256": "1ddadeabb443952fbf859d3c5bef6b61e40b1a068cd514737c35983229ab790d",
+    "source_work_tokens": 1043,
+    "memory_tokens": 3135,
+    "instruction_tokens": 0,
+    "instruction_insertions": 0,
+    "first_input": 6253,
+    "replayed_requests": 17,
+    "live_requests": 16,
+    "passed": true,
+    "finished_at": 1792455666.1058486
+  },
+  "next_stage_current": {
+    "task": "multi_turn_base_9",
+    "seed": 3301,
+    "method": "event"
+  },
+  "next_stage_live_events": [
+    {
+      "event": "request",
+      "index": 17
+    },
+    {
+      "event": "response",
+      "index": 17
+    },
+    {
+      "event": "request",
+      "index": 18
+    },
+    {
+      "event": "response",
+      "index": 18
+    },
+    {
+      "event": "request",
+      "index": 19
+    },
+    {
+      "event": "response",
+      "index": 19
+    },
+    {
+      "event": "request",
+      "index": 20
+    },
+    {
+      "event": "response",
+      "index": 20
+    },
+    {
+      "event": "request",
+      "index": 21
+    },
+    {
+      "event": "response",
+      "index": 21
+    },
+    {
+      "event": "request",
+      "index": 22
+    },
+    {
+      "event": "response",
+      "index": 22
+    },
+    {
+      "event": "request",
+      "index": 23
+    },
+    {
+      "event": "response",
+      "index": 23
+    },
+    {
+      "event": "request",
+      "index": 24
+    },
+    {
+      "event": "response",
+      "index": 24
+    },
+    {
+      "event": "request",
+      "index": 25
+    },
+    {
+      "event": "response",
+      "index": 25
+    },
+    {
+      "event": "request",
+      "index": 26
+    },
+    {
+      "event": "response",
+      "index": 26
+    },
+    {
+      "event": "request",
+      "index": 27
+    }
+  ],
+  "controller_pid": 690898,
+  "service_pid": 686450,
+  "ppid": 1,
+  "sid_self": true
+}

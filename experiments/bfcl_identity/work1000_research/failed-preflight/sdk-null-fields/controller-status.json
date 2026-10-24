@@ -1,0 +1,9 @@
+{
+  "pid": 688260,
+  "started_at": 1792455537.5304627,
+  "status": "needs_review",
+  "completed_stages": [],
+  "current": "graph-dev-none-state-pilot",
+  "error": "CalledProcessError(1, ['/home/bcao44/bofeng/CS769/.conda/bfcl/bin/python3.10', '-m', 'workflows.work1000_batch', '--root', '/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research', '--stage', 'graph-dev', '--explanation', 'none', '--snapshot-label', 'resume-frozen-v1', '--base-url', 'http://127.0.0.1:11436/v1', '--method-only', 'state', '--task-only', 'multi_turn_base_9', '--seed-only', '3301'])",
+  "finished_at": 1792455539.2711744
+}

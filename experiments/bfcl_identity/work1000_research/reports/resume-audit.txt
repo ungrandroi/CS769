@@ -1,0 +1,43 @@
+Independent resume audit, 2026-10-19
+
+Before resuming inference: 18 development Identity runs complete, 15 official
+passes; 13 triggered (>1000 working tokens), 11 triggered passes; 5 did not
+trigger. No graph continuation was complete at the time of this audit.
+Non-triggered controls are now not_applicable for graph methods; inherited
+Identity results are recorded separately and are not graph completion evidence.
+
+All 18 passed audit_integrity.py: unique IDs and ordered tool-result pairing,
+first eligible boundary, native prompt usage versus accounting, seed schedule,
+wire sampling parameters, checkpoint equality and recorded snapshot hashes.
+Fixed template subtraction was 3113 tokens on these filesystem-only runs.
+Triggered work-token counts range from 1014 to 3299; large tool returns can
+cross the boundary by more than one token. There are no min-call or future-call
+filters. Secondary content_tokens is recorded, not used as a second threshold.
+
+Runtime safeguards improved: strict call-ID/return pairing, source task/category/
+seed/sampler/threshold/context/output-limit agreement. Six protocol/report tests
+and seven optimized-graph tests pass. No historical trajectory was edited.
+
+At all 13 existing checkpoints, all three graph methods under all three
+explanation settings were built independently (117 constructions). Exact source
+message restoration, deterministic original-graph reconstruction and semantic
+state/fact/event checks pass. Inputs are only observed working messages; the
+builder is not supplied GT, hidden simulator state, future source steps or
+scoring results. Current user messages occur once in the packed source table.
+The runner inserts memory once then asserts it remains the context prefix.
+
+Important interpretation: readable-graph-1 is a new packed-message plus sparse
+semantic-index representation, NOT merely a shortened version of the frozen
+legacy codec. Full-graph reversibility depends on rerunning pinned builders.
+The model receives neither those builders nor all original graph fields.
+Explanation none/minimal/full is candidate-specific, not byte-identical legacy
+instruction ablation. Exact reconstruction does not establish behavioral parity.
+
+Provenance limitation for the existing 18 runs: old launch records snapshot
+sources but launched working-tree code. Snapshot hash equality does not prove
+which bytes were imported historically. Native request/response/configuration
+records provide direct evidence of the observed protocol, and strict audit found
+no affected checkpoint. Preserve these runs with this limitation; use actual
+frozen snapshot execution and launch path records for all resumed runs.
+
+Machine-readable details: resume-identity-audit.json, resume-graph-audit.json.

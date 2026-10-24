@@ -1,26 +1,30 @@
-在项目根目录执行（使用已有BFCL conda环境）：
+Inspect completed results first (no inference)
 
-完整早期基线：
-  scripts/bfcl_python.sh scripts/manage.py run baseline --help
+Experiment index: experiments/bfcl_identity/README.md
+Filesystem study: lossless_encoding_v1/analysis/independent_audit/final.md
+Mixed-tool study: mixed_tool_expansion/independent_audit/final.md
+Each study has reports/summary.json, per-request-input.csv,
+per-user-turn-input.csv and paired-first-request-input.csv.
+All paths above are relative to experiments/bfcl_identity/ except the index.
+
+CLI guide: scripts/README.md (from project root).
+Show commands: scripts/bfcl_python.sh scripts/manage.py --help
+Lossless mechanical audit without model generation, using frozen code and
+writing outside recorded evidence (from project root):
+  PYTHONPATH=experiments/bfcl_identity/lossless_encoding_v1/source_code/postprocess-v2/scripts scripts/bfcl_python.sh -m workflows.lossless_audit --root experiments/bfcl_identity/lossless_encoding_v1 --output /tmp/lossless-audit.json
+For the mixed study's audit CLI:
+  PYTHONPATH=experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1/scripts scripts/bfcl_python.sh -m workflows.mixed_audit --help
+
+Historical commands remain available:
   scripts/bfcl_python.sh scripts/manage.py audit baseline
-
-原Event Graph-Dedup（离线，不调用模型）：
-  scripts/bfcl_python.sh scripts/manage.py probe dedup
-无损去重续跑及评分：
-  scripts/bfcl_python.sh scripts/manage.py run dedup
   scripts/bfcl_python.sh scripts/manage.py audit dedup
+  scripts/bfcl_python.sh scripts/manage.py probe dedup --help
+  scripts/bfcl_python.sh scripts/manage.py run history1000 --help
+history1000 is the earlier prepared tool-content-only protocol, not the completed
+native working-input studies. The generic 'reports' command exports historical
+baseline reports; it does not combine all current experiments.
 
-纯1000-token历史触发：
-  scripts/bfcl_python.sh scripts/manage.py checkpoints
-  scripts/bfcl_python.sh scripts/manage.py run history1000
-  scripts/bfcl_python.sh scripts/manage.py audit history1000
-当前仅第一步已完成，未执行推理；不要把检查点当作成功率结果。
-后两条推理批次入口需要先按qwen27b_experiment/runtime/servers.json配置启动本地模型服务。已完成记录不应覆盖。
-
-测试：
-  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=scripts scripts/bfcl_python.sh -m unittest discover -s tests -p 'test_*.py'
-
-统一名称见METHOD_NAMES.txt；新名称报告见reports/。刷新：scripts/bfcl_python.sh scripts/manage.py reports
-
-历史基线和去重审核使用各批次source_code/，不要求当前实现匹配旧哈希。重建结果写入reports/audits/，不覆盖冻结记录。
-新的批次可用--output指定新目录，--prepare-only只准备；已完成批次不会自动重跑。
+Use --help to inspect a workflow. Do not start run/task commands against completed
+studies. Report regeneration can overwrite derived evidence: use a separate copy
+for exploratory changes. New experiments require a new root and frozen protocol.
+Keep trajectories, source_code/, model provenance and visualization/ intact.

@@ -1,0 +1,57 @@
+{
+  "candidates": [
+    {
+      "id": "state-tables-v1",
+      "module": "core.lossless_state",
+      "baseline_method": "state",
+      "baseline_method_id": "v1-compact",
+      "external_explanation": "none",
+      "development_checkpoints": 13,
+      "baseline_mean_tokens": 4437,
+      "encoded_mean_tokens": 3991.6923076923076,
+      "mean_paired_ratio": 0.9261416143393343,
+      "strict_recovery_passed": 13,
+      "evidence": "measurements.json"
+    },
+    {
+      "id": "state-shared-v1",
+      "module": "core.lossless_state",
+      "baseline_method": "state",
+      "baseline_method_id": "v1-compact",
+      "external_explanation": "none",
+      "development_checkpoints": 13,
+      "baseline_mean_tokens": 4437,
+      "encoded_mean_tokens": 4005.6153846153848,
+      "mean_paired_ratio": 0.92987889669041,
+      "strict_recovery_passed": 13,
+      "evidence": "measurements.json"
+    },
+    {
+      "id": "state-columnar-v1",
+      "module": "core.lossless_state",
+      "baseline_method": "state",
+      "baseline_method_id": "v1-compact",
+      "external_explanation": "none",
+      "development_checkpoints": 13,
+      "baseline_mean_tokens": 4437,
+      "encoded_mean_tokens": 4076.6153846153848,
+      "mean_paired_ratio": 0.9496178798979805,
+      "strict_recovery_passed": 13,
+      "evidence": "measurements.json"
+    }
+  ],
+  "recommended_live": [
+    "state-tables-v1",
+    "state-shared-v1"
+  ],
+  "api": "encode(payload,candidate); decode(encoded); build_memory(history,method,explanation,count,candidate)",
+  "limitations": "Token savings are offline body counts, not model capability evidence. All decoding text and dictionaries are in-band and counted.",
+  "method": "state",
+  "ready": true,
+  "module": "core.lossless_state",
+  "source_sha256": "84958f12777af1c56144452e21992b590e373e6307c2b9f4f23476cf14b0d50b",
+  "variants": [
+    "state-tables-v1",
+    "state-shared-v1"
+  ]
+}

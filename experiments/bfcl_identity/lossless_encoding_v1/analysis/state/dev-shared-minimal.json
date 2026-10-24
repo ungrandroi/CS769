@@ -1,0 +1,141 @@
+{
+  "n": 13,
+  "candidate_passed": 11,
+  "baseline_passed": 10,
+  "candidate_mean_first_input": 7156.615384615385,
+  "candidate_mean_post_input": 8047.348980933596,
+  "baseline_mean_first_input": 7588,
+  "baseline_mean_post_input": 8466.31913919414,
+  "pairs": [
+    {
+      "task": "multi_turn_base_37",
+      "seed": 1103,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 5191,
+      "baseline_post_input": 5177,
+      "candidate_first_input": 5124,
+      "baseline_first_input": 5110
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 2207,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 5131.2,
+      "baseline_post_input": 5115.333333333333,
+      "candidate_first_input": 4996,
+      "baseline_first_input": 4982
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 3301,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 5291.2,
+      "baseline_post_input": 5226,
+      "candidate_first_input": 5156,
+      "baseline_first_input": 5142
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": 3301,
+      "baseline_passed": false,
+      "candidate_passed": true,
+      "candidate_post_input": 6337,
+      "baseline_post_input": 6734,
+      "candidate_first_input": 6055,
+      "baseline_first_input": 6286
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 1103,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 9048.666666666666,
+      "baseline_post_input": 8841.333333333334,
+      "candidate_first_input": 8251,
+      "baseline_first_input": 8279
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 8500,
+      "baseline_post_input": 9292,
+      "candidate_first_input": 8118,
+      "baseline_first_input": 8146
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 3301,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 8898.666666666666,
+      "baseline_post_input": 10798.57142857143,
+      "candidate_first_input": 8360,
+      "baseline_first_input": 8483
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 1103,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 11445.75,
+      "baseline_post_input": 12239.333333333334,
+      "candidate_first_input": 9412,
+      "baseline_first_input": 10799
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 2207,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 11087.25,
+      "baseline_post_input": 12459.625,
+      "candidate_first_input": 9449,
+      "baseline_first_input": 10836
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 3301,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 11787.888888888889,
+      "baseline_post_input": 12956.666666666666,
+      "candidate_first_input": 9423,
+      "baseline_first_input": 10810
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 1103,
+      "baseline_passed": false,
+      "candidate_passed": true,
+      "candidate_post_input": 7167.333333333333,
+      "baseline_post_input": 7278.857142857143,
+      "candidate_first_input": 6422,
+      "baseline_first_input": 6468
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 2207,
+      "baseline_passed": true,
+      "candidate_passed": false,
+      "candidate_post_input": 6714.888888888889,
+      "baseline_post_input": 6640,
+      "candidate_first_input": 6283,
+      "baseline_first_input": 6297
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 3301,
+      "baseline_passed": false,
+      "candidate_passed": false,
+      "candidate_post_input": 8014.692307692308,
+      "baseline_post_input": 7303.428571428572,
+      "candidate_first_input": 5987,
+      "baseline_first_input": 7006
+    }
+  ]
+}

@@ -1,0 +1,908 @@
+{
+  "selected_explanations": {
+    "state": "minimal",
+    "event": "full",
+    "dedup": "none"
+  },
+  "candidates": {
+    "state": [
+      {
+        "explanation": "minimal",
+        "n": 13,
+        "passed": 10,
+        "mean_ratio": 1.5359540599479635,
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": false,
+            "ratio": 1.512512030798845
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.222195646974408
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.207172280106615
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2113074204946996
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.7305602006688963
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.7031151996654819
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.777661357921207
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 1.4646739130434783
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.4314616958399635
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": false,
+            "ratio": 1.6300604932526757
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.6939607843137254
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.6899563318777293
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.6927654243658001
+          }
+        ]
+      },
+      {
+        "explanation": "none",
+        "n": 13,
+        "passed": 9,
+        "mean_ratio": 1.5289956703839205,
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": true,
+            "ratio": 1.5045717035611164
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2143027983735948
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.1991761570147808
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2035335689045936
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.7236622073578596
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.6962157641647502
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 1.7707460184409052
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 1.4572010869565217
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.4239599909070244
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": false,
+            "ratio": 1.6223825034899952
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.68878431372549
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.6848097317529631
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 1.6875978703413717
+          }
+        ]
+      },
+      {
+        "explanation": "full",
+        "n": 13,
+        "passed": 8,
+        "mean_ratio": 1.561046434436482,
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": false,
+            "ratio": 1.5411453320500481
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2506577373834011
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2360067845892901
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2393404004711426
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.7554347826086956
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.7279949822287268
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.8025984911986588
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 1.4916213768115942
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 1.4585132984769267
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": false,
+            "ratio": 1.6577477896696138
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 1.7126274509803923
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.7085152838427948
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.7113999373629816
+          }
+        ]
+      }
+    ],
+    "event": [
+      {
+        "explanation": "full",
+        "n": 13,
+        "passed": 11,
+        "mean_ratio": 1.9650255450429062,
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": true,
+            "ratio": 1.7865736284889318
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.3425017938292274
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2939181003149989
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2956419316843346
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.4676003344481607
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.4355007317583106
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.573134953897737
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.7409420289855073
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 1.6562855194362356
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": false,
+            "ratio": 2.312936249418334
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.216470588235294
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.209451029320025
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.2143751957406828
+          }
+        ]
+      },
+      {
+        "explanation": "none",
+        "n": 13,
+        "passed": 10,
+        "mean_ratio": 1.9329747809903446,
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": true,
+            "ratio": 1.75
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.3061468548194213
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2570874727404895
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2598351001177857
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.4358277591973243
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.403721513694334
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 2.5412824811399832
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 1.7065217391304348
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 1.6217322118663333
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": true,
+            "ratio": 2.2775709632387158
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.192627450980392
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.1857454772301934
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.190573128719073
+          }
+        ]
+      },
+      {
+        "explanation": "minimal",
+        "n": 13,
+        "passed": 10,
+        "mean_ratio": 1.9399331705543876,
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": false,
+            "ratio": 1.7579403272377285
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.3140397034202345
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2650835958323237
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2676089517078917
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.442725752508361
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.410620949195066
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 2.548197820620285
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.7139945652173914
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.6292339167992727
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": true,
+            "ratio": 2.285248953001396
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.1978039215686276
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.1908920773549596
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 2.1957406827435015
+          }
+        ]
+      }
+    ],
+    "dedup": [
+      {
+        "explanation": "none",
+        "n": 13,
+        "passed": 11,
+        "mean_ratio": 1.7134555702755434,
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": true,
+            "ratio": 1.5360923965351299
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2676393207366659
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2393990792343106
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2426383981154299
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.9949832775919731
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.989128162241271
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 2.0821458507963118
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.5482336956521738
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.4921573084792
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": false,
+            "ratio": 1.9111214518380641
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.9929411764705882
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.987211478477854
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.991230817413091
+          }
+        ]
+      },
+      {
+        "explanation": "minimal",
+        "n": 13,
+        "passed": 11,
+        "mean_ratio": 1.7204139598395862,
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": true,
+            "ratio": 1.5440327237728586
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.275532169337479
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.247395202326145
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2504122497055359
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.00188127090301
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.996027597742003
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.0890611902766136
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 1.5557065217391304
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.499659013412139
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": true,
+            "ratio": 1.9187994416007446
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.9981176470588236
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.99235807860262
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 1.9963983714375195
+          }
+        ]
+      },
+      {
+        "explanation": "full",
+        "n": 13,
+        "passed": 9,
+        "mean_ratio": 1.7455063343281048,
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": true,
+            "ratio": 1.5726660250240616
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.3039942597464722
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.27622970680882
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.2784452296819788
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.0267558528428093
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.020907380305248
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.1139983235540654
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 1.5826539855072463
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 1.526710616049102
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "graph_passed": false,
+            "ratio": 1.9464867380176827
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 2.0167843137254904
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "graph_passed": true,
+            "ratio": 2.010917030567686
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "graph_passed": false,
+            "ratio": 2.0150328844347007
+          }
+        ]
+      }
+    ]
+  },
+  "rule": "Development triggered pass count descending; mean first-input ratio ascending; none/minimal/full tie order",
+  "selected_at": 1792461923.3118188
+}

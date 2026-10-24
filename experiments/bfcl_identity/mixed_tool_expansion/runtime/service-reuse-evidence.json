@@ -1,0 +1,11 @@
+{
+  "observed_at": 1792536140.0266085,
+  "base_url": "http://127.0.0.1:11436/v1",
+  "source": "existing local service from completed filesystem study",
+  "inference_requested": false,
+  "artifact_names": [
+    "health.json",
+    "props.json",
+    "slots.json"
+  ]
+}

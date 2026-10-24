@@ -1,0 +1,23 @@
+{
+  "reviewer": "lossless_event",
+  "reviewed_module": "core.lossless_state",
+  "mode": "read-only cross-agent review",
+  "tests": {
+    "command": "PYTHONPATH=scripts python -m pytest tests/test_lossless_state.py tests/test_lossless_event.py -q",
+    "passed": 19
+  },
+  "findings": [
+    "No payload loss found in selected state-tables-v1/state-shared-v1 paths.",
+    "Reserved marker dictionaries are escaped before table conversion.",
+    "Shared dictionary values are encoded subtrees restored before table decode.",
+    "Defaults preserve scalar types; list order and source-message order retained.",
+    "Codec decoding does not invoke graph builder.",
+    "Model-visible rules and shared dictionaries are inside delivered envelope."
+  ],
+  "file_sha256": {
+    "scripts/core/lossless_state.py": "84958f12777af1c56144452e21992b590e373e6307c2b9f4f23476cf14b0d50b",
+    "scripts/core/lossless_event.py": "8b4896610237a61430b685de6e98ac68f8d67157ac472b98d02fbe24195f6807",
+    "tests/test_lossless_state.py": "86449dc216aa328a52aa8e02bf7586ef2099c05e5174f7b3b46fa4a67a312cae",
+    "tests/test_lossless_event.py": "a4dc5e4d6c54f359caef98a47ec0221fe95747bd4f6d86998441f391dfd3c2b8"
+  }
+}

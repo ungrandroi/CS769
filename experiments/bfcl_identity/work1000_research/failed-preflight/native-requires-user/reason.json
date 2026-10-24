@@ -1,0 +1,4 @@
+{
+  "reason": "Native template rejects assistant-only history. Deliver graph as user-role memory container without duplicating original goal.",
+  "live_requests": 0
+}

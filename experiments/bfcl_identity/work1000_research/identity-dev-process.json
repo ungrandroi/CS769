@@ -1,0 +1,10 @@
+{
+  "pid": 2675088,
+  "command": [
+    "/home/bcao44/bofeng/CS769/.conda/bfcl/bin/python3.10",
+    "-m",
+    "workflows.work1000_batch",
+    "--stage",
+    "identity-dev"
+  ]
+}

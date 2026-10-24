@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "created_at": 1792805795.7556298,
+  "completed_runs": 2394,
+  "fixed_configs": 58,
+  "native_requests": 21167,
+  "full_template_samples": 56,
+  "scope": "Read-only apply-template requests and CPU vocabulary-only tokenizer; zero model inference."
+}

@@ -1,0 +1,85 @@
+{
+  "status": "pass",
+  "identity_runs": 444,
+  "triggered": 297,
+  "prefixes_with_nonfilesystem": 81,
+  "identity_runs_with_nonfilesystem": 277,
+  "prefix_domain_runs": {
+    "GorillaFileSystem": 297,
+    "MessageAPI": 26,
+    "TwitterAPI": 14,
+    "TicketAPI": 19,
+    "MathAPI": 22
+  },
+  "all_domain_runs": {
+    "GorillaFileSystem": 444,
+    "TwitterAPI": 85,
+    "MessageAPI": 72,
+    "MathAPI": 76,
+    "TicketAPI": 44
+  },
+  "diagnosed_prefix_failures": 28,
+  "actual_prefix_domain_strata": {
+    "actual_mixed_prefix": {
+      "dedup-baseline": {
+        "n": 81,
+        "passed": 46
+      },
+      "dedup-optimized": {
+        "n": 81,
+        "passed": 40
+      },
+      "event-baseline": {
+        "n": 81,
+        "passed": 43
+      },
+      "event-optimized": {
+        "n": 81,
+        "passed": 42
+      },
+      "identity": {
+        "n": 81,
+        "passed": 49
+      },
+      "state-baseline": {
+        "n": 81,
+        "passed": 44
+      },
+      "state-optimized": {
+        "n": 81,
+        "passed": 39
+      }
+    },
+    "filesystem_only_prefix": {
+      "dedup-baseline": {
+        "n": 216,
+        "passed": 71
+      },
+      "dedup-optimized": {
+        "n": 216,
+        "passed": 61
+      },
+      "event-baseline": {
+        "n": 216,
+        "passed": 77
+      },
+      "event-optimized": {
+        "n": 216,
+        "passed": 83
+      },
+      "identity": {
+        "n": 216,
+        "passed": 71
+      },
+      "state-baseline": {
+        "n": 216,
+        "passed": 75
+      },
+      "state-optimized": {
+        "n": 216,
+        "passed": 78
+      }
+    }
+  }
+}
+{'state': {'gains': 15, 'losses': 17}, 'event': {'gains': 18, 'losses': 13}, 'dedup': {'gains': 17, 'losses': 33}}

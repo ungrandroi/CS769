@@ -1,0 +1,289 @@
+Traceback (most recent call last):
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v1/scripts/workflows/work1000_controller.py", line 93, in <module>
+    if __name__=='__main__':main()
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v1/scripts/workflows/work1000_controller.py", line 76, in main
+    run('graph-dev','none','state',*pilot)
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v1/scripts/workflows/work1000_controller.py", line 69, in run
+    subprocess.run(cmd,check=True,stdout=log,stderr=subprocess.STDOUT)
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/bcao44/bofeng/CS769/.conda/bfcl/bin/python3.10', '-m', 'workflows.work1000_batch', '--root', '/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research', '--stage', 'graph-dev', '--explanation', 'none', '--snapshot-label', 'resume-frozen-v1', '--base-url', 'http://127.0.0.1:11436/v1', '--method-only', 'state', '--task-only', 'multi_turn_base_9', '--seed-only', '3301']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v2/scripts/workflows/work1000_controller.py", line 96, in <module>
+    if __name__=='__main__':main()
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v2/scripts/workflows/work1000_controller.py", line 79, in main
+    run('graph-dev','none','state',*pilot)
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v2/scripts/workflows/work1000_controller.py", line 72, in run
+    subprocess.run(cmd,check=True,stdout=log,stderr=subprocess.STDOUT)
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/bcao44/bofeng/CS769/.conda/bfcl/bin/python3.10', '-m', 'workflows.work1000_batch', '--root', '/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research', '--stage', 'graph-dev', '--explanation', 'none', '--snapshot-label', 'resume-frozen-v2', '--base-url', 'http://127.0.0.1:11436/v1', '--method-only', 'state', '--task-only', 'multi_turn_base_9', '--seed-only', '3301']' returned non-zero exit status 1.
+{
+  "identity_attempts": 156,
+  "groups": [
+    {
+      "split": "all",
+      "method": "identity",
+      "subset": "all_completed",
+      "n": 156,
+      "passed": 71,
+      "mean_first_input_ratio": 1.0
+    },
+    {
+      "split": "all",
+      "method": "identity",
+      "subset": "triggered_completed",
+      "n": 100,
+      "passed": 39,
+      "mean_first_input_ratio": 1.0
+    },
+    {
+      "split": "all",
+      "method": "state",
+      "subset": "all_completed",
+      "n": 100,
+      "passed": 41,
+      "mean_first_input_ratio": 1.4816890632440476
+    },
+    {
+      "split": "all",
+      "method": "state",
+      "subset": "triggered_completed",
+      "n": 100,
+      "passed": 41,
+      "mean_first_input_ratio": 1.4816890632440476
+    },
+    {
+      "split": "all",
+      "method": "event",
+      "subset": "all_completed",
+      "n": 100,
+      "passed": 43,
+      "mean_first_input_ratio": 1.8441962461545816
+    },
+    {
+      "split": "all",
+      "method": "event",
+      "subset": "triggered_completed",
+      "n": 100,
+      "passed": 43,
+      "mean_first_input_ratio": 1.8441962461545816
+    },
+    {
+      "split": "all",
+      "method": "dedup",
+      "subset": "all_completed",
+      "n": 100,
+      "passed": 40,
+      "mean_first_input_ratio": 1.597907688081416
+    },
+    {
+      "split": "all",
+      "method": "dedup",
+      "subset": "triggered_completed",
+      "n": 100,
+      "passed": 40,
+      "mean_first_input_ratio": 1.597907688081416
+    },
+    {
+      "split": "development",
+      "method": "identity",
+      "subset": "all_completed",
+      "n": 18,
+      "passed": 15,
+      "mean_first_input_ratio": 1.0
+    },
+    {
+      "split": "development",
+      "method": "identity",
+      "subset": "triggered_completed",
+      "n": 13,
+      "passed": 11,
+      "mean_first_input_ratio": 1.0
+    },
+    {
+      "split": "development",
+      "method": "state",
+      "subset": "all_completed",
+      "n": 13,
+      "passed": 10,
+      "mean_first_input_ratio": 1.5359540599479635
+    },
+    {
+      "split": "development",
+      "method": "state",
+      "subset": "triggered_completed",
+      "n": 13,
+      "passed": 10,
+      "mean_first_input_ratio": 1.5359540599479635
+    },
+    {
+      "split": "development",
+      "method": "event",
+      "subset": "all_completed",
+      "n": 13,
+      "passed": 11,
+      "mean_first_input_ratio": 1.9650255450429062
+    },
+    {
+      "split": "development",
+      "method": "event",
+      "subset": "triggered_completed",
+      "n": 13,
+      "passed": 11,
+      "mean_first_input_ratio": 1.9650255450429062
+    },
+    {
+      "split": "development",
+      "method": "dedup",
+      "subset": "all_completed",
+      "n": 13,
+      "passed": 11,
+      "mean_first_input_ratio": 1.7134555702755434
+    },
+    {
+      "split": "development",
+      "method": "dedup",
+      "subset": "triggered_completed",
+      "n": 13,
+      "passed": 11,
+      "mean_first_input_ratio": 1.7134555702755434
+    },
+    {
+      "split": "reserved_this_cycle",
+      "method": "identity",
+      "subset": "all_completed",
+      "n": 60,
+      "passed": 34,
+      "mean_first_input_ratio": 1.0
+    },
+    {
+      "split": "reserved_this_cycle",
+      "method": "identity",
+      "subset": "triggered_completed",
+      "n": 33,
+      "passed": 12,
+      "mean_first_input_ratio": 1.0
+    },
+    {
+      "split": "reserved_this_cycle",
+      "method": "state",
+      "subset": "all_completed",
+      "n": 33,
+      "passed": 16,
+      "mean_first_input_ratio": 1.5489208816662514
+    },
+    {
+      "split": "reserved_this_cycle",
+      "method": "state",
+      "subset": "triggered_completed",
+      "n": 33,
+      "passed": 16,
+      "mean_first_input_ratio": 1.5489208816662514
+    },
+    {
+      "split": "reserved_this_cycle",
+      "method": "event",
+      "subset": "all_completed",
+      "n": 33,
+      "passed": 15,
+      "mean_first_input_ratio": 2.0588436161956296
+    },
+    {
+      "split": "reserved_this_cycle",
+      "method": "event",
+      "subset": "triggered_completed",
+      "n": 33,
+      "passed": 15,
+      "mean_first_input_ratio": 2.0588436161956296
+    },
+    {
+      "split": "reserved_this_cycle",
+      "method": "dedup",
+      "subset": "all_completed",
+      "n": 33,
+      "passed": 13,
+      "mean_first_input_ratio": 1.7331200810153602
+    },
+    {
+      "split": "reserved_this_cycle",
+      "method": "dedup",
+      "subset": "triggered_completed",
+      "n": 33,
+      "passed": 13,
+      "mean_first_input_ratio": 1.7331200810153602
+    },
+    {
+      "split": "new_condition_transfer",
+      "method": "identity",
+      "subset": "all_completed",
+      "n": 78,
+      "passed": 22,
+      "mean_first_input_ratio": 1.0
+    },
+    {
+      "split": "new_condition_transfer",
+      "method": "identity",
+      "subset": "triggered_completed",
+      "n": 54,
+      "passed": 16,
+      "mean_first_input_ratio": 1.0
+    },
+    {
+      "split": "new_condition_transfer",
+      "method": "state",
+      "subset": "all_completed",
+      "n": 54,
+      "passed": 15,
+      "mean_first_input_ratio": 1.4275391564832394
+    },
+    {
+      "split": "new_condition_transfer",
+      "method": "state",
+      "subset": "triggered_completed",
+      "n": 54,
+      "passed": 15,
+      "mean_first_input_ratio": 1.4275391564832394
+    },
+    {
+      "split": "new_condition_transfer",
+      "method": "event",
+      "subset": "all_completed",
+      "n": 54,
+      "passed": 17,
+      "mean_first_input_ratio": 1.6839343184341593
+    },
+    {
+      "split": "new_condition_transfer",
+      "method": "event",
+      "subset": "triggered_completed",
+      "n": 54,
+      "passed": 17,
+      "mean_first_input_ratio": 1.6839343184341593
+    },
+    {
+      "split": "new_condition_transfer",
+      "method": "dedup",
+      "subset": "all_completed",
+      "n": 54,
+      "passed": 16,
+      "mean_first_input_ratio": 1.487460809649123
+    },
+    {
+      "split": "new_condition_transfer",
+      "method": "dedup",
+      "subset": "triggered_completed",
+      "n": 54,
+      "passed": 16,
+      "mean_first_input_ratio": 1.487460809649123
+    }
+  ]
+}

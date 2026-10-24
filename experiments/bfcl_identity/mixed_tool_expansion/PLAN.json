@@ -1,0 +1,109 @@
+{
+  "status": "fresh_identity_running",
+  "created_at": 1792535755.7215266,
+  "current_study_audit": "../lossless_encoding_v1/analysis/independent_audit/final.json",
+  "scope": "37 mixed filesystem families, four conditions, 148 task-condition instances",
+  "development_families": {
+    "TwitterAPI": 0,
+    "TicketAPI": 2,
+    "MessageAPI": 14,
+    "MathAPI": 15
+  },
+  "development_conditions": [
+    "multi_turn_base",
+    "multi_turn_long_context"
+  ],
+  "development_seeds": [
+    1103,
+    2207,
+    3301
+  ],
+  "reserved_fresh_seeds": [
+    15013,
+    16033,
+    17041
+  ],
+  "seed_collision_check": "Absent from existing experiment manifest seed fields at reservation time",
+  "encoding_selection_source": "../lossless_encoding_v1/selection.json",
+  "codec_reselection_allowed": false,
+  "model": "Qwen3.8-27B-Q8_0",
+  "protocol": {
+    "threshold": "native full request minus fixed-only template > 1000 tokens",
+    "boundary": "all calls paired with returns",
+    "conversion": "once then append suffix",
+    "sampler": "same as lossless_encoding_v1; freeze exact config before inference",
+    "paired_arms": [
+      "identity",
+      "state-original-encoding",
+      "state-selected-encoding",
+      "event-original-encoding",
+      "event-selected-encoding",
+      "dedup-original-encoding",
+      "dedup-selected-encoding"
+    ]
+  },
+  "semantic_extension": {
+    "version": "mixed-domain-1 draft",
+    "old_core_modified": false,
+    "semantics_shared_across_encodings": true,
+    "domains": [
+      "GorillaFileSystem",
+      "TwitterAPI",
+      "MathAPI",
+      "MessageAPI",
+      "TicketAPI"
+    ],
+    "required": [
+      "domain isolation",
+      "method-aware outcome classification",
+      "namespace-safe observed entities and versioned fields",
+      "explicit observation_only/unmodeled coverage",
+      "renderer preserves declared domain state and event metadata",
+      "direct exact selected-codec decode",
+      "history and deterministic full-builder restoration"
+    ]
+  },
+  "stages": [
+    {
+      "name": "inventory",
+      "status": "complete"
+    },
+    {
+      "name": "coverage audit",
+      "status": "complete"
+    },
+    {
+      "name": "adapters renderers and synthetic tests",
+      "status": "complete"
+    },
+    {
+      "name": "independent semantic and reconstruction audit",
+      "status": "complete"
+    },
+    {
+      "name": "freeze and separate development integration runs",
+      "status": "complete"
+    },
+    {
+      "name": "freeze final adapter before fresh-seed evaluation",
+      "status": "complete"
+    },
+    {
+      "name": "fresh identity and six paired graph branches",
+      "status": "in_progress"
+    },
+    {
+      "name": "independent final audit and report",
+      "status": "pending"
+    }
+  ],
+  "caveats": [
+    "Adapter changes are a new semantic extension, not a lossless serialization improvement.",
+    "The baseline encodings and optimized encodings must share the same new semantic payload.",
+    "No outcomes from fresh evaluation may alter adapters/codecs.",
+    "Other tool domains require another coverage audit after this stage."
+  ],
+  "updated_at": 1792543604.002637,
+  "controller_pid": 1641596,
+  "fresh_evaluation_started": true
+}

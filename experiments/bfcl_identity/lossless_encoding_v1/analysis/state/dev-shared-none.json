@@ -1,0 +1,141 @@
+{
+  "n": 13,
+  "candidate_passed": 9,
+  "baseline_passed": 10,
+  "candidate_mean_first_input": 7123.615384615385,
+  "candidate_mean_post_input": 8464.631924485771,
+  "baseline_mean_first_input": 7588,
+  "baseline_mean_post_input": 8466.31913919414,
+  "pairs": [
+    {
+      "task": "multi_turn_base_37",
+      "seed": 1103,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 5158,
+      "baseline_post_input": 5177,
+      "candidate_first_input": 5091,
+      "baseline_first_input": 5110
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 2207,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 5047,
+      "baseline_post_input": 5115.333333333333,
+      "candidate_first_input": 4963,
+      "baseline_first_input": 4982
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 3301,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 5280.5,
+      "baseline_post_input": 5226,
+      "candidate_first_input": 5123,
+      "baseline_first_input": 5142
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": 3301,
+      "baseline_passed": false,
+      "candidate_passed": true,
+      "candidate_post_input": 6622.555555555556,
+      "baseline_post_input": 6734,
+      "candidate_first_input": 6022,
+      "baseline_first_input": 6286
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 1103,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 8600,
+      "baseline_post_input": 8841.333333333334,
+      "candidate_first_input": 8218,
+      "baseline_first_input": 8279
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 8467,
+      "baseline_post_input": 9292,
+      "candidate_first_input": 8085,
+      "baseline_first_input": 8146
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 3301,
+      "baseline_passed": true,
+      "candidate_passed": false,
+      "candidate_post_input": 10624,
+      "baseline_post_input": 10798.57142857143,
+      "candidate_first_input": 8327,
+      "baseline_first_input": 8483
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 1103,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 12811.666666666666,
+      "baseline_post_input": 12239.333333333334,
+      "candidate_first_input": 9379,
+      "baseline_first_input": 10799
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 2207,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 12588.444444444445,
+      "baseline_post_input": 12459.625,
+      "candidate_first_input": 9416,
+      "baseline_first_input": 10836
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 3301,
+      "baseline_passed": true,
+      "candidate_passed": true,
+      "candidate_post_input": 13273.4,
+      "baseline_post_input": 12956.666666666666,
+      "candidate_first_input": 9390,
+      "baseline_first_input": 10810
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 1103,
+      "baseline_passed": false,
+      "candidate_passed": false,
+      "candidate_post_input": 7453.571428571428,
+      "baseline_post_input": 7278.857142857143,
+      "candidate_first_input": 6389,
+      "baseline_first_input": 6468
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 2207,
+      "baseline_passed": true,
+      "candidate_passed": false,
+      "candidate_post_input": 6988,
+      "baseline_post_input": 6640,
+      "candidate_first_input": 6250,
+      "baseline_first_input": 6297
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 3301,
+      "baseline_passed": false,
+      "candidate_passed": false,
+      "candidate_post_input": 7126.076923076923,
+      "baseline_post_input": 7303.428571428572,
+      "candidate_first_input": 5954,
+      "baseline_first_input": 7006
+    }
+  ]
+}

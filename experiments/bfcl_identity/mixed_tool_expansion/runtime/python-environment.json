@@ -1,0 +1,12 @@
+{
+  "python": "3.10.21 | packaged by conda-forge | (main, Aug 21 2026, 22:42:31) [GCC 14.4.0]",
+  "executable": "/home/bcao44/bofeng/CS769/.conda/bfcl/bin/python",
+  "platform": "Linux-6.8.0-52-generic-x86_64-with-glibc2.35",
+  "versions": {
+    "openai": "3.23.0",
+    "pydantic": "2.13.5",
+    "numpy": "1.26.4",
+    "berkeley-function-call-leaderboard": null,
+    "bfcl-eval": "0.0.0.dev0"
+  }
+}

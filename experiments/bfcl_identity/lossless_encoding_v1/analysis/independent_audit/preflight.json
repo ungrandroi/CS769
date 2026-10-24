@@ -1,0 +1,58 @@
+{
+  "status": "preflight_pass_with_followups",
+  "scope": "Independent static review and partial-artifact checks; not final experiment audit.",
+  "time": 1792493967.1981049,
+  "blocking_findings": [],
+  "checks": {
+    "exact_delivered_payload_roundtrips": 78,
+    "frozen_script_hashes": 42,
+    "dataset_hashes": 4,
+    "codec_tests": 20,
+    "protocol_tests": 5,
+    "completed_actual_graph_runs_audited": 3,
+    "not_triggered_manifests_audited": 5,
+    "development_is_old_six_conditions_three_seeds": true,
+    "fresh_seed_evaluation_starts_after_selection_write": true,
+    "fresh_baseline_and_candidate_share_identity": true,
+    "current_baseline_matches_prior_selected_payloads": true,
+    "direct_decode_is_independent_of_graph_builder": true,
+    "conversion_uses_only_replayed_visible_history": true,
+    "strict_threshold_complete_pair_singleton_conversion": true,
+    "subprocess_failure_stops_controller": true,
+    "attempt_overwrite_rejected": true
+  },
+  "followups": [
+    {
+      "severity": "reporting",
+      "finding": "none means no outer explanation, not no explanation: decoding/table_rule/shared_rule strings remain in-band and count in native input tokens. instruction_tokens excludes these rules.",
+      "required_action": "Final report separately quantify in-band codec rules, outer instruction, graph content and fixed overhead. Use counterfactual native rendering/tokenization for marginal contributions; do not assume independently counted string tokens add exactly."
+    },
+    {
+      "severity": "resume_hardening",
+      "finding": "Existing completed attempts are accepted using status/task/seed only. method, variant, explanation, identity path, launch hashes and preregistered config are not rechecked in execute().",
+      "required_action": "Before any restart, run independent strong validation of configuration/source/registry/plan. Preserve erroneous/incomplete attempts and stop; do not replace them. Runner has acknowledged and is implementing an external restart guard."
+    },
+    {
+      "severity": "audit_coverage",
+      "finding": "lossless_audit.py verifies logs, paired prefixes and snapshot integrity but does not independently decode memory payload or verify template subtraction/score reproducibility, launch import evidence, or immutable dependency state.",
+      "required_action": "Final independent audit must recompute exact payload recovery for every actual candidate, fixed-token accounting samples, official scores, dataset/vendor/tokenizer/model provenance and launch evidence. Do not present the mechanical audit as final independent review."
+    },
+    {
+      "severity": "statistics",
+      "finding": "Controller selects highest development success count then lower mean input; adoption criterion uses observed counts only. Report currently supplies descriptive pairs without uncertainty or family aggregation.",
+      "required_action": "Report paired wins/losses versus both baseline and Identity, per-family/per-seed results and appropriate clustered uncertainty. Do not infer stable superiority or equivalence from these point estimates."
+    },
+    {
+      "severity": "iteration",
+      "finding": "This frozen candidate sweep has two codecs per method and outer explanation controls; controller performs no automatic post-result code redesign.",
+      "required_action": "After development outcomes, inspect failures and cost before calling optimization finished. If further iteration is needed, create a new frozen candidate generation and record exposure; never modify this active snapshot."
+    }
+  ],
+  "evidence_file": "preflight-evidence.json",
+  "scope_limits": [
+    "This audit is preflight while inference is ongoing; all-task/fresh-seed results do not yet exist.",
+    "OS PID is not visible in the audit sandbox; actual-host process verification belongs to runner evidence.",
+    "Source snapshots freeze scripts, while vendor remains a symlink; dataset hashes were checked, but complete dependency/model/tokenizer immutability is pending.",
+    "Codec pytest tests use the working module path in one test file; codec source bytes match the frozen files. Independent 78-payload checks import actual frozen modules."
+  ]
+}

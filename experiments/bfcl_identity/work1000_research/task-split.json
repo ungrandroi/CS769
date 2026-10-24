@@ -1,0 +1,531 @@
+{
+  "status": "preregistered_before_new_inference",
+  "seeds": [
+    1103,
+    2207,
+    3301
+  ],
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "repeat_penalty": 1.0,
+    "max_tokens": 4096,
+    "context_size": 131072,
+    "enable_thinking": false,
+    "preserve_thinking": false
+  },
+  "development_families": [
+    3,
+    9,
+    37
+  ],
+  "all_families": [
+    1,
+    3,
+    6,
+    9,
+    10,
+    12,
+    16,
+    25,
+    26,
+    29,
+    37,
+    38,
+    39
+  ],
+  "limitations": [
+    "All 13 families appeared in earlier experiments; reserved_this_cycle is not historically unseen.",
+    "New conditions reuse existing families.",
+    "52 conditions x 3 seeds is not 156 independent task families."
+  ],
+  "sources": [
+    {
+      "path": "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_base.json",
+      "sha256": "1a21a995d06fd6f20ba55de7bced30ef953ec35e998f502ec2ecf4d66ef1c43a"
+    },
+    {
+      "path": "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_long_context.json",
+      "sha256": "78c3268c5cc8e97c0f4ec6c811b3b9a2bba14323b1830b7a874b06d822749324"
+    },
+    {
+      "path": "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_miss_func.json",
+      "sha256": "87d28ce10e37d864b72de85d5732eef2a867b241d6c1c99b4ae682c9e3ea921c"
+    },
+    {
+      "path": "vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_miss_param.json",
+      "sha256": "f0c66dda3795f5f53e3e1c0cc8ba0246b6761c8f58bdba8317203bf451ab8838"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "multi_turn_base_1",
+      "category": "multi_turn_base",
+      "family": 1,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 4,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_base_3",
+      "category": "multi_turn_base",
+      "family": 3,
+      "user_turn_slots": 2,
+      "nonempty_user_turns": 2,
+      "split": "development",
+      "family_is_development": true
+    },
+    {
+      "id": "multi_turn_base_6",
+      "category": "multi_turn_base",
+      "family": 6,
+      "user_turn_slots": 5,
+      "nonempty_user_turns": 5,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_base_9",
+      "category": "multi_turn_base",
+      "family": 9,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 3,
+      "split": "development",
+      "family_is_development": true
+    },
+    {
+      "id": "multi_turn_base_10",
+      "category": "multi_turn_base",
+      "family": 10,
+      "user_turn_slots": 5,
+      "nonempty_user_turns": 5,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_base_12",
+      "category": "multi_turn_base",
+      "family": 12,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 3,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_base_16",
+      "category": "multi_turn_base",
+      "family": 16,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 3,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_base_25",
+      "category": "multi_turn_base",
+      "family": 25,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 4,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_base_26",
+      "category": "multi_turn_base",
+      "family": 26,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 3,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_base_29",
+      "category": "multi_turn_base",
+      "family": 29,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 3,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_base_37",
+      "category": "multi_turn_base",
+      "family": 37,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 3,
+      "split": "development",
+      "family_is_development": true
+    },
+    {
+      "id": "multi_turn_base_38",
+      "category": "multi_turn_base",
+      "family": 38,
+      "user_turn_slots": 2,
+      "nonempty_user_turns": 2,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_base_39",
+      "category": "multi_turn_base",
+      "family": 39,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 4,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_long_context_1",
+      "category": "multi_turn_long_context",
+      "family": 1,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 4,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_long_context_3",
+      "category": "multi_turn_long_context",
+      "family": 3,
+      "user_turn_slots": 2,
+      "nonempty_user_turns": 2,
+      "split": "development",
+      "family_is_development": true
+    },
+    {
+      "id": "multi_turn_long_context_6",
+      "category": "multi_turn_long_context",
+      "family": 6,
+      "user_turn_slots": 5,
+      "nonempty_user_turns": 5,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_long_context_9",
+      "category": "multi_turn_long_context",
+      "family": 9,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 3,
+      "split": "development",
+      "family_is_development": true
+    },
+    {
+      "id": "multi_turn_long_context_10",
+      "category": "multi_turn_long_context",
+      "family": 10,
+      "user_turn_slots": 5,
+      "nonempty_user_turns": 5,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_long_context_12",
+      "category": "multi_turn_long_context",
+      "family": 12,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 3,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_long_context_16",
+      "category": "multi_turn_long_context",
+      "family": 16,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 3,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_long_context_25",
+      "category": "multi_turn_long_context",
+      "family": 25,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 4,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_long_context_26",
+      "category": "multi_turn_long_context",
+      "family": 26,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 3,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_long_context_29",
+      "category": "multi_turn_long_context",
+      "family": 29,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 3,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_long_context_37",
+      "category": "multi_turn_long_context",
+      "family": 37,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 3,
+      "split": "development",
+      "family_is_development": true
+    },
+    {
+      "id": "multi_turn_long_context_38",
+      "category": "multi_turn_long_context",
+      "family": 38,
+      "user_turn_slots": 2,
+      "nonempty_user_turns": 2,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_long_context_39",
+      "category": "multi_turn_long_context",
+      "family": 39,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 4,
+      "split": "reserved_this_cycle",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_func_1",
+      "category": "multi_turn_miss_func",
+      "family": 1,
+      "user_turn_slots": 5,
+      "nonempty_user_turns": 4,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_func_3",
+      "category": "multi_turn_miss_func",
+      "family": 3,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 2,
+      "split": "new_condition_transfer",
+      "family_is_development": true
+    },
+    {
+      "id": "multi_turn_miss_func_6",
+      "category": "multi_turn_miss_func",
+      "family": 6,
+      "user_turn_slots": 6,
+      "nonempty_user_turns": 5,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_func_9",
+      "category": "multi_turn_miss_func",
+      "family": 9,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 3,
+      "split": "new_condition_transfer",
+      "family_is_development": true
+    },
+    {
+      "id": "multi_turn_miss_func_10",
+      "category": "multi_turn_miss_func",
+      "family": 10,
+      "user_turn_slots": 6,
+      "nonempty_user_turns": 5,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_func_12",
+      "category": "multi_turn_miss_func",
+      "family": 12,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 3,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_func_16",
+      "category": "multi_turn_miss_func",
+      "family": 16,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 3,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_func_25",
+      "category": "multi_turn_miss_func",
+      "family": 25,
+      "user_turn_slots": 5,
+      "nonempty_user_turns": 4,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_func_26",
+      "category": "multi_turn_miss_func",
+      "family": 26,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 3,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_func_29",
+      "category": "multi_turn_miss_func",
+      "family": 29,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 3,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_func_37",
+      "category": "multi_turn_miss_func",
+      "family": 37,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 3,
+      "split": "new_condition_transfer",
+      "family_is_development": true
+    },
+    {
+      "id": "multi_turn_miss_func_38",
+      "category": "multi_turn_miss_func",
+      "family": 38,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 2,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_func_39",
+      "category": "multi_turn_miss_func",
+      "family": 39,
+      "user_turn_slots": 5,
+      "nonempty_user_turns": 4,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_param_1",
+      "category": "multi_turn_miss_param",
+      "family": 1,
+      "user_turn_slots": 5,
+      "nonempty_user_turns": 5,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_param_3",
+      "category": "multi_turn_miss_param",
+      "family": 3,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 3,
+      "split": "new_condition_transfer",
+      "family_is_development": true
+    },
+    {
+      "id": "multi_turn_miss_param_6",
+      "category": "multi_turn_miss_param",
+      "family": 6,
+      "user_turn_slots": 6,
+      "nonempty_user_turns": 6,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_param_9",
+      "category": "multi_turn_miss_param",
+      "family": 9,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 4,
+      "split": "new_condition_transfer",
+      "family_is_development": true
+    },
+    {
+      "id": "multi_turn_miss_param_10",
+      "category": "multi_turn_miss_param",
+      "family": 10,
+      "user_turn_slots": 6,
+      "nonempty_user_turns": 6,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_param_12",
+      "category": "multi_turn_miss_param",
+      "family": 12,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 4,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_param_16",
+      "category": "multi_turn_miss_param",
+      "family": 16,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 4,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_param_25",
+      "category": "multi_turn_miss_param",
+      "family": 25,
+      "user_turn_slots": 5,
+      "nonempty_user_turns": 5,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_param_26",
+      "category": "multi_turn_miss_param",
+      "family": 26,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 4,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_param_29",
+      "category": "multi_turn_miss_param",
+      "family": 29,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 4,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_param_37",
+      "category": "multi_turn_miss_param",
+      "family": 37,
+      "user_turn_slots": 4,
+      "nonempty_user_turns": 4,
+      "split": "new_condition_transfer",
+      "family_is_development": true
+    },
+    {
+      "id": "multi_turn_miss_param_38",
+      "category": "multi_turn_miss_param",
+      "family": 38,
+      "user_turn_slots": 3,
+      "nonempty_user_turns": 3,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    },
+    {
+      "id": "multi_turn_miss_param_39",
+      "category": "multi_turn_miss_param",
+      "family": 39,
+      "user_turn_slots": 5,
+      "nonempty_user_turns": 5,
+      "split": "new_condition_transfer",
+      "family_is_development": false
+    }
+  ]
+}

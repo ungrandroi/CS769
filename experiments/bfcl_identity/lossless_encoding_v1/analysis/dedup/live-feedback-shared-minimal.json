@@ -1,0 +1,794 @@
+{
+  "generated_at": "2026-10-20T14:27:57.969078+00:00",
+  "label": "dedup-shared-v1-minimal",
+  "primary_baseline": "dedup-none",
+  "summary": {
+    "identity": {
+      "passed": 11,
+      "total": 13,
+      "first_input_mean": 4871.846153846154,
+      "mean_post_input_macro_mean": 5444.913461538462
+    },
+    "dedup-none": {
+      "passed": 11,
+      "total": 13,
+      "first_input_mean": 8526.615384615385,
+      "mean_post_input_macro_mean": 9818.928279237103
+    },
+    "dedup-minimal": {
+      "passed": 11,
+      "total": 13,
+      "first_input_mean": 8559.615384615385,
+      "mean_post_input_macro_mean": 9198.167704517704
+    },
+    "candidate": {
+      "passed": 9,
+      "total": 13,
+      "first_input_mean": 8115.615384615385,
+      "mean_post_input_macro_mean": 9286.627283011107
+    }
+  },
+  "paired": {
+    "identity": {
+      "gains": [],
+      "losses": [
+        "multi_turn_long_context_9/seed1103",
+        "multi_turn_long_context_9/seed2207"
+      ],
+      "both_success": [
+        "multi_turn_base_37/seed1103",
+        "multi_turn_base_37/seed2207",
+        "multi_turn_base_37/seed3301",
+        "multi_turn_long_context_3/seed1103",
+        "multi_turn_long_context_3/seed2207",
+        "multi_turn_long_context_3/seed3301",
+        "multi_turn_long_context_37/seed1103",
+        "multi_turn_long_context_37/seed2207",
+        "multi_turn_long_context_37/seed3301"
+      ],
+      "both_fail": [
+        "multi_turn_base_9/seed3301",
+        "multi_turn_long_context_9/seed3301"
+      ]
+    },
+    "dedup-none": {
+      "gains": [
+        "multi_turn_long_context_3/seed3301"
+      ],
+      "losses": [
+        "multi_turn_base_9/seed3301",
+        "multi_turn_long_context_9/seed1103",
+        "multi_turn_long_context_9/seed2207"
+      ],
+      "both_success": [
+        "multi_turn_base_37/seed1103",
+        "multi_turn_base_37/seed2207",
+        "multi_turn_base_37/seed3301",
+        "multi_turn_long_context_3/seed1103",
+        "multi_turn_long_context_3/seed2207",
+        "multi_turn_long_context_37/seed1103",
+        "multi_turn_long_context_37/seed2207",
+        "multi_turn_long_context_37/seed3301"
+      ],
+      "both_fail": [
+        "multi_turn_long_context_9/seed3301"
+      ]
+    },
+    "dedup-minimal": {
+      "gains": [
+        "multi_turn_long_context_37/seed3301"
+      ],
+      "losses": [
+        "multi_turn_base_9/seed3301",
+        "multi_turn_long_context_9/seed2207",
+        "multi_turn_long_context_9/seed3301"
+      ],
+      "both_success": [
+        "multi_turn_base_37/seed1103",
+        "multi_turn_base_37/seed2207",
+        "multi_turn_base_37/seed3301",
+        "multi_turn_long_context_3/seed1103",
+        "multi_turn_long_context_3/seed2207",
+        "multi_turn_long_context_3/seed3301",
+        "multi_turn_long_context_37/seed1103",
+        "multi_turn_long_context_37/seed2207"
+      ],
+      "both_fail": [
+        "multi_turn_long_context_9/seed1103"
+      ]
+    }
+  },
+  "rows": [
+    {
+      "task": "multi_turn_base_37",
+      "seed": "seed1103",
+      "trigger_index": 7,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4181,
+        "mean_post_input_tokens": 4251.333333333333,
+        "post_requests": 3,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed1103/identity"
+      },
+      "dedup-none": {
+        "passed": true,
+        "first_input_tokens": 5300,
+        "mean_post_input_tokens": 5397.666666666667,
+        "post_requests": 3,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed1103/dedup-none"
+      },
+      "dedup-minimal": {
+        "passed": true,
+        "first_input_tokens": 5333,
+        "mean_post_input_tokens": 5400,
+        "post_requests": 3,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed1103/dedup-minimal"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 5419,
+        "mean_post_input_tokens": 5486,
+        "post_requests": 3,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_37/seed1103/dedup-shared-v1-minimal"
+      },
+      "audits": {
+        "delivered_payload_exact": true,
+        "history_exact": true,
+        "original_graph_exact": true,
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_matches_same_explanation_old_diagnostic": true
+      },
+      "sharing": {
+        "entries": 1,
+        "references": 2,
+        "unused": [],
+        "body_tokens": 2268,
+        "instruction_tokens": 32
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": "seed2207",
+      "trigger_index": 7,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4127,
+        "mean_post_input_tokens": 4224,
+        "post_requests": 4,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed2207/identity"
+      },
+      "dedup-none": {
+        "passed": true,
+        "first_input_tokens": 5115,
+        "mean_post_input_tokens": 5232.75,
+        "post_requests": 4,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed2207/dedup-none"
+      },
+      "dedup-minimal": {
+        "passed": true,
+        "first_input_tokens": 5148,
+        "mean_post_input_tokens": 5283.2,
+        "post_requests": 5,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed2207/dedup-minimal"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 5234,
+        "mean_post_input_tokens": 5426.8,
+        "post_requests": 5,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_37/seed2207/dedup-shared-v1-minimal"
+      },
+      "audits": {
+        "delivered_payload_exact": true,
+        "history_exact": true,
+        "original_graph_exact": true,
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_matches_same_explanation_old_diagnostic": true
+      },
+      "sharing": {
+        "entries": 1,
+        "references": 2,
+        "unused": [],
+        "body_tokens": 2083,
+        "instruction_tokens": 32
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": "seed3301",
+      "trigger_index": 7,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4245,
+        "mean_post_input_tokens": 4346,
+        "post_requests": 4,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed3301/identity"
+      },
+      "dedup-none": {
+        "passed": true,
+        "first_input_tokens": 5275,
+        "mean_post_input_tokens": 5375,
+        "post_requests": 5,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed3301/dedup-none"
+      },
+      "dedup-minimal": {
+        "passed": true,
+        "first_input_tokens": 5308,
+        "mean_post_input_tokens": 5392,
+        "post_requests": 4,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed3301/dedup-minimal"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 5394,
+        "mean_post_input_tokens": 5586.8,
+        "post_requests": 5,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_37/seed3301/dedup-shared-v1-minimal"
+      },
+      "audits": {
+        "delivered_payload_exact": true,
+        "history_exact": true,
+        "original_graph_exact": true,
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_matches_same_explanation_old_diagnostic": true
+      },
+      "sharing": {
+        "entries": 1,
+        "references": 2,
+        "unused": [],
+        "body_tokens": 2243,
+        "instruction_tokens": 32
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": "seed3301",
+      "trigger_index": 17,
+      "identity": {
+        "passed": false,
+        "first_input_tokens": 4156,
+        "mean_post_input_tokens": 4341.571428571428,
+        "post_requests": 7,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/identity"
+      },
+      "dedup-none": {
+        "passed": true,
+        "first_input_tokens": 6384,
+        "mean_post_input_tokens": 6964.666666666667,
+        "post_requests": 18,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/dedup-none"
+      },
+      "dedup-minimal": {
+        "passed": true,
+        "first_input_tokens": 6417,
+        "mean_post_input_tokens": 6664,
+        "post_requests": 10,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/dedup-minimal"
+      },
+      "candidate": {
+        "passed": false,
+        "first_input_tokens": 6468,
+        "mean_post_input_tokens": 6715.4,
+        "post_requests": 10,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_9/seed3301/dedup-shared-v1-minimal"
+      },
+      "audits": {
+        "delivered_payload_exact": true,
+        "history_exact": true,
+        "original_graph_exact": true,
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_matches_same_explanation_old_diagnostic": true
+      },
+      "sharing": {
+        "entries": 9,
+        "references": 32,
+        "unused": [],
+        "body_tokens": 3317,
+        "instruction_tokens": 32
+      },
+      "official_errors": [
+        {
+          "type": "multi_turn:execution_response_mismatch",
+          "message": "Model response execution results so far does not contain all the ground truth response execution results for turn 2."
+        }
+      ]
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": "seed1103",
+      "trigger_index": 9,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4784,
+        "mean_post_input_tokens": 4784,
+        "post_requests": 1,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed1103/identity"
+      },
+      "dedup-none": {
+        "passed": true,
+        "first_input_tokens": 9544,
+        "mean_post_input_tokens": 9926,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed1103/dedup-none"
+      },
+      "dedup-minimal": {
+        "passed": true,
+        "first_input_tokens": 9577,
+        "mean_post_input_tokens": 9577,
+        "post_requests": 1,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed1103/dedup-minimal"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 9245,
+        "mean_post_input_tokens": 9627,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_3/seed1103/dedup-shared-v1-minimal"
+      },
+      "audits": {
+        "delivered_payload_exact": true,
+        "history_exact": true,
+        "original_graph_exact": true,
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_matches_same_explanation_old_diagnostic": true
+      },
+      "sharing": {
+        "entries": 2,
+        "references": 6,
+        "unused": [],
+        "body_tokens": 6094,
+        "instruction_tokens": 32
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": "seed2207",
+      "trigger_index": 8,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4783,
+        "mean_post_input_tokens": 4783,
+        "post_requests": 1,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed2207/identity"
+      },
+      "dedup-none": {
+        "passed": true,
+        "first_input_tokens": 9514,
+        "mean_post_input_tokens": 9896,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed2207/dedup-none"
+      },
+      "dedup-minimal": {
+        "passed": true,
+        "first_input_tokens": 9547,
+        "mean_post_input_tokens": 9929,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed2207/dedup-minimal"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 9215,
+        "mean_post_input_tokens": 9597,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_3/seed2207/dedup-shared-v1-minimal"
+      },
+      "audits": {
+        "delivered_payload_exact": true,
+        "history_exact": true,
+        "original_graph_exact": true,
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_matches_same_explanation_old_diagnostic": true
+      },
+      "sharing": {
+        "entries": 2,
+        "references": 6,
+        "unused": [],
+        "body_tokens": 6064,
+        "instruction_tokens": 32
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": "seed3301",
+      "trigger_index": 9,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4772,
+        "mean_post_input_tokens": 4772,
+        "post_requests": 1,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed3301/identity"
+      },
+      "dedup-none": {
+        "passed": false,
+        "first_input_tokens": 9936,
+        "mean_post_input_tokens": 11575.5,
+        "post_requests": 12,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed3301/dedup-none"
+      },
+      "dedup-minimal": {
+        "passed": true,
+        "first_input_tokens": 9969,
+        "mean_post_input_tokens": 10351,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed3301/dedup-minimal"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 9350,
+        "mean_post_input_tokens": 9732,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_3/seed3301/dedup-shared-v1-minimal"
+      },
+      "audits": {
+        "delivered_payload_exact": true,
+        "history_exact": true,
+        "original_graph_exact": true,
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_matches_same_explanation_old_diagnostic": true
+      },
+      "sharing": {
+        "entries": 1,
+        "references": 2,
+        "unused": [],
+        "body_tokens": 6199,
+        "instruction_tokens": 32
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": "seed1103",
+      "trigger_index": 3,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 6375,
+        "mean_post_input_tokens": 7955.142857142857,
+        "post_requests": 7,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed1103/identity"
+      },
+      "dedup-none": {
+        "passed": true,
+        "first_input_tokens": 12705,
+        "mean_post_input_tokens": 15973.857142857143,
+        "post_requests": 7,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed1103/dedup-none"
+      },
+      "dedup-minimal": {
+        "passed": true,
+        "first_input_tokens": 12738,
+        "mean_post_input_tokens": 14395.375,
+        "post_requests": 8,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed1103/dedup-minimal"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 11275,
+        "mean_post_input_tokens": 14458.5,
+        "post_requests": 10,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_37/seed1103/dedup-shared-v1-minimal"
+      },
+      "audits": {
+        "delivered_payload_exact": true,
+        "history_exact": true,
+        "original_graph_exact": true,
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_matches_same_explanation_old_diagnostic": true
+      },
+      "sharing": {
+        "entries": 2,
+        "references": 64,
+        "unused": [],
+        "body_tokens": 8124,
+        "instruction_tokens": 32
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": "seed2207",
+      "trigger_index": 3,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 6412,
+        "mean_post_input_tokens": 8208.625,
+        "post_requests": 8,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed2207/identity"
+      },
+      "dedup-none": {
+        "passed": true,
+        "first_input_tokens": 12742,
+        "mean_post_input_tokens": 16330.111111111111,
+        "post_requests": 9,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed2207/dedup-none"
+      },
+      "dedup-minimal": {
+        "passed": true,
+        "first_input_tokens": 12775,
+        "mean_post_input_tokens": 14457.75,
+        "post_requests": 8,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed2207/dedup-minimal"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 11312,
+        "mean_post_input_tokens": 14830,
+        "post_requests": 9,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_37/seed2207/dedup-shared-v1-minimal"
+      },
+      "audits": {
+        "delivered_payload_exact": true,
+        "history_exact": true,
+        "original_graph_exact": true,
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_matches_same_explanation_old_diagnostic": true
+      },
+      "sharing": {
+        "entries": 2,
+        "references": 64,
+        "unused": [],
+        "body_tokens": 8161,
+        "instruction_tokens": 32
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": "seed3301",
+      "trigger_index": 3,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 6386,
+        "mean_post_input_tokens": 8243.25,
+        "post_requests": 8,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed3301/identity"
+      },
+      "dedup-none": {
+        "passed": true,
+        "first_input_tokens": 12716,
+        "mean_post_input_tokens": 16325.545454545454,
+        "post_requests": 11,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed3301/dedup-none"
+      },
+      "dedup-minimal": {
+        "passed": false,
+        "first_input_tokens": 12749,
+        "mean_post_input_tokens": 14884.444444444445,
+        "post_requests": 9,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed3301/dedup-minimal"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 11286,
+        "mean_post_input_tokens": 14360.90909090909,
+        "post_requests": 11,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_37/seed3301/dedup-shared-v1-minimal"
+      },
+      "audits": {
+        "delivered_payload_exact": true,
+        "history_exact": true,
+        "original_graph_exact": true,
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_matches_same_explanation_old_diagnostic": true
+      },
+      "sharing": {
+        "entries": 2,
+        "references": 64,
+        "unused": [],
+        "body_tokens": 8135,
+        "instruction_tokens": 32
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": "seed1103",
+      "trigger_index": 11,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4416,
+        "mean_post_input_tokens": 4759,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed1103/identity"
+      },
+      "dedup-none": {
+        "passed": true,
+        "first_input_tokens": 6837,
+        "mean_post_input_tokens": 7435.5,
+        "post_requests": 4,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed1103/dedup-none"
+      },
+      "dedup-minimal": {
+        "passed": false,
+        "first_input_tokens": 6870,
+        "mean_post_input_tokens": 7591.285714285715,
+        "post_requests": 7,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed1103/dedup-minimal"
+      },
+      "candidate": {
+        "passed": false,
+        "first_input_tokens": 6955,
+        "mean_post_input_tokens": 8977.470588235294,
+        "post_requests": 17,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_9/seed1103/dedup-shared-v1-minimal"
+      },
+      "audits": {
+        "delivered_payload_exact": true,
+        "history_exact": true,
+        "original_graph_exact": true,
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_matches_same_explanation_old_diagnostic": true
+      },
+      "sharing": {
+        "entries": 4,
+        "references": 10,
+        "unused": [],
+        "body_tokens": 3804,
+        "instruction_tokens": 32
+      },
+      "official_errors": [
+        {
+          "type": "multi_turn:instance_state_mismatch",
+          "message": "Model instance for GorillaFileSystem does not match the state with ground truth instance."
+        }
+      ]
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": "seed2207",
+      "trigger_index": 9,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4399,
+        "mean_post_input_tokens": 4724.666666666667,
+        "post_requests": 3,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed2207/identity"
+      },
+      "dedup-none": {
+        "passed": true,
+        "first_input_tokens": 6564,
+        "mean_post_input_tokens": 6795,
+        "post_requests": 4,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed2207/dedup-none"
+      },
+      "dedup-minimal": {
+        "passed": true,
+        "first_input_tokens": 6597,
+        "mean_post_input_tokens": 6940,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed2207/dedup-minimal"
+      },
+      "candidate": {
+        "passed": false,
+        "first_input_tokens": 6690,
+        "mean_post_input_tokens": 7701.9,
+        "post_requests": 10,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_9/seed2207/dedup-shared-v1-minimal"
+      },
+      "audits": {
+        "delivered_payload_exact": true,
+        "history_exact": true,
+        "original_graph_exact": true,
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_matches_same_explanation_old_diagnostic": true
+      },
+      "sharing": {
+        "entries": 0,
+        "references": 0,
+        "unused": [],
+        "body_tokens": 3539,
+        "instruction_tokens": 32
+      },
+      "official_errors": [
+        {
+          "type": "multi_turn:execution_response_mismatch",
+          "message": "Model response execution results so far does not contain all the ground truth response execution results for turn 2."
+        }
+      ]
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": "seed3301",
+      "trigger_index": 7,
+      "identity": {
+        "passed": false,
+        "first_input_tokens": 4298,
+        "mean_post_input_tokens": 5391.285714285715,
+        "post_requests": 14,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed3301/identity"
+      },
+      "dedup-none": {
+        "passed": false,
+        "first_input_tokens": 8214,
+        "mean_post_input_tokens": 10418.470588235294,
+        "post_requests": 17,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed3301/dedup-none"
+      },
+      "dedup-minimal": {
+        "passed": true,
+        "first_input_tokens": 8247,
+        "mean_post_input_tokens": 8711.125,
+        "post_requests": 8,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed3301/dedup-minimal"
+      },
+      "candidate": {
+        "passed": false,
+        "first_input_tokens": 7660,
+        "mean_post_input_tokens": 8226.375,
+        "post_requests": 8,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_9/seed3301/dedup-shared-v1-minimal"
+      },
+      "audits": {
+        "delivered_payload_exact": true,
+        "history_exact": true,
+        "original_graph_exact": true,
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_matches_same_explanation_old_diagnostic": true
+      },
+      "sharing": {
+        "entries": 0,
+        "references": 0,
+        "unused": [],
+        "body_tokens": 4509,
+        "instruction_tokens": 32
+      },
+      "official_errors": [
+        {
+          "type": "multi_turn:execution_response_mismatch",
+          "message": "Model response execution results so far does not contain all the ground truth response execution results for turn 2."
+        }
+      ]
+    }
+  ],
+  "untriggered": [
+    {
+      "task": "multi_turn_base_3",
+      "seed": "seed1103",
+      "status": "not_triggered",
+      "passed": null
+    },
+    {
+      "task": "multi_turn_base_3",
+      "seed": "seed2207",
+      "status": "not_triggered",
+      "passed": null
+    },
+    {
+      "task": "multi_turn_base_3",
+      "seed": "seed3301",
+      "status": "not_triggered",
+      "passed": null
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": "seed1103",
+      "status": "not_triggered",
+      "passed": null
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": "seed2207",
+      "status": "not_triggered",
+      "passed": null
+    }
+  ],
+  "actual_sharing": {
+    "nonempty_checkpoints": 11,
+    "entries": 27,
+    "references": 254,
+    "unused_entries": 0
+  },
+  "case_observations": {},
+  "limitations": [
+    "Development repeated prefixes only; not unseen-task or fresh-seed validation.",
+    "Selected frozen Dedup baseline has no external instruction. Minimal is an added instruction condition relative to that baseline.",
+    "Old dedup-minimal, where shown, is a same-instruction diagnostic comparator, not the selected frozen baseline.",
+    "Inline codec rules are counted as input and differ even when external instruction is none.",
+    "Post means are calculated within each trajectory then across trajectories; include fixed prompts/tools.",
+    "Strict recovery does not guarantee model behavior invariance."
+  ]
+}

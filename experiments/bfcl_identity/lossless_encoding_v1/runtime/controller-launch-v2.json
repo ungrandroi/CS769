@@ -1,0 +1,25 @@
+{
+  "pid": 1938875,
+  "command": [
+    "/home/bcao44/bofeng/CS769/.conda/bfcl/bin/python",
+    "-m",
+    "workflows.lossless_controller",
+    "--root",
+    "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1",
+    "--project",
+    "/home/bcao44/bofeng/CS769",
+    "--snapshot-label",
+    "candidates-v2",
+    "--registry-name",
+    "candidate-registry-v2.json",
+    "--explanation-controls",
+    "short-and-baseline"
+  ],
+  "cwd": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v2",
+  "pythonpath": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v2/scripts",
+  "started_at": 1792496728.1940742,
+  "persistent": "start_new_session; DEVNULL stdin; file logs",
+  "supersedes_pid": 1776006,
+  "current_task_preserved": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_3/seed2207/state-state-shared-v1-minimal",
+  "resume_guard": "65 completed attempts verified"
+}

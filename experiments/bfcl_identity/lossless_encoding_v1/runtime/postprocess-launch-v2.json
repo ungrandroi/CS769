@@ -1,0 +1,15 @@
+{
+  "pid": 1962168,
+  "command": [
+    "/home/bcao44/bofeng/CS769/.conda/bfcl/bin/python",
+    "-m",
+    "workflows.lossless_postprocess",
+    "--root",
+    "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1"
+  ],
+  "cwd": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/postprocess-v2",
+  "pythonpath": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/postprocess-v2/scripts",
+  "started_at": 1792497912.5265427,
+  "persistent": "start_new_session; DEVNULL stdin; file logs",
+  "reason": "Additional per-request and per-user-turn exports; no inference or selection changes"
+}

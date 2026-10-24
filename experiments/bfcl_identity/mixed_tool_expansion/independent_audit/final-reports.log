@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "created_at": 1792805820.4227567,
+  "summary_rows": 2079,
+  "untriggered": 147,
+  "paired_ratios": 891,
+  "per_request_rows": 15368,
+  "per_turn_rows": 4279,
+  "paired_first_request_rows": 891,
+  "decomposition_rows": 1782
+}

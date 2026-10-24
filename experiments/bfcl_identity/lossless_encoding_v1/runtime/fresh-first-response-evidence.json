@@ -1,0 +1,21 @@
+{
+  "observed_at": 1792506487.6194782,
+  "controller_pid": 1938875,
+  "selection_sha256": "1f8b3a75d37790ad3a610aa2c6251dce88f972c641806b42acdad7b1d0f96953",
+  "task": "multi_turn_base_1",
+  "seed": 4409,
+  "first_request_index": 0,
+  "first_input_tokens": 3147,
+  "first_working_tokens": 34,
+  "usage": {
+    "completion_tokens": 56,
+    "prompt_tokens": 3147,
+    "total_tokens": 3203,
+    "prompt_tokens_details": {
+      "cached_tokens": 3106
+    }
+  },
+  "response_id": "chatcmpl-yL0jlOA7bHG7fWLlgSXtNwJOnbaO5Flv",
+  "model": "bfcl-qwen38-27b",
+  "condition": "Selection frozen before fresh-seed model requests; no outcome-based candidate edits"
+}

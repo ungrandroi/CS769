@@ -1,0 +1,7905 @@
+{
+  "status": "pass",
+  "identity_runs": 444,
+  "triggered": 297,
+  "prefixes_with_nonfilesystem": 81,
+  "identity_runs_with_nonfilesystem": 277,
+  "prefix_domain_runs": {
+    "GorillaFileSystem": 297,
+    "MessageAPI": 26,
+    "TwitterAPI": 14,
+    "TicketAPI": 19,
+    "MathAPI": 22
+  },
+  "all_domain_runs": {
+    "GorillaFileSystem": 444,
+    "TwitterAPI": 85,
+    "MessageAPI": 72,
+    "MathAPI": 76,
+    "TicketAPI": 44
+  },
+  "rows": [
+    {
+      "task": "multi_turn_base_0",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 14
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 20
+      }
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 16
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 25
+      }
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 16
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 40
+      }
+    },
+    {
+      "task": "multi_turn_base_11",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_11",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_11",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_13",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5
+      }
+    },
+    {
+      "task": "multi_turn_base_13",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7
+      }
+    },
+    {
+      "task": "multi_turn_base_13",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5
+      }
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_base_17",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_base_17",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_base_17",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_base_18",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 16
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 24,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_18",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 19,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_18",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 13
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 20,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_19",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5
+      }
+    },
+    {
+      "task": "multi_turn_base_19",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_base_19",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 36
+      }
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 28
+      }
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 30
+      }
+    },
+    {
+      "task": "multi_turn_base_20",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7
+      }
+    },
+    {
+      "task": "multi_turn_base_20",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7
+      }
+    },
+    {
+      "task": "multi_turn_base_20",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_base_21",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_21",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_21",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_22",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_22",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_22",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6,
+        "TwitterAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_23",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_23",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_23",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5
+      }
+    },
+    {
+      "task": "multi_turn_base_24",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6,
+        "TicketAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_24",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_24",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9,
+        "TicketAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_27",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TicketAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_base_27",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TicketAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_base_27",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "TicketAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_base_28",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_base_28",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7
+      }
+    },
+    {
+      "task": "multi_turn_base_28",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_base_30",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_base_30",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6
+      }
+    },
+    {
+      "task": "multi_turn_base_30",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_base_31",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 12
+      }
+    },
+    {
+      "task": "multi_turn_base_31",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 10,
+        "MathAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_31",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_base_32",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_32",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_32",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_33",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_base_33",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_base_33",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_base_34",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_34",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_34",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_35",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_base_35",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_base_35",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 10
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_base_36",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 13
+      }
+    },
+    {
+      "task": "multi_turn_base_36",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_base_36",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11
+      }
+    },
+    {
+      "task": "multi_turn_base_4",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_4",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_4",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_40",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_40",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_base_40",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_41",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8,
+        "MessageAPI": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MessageAPI": 5
+      }
+    },
+    {
+      "task": "multi_turn_base_41",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_base_41",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "MessageAPI": 4,
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_base_42",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11
+      }
+    },
+    {
+      "task": "multi_turn_base_42",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_base_42",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_base_43",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_43",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_43",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_44",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_44",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_44",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_45",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7
+      }
+    },
+    {
+      "task": "multi_turn_base_45",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6
+      }
+    },
+    {
+      "task": "multi_turn_base_45",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5
+      }
+    },
+    {
+      "task": "multi_turn_base_46",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6
+      }
+    },
+    {
+      "task": "multi_turn_base_46",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_base_46",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6
+      }
+    },
+    {
+      "task": "multi_turn_base_47",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 2,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_47",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 2,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_47",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_48",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8,
+        "TicketAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_48",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_48",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7,
+        "TicketAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_49",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_49",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_49",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_5",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 10,
+        "TwitterAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "TwitterAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_base_5",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 10,
+        "TwitterAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "TwitterAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_base_5",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 12,
+        "TwitterAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_base_7",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7
+      }
+    },
+    {
+      "task": "multi_turn_base_7",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5
+      }
+    },
+    {
+      "task": "multi_turn_base_7",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5
+      }
+    },
+    {
+      "task": "multi_turn_base_8",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "TwitterAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_base_8",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "TwitterAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_base_8",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 2,
+        "TwitterAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 20
+      }
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 19
+      }
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 25
+      }
+    },
+    {
+      "task": "multi_turn_long_context_11",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_11",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_11",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_13",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7
+      }
+    },
+    {
+      "task": "multi_turn_long_context_13",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11
+      }
+    },
+    {
+      "task": "multi_turn_long_context_13",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_17",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_17",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_long_context_17",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_18",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 22,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_18",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 18,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_18",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 19,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_19",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5
+      }
+    },
+    {
+      "task": "multi_turn_long_context_19",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_long_context_19",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7
+      }
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 38
+      }
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 25
+      }
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 26
+      }
+    },
+    {
+      "task": "multi_turn_long_context_20",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7
+      }
+    },
+    {
+      "task": "multi_turn_long_context_20",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7
+      }
+    },
+    {
+      "task": "multi_turn_long_context_20",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_long_context_21",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_21",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_21",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_22",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_22",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_22",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_23",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_23",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_23",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5
+      }
+    },
+    {
+      "task": "multi_turn_long_context_24",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_24",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_24",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_27",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TicketAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_27",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "TicketAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TicketAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_27",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3,
+        "TicketAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "TicketAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_28",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_long_context_28",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7
+      }
+    },
+    {
+      "task": "multi_turn_long_context_28",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_30",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_long_context_30",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_long_context_30",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4
+      }
+    },
+    {
+      "task": "multi_turn_long_context_31",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_long_context_31",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_31",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11
+      }
+    },
+    {
+      "task": "multi_turn_long_context_32",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_32",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_32",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_33",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_33",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_33",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_long_context_34",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_34",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_34",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_35",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_long_context_35",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_long_context_35",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_long_context_36",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 13
+      }
+    },
+    {
+      "task": "multi_turn_long_context_36",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_long_context_36",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11
+      }
+    },
+    {
+      "task": "multi_turn_long_context_4",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_4",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_4",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_40",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_40",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_40",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_41",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "MessageAPI": 5
+      }
+    },
+    {
+      "task": "multi_turn_long_context_41",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "MessageAPI": 6
+      }
+    },
+    {
+      "task": "multi_turn_long_context_41",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "MessageAPI": 2,
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "MessageAPI": 5,
+        "GorillaFileSystem": 6
+      }
+    },
+    {
+      "task": "multi_turn_long_context_42",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_long_context_42",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11
+      }
+    },
+    {
+      "task": "multi_turn_long_context_42",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_long_context_43",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_43",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_43",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_44",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_44",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_44",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_45",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_long_context_45",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5
+      }
+    },
+    {
+      "task": "multi_turn_long_context_45",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6
+      }
+    },
+    {
+      "task": "multi_turn_long_context_46",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 34
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 37
+      }
+    },
+    {
+      "task": "multi_turn_long_context_46",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 35
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 37
+      }
+    },
+    {
+      "task": "multi_turn_long_context_46",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 34
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 36
+      }
+    },
+    {
+      "task": "multi_turn_long_context_47",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 2,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_47",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 2,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_47",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_48",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_48",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_48",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_49",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_49",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_49",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_5",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "TwitterAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_5",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "TwitterAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_5",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 15,
+        "TwitterAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_7",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7
+      }
+    },
+    {
+      "task": "multi_turn_long_context_7",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5
+      }
+    },
+    {
+      "task": "multi_turn_long_context_7",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7
+      }
+    },
+    {
+      "task": "multi_turn_long_context_8",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 12,
+        "TwitterAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_8",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "TwitterAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_long_context_8",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 2,
+        "TwitterAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_0",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 15
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 31
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_0",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 16
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 36
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_0",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 13
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 22
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_11",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "TwitterAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_11",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_11",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 2,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_13",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 22
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_13",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 13
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 16
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_13",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_14",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 5
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_14",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 5
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_14",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 6
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_15",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 13,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_15",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 20,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_15",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 15,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_17",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6,
+        "MessageAPI": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "MessageAPI": 6
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_17",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_17",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 5
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_18",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 13
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 20,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_18",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 19,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_18",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 20,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_19",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 22
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_19",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_19",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_2",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 23
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_2",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 53
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_2",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 23
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_20",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 13
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 21
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_20",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 13
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 22
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_20",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 14
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 21
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_21",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 22
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_21",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 10
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 21,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_21",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5,
+        "TwitterAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_22",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_22",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_22",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_23",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_23",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "TicketAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_23",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 18
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 21
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_24",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 10
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_24",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 18,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_24",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_27",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6,
+        "TicketAPI": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "TicketAPI": 5
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_27",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3,
+        "TicketAPI": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "TicketAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_27",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3,
+        "TicketAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "TicketAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_28",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 17
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_28",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 15
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 22
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_28",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 17
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_30",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 15
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 29
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_30",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 14
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_30",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 14
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 24
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_31",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 13
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 18,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_31",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 14
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 21,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_31",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 19
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_32",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "MathAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_32",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_32",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9,
+        "MathAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_33",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_33",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_33",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_34",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6,
+        "MathAPI": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_34",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_34",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5,
+        "MathAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_35",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 21
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_35",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 25
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_35",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 21
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_36",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 16
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 26
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_36",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 14
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 18
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_36",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 17
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_4",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_4",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_4",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 12,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_40",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 5
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_40",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6,
+        "MessageAPI": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "MessageAPI": 9
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_40",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7,
+        "MessageAPI": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "MessageAPI": 7
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_41",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 10,
+        "MessageAPI": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "MessageAPI": 25
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_41",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7,
+        "MessageAPI": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 13,
+        "MessageAPI": 20
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_41",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6,
+        "MessageAPI": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "MessageAPI": 13
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_42",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_42",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_42",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_43",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 10
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_43",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_43",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_44",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6,
+        "MathAPI": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "MathAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_44",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "MathAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_44",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6,
+        "MathAPI": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "MathAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_45",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 29
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_45",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 25
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_45",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 13
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 32
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_46",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 21
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_46",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 14
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 22
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_46",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 20
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 21
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_47",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3,
+        "MathAPI": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MathAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_47",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 2,
+        "MathAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_47",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3,
+        "MathAPI": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MathAPI": 6
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_48",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 14,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_48",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 12,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_48",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 10
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 12,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_49",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_49",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_49",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_5",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 12,
+        "TwitterAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_5",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 10,
+        "TwitterAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "TwitterAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_5",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11,
+        "TwitterAPI": 5
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_7",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_7",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_7",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_8",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "TwitterAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_8",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "TwitterAPI": 9
+      }
+    },
+    {
+      "task": "multi_turn_miss_func_8",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "TwitterAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_0",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 26
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_0",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 14
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 29
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_0",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 15
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 52
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_11",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_11",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_11",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_13",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_13",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_13",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_14",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_14",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_14",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_15",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 12,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_15",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_15",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_17",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "MessageAPI": 8
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_17",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_17",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6,
+        "MessageAPI": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_18",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 14
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 28,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_18",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 13
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 29,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_18",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 38,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_19",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_19",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_19",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_2",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 25
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_2",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 27
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_2",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 30
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_20",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 12
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_20",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_20",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_21",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_21",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5,
+        "TwitterAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_21",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 2,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_22",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_22",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_22",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_23",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_23",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_23",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 6
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_24",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_24",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_24",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_27",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "TicketAPI": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TicketAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_27",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 4,
+        "TicketAPI": 3
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TicketAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_27",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 3,
+        "TicketAPI": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "TicketAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_28",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_28",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_28",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_30",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 10,
+        "TwitterAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_30",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "TwitterAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_30",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_31",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_31",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_31",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_32",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9,
+        "MathAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_32",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_32",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 17
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 20,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_33",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_33",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MessageAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_33",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MessageAPI": 6
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_34",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_34",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_34",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6,
+        "MathAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_35",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_35",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_35",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 14
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_36",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_36",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 13
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_36",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_4",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_4",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_4",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6,
+        "TwitterAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "TwitterAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_40",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9,
+        "MessageAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_40",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_40",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 12
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 12,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_41",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MessageAPI": 7
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_41",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 8
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_41",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 6
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_42",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 10
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_42",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_42",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_43",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_43",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_43",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_44",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9,
+        "MathAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_44",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_44",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 10,
+        "MathAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_45",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_45",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_45",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_46",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_46",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 15
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_46",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_47",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_47",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 2,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_47",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 3,
+        "MathAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_48",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9,
+        "TicketAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "TicketAPI": 3
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_48",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TicketAPI": 2
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_48",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 6,
+        "TicketAPI": 4
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "TicketAPI": 5
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_49",
+      "seed": 15013,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_49",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_49",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_5",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 8,
+        "TwitterAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 8,
+        "TwitterAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_5",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 10,
+        "TwitterAPI": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 10,
+        "TwitterAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_5",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 11,
+        "TwitterAPI": 1
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 11,
+        "TwitterAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_7",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 9
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_7",
+      "seed": 16033,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 6
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_7",
+      "seed": 17041,
+      "triggered": false,
+      "prefix_domains": {},
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_8",
+      "seed": 15013,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 7
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 12,
+        "TwitterAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_8",
+      "seed": 16033,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 5
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 5,
+        "TwitterAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_miss_param_8",
+      "seed": 17041,
+      "triggered": true,
+      "prefix_domains": {
+        "GorillaFileSystem": 2
+      },
+      "whole_trajectory_domains": {
+        "GorillaFileSystem": 2,
+        "TwitterAPI": 3
+      }
+    }
+  ],
+  "diagnosed_prefix_failures": 28,
+  "prefix_diagnostics": [
+    {
+      "task": "multi_turn_base_0",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        5
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        5
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_18",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_18",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_18",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_22",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_24",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_24",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_24",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_31",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_31",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_34",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_34",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_35",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_41",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_44",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_base_44",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_base_48",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_48",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_49",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_49",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_base_49",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_5",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_5",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_5",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_8",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_8",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_base_8",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_11",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_11",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_11",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_13",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_13",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_13",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        5
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        5
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 17041,
+      "trigger_turn": 4,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_17",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_17",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_17",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_18",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_18",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_18",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_19",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_19",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_19",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_20",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_20",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_20",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_21",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_21",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_21",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_22",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_22",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_22",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_24",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_24",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_24",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_27",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_27",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_27",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_28",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_28",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_28",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_30",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_30",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_30",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_31",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_31",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_31",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_32",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_32",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_32",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_33",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_33",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_33",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_34",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_34",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_35",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_35",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_35",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_36",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_36",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_4",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_4",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_4",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_41",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_41",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_41",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_42",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_42",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_42",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_43",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_43",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_43",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_44",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_long_context_44",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_long_context_44",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_45",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_45",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_45",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_46",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_46",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_46",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_47",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_47",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_47",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_48",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_48",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_48",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_49",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_49",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_49",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_5",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_5",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_5",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_7",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_7",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_7",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_8",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_8",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_long_context_8",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_0",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_0",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_0",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_13",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_13",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_14",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_14",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_14",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_15",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        6
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_15",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_15",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_17",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_func_17",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_18",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_18",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_18",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_19",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_2",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_func_2",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_2",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_func_20",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_20",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_20",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_21",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_21",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_21",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_22",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_22",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_22",
+      "seed": 17041,
+      "trigger_turn": 4,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_23",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_24",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_24",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_24",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_27",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_27",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_27",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_28",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_28",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_28",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_30",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_30",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_30",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_31",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_31",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_31",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_32",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_34",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_34",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_35",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_35",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_35",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_36",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_36",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_36",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_4",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_4",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_4",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_40",
+      "seed": 15013,
+      "trigger_turn": 4,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_40",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_40",
+      "seed": 17041,
+      "trigger_turn": 4,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_41",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_41",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_41",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_42",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_42",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_43",
+      "seed": 15013,
+      "trigger_turn": 4,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_43",
+      "seed": 16033,
+      "trigger_turn": 4,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_43",
+      "seed": 17041,
+      "trigger_turn": 4,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_44",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_44",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_44",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_func_45",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_45",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_45",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_46",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_46",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_46",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_47",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_47",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_48",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_48",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_48",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_49",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_func_49",
+      "seed": 16033,
+      "trigger_turn": 4,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_func_49",
+      "seed": 17041,
+      "trigger_turn": 4,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_func_5",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_5",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_5",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_7",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_7",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_8",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_8",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_func_8",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_0",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        5
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_0",
+      "seed": 16033,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        5
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_0",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        5
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_14",
+      "seed": 15013,
+      "trigger_turn": 4,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_14",
+      "seed": 16033,
+      "trigger_turn": 4,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_14",
+      "seed": 17041,
+      "trigger_turn": 4,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_15",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_15",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_15",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        6
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_17",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_17",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_18",
+      "seed": 15013,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_18",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_18",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_2",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_2",
+      "seed": 16033,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_2",
+      "seed": 17041,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_20",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_20",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_21",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_22",
+      "seed": 15013,
+      "trigger_turn": 4,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_22",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_param_22",
+      "seed": 17041,
+      "trigger_turn": 4,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_24",
+      "seed": 15013,
+      "trigger_turn": 4,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_param_24",
+      "seed": 16033,
+      "trigger_turn": 4,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_param_24",
+      "seed": 17041,
+      "trigger_turn": 4,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_27",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_27",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_27",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_28",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_param_28",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_30",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_31",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_31",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_param_31",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_param_32",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_32",
+      "seed": 17041,
+      "trigger_turn": 0,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_34",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_35",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_35",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_35",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_36",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_36",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_4",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_40",
+      "seed": 15013,
+      "trigger_turn": 4,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_param_40",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_42",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_param_44",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_param_44",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_param_44",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_param_45",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        1
+      ],
+      "completed_prefix_failure": true
+    },
+    {
+      "task": "multi_turn_miss_param_48",
+      "seed": 15013,
+      "trigger_turn": 2,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_48",
+      "seed": 16033,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_48",
+      "seed": 17041,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        4
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_49",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_49",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_5",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [
+        5
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_5",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        5
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_5",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        2
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_7",
+      "seed": 15013,
+      "trigger_turn": 3,
+      "error_turns_1based": [],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_8",
+      "seed": 15013,
+      "trigger_turn": 1,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_8",
+      "seed": 16033,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    },
+    {
+      "task": "multi_turn_miss_param_8",
+      "seed": 17041,
+      "trigger_turn": 2,
+      "error_turns_1based": [
+        3
+      ],
+      "completed_prefix_failure": false
+    }
+  ],
+  "paired_changes": {
+    "state": {
+      "gains": [
+        {
+          "task": "multi_turn_base_5",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_long_context_0",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_long_context_17",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_long_context_22",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_long_context_31",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_long_context_42",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_long_context_49",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_long_context_49",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_func_0",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_func_8",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_func_13",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_func_21",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_param_0",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_param_27",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_miss_param_31",
+          "seed": 15013
+        }
+      ],
+      "losses": [
+        {
+          "task": "multi_turn_base_22",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_base_35",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_long_context_8",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_15",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_15",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_long_context_17",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_21",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_21",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_long_context_34",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_func_21",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_func_22",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_func_41",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_func_42",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_param_21",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_param_22",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_param_36",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_param_48",
+          "seed": 16033
+        }
+      ]
+    },
+    "event": {
+      "gains": [
+        {
+          "task": "multi_turn_base_5",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_base_31",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_15",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_17",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_17",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_long_context_19",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_long_context_24",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_long_context_31",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_49",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_func_0",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_func_8",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_func_17",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_func_19",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_miss_func_20",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_func_27",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_func_45",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_param_32",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_param_48",
+          "seed": 15013
+        }
+      ],
+      "losses": [
+        {
+          "task": "multi_turn_base_0",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_base_15",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_13",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_long_context_20",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_long_context_21",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_21",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_long_context_49",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_miss_func_21",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_func_21",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_func_22",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_func_41",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_miss_param_27",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_param_35",
+          "seed": 17041
+        }
+      ]
+    },
+    "dedup": {
+      "gains": [
+        {
+          "task": "multi_turn_base_5",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_long_context_0",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_17",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_20",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_27",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_long_context_28",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_long_context_31",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_31",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_long_context_49",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_func_20",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_miss_func_22",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_func_41",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_param_8",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_param_15",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_param_22",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_miss_param_22",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_param_31",
+          "seed": 15013
+        }
+      ],
+      "losses": [
+        {
+          "task": "multi_turn_base_5",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_base_5",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_base_8",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_base_8",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_base_14",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_base_14",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_base_48",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_long_context_0",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_long_context_5",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_7",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_7",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_long_context_14",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_21",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_long_context_21",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_long_context_22",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_long_context_22",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_long_context_36",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_36",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_long_context_42",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_long_context_46",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_long_context_46",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_func_19",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_miss_func_21",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_func_21",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_func_22",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_miss_func_27",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_func_41",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_miss_func_45",
+          "seed": 17041
+        },
+        {
+          "task": "multi_turn_miss_func_46",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_miss_param_15",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_miss_param_27",
+          "seed": 16033
+        },
+        {
+          "task": "multi_turn_miss_param_35",
+          "seed": 15013
+        },
+        {
+          "task": "multi_turn_miss_param_35",
+          "seed": 17041
+        }
+      ]
+    }
+  },
+  "actual_prefix_domain_strata": {
+    "actual_mixed_prefix": {
+      "dedup-baseline": {
+        "n": 81,
+        "passed": 46
+      },
+      "dedup-optimized": {
+        "n": 81,
+        "passed": 40
+      },
+      "event-baseline": {
+        "n": 81,
+        "passed": 43
+      },
+      "event-optimized": {
+        "n": 81,
+        "passed": 42
+      },
+      "identity": {
+        "n": 81,
+        "passed": 49
+      },
+      "state-baseline": {
+        "n": 81,
+        "passed": 44
+      },
+      "state-optimized": {
+        "n": 81,
+        "passed": 39
+      }
+    },
+    "filesystem_only_prefix": {
+      "dedup-baseline": {
+        "n": 216,
+        "passed": 71
+      },
+      "dedup-optimized": {
+        "n": 216,
+        "passed": 61
+      },
+      "event-baseline": {
+        "n": 216,
+        "passed": 77
+      },
+      "event-optimized": {
+        "n": 216,
+        "passed": 83
+      },
+      "identity": {
+        "n": 216,
+        "passed": 71
+      },
+      "state-baseline": {
+        "n": 216,
+        "passed": 75
+      },
+      "state-optimized": {
+        "n": 216,
+        "passed": 78
+      }
+    }
+  }
+}

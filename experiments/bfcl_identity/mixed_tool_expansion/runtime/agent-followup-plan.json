@@ -1,0 +1,42 @@
+{
+  "updated_at": 1792547346.8342347,
+  "coordinator": "/root/lossless_runner",
+  "status": "fresh_evaluation_running",
+  "after_fresh": [
+    "independent official-score/payload/semantic/token audit",
+    "separate final report and protection-aware cleanup if needed",
+    "investigate remaining BFCL domains under another coverage audit"
+  ],
+  "protected": [
+    "visualization/",
+    "old experimental trajectories",
+    "source_code/",
+    "credentials"
+  ],
+  "development_review": "passed",
+  "completed_development_gate": {
+    "stage": "independent_development_review",
+    "agent": "/root/lossless_runner/lossless_independent_audit",
+    "required_file": "development-review.json",
+    "must_match": [
+      "snapshot_hashes_sha256",
+      "task_split_sha256",
+      "selection_sha256",
+      "vendor_pins_sha256",
+      "protocol_sha256",
+      "development_manifest_sha256"
+    ],
+    "must_not": [
+      "change codec selection",
+      "use fresh outcomes for adapter changes",
+      "retry failed task scores"
+    ]
+  },
+  "next_gate": {
+    "stage": "independent_final_audit",
+    "agent": "/root/lossless_runner/lossless_independent_audit",
+    "after": "all frozen fresh Identity and triggered paired graph branches complete",
+    "additional_readonly_report": "analysis/domain_exposure.py --split evaluation",
+    "required": "independent official scores, strict actual payload decode, original graph/history restoration, native token accounting, domain exposure strata"
+  }
+}

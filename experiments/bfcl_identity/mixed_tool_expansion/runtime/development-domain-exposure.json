@@ -1,0 +1,286 @@
+{
+  "rows": [
+    {
+      "task": "multi_turn_base_0",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 14
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 21
+      }
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 16
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 22
+      }
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 12
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 16
+      }
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 2
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 9
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 9,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 8
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 7
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 9
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 22
+      }
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 8
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 19
+      }
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 7
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 23
+      }
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 5
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 22
+      }
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 5
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 16
+      }
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 5
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 18
+      }
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 2
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 3
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 10,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 2
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 7
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 9
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 21
+      }
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 8
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 21
+      }
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 7
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 23
+      }
+    }
+  ],
+  "note": "Observed Identity executions only. Available tool classes do not imply actual cross-domain use."
+}

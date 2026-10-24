@@ -1,0 +1,187 @@
+{
+  "status": "artifact_checks_pass",
+  "time": 1792535386.2776942,
+  "stats": {
+    "snapshot_files_verified": 177,
+    "development_skipped": 70,
+    "development_actual": 182,
+    "native_requests": 9963,
+    "strict_candidate_decodes": 542,
+    "graph_payload_checks": 902,
+    "official_scores_recomputed": 1058,
+    "evaluation_actual": 876,
+    "evaluation_skipped": 216
+  },
+  "failures": [],
+  "selection_order": {
+    "last_development_finished": 1792506449.9954305,
+    "selection_mtime": 1792506450.1783564,
+    "first_fresh_started": 1792506450.8573136
+  },
+  "official_scoring": "Independently reran official _evaluate_single_multi_turn_entry for every actual completed run, including force-terminated outcomes; no output files or model requests.",
+  "csv_rows_verified": 7029,
+  "cluster_statistics": {
+    "all/state/baseline": {
+      "gains": 3,
+      "losses": 1,
+      "n": 120,
+      "interval": [
+        -0.015267175572519083,
+        0.046296296296296294
+      ]
+    },
+    "all/state/identity": {
+      "gains": 8,
+      "losses": 8,
+      "n": 120,
+      "interval": [
+        -0.07462686567164178,
+        0.06504065040650407
+      ]
+    },
+    "all/event/baseline": {
+      "gains": 9,
+      "losses": 4,
+      "n": 120,
+      "interval": [
+        -0.009259259259259259,
+        0.09482758620689655
+      ]
+    },
+    "all/event/identity": {
+      "gains": 8,
+      "losses": 8,
+      "n": 120,
+      "interval": [
+        -0.07964601769911504,
+        0.06569343065693431
+      ]
+    },
+    "all/dedup/baseline": {
+      "gains": 6,
+      "losses": 6,
+      "n": 120,
+      "interval": [
+        -0.03125,
+        0.03529411764705882
+      ]
+    },
+    "all/dedup/identity": {
+      "gains": 7,
+      "losses": 9,
+      "n": 120,
+      "interval": [
+        -0.10526315789473684,
+        0.058823529411764705
+      ]
+    },
+    "development/state/baseline": {
+      "gains": 0,
+      "losses": 1,
+      "n": 18,
+      "interval": [
+        -0.16666666666666666,
+        0.0
+      ]
+    },
+    "development/state/identity": {
+      "gains": 0,
+      "losses": 2,
+      "n": 18,
+      "interval": [
+        -0.3333333333333333,
+        0.0
+      ]
+    },
+    "development/event/baseline": {
+      "gains": 2,
+      "losses": 1,
+      "n": 18,
+      "interval": [
+        -0.16666666666666666,
+        0.16666666666666666
+      ]
+    },
+    "development/event/identity": {
+      "gains": 2,
+      "losses": 2,
+      "n": 18,
+      "interval": [
+        -0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    "development/dedup/baseline": {
+      "gains": 2,
+      "losses": 2,
+      "n": 18,
+      "interval": [
+        -0.16666666666666666,
+        0.16666666666666666
+      ]
+    },
+    "development/dedup/identity": {
+      "gains": 1,
+      "losses": 2,
+      "n": 18,
+      "interval": [
+        -0.3333333333333333,
+        0.16666666666666666
+      ]
+    },
+    "nondevelopment/state/baseline": {
+      "gains": 3,
+      "losses": 0,
+      "n": 102,
+      "interval": [
+        0.0,
+        0.05357142857142857
+      ]
+    },
+    "nondevelopment/state/identity": {
+      "gains": 8,
+      "losses": 6,
+      "n": 102,
+      "interval": [
+        -0.0449438202247191,
+        0.07339449541284404
+      ]
+    },
+    "nondevelopment/event/baseline": {
+      "gains": 7,
+      "losses": 3,
+      "n": 102,
+      "interval": [
+        -0.023529411764705882,
+        0.09734513274336283
+      ]
+    },
+    "nondevelopment/event/identity": {
+      "gains": 6,
+      "losses": 6,
+      "n": 102,
+      "interval": [
+        -0.06060606060606061,
+        0.04918032786885246
+      ]
+    },
+    "nondevelopment/dedup/baseline": {
+      "gains": 4,
+      "losses": 4,
+      "n": 102,
+      "interval": [
+        -0.039603960396039604,
+        0.04
+      ]
+    },
+    "nondevelopment/dedup/identity": {
+      "gains": 6,
+      "losses": 7,
+      "n": 102,
+      "interval": [
+        -0.0847457627118644,
+        0.056179775280898875
+      ]
+    }
+  }
+}

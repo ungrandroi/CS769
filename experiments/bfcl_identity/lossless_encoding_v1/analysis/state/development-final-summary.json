@@ -1,0 +1,107 @@
+{
+  "status": "development_complete_pending_fresh_validation",
+  "baseline": {
+    "successes": 10,
+    "n": 13,
+    "first_input_mean": 7588,
+    "post_input_trajectory_mean": 8466.31913919414
+  },
+  "configurations": [
+    {
+      "configuration": "tables-none",
+      "successes": 8,
+      "n": 13,
+      "first_input_mean": 7109.692307692308,
+      "post_input_trajectory_mean": 8383.048328504603,
+      "gains": [],
+      "losses": [
+        {
+          "task": "multi_turn_long_context_3",
+          "seed": 3301
+        },
+        {
+          "task": "multi_turn_long_context_37",
+          "seed": 2207
+        }
+      ]
+    },
+    {
+      "configuration": "tables-minimal",
+      "successes": 10,
+      "n": 13,
+      "first_input_mean": 7142.692307692308,
+      "post_input_trajectory_mean": 7808.8052447552445,
+      "gains": [
+        {
+          "task": "multi_turn_base_9",
+          "seed": 3301
+        },
+        {
+          "task": "multi_turn_long_context_9",
+          "seed": 1103
+        }
+      ],
+      "losses": [
+        {
+          "task": "multi_turn_long_context_37",
+          "seed": 2207
+        },
+        {
+          "task": "multi_turn_long_context_37",
+          "seed": 3301
+        }
+      ]
+    },
+    {
+      "configuration": "shared-none",
+      "successes": 9,
+      "n": 13,
+      "first_input_mean": 7123.615384615385,
+      "post_input_trajectory_mean": 8464.631924485771,
+      "gains": [
+        {
+          "task": "multi_turn_base_9",
+          "seed": 3301
+        }
+      ],
+      "losses": [
+        {
+          "task": "multi_turn_long_context_3",
+          "seed": 3301
+        },
+        {
+          "task": "multi_turn_long_context_9",
+          "seed": 2207
+        }
+      ]
+    },
+    {
+      "configuration": "shared-minimal",
+      "successes": 11,
+      "n": 13,
+      "first_input_mean": 7156.615384615385,
+      "post_input_trajectory_mean": 8047.348980933596,
+      "gains": [
+        {
+          "task": "multi_turn_base_9",
+          "seed": 3301
+        },
+        {
+          "task": "multi_turn_long_context_9",
+          "seed": 1103
+        }
+      ],
+      "losses": [
+        {
+          "task": "multi_turn_long_context_9",
+          "seed": 2207
+        }
+      ]
+    }
+  ],
+  "preregistered_rule_winner": "state-shared-v1/minimal",
+  "pareto_alternative": "state-tables-v1/minimal",
+  "shared_dictionary_nonempty_checkpoints": 1,
+  "shared_dictionary_empty_checkpoints": 12,
+  "causal_attribution": "Cannot attribute success difference to shared references; most payloads have no shared values."
+}

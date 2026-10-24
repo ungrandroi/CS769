@@ -1,0 +1,128 @@
+{
+  "selection_rule": "Descending passes, ascending mean post-input macro mean, then label (controller preregistration).",
+  "ranked_candidates": [
+    {
+      "label": "dedup-shared-v1-none",
+      "passed": 11,
+      "total": 13,
+      "first_input_mean": 8082.615384615385,
+      "mean_post_input_macro_mean": 9559.682263161674
+    },
+    {
+      "label": "dedup-tables-v1-minimal",
+      "passed": 9,
+      "total": 13,
+      "first_input_mean": 8107.384615384615,
+      "mean_post_input_macro_mean": 9143.540473415473
+    },
+    {
+      "label": "dedup-shared-v1-minimal",
+      "passed": 9,
+      "total": 13,
+      "first_input_mean": 8115.615384615385,
+      "mean_post_input_macro_mean": 9286.627283011107
+    },
+    {
+      "label": "dedup-tables-v1-none",
+      "passed": 8,
+      "total": 13,
+      "first_input_mean": 8074.384615384615,
+      "mean_post_input_macro_mean": 9381.470007770007
+    }
+  ],
+  "frozen_baseline": {
+    "passed": 11,
+    "total": 13,
+    "first_input_mean": 8526.615384615385,
+    "mean_post_input_macro_mean": 9818.928279237103
+  },
+  "identity": {
+    "passed": 11,
+    "total": 13,
+    "first_input_mean": 4871.846153846154,
+    "mean_post_input_macro_mean": 5444.913461538462
+  },
+  "development_winner": "dedup-shared-v1-none",
+  "development_adoption_criterion_met": true,
+  "winner_pairs": {
+    "identity": {
+      "gains": [],
+      "losses": [],
+      "both_success": [
+        "multi_turn_base_37/seed1103",
+        "multi_turn_base_37/seed2207",
+        "multi_turn_base_37/seed3301",
+        "multi_turn_long_context_3/seed1103",
+        "multi_turn_long_context_3/seed2207",
+        "multi_turn_long_context_3/seed3301",
+        "multi_turn_long_context_37/seed1103",
+        "multi_turn_long_context_37/seed2207",
+        "multi_turn_long_context_37/seed3301",
+        "multi_turn_long_context_9/seed1103",
+        "multi_turn_long_context_9/seed2207"
+      ],
+      "both_fail": [
+        "multi_turn_base_9/seed3301",
+        "multi_turn_long_context_9/seed3301"
+      ]
+    },
+    "dedup-none": {
+      "gains": [
+        "multi_turn_long_context_3/seed3301"
+      ],
+      "losses": [
+        "multi_turn_base_9/seed3301"
+      ],
+      "both_success": [
+        "multi_turn_base_37/seed1103",
+        "multi_turn_base_37/seed2207",
+        "multi_turn_base_37/seed3301",
+        "multi_turn_long_context_3/seed1103",
+        "multi_turn_long_context_3/seed2207",
+        "multi_turn_long_context_37/seed1103",
+        "multi_turn_long_context_37/seed2207",
+        "multi_turn_long_context_37/seed3301",
+        "multi_turn_long_context_9/seed1103",
+        "multi_turn_long_context_9/seed2207"
+      ],
+      "both_fail": [
+        "multi_turn_long_context_9/seed3301"
+      ]
+    }
+  },
+  "actual_sharing": {
+    "dedup-tables-v1-none": {
+      "nonempty_checkpoints": 0,
+      "entries": 0,
+      "references": 0,
+      "unused_entries": 0
+    },
+    "dedup-tables-v1-minimal": {
+      "nonempty_checkpoints": 0,
+      "entries": 0,
+      "references": 0,
+      "unused_entries": 0
+    },
+    "dedup-shared-v1-none": {
+      "nonempty_checkpoints": 11,
+      "entries": 27,
+      "references": 254,
+      "unused_entries": 0
+    },
+    "dedup-shared-v1-minimal": {
+      "nonempty_checkpoints": 11,
+      "entries": 27,
+      "references": 254,
+      "unused_entries": 0
+    }
+  },
+  "limitations": [
+    "Development repeated prefixes only; not unseen-task or fresh-seed validation.",
+    "Selected frozen Dedup baseline has no external instruction. Minimal is an added instruction condition relative to that baseline.",
+    "Old dedup-minimal, where shown, is a same-instruction diagnostic comparator, not the selected frozen baseline.",
+    "Inline codec rules are counted as input and differ even when external instruction is none.",
+    "Post means are calculated within each trajectory then across trajectories; include fixed prompts/tools.",
+    "Strict recovery does not guarantee model behavior invariance."
+  ],
+  "controller_selection_verified": true
+}

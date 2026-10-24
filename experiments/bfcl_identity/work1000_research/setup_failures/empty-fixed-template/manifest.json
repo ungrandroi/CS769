@@ -1,0 +1,25 @@
+{
+  "task": "multi_turn_base_3",
+  "category": "multi_turn_base",
+  "method": "identity",
+  "variant": "readable",
+  "explanation": "none",
+  "seed": 1103,
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "repeat_penalty": 1.0
+  },
+  "threshold": 1000,
+  "threshold_metric": "native full minus fixed-only template tokens",
+  "base_url": "http://127.0.0.1:11436/v1",
+  "context": 131072,
+  "max_tokens": 4096,
+  "identity": null,
+  "status": "error",
+  "triggered": false,
+  "started_at": 1792408687.319851,
+  "error": "<HTTPError 500: 'Internal Server Error'>",
+  "finished_at": 1792408688.1133082
+}

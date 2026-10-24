@@ -1,0 +1,9 @@
+{
+  "registered_at": 1792496693.887279,
+  "event_candidate_attempts": 0,
+  "dedup_candidate_attempts": 0,
+  "fresh_identity_attempts": 0,
+  "codecs_unchanged": true,
+  "change": "Add minimal external explanation controls for Event and Dedup before either method inference",
+  "current_task_status_at_registration": "complete"
+}

@@ -1,0 +1,424 @@
+{
+  "status": "pass",
+  "created_at": 1792805795.7556298,
+  "completed_runs": 2394,
+  "fixed_configs": 58,
+  "native_requests": 21167,
+  "full_template_samples": 56,
+  "samples": [
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/dedup-baseline",
+      "index": 13,
+      "input_tokens": 10208,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/dedup-baseline",
+      "index": 21,
+      "input_tokens": 10910,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/dedup-optimized",
+      "index": 13,
+      "input_tokens": 9979,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/dedup-optimized",
+      "index": 22,
+      "input_tokens": 10774,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/event-baseline",
+      "index": 13,
+      "input_tokens": 11171,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/event-baseline",
+      "index": 23,
+      "input_tokens": 11985,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/event-optimized",
+      "index": 13,
+      "input_tokens": 10864,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/event-optimized",
+      "index": 22,
+      "input_tokens": 11899,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/identity",
+      "index": 0,
+      "input_tokens": 4899,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/identity",
+      "index": 21,
+      "input_tokens": 6644,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/state-baseline",
+      "index": 13,
+      "input_tokens": 8942,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/state-baseline",
+      "index": 20,
+      "input_tokens": 9608,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/state-optimized",
+      "index": 13,
+      "input_tokens": 8550,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/state-optimized",
+      "index": 21,
+      "input_tokens": 9232,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/dedup-baseline",
+      "index": 4,
+      "input_tokens": 11312,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/dedup-baseline",
+      "index": 17,
+      "input_tokens": 16401,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/dedup-optimized",
+      "index": 4,
+      "input_tokens": 9999,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/dedup-optimized",
+      "index": 16,
+      "input_tokens": 14217,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/event-baseline",
+      "index": 4,
+      "input_tokens": 13002,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/event-baseline",
+      "index": 23,
+      "input_tokens": 19598,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/event-optimized",
+      "index": 4,
+      "input_tokens": 10278,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/event-optimized",
+      "index": 18,
+      "input_tokens": 15707,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/identity",
+      "index": 0,
+      "input_tokens": 4899,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/identity",
+      "index": 23,
+      "input_tokens": 11412,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/state-baseline",
+      "index": 4,
+      "input_tokens": 8945,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/state-baseline",
+      "index": 15,
+      "input_tokens": 11764,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/state-optimized",
+      "index": 4,
+      "input_tokens": 7857,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/state-optimized",
+      "index": 16,
+      "input_tokens": 12316,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_func_0/seed15013/dedup-baseline",
+      "index": 15,
+      "input_tokens": 10217,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_func_0/seed15013/dedup-baseline",
+      "index": 37,
+      "input_tokens": 12198,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_func_0/seed15013/dedup-optimized",
+      "index": 15,
+      "input_tokens": 9888,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_func_0/seed15013/dedup-optimized",
+      "index": 32,
+      "input_tokens": 11274,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_func_0/seed15013/event-baseline",
+      "index": 15,
+      "input_tokens": 11425,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_func_0/seed15013/event-baseline",
+      "index": 32,
+      "input_tokens": 12932,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_func_0/seed15013/event-optimized",
+      "index": 15,
+      "input_tokens": 11021,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_func_0/seed15013/event-optimized",
+      "index": 27,
+      "input_tokens": 12271,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_func_0/seed15013/identity",
+      "index": 0,
+      "input_tokens": 4764,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_func_0/seed15013/identity",
+      "index": 28,
+      "input_tokens": 7765,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_func_0/seed15013/state-baseline",
+      "index": 15,
+      "input_tokens": 8721,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_func_0/seed15013/state-baseline",
+      "index": 28,
+      "input_tokens": 9918,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_func_0/seed15013/state-optimized",
+      "index": 15,
+      "input_tokens": 8329,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_func_0/seed15013/state-optimized",
+      "index": 23,
+      "input_tokens": 9242,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_param_0/seed15013/dedup-baseline",
+      "index": 13,
+      "input_tokens": 9603,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_param_0/seed15013/dedup-baseline",
+      "index": 34,
+      "input_tokens": 11745,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_param_0/seed15013/dedup-optimized",
+      "index": 13,
+      "input_tokens": 9394,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_param_0/seed15013/dedup-optimized",
+      "index": 36,
+      "input_tokens": 13678,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_param_0/seed15013/event-baseline",
+      "index": 13,
+      "input_tokens": 10642,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_param_0/seed15013/event-baseline",
+      "index": 25,
+      "input_tokens": 11750,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_param_0/seed15013/event-optimized",
+      "index": 13,
+      "input_tokens": 10190,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_param_0/seed15013/event-optimized",
+      "index": 33,
+      "input_tokens": 11767,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_param_0/seed15013/identity",
+      "index": 0,
+      "input_tokens": 4899,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_param_0/seed15013/identity",
+      "index": 28,
+      "input_tokens": 7117,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_param_0/seed15013/state-baseline",
+      "index": 13,
+      "input_tokens": 8573,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_param_0/seed15013/state-baseline",
+      "index": 24,
+      "input_tokens": 9667,
+      "position": "last"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_param_0/seed15013/state-optimized",
+      "index": 13,
+      "input_tokens": 8190,
+      "position": "first"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/evaluation/multi_turn_miss_param_0/seed15013/state-optimized",
+      "index": 20,
+      "input_tokens": 8792,
+      "position": "last"
+    }
+  ],
+  "provenance": {
+    "model": "Qwen3.8-27B",
+    "quantization": "Q8_0",
+    "model_path": "/home/data/models/gguf/Qwen3.8-27B-Q8_0/Qwen3.8-27B-Q8_0.gguf",
+    "model_file_bytes": 28595763648,
+    "model_source": "ggml-org/Qwen3.8-27B-GGUF",
+    "model_revision": "71bc7b627595dc8a91039addd9c791ae548d6747",
+    "model_sha256_from_existing_download_manifest": "aab65c67ef0dad127960efef9247f1832bca105faa1c7a052cc039b223cf86a1",
+    "full_weights_rehashed": false,
+    "metadata_bytes": 10943782,
+    "metadata_sha256": "2622b23ee76fe1550104cd3bbfbc8c598a0b36bd40c8549583af6860db317425",
+    "declared_tensors": 851,
+    "metadata_keys": 40,
+    "library_path": "/home/bcao44/bofeng/CS769/vendor/qwen-tokenizer-631109b34/lib/libllama.so.0.5.0",
+    "library_sha256": "73b89cc3cfd638b9175974fc9337ce6ad5a80272562bd933056948327188f723",
+    "library_commit": "631109b34",
+    "abi_header_url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/include/llama.h",
+    "abi_headers_manifest": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1/vendor/qwen-tokenizer-631109b34/headers-manifest.json",
+    "abi_headers": [
+      {
+        "path": "include/llama.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/include/llama.h",
+        "sha256": "d5cf9203bea63b575e76cba4881f29cfd1b611451578b01582b75b72ecbb04bc"
+      },
+      {
+        "path": "ggml/include/gguf.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/gguf.h",
+        "sha256": "e56714aab702e5ce62ee587a409643c08f7e93e8fbb77f48ef7cc85075f96fa4"
+      },
+      {
+        "path": "ggml/include/ggml.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml.h",
+        "sha256": "12ee71f99db7db9b353bc02b1fbb57c344ee17c01ac5fb7952b41a637a747ea9"
+      },
+      {
+        "path": "ggml/include/ggml-opt.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-opt.h",
+        "sha256": "3586de1bc8a934b5c72339e2b6937b0641e8f149b512231e666f67de0736eea2"
+      },
+      {
+        "path": "ggml/include/ggml-backend.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-backend.h",
+        "sha256": "5791edae1fb7622027621d15bc7a160198bd3b75ed8f96d06cb7b85e2b873756"
+      },
+      {
+        "path": "ggml/include/ggml-alloc.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-alloc.h",
+        "sha256": "d114067f9099c4a0e2bbc0625c676d4894d9cf0ea27168ee072c7de0e71bb51d"
+      },
+      {
+        "path": "ggml/include/ggml-cpu.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-cpu.h",
+        "sha256": "316279e004cdeb8e6ef78599acb602bf79a8abdf897fed9fd1914808c1518c6e"
+      }
+    ],
+    "vocab_only": true,
+    "tensor_weights_loaded": false,
+    "model_context_created": false,
+    "inference_calls": 0,
+    "server_started": false,
+    "tokenizer": {
+      "general.name": "Qwen3.8-27B",
+      "general.architecture": "qwen35",
+      "tokenizer.ggml.model": "gpt2",
+      "tokenizer.ggml.pre": "qwen35",
+      "tokenizer.ggml.add_bos_token": false,
+      "vocab_size": 248320,
+      "merge_count": 247587,
+      "bos_token_id": 248044,
+      "bos_token": "<|endoftext|>",
+      "eos_token_id": 248046,
+      "eos_token": "<|im_end|>"
+    },
+    "chat_template_sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+    "ordinary_text_policy": "add_special=False, parse_special=False; no BOS/EOS or chat framing",
+    "chat_text_policy": "Caller renders embedded GGUF template, then explicitly sets parse_special=True"
+  },
+  "scope": "Read-only apply-template requests and CPU vocabulary-only tokenizer; zero model inference."
+}

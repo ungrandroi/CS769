@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "paired_ratios": 360,
+  "per_turn_rows": 1693,
+  "paired_first_request_rows": 360,
+  "decomposition_rows": 720,
+  "known_prefix_failures": 18,
+  "prefix_failure_semantics": "Official checker appends execution_results once per zero-based ground-truth turn before state/empty-turn checking; response mismatch reports zero-based turn. Hook turn count is 1-based. Only errors strictly before conversion turn establish a completed-prefix failure. No main-denominator exclusion.",
+  "subgroup_labels": "development means six exact task-condition instances; development_families means all conditions of families 3/9/37. Other families are historically seen, not blind."
+}

@@ -37,6 +37,9 @@ sys.path.insert(0, str(BFCL))
 from graph_memory import GraphMemory  # noqa: E402  (batch snapshot)
 from graph_memory_v2 import GraphMemoryV2  # noqa: E402
 fs_mod = importlib.import_module("bfcl_eval.eval_checker.multi_turn_eval.func_source_code.gorilla_file_system")
+from bfcl_eval.constants.executable_backend_config import CLASS_FILE_PATH_MAPPING, STATELESS_CLASSES  # noqa: E402
+from bfcl_eval.eval_checker.multi_turn_eval import multi_turn_utils as MTU  # noqa: E402
+from bfcl_eval.model_handler.utils import convert_to_function_call  # noqa: E402
 
 
 def run_dir_for(task_id, mode):
@@ -55,7 +58,7 @@ def clip(text, limit=CLIP):
 
 def load_dataset():
     out = {}
-    for name in ("multi_turn_base", "multi_turn_long_context"):
+    for name in ("multi_turn_base", "multi_turn_long_context", "multi_turn_miss_func", "multi_turn_miss_param"):
         for line in open(BFCL / f"bfcl_eval/data/BFCL_v4_{name}.json"):
             entry = json.loads(line)
             out[entry["id"]] = entry
@@ -81,16 +84,21 @@ def display_message(item):
     return {"k": role or item.get("type", "?"), **clip(text)}
 
 
-def tree(node):
+def tree(node, ancestors=()):
     if isinstance(node, fs_mod.Directory):
-        return {"n": node.name, "c": [tree(child) for child in node.contents.values()]}
+        # A directory moved into its own subtree leaves a cycle in the simulator;
+        # stop at the repeated directory instead of recursing forever.
+        if id(node) in ancestors:
+            return {"n": node.name, "c": [], "loop": True}
+        inner = (*ancestors, id(node))
+        return {"n": node.name, "c": [tree(child, inner) for child in node.contents.values()]}
     content = node.content or ""
     return {"n": node.name, "f": content[:FILE_PREVIEW], "l": len(content)}
 
 
 def cwd_path(fs):
     parts, d = [], fs._current_dir
-    while d is not None:
+    while d is not None and len(parts) < 64:
         parts.append(d.name)
         d = d.parent
     return "/" + "/".join(reversed(parts))
@@ -356,6 +364,8 @@ def main():
     parser.add_argument("--data-out", type=Path, default=here / "viewer-data.json")
     parser.add_argument("--template", type=Path, default=here / "memory_viewer_template.html")
     parser.add_argument("--html-out", type=Path, default=here / "index.html")
+    parser.add_argument("--w1000-dir", type=Path, default=here / "data/w1000",
+                        help="per-task gzip files for the combined 1,000-token cohort, loaded on demand")
     args = parser.parse_args()
     dataset = load_dataset()
     plan = json.load(open(BATCH / "plan.json"))
@@ -384,13 +394,22 @@ def main():
              "tasks": tasks}
     print("tool tokens:", model["toolTokens"])
     model["experiments"] = [
-        {"key": "baseline", "label": "首轮后转换", "status": "complete",
+        {"key": "baseline", "label": "早期：首轮后转换（26 项）", "status": "complete",
          "modes": list(MODES), "note": "第 2 轮用户输入前把历史转换成记忆一次；Event Graph-Dedup 来自 qwen27b_dedup_eval，共用同一段首轮"},
-        {"key": "history1000", "label": "1000-token 历史阈值转换", "status": checkpoints["status"],
+        {"key": "history1000", "label": "早期：history1000 旧口径（只计工具内容）", "status": checkpoints["status"],
          "modes": ["identity"], "pending": ["v1-compact", "v2-compact"], "threshold": checkpoints["threshold"],
          "metric": checkpoints["metric"], "triggered": len(checkpoints["tasks"]), "untriggered": len(checkpoints["untriggered"])},
     ]
-    data = {"models": [model], "labels": LABELS, "issues": issues}
+    import combined_data
+    w1000 = combined_data.build(sys.modules[__name__], args.w1000_dir, dataset, issues,
+                                log=lambda *a: print("w1000", *a, flush=True))
+    if combined_data.UNCOMPARABLE:
+        print("w1000 turn-end trees not comparable (cyclic directory):", len(combined_data.UNCOMPARABLE), combined_data.UNCOMPARABLE[:5])
+    w1000["uncomparable"] = combined_data.UNCOMPARABLE
+    w1000["dir"] = args.w1000_dir.relative_to(here).as_posix() if args.w1000_dir.is_relative_to(here) else str(args.w1000_dir)
+    model["experiments"].insert(0, {"key": "w1000", "label": "1000-token 历史阈值转换（合并 417 个前缀）", "status": "complete",
+                                    "modes": [a["k"] for a in w1000["arms"]]})
+    data = {"models": [model], "labels": LABELS, "w1000": w1000, "issues": issues}
     args.data_out.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
     print("issues:", len(issues))
     for i in issues[:40]:

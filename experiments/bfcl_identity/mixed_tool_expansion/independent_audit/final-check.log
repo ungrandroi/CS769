@@ -1,0 +1,62 @@
+0 {'native_requests': 9, 'graph_payload_checks': 1, 'official_scores_recomputed': 1} failures 0
+100 {'native_requests': 1086, 'graph_payload_checks': 87, 'official_scores_recomputed': 101, 'direct_codec_decodes': 43, 'shared_semantic_pairs': 43, 'identity_runs': 14} failures 0
+200 {'native_requests': 2127, 'graph_payload_checks': 162, 'official_scores_recomputed': 191, 'direct_codec_decodes': 81, 'shared_semantic_pairs': 81, 'identity_runs': 29, 'skips': 10} failures 0
+300 {'native_requests': 2462, 'graph_payload_checks': 204, 'official_scores_recomputed': 247, 'direct_codec_decodes': 102, 'shared_semantic_pairs': 102, 'identity_runs': 43, 'skips': 54} failures 0
+400 {'native_requests': 3152, 'graph_payload_checks': 234, 'official_scores_recomputed': 291, 'direct_codec_decodes': 117, 'shared_semantic_pairs': 117, 'identity_runs': 57, 'skips': 110} failures 0
+500 {'native_requests': 3344, 'graph_payload_checks': 258, 'official_scores_recomputed': 329, 'direct_codec_decodes': 129, 'shared_semantic_pairs': 129, 'identity_runs': 71, 'skips': 172} failures 0
+600 {'native_requests': 3535, 'graph_payload_checks': 275, 'official_scores_recomputed': 361, 'direct_codec_decodes': 137, 'shared_semantic_pairs': 137, 'identity_runs': 86, 'skips': 240} failures 0
+700 {'native_requests': 3793, 'graph_payload_checks': 294, 'official_scores_recomputed': 394, 'direct_codec_decodes': 147, 'shared_semantic_pairs': 147, 'identity_runs': 100, 'skips': 307} failures 0
+800 {'native_requests': 3998, 'graph_payload_checks': 306, 'official_scores_recomputed': 420, 'direct_codec_decodes': 153, 'shared_semantic_pairs': 153, 'identity_runs': 114, 'skips': 381} failures 0
+900 {'native_requests': 4355, 'graph_payload_checks': 352, 'official_scores_recomputed': 481, 'direct_codec_decodes': 176, 'shared_semantic_pairs': 176, 'identity_runs': 129, 'skips': 420} failures 0
+1000 {'native_requests': 5045, 'graph_payload_checks': 420, 'official_scores_recomputed': 563, 'direct_codec_decodes': 210, 'shared_semantic_pairs': 210, 'identity_runs': 143, 'skips': 438} failures 0
+1100 {'native_requests': 5904, 'graph_payload_checks': 506, 'official_scores_recomputed': 663, 'direct_codec_decodes': 253, 'shared_semantic_pairs': 253, 'identity_runs': 157, 'skips': 438} failures 0
+1200 {'native_requests': 6834, 'graph_payload_checks': 588, 'official_scores_recomputed': 759, 'direct_codec_decodes': 294, 'shared_semantic_pairs': 294, 'identity_runs': 171, 'skips': 442} failures 0
+1300 {'native_requests': 7451, 'graph_payload_checks': 659, 'official_scores_recomputed': 845, 'direct_codec_decodes': 329, 'shared_semantic_pairs': 329, 'identity_runs': 186, 'skips': 456} failures 0
+1400 {'native_requests': 8146, 'graph_payload_checks': 739, 'official_scores_recomputed': 939, 'direct_codec_decodes': 369, 'shared_semantic_pairs': 369, 'identity_runs': 200, 'skips': 462} failures 0
+1500 {'native_requests': 8789, 'graph_payload_checks': 801, 'official_scores_recomputed': 1015, 'direct_codec_decodes': 400, 'shared_semantic_pairs': 400, 'identity_runs': 214, 'skips': 486} failures 0
+1600 {'native_requests': 9453, 'graph_payload_checks': 886, 'official_scores_recomputed': 1115, 'direct_codec_decodes': 443, 'shared_semantic_pairs': 443, 'identity_runs': 229, 'skips': 486} failures 0
+1700 {'native_requests': 10259, 'graph_payload_checks': 972, 'official_scores_recomputed': 1215, 'direct_codec_decodes': 486, 'shared_semantic_pairs': 486, 'identity_runs': 243, 'skips': 486} failures 0
+1800 {'native_requests': 11080, 'graph_payload_checks': 1034, 'official_scores_recomputed': 1291, 'direct_codec_decodes': 517, 'shared_semantic_pairs': 517, 'identity_runs': 257, 'skips': 510} failures 0
+1900 {'native_requests': 12136, 'graph_payload_checks': 1102, 'official_scores_recomputed': 1373, 'direct_codec_decodes': 551, 'shared_semantic_pairs': 551, 'identity_runs': 271, 'skips': 528} failures 0
+2000 {'native_requests': 13063, 'graph_payload_checks': 1175, 'official_scores_recomputed': 1461, 'direct_codec_decodes': 587, 'shared_semantic_pairs': 587, 'identity_runs': 286, 'skips': 540} failures 0
+2100 {'native_requests': 14024, 'graph_payload_checks': 1260, 'official_scores_recomputed': 1560, 'direct_codec_decodes': 630, 'shared_semantic_pairs': 630, 'identity_runs': 300, 'skips': 541} failures 0
+2200 {'native_requests': 14717, 'graph_payload_checks': 1311, 'official_scores_recomputed': 1625, 'direct_codec_decodes': 655, 'shared_semantic_pairs': 655, 'identity_runs': 314, 'skips': 576} failures 0
+2300 {'native_requests': 15474, 'graph_payload_checks': 1390, 'official_scores_recomputed': 1719, 'direct_codec_decodes': 695, 'shared_semantic_pairs': 695, 'identity_runs': 329, 'skips': 582} failures 0
+2400 {'native_requests': 16351, 'graph_payload_checks': 1470, 'official_scores_recomputed': 1813, 'direct_codec_decodes': 735, 'shared_semantic_pairs': 735, 'identity_runs': 343, 'skips': 588} failures 0
+2500 {'native_requests': 17134, 'graph_payload_checks': 1550, 'official_scores_recomputed': 1907, 'direct_codec_decodes': 775, 'shared_semantic_pairs': 775, 'identity_runs': 357, 'skips': 594} failures 0
+2600 {'native_requests': 18008, 'graph_payload_checks': 1600, 'official_scores_recomputed': 1971, 'direct_codec_decodes': 800, 'shared_semantic_pairs': 800, 'identity_runs': 371, 'skips': 630} failures 0
+2700 {'native_requests': 19043, 'graph_payload_checks': 1656, 'official_scores_recomputed': 2042, 'direct_codec_decodes': 828, 'shared_semantic_pairs': 828, 'identity_runs': 386, 'skips': 659} failures 0
+2800 {'native_requests': 19331, 'graph_payload_checks': 1711, 'official_scores_recomputed': 2111, 'direct_codec_decodes': 855, 'shared_semantic_pairs': 855, 'identity_runs': 400, 'skips': 690} failures 0
+2900 {'native_requests': 19733, 'graph_payload_checks': 1770, 'official_scores_recomputed': 2184, 'direct_codec_decodes': 885, 'shared_semantic_pairs': 885, 'identity_runs': 414, 'skips': 717} failures 0
+3000 {'native_requests': 20086, 'graph_payload_checks': 1810, 'official_scores_recomputed': 2239, 'direct_codec_decodes': 905, 'shared_semantic_pairs': 905, 'identity_runs': 429, 'skips': 762} failures 0
+3100 {'native_requests': 20387, 'graph_payload_checks': 1842, 'official_scores_recomputed': 2285, 'direct_codec_decodes': 921, 'shared_semantic_pairs': 921, 'identity_runs': 443, 'skips': 816} failures 0
+3200 {'native_requests': 20680, 'graph_payload_checks': 1874, 'official_scores_recomputed': 2331, 'direct_codec_decodes': 937, 'shared_semantic_pairs': 937, 'identity_runs': 457, 'skips': 870} failures 0
+{
+  "status": "pass",
+  "created_at": 1792805902.039514,
+  "manifest_count": 3276,
+  "counts": {
+    "native_requests": 21167,
+    "graph_payload_checks": 1926,
+    "official_scores_recomputed": 2394,
+    "direct_codec_decodes": 963,
+    "shared_semantic_pairs": 963,
+    "identity_runs": 468,
+    "skips": 882
+  },
+  "failures": [],
+  "pending": [],
+  "frozen_gate": {
+    "snapshot_hashes_sha256": "f668a3d891c64c325dc0850306daa472347471681bc8c06abc29a697801684fb",
+    "task_split_sha256": "86c832c75efa45b3d180bfbbbaedc56413271f018f998c28be101c0c9abe3a85",
+    "selection_sha256": "26255447f21070503ae0fa4d68f7897545341ebd0f69be3fa38253785409d237",
+    "vendor_pins_sha256": "5ee16bf59a6cdec16cd51a6d582ea18f74ccd121ddefb6f748e71370be0ce04a",
+    "protocol_sha256": "fe0ce7f8a038385461339f870e81a2701a53eecdf5742d934db8804a71114929"
+  },
+  "development_manifest_sha256": "47c3d7cc4901ffa6e7944e4765891f781052b0f40ece3d3918d855b7c10bc5cf",
+  "selection_order": {
+    "last_development_finished": 1792543445.1141093,
+    "reviewed_at": 1792543571.9497135,
+    "first_fresh_started": 1792543599.1984997
+  }
+}

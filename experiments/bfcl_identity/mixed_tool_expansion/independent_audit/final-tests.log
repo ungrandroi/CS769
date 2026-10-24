@@ -1,0 +1,33 @@
+EE..............
+======================================================================
+ERROR: test_mixed_controller (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_mixed_controller
+Traceback (most recent call last):
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/home/bcao44/bofeng/CS769/tests/test_mixed_controller.py", line 5, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+
+
+======================================================================
+ERROR: test_mixed_event_graph (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_mixed_event_graph
+Traceback (most recent call last):
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/home/bcao44/bofeng/CS769/tests/test_mixed_event_graph.py", line 7, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.004s
+
+FAILED (errors=2)

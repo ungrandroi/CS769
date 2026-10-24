@@ -1,0 +1,28 @@
+ M .gitignore
+ M README.md
+ M scripts/README.md
+ M scripts/manage.py
+?? experiments/bfcl_identity/graph_optimization_dev/
+?? experiments/bfcl_identity/lossless_encoding_v1/
+?? experiments/bfcl_identity/mixed_tool_expansion/
+?? experiments/bfcl_identity/work1000_research/
+?? scripts/core/lossless_event.py
+?? scripts/core/lossless_state.py
+?? scripts/core/optimized_graph.py
+?? scripts/workflows/lossless_analysis.py
+?? scripts/workflows/lossless_audit.py
+?? scripts/workflows/lossless_controller.py
+?? scripts/workflows/lossless_postprocess.py
+?? scripts/workflows/lossless_report.py
+?? scripts/workflows/lossless_resume_guard.py
+?? scripts/workflows/lossless_task.py
+?? scripts/workflows/work1000_batch.py
+?? scripts/workflows/work1000_controller.py
+?? scripts/workflows/work1000_report.py
+?? scripts/workflows/work1000_task.py
+?? tests/test_lossless_event.py
+?? tests/test_lossless_state.py
+?? tests/test_optimized_graph.py
+?? tests/test_work1000_controller.py
+?? tests/test_work1000_protocol.py
+?? tests/test_work1000_report.py

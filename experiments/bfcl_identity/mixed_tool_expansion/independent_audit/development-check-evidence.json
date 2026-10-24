@@ -1,0 +1,2017 @@
+{
+  "status": "complete_artifact_checks_pass",
+  "created_at": 1792543502.098815,
+  "manifest_count": 168,
+  "counts": {
+    "native_requests": 1796,
+    "graph_payload_checks": 144,
+    "official_scores_recomputed": 168,
+    "direct_codec_decodes": 72,
+    "shared_semantic_pairs": 72,
+    "identity_runs": 24
+  },
+  "failures": [],
+  "pending": [],
+  "results": [
+    {
+      "task": "multi_turn_base_0",
+      "seed": 1103,
+      "label": "dedup-baseline",
+      "passed": false,
+      "live_requests": 9,
+      "first_input": 10208,
+      "mean_post_input": 10553.333333333334,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 1103,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 10,
+      "first_input": 9979,
+      "mean_post_input": 10412.8,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 1103,
+      "label": "event-baseline",
+      "passed": false,
+      "live_requests": 11,
+      "first_input": 11171,
+      "mean_post_input": 11571.272727272728,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 1103,
+      "label": "event-optimized",
+      "passed": true,
+      "live_requests": 10,
+      "first_input": 10864,
+      "mean_post_input": 11297.4,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 1103,
+      "label": "identity",
+      "passed": true,
+      "live_requests": 22,
+      "first_input": 6036,
+      "mean_post_input": 6333.333333333333,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 1103,
+      "label": "state-baseline",
+      "passed": true,
+      "live_requests": 8,
+      "first_input": 8942,
+      "mean_post_input": 9229.375,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 1103,
+      "label": "state-optimized",
+      "passed": true,
+      "live_requests": 9,
+      "first_input": 8550,
+      "mean_post_input": 8873.888888888889,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 2207,
+      "label": "dedup-baseline",
+      "passed": false,
+      "live_requests": 11,
+      "first_input": 10401,
+      "mean_post_input": 10927.727272727272,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 2207,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 12,
+      "first_input": 10109,
+      "mean_post_input": 10615.5,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 2207,
+      "label": "event-baseline",
+      "passed": false,
+      "live_requests": 10,
+      "first_input": 11543,
+      "mean_post_input": 12116.3,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 2207,
+      "label": "event-optimized",
+      "passed": true,
+      "live_requests": 8,
+      "first_input": 11195,
+      "mean_post_input": 11588.375,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 2207,
+      "label": "identity",
+      "passed": false,
+      "live_requests": 22,
+      "first_input": 5891,
+      "mean_post_input": 6422,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 2207,
+      "label": "state-baseline",
+      "passed": true,
+      "live_requests": 9,
+      "first_input": 9032,
+      "mean_post_input": 9806.333333333334,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 2207,
+      "label": "state-optimized",
+      "passed": true,
+      "live_requests": 13,
+      "first_input": 8593,
+      "mean_post_input": 9228.153846153846,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 3301,
+      "label": "dedup-baseline",
+      "passed": true,
+      "live_requests": 9,
+      "first_input": 9481,
+      "mean_post_input": 9831.111111111111,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 3301,
+      "label": "dedup-optimized",
+      "passed": true,
+      "live_requests": 11,
+      "first_input": 9305,
+      "mean_post_input": 9734.545454545454,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 3301,
+      "label": "event-baseline",
+      "passed": false,
+      "live_requests": 9,
+      "first_input": 10354,
+      "mean_post_input": 10693.888888888889,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 3301,
+      "label": "event-optimized",
+      "passed": false,
+      "live_requests": 8,
+      "first_input": 10049,
+      "mean_post_input": 10327.25,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 3301,
+      "label": "identity",
+      "passed": false,
+      "live_requests": 18,
+      "first_input": 5881,
+      "mean_post_input": 6097.5,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 3301,
+      "label": "state-baseline",
+      "passed": true,
+      "live_requests": 11,
+      "first_input": 8456,
+      "mean_post_input": 8821.545454545454,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 3301,
+      "label": "state-optimized",
+      "passed": false,
+      "live_requests": 8,
+      "first_input": 8144,
+      "mean_post_input": 8468.125,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 1103,
+      "label": "dedup-baseline",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 6993,
+      "mean_post_input": 7067.5,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 1103,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 1,
+      "first_input": 7091,
+      "mean_post_input": 7091,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 1103,
+      "label": "event-baseline",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 7327,
+      "mean_post_input": 7378,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 1103,
+      "label": "event-optimized",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 7260,
+      "mean_post_input": 7646.666666666667,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 1103,
+      "label": "identity",
+      "passed": true,
+      "live_requests": 10,
+      "first_input": 5146,
+      "mean_post_input": 5228,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 1103,
+      "label": "state-baseline",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 6882,
+      "mean_post_input": 6946.5,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 1103,
+      "label": "state-optimized",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 6803,
+      "mean_post_input": 6854,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 2207,
+      "label": "dedup-baseline",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 7144,
+      "mean_post_input": 7209,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 2207,
+      "label": "dedup-optimized",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 7242,
+      "mean_post_input": 7305,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 2207,
+      "label": "event-baseline",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 7478,
+      "mean_post_input": 7529,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 2207,
+      "label": "event-optimized",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 7411,
+      "mean_post_input": 7481,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 2207,
+      "label": "identity",
+      "passed": true,
+      "live_requests": 11,
+      "first_input": 5157,
+      "mean_post_input": 5221.5,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 2207,
+      "label": "state-baseline",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 7033,
+      "mean_post_input": 7097.5,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 2207,
+      "label": "state-optimized",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 6954,
+      "mean_post_input": 7005,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 3301,
+      "label": "dedup-baseline",
+      "passed": false,
+      "live_requests": 6,
+      "first_input": 6739,
+      "mean_post_input": 6867.166666666667,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 3301,
+      "label": "dedup-optimized",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 6832,
+      "mean_post_input": 6969.666666666667,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 3301,
+      "label": "event-baseline",
+      "passed": true,
+      "live_requests": 5,
+      "first_input": 7029,
+      "mean_post_input": 7146.4,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 3301,
+      "label": "event-optimized",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 6922,
+      "mean_post_input": 7033,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 3301,
+      "label": "identity",
+      "passed": true,
+      "live_requests": 11,
+      "first_input": 5141,
+      "mean_post_input": 5258,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 3301,
+      "label": "state-baseline",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 6564,
+      "mean_post_input": 6675,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 3301,
+      "label": "state-optimized",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 6506,
+      "mean_post_input": 6617,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 1103,
+      "label": "dedup-baseline",
+      "passed": true,
+      "live_requests": 4,
+      "first_input": 9245,
+      "mean_post_input": 9505.25,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 1103,
+      "label": "dedup-optimized",
+      "passed": true,
+      "live_requests": 6,
+      "first_input": 9215,
+      "mean_post_input": 9502.666666666666,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 1103,
+      "label": "event-baseline",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 9718,
+      "mean_post_input": 9885,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 1103,
+      "label": "event-optimized",
+      "passed": true,
+      "live_requests": 4,
+      "first_input": 9509,
+      "mean_post_input": 9777.25,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 1103,
+      "label": "identity",
+      "passed": true,
+      "live_requests": 13,
+      "first_input": 6562,
+      "mean_post_input": 6755.333333333333,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 1103,
+      "label": "state-baseline",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 8404,
+      "mean_post_input": 8570,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 1103,
+      "label": "state-optimized",
+      "passed": true,
+      "live_requests": 4,
+      "first_input": 8190,
+      "mean_post_input": 8371.5,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 2207,
+      "label": "dedup-baseline",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 8882,
+      "mean_post_input": 9081.333333333334,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 2207,
+      "label": "dedup-optimized",
+      "passed": true,
+      "live_requests": 6,
+      "first_input": 8886,
+      "mean_post_input": 9151.333333333334,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 2207,
+      "label": "event-baseline",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 9327,
+      "mean_post_input": 9499,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 2207,
+      "label": "event-optimized",
+      "passed": true,
+      "live_requests": 4,
+      "first_input": 9138,
+      "mean_post_input": 9404.25,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 2207,
+      "label": "identity",
+      "passed": false,
+      "live_requests": 12,
+      "first_input": 6516,
+      "mean_post_input": 6812,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 2207,
+      "label": "state-baseline",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 8110,
+      "mean_post_input": 8292.666666666666,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 2207,
+      "label": "state-optimized",
+      "passed": true,
+      "live_requests": 4,
+      "first_input": 7940,
+      "mean_post_input": 8429.25,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 3301,
+      "label": "dedup-baseline",
+      "passed": false,
+      "live_requests": 2,
+      "first_input": 8690,
+      "mean_post_input": 8800,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 3301,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 3,
+      "first_input": 8721,
+      "mean_post_input": 8791.666666666666,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 3301,
+      "label": "event-baseline",
+      "passed": false,
+      "live_requests": 2,
+      "first_input": 9089,
+      "mean_post_input": 9121,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 3301,
+      "label": "event-optimized",
+      "passed": false,
+      "live_requests": 2,
+      "first_input": 8862,
+      "mean_post_input": 8894,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 3301,
+      "label": "identity",
+      "passed": false,
+      "live_requests": 11,
+      "first_input": 6566,
+      "mean_post_input": 6604,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 3301,
+      "label": "state-baseline",
+      "passed": false,
+      "live_requests": 2,
+      "first_input": 7907,
+      "mean_post_input": 7939,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 3301,
+      "label": "state-optimized",
+      "passed": false,
+      "live_requests": 2,
+      "first_input": 7781,
+      "mean_post_input": 7813,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 1103,
+      "label": "dedup-baseline",
+      "passed": false,
+      "live_requests": 16,
+      "first_input": 8165,
+      "mean_post_input": 8619.3125,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 1103,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 16,
+      "first_input": 8162,
+      "mean_post_input": 8926.625,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 1103,
+      "label": "event-baseline",
+      "passed": false,
+      "live_requests": 15,
+      "first_input": 8787,
+      "mean_post_input": 9247.666666666666,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 1103,
+      "label": "event-optimized",
+      "passed": false,
+      "live_requests": 15,
+      "first_input": 8506,
+      "mean_post_input": 8993.8,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 1103,
+      "label": "identity",
+      "passed": false,
+      "live_requests": 27,
+      "first_input": 5544,
+      "mean_post_input": 6030.333333333333,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 1103,
+      "label": "state-baseline",
+      "passed": false,
+      "live_requests": 15,
+      "first_input": 7303,
+      "mean_post_input": 7720.2,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 1103,
+      "label": "state-optimized",
+      "passed": false,
+      "live_requests": 24,
+      "first_input": 7127,
+      "mean_post_input": 7830.708333333333,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 2207,
+      "label": "dedup-baseline",
+      "passed": false,
+      "live_requests": 17,
+      "first_input": 7915,
+      "mean_post_input": 8429.70588235294,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 2207,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 16,
+      "first_input": 7939,
+      "mean_post_input": 8647.1875,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 2207,
+      "label": "event-baseline",
+      "passed": false,
+      "live_requests": 17,
+      "first_input": 8529,
+      "mean_post_input": 9042.411764705883,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 2207,
+      "label": "event-optimized",
+      "passed": false,
+      "live_requests": 18,
+      "first_input": 8260,
+      "mean_post_input": 8807.277777777777,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 2207,
+      "label": "identity",
+      "passed": false,
+      "live_requests": 24,
+      "first_input": 5416,
+      "mean_post_input": 5897.7692307692305,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 2207,
+      "label": "state-baseline",
+      "passed": false,
+      "live_requests": 15,
+      "first_input": 7072,
+      "mean_post_input": 8013.6,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 2207,
+      "label": "state-optimized",
+      "passed": false,
+      "live_requests": 13,
+      "first_input": 6945,
+      "mean_post_input": 7328,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 3301,
+      "label": "dedup-baseline",
+      "passed": false,
+      "live_requests": 21,
+      "first_input": 7738,
+      "mean_post_input": 9123.42857142857,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 3301,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 28,
+      "first_input": 7639,
+      "mean_post_input": 9907.857142857143,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 3301,
+      "label": "event-baseline",
+      "passed": false,
+      "live_requests": 24,
+      "first_input": 8279,
+      "mean_post_input": 10342.166666666666,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 3301,
+      "label": "event-optimized",
+      "passed": false,
+      "live_requests": 23,
+      "first_input": 8076,
+      "mean_post_input": 10006.304347826086,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 3301,
+      "label": "identity",
+      "passed": false,
+      "live_requests": 27,
+      "first_input": 5390,
+      "mean_post_input": 6928.631578947368,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 3301,
+      "label": "state-baseline",
+      "passed": false,
+      "live_requests": 16,
+      "first_input": 7111,
+      "mean_post_input": 8134.125,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 3301,
+      "label": "state-optimized",
+      "passed": false,
+      "live_requests": 26,
+      "first_input": 6866,
+      "mean_post_input": 8628.961538461539,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 1103,
+      "label": "dedup-baseline",
+      "passed": true,
+      "live_requests": 14,
+      "first_input": 11312,
+      "mean_post_input": 13829.92857142857,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 1103,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 13,
+      "first_input": 9999,
+      "mean_post_input": 11901.615384615385,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 1103,
+      "label": "event-baseline",
+      "passed": true,
+      "live_requests": 20,
+      "first_input": 13002,
+      "mean_post_input": 15949.2,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 1103,
+      "label": "event-optimized",
+      "passed": true,
+      "live_requests": 15,
+      "first_input": 10278,
+      "mean_post_input": 12437.2,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 1103,
+      "label": "identity",
+      "passed": false,
+      "live_requests": 24,
+      "first_input": 5885,
+      "mean_post_input": 8524.4,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 1103,
+      "label": "state-baseline",
+      "passed": false,
+      "live_requests": 12,
+      "first_input": 8945,
+      "mean_post_input": 9858.416666666666,
+      "official_error_type": "multi_turn:empty_turn_model_response"
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 1103,
+      "label": "state-optimized",
+      "passed": true,
+      "live_requests": 13,
+      "first_input": 7857,
+      "mean_post_input": 9579.461538461539,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 2207,
+      "label": "dedup-baseline",
+      "passed": true,
+      "live_requests": 16,
+      "first_input": 11356,
+      "mean_post_input": 14355.75,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 2207,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 15,
+      "first_input": 10043,
+      "mean_post_input": 12826.333333333334,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 2207,
+      "label": "event-baseline",
+      "passed": true,
+      "live_requests": 13,
+      "first_input": 13110,
+      "mean_post_input": 14457.692307692309,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 2207,
+      "label": "event-optimized",
+      "passed": true,
+      "live_requests": 16,
+      "first_input": 10323,
+      "mean_post_input": 11860.25,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 2207,
+      "label": "identity",
+      "passed": false,
+      "live_requests": 18,
+      "first_input": 5893,
+      "mean_post_input": 8300.785714285714,
+      "official_error_type": "multi_turn:empty_turn_model_response"
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 2207,
+      "label": "state-baseline",
+      "passed": true,
+      "live_requests": 15,
+      "first_input": 9019,
+      "mean_post_input": 11134.333333333334,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 2207,
+      "label": "state-optimized",
+      "passed": true,
+      "live_requests": 14,
+      "first_input": 7900,
+      "mean_post_input": 9584.857142857143,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 3301,
+      "label": "dedup-baseline",
+      "passed": true,
+      "live_requests": 14,
+      "first_input": 11306,
+      "mean_post_input": 14235.357142857143,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 3301,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 14,
+      "first_input": 9993,
+      "mean_post_input": 11722.92857142857,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 3301,
+      "label": "event-baseline",
+      "passed": true,
+      "live_requests": 13,
+      "first_input": 12996,
+      "mean_post_input": 14642.923076923076,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 3301,
+      "label": "event-optimized",
+      "passed": true,
+      "live_requests": 14,
+      "first_input": 10272,
+      "mean_post_input": 12126.142857142857,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 3301,
+      "label": "identity",
+      "passed": false,
+      "live_requests": 21,
+      "first_input": 5879,
+      "mean_post_input": 7948.764705882353,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 3301,
+      "label": "state-baseline",
+      "passed": true,
+      "live_requests": 13,
+      "first_input": 8939,
+      "mean_post_input": 10451.307692307691,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 3301,
+      "label": "state-optimized",
+      "passed": true,
+      "live_requests": 13,
+      "first_input": 7851,
+      "mean_post_input": 9348.307692307691,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 1103,
+      "label": "dedup-baseline",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 6993,
+      "mean_post_input": 7067.5,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 1103,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 1,
+      "first_input": 7091,
+      "mean_post_input": 7091,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 1103,
+      "label": "event-baseline",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 7327,
+      "mean_post_input": 7378,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 1103,
+      "label": "event-optimized",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 7260,
+      "mean_post_input": 7646.666666666667,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 1103,
+      "label": "identity",
+      "passed": true,
+      "live_requests": 10,
+      "first_input": 5146,
+      "mean_post_input": 5228,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 1103,
+      "label": "state-baseline",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 6882,
+      "mean_post_input": 6946.5,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 1103,
+      "label": "state-optimized",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 6803,
+      "mean_post_input": 6854,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 2207,
+      "label": "dedup-baseline",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 7144,
+      "mean_post_input": 7209,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 2207,
+      "label": "dedup-optimized",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 7242,
+      "mean_post_input": 7305,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 2207,
+      "label": "event-baseline",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 7478,
+      "mean_post_input": 7529,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 2207,
+      "label": "event-optimized",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 7411,
+      "mean_post_input": 7481,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 2207,
+      "label": "identity",
+      "passed": true,
+      "live_requests": 11,
+      "first_input": 5157,
+      "mean_post_input": 5221.5,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 2207,
+      "label": "state-baseline",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 7033,
+      "mean_post_input": 7097.5,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 2207,
+      "label": "state-optimized",
+      "passed": true,
+      "live_requests": 2,
+      "first_input": 6954,
+      "mean_post_input": 7005,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 3301,
+      "label": "dedup-baseline",
+      "passed": false,
+      "live_requests": 6,
+      "first_input": 6739,
+      "mean_post_input": 6867.166666666667,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 3301,
+      "label": "dedup-optimized",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 6832,
+      "mean_post_input": 6969.666666666667,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 3301,
+      "label": "event-baseline",
+      "passed": true,
+      "live_requests": 5,
+      "first_input": 7029,
+      "mean_post_input": 7146.4,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 3301,
+      "label": "event-optimized",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 6922,
+      "mean_post_input": 7033,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 3301,
+      "label": "identity",
+      "passed": true,
+      "live_requests": 11,
+      "first_input": 5141,
+      "mean_post_input": 5258,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 3301,
+      "label": "state-baseline",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 6564,
+      "mean_post_input": 6675,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 3301,
+      "label": "state-optimized",
+      "passed": true,
+      "live_requests": 3,
+      "first_input": 6506,
+      "mean_post_input": 6617,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 1103,
+      "label": "dedup-baseline",
+      "passed": false,
+      "live_requests": 9,
+      "first_input": 11275,
+      "mean_post_input": 11787.555555555555,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 1103,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 9,
+      "first_input": 10013,
+      "mean_post_input": 10528.333333333334,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 1103,
+      "label": "event-baseline",
+      "passed": false,
+      "live_requests": 9,
+      "first_input": 12779,
+      "mean_post_input": 13300.666666666666,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 1103,
+      "label": "event-optimized",
+      "passed": false,
+      "live_requests": 9,
+      "first_input": 10200,
+      "mean_post_input": 10725.555555555555,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 1103,
+      "label": "identity",
+      "passed": false,
+      "live_requests": 14,
+      "first_input": 6566,
+      "mean_post_input": 7226.6,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 1103,
+      "label": "state-baseline",
+      "passed": false,
+      "live_requests": 9,
+      "first_input": 9290,
+      "mean_post_input": 9781.222222222223,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 1103,
+      "label": "state-optimized",
+      "passed": false,
+      "live_requests": 9,
+      "first_input": 9291,
+      "mean_post_input": 9785.222222222223,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 2207,
+      "label": "dedup-baseline",
+      "passed": true,
+      "live_requests": 9,
+      "first_input": 10845,
+      "mean_post_input": 11299.444444444445,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 2207,
+      "label": "dedup-optimized",
+      "passed": true,
+      "live_requests": 10,
+      "first_input": 9650,
+      "mean_post_input": 10089.9,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 2207,
+      "label": "event-baseline",
+      "passed": true,
+      "live_requests": 9,
+      "first_input": 12329,
+      "mean_post_input": 12758.555555555555,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 2207,
+      "label": "event-optimized",
+      "passed": true,
+      "live_requests": 9,
+      "first_input": 9804,
+      "mean_post_input": 10255.111111111111,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 2207,
+      "label": "identity",
+      "passed": true,
+      "live_requests": 12,
+      "first_input": 6413,
+      "mean_post_input": 6871,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 2207,
+      "label": "state-baseline",
+      "passed": true,
+      "live_requests": 9,
+      "first_input": 8935,
+      "mean_post_input": 9372.555555555555,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 2207,
+      "label": "state-optimized",
+      "passed": true,
+      "live_requests": 9,
+      "first_input": 8999,
+      "mean_post_input": 9422.111111111111,
+      "official_error_type": null
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 3301,
+      "label": "dedup-baseline",
+      "passed": false,
+      "live_requests": 2,
+      "first_input": 8690,
+      "mean_post_input": 8800,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 3301,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 3,
+      "first_input": 8721,
+      "mean_post_input": 8791.666666666666,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 3301,
+      "label": "event-baseline",
+      "passed": false,
+      "live_requests": 2,
+      "first_input": 9089,
+      "mean_post_input": 9121,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 3301,
+      "label": "event-optimized",
+      "passed": false,
+      "live_requests": 2,
+      "first_input": 8862,
+      "mean_post_input": 8894,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 3301,
+      "label": "identity",
+      "passed": false,
+      "live_requests": 11,
+      "first_input": 6566,
+      "mean_post_input": 6604,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 3301,
+      "label": "state-baseline",
+      "passed": false,
+      "live_requests": 2,
+      "first_input": 7907,
+      "mean_post_input": 7939,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 3301,
+      "label": "state-optimized",
+      "passed": false,
+      "live_requests": 2,
+      "first_input": 7781,
+      "mean_post_input": 7813,
+      "official_error_type": "multi_turn:execution_response_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 1103,
+      "label": "dedup-baseline",
+      "passed": false,
+      "live_requests": 16,
+      "first_input": 8419,
+      "mean_post_input": 10706.25,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 1103,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 22,
+      "first_input": 8416,
+      "mean_post_input": 11145.5,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 1103,
+      "label": "event-baseline",
+      "passed": false,
+      "live_requests": 14,
+      "first_input": 9041,
+      "mean_post_input": 10823.785714285714,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 1103,
+      "label": "event-optimized",
+      "passed": false,
+      "live_requests": 15,
+      "first_input": 8760,
+      "mean_post_input": 11150.333333333334,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 1103,
+      "label": "identity",
+      "passed": false,
+      "live_requests": 24,
+      "first_input": 5836,
+      "mean_post_input": 7456.2307692307695,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 1103,
+      "label": "state-baseline",
+      "passed": false,
+      "live_requests": 18,
+      "first_input": 7557,
+      "mean_post_input": 9711.666666666666,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 1103,
+      "label": "state-optimized",
+      "passed": false,
+      "live_requests": 14,
+      "first_input": 7381,
+      "mean_post_input": 8815,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 2207,
+      "label": "dedup-baseline",
+      "passed": false,
+      "live_requests": 27,
+      "first_input": 8119,
+      "mean_post_input": 10162.222222222223,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 2207,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 16,
+      "first_input": 8143,
+      "mean_post_input": 9779.3125,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 2207,
+      "label": "event-baseline",
+      "passed": false,
+      "live_requests": 23,
+      "first_input": 8733,
+      "mean_post_input": 10400.521739130434,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 2207,
+      "label": "event-optimized",
+      "passed": false,
+      "live_requests": 19,
+      "first_input": 8464,
+      "mean_post_input": 12028.78947368421,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 2207,
+      "label": "identity",
+      "passed": false,
+      "live_requests": 26,
+      "first_input": 5670,
+      "mean_post_input": 6909.75,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 2207,
+      "label": "state-baseline",
+      "passed": false,
+      "live_requests": 17,
+      "first_input": 7276,
+      "mean_post_input": 8761.941176470587,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 2207,
+      "label": "state-optimized",
+      "passed": false,
+      "live_requests": 17,
+      "first_input": 7149,
+      "mean_post_input": 8711.411764705883,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 3301,
+      "label": "dedup-baseline",
+      "passed": false,
+      "live_requests": 17,
+      "first_input": 7738,
+      "mean_post_input": 10204.35294117647,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 3301,
+      "label": "dedup-optimized",
+      "passed": false,
+      "live_requests": 22,
+      "first_input": 7639,
+      "mean_post_input": 11097.818181818182,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 3301,
+      "label": "event-baseline",
+      "passed": false,
+      "live_requests": 17,
+      "first_input": 8279,
+      "mean_post_input": 10843.941176470587,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 3301,
+      "label": "event-optimized",
+      "passed": false,
+      "live_requests": 20,
+      "first_input": 8076,
+      "mean_post_input": 11019.75,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 3301,
+      "label": "identity",
+      "passed": false,
+      "live_requests": 25,
+      "first_input": 5390,
+      "mean_post_input": 7996.176470588235,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 3301,
+      "label": "state-baseline",
+      "passed": false,
+      "live_requests": 20,
+      "first_input": 7111,
+      "mean_post_input": 9981.55,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 3301,
+      "label": "state-optimized",
+      "passed": false,
+      "live_requests": 21,
+      "first_input": 6866,
+      "mean_post_input": 9480.333333333334,
+      "official_error_type": "multi_turn:instance_state_mismatch"
+    }
+  ],
+  "exposure": [
+    {
+      "task": "multi_turn_base_0",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 14
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 21
+      }
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 16
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 22
+      }
+    },
+    {
+      "task": "multi_turn_base_0",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 12
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 16
+      }
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_base_14",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 2
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 9
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 9,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 8
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 9
+      }
+    },
+    {
+      "task": "multi_turn_base_15",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 7
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 9
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 22
+      }
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 8
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 19
+      }
+    },
+    {
+      "task": "multi_turn_base_2",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 7
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 23
+      }
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 5
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 22
+      }
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 5
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 16
+      }
+    },
+    {
+      "task": "multi_turn_long_context_0",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 5
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 18
+      }
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 3
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_long_context_14",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 2
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 4,
+        "MessageAPI": 4
+      }
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 3
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 10,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 2
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 8,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_15",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 7
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 7,
+        "MathAPI": 1
+      }
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 1103,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 9
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 21
+      }
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 2207,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 8
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 21
+      }
+    },
+    {
+      "task": "multi_turn_long_context_2",
+      "seed": 3301,
+      "triggered": true,
+      "prefix_calls": {
+        "GorillaFileSystem": 7
+      },
+      "all_identity_calls": {
+        "GorillaFileSystem": 23
+      }
+    }
+  ],
+  "identity_nonfilesystem_execution_count": 11,
+  "identity_nonfilesystem_prefix_count": 6,
+  "frozen_gate": {
+    "snapshot_hashes_sha256": "f668a3d891c64c325dc0850306daa472347471681bc8c06abc29a697801684fb",
+    "task_split_sha256": "86c832c75efa45b3d180bfbbbaedc56413271f018f998c28be101c0c9abe3a85",
+    "selection_sha256": "26255447f21070503ae0fa4d68f7897545341ebd0f69be3fa38253785409d237",
+    "vendor_pins_sha256": "5ee16bf59a6cdec16cd51a6d582ea18f74ccd121ddefb6f748e71370be0ce04a",
+    "protocol_sha256": "fe0ce7f8a038385461339f870e81a2701a53eecdf5742d934db8804a71114929"
+  },
+  "development_manifest_sha256": "47c3d7cc4901ffa6e7944e4765891f781052b0f40ece3d3918d855b7c10bc5cf",
+  "controller_state": {
+    "pid": 1641596,
+    "status": "running",
+    "stage": "waiting_for_independent_development_review",
+    "started_at": 1792536292.568296,
+    "completed_jobs": 168,
+    "stages": [
+      "development_complete"
+    ],
+    "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1",
+    "frozen_inputs": {
+      "snapshot_hashes_sha256": "f668a3d891c64c325dc0850306daa472347471681bc8c06abc29a697801684fb",
+      "task_split_sha256": "86c832c75efa45b3d180bfbbbaedc56413271f018f998c28be101c0c9abe3a85",
+      "selection_sha256": "26255447f21070503ae0fa4d68f7897545341ebd0f69be3fa38253785409d237",
+      "vendor_pins_sha256": "5ee16bf59a6cdec16cd51a6d582ea18f74ccd121ddefb6f748e71370be0ce04a",
+      "protocol_sha256": "fe0ce7f8a038385461339f870e81a2701a53eecdf5742d934db8804a71114929"
+    },
+    "updated_at": 1792543478.3408687,
+    "current": {
+      "task": "multi_turn_long_context_15",
+      "seed": 3301,
+      "method": "dedup",
+      "optimized": true,
+      "destination": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed3301/dedup-optimized"
+    },
+    "last_completed": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed3301/dedup-optimized"
+  }
+}

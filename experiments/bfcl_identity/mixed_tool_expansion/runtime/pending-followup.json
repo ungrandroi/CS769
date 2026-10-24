@@ -1,0 +1,4 @@
+{
+  "status": "independent_final_audit_required",
+  "instructions": "Verify semantics, payloads, official scores and paired statistics independently. Do not call automatic checks final independent review."
+}

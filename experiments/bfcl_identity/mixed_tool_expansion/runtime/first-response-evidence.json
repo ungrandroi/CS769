@@ -1,0 +1,20 @@
+{
+  "observed_at": 1792536313.0962398,
+  "controller_pid": 1641596,
+  "task": "multi_turn_base_0",
+  "seed": 1103,
+  "stage": "development",
+  "input_tokens": 4899,
+  "working_tokens": 28,
+  "usage": {
+    "completion_tokens": 44,
+    "prompt_tokens": 4899,
+    "total_tokens": 4943,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "response_id": "chatcmpl-9BDvboNrCR4YOAdP54yXFtT7rv0I0GSO",
+  "model": "bfcl-qwen38-27b",
+  "fresh_evaluation_started": false
+}

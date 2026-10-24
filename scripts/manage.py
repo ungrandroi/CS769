@@ -7,12 +7,18 @@ COMMANDS = {
     ('run', 'baseline'): ('workflows.baseline_batch', 'main'),
     ('run', 'dedup'): ('workflows.dedup_batch', 'main'),
     ('run', 'history1000'): ('workflows.history_batch', 'main'),
+    ('run', 'lossless'): ('workflows.lossless_controller', 'main'),
     ('audit', 'baseline'): ('workflows.baseline_audit', 'summarize'),
     ('audit', 'dedup'): ('workflows.dedup_audit', 'main'),
     ('audit', 'history1000'): ('workflows.history_audit', 'main'),
+    ('audit', 'lossless'): ('workflows.lossless_audit', 'main'),
+    ('report', 'lossless'): ('workflows.lossless_report', 'main'),
+    ('analyze', 'lossless'): ('workflows.lossless_analysis', 'main'),
+    ('guard', 'lossless'): ('workflows.lossless_resume_guard', 'main'),
     ('task', 'baseline'): ('workflows.baseline_task', 'main'),
     ('task', 'dedup'): ('workflows.dedup_task', 'main'),
     ('task', 'history1000'): ('workflows.history_task', 'main'),
+    ('task', 'lossless'): ('workflows.lossless_task', 'main'),
     ('checkpoints',): ('workflows.checkpoints', 'main'),
     ('probe', 'dedup'): ('workflows.dedup_probe', 'main'),
     ('reports',): ('workflows.reports', 'main'),
@@ -25,10 +31,16 @@ Usage: scripts/bfcl_python.sh scripts/manage.py COMMAND [OPTIONS]
 
   run baseline|dedup|history1000      Run a batch (--prepare-only, --output DIR)
   audit baseline|dedup|history1000    Validate records and write audit reports
+  run lossless                      Run the registered lossless-codec study
+  audit lossless                    Validate lossless records (--root, --output)
+  report lossless                   Rebuild the lossless descriptive summary
+  analyze lossless                  Rebuild paired statistics and request CSVs
+  guard lossless                    Validate a stopped study before resumption
   checkpoints                       Prepare pure 1000-token checkpoints
   probe dedup                       Offline Event Graph-Dedup roundtrip study
   reports                           Render reports with current method names
-  task baseline|dedup|history1000    Run one task (used by batch workers)
+  task baseline|dedup|history1000|lossless
+                                    Run one task (used by batch workers)
   bfcl ...                          Forward arguments to the official BFCL CLI
 
 Example: scripts/bfcl_python.sh scripts/manage.py run history1000 --prepare-only --output /tmp/history-check

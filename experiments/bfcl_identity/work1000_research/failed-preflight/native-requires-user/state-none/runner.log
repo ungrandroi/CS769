@@ -1,0 +1,73 @@
+Traceback (most recent call last):
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v2/scripts/workflows/work1000_task.py", line 273, in <module>
+    main()
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v2/scripts/workflows/work1000_task.py", line 253, in main
+    result, metadata = handler.inference(entry, True, False)
+  File "/home/bcao44/bofeng/CS769/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/model_handler/base_handler.py", line 80, in inference
+    return self.inference_multi_turn_FC(
+  File "/home/bcao44/bofeng/CS769/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/model_handler/base_handler.py", line 220, in inference_multi_turn_FC
+    api_response, query_latency = self._query_FC(inference_data)
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v2/scripts/workflows/work1000_task.py", line 194, in query_fc
+    return query(data)
+  File "/home/bcao44/bofeng/CS769/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/model_handler/api_inference/openai_response.py", line 124, in _query_FC
+    return self.generate_with_backoff(**kwargs)
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v2/scripts/workflows/work1000_task.py", line 211, in generate
+    full_tokens = template_count(args.base_url, body, tok)
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v2/scripts/workflows/work1000_task.py", line 43, in template_count
+    rendered = post(base, '/apply-template', body)
+  File "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v2/scripts/workflows/work1000_task.py", line 31, in post
+    with urllib.request.urlopen(request, timeout=3600) as response:
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/urllib/request.py", line 525, in open
+    response = meth(req, response)
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/home/bcao44/bofeng/CS769/.conda/bfcl/lib/python3.10/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 500: Internal Server Error
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 0, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 0, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 0, Step: 2
+Failed to decode the model response. Proceed to next turn.
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 0
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 1
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 2
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 3
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 4
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 5
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 6
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 7
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 8
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 9
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 10
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 11
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 12
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 13
+----------------------------------------------------------------------------------------------------
+ID: base_9, Turn: 1, Step: 14

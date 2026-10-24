@@ -1,0 +1,105 @@
+{
+  "status": "amendment_preflight_pass",
+  "audit_kind": "development-amendment preflight, not final audit",
+  "checked_at": 1792496768.990577,
+  "snapshot_diffs": [
+    "scripts/workflows/lossless_audit.py",
+    "scripts/workflows/lossless_controller.py"
+  ],
+  "added_scripts": [
+    "scripts/workflows/lossless_analysis.py",
+    "scripts/workflows/lossless_postprocess.py",
+    "scripts/workflows/lossless_resume_guard.py"
+  ],
+  "additional_configurations": [
+    {
+      "method": "event",
+      "module": "core.lossless_event",
+      "variant": "tables-v1",
+      "explanation": "minimal",
+      "label": "event-tables-v1-minimal"
+    },
+    {
+      "method": "event",
+      "module": "core.lossless_event",
+      "variant": "shared-v1",
+      "explanation": "minimal",
+      "label": "event-shared-v1-minimal"
+    },
+    {
+      "method": "dedup",
+      "module": "core.lossless_event",
+      "variant": "tables-v1",
+      "explanation": "minimal",
+      "label": "dedup-tables-v1-minimal"
+    },
+    {
+      "method": "dedup",
+      "module": "core.lossless_event",
+      "variant": "shared-v1",
+      "explanation": "minimal",
+      "label": "dedup-shared-v1-minimal"
+    }
+  ],
+  "reused_completed_attempts": 65,
+  "v1_hashes_verified": 42,
+  "v2_hashes_verified": 45,
+  "guard_pass_before_launch": true,
+  "previous_child_finished_before_launch": true,
+  "model_path_and_codec_hashes_unchanged": true,
+  "selection_rule_unchanged": true,
+  "fresh_evaluation_absent": true,
+  "controller_v2_launch": {
+    "pid": 1938875,
+    "command": [
+      "/home/bcao44/bofeng/CS769/.conda/bfcl/bin/python",
+      "-m",
+      "workflows.lossless_controller",
+      "--root",
+      "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1",
+      "--project",
+      "/home/bcao44/bofeng/CS769",
+      "--snapshot-label",
+      "candidates-v2",
+      "--registry-name",
+      "candidate-registry-v2.json",
+      "--explanation-controls",
+      "short-and-baseline"
+    ],
+    "cwd": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v2",
+    "pythonpath": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v2/scripts",
+    "started_at": 1792496728.1940742,
+    "persistent": "start_new_session; DEVNULL stdin; file logs",
+    "supersedes_pid": 1776006,
+    "current_task_preserved": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_3/seed2207/state-state-shared-v1-minimal",
+    "resume_guard": "65 completed attempts verified"
+  },
+  "notes": [
+    "A read-only guard rerun attempted after v2 already resumed correctly rejected the newly running attempt; it did not alter any artifact. Use the recorded prelaunch guard pass.",
+    "This is a transparently adaptive development-grid amendment motivated by State development outcomes, not original preregistration.",
+    "No direct host process inspection in audit sandbox; acquired lock and progress corroborate successful handoff, alongside runner launch records."
+  ],
+  "amendment_hashes_verified": 3,
+  "old_controller_final_record": {
+    "pid": 1776006,
+    "started_at": 1792493819.9043248,
+    "status": "superseded_after_current_task_completed",
+    "completed_jobs": 64,
+    "stages": [
+      "development:state-state-tables-v1-none",
+      "development:state-state-tables-v1-minimal",
+      "development:state-state-shared-v1-none"
+    ],
+    "stage": "development_candidates",
+    "updated_at": 1792496643.5890522,
+    "current": {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "label": "state-state-shared-v1-minimal",
+      "destination": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_3/seed2207/state-state-shared-v1-minimal"
+    },
+    "last_completed": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_3/seed1103/state-state-shared-v1-minimal",
+    "superseded_at": 1792496728.1932132,
+    "reason": "Add preregistered short explanation development controls; no model task interrupted"
+  }
+}

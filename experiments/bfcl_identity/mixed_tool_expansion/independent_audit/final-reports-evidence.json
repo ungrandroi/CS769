@@ -1,0 +1,1338 @@
+{
+  "status": "pass",
+  "created_at": 1792805820.4227567,
+  "summary_rows": 2079,
+  "untriggered": 147,
+  "paired_ratios": 891,
+  "per_request_rows": 15368,
+  "per_turn_rows": 4279,
+  "paired_first_request_rows": 891,
+  "decomposition_rows": 1782,
+  "cluster_statistics": {
+    "all/state/baseline": {
+      "n": 297,
+      "families": 37,
+      "gains": 15,
+      "losses": 17,
+      "unchanged": 265,
+      "success_difference": -0.006734006734006734,
+      "descriptive_exact_mcnemar_p": 0.860050065908581,
+      "family_cluster_bootstrap_95_interval": [
+        -0.05067567567567568,
+        0.03666666666666667
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "all/state/identity": {
+      "n": 297,
+      "families": 37,
+      "gains": 20,
+      "losses": 23,
+      "unchanged": 254,
+      "success_difference": -0.010101010101010102,
+      "descriptive_exact_mcnemar_p": 0.7607916425613439,
+      "family_cluster_bootstrap_95_interval": [
+        -0.07241379310344828,
+        0.04895104895104895
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "all/event/baseline": {
+      "n": 297,
+      "families": 37,
+      "gains": 18,
+      "losses": 13,
+      "unchanged": 266,
+      "success_difference": 0.016835016835016835,
+      "descriptive_exact_mcnemar_p": 0.47312965989112854,
+      "family_cluster_bootstrap_95_interval": [
+        -0.02877697841726619,
+        0.05844155844155844
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "all/event/identity": {
+      "n": 297,
+      "families": 37,
+      "gains": 24,
+      "losses": 19,
+      "unchanged": 254,
+      "success_difference": 0.016835016835016835,
+      "descriptive_exact_mcnemar_p": 0.542384011856484,
+      "family_cluster_bootstrap_95_interval": [
+        -0.040880503144654086,
+        0.07017543859649122
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "all/dedup/baseline": {
+      "n": 297,
+      "families": 37,
+      "gains": 17,
+      "losses": 33,
+      "unchanged": 247,
+      "success_difference": -0.05387205387205387,
+      "descriptive_exact_mcnemar_p": 0.032839137564268484,
+      "family_cluster_bootstrap_95_interval": [
+        -0.10989010989010989,
+        0
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "all/dedup/identity": {
+      "n": 297,
+      "families": 37,
+      "gains": 18,
+      "losses": 37,
+      "unchanged": 242,
+      "success_difference": -0.06397306397306397,
+      "descriptive_exact_mcnemar_p": 0.014453833533827731,
+      "family_cluster_bootstrap_95_interval": [
+        -0.13636363636363635,
+        0.00392156862745098
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "development_conditions/state/baseline": {
+      "n": 24,
+      "families": 4,
+      "gains": 1,
+      "losses": 2,
+      "unchanged": 21,
+      "success_difference": -0.041666666666666664,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.25,
+        0.125
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "development_conditions/state/identity": {
+      "n": 24,
+      "families": 4,
+      "gains": 4,
+      "losses": 3,
+      "unchanged": 17,
+      "success_difference": 0.041666666666666664,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.20833333333333334,
+        0.25
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "development_conditions/event/baseline": {
+      "n": 24,
+      "families": 4,
+      "gains": 1,
+      "losses": 2,
+      "unchanged": 21,
+      "success_difference": -0.041666666666666664,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.125,
+        0
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "development_conditions/event/identity": {
+      "n": 24,
+      "families": 4,
+      "gains": 4,
+      "losses": 3,
+      "unchanged": 17,
+      "success_difference": 0.041666666666666664,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.20833333333333334,
+        0.25
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "development_conditions/dedup/baseline": {
+      "n": 24,
+      "families": 4,
+      "gains": 1,
+      "losses": 4,
+      "unchanged": 19,
+      "success_difference": -0.125,
+      "descriptive_exact_mcnemar_p": 0.375,
+      "family_cluster_bootstrap_95_interval": [
+        -0.375,
+        0
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "development_conditions/dedup/identity": {
+      "n": 24,
+      "families": 4,
+      "gains": 4,
+      "losses": 7,
+      "unchanged": 13,
+      "success_difference": -0.125,
+      "descriptive_exact_mcnemar_p": 0.548828125,
+      "family_cluster_bootstrap_95_interval": [
+        -0.5,
+        0.20833333333333334
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "other_conditions/state/baseline": {
+      "n": 273,
+      "families": 37,
+      "gains": 14,
+      "losses": 15,
+      "unchanged": 244,
+      "success_difference": -0.003663003663003663,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.04597701149425287,
+        0.036544850498338874
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "other_conditions/state/identity": {
+      "n": 273,
+      "families": 37,
+      "gains": 16,
+      "losses": 20,
+      "unchanged": 237,
+      "success_difference": -0.014652014652014652,
+      "descriptive_exact_mcnemar_p": 0.617719317029696,
+      "family_cluster_bootstrap_95_interval": [
+        -0.07335907335907337,
+        0.04119850187265917
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "other_conditions/event/baseline": {
+      "n": 273,
+      "families": 37,
+      "gains": 17,
+      "losses": 11,
+      "unchanged": 245,
+      "success_difference": 0.02197802197802198,
+      "descriptive_exact_mcnemar_p": 0.34492845088243484,
+      "family_cluster_bootstrap_95_interval": [
+        -0.02857142857142857,
+        0.0683453237410072
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "other_conditions/event/identity": {
+      "n": 273,
+      "families": 37,
+      "gains": 20,
+      "losses": 16,
+      "unchanged": 237,
+      "success_difference": 0.014652014652014652,
+      "descriptive_exact_mcnemar_p": 0.617719317029696,
+      "family_cluster_bootstrap_95_interval": [
+        -0.040740740740740744,
+        0.0648854961832061
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "other_conditions/dedup/baseline": {
+      "n": 273,
+      "families": 37,
+      "gains": 16,
+      "losses": 29,
+      "unchanged": 228,
+      "success_difference": -0.047619047619047616,
+      "descriptive_exact_mcnemar_p": 0.07245426016254441,
+      "family_cluster_bootstrap_95_interval": [
+        -0.10424710424710425,
+        0.007272727272727273
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "other_conditions/dedup/identity": {
+      "n": 273,
+      "families": 37,
+      "gains": 14,
+      "losses": 30,
+      "unchanged": 229,
+      "success_difference": -0.05860805860805861,
+      "descriptive_exact_mcnemar_p": 0.022628841205914796,
+      "family_cluster_bootstrap_95_interval": [
+        -0.12811387900355872,
+        0.00749063670411985
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "development_families/state/baseline": {
+      "n": 48,
+      "families": 4,
+      "gains": 3,
+      "losses": 2,
+      "unchanged": 43,
+      "success_difference": 0.020833333333333332,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.125,
+        0.1875
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "development_families/state/identity": {
+      "n": 48,
+      "families": 4,
+      "gains": 8,
+      "losses": 3,
+      "unchanged": 37,
+      "success_difference": 0.10416666666666667,
+      "descriptive_exact_mcnemar_p": 0.2265625,
+      "family_cluster_bootstrap_95_interval": [
+        -0.08333333333333333,
+        0.2916666666666667
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "development_families/event/baseline": {
+      "n": 48,
+      "families": 4,
+      "gains": 2,
+      "losses": 2,
+      "unchanged": 44,
+      "success_difference": 0.0,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        0,
+        0
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "development_families/event/identity": {
+      "n": 48,
+      "families": 4,
+      "gains": 7,
+      "losses": 3,
+      "unchanged": 38,
+      "success_difference": 0.08333333333333333,
+      "descriptive_exact_mcnemar_p": 0.34375,
+      "family_cluster_bootstrap_95_interval": [
+        -0.08333333333333333,
+        0.25
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "development_families/dedup/baseline": {
+      "n": 48,
+      "families": 4,
+      "gains": 2,
+      "losses": 5,
+      "unchanged": 41,
+      "success_difference": -0.0625,
+      "descriptive_exact_mcnemar_p": 0.453125,
+      "family_cluster_bootstrap_95_interval": [
+        -0.1875,
+        0
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "development_families/dedup/identity": {
+      "n": 48,
+      "families": 4,
+      "gains": 5,
+      "losses": 7,
+      "unchanged": 36,
+      "success_difference": -0.041666666666666664,
+      "descriptive_exact_mcnemar_p": 0.7744140625,
+      "family_cluster_bootstrap_95_interval": [
+        -0.25,
+        0.16666666666666666
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "other_families/state/baseline": {
+      "n": 249,
+      "families": 33,
+      "gains": 12,
+      "losses": 15,
+      "unchanged": 222,
+      "success_difference": -0.012048192771084338,
+      "descriptive_exact_mcnemar_p": 0.7011080384254456,
+      "family_cluster_bootstrap_95_interval": [
+        -0.05627705627705628,
+        0.028225806451612902
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "other_families/state/identity": {
+      "n": 249,
+      "families": 33,
+      "gains": 12,
+      "losses": 20,
+      "unchanged": 217,
+      "success_difference": -0.0321285140562249,
+      "descriptive_exact_mcnemar_p": 0.21532714972272515,
+      "family_cluster_bootstrap_95_interval": [
+        -0.092,
+        0.023622047244094488
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "other_families/event/baseline": {
+      "n": 249,
+      "families": 33,
+      "gains": 16,
+      "losses": 11,
+      "unchanged": 222,
+      "success_difference": 0.020080321285140562,
+      "descriptive_exact_mcnemar_p": 0.44206833839416504,
+      "family_cluster_bootstrap_95_interval": [
+        -0.034482758620689655,
+        0.0703125
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "other_families/event/identity": {
+      "n": 249,
+      "families": 33,
+      "gains": 17,
+      "losses": 16,
+      "unchanged": 216,
+      "success_difference": 0.004016064257028112,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.05363984674329502,
+        0.05531914893617021
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "other_families/dedup/baseline": {
+      "n": 249,
+      "families": 33,
+      "gains": 15,
+      "losses": 28,
+      "unchanged": 206,
+      "success_difference": -0.05220883534136546,
+      "descriptive_exact_mcnemar_p": 0.0659940344557981,
+      "family_cluster_bootstrap_95_interval": [
+        -0.11403508771929824,
+        0.007547169811320755
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "other_families/dedup/identity": {
+      "n": 249,
+      "families": 33,
+      "gains": 13,
+      "losses": 30,
+      "unchanged": 206,
+      "success_difference": -0.06827309236947791,
+      "descriptive_exact_mcnemar_p": 0.0137181850586785,
+      "family_cluster_bootstrap_95_interval": [
+        -0.1440677966101695,
+        0.004081632653061225
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_base/state/baseline": {
+      "n": 38,
+      "families": 16,
+      "gains": 1,
+      "losses": 2,
+      "unchanged": 35,
+      "success_difference": -0.02631578947368421,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.12903225806451613,
+        0.05128205128205128
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_base/state/identity": {
+      "n": 38,
+      "families": 16,
+      "gains": 5,
+      "losses": 6,
+      "unchanged": 27,
+      "success_difference": -0.02631578947368421,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.25,
+        0.175
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_base/event/baseline": {
+      "n": 38,
+      "families": 16,
+      "gains": 2,
+      "losses": 2,
+      "unchanged": 34,
+      "success_difference": 0.0,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.1,
+        0.10810810810810811
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_base/event/identity": {
+      "n": 38,
+      "families": 16,
+      "gains": 3,
+      "losses": 4,
+      "unchanged": 31,
+      "success_difference": -0.02631578947368421,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.1935483870967742,
+        0.11904761904761904
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_base/dedup/baseline": {
+      "n": 38,
+      "families": 16,
+      "gains": 1,
+      "losses": 7,
+      "unchanged": 30,
+      "success_difference": -0.15789473684210525,
+      "descriptive_exact_mcnemar_p": 0.0703125,
+      "family_cluster_bootstrap_95_interval": [
+        -0.3,
+        -0.02857142857142857
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_base/dedup/identity": {
+      "n": 38,
+      "families": 16,
+      "gains": 4,
+      "losses": 8,
+      "unchanged": 26,
+      "success_difference": -0.10526315789473684,
+      "descriptive_exact_mcnemar_p": 0.3876953125,
+      "family_cluster_bootstrap_95_interval": [
+        -0.325,
+        0.11904761904761904
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_long_context/state/baseline": {
+      "n": 103,
+      "families": 35,
+      "gains": 7,
+      "losses": 7,
+      "unchanged": 89,
+      "success_difference": 0.0,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.08571428571428572,
+        0.07766990291262135
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_long_context/state/identity": {
+      "n": 103,
+      "families": 35,
+      "gains": 8,
+      "losses": 6,
+      "unchanged": 89,
+      "success_difference": 0.019417475728155338,
+      "descriptive_exact_mcnemar_p": 0.79052734375,
+      "family_cluster_bootstrap_95_interval": [
+        -0.06796116504854369,
+        0.10576923076923077
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_long_context/event/baseline": {
+      "n": 103,
+      "families": 35,
+      "gains": 7,
+      "losses": 5,
+      "unchanged": 91,
+      "success_difference": 0.019417475728155338,
+      "descriptive_exact_mcnemar_p": 0.7744140625,
+      "family_cluster_bootstrap_95_interval": [
+        -0.04950495049504951,
+        0.08823529411764706
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_long_context/event/identity": {
+      "n": 103,
+      "families": 35,
+      "gains": 9,
+      "losses": 5,
+      "unchanged": 89,
+      "success_difference": 0.038834951456310676,
+      "descriptive_exact_mcnemar_p": 0.4239501953125,
+      "family_cluster_bootstrap_95_interval": [
+        -0.02912621359223301,
+        0.09803921568627451
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_long_context/dedup/baseline": {
+      "n": 103,
+      "families": 35,
+      "gains": 8,
+      "losses": 14,
+      "unchanged": 81,
+      "success_difference": -0.05825242718446602,
+      "descriptive_exact_mcnemar_p": 0.28627872467041016,
+      "family_cluster_bootstrap_95_interval": [
+        -0.16666666666666666,
+        0.047619047619047616
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_long_context/dedup/identity": {
+      "n": 103,
+      "families": 35,
+      "gains": 10,
+      "losses": 19,
+      "unchanged": 74,
+      "success_difference": -0.08737864077669903,
+      "descriptive_exact_mcnemar_p": 0.13604594767093658,
+      "family_cluster_bootstrap_95_interval": [
+        -0.22115384615384615,
+        0.038834951456310676
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_miss_func/state/baseline": {
+      "n": 93,
+      "families": 35,
+      "gains": 4,
+      "losses": 4,
+      "unchanged": 85,
+      "success_difference": 0.0,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.053763440860215055,
+        0.05319148936170213
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_miss_func/state/identity": {
+      "n": 93,
+      "families": 35,
+      "gains": 3,
+      "losses": 6,
+      "unchanged": 84,
+      "success_difference": -0.03225806451612903,
+      "descriptive_exact_mcnemar_p": 0.5078125,
+      "family_cluster_bootstrap_95_interval": [
+        -0.1,
+        0.042105263157894736
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_miss_func/event/baseline": {
+      "n": 93,
+      "families": 35,
+      "gains": 7,
+      "losses": 4,
+      "unchanged": 82,
+      "success_difference": 0.03225806451612903,
+      "descriptive_exact_mcnemar_p": 0.548828125,
+      "family_cluster_bootstrap_95_interval": [
+        -0.043010752688172046,
+        0.10752688172043011
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_miss_func/event/identity": {
+      "n": 93,
+      "families": 35,
+      "gains": 7,
+      "losses": 8,
+      "unchanged": 78,
+      "success_difference": -0.010752688172043012,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.10869565217391304,
+        0.0891089108910891
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_miss_func/dedup/baseline": {
+      "n": 93,
+      "families": 35,
+      "gains": 3,
+      "losses": 8,
+      "unchanged": 82,
+      "success_difference": -0.053763440860215055,
+      "descriptive_exact_mcnemar_p": 0.2265625,
+      "family_cluster_bootstrap_95_interval": [
+        -0.12087912087912088,
+        0
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_miss_func/dedup/identity": {
+      "n": 93,
+      "families": 35,
+      "gains": 1,
+      "losses": 7,
+      "unchanged": 85,
+      "success_difference": -0.06451612903225806,
+      "descriptive_exact_mcnemar_p": 0.0703125,
+      "family_cluster_bootstrap_95_interval": [
+        -0.13131313131313133,
+        -0.01020408163265306
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_miss_param/state/baseline": {
+      "n": 63,
+      "families": 28,
+      "gains": 3,
+      "losses": 4,
+      "unchanged": 56,
+      "success_difference": -0.015873015873015872,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.1,
+        0.0625
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_miss_param/state/identity": {
+      "n": 63,
+      "families": 28,
+      "gains": 4,
+      "losses": 5,
+      "unchanged": 54,
+      "success_difference": -0.015873015873015872,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.13114754098360656,
+        0.09375
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_miss_param/event/baseline": {
+      "n": 63,
+      "families": 28,
+      "gains": 2,
+      "losses": 2,
+      "unchanged": 59,
+      "success_difference": 0.0,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.06153846153846154,
+        0.0625
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_miss_param/event/identity": {
+      "n": 63,
+      "families": 28,
+      "gains": 5,
+      "losses": 2,
+      "unchanged": 56,
+      "success_difference": 0.047619047619047616,
+      "descriptive_exact_mcnemar_p": 0.453125,
+      "family_cluster_bootstrap_95_interval": [
+        -0.028985507246376812,
+        0.13333333333333333
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_miss_param/dedup/baseline": {
+      "n": 63,
+      "families": 28,
+      "gains": 5,
+      "losses": 4,
+      "unchanged": 54,
+      "success_difference": 0.015873015873015872,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.08823529411764706,
+        0.11666666666666667
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    },
+    "multi_turn_miss_param/dedup/identity": {
+      "n": 63,
+      "families": 28,
+      "gains": 3,
+      "losses": 3,
+      "unchanged": 57,
+      "success_difference": 0.0,
+      "descriptive_exact_mcnemar_p": 1,
+      "family_cluster_bootstrap_95_interval": [
+        -0.09523809523809523,
+        0.08064516129032258
+      ],
+      "bootstrap_seed": 574941,
+      "bootstrap_replicates": 10000,
+      "caveat": "Small number of historically seen families; interval is descriptive, not a noninferiority proof."
+    }
+  },
+  "groups": {
+    "all": {
+      "identity": {
+        "n": 297,
+        "passed": 120,
+        "first_input": 5970.649831649832,
+        "mean_post_input": 6520.204001886465,
+        "mean_peak_input": 7045.851851851852
+      },
+      "state-baseline": {
+        "n": 297,
+        "passed": 119,
+        "first_input": 8212.831649831649,
+        "mean_post_input": 8754.717836605505,
+        "mean_peak_input": 9262.161616161617
+      },
+      "state-optimized": {
+        "n": 297,
+        "passed": 117,
+        "first_input": 7869.003367003367,
+        "mean_post_input": 8423.47772602839,
+        "mean_peak_input": 8933.441077441077
+      },
+      "event-baseline": {
+        "n": 297,
+        "passed": 120,
+        "first_input": 10072.61616161616,
+        "mean_post_input": 10633.909292677654,
+        "mean_peak_input": 11167.949494949495
+      },
+      "event-optimized": {
+        "n": 297,
+        "passed": 125,
+        "first_input": 9371.484848484848,
+        "mean_post_input": 9912.414285107592,
+        "mean_peak_input": 10429.771043771043
+      },
+      "dedup-baseline": {
+        "n": 297,
+        "passed": 117,
+        "first_input": 9233.04377104377,
+        "mean_post_input": 9821.865380573003,
+        "mean_peak_input": 10364.86531986532
+      },
+      "dedup-optimized": {
+        "n": 297,
+        "passed": 101,
+        "first_input": 8946.168350168351,
+        "mean_post_input": 9666.686153380097,
+        "mean_peak_input": 10262.555555555555
+      }
+    },
+    "development_conditions": {
+      "identity": {
+        "n": 24,
+        "passed": 11,
+        "first_input": 5783.541666666667,
+        "mean_post_input": 6925.969963577438,
+        "mean_peak_input": 7961.208333333333
+      },
+      "state-baseline": {
+        "n": 24,
+        "passed": 13,
+        "first_input": 8068.791666666667,
+        "mean_post_input": 8996.558017888616,
+        "mean_peak_input": 9810.541666666666
+      },
+      "state-optimized": {
+        "n": 24,
+        "passed": 12,
+        "first_input": 7703.333333333333,
+        "mean_post_input": 8519.20701061924,
+        "mean_peak_input": 9291.666666666666
+      },
+      "event-baseline": {
+        "n": 24,
+        "passed": 13,
+        "first_input": 10093.833333333334,
+        "mean_post_input": 11023.19518879455,
+        "mean_peak_input": 11890.666666666666
+      },
+      "event-optimized": {
+        "n": 24,
+        "passed": 12,
+        "first_input": 9178.041666666666,
+        "mean_post_input": 10070.586502828599,
+        "mean_peak_input": 10946.541666666666
+      },
+      "dedup-baseline": {
+        "n": 24,
+        "passed": 11,
+        "first_input": 9157,
+        "mean_post_input": 10141.613548461295,
+        "mean_peak_input": 11026
+      },
+      "dedup-optimized": {
+        "n": 24,
+        "passed": 8,
+        "first_input": 8798.541666666666,
+        "mean_post_input": 10049.698995159932,
+        "mean_peak_input": 10895.625
+      }
+    },
+    "other_conditions": {
+      "identity": {
+        "n": 273,
+        "passed": 109,
+        "first_input": 5987.0989010989015,
+        "mean_post_input": 6484.532268990556,
+        "mean_peak_input": 6965.380952380952
+      },
+      "state-baseline": {
+        "n": 273,
+        "passed": 106,
+        "first_input": 8225.494505494506,
+        "mean_post_input": 8733.457161327868,
+        "mean_peak_input": 9213.952380952382
+      },
+      "state-optimized": {
+        "n": 273,
+        "passed": 105,
+        "first_input": 7883.5677655677655,
+        "mean_post_input": 8415.061964745677,
+        "mean_peak_input": 8901.948717948719
+      },
+      "event-baseline": {
+        "n": 273,
+        "passed": 107,
+        "first_input": 10070.750915750916,
+        "mean_post_input": 10599.68635675529,
+        "mean_peak_input": 11104.413919413919
+      },
+      "event-optimized": {
+        "n": 273,
+        "passed": 113,
+        "first_input": 9388.490842490843,
+        "mean_post_input": 9898.509035198054,
+        "mean_peak_input": 10384.34065934066
+      },
+      "dedup-baseline": {
+        "n": 273,
+        "passed": 106,
+        "first_input": 9239.728937728938,
+        "mean_post_input": 9793.75565152788,
+        "mean_peak_input": 10306.74358974359
+      },
+      "dedup-optimized": {
+        "n": 273,
+        "passed": 93,
+        "first_input": 8959.14652014652,
+        "mean_post_input": 9633.014694762089,
+        "mean_peak_input": 10206.901098901099
+      }
+    },
+    "development_families": {
+      "identity": {
+        "n": 48,
+        "passed": 16,
+        "first_input": 5736.125,
+        "mean_post_input": 6747.865679251986,
+        "mean_peak_input": 7697.416666666667
+      },
+      "state-baseline": {
+        "n": 48,
+        "passed": 20,
+        "first_input": 7865.479166666667,
+        "mean_post_input": 8707.812896730708,
+        "mean_peak_input": 9476.104166666666
+      },
+      "state-optimized": {
+        "n": 48,
+        "passed": 21,
+        "first_input": 7568.270833333333,
+        "mean_post_input": 8373.620412740454,
+        "mean_peak_input": 9144.833333333334
+      },
+      "event-baseline": {
+        "n": 48,
+        "passed": 20,
+        "first_input": 9542.145833333334,
+        "mean_post_input": 10380.718659674541,
+        "mean_peak_input": 11183
+      },
+      "event-optimized": {
+        "n": 48,
+        "passed": 20,
+        "first_input": 8975,
+        "mean_post_input": 9835.251833707802,
+        "mean_peak_input": 10668.625
+      },
+      "dedup-baseline": {
+        "n": 48,
+        "passed": 17,
+        "first_input": 8759.6875,
+        "mean_post_input": 9675.810796872172,
+        "mean_peak_input": 10567.1875
+      },
+      "dedup-optimized": {
+        "n": 48,
+        "passed": 14,
+        "first_input": 8542.125,
+        "mean_post_input": 9722.450185956966,
+        "mean_peak_input": 10610.770833333334
+      }
+    },
+    "other_families": {
+      "identity": {
+        "n": 249,
+        "passed": 104,
+        "first_input": 6015.859437751004,
+        "mean_post_input": 6476.317413478654,
+        "mean_peak_input": 6920.248995983936
+      },
+      "state-baseline": {
+        "n": 249,
+        "passed": 99,
+        "first_input": 8279.791164658634,
+        "mean_post_input": 8763.759752725948,
+        "mean_peak_input": 9220.91967871486
+      },
+      "state-optimized": {
+        "n": 249,
+        "passed": 96,
+        "first_input": 7926.975903614458,
+        "mean_post_input": 8433.088774373051,
+        "mean_peak_input": 8892.69076305221
+      },
+      "event-baseline": {
+        "n": 249,
+        "passed": 100,
+        "first_input": 10174.875502008032,
+        "mean_post_input": 10682.717125545723,
+        "mean_peak_input": 11165.048192771084
+      },
+      "event-optimized": {
+        "n": 249,
+        "passed": 105,
+        "first_input": 9447.915662650603,
+        "mean_post_input": 9927.288974534058,
+        "mean_peak_input": 10383.726907630522
+      },
+      "dedup-baseline": {
+        "n": 249,
+        "passed": 100,
+        "first_input": 9324.293172690763,
+        "mean_post_input": 9850.020481045452,
+        "mean_peak_input": 10325.863453815262
+      },
+      "dedup-optimized": {
+        "n": 249,
+        "passed": 87,
+        "first_input": 9024.056224899598,
+        "mean_post_input": 9655.93646035323,
+        "mean_peak_input": 10195.429718875503
+      }
+    },
+    "multi_turn_base": {
+      "identity": {
+        "n": 38,
+        "passed": 19,
+        "first_input": 5925.184210526316,
+        "mean_post_input": 6221.903022728924,
+        "mean_peak_input": 6494.5
+      },
+      "state-baseline": {
+        "n": 38,
+        "passed": 19,
+        "first_input": 8171.236842105263,
+        "mean_post_input": 8446.827954889108,
+        "mean_peak_input": 8705.657894736842
+      },
+      "state-optimized": {
+        "n": 38,
+        "passed": 18,
+        "first_input": 7932.684210526316,
+        "mean_post_input": 8205.594388474014,
+        "mean_peak_input": 8456.947368421053
+      },
+      "event-baseline": {
+        "n": 38,
+        "passed": 18,
+        "first_input": 9747.921052631578,
+        "mean_post_input": 10020.05933165132,
+        "mean_peak_input": 10277.078947368422
+      },
+      "event-optimized": {
+        "n": 38,
+        "passed": 18,
+        "first_input": 9510.368421052632,
+        "mean_post_input": 9768.14743198408,
+        "mean_peak_input": 10015.657894736842
+      },
+      "dedup-baseline": {
+        "n": 38,
+        "passed": 21,
+        "first_input": 9003.815789473685,
+        "mean_post_input": 9313.580682599135,
+        "mean_peak_input": 9605.342105263158
+      },
+      "dedup-optimized": {
+        "n": 38,
+        "passed": 15,
+        "first_input": 8940.921052631578,
+        "mean_post_input": 9382.556691346512,
+        "mean_peak_input": 9721.28947368421
+      }
+    },
+    "multi_turn_long_context": {
+      "identity": {
+        "n": 103,
+        "passed": 48,
+        "first_input": 6161.0679611650485,
+        "mean_post_input": 7046.5955777370355,
+        "mean_peak_input": 7890.747572815534
+      },
+      "state-baseline": {
+        "n": 103,
+        "passed": 50,
+        "first_input": 8545.466019417476,
+        "mean_post_input": 9532.913788571901,
+        "mean_peak_input": 10428.941747572815
+      },
+      "state-optimized": {
+        "n": 103,
+        "passed": 50,
+        "first_input": 7989.679611650486,
+        "mean_post_input": 8982.782413131436,
+        "mean_peak_input": 9851.097087378641
+      },
+      "event-baseline": {
+        "n": 103,
+        "passed": 50,
+        "first_input": 11180.359223300971,
+        "mean_post_input": 12200.519546270047,
+        "mean_peak_input": 13149.106796116504
+      },
+      "event-optimized": {
+        "n": 103,
+        "passed": 52,
+        "first_input": 9618.52427184466,
+        "mean_post_input": 10548.122843059717,
+        "mean_peak_input": 11414.912621359223
+      },
+      "dedup-baseline": {
+        "n": 103,
+        "passed": 45,
+        "first_input": 10052.708737864077,
+        "mean_post_input": 11043.90756805412,
+        "mean_peak_input": 11923.504854368932
+      },
+      "dedup-optimized": {
+        "n": 103,
+        "passed": 39,
+        "first_input": 9348.825242718447,
+        "mean_post_input": 10517.17218460799,
+        "mean_peak_input": 11457.029126213592
+      }
+    },
+    "multi_turn_miss_func": {
+      "identity": {
+        "n": 93,
+        "passed": 35,
+        "first_input": 5783.731182795699,
+        "mean_post_input": 6226.097266794595,
+        "mean_peak_input": 6653.8279569892475
+      },
+      "state-baseline": {
+        "n": 93,
+        "passed": 32,
+        "first_input": 7914.430107526881,
+        "mean_post_input": 8242.331727704339,
+        "mean_peak_input": 8579.41935483871
+      },
+      "state-optimized": {
+        "n": 93,
+        "passed": 32,
+        "first_input": 7684.709677419355,
+        "mean_post_input": 8036.133743496646,
+        "mean_peak_input": 8399.666666666666
+      },
+      "event-baseline": {
+        "n": 93,
+        "passed": 31,
+        "first_input": 9303.698924731183,
+        "mean_post_input": 9646.759984484259,
+        "mean_peak_input": 10000.967741935483
+      },
+      "event-optimized": {
+        "n": 93,
+        "passed": 34,
+        "first_input": 9051.268817204302,
+        "mean_post_input": 9436.860605599353,
+        "mean_peak_input": 9834.032258064517
+      },
+      "dedup-baseline": {
+        "n": 93,
+        "passed": 34,
+        "first_input": 8656.268817204302,
+        "mean_post_input": 9088.838097309437,
+        "mean_peak_input": 9517.161290322581
+      },
+      "dedup-optimized": {
+        "n": 93,
+        "passed": 29,
+        "first_input": 8581.967741935483,
+        "mean_post_input": 9145.265309904526,
+        "mean_peak_input": 9632.817204301075
+      }
+    },
+    "multi_turn_miss_param": {
+      "identity": {
+        "n": 63,
+        "passed": 18,
+        "first_input": 5962.68253968254,
+        "mean_post_input": 6273.680688536018,
+        "mean_peak_input": 6575.777777777777
+      },
+      "state-baseline": {
+        "n": 63,
+        "passed": 18,
+        "first_input": 8134.587301587301,
+        "mean_post_input": 8424.520068041893,
+        "mean_peak_input": 8698.095238095239
+      },
+      "state-optimized": {
+        "n": 63,
+        "passed": 17,
+        "first_input": 7905.349206349207,
+        "mean_post_input": 8212.274145566556,
+        "mean_peak_input": 8508.507936507936
+      },
+      "event-baseline": {
+        "n": 63,
+        "passed": 21,
+        "first_input": 9592.460317460318,
+        "mean_post_input": 9900.104976185114,
+        "mean_peak_input": 10188.952380952382
+      },
+      "event-optimized": {
+        "n": 63,
+        "passed": 21,
+        "first_input": 9356.52380952381,
+        "mean_post_input": 9662.107160407451,
+        "mean_peak_input": 9948.349206349207
+      },
+      "dedup-baseline": {
+        "n": 63,
+        "passed": 17,
+        "first_input": 8882.650793650793,
+        "mean_post_input": 9212.595706858143,
+        "mean_peak_input": 9526.111111111111
+      },
+      "dedup-optimized": {
+        "n": 63,
+        "passed": 18,
+        "first_input": 8828.650793650793,
+        "mean_post_input": 9217.305149952019,
+        "mean_peak_input": 9565.777777777777
+      }
+    }
+  }
+}

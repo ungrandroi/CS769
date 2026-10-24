@@ -1,0 +1,1460 @@
+{
+  "primary_denominator_unchanged": 120,
+  "sufficient_prefix_failure_diagnoses": 18,
+  "prefix_rows": [
+    {
+      "task": "multi_turn_base_1",
+      "seed": 4409,
+      "identity_passed": true,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_base_1",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_base_1",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_base_3",
+      "seed": 4409,
+      "identity_passed": true,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_base_3",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_base_3",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_base_6",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 4,
+      "diagnosed_error_turns_1based": [
+        1
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_base_6",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 4,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_base_6",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 4,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        1
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_base_10",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 4,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_base_10",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        1
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_base_10",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_base_16",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        1
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_base_16",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 4409,
+      "identity_passed": true,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_base_39",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_base_39",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_1",
+      "seed": 4409,
+      "identity_passed": true,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_1",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_1",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 4409,
+      "identity_passed": true,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_6",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 4,
+      "diagnosed_error_turns_1based": [
+        1
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_long_context_6",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 4,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_long_context_6",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        1
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_10",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_10",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [
+        1
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_10",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_long_context_12",
+      "seed": 4409,
+      "identity_passed": true,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_12",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_12",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_16",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [
+        1
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_16",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_16",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_25",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_25",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_25",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_26",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_26",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_26",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 4409,
+      "identity_passed": true,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_38",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [
+        1
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_38",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [
+        1
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_38",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_39",
+      "seed": 4409,
+      "identity_passed": true,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_39",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_long_context_39",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_1",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_1",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_1",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_3",
+      "seed": 4409,
+      "identity_passed": true,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_3",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_3",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_6",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_6",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_6",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_9",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        1
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_miss_func_9",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_9",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        4
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_10",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_miss_func_10",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        1
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_miss_func_10",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 4,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_miss_func_12",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_12",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_12",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_16",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_16",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_16",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_26",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_26",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        4
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_26",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_29",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_29",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_37",
+      "seed": 4409,
+      "identity_passed": true,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_37",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_37",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_38",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_38",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_38",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_39",
+      "seed": 4409,
+      "identity_passed": true,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_39",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_func_39",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        4
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_1",
+      "seed": 4409,
+      "identity_passed": true,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_1",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_1",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_3",
+      "seed": 4409,
+      "identity_passed": true,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_3",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_3",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_6",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 4,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_miss_param_6",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 5,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_miss_param_6",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 5,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_miss_param_9",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_9",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        1
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_9",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_10",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 4,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": true
+    },
+    {
+      "task": "multi_turn_miss_param_10",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        1
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_10",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 2,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_16",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_16",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_16",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 1,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_25",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 4,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_37",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_37",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_37",
+      "seed": 6637,
+      "identity_passed": false,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [
+        3
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_38",
+      "seed": 4409,
+      "identity_passed": false,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [
+        2
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_38",
+      "seed": 5519,
+      "identity_passed": true,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_38",
+      "seed": 6637,
+      "identity_passed": true,
+      "trigger_turn_1based": 0,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_39",
+      "seed": 4409,
+      "identity_passed": true,
+      "trigger_turn_1based": 3,
+      "diagnosed_error_turns_1based": [],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    },
+    {
+      "task": "multi_turn_miss_param_39",
+      "seed": 5519,
+      "identity_passed": false,
+      "trigger_turn_1based": 4,
+      "diagnosed_error_turns_1based": [
+        4
+      ],
+      "diagnosed_failure_in_completed_prefix_turn": false
+    }
+  ],
+  "categories": {
+    "multi_turn_base": {
+      "dedup-baseline": {
+        "n": 22,
+        "passed": 10,
+        "first_input": 6172.772727272727,
+        "mean_post_input": 6278.8751262626265,
+        "mean_working_input": 3165.8751262626265
+      },
+      "dedup-optimized": {
+        "n": 22,
+        "passed": 11,
+        "first_input": 6246.909090909091,
+        "mean_post_input": 6418.051821789321,
+        "mean_working_input": 3305.051821789322
+      },
+      "event-baseline": {
+        "n": 22,
+        "passed": 12,
+        "first_input": 7005.590909090909,
+        "mean_post_input": 7130.102435064935,
+        "mean_working_input": 4017.102435064935
+      },
+      "event-optimized": {
+        "n": 22,
+        "passed": 11,
+        "first_input": 6911.045454545455,
+        "mean_post_input": 7038.330303030303,
+        "mean_working_input": 3925.330303030303
+      },
+      "identity": {
+        "n": 22,
+        "passed": 12,
+        "first_input": 4174.454545454545,
+        "mean_post_input": 4298.295238095238,
+        "mean_working_input": 1185.2952380952381
+      },
+      "state-baseline": {
+        "n": 22,
+        "passed": 11,
+        "first_input": 5899.863636363636,
+        "mean_post_input": 6035.942359307359,
+        "mean_working_input": 2922.9423593073593
+      },
+      "state-optimized": {
+        "n": 22,
+        "passed": 11,
+        "first_input": 5801.181818181818,
+        "mean_post_input": 5937.018253968254,
+        "mean_working_input": 2824.018253968254
+      }
+    },
+    "multi_turn_long_context": {
+      "dedup-baseline": {
+        "n": 36,
+        "passed": 20,
+        "first_input": 7958.916666666667,
+        "mean_post_input": 9037.363197269326,
+        "mean_working_input": 5924.363197269325
+      },
+      "dedup-optimized": {
+        "n": 36,
+        "passed": 20,
+        "first_input": 7505.138888888889,
+        "mean_post_input": 8802.460240191636,
+        "mean_working_input": 5689.460240191636
+      },
+      "event-baseline": {
+        "n": 36,
+        "passed": 16,
+        "first_input": 9319.694444444445,
+        "mean_post_input": 10100.327152091735,
+        "mean_working_input": 6987.327152091735
+      },
+      "event-optimized": {
+        "n": 36,
+        "passed": 22,
+        "first_input": 7912.861111111111,
+        "mean_post_input": 8884.990793043511,
+        "mean_working_input": 5771.99079304351
+      },
+      "identity": {
+        "n": 36,
+        "passed": 18,
+        "first_input": 4512.972222222223,
+        "mean_post_input": 5157.6179629540375,
+        "mean_working_input": 2044.6179629540375
+      },
+      "state-baseline": {
+        "n": 36,
+        "passed": 19,
+        "first_input": 7047,
+        "mean_post_input": 7923.028453568037,
+        "mean_working_input": 4810.028453568037
+      },
+      "state-optimized": {
+        "n": 36,
+        "passed": 20,
+        "first_input": 6546.916666666667,
+        "mean_post_input": 7477.677608226731,
+        "mean_working_input": 4364.677608226731
+      }
+    },
+    "multi_turn_miss_func": {
+      "dedup-baseline": {
+        "n": 35,
+        "passed": 14,
+        "first_input": 6054.542857142857,
+        "mean_post_input": 6493.511551652282,
+        "mean_working_input": 3440.679697171359
+      },
+      "dedup-optimized": {
+        "n": 35,
+        "passed": 12,
+        "first_input": 6097.828571428571,
+        "mean_post_input": 6487.126833429155,
+        "mean_working_input": 3433.783976286298
+      },
+      "event-baseline": {
+        "n": 35,
+        "passed": 13,
+        "first_input": 6810.628571428571,
+        "mean_post_input": 7159.777617452739,
+        "mean_working_input": 4110.281925842762
+      },
+      "event-optimized": {
+        "n": 35,
+        "passed": 11,
+        "first_input": 6681.857142857143,
+        "mean_post_input": 7087.614268433601,
+        "mean_working_input": 4033.9792944440055
+      },
+      "identity": {
+        "n": 35,
+        "passed": 13,
+        "first_input": 4113.771428571428,
+        "mean_post_input": 4509.696606724066,
+        "mean_working_input": 1450.9263871144838
+      },
+      "state-baseline": {
+        "n": 35,
+        "passed": 14,
+        "first_input": 5861.371428571429,
+        "mean_post_input": 6210.856098700552,
+        "mean_working_input": 3157.6601184902865
+      },
+      "state-optimized": {
+        "n": 35,
+        "passed": 14,
+        "first_input": 5748.628571428571,
+        "mean_post_input": 6147.023415044339,
+        "mean_working_input": 3094.847088513727
+      }
+    },
+    "multi_turn_miss_param": {
+      "dedup-baseline": {
+        "n": 27,
+        "passed": 5,
+        "first_input": 6327.851851851852,
+        "mean_post_input": 6620.665608687393,
+        "mean_working_input": 3507.6656086873923
+      },
+      "dedup-optimized": {
+        "n": 27,
+        "passed": 6,
+        "first_input": 6392.518518518518,
+        "mean_post_input": 6734.673672309612,
+        "mean_working_input": 3621.6736723096114
+      },
+      "event-baseline": {
+        "n": 27,
+        "passed": 5,
+        "first_input": 7246.62962962963,
+        "mean_post_input": 7541.794254421667,
+        "mean_working_input": 4428.794254421667
+      },
+      "event-optimized": {
+        "n": 27,
+        "passed": 7,
+        "first_input": 7150.851851851852,
+        "mean_post_input": 7463.930263941546,
+        "mean_working_input": 4350.930263941546
+      },
+      "identity": {
+        "n": 27,
+        "passed": 8,
+        "first_input": 4175.259259259259,
+        "mean_post_input": 4467.071980283091,
+        "mean_working_input": 1354.0719802830913
+      },
+      "state-baseline": {
+        "n": 27,
+        "passed": 5,
+        "first_input": 6017.592592592592,
+        "mean_post_input": 6318.489557014639,
+        "mean_working_input": 3205.4895570146386
+      },
+      "state-optimized": {
+        "n": 27,
+        "passed": 6,
+        "first_input": 5891.185185185185,
+        "mean_post_input": 6185.92776352258,
+        "mean_working_input": 3072.92776352258
+      }
+    }
+  },
+  "family_groups": {
+    "development_families": {
+      "dedup-baseline": {
+        "n": 36,
+        "passed": 18,
+        "first_input": 6675.527777777777,
+        "mean_post_input": 7333.266061371215,
+        "mean_working_input": 4230.583521688675
+      },
+      "dedup-optimized": {
+        "n": 36,
+        "passed": 17,
+        "first_input": 6587.388888888889,
+        "mean_post_input": 7349.5446205651615,
+        "mean_working_input": 4247.618694639235
+      },
+      "event-baseline": {
+        "n": 36,
+        "passed": 19,
+        "first_input": 7460.416666666667,
+        "mean_post_input": 7991.526968016551,
+        "mean_working_input": 4888.288872778456
+      },
+      "event-optimized": {
+        "n": 36,
+        "passed": 19,
+        "first_input": 7041.388888888889,
+        "mean_post_input": 7744.240413407538,
+        "mean_working_input": 4641.981154148279
+      },
+      "identity": {
+        "n": 36,
+        "passed": 20,
+        "first_input": 4408.25,
+        "mean_post_input": 4942.667653565571,
+        "mean_working_input": 1838.6676535655702
+      },
+      "state-baseline": {
+        "n": 36,
+        "passed": 18,
+        "first_input": 6260.305555555556,
+        "mean_post_input": 6803.58644264686,
+        "mean_working_input": 3701.0890881495047
+      },
+      "state-optimized": {
+        "n": 36,
+        "passed": 17,
+        "first_input": 6083.972222222223,
+        "mean_post_input": 6747.039792198948,
+        "mean_working_input": 3643.8016969608525
+      }
+    },
+    "other_historically_seen_families": {
+      "dedup-baseline": {
+        "n": 84,
+        "passed": 31,
+        "first_input": 6723.380952380952,
+        "mean_post_input": 7208.49554062499,
+        "mean_working_input": 4116.143832550456
+      },
+      "dedup-optimized": {
+        "n": 84,
+        "passed": 32,
+        "first_input": 6624.916666666667,
+        "mean_post_input": 7171.28250843212,
+        "mean_working_input": 4078.3936195432316
+      },
+      "event-baseline": {
+        "n": 84,
+        "passed": 27,
+        "first_input": 7798.666666666667,
+        "mean_post_input": 8178.5681152186435,
+        "mean_working_input": 5087.844570245099
+      },
+      "event-optimized": {
+        "n": 84,
+        "passed": 32,
+        "first_input": 7266.119047619048,
+        "mean_post_input": 7684.558295894756,
+        "mean_working_input": 4591.690548795917
+      },
+      "identity": {
+        "n": 84,
+        "passed": 31,
+        "first_input": 4194.309523809524,
+        "mean_post_input": 4532.750369988879,
+        "mean_working_input": 1438.4889689610768
+      },
+      "state-baseline": {
+        "n": 84,
+        "passed": 31,
+        "first_input": 6258.821428571428,
+        "mean_post_input": 6679.402687998082,
+        "mean_working_input": 3586.8198957902896
+      },
+      "state-optimized": {
+        "n": 84,
+        "passed": 34,
+        "first_input": 6006.619047619048,
+        "mean_post_input": 6417.657525070992,
+        "mean_working_input": 3325.817048880516
+      }
+    }
+  },
+  "diagnosed_prefix_subset": {
+    "dedup-baseline": {
+      "n": 18,
+      "passed": 0,
+      "first_input": 6205.722222222223,
+      "mean_post_input": 6454.640722528947,
+      "mean_working_input": 3355.5827515144542
+    },
+    "dedup-optimized": {
+      "n": 18,
+      "passed": 0,
+      "first_input": 6275.055555555556,
+      "mean_post_input": 6699.522517297517,
+      "mean_working_input": 3599.189183964184
+    },
+    "event-baseline": {
+      "n": 18,
+      "passed": 0,
+      "first_input": 7060.944444444444,
+      "mean_post_input": 7309.928218694886,
+      "mean_working_input": 4218.761552028219
+    },
+    "event-optimized": {
+      "n": 18,
+      "passed": 0,
+      "first_input": 6958.055555555556,
+      "mean_post_input": 7240.034407803525,
+      "mean_working_input": 4138.191270548624
+    },
+    "identity": {
+      "n": 18,
+      "passed": 0,
+      "first_input": 4166.777777777777,
+      "mean_post_input": 4431.800412858746,
+      "mean_working_input": 1329.2899961920796
+    },
+    "state-baseline": {
+      "n": 18,
+      "passed": 0,
+      "first_input": 5910.777777777777,
+      "mean_post_input": 6189.449193780076,
+      "mean_working_input": 3090.0325271134093
+    },
+    "state-optimized": {
+      "n": 18,
+      "passed": 0,
+      "first_input": 5803,
+      "mean_post_input": 6054.487848843241,
+      "mean_working_input": 2963.3211821765744
+    }
+  },
+  "limitations": [
+    "This is post-evaluation descriptive analysis, not candidate selection.",
+    "A diagnosed earlier completed-turn error predates conversion; absence of such evidence does not certify a valid prefix.",
+    "The main 120-pair denominator is unchanged. No failed cases are discarded.",
+    "Development-family strata include all four conditions for families 3, 9, and 37; the primary report's development stratum includes only the six exact development task-condition instances.",
+    "All 13 families were historically seen. Other families here are not an unseen-task blind test."
+  ]
+}

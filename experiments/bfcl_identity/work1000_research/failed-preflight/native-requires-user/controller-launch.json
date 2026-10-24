@@ -1,0 +1,16 @@
+{
+  "pid": 689815,
+  "command": [
+    "/home/bcao44/bofeng/CS769/.conda/bfcl/bin/python3.10",
+    "-m",
+    "workflows.work1000_controller",
+    "--root",
+    "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research",
+    "--snapshot-label",
+    "resume-frozen-v2"
+  ],
+  "cwd": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v2",
+  "pythonpath": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/source_code/resume-frozen-v2/scripts",
+  "started_at": 1792455592.727535,
+  "persistent": "start_new_session; DEVNULL stdin; file logs"
+}

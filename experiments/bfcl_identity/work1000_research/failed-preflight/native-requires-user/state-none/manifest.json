@@ -1,0 +1,32 @@
+{
+  "task": "multi_turn_base_9",
+  "category": "multi_turn_base",
+  "method": "state",
+  "variant": "readable",
+  "explanation": "none",
+  "seed": 3301,
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "repeat_penalty": 1.0
+  },
+  "threshold": 1000,
+  "threshold_metric": "native full minus fixed-only template tokens",
+  "base_url": "http://127.0.0.1:11436/v1",
+  "context": 131072,
+  "max_tokens": 4096,
+  "identity": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/identity",
+  "status": "error",
+  "triggered": true,
+  "started_at": 1792455593.4507,
+  "trigger_index": 17,
+  "trigger_turn": 1,
+  "checkpoint_sha256": "1ddadeabb443952fbf859d3c5bef6b61e40b1a068cd514737c35983229ab790d",
+  "source_work_tokens": 1043,
+  "memory_tokens": 3135,
+  "instruction_tokens": 0,
+  "instruction_insertions": 0,
+  "error": "<HTTPError 500: 'Internal Server Error'>",
+  "finished_at": 1792455594.2895415
+}

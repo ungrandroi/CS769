@@ -1,0 +1,146 @@
+{
+  "status": "pass",
+  "reviewed_at": 1792805913.2747917,
+  "reviewer": "/root/mixed_final_audit",
+  "blocking_integrity_findings": [],
+  "scope": "Independent final audit of completed mixed_tool_expansion; no model inference or score-based retry",
+  "counts": {
+    "native_requests": 21167,
+    "graph_payload_checks": 1926,
+    "official_scores_recomputed": 2394,
+    "direct_codec_decodes": 963,
+    "shared_semantic_pairs": 963,
+    "identity_runs": 468,
+    "skips": 882
+  },
+  "source_files_verified": 53,
+  "vendor_pins_verified": 123,
+  "summary": {
+    "identity": {
+      "n": 297,
+      "passed": 120,
+      "first_input": 5970.649831649832,
+      "mean_post_input": 6520.204001886465,
+      "mean_peak_input": 7045.851851851852
+    },
+    "state-baseline": {
+      "n": 297,
+      "passed": 119,
+      "first_input": 8212.831649831649,
+      "mean_post_input": 8754.717836605505,
+      "mean_peak_input": 9262.161616161617
+    },
+    "state-optimized": {
+      "n": 297,
+      "passed": 117,
+      "first_input": 7869.003367003367,
+      "mean_post_input": 8423.47772602839,
+      "mean_peak_input": 8933.441077441077
+    },
+    "event-baseline": {
+      "n": 297,
+      "passed": 120,
+      "first_input": 10072.61616161616,
+      "mean_post_input": 10633.909292677654,
+      "mean_peak_input": 11167.949494949495
+    },
+    "event-optimized": {
+      "n": 297,
+      "passed": 125,
+      "first_input": 9371.484848484848,
+      "mean_post_input": 9912.414285107592,
+      "mean_peak_input": 10429.771043771043
+    },
+    "dedup-baseline": {
+      "n": 297,
+      "passed": 117,
+      "first_input": 9233.04377104377,
+      "mean_post_input": 9821.865380573003,
+      "mean_peak_input": 10364.86531986532
+    },
+    "dedup-optimized": {
+      "n": 297,
+      "passed": 101,
+      "first_input": 8946.168350168351,
+      "mean_post_input": 9666.686153380097,
+      "mean_peak_input": 10262.555555555555
+    }
+  },
+  "domain_strata": {
+    "actual_mixed_prefix": {
+      "dedup-baseline": {
+        "n": 81,
+        "passed": 46
+      },
+      "dedup-optimized": {
+        "n": 81,
+        "passed": 40
+      },
+      "event-baseline": {
+        "n": 81,
+        "passed": 43
+      },
+      "event-optimized": {
+        "n": 81,
+        "passed": 42
+      },
+      "identity": {
+        "n": 81,
+        "passed": 49
+      },
+      "state-baseline": {
+        "n": 81,
+        "passed": 44
+      },
+      "state-optimized": {
+        "n": 81,
+        "passed": 39
+      }
+    },
+    "filesystem_only_prefix": {
+      "dedup-baseline": {
+        "n": 216,
+        "passed": 71
+      },
+      "dedup-optimized": {
+        "n": 216,
+        "passed": 61
+      },
+      "event-baseline": {
+        "n": 216,
+        "passed": 77
+      },
+      "event-optimized": {
+        "n": 216,
+        "passed": 83
+      },
+      "identity": {
+        "n": 216,
+        "passed": 71
+      },
+      "state-baseline": {
+        "n": 216,
+        "passed": 75
+      },
+      "state-optimized": {
+        "n": 216,
+        "passed": 78
+      }
+    }
+  },
+  "actual_mixed_prefixes": 81,
+  "completed_prefix_failure_diagnoses": 28,
+  "selection_order": {
+    "last_development_finished": 1792543445.1141093,
+    "reviewed_at": 1792543571.9497135,
+    "first_fresh_started": 1792543599.1984997
+  },
+  "evidence": {
+    "final-check-evidence.json": "ca980a8371bc809dce829bcf3ad789e5d35a57b6378c072e696d1f4d2dddc552",
+    "final-native-evidence.json": "cf48e9bfb19995cae8d7943a0c8186bba064c2001f22123ad7261edf196321a1",
+    "final-reports-evidence.json": "cfe47060fb71a2dd682f82832739f00e740e83d714e1b97c1c26765af65cf182",
+    "final-exposure-evidence.json": "d2171cbc9cb244504c0dcfba4d77c52cd7eab006c44786294bf9a8606a491bbe",
+    "final-tests-system.log": "b95d3a8cb6632c61789e89311fdd3bd0ca22acbe4a48ede2654f67d333dd3b69"
+  },
+  "interpretation": "Audit passing does not mean optimization succeeded: selected Dedup loses 16 successes versus its own baseline; actual mixed-prefix stratum shows lower optimized counts for all three graphs. No equivalence or stable superiority claim."
+}

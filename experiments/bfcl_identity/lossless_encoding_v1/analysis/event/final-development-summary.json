@@ -1,0 +1,401 @@
+{
+  "selection_rule": "Descending official passed count, then ascending mean post-conversion input (per-trajectory macro mean), then label. Same as preregistered controller.",
+  "ranked_candidates": [
+    {
+      "label": "event-tables-v1-minimal",
+      "passed": 13,
+      "total": 13,
+      "first_input_mean": 8486.461538461539,
+      "mean_post_input_macro_mean": 9518.733267587113
+    },
+    {
+      "label": "event-shared-v1-full",
+      "passed": 11,
+      "total": 13,
+      "first_input_mean": 8437.923076923076,
+      "mean_post_input_macro_mean": 9185.552747252746
+    },
+    {
+      "label": "event-shared-v1-none",
+      "passed": 11,
+      "total": 13,
+      "first_input_mean": 8285.923076923076,
+      "mean_post_input_macro_mean": 9571.268201243201
+    },
+    {
+      "label": "event-tables-v1-full",
+      "passed": 10,
+      "total": 13,
+      "first_input_mean": 8605.461538461539,
+      "mean_post_input_macro_mean": 9722.932844932844
+    },
+    {
+      "label": "event-shared-v1-minimal",
+      "passed": 9,
+      "total": 13,
+      "first_input_mean": 8318.923076923076,
+      "mean_post_input_macro_mean": 9515.698759719813
+    },
+    {
+      "label": "event-tables-v1-none",
+      "passed": 8,
+      "total": 13,
+      "first_input_mean": 8453.461538461539,
+      "mean_post_input_macro_mean": 9763.429836829837
+    }
+  ],
+  "frozen_event_full_baseline": {
+    "passed": 11,
+    "total": 13,
+    "first_input_mean": 9766.461538461539,
+    "mean_post_input_macro_mean": 10804.304487179486
+  },
+  "identity": {
+    "passed": 11,
+    "total": 13,
+    "first_input_mean": 4871.846153846154,
+    "mean_post_input_macro_mean": 5444.913461538462
+  },
+  "development_winner": "event-tables-v1-minimal",
+  "development_adoption_criterion_met": true,
+  "winner_pairs": {
+    "identity": {
+      "both_success": [
+        "multi_turn_base_37/seed1103",
+        "multi_turn_base_37/seed2207",
+        "multi_turn_base_37/seed3301",
+        "multi_turn_long_context_3/seed1103",
+        "multi_turn_long_context_3/seed2207",
+        "multi_turn_long_context_3/seed3301",
+        "multi_turn_long_context_37/seed1103",
+        "multi_turn_long_context_37/seed2207",
+        "multi_turn_long_context_37/seed3301",
+        "multi_turn_long_context_9/seed1103",
+        "multi_turn_long_context_9/seed2207"
+      ],
+      "both_fail": [],
+      "gains": [
+        "multi_turn_base_9/seed3301",
+        "multi_turn_long_context_9/seed3301"
+      ],
+      "losses": []
+    },
+    "event-full": {
+      "both_success": [
+        "multi_turn_base_37/seed1103",
+        "multi_turn_base_37/seed2207",
+        "multi_turn_base_37/seed3301",
+        "multi_turn_base_9/seed3301",
+        "multi_turn_long_context_3/seed1103",
+        "multi_turn_long_context_3/seed2207",
+        "multi_turn_long_context_3/seed3301",
+        "multi_turn_long_context_37/seed1103",
+        "multi_turn_long_context_37/seed2207",
+        "multi_turn_long_context_37/seed3301",
+        "multi_turn_long_context_9/seed1103"
+      ],
+      "both_fail": [],
+      "gains": [
+        "multi_turn_long_context_9/seed2207",
+        "multi_turn_long_context_9/seed3301"
+      ],
+      "losses": []
+    },
+    "event-none": {
+      "both_success": [
+        "multi_turn_base_37/seed1103",
+        "multi_turn_base_37/seed2207",
+        "multi_turn_base_37/seed3301",
+        "multi_turn_base_9/seed3301",
+        "multi_turn_long_context_3/seed1103",
+        "multi_turn_long_context_3/seed2207",
+        "multi_turn_long_context_37/seed1103",
+        "multi_turn_long_context_37/seed2207",
+        "multi_turn_long_context_37/seed3301",
+        "multi_turn_long_context_9/seed3301"
+      ],
+      "both_fail": [],
+      "gains": [
+        "multi_turn_long_context_3/seed3301",
+        "multi_turn_long_context_9/seed1103",
+        "multi_turn_long_context_9/seed2207"
+      ],
+      "losses": []
+    },
+    "event-minimal": {
+      "both_success": [
+        "multi_turn_base_37/seed1103",
+        "multi_turn_base_37/seed2207",
+        "multi_turn_base_37/seed3301",
+        "multi_turn_long_context_3/seed1103",
+        "multi_turn_long_context_3/seed2207",
+        "multi_turn_long_context_37/seed1103",
+        "multi_turn_long_context_37/seed2207",
+        "multi_turn_long_context_9/seed1103",
+        "multi_turn_long_context_9/seed2207",
+        "multi_turn_long_context_9/seed3301"
+      ],
+      "both_fail": [],
+      "gains": [
+        "multi_turn_base_9/seed3301",
+        "multi_turn_long_context_3/seed3301",
+        "multi_turn_long_context_37/seed3301"
+      ],
+      "losses": []
+    }
+  },
+  "actual_shared_utilization": {
+    "candidate": "event-shared-v1",
+    "shared_nonempty_checkpoints": 13,
+    "checkpoints": 13,
+    "total_shared_values": 78,
+    "total_references": 480,
+    "mean_body_token_difference_vs_tables": -167.53846153846155,
+    "rows": [
+      {
+        "task": "multi_turn_base_37",
+        "seed": "seed1103",
+        "shared_values": 3,
+        "shared_references": 8,
+        "unused_shared_values": [],
+        "body_tokens": 2370,
+        "tables_body_tokens": 2384,
+        "difference_shared_minus_tables": -14,
+        "counts_by_id": {
+          "v1": 2,
+          "v0": 4,
+          "v2": 2
+        }
+      },
+      {
+        "task": "multi_turn_base_37",
+        "seed": "seed2207",
+        "shared_values": 2,
+        "shared_references": 4,
+        "unused_shared_values": [],
+        "body_tokens": 2148,
+        "tables_body_tokens": 2111,
+        "difference_shared_minus_tables": 37,
+        "counts_by_id": {
+          "v0": 2,
+          "v1": 2
+        }
+      },
+      {
+        "task": "multi_turn_base_37",
+        "seed": "seed3301",
+        "shared_values": 2,
+        "shared_references": 4,
+        "unused_shared_values": [],
+        "body_tokens": 2308,
+        "tables_body_tokens": 2271,
+        "difference_shared_minus_tables": 37,
+        "counts_by_id": {
+          "v0": 2,
+          "v1": 2
+        }
+      },
+      {
+        "task": "multi_turn_base_9",
+        "seed": "seed3301",
+        "shared_values": 13,
+        "shared_references": 63,
+        "unused_shared_values": [],
+        "body_tokens": 3916,
+        "tables_body_tokens": 4168,
+        "difference_shared_minus_tables": -252,
+        "counts_by_id": {
+          "v5": 3,
+          "v11": 2,
+          "v6": 4,
+          "v9": 3,
+          "v0": 16,
+          "v3": 4,
+          "v2": 2,
+          "v1": 13,
+          "v8": 3,
+          "v7": 2,
+          "v4": 6,
+          "v10": 3,
+          "v12": 2
+        }
+      },
+      {
+        "task": "multi_turn_long_context_3",
+        "seed": "seed1103",
+        "shared_values": 11,
+        "shared_references": 47,
+        "unused_shared_values": [],
+        "body_tokens": 6252,
+        "tables_body_tokens": 6686,
+        "difference_shared_minus_tables": -434,
+        "counts_by_id": {
+          "v10": 2,
+          "v6": 5,
+          "v7": 4,
+          "v8": 4,
+          "v3": 7,
+          "v4": 7,
+          "v5": 6,
+          "v9": 4,
+          "v0": 4,
+          "v1": 2,
+          "v2": 2
+        }
+      },
+      {
+        "task": "multi_turn_long_context_3",
+        "seed": "seed2207",
+        "shared_values": 9,
+        "shared_references": 34,
+        "unused_shared_values": [],
+        "body_tokens": 6181,
+        "tables_body_tokens": 6530,
+        "difference_shared_minus_tables": -349,
+        "counts_by_id": {
+          "v8": 2,
+          "v5": 5,
+          "v6": 4,
+          "v7": 4,
+          "v2": 3,
+          "v3": 4,
+          "v4": 4,
+          "v1": 4,
+          "v0": 4
+        }
+      },
+      {
+        "task": "multi_turn_long_context_3",
+        "seed": "seed3301",
+        "shared_values": 10,
+        "shared_references": 45,
+        "unused_shared_values": [],
+        "body_tokens": 6601,
+        "tables_body_tokens": 7016,
+        "difference_shared_minus_tables": -415,
+        "counts_by_id": {
+          "v6": 5,
+          "v0": 5,
+          "v8": 4,
+          "v7": 4,
+          "v3": 6,
+          "v4": 6,
+          "v5": 6,
+          "v9": 4,
+          "v1": 3,
+          "v2": 2
+        }
+      },
+      {
+        "task": "multi_turn_long_context_37",
+        "seed": "seed1103",
+        "shared_values": 2,
+        "shared_references": 64,
+        "unused_shared_values": [],
+        "body_tokens": 8179,
+        "tables_body_tokens": 8293,
+        "difference_shared_minus_tables": -114,
+        "counts_by_id": {
+          "v0": 30,
+          "v1": 34
+        }
+      },
+      {
+        "task": "multi_turn_long_context_37",
+        "seed": "seed2207",
+        "shared_values": 2,
+        "shared_references": 64,
+        "unused_shared_values": [],
+        "body_tokens": 8216,
+        "tables_body_tokens": 8330,
+        "difference_shared_minus_tables": -114,
+        "counts_by_id": {
+          "v0": 30,
+          "v1": 34
+        }
+      },
+      {
+        "task": "multi_turn_long_context_37",
+        "seed": "seed3301",
+        "shared_values": 2,
+        "shared_references": 64,
+        "unused_shared_values": [],
+        "body_tokens": 8190,
+        "tables_body_tokens": 8304,
+        "difference_shared_minus_tables": -114,
+        "counts_by_id": {
+          "v0": 30,
+          "v1": 34
+        }
+      },
+      {
+        "task": "multi_turn_long_context_9",
+        "seed": "seed1103",
+        "shared_values": 10,
+        "shared_references": 39,
+        "unused_shared_values": [],
+        "body_tokens": 4247,
+        "tables_body_tokens": 4444,
+        "difference_shared_minus_tables": -197,
+        "counts_by_id": {
+          "v7": 2,
+          "v3": 6,
+          "v5": 4,
+          "v8": 2,
+          "v1": 4,
+          "v2": 2,
+          "v0": 10,
+          "v6": 3,
+          "v4": 4,
+          "v9": 2
+        }
+      },
+      {
+        "task": "multi_turn_long_context_9",
+        "seed": "seed2207",
+        "shared_values": 7,
+        "shared_references": 27,
+        "unused_shared_values": [],
+        "body_tokens": 3898,
+        "tables_body_tokens": 4068,
+        "difference_shared_minus_tables": -170,
+        "counts_by_id": {
+          "v2": 6,
+          "v5": 4,
+          "v1": 4,
+          "v4": 2,
+          "v0": 4,
+          "v6": 3,
+          "v3": 4
+        }
+      },
+      {
+        "task": "multi_turn_long_context_9",
+        "seed": "seed3301",
+        "shared_values": 5,
+        "shared_references": 17,
+        "unused_shared_values": [],
+        "body_tokens": 4677,
+        "tables_body_tokens": 4756,
+        "difference_shared_minus_tables": -79,
+        "counts_by_id": {
+          "v1": 3,
+          "v2": 4,
+          "v4": 4,
+          "v3": 4,
+          "v0": 2
+        }
+      }
+    ],
+    "interpretation": "All13 checkpoints use actual shared references, but shared-values representation also adds a rule and wrapper fields. Behavioral difference cannot be assigned uniquely to deduplication."
+  },
+  "interpretation": "Development selection only. No claims of held-out generalization; fresh seeds are independently evaluated by the controller. Shared references and inline rules both change the representation. All candidates preserve the exact original delivered graph, but recoverability does not guarantee identical model behavior.",
+  "full_report_paths": {
+    "event-tables-v1-none": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/analysis/event/live-feedback-tables-none.json",
+    "event-tables-v1-minimal": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/analysis/event/live-feedback-tables-minimal.json",
+    "event-tables-v1-full": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/analysis/event/live-feedback-tables-full.json",
+    "event-shared-v1-none": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/analysis/event/live-feedback-shared-none.json",
+    "event-shared-v1-minimal": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/analysis/event/live-feedback-shared-minimal.json",
+    "event-shared-v1-full": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/analysis/event/live-feedback-shared-full.json"
+  }
+}

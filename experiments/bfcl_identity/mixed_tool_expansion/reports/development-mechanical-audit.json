@@ -1,0 +1,1355 @@
+{
+  "counts": {
+    "pass": 168,
+    "fail": 0
+  },
+  "snapshot_hashes": {
+    "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1": true
+  },
+  "rows": [
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed1103/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed2207/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed2207/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed2207/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed2207/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed2207/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed2207/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed2207/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed3301/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed3301/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed3301/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed3301/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed3301/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed3301/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_0/seed3301/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed1103/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed1103/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed1103/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed1103/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed1103/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed1103/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed1103/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed2207/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed2207/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed2207/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed2207/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed2207/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed2207/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed2207/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed3301/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed3301/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed3301/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed3301/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed3301/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed3301/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_14/seed3301/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed1103/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed1103/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed1103/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed1103/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed1103/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed1103/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed1103/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed2207/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed2207/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed2207/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed2207/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed2207/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed2207/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed2207/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed3301/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed3301/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed3301/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed3301/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed3301/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed3301/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_15/seed3301/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed1103/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed1103/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed1103/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed1103/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed1103/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed1103/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed1103/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed2207/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed2207/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed2207/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed2207/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed2207/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed2207/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed2207/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed3301/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed3301/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed3301/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed3301/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed3301/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed3301/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_base_2/seed3301/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed1103/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed2207/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed2207/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed2207/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed2207/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed2207/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed2207/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed2207/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed3301/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed3301/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed3301/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed3301/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed3301/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed3301/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_0/seed3301/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed1103/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed1103/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed1103/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed1103/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed1103/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed1103/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed1103/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed2207/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed2207/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed2207/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed2207/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed2207/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed2207/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed2207/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed3301/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed3301/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed3301/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed3301/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed3301/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed3301/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_14/seed3301/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed1103/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed1103/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed1103/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed1103/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed1103/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed1103/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed1103/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed2207/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed2207/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed2207/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed2207/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed2207/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed2207/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed2207/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed3301/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed3301/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed3301/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed3301/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed3301/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed3301/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed3301/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed1103/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed1103/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed1103/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed1103/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed1103/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed1103/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed1103/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed2207/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed2207/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed2207/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed2207/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed2207/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed2207/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed2207/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed3301/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed3301/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed3301/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed3301/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed3301/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed3301/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    },
+    {
+      "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_2/seed3301/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": false,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1"
+    }
+  ]
+}

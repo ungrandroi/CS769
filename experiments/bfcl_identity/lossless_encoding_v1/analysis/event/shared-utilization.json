@@ -1,0 +1,245 @@
+{
+  "candidate": "event-shared-v1",
+  "shared_nonempty_checkpoints": 13,
+  "checkpoints": 13,
+  "total_shared_values": 78,
+  "total_references": 480,
+  "mean_body_token_difference_vs_tables": -167.53846153846155,
+  "rows": [
+    {
+      "task": "multi_turn_base_37",
+      "seed": "seed1103",
+      "shared_values": 3,
+      "shared_references": 8,
+      "unused_shared_values": [],
+      "body_tokens": 2370,
+      "tables_body_tokens": 2384,
+      "difference_shared_minus_tables": -14,
+      "counts_by_id": {
+        "v1": 2,
+        "v0": 4,
+        "v2": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": "seed2207",
+      "shared_values": 2,
+      "shared_references": 4,
+      "unused_shared_values": [],
+      "body_tokens": 2148,
+      "tables_body_tokens": 2111,
+      "difference_shared_minus_tables": 37,
+      "counts_by_id": {
+        "v0": 2,
+        "v1": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": "seed3301",
+      "shared_values": 2,
+      "shared_references": 4,
+      "unused_shared_values": [],
+      "body_tokens": 2308,
+      "tables_body_tokens": 2271,
+      "difference_shared_minus_tables": 37,
+      "counts_by_id": {
+        "v0": 2,
+        "v1": 2
+      }
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": "seed3301",
+      "shared_values": 13,
+      "shared_references": 63,
+      "unused_shared_values": [],
+      "body_tokens": 3916,
+      "tables_body_tokens": 4168,
+      "difference_shared_minus_tables": -252,
+      "counts_by_id": {
+        "v5": 3,
+        "v11": 2,
+        "v6": 4,
+        "v9": 3,
+        "v0": 16,
+        "v3": 4,
+        "v2": 2,
+        "v1": 13,
+        "v8": 3,
+        "v7": 2,
+        "v4": 6,
+        "v10": 3,
+        "v12": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": "seed1103",
+      "shared_values": 11,
+      "shared_references": 47,
+      "unused_shared_values": [],
+      "body_tokens": 6252,
+      "tables_body_tokens": 6686,
+      "difference_shared_minus_tables": -434,
+      "counts_by_id": {
+        "v10": 2,
+        "v6": 5,
+        "v7": 4,
+        "v8": 4,
+        "v3": 7,
+        "v4": 7,
+        "v5": 6,
+        "v9": 4,
+        "v0": 4,
+        "v1": 2,
+        "v2": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": "seed2207",
+      "shared_values": 9,
+      "shared_references": 34,
+      "unused_shared_values": [],
+      "body_tokens": 6181,
+      "tables_body_tokens": 6530,
+      "difference_shared_minus_tables": -349,
+      "counts_by_id": {
+        "v8": 2,
+        "v5": 5,
+        "v6": 4,
+        "v7": 4,
+        "v2": 3,
+        "v3": 4,
+        "v4": 4,
+        "v1": 4,
+        "v0": 4
+      }
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": "seed3301",
+      "shared_values": 10,
+      "shared_references": 45,
+      "unused_shared_values": [],
+      "body_tokens": 6601,
+      "tables_body_tokens": 7016,
+      "difference_shared_minus_tables": -415,
+      "counts_by_id": {
+        "v6": 5,
+        "v0": 5,
+        "v8": 4,
+        "v7": 4,
+        "v3": 6,
+        "v4": 6,
+        "v5": 6,
+        "v9": 4,
+        "v1": 3,
+        "v2": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": "seed1103",
+      "shared_values": 2,
+      "shared_references": 64,
+      "unused_shared_values": [],
+      "body_tokens": 8179,
+      "tables_body_tokens": 8293,
+      "difference_shared_minus_tables": -114,
+      "counts_by_id": {
+        "v0": 30,
+        "v1": 34
+      }
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": "seed2207",
+      "shared_values": 2,
+      "shared_references": 64,
+      "unused_shared_values": [],
+      "body_tokens": 8216,
+      "tables_body_tokens": 8330,
+      "difference_shared_minus_tables": -114,
+      "counts_by_id": {
+        "v0": 30,
+        "v1": 34
+      }
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": "seed3301",
+      "shared_values": 2,
+      "shared_references": 64,
+      "unused_shared_values": [],
+      "body_tokens": 8190,
+      "tables_body_tokens": 8304,
+      "difference_shared_minus_tables": -114,
+      "counts_by_id": {
+        "v0": 30,
+        "v1": 34
+      }
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": "seed1103",
+      "shared_values": 10,
+      "shared_references": 39,
+      "unused_shared_values": [],
+      "body_tokens": 4247,
+      "tables_body_tokens": 4444,
+      "difference_shared_minus_tables": -197,
+      "counts_by_id": {
+        "v7": 2,
+        "v3": 6,
+        "v5": 4,
+        "v8": 2,
+        "v1": 4,
+        "v2": 2,
+        "v0": 10,
+        "v6": 3,
+        "v4": 4,
+        "v9": 2
+      }
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": "seed2207",
+      "shared_values": 7,
+      "shared_references": 27,
+      "unused_shared_values": [],
+      "body_tokens": 3898,
+      "tables_body_tokens": 4068,
+      "difference_shared_minus_tables": -170,
+      "counts_by_id": {
+        "v2": 6,
+        "v5": 4,
+        "v1": 4,
+        "v4": 2,
+        "v0": 4,
+        "v6": 3,
+        "v3": 4
+      }
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": "seed3301",
+      "shared_values": 5,
+      "shared_references": 17,
+      "unused_shared_values": [],
+      "body_tokens": 4677,
+      "tables_body_tokens": 4756,
+      "difference_shared_minus_tables": -79,
+      "counts_by_id": {
+        "v1": 3,
+        "v2": 4,
+        "v4": 4,
+        "v3": 4,
+        "v0": 2
+      }
+    }
+  ],
+  "interpretation": "All13 checkpoints use actual shared references, but shared-values representation also adds a rule and wrapper fields. Behavioral difference cannot be assigned uniquely to deduplication."
+}

@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>BFCL 记忆回放</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,11 +67,11 @@ button, select, input { font: inherit; color: inherit; }
 .app { max-width: 1520px; margin: 0 auto; padding-block: 22px 40px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 14px; }
 .top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; }
 h1 { font-size: 22px; font-weight: 600; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
-.top p { margin: 0; color: var(--ink-2); max-width: 78ch; }
+.top p { margin: 0; color: var(--ink-2); }
 .scoreline { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .scoreline b { color: var(--ink); font-weight: 600; }
 
-.controls { display: grid; grid-template-columns: minmax(170px, 230px) minmax(200px, 270px) minmax(240px, 1fr); gap: 12px; align-items: end; }
+.controls { display: grid; grid-template-columns: minmax(150px, 200px) minmax(220px, 300px) minmax(240px, 1fr) minmax(220px, 340px); gap: 12px; align-items: end; }
 .controls .wide { grid-column: 1 / -1; }
 @media (max-width: 900px) { .controls { grid-template-columns: 1fr; } }
 .field { display: grid; gap: 4px; min-width: 0; }
@@ -115,7 +116,7 @@ h2 { font-size: 13px; font-weight: 600; margin: 0; letter-spacing: 0.02em; }
 .left { display: grid; grid-template-rows: auto auto; gap: 14px; min-width: 0; }
 
 /* file tree */
-.tree { height: 300px; overflow: auto; padding: 8px 6px 10px; font-family: var(--font-mono); font-size: 12.5px; }
+.tree { height: 340px; overflow: auto; padding: 8px 6px 10px; font-family: var(--font-mono); font-size: 12.5px; }
 .row { display: flex; align-items: center; gap: 6px; padding: 1px 8px 1px calc(8px + var(--d) * 16px); border-radius: 4px; white-space: nowrap; }
 .row .ic { width: 14px; flex: none; color: var(--muted); text-align: center; }
 .row.dir .nm { font-weight: 500; }
@@ -246,21 +247,92 @@ code { font-family: var(--font-mono); font-size: 12px; }
 .expnote b { color: var(--ink); }
 .ticks span.trig { color: var(--bad); border-left: 2px solid var(--bad); font-weight: 500; }
 
+
+/* combined cohort additions */
+:root { --fixed: #5d6b85; --fixed-bg: #e3e7ee; --thr: #c13d2c; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --fixed: #9aa7bf; --fixed-bg: #262d3a; --thr: #ef7464; } }
+:root[data-theme="dark"] { --fixed: #9aa7bf; --fixed-bg: #262d3a; --thr: #ef7464; }
+.mode .dot.hollow { background: transparent; box-shadow: inset 0 0 0 2px var(--c); }
+.modes .grp { display: inline-flex; gap: 0; }
+.modes .grp .mode { border-radius: 0; }
+.modes .grp .mode:first-child { border-radius: 6px 0 0 6px; }
+.modes .grp .mode:last-child { border-radius: 0 6px 6px 0; margin-left: -1px; }
+.loading { font-size: 12.5px; color: var(--muted); }
+.row .flag.loop { color: var(--bad); }
+.dom { border-top: 1px solid var(--line); padding: 8px 14px 10px; display: grid; gap: 6px; font-size: 12px; }
+.dom h3 { margin: 0; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 500; }
+.dom .cls { display: grid; gap: 2px; }
+.dom .cls b { font-family: var(--font-mono); font-size: 12px; }
+.dom .kv { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 8px; font-family: var(--font-mono); font-size: 11.5px; padding: 1px 6px; border-radius: 4px; }
+.dom .kv .k { color: var(--ink-2); }
+.dom .kv .v { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dom .kv.st-mod { background: var(--mod-bg); } .dom .kv.st-mod .v { color: var(--ink); }
+.tchip.added { border-color: var(--ok); color: var(--ok); }
+.comp { display: grid; gap: 6px; }
+.comp .bar { display: flex; height: 22px; border-radius: 4px; overflow: hidden; border: 1px solid var(--line); }
+.comp .bar span { display: block; min-width: 3px; }
+.comp .bar .fx { background: var(--fixed); }
+.comp .bar .ins { background: var(--cur); }
+.comp .bar .body { background: color-mix(in srgb, var(--cur) 40%, transparent); }
+.comp .bar .hist { background: var(--sunk); }
+.comp .keys { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.comp .keys span { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); }
+.comp .keys b { color: var(--ink); }
+.comp .keys .sw { width: 12px; height: 12px; margin: 0; }
+.comp .keys .em { font-weight: 600; color: var(--ink); }
+.comp .title { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 500; }
+
+.overview { padding: 12px 14px 14px; display: grid; gap: 10px; }
+.overview .head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
+.overview h2 { font-size: 13px; }
+.overview .meta { font-size: 12.5px; color: var(--muted); }
+.cohorts { display: flex; flex-wrap: wrap; gap: 6px; }
+.cohorts button { font-size: 12px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; color: var(--ink-2); }
+.cohorts button[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.otable { overflow-x: auto; }
+.otable table { border-collapse: collapse; width: 100%; font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.otable th { text-align: right; font-weight: 500; color: var(--muted); font-size: 11.5px; padding: 6px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; vertical-align: bottom; }
+.otable td { text-align: right; padding: 6px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.otable th:first-child, .otable td:first-child { text-align: left; }
+.otable tr { cursor: pointer; }
+.otable tr.cur td { background: color-mix(in srgb, var(--cur) 10%, transparent); }
+.otable tr:hover td { background: var(--sunk); }
+.otable .meth { display: inline-flex; align-items: center; gap: 8px; }
+.otable .meth i { width: 10px; height: 10px; border-radius: 50%; background: var(--c); display: inline-block; }
+.otable .meth i.hollow { background: transparent; box-shadow: inset 0 0 0 2px var(--c); }
+.otable .rate { display: inline-grid; grid-template-columns: 90px auto; gap: 8px; align-items: center; }
+.otable .rbar { position: relative; height: 8px; background: var(--sunk); border-radius: 4px; }
+.otable .rbar span { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: var(--c); }
+.otable .rbar b { position: absolute; top: -3px; bottom: -3px; width: 1.5px; background: var(--ink); }
+.otable .up { color: var(--ok); } .otable .down { color: var(--bad); } .otable .flat { color: var(--muted); }
+.otable .grp td { border-bottom: 0; padding-top: 2px; }
+.ocap { font-size: 12px; color: var(--muted); max-width: 120ch; }
+.totals { display: grid; gap: 8px; }
+.trow { display: grid; grid-template-columns: minmax(150px, 220px) minmax(0, 1fr) minmax(300px, 400px); gap: 12px; align-items: center; font-size: 12.5px; font-variant-numeric: tabular-nums; cursor: pointer; padding: 2px 4px; border-radius: 4px; }
+.trow.cur { background: color-mix(in srgb, var(--cur) 10%, transparent); font-weight: 600; }
+.trow .tb { display: flex; height: 16px; border-radius: 3px; overflow: hidden; background: var(--sunk); }
+.trow .tb .pre { background: var(--fixed); opacity: .55; }
+.trow .tb .post { background: var(--c); }
+.trow .tv { color: var(--ink-2); }
+.trow .tv b { color: var(--ink); }
+@media (max-width: 760px) { .trow { grid-template-columns: 1fr; gap: 4px; } }
 </style>
 
 <div class="app">
   <header class="top">
     <div>
       <h1>BFCL 记忆回放</h1>
-      <p>逐次模型调用回放：左侧是模拟文件系统的变化，右侧是模型每次看到的工作上下文。比较 Identity、State-Transition Graph、Event Graph、Event Graph-Dedup 四种记忆方法，以及两种转换时机。</p>
+      <p>逐次模型调用回放：左侧是模拟环境的变化，右侧是模型每次看到的工作上下文，下方是每次调用的输入构成。主实验是 1000-token 历史阈值转换：Identity 与三种图记忆（各有原格式与优化编码）共 7 个分支。</p>
     </div>
-    <div class="scoreline" id="scoreline"></div>
   </header>
+
+  <section class="panel overview" id="overview" aria-label="结果总览"></section>
 
   <section class="controls" aria-label="选择">
     <label class="field"><span class="label">模型</span><select id="model"></select></label>
     <label class="field"><span class="label">实验</span><select id="exp"></select></label>
     <label class="field"><span class="label">任务 <span class="hint" id="taskHint"></span></span><select id="task"></select></label>
+    <label class="field" id="seedField"><span class="label">重复（种子） <span class="hint" id="seedHint"></span></span><select id="seed"></select></label>
     <div class="field wide"><span class="label">记忆方法</span><div class="modes" id="modes" role="radiogroup" aria-label="记忆方法"></div></div>
     <div class="expnote wide" id="expnote" hidden></div>
   </section>
@@ -291,13 +363,13 @@ code { font-family: var(--font-mono); font-size: 12px; }
     <div class="left">
       <section class="panel">
         <div class="phead">
-          <h2>文件环境</h2>
+          <h2>环境</h2>
           <div class="legend-inline"><span><i class="sw" style="background:var(--add-bg);border:1px solid var(--add)"></i>新增</span><span><i class="sw" style="background:var(--mod-bg);border:1px solid var(--mod)"></i>内容变化</span><span><i class="sw" style="background:var(--bad)"></i>删除</span><span id="cwdLabel" class="mono"></span></div>
         </div>
         <div class="tree" id="tree"></div>
       </section>
       <section class="term" aria-label="终端">
-        <div class="bar"><i></i><i></i><i></i><span id="termTitle">bfcl — GorillaFileSystem</span></div>
+        <div class="bar"><i></i><i></i><i></i><span id="termTitle">bfcl</span></div>
         <pre id="term"></pre>
       </section>
     </div>
@@ -316,7 +388,7 @@ code { font-family: var(--font-mono); font-size: 12px; }
 
   <section class="panel" id="histPanel" hidden>
     <div class="phead">
-      <h2>工具内容累计 tokens（history1000 口径）</h2>
+      <h2>工具内容累计 tokens（history1000 旧口径）</h2>
       <span class="sub">调用 name(arguments) 与原始返回各自用 Qwen tokenizer 计数后求和；不含工具定义、用户输入、模型文字和协议包装</span>
     </div>
     <div class="chartwrap">
@@ -328,25 +400,33 @@ code { font-family: var(--font-mono); font-size: 12px; }
   <section class="panel">
     <div class="phead">
       <h2>每次模型调用的输入 tokens</h2>
-      <span class="sub">服务端 usage.input_tokens，含缓存命中；灰色底带是每次都要带的工具定义。点击图表跳到该次调用</span>
+      <span class="sub">服务端 usage.input_tokens，含缓存命中。点击图表跳到该次调用</span>
     </div>
     <div class="chartwrap">
+      <div class="comp" id="comp"></div>
       <div class="legend" id="legend"></div>
       <div id="chart"></div>
       <div class="stats" id="stats"></div>
     </div>
   </section>
 
+  <section class="panel" id="totalsPanel">
+    <div class="phead">
+      <h2>总消耗对比</h2>
+      <span class="sub" id="totalsSub"></span>
+    </div>
+    <div class="chartwrap"><div class="totals" id="totals"></div><div class="ocap" id="totalsCap"></div></div>
+  </section>
+
   <details class="about">
     <summary>数据来源与读法</summary>
     <ul>
-      <li>首轮后转换：Identity、State-Transition Graph、Event Graph 来自 <code>qwen27b_experiment/</code>，Event Graph-Dedup 来自 <code>qwen27b_dedup_eval/</code>。四种方法共用同一段 Qwen 第 1 轮；图方法回放这段首轮恢复环境，在第 2 轮用户输入前把旧历史换成一条图记忆，之后的新消息照常追加，不再转换。没有重新推理，得分为官方 BFCL 整任务评分。</li>
-      <li>Event Graph-Dedup 与 Event Graph 的图内容相同，区别在编码：来源关系按规则无损去重，不合并实际调用。图视图因此一样，记忆文本与 token 不同。</li>
-      <li>1000-token 历史阈值转换：<code>history1000_eval/</code> 目前只准备了检查点，还没有推理，也没有成绩。页面显示 Identity 轨迹上的工具内容累计曲线、触发点，以及在触发点转换时会交给模型的两种图（由前缀完全决定，离线构建）。逐次累计值与 <code>checkpoints.json</code> 的触发位置和 token 数逐项核对一致。</li>
-      <li>文件环境：用官方 GorillaFileSystem 逐条重放工具调用得到。每次输出与记录一致，每轮结束时的目录树与 BFCL 状态日志一致。</li>
-      <li>图视图：用各批次 <code>source_code/</code> 中的构图代码，对整段可见历史重建。转换点之前的节点与实际发送的图一致（实线）；之后的部分在实验中以原始消息形式追加，这里按同一规则画出，仅作对照（虚线 / 斜纹）。</li>
-      <li>工具定义的 token 数：用服务端同一 chat template 和本地 Qwen tokenizer，把同一条请求分别带工具、不带工具渲染并计数，两者之差即工具成本；渲染总数与服务端 usage 逐 token 一致。</li>
-      <li>上下文文本：每次调用实际发送的输入消息。较长的工具返回在页面上截断显示，并标出原长度。</li>
+      <li>主实验来自 <code>combined_work1000/</code>：<code>lossless_encoding_v1/</code>（13 个纯文件系统家族）与 <code>mixed_tool_expansion/</code>（37 个文件系统 + Twitter / Math / Message / Ticket 家族），各 4 种条件 × 3 个新种子，共 600 条 Identity，其中 417 条触发转换。本地 Qwen3.8-27B-Q8_0，temperature 0.6。</li>
+      <li>触发规则：工作输入（完整输入减去固定的系统 / 工具模板）严格大于 1000 tokens，且所有调用都已配对返回。7 个分支共用同一段 Identity 前缀；图分支在触发的那次调用前把历史替换成图一次，图之后不再更新，新的交互以原始消息追加。</li>
+      <li>原格式与优化编码是同一份语义图的两种文本编码；图视图显示的是实际交付的图（<code>memory-metadata.json</code>），节点按其中记录的观察步号逐步出现。Event Graph 的两个版本还换了图说明（完整 151 → 精简 32 tokens）。</li>
+      <li>环境：用 BFCL 官方执行器（同样的调用字符串转换与执行）逐条重放所有涉及的工具类，每次输出与记录一致，每轮结束时的目录树与 BFCL 状态日志一致。密码类字段在页面上隐藏。</li>
+      <li>输入构成：工具定义与系统模板来自 <code>accounting.json</code> 的 fixed_tokens；图说明与图记忆正文来自交付记录；其余为对话历史与协议包装。</li>
+      <li>同一条件、同一方法的成败在不同种子间常常不同；单个种子上的差异不能当作方法效果。早期实验（首轮后转换、history1000 旧口径）保留在“实验”菜单里。</li>
     </ul>
   </details>
 </div>
@@ -355,41 +435,85 @@ code { font-family: var(--font-mono); font-size: 12px; }
 <script>
 (() => {
 const DATA = JSON.parse(document.getElementById('viewer-data').textContent);
-const LABELS = DATA.labels;
+const W = DATA.w1000;
+const FAMILY = { identity: 'identity', state: 'v1-compact', event: 'v2-compact', dedup: 'v2-dedup' };
+const COLOR = { identity: '--m-id', 'v1-compact': '--m-v1', 'v2-compact': '--m-v2', 'v2-dedup': '--m-dd' };
 const MODES = [
-  { k: 'identity', c: '--m-id' },
-  { k: 'v1-compact', c: '--m-v1' },
-  { k: 'v2-compact', c: '--m-v2' },
-  { k: 'v2-dedup', c: '--m-dd' },
-].map(m => ({ ...m, label: LABELS[m.k] }));
+  ...Object.entries(DATA.labels).map(([k, label]) => ({ k, label, fam: k, variant: null })),
+  ...W.arms.map(a => ({ k: a.k, label: a.label, fam: FAMILY[a.method], variant: a.variant, method: a.method })),
+].map(m => ({ ...m, c: COLOR[m.fam] }));
 const modeOf = k => MODES.find(m => m.k === k);
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const fmtK = n => n >= 10000 ? (n / 1000).toFixed(0) + 'k' : n >= 1000 ? (n / 1000).toFixed(1) + 'k' : String(n);
-const fmtN = n => n.toLocaleString('en-US');
+const fmtN = n => (n ?? 0).toLocaleString('en-US');
 const css = name => getComputedStyle(document.body).getPropertyValue(name).trim();
+const DOMAIN = { GorillaFileSystem: '文件系统', TwitterAPI: 'Twitter', MessageAPI: 'Message', TicketAPI: 'Ticket', MathAPI: 'Math' };
 
-const S = { mi: 0, ei: 0, ti: 0, mode: 'v2-compact', r: 0, playing: false, speed: 1, tab: 'graph', timer: null, toolsOpen: false };
+const S = { mi: 0, ei: 0, ti: 0, wi: 0, si: 0, mode: 'event-optimized', r: 0, playing: false, speed: 1, tab: 'graph', timer: null, toolsOpen: false, cohort: 'all' };
+const KEY = 'bfcl-memory-viewer-2';
 try {
-  const saved = JSON.parse(localStorage.getItem('bfcl-memory-viewer') || 'null');
-  if (saved) Object.assign(S, { mi: saved.mi ?? 0, ei: saved.ei ?? 0, ti: saved.ti ?? 0, mode: saved.mode ?? S.mode, speed: saved.speed ?? 1, tab: saved.tab ?? 'graph', toolsOpen: !!saved.toolsOpen });
+  const saved = JSON.parse(localStorage.getItem(KEY) || 'null');
+  if (saved) Object.assign(S, { mi: saved.mi ?? 0, ei: saved.ei ?? 0, ti: saved.ti ?? 0, wi: saved.wi ?? 0, si: saved.si ?? 0, mode: saved.mode ?? S.mode, speed: saved.speed ?? 1, tab: saved.tab ?? 'graph', toolsOpen: !!saved.toolsOpen, cohort: saved.cohort || 'all' });
 } catch (e) {}
-function persist() { try { localStorage.setItem('bfcl-memory-viewer', JSON.stringify({ mi: S.mi, ei: S.ei, ti: S.ti, mode: S.mode, speed: S.speed, tab: S.tab, toolsOpen: S.toolsOpen })); } catch (e) {} }
+function persist() { try { localStorage.setItem(KEY, JSON.stringify({ mi: S.mi, ei: S.ei, ti: S.ti, wi: S.wi, si: S.si, mode: S.mode, speed: S.speed, tab: S.tab, toolsOpen: S.toolsOpen, cohort: S.cohort })); } catch (e) {} }
 
 const model = () => DATA.models[S.mi];
 const exp = () => model().experiments[S.ei];
+const isW = () => exp().key === 'w1000';
 const isH = () => exp().key === 'history1000';
-const expModes = () => exp().modes.map(modeOf);
-const task = () => model().tasks[S.ti];
+const shortId = id => id.replace('multi_turn_long_context_', 'long_context ').replace('multi_turn_base_', 'base ').replace('multi_turn_miss_func_', 'miss_func ').replace('multi_turn_miss_param_', 'miss_param ');
+
+/* ---------- combined cohort: on-demand task files ---------- */
+const detailCache = new Map();
+async function loadDetail(file) {
+  if (detailCache.has(file)) return detailCache.get(file);
+  const p = (async () => {
+    let res;
+    try { res = await fetch(`${W.dir}/${file}`); } catch (e) { throw new Error('local'); }
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const body = (await res.text()).trim();
+    if (body.startsWith('{')) return JSON.parse(body);
+    const bin = atob(body), buf = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) buf[i] = bin.charCodeAt(i);
+    const stream = new Blob([buf]).stream().pipeThrough(new DecompressionStream('gzip'));
+    return JSON.parse(await new Response(stream).text());
+  })();
+  detailCache.set(file, p);
+  p.catch(() => detailCache.delete(file));
+  return p;
+}
+const wEntry = () => W.tasks[S.wi];
+let current = null;  // normalized task for the w1000 view: { id, category, questions, runs, seed, detail }
+function mergeRun(detail, seed, arm) {
+  const id = seed.identity;
+  if (arm === 'identity') return { ...id, pool: detail.pool, boundary: null, conv: seed.triggered ? seed.trigger : null };
+  const a = seed.arms[arm], T = seed.trigger;
+  return { ...a, steps: [...id.steps.slice(0, T), ...a.steps], fs0: id.fs0, cwd0: id.cwd0, pool: detail.pool, conv: T };
+}
+function buildCurrent(detail) {
+  const e = wEntry(), seed = detail.seeds[S.si];
+  const runs = {};
+  for (const a of W.arms) if (a.k === 'identity' || seed.triggered) runs[a.k] = mergeRun(detail, seed, a.k);
+  current = { id: e.task, category: e.category, questions: e.questions, missed: e.missed, runs, seed, detail, entry: e };
+}
+
+const task = () => isW() ? current : model().tasks[S.ti];
 const run = (m = S.mode) => task().runs[m];
-const shortId = id => id.replace('multi_turn_long_context_', 'long_context ').replace('multi_turn_base_', 'base ');
+const expModes = () => exp().modes.map(modeOf);
+const availModes = () => isW() ? expModes().filter(m => run(m.k)) : expModes();
 
 /* The single conversion point of the current view: history → memory. */
 function conv() {
+  if (isW()) { const s = current.seed; return s.triggered ? { idx: s.trigger, kind: 'w1000' } : null; }
   if (isH()) { const h = task().h1000; return h.trigger != null ? { idx: h.trigger, kind: 'h1000' } : null; }
   const R = run();
   return R.boundary != null ? { idx: R.boundary, kind: 'swap' } : null;
 }
+const fixedOf = st => st.fixed ?? model().toolTokens;
+const instrOf = R => R.instrTokens ?? 0;
+const bodyOf = R => R.bodyTokens ?? R.memTokens ?? 0;
+const graphIn = (R, i) => R.conv != null ? i >= R.conv && R.k !== 'identity' && R.memTokens != null : R.boundary != null && i >= R.boundary;
 
 /* ---------- pickers ---------- */
 function fillModels() {
@@ -401,7 +525,10 @@ function fillExps() {
   $('exp').innerHTML = model().experiments.map((e, i) => `<option value="${i}">${esc(e.label)}${e.status === 'complete' ? '' : '（未运行）'}</option>`).join('');
   $('exp').value = S.ei;
 }
+const passMarks = (passed, keys) => keys.map(k => passed[k] == null ? '·' : passed[k] ? '✓' : '✗').join('');
 function fillTasks() {
+  $('seedField').hidden = !isW();
+  if (isW()) return fillWTasks();
   const groups = {};
   model().tasks.forEach((t, i) => (groups[t.category] ||= []).push([t, i]));
   const names = { multi_turn_base: 'Base', multi_turn_long_context: 'Long Context' };
@@ -419,25 +546,80 @@ function fillTasks() {
   const sc = isH()
     ? `history1000：${E.triggered} 项触发 / ${E.untriggered} 项未触发 · 尚未推理`
     : '官方得分：' + ms.map(m => `${m.label} <b>${T.filter(t => t.runs[m.k].passed).length}/${T.length}</b>`).join(' · ');
-  $('scoreline').innerHTML = `${esc(model().label)} · ${esc(model().note)}<br>${sc}`;
+  $('overview').innerHTML = `<div class="head"><h2>${esc(E.label)}</h2><span class="meta">${esc(model().label)} · ${esc(model().note)}</span></div><div class="ocap" style="color:var(--ink-2)">${sc}</div>`;
   const note = $('expnote');
   note.hidden = !isH();
-  if (isH()) note.innerHTML = `<b>这个实验还没有运行。</b>阈值 ${E.threshold}：工具内容累计首次达到 ${E.threshold} tokens 的那次调用之前，把历史转换为图一次，之后保留新历史。现在能看的是 Identity 的实际轨迹、触发点，以及在触发点会交给模型的 State-Transition Graph 和 Event Graph（离线构建）；两种图方法的续跑和成绩还没有。`;
+  if (isH()) note.innerHTML = `<b>这个早期实验没有运行。</b>它只统计工具内容（阈值 ${E.threshold}），与主实验的“工作输入 > 1000”是不同的口径。这里能看的是 Identity 的实际轨迹、触发点，以及在触发点会交给模型的两种图（离线构建）。`;
+}
+function fillWTasks() {
+  const cat = { multi_turn_base: 'Base', multi_turn_long_context: 'Long Context', multi_turn_miss_func: 'Missing Function', multi_turn_miss_param: 'Missing Parameter' };
+  const groups = new Map();
+  W.tasks.forEach((t, i) => { const g = `${W.studies[t.study]} · ${cat[t.category] || t.category}`; if (!groups.has(g)) groups.set(g, []); groups.get(g).push([t, i]); });
+  $('task').innerHTML = [...groups].map(([g, list]) => `<optgroup label="${esc(g)}">` + list.map(([t, i]) => {
+    const n = t.seeds.filter(s => s.triggered).length;
+    const dom = t.classes.filter(c => c !== 'GorillaFileSystem').map(c => DOMAIN[c] || c).join('+');
+    return `<option value="${i}">${shortId(t.task)}${dom ? ' · ' + dom : ''} · ${n}/${t.seeds.length} 个种子触发</option>`;
+  }).join('') + '</optgroup>').join('');
+  if (S.wi >= W.tasks.length) S.wi = 0;
+  $('task').value = S.wi;
+  $('taskHint').textContent = '（条件实例 · 触发的种子数）';
+  fillSeeds();
+  renderOverview();
+  const note = $('expnote');
+  note.hidden = false;
+  note.innerHTML = `<b>规则：</b>工作输入（完整输入减去固定的系统 / 工具模板）首次严格大于 ${W.threshold} tokens，且调用都已配对返回时，图分支把历史替换成图一次，之后新交互照常追加。7 个分支共用同一段 Identity 前缀。同一条件不同种子的成败常常不同，单个种子的差异不代表方法效果。`;
+}
+const signed = (v, digits = 1, unit = '') => `${v > 0 ? '+' : v < 0 ? '−' : '±'}${Math.abs(v).toFixed(digits)}${unit}`;
+const trend = v => Math.abs(v) < 0.05 ? 'flat' : v > 0 ? 'up' : 'down';
+function renderOverview() {
+  const c = W.cohorts.find(x => x.key === S.cohort) || W.cohorts[0];
+  const id = c.arms.find(a => a.arm === 'identity');
+  const rate = a => a.passed / a.n * 100;
+  const rows = c.arms.map(a => {
+    const m = modeOf(a.arm), isId = a.arm === 'identity';
+    const dpp = rate(a) - rate(id), dTot = (a.postTotal / id.postTotal - 1) * 100, dFirst = (a.first / id.first - 1) * 100;
+    return `<tr data-k="${a.arm}" class="${a.arm === S.mode ? 'cur' : ''}" style="--c:var(${m.c})">
+      <td><span class="meth"><i class="${m.variant === 'baseline' ? 'hollow' : ''}"></i>${esc(m.label)}</span></td>
+      <td>${a.passed} / ${a.n}</td>
+      <td><span class="rate"><span class="rbar"><span style="width:${rate(a)}%"></span><b style="left:${rate(id)}%" title="Identity ${rate(id).toFixed(1)}%"></b></span>${rate(a).toFixed(1)}%</span></td>
+      <td class="${isId ? 'flat' : trend(dpp)}">${isId ? '—' : signed(dpp, 1, ' pp')}</td>
+      <td>${isId ? '—' : `<span class="up">${a.gains}</span> / <span class="down">${a.losses}</span>`}</td>
+      <td>${fmtN(Math.round(a.first))}${isId ? '' : ` <span class="flat">(${signed(dFirst, 0, '%')})</span>`}</td>
+      <td>${fmtN(Math.round(a.meanPost))}</td>
+      <td>${a.postReq.toFixed(1)}</td>
+      <td><b>${fmtN(Math.round(a.postTotal))}</b>${isId ? '' : ` <span class="flat">(${signed(dTot, 0, '%')})</span>`}</td>
+    </tr>`;
+  }).join('');
+  $('overview').innerHTML = `<div class="head"><h2>结果总览 · ${esc(c.label)}（${c.n} 个触发前缀，每个前缀 7 个分支配对）</h2><span class="meta">${esc(model().label)} · temperature 0.6 · 3 个种子</span></div>
+    <div class="cohorts" role="group" aria-label="分组">${W.cohorts.map(x => `<button data-c="${x.key}" aria-pressed="${x.key === c.key}">${esc(x.label)} ${x.n}</button>`).join('')}</div>
+    <div class="otable"><table><thead><tr><th>方法</th><th>成功</th><th>成功率（竖线为 Identity）</th><th>相对 Identity</th><th>得 / 失</th><th>转换后首次输入</th><th>转换后每次输入（平均）</th><th>转换后调用次数</th><th>转换后累计输入（每条平均）</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <div class="ocap">输入 token 都含工具定义与系统模板。“得 / 失”是同一前缀上相对 Identity 由败转成和由成转败的个数。转换后累计输入 = 每条轨迹转换后各次调用的输入之和，再对轨迹取平均；它同时受每次输入大小和调用次数影响。条件与种子不是独立样本，表中差异没有做显著性判断，区间见各研究的审计报告。点击一行切换到该方法。</div>`;
+}
+function fillSeeds() {
+  const t = wEntry(), keys = W.arms.map(a => a.k);
+  if (S.si >= t.seeds.length) S.si = 0;
+  $('seed').innerHTML = t.seeds.map((s, i) => s.triggered
+    ? `<option value="${i}">种子 ${s.seed} · 第 ${s.trigger + 1} 次调用转换 · ${passMarks(s.passed, keys)}${s.mixedPrefix ? ' · 前缀含非文件调用' : ''}</option>`
+    : `<option value="${i}">种子 ${s.seed} · 未触发（只有 Identity ${s.passed.identity ? '✓' : '✗'}）</option>`).join('');
+  $('seed').value = S.si;
+  $('seedHint').textContent = '（✓/✗ 依次为 7 个分支）';
 }
 function renderModes() {
   const ex = exp();
-  const live = ex.modes.map(k => {
-    const m = modeOf(k), r = run(k);
-    return `<button class="mode" role="radio" aria-checked="${k === S.mode}" data-k="${k}" style="--c:var(${m.c})">
-      <span class="dot"></span><span>${m.label}</span><span class="res ${r.passed ? 'ok' : 'bad'}">${r.passed ? '✓ 通过' : '✗ 未通过'}</span></button>`;
-  });
-  const pend = (ex.pending || []).map(k => {
-    const m = modeOf(k);
-    return `<button class="mode" role="radio" aria-checked="false" aria-disabled="true" style="--c:var(${m.c})" title="这个实验里该方法还没有续跑记录">
-      <span class="dot"></span><span>${m.label}</span><span class="res pend">待运行</span></button>`;
-  });
-  $('modes').innerHTML = live.concat(pend).join('');
-  document.body.dataset.mode = S.mode;
+  const btn = (m, on, disabled, res) => `<button class="mode" role="radio" aria-checked="${on}" ${disabled ? 'aria-disabled="true"' : ''} data-k="${m.k}" style="--c:var(${m.c})" ${disabled ? 'title="这个种子没有触发转换，没有图分支"' : ''}>
+      <span class="dot ${m.variant === 'baseline' ? 'hollow' : ''}"></span><span>${esc(m.label)}</span>${res}</button>`;
+  const res = r => r ? `<span class="res ${r.passed ? 'ok' : 'bad'}">${r.passed ? '✓' : '✗'}</span>` : '<span class="res pend">未触发</span>';
+  let html;
+  if (isW()) {
+    const byMethod = {};
+    expModes().forEach(m => (byMethod[m.method] ||= []).push(m));
+    html = Object.values(byMethod).map(list => `<span class="grp">${list.map(m => btn(m, m.k === S.mode, !run(m.k), res(run(m.k)))).join('')}</span>`).join('');
+  } else {
+    html = ex.modes.map(k => { const m = modeOf(k), r = run(k); return btn(m, k === S.mode, false, `<span class="res ${r.passed ? 'ok' : 'bad'}">${r.passed ? '✓ 通过' : '✗ 未通过'}</span>`); }).join('') +
+      (ex.pending || []).map(k => `<button class="mode" role="radio" aria-checked="false" aria-disabled="true" style="--c:var(${modeOf(k).c})" title="这个实验里该方法还没有续跑记录"><span class="dot"></span><span>${esc(modeOf(k).label)}</span><span class="res pend">待运行</span></button>`).join('');
+  }
+  $('modes').innerHTML = html;
+  document.body.dataset.mode = modeOf(S.mode).fam;
 }
 
 /* ---------- turns + transport ---------- */
@@ -454,6 +636,7 @@ function renderTicks() {
     }
   });
   if (cv && cv.kind === 'h1000') html += `<span class="trig" style="left:${pos(cv.idx)}%">1000 阈值</span>`;
+  if (cv && cv.kind === 'w1000') html += `<span class="swap" style="left:${pos(cv.idx)}%" title="工作输入 > 1000">转换</span>`;
   $('ticks').innerHTML = html;
 }
 function renderStepInfo() {
@@ -461,63 +644,77 @@ function renderStepInfo() {
   $('scrub').value = S.r;
   $('stepLabel').textContent = `调用 ${S.r + 1} / ${R.steps.length}`;
   const tag = $('stepTag');
-  if (cv && cv.idx === S.r && cv.kind === 'swap') { tag.textContent = '图记忆刚替换历史'; tag.className = 'tag swap'; }
-  else if (cv && cv.idx === S.r) { tag.textContent = '达到 1000：此处转换（未运行）'; tag.className = 'tag swap'; }
-  else if (isH()) { const h = task().h1000.hist[S.r]; tag.textContent = `工具内容 ${h == null ? '—' : fmtN(h)} tokens`; tag.className = 'tag'; }
-  else if (st.replay) { tag.textContent = '首轮回放（与 Identity 相同）'; tag.className = 'tag'; }
-  else { tag.textContent = `第 ${st.turn + 1} 轮 · 实时生成`; tag.className = 'tag'; }
+  const set = (t, c) => { tag.textContent = t; tag.className = c; };
+  if (cv && cv.idx === S.r && cv.kind === 'swap') set('图记忆刚替换历史', 'tag swap');
+  else if (cv && cv.idx === S.r && cv.kind === 'w1000') set(S.mode === 'identity' ? '转换点：图分支从这里开始' : '图记忆刚替换历史', 'tag swap');
+  else if (cv && cv.idx === S.r) set('达到 1000：此处转换（未运行）', 'tag swap');
+  else if (isH()) { const h = task().h1000.hist[S.r]; set(`工具内容 ${h == null ? '—' : fmtN(h)} tokens`, 'tag'); }
+  else if (isW()) set(`第 ${st.turn + 1} 轮 · 工作输入 ${fmtN(st.in - fixedOf(st))}`, 'tag');
+  else if (st.replay) set('首轮回放（与 Identity 相同）', 'tag');
+  else set(`第 ${st.turn + 1} 轮 · 实时生成`, 'tag');
 }
 
-/* ---------- file tree ---------- */
+/* ---------- environment ---------- */
 function flat(node, path, map) {
   const p = path + '/' + node.n;
   map.set(p, node);
   if (node.c) node.c.forEach(ch => flat(ch, p, map));
   return map;
 }
+const snapAt = (R, i) => { const s = R.pool[i < 0 ? R.fs0 : R.steps[i].fs]; return s && s.fs ? s : { fs: s, dom: null }; };
 function renderTree() {
   const R = run(), st = R.steps[S.r];
-  const cur = R.pool[st.fs];
-  const prev = R.pool[S.r === 0 ? R.fs0 : R.steps[S.r - 1].fs];
-  const curMap = flat(cur, '', new Map()), prevMap = flat(prev, '', new Map());
-  const cwd = st.cwd;
-  const status = new Map(), hot = new Set();
-  const markUp = p => { let q = p; while (q.lastIndexOf('/') > 0) { q = q.slice(0, q.lastIndexOf('/')); hot.add(q); } };
-  for (const [p, n] of curMap) {
-    const o = prevMap.get(p);
-    if (!o) { status.set(p, 'add'); hot.add(p); markUp(p); }
-    else if (!n.c && (o.l !== n.l || o.f !== n.f)) { status.set(p, 'mod'); hot.add(p); markUp(p); }
-  }
-  for (const p of prevMap.keys()) if (!curMap.has(p)) { status.set(p, 'del'); markUp(p); }
+  const curSnap = snapAt(R, S.r), prevSnap = snapAt(R, S.r - 1);
+  const cur = curSnap.fs, prev = prevSnap.fs;
   const out = [];
-  const row = (n, p, d, st) => {
-    const isDir = !!n.c, isCwd = p === cwd;
-    const flags = (isCwd ? '<span class="flag c">cwd</span>' : '') +
-      (st === 'add' ? '<span class="flag s">新增</span>' : st === 'mod' ? '<span class="flag s">已修改</span>' : st === 'del' ? '<span class="flag s">已删除</span>' : '');
-    const size = isDir ? `<span class="sz">${n.c.length} 项</span>` : `<span class="sz">${fmtN(n.l)} 字符</span>`;
-    const title = isDir ? p : `${p}\n${n.f}${n.l > n.f.length ? '…' : ''}`;
-    out.push(`<div class="row ${isDir ? 'dir' : 'file'} ${isCwd ? 'cwd' : ''} ${st ? 'st-' + st : ''}" style="--d:${d}" title="${esc(title)}"><span class="ic">${isDir ? '▾' : '·'}</span><span class="nm">${esc(n.n)}${isDir ? '/' : ''}</span>${size}${flags}</div>`);
-  };
-  const walk = (n, path, d) => {
-    const p = path + '/' + n.n;
-    row(n, p, d, status.get(p));
-    if (!n.c) return;
-    const files = n.c.filter(k => !k.c), dirs = n.c.filter(k => k.c);
-    dirs.forEach(k => walk(k, p, d + 1));
-    let shown = files;
-    if (files.length > 10) {
-      const keep = files.filter(k => hot.has(p + '/' + k.n));
-      const rest = files.filter(k => !hot.has(p + '/' + k.n));
-      shown = [...keep, ...rest.slice(0, Math.max(0, 6 - keep.length))];
+  const cwd = st.cwd;
+  if (cur) {
+    const curMap = flat(cur, '', new Map()), prevMap = flat(prev, '', new Map());
+    const status = new Map(), hot = new Set();
+    const markUp = p => { let q = p; while (q.lastIndexOf('/') > 0) { q = q.slice(0, q.lastIndexOf('/')); hot.add(q); } };
+    for (const [p, n] of curMap) {
+      const o = prevMap.get(p);
+      if (!o) { status.set(p, 'add'); hot.add(p); markUp(p); }
+      else if (!n.c && (o.l !== n.l || o.f !== n.f)) { status.set(p, 'mod'); hot.add(p); markUp(p); }
     }
-    shown.forEach(k => row(k, p + '/' + k.n, d + 1, status.get(p + '/' + k.n)));
-    if (shown.length < files.length) out.push(`<div class="row more" style="--d:${d + 1}"><span class="ic"></span>… 另有 ${files.length - shown.length} 个文件未显示</div>`);
-    const pn = prevMap.get(p);
-    if (pn && pn.c) pn.c.filter(k => !curMap.has(p + '/' + k.n)).forEach(k => row(k, p + '/' + k.n, d + 1, 'del'));
-  };
-  walk(cur, '', 0);
-  $('tree').innerHTML = out.join('');
-  $('cwdLabel').textContent = 'cwd ' + cwd;
+    for (const p of prevMap.keys()) if (!curMap.has(p)) { status.set(p, 'del'); markUp(p); }
+    const row = (n, p, d, st) => {
+      const isDir = !!n.c, isCwd = p === cwd;
+      const flags = (isCwd ? '<span class="flag c">cwd</span>' : '') + (n.loop ? '<span class="flag loop">↻ 目录被移入自身</span>' : '') +
+        (st === 'add' ? '<span class="flag s">新增</span>' : st === 'mod' ? '<span class="flag s">已修改</span>' : st === 'del' ? '<span class="flag s">已删除</span>' : '');
+      const size = isDir ? `<span class="sz">${n.c.length} 项</span>` : `<span class="sz">${fmtN(n.l)} 字符</span>`;
+      const title = isDir ? p : `${p}\n${n.f}${n.l > n.f.length ? '…' : ''}`;
+      out.push(`<div class="row ${isDir ? 'dir' : 'file'} ${isCwd ? 'cwd' : ''} ${st ? 'st-' + st : ''}" style="--d:${d}" title="${esc(title)}"><span class="ic">${isDir ? '▾' : '·'}</span><span class="nm">${esc(n.n)}${isDir ? '/' : ''}</span>${size}${flags}</div>`);
+    };
+    const walk = (n, path, d) => {
+      const p = path + '/' + n.n;
+      row(n, p, d, status.get(p));
+      if (!n.c) return;
+      const files = n.c.filter(k => !k.c), dirs = n.c.filter(k => k.c);
+      dirs.forEach(k => walk(k, p, d + 1));
+      let shown = files;
+      if (files.length > 10) {
+        const keep = files.filter(k => hot.has(p + '/' + k.n));
+        const rest = files.filter(k => !hot.has(p + '/' + k.n));
+        shown = [...keep, ...rest.slice(0, Math.max(0, 6 - keep.length))];
+      }
+      shown.forEach(k => row(k, p + '/' + k.n, d + 1, status.get(p + '/' + k.n)));
+      if (shown.length < files.length) out.push(`<div class="row more" style="--d:${d + 1}"><span class="ic"></span>… 另有 ${files.length - shown.length} 个文件未显示</div>`);
+      const pn = prevMap.get(p);
+      if (pn && pn.c) pn.c.filter(k => !curMap.has(p + '/' + k.n)).forEach(k => row(k, p + '/' + k.n, d + 1, 'del'));
+    };
+    walk(cur, '', 0);
+  }
+  let dom = '';
+  if (curSnap.dom) {
+    dom = `<div class="dom"><h3>其他工具状态</h3>` + Object.entries(curSnap.dom).map(([cls, kv]) => {
+      const pv = (prevSnap.dom || {})[cls] || {};
+      return `<div class="cls"><b>${esc(DOMAIN[cls] || cls)}</b>` + Object.entries(kv).map(([k, v]) =>
+        `<div class="kv ${pv[k] !== undefined && pv[k] !== v ? 'st-mod' : ''}" title="${esc(v)}"><span class="k">${esc(k)}</span><span class="v">${esc(v)}</span></div>`).join('') + '</div>';
+    }).join('') + '</div>';
+  }
+  $('tree').innerHTML = out.join('') + dom;
+  $('cwdLabel').textContent = cwd ? 'cwd ' + cwd : '';
   const el = $('tree').querySelector('.st-add, .st-mod, .st-del, .cwd');
   if (el) { const box = $('tree'); const top = el.offsetTop - box.offsetTop; if (top < box.scrollTop || top > box.scrollTop + box.clientHeight - 30) box.scrollTop = Math.max(0, top - 60); }
 }
@@ -534,7 +731,11 @@ const BASH = {
   rm: a => `rm ${qa(a.file_name)}`, rmdir: a => `rmdir ${qa(a.dir_name)}`, cp: a => `cp ${qa(a.source)} ${qa(a.destination)}`,
 };
 const parseArgs = s => { try { return JSON.parse(s) || {}; } catch (e) { return {}; } };
-function bash(name, args) { const a = parseArgs(args); return BASH[name] ? BASH[name](a) : `${name} ${args}`; }
+function bash(name, args) {
+  const a = parseArgs(args);
+  if (BASH[name]) return BASH[name](a);
+  return `${name}(${Object.entries(a).map(([k, v]) => `${k}=${JSON.stringify(v)}`).join(', ')})`;
+}
 function fmtOut(tool, text) {
   if (text === 'None' || text === '') return { lines: [] };
   let v;
@@ -544,12 +745,13 @@ function fmtOut(tool, text) {
     if (tool === 'cd') return { lines: [] };
     const out = [];
     for (const val of Object.values(v)) {
-      if (Array.isArray(val)) { if (tool === 'ls') out.push(val.join('  ')); else out.push(...val.map(String)); }
+      if (Array.isArray(val)) { if (tool === 'ls') out.push(val.join('  ')); else out.push(...val.map(x => typeof x === 'object' ? JSON.stringify(x) : String(x))); }
+      else if (val && typeof val === 'object') out.push(JSON.stringify(val));
       else out.push(...String(val).split('\n'));
     }
     return { lines: out };
   }
-  return { lines: [String(v)] };
+  return { lines: [typeof v === 'object' ? JSON.stringify(v) : String(v)] };
 }
 function clipLines(lines, maxLines = 10, maxChars = 700) {
   let total = 0, out = [];
@@ -560,29 +762,35 @@ function clipLines(lines, maxLines = 10, maxChars = 700) {
   }
   return out;
 }
+function convLine(cv, i, R) {
+  if (cv.kind === 'swap') return `── 记忆转换：之前 ${R.replaced ?? ''} 条消息被换成 1 条 ${esc(modeOf(S.mode).label)} 记忆（${R.memTokens ? fmtN(R.memTokens) + ' tokens' : ''}）──`;
+  if (cv.kind === 'h1000') return `── history1000 检查点：工具内容累计 ${fmtN(task().h1000.hist[i])} tokens ≥ 1000，图方法将在这次调用前转换（尚未运行）──`;
+  const sw = current.seed.sourceWork;
+  if (S.mode === 'identity') return `── 工作输入 ${fmtN(sw)} > 1000：图分支在这次调用前转换；Identity 保留原文继续 ──`;
+  return `── 工作输入 ${fmtN(sw)} > 1000：${R.replaced} 条消息被换成 1 条 ${esc(modeOf(S.mode).label)} 记忆（${fmtN(R.memTokens)} tokens，其中图说明 ${fmtN(instrOf(R))}）──`;
+}
 function renderTerm() {
   const t = task(), R = run(), cv = conv();
-  const user = R.cwd0.split('/')[1] || 'user';
-  let cwd = R.cwd0, html = '';
+  const user = (R.cwd0 || '/user').split('/')[1] || 'user';
+  let cwd = R.cwd0 || '', html = '';
   const line = (cls, s) => `<span class="t-line ${cls}">${s}</span>`;
   for (let i = 0; i <= S.r; i++) {
     const st = R.steps[i], now = i === S.r ? 't-now' : '';
-    if (cv && cv.idx === i) {
-      if (cv.kind === 'swap') html += line('', `<span class="t-swap">── 记忆转换：之前 ${R.replaced ?? ''} 条消息被换成 1 条 ${esc(modeOf(S.mode).label)} 记忆（${R.memTokens ? fmtN(R.memTokens) + ' tokens' : ''}）──</span>`);
-      else html += line('', `<span class="t-swap">── history1000 检查点：工具内容累计 ${fmtN(task().h1000.hist[i])} tokens ≥ 1000，图方法将在这次调用前转换（尚未运行）──</span>`);
-    }
+    if (cv && cv.idx === i) html += line('', `<span class="t-swap">${convLine(cv, i, R)}</span>`);
     if (i === 0 || st.turn !== R.steps[i - 1].turn) {
-      const rep = st.replay ? '  [首轮回放，与 Identity 相同]' : '';
-      html += line('t-u', esc(`# 第 ${st.turn + 1} 轮 · 用户：${t.questions[st.turn]}`) + `<span class="t-d">${rep}</span>`);
+      const q = t.questions[st.turn];
+      const rep = st.replay ? '  [共享前缀回放，与 Identity 相同]' : '';
+      html += line('t-u', esc(`# 第 ${st.turn + 1} 轮 · ${q ? '用户：' + q : missedText(st.turn)}`) + `<span class="t-d">${rep}</span>`);
     }
     for (const o of st.resp) {
       if (o.k === 'call') {
         const res = st.res.find(x => x.id === o.id);
-        html += line(now, `<span class="t-p">${esc(user)}@bfcl:${esc(cwd)}$</span> <span class="t-c">${esc(bash(o.name, o.args))}</span>`);
+        const dom = res && res.dom && res.dom !== 'GorillaFileSystem' ? `<span class="t-d">[${esc(DOMAIN[res.dom] || res.dom)}] </span>` : '';
+        html += line(now, `<span class="t-p">${esc(user)}@bfcl:${esc(cwd)}$</span> ${dom}<span class="t-c">${esc(bash(o.name, o.args))}</span>`);
         if (res) {
           const f = fmtOut(o.name, res.out.t);
           clipLines(f.lines).forEach(l => { html += line(now + (f.err ? ' t-e' : ''), esc(l)); });
-          cwd = res.cwd;
+          if (res.cwd) cwd = res.cwd;
         }
       } else if (o.t) {
         const text = o.t.length > 360 ? o.t.slice(0, 360) + '…' : o.t;
@@ -595,13 +803,18 @@ function renderTerm() {
   $('term').scrollTop = $('term').scrollHeight;
   $('termTitle').textContent = `${user}@bfcl — ${cwd}`;
 }
+function missedText(turn) {
+  const m = task().missed && task().missed[String(turn)];
+  return m ? `（本轮没有新请求：补上了之前缺失的工具 ${m.join('、')}）` : '（本轮没有新请求）';
+}
 
 /* ---------- memory ---------- */
 function msgHTML(m, fresh) {
   const cut = n => `<div class="cut">… 原文 ${fmtN(n)} 字符，此处截断显示</div>`;
   if (m.k === 'memory') {
     const R = run();
-    return `<div class="memblock ${fresh ? 'fresh' : ''}"><details><summary>${esc(modeOf(S.mode).label)} 记忆 · ${R.memTokens ? fmtN(R.memTokens) + ' tokens' : ''} · 替换了首轮 ${R.replaced ?? ''} 条消息（点开看全文 ${fmtN(m.n)} 字符）</summary><pre>${esc(m.t)}</pre></details></div>`;
+    const parts = R.instrTokens != null ? `图说明 ${fmtN(R.instrTokens)} + 正文 ${fmtN(R.bodyTokens)} tokens` : `${fmtN(R.memTokens)} tokens`;
+    return `<div class="memblock ${fresh ? 'fresh' : ''}"><details><summary>${esc(modeOf(S.mode).label)} 记忆 · ${parts} · 替换了 ${R.replaced ?? ''} 条消息（点开看全文 ${fmtN(m.n)} 字符）</summary><pre>${esc(m.t)}</pre></details></div>`;
   }
   const who = { user: '用户', assistant: 'Qwen', call: '调用', output: '返回', system: '系统', developer: '系统' }[m.k] || m.k;
   let body;
@@ -616,7 +829,12 @@ function renderMemText(box) {
   const prevN = prevSt && prevSt.seg === st.seg ? prevSt.n : 0;
   const label = modeOf(S.mode).label;
   let html = '';
-  if (isH()) {
+  if (isW()) {
+    if (!cv) html += `<div class="note">这个种子的工作输入始终没有超过 1000，不触发转换，只有 Identity。</div>`;
+    else if (S.mode === 'identity') html += `<div class="note">Identity 保留完整历史。第 ${cv.idx + 1} 次调用前工作输入达到 ${fmtN(current.seed.sourceWork)} > 1000，6 个图分支在那里把历史换成图；Identity 继续带着原文。</div>`;
+    else if (S.r < cv.idx) html += `<div class="note">还没到转换点：这里的上下文与 Identity 完全相同。第 ${cv.idx + 1} 次调用前，这段历史会被换成一条 ${esc(label)} 记忆。</div>`;
+    else html += `<div class="note">转换时的 ${R.replaced} 条消息已被下方的 ${esc(label)} 记忆替换（编码 ${esc(R.variant)}，图说明 ${fmtN(instrOf(R))} tokens）。图之后不再更新，新的交互照常追加。</div>`;
+  } else if (isH()) {
     const h = task().h1000.hist[S.r];
     const state = !cv ? '这个任务的工具内容始终没有达到 1000，不会触发转换。'
       : S.r < cv.idx ? `尚未达到 1000（第 ${cv.idx + 1} 次调用前触发）。`
@@ -637,6 +855,15 @@ function renderMemText(box) {
 
 /* Wording for the graph views, per conversion kind. */
 function graphWords(cIdx) {
+  if (isW()) {
+    const R = run();
+    const enc = ` 编码 <b>${esc(R.variant)}</b>，图说明 ${esc(R.explanation)}（${fmtN(instrOf(R))} tokens），正文 ${fmtN(bodyOf(R))} tokens。`;
+    return {
+      before: `还没到转换点；第 ${cIdx + 1} 次调用前，这段历史会被转换成下面这张图（节点按观察步逐步出现）。` + enc,
+      after: `这是第 ${cIdx + 1} 次调用前实际交付的图，之后不再更新；转换后的新交互以原始消息追加在图后面（见“上下文文本”）。` + enc,
+      hatch: '',
+    };
+  }
   if (isH()) return {
     before: `还没到检查点；第 ${cIdx + 1} 次调用前，这段历史会被转换为图（续跑尚未运行）。`,
     after: '实线是检查点处会交给模型的部分；虚线 / 斜纹是检查点之后的步骤，转换后会以原始消息追加，这里按同一规则画出作对照。',
@@ -650,11 +877,11 @@ function graphWords(cIdx) {
 }
 
 function renderV1(box, g, cIdx, title) {
-  const r = S.r, W = graphWords(cIdx);
+  const r = S.r, Wd = graphWords(cIdx);
   const nodes = g.nodes.filter(n => n.r <= r);
   const edges = new Map(g.edges.map(e => [e.t, e]));
   let html = `<div class="note"><b>${esc(title)}</b>：每次工具调用产生一个新的状态节点 s<sub>k</sub>（工作目录、已知对象、观察记录），由工具调用边相连。` +
-    (r < cIdx ? W.before : W.after) + `</div><div class="chain">`;
+    (r < cIdx ? Wd.before : Wd.after) + `</div><div class="chain">`;
   nodes.forEach((n, i) => {
     if (i > 0) {
       const e = edges.get(n.id);
@@ -671,6 +898,13 @@ function renderV1(box, g, cIdx, title) {
 }
 
 const PRED = { cwd: '工作目录', binding: '名称/位置', exists: '存在', kind: '类型', content: '内容', entry_absent: '不在目录中', parent: '父目录', root: '根' };
+function objName(o, binding) {
+  if (o.id === 'session') return '会话 session';
+  if (o.o === 'initial_location') return '初始目录';
+  if (binding) return binding.name;
+  if (o.dom && o.dom !== 'GorillaFileSystem') return `${DOMAIN[o.dom] || o.dom}:${o.et || ''}${o.did != null && o.did !== o.id ? ' ' + o.did : ''}`;
+  return o.id;
+}
 function renderV2(box, g, cIdx, title, extra = '') {
   const r = S.r, Wd = graphWords(cIdx);
   const vis = g.nodes.filter(n => n.r <= r);
@@ -683,25 +917,25 @@ function renderV2(box, g, cIdx, title, extra = '') {
   const labelW = 150, padR = 40;
   const colW = Math.max(30, Math.min(64, (box.clientWidth - labelW - 18 - padR - 60) / (maxStep + 1)));
   const x = s => labelW + 18 + s * colW;
-  const W = x(maxStep) + padR + 60;
+  const Wsvg = x(maxStep) + padR + 60;
   const rows = [];
   let y = 54;
   objects.forEach(o => {
     const fs = facts.filter(f => f.sub === o.id);
     const preds = [...new Set(fs.map(f => f.p))];
     const binding = fs.filter(f => f.p === 'binding' && f.name).sort((a, b) => b.s - a.s)[0];
-    const name = o.id === 'session' ? '会话 session' : o.o === 'initial_location' ? '初始目录' : binding ? binding.name : o.id;
+    const name = objName(o, binding);
     const h = Math.max(1, preds.length) * 15 + 20;
     rows.push({ o, name, preds, y, h, fs });
     y += h + 6;
   });
   const H = y + 10;
   const ink2 = css('--ink-2'), muted = css('--muted'), line = css('--line'), cur = css('--cur'), bad = css('--bad'), sunk = css('--sunk'), surf = css('--surface'), onCur = css('--on-cur');
-  let s = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(title)} 泳道图">
+  let s = `<svg width="${Wsvg}" height="${H}" viewBox="0 0 ${Wsvg} ${H}" role="img" aria-label="${esc(title)} 泳道图">
   <defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="${surf}"/><line x1="0" y1="0" x2="0" y2="6" stroke="${line}" stroke-width="2"/></pattern></defs>`;
   if (r >= cIdx && maxStep > deliveredStep) {
     const bx = x(deliveredStep + 0.5);
-    s += `<rect x="${bx}" y="0" width="${W - bx}" height="${H}" fill="url(#hatch)" opacity="0.7"/>
+    s += `<rect x="${bx}" y="0" width="${Wsvg - bx}" height="${H}" fill="url(#hatch)" opacity="0.7"/>
       <line x1="${bx}" y1="0" x2="${bx}" y2="${H}" stroke="${cur}" stroke-width="1.5" stroke-dasharray="4 3"/>
       <text x="${bx + 6}" y="12" font-size="10.5" fill="${ink2}">${esc(Wd.hatch)}</text>`;
   }
@@ -725,17 +959,18 @@ function renderV2(box, g, cIdx, title, extra = '') {
   events.forEach((ev, i) => {
     const isNew = ev.r === r && r > 0;
     const err = ev.st === 'error';
-    s += `<g><title>${esc(`${ev.id} · ${ev.tool}(${ev.a}) · ${ev.st}`)}</title>
+    const dom = ev.dom && ev.dom !== 'GorillaFileSystem' ? ` · ${DOMAIN[ev.dom] || ev.dom}` : '';
+    s += `<g><title>${esc(`${ev.id} · ${ev.tool}(${ev.a}) · ${ev.st}${dom}`)}</title>
       <circle cx="${x(ev.s)}" cy="40" r="${isNew ? 6.5 : 5}" fill="${err ? bad : cur}" stroke="${surf}" stroke-width="2"/>
       <text x="${x(ev.s)}" y="${i % 2 ? 28 : 20}" font-size="9.5" fill="${err ? bad : ink2}" text-anchor="middle" class="mono">${esc(ev.tool)}</text></g>`;
   });
   rows.forEach(rw => {
-    s += `<rect x="4" y="${rw.y}" width="${W - 8}" height="${rw.h}" rx="4" fill="${sunk}" opacity="0.55"/>`;
-    s += `<text x="10" y="${rw.y + 13}" font-size="11.5" fill="${css('--ink')}" font-weight="600" class="mono">${esc(rw.name.length > 18 ? rw.name.slice(0, 17) + '…' : rw.name)}</text>`;
+    s += `<rect x="4" y="${rw.y}" width="${Wsvg - 8}" height="${rw.h}" rx="4" fill="${sunk}" opacity="0.55"/>`;
+    s += `<text x="10" y="${rw.y + 13}" font-size="11.5" fill="${css('--ink')}" font-weight="600" class="mono">${esc(rw.name.length > 15 ? rw.name.slice(0, 14) + '…' : rw.name)}</text>`;
     s += `<text x="${labelW - 2}" y="${rw.y + 13}" font-size="9" fill="${muted}" text-anchor="end" class="mono">${rw.o.id}</text>`;
     rw.preds.forEach((p, k) => {
       const ty = rw.y + 18 + k * 15;
-      s += `<text x="18" y="${ty + 8}" font-size="9.5" fill="${muted}">${PRED[p] || p}</text>`;
+      s += `<text x="18" y="${ty + 8}" font-size="9.5" fill="${muted}">${esc((PRED[p] || p).slice(0, 14))}</text>`;
       rw.fs.filter(f => f.p === p).forEach(f => {
         const retiredNow = f.ret != null && f.rr != null && f.rr <= r;
         const end = retiredNow ? f.ret : maxStep + 0.8;
@@ -755,32 +990,43 @@ function renderV2(box, g, cIdx, title, extra = '') {
   });
   s += `</svg>`;
   const nf = facts.filter(f => !(f.ret != null && f.rr != null && f.rr <= r)).length;
-  box.innerHTML = `<div class="note"><b>${esc(title)}</b>：每行是一个对象（会话、目录、文件）。横条是带版本的事实，从首次观察持续到失效（红色竖线）；顶部圆点是工具执行事件。横轴为工具观察序号。当前可见 ${objects.length} 个对象、${facts.length} 条事实（${nf} 条有效）、${events.length} 个事件。` +
+  box.innerHTML = `<div class="note"><b>${esc(title)}</b>：每行是一个对象（会话、目录、文件或其他工具里的实体）。横条是带版本的事实，从首次观察持续到失效（红色竖线）；顶部圆点是工具执行事件。横轴为工具观察序号。当前可见 ${objects.length} 个对象、${facts.length} 条事实（${nf} 条有效）、${events.length} 个事件。` +
     (r < cIdx ? Wd.before : Wd.after) + extra + `</div><div class="lanes" id="lanes">${s}</div>`;
   const lanes = $('lanes'); lanes.scrollLeft = lanes.scrollWidth;
   box.scrollTop = 0;
 }
 
+function toolInfo() {
+  const R = run(), st = R.steps[S.r];
+  if (isW()) {
+    const d = current.detail, names = d.toolsets[st.ts] || [];
+    const first = new Set(d.toolsets[R.steps[0].ts] || []);
+    return { list: names.map(n => d.tools[n] || { name: n, desc: '', params: [] }), added: new Set(names.filter(n => !first.has(n))), fixed: fixedOf(st), label: '工具定义与系统模板' };
+  }
+  return { list: model().tools, added: new Set(), fixed: model().toolTokens, label: '工具定义' };
+}
 function renderPrefix() {
-  const t = task(), R = run(), st = R.steps[S.r], M = model();
+  const t = task(), R = run(), st = R.steps[S.r];
   const known = t.questions.slice(0, st.turn + 1);
-  const inGraph = !isH() && S.mode !== 'identity' && st.seg > 0;
+  const inGraph = (isW() ? S.mode !== 'identity' && R.conv != null && S.r >= R.conv : !isH() && S.mode !== 'identity' && st.seg > 0);
   const left = t.questions.length - known.length;
   const reached = new Set(R.steps.map(x => x.turn));
+  const convTurn = isW() ? (R.conv != null ? R.steps[R.conv].turn : -1) : (R.steps[R.boundary]?.turn ?? 1);
   const items = known.map((q, i) => {
     const now = i === st.turn;
-    const where = inGraph && i < (R.steps[R.boundary]?.turn ?? 1) ? '<span class="where">已在图记忆中</span>' : '';
-    return `<li class="${now ? 'now' : ''}"><button class="tn" data-turn="${i}" title="跳到第 ${i + 1} 轮开始">第${i + 1}轮</button><span class="q" title="${esc(q)}">${where}${esc(q)}</span></li>`;
+    const where = inGraph && (i < convTurn || (isW() && i === convTurn && i !== st.turn)) ? '<span class="where">已在图记忆中</span>' : (inGraph && isW() && i === convTurn ? '<span class="where">本轮前半段在图记忆中</span>' : '');
+    return `<li class="${now ? 'now' : ''}"><button class="tn" data-turn="${i}" title="跳到第 ${i + 1} 轮开始">第${i + 1}轮</button><span class="q" title="${esc(q)}">${where}${esc(q || missedText(i))}</span></li>`;
   }).join('') + (left > 0 ? `<li><span></span><span class="futs">${t.questions.slice(st.turn + 1).map((q, k) => {
       const i = st.turn + 1 + k;
-      return reached.has(i) ? `<button class="chip" data-turn="${i}" title="跳到第 ${i + 1} 轮">第 ${i + 1} 轮</button>` : `<span class="chip never" title="该方法在此之前已结束">第 ${i + 1} 轮 · 未到达</span>`;
+      return reached.has(i) ? `<button class="chip" data-turn="${i}" title="跳到第 ${i + 1} 轮">第 ${i + 1} 轮</button>` : `<span class="chip never" title="该分支在此之前已结束">第 ${i + 1} 轮 · 未到达</span>`;
     }).join('')}<span class="future">尚未发给模型，内容不显示</span></span></li>` : '');
   const used = new Set();
   for (let i = 0; i <= S.r; i++) R.steps[i].resp.forEach(o => { if (o.k === 'call') used.add(o.name); });
-  const share = Math.round(M.toolTokens / st.in * 100);
-  const rows = M.tools.map(tl => `<tr><td>${esc(tl.name)}</td><td>${esc(tl.desc)}</td><td>${tl.params.map(p => `<div class="pa" title="${esc(p.d)}">${esc(p.n)}${p.req ? '' : '?'}: ${esc(p.type)}</div>`).join('') || '<span class="pa">—</span>'}</td></tr>`).join('');
+  const ti = toolInfo();
+  const share = Math.round(ti.fixed / st.in * 100);
+  const rows = ti.list.map(tl => `<tr><td>${esc(tl.name)}</td><td>${esc(tl.desc)}</td><td>${(tl.params || []).map(p => `<div class="pa" title="${esc(p.d)}">${esc(p.n)}${p.req ? '' : '?'}: ${esc(p.type)}</div>`).join('') || '<span class="pa">—</span>'}</td></tr>`).join('');
   $('prefix').innerHTML = `<div class="pre-row"><span class="pk">任务</span><ol class="reqs">${items}</ol></div>
-    <details class="tools" id="toolsBox" ${S.toolsOpen ? 'open' : ''}><summary><span class="pk">工具</span><span class="tsum"><span class="tcost">${M.tools.length} 个 · ${fmtN(M.toolTokens)} tokens · 占本次输入 ${share}%</span>${M.tools.map(tl => `<span class="tchip ${used.has(tl.name) ? 'used' : ''}" title="${esc(tl.desc)}">${esc(tl.name)}</span>`).join('')}<span class="more">${S.toolsOpen ? '收起说明' : '展开说明'}</span></span></summary>
+    <details class="tools" id="toolsBox" ${S.toolsOpen ? 'open' : ''}><summary><span class="pk">工具</span><span class="tsum"><span class="tcost">${ti.list.length} 个 · ${ti.label} ${fmtN(ti.fixed)} tokens · 占本次输入 ${share}%</span>${ti.list.map(tl => `<span class="tchip ${used.has(tl.name) ? 'used' : ''} ${ti.added.has(tl.name) ? 'added' : ''}" title="${esc(tl.desc)}${ti.added.has(tl.name) ? '（本轮新补上的工具）' : ''}">${esc(tl.name)}</span>`).join('')}<span class="more">${S.toolsOpen ? '收起说明' : '展开说明'}</span></span></summary>
     <div class="ttable"><table><thead><tr><th>工具</th><th>说明</th><th>参数（? 为可选）</th></tr></thead><tbody>${rows}</tbody></table></div></details>`;
   $('toolsBox').addEventListener('toggle', e => { if (S.toolsOpen !== e.target.open) { S.toolsOpen = e.target.open; persist(); renderPrefix(); } });
 }
@@ -800,36 +1046,38 @@ function renderMem() {
   const lbl = modeOf(S.mode).label;
   $('memTitle').textContent = `工作上下文 · ${lbl}`;
   const segLen = R.segments[st.seg].slice(0, st.n).length;
-  const tt = model().toolTokens;
-  $('memSub').textContent = `本次输入 ${fmtN(st.in)} tokens = 工具 ${fmtN(tt)} + 消息 ${fmtN(st.in - tt)} · ${segLen} 条消息` + (!isH() && S.mode !== 'identity' && st.seg > 0 ? ` · 其中图记忆 ${fmtN(R.memTokens || 0)}` : '');
+  const fx = fixedOf(st), g = graphIn(R, S.r) && S.mode !== 'identity';
+  $('memSub').textContent = `本次输入 ${fmtN(st.in)} tokens = 工具 ${fmtN(fx)} + 消息 ${fmtN(st.in - fx)} · ${segLen} 条消息` + (g ? ` · 其中图记忆 ${fmtN(R.memTokens || 0)}` : '');
   const box = $('membody');
   if (tab === 'text') return renderMemText(box);
   if (isH()) {
-    const k = tab.slice(2), g = task().h1000.graphs[k];
-    return k === 'v1-compact' ? renderV1(box, g, cv.idx, 'State-Transition Graph（检查点处）') : renderV2(box, g, cv.idx, 'Event Graph（检查点处）');
+    const k = tab.slice(2), gr = task().h1000.graphs[k];
+    return k === 'v1-compact' ? renderV1(box, gr, cv.idx, 'State-Transition Graph（检查点处）') : renderV2(box, gr, cv.idx, 'Event Graph（检查点处）');
   }
-  if (S.mode === 'v1-compact') return renderV1(box, R.graph, cv.idx, 'State-Transition Graph');
+  const m = modeOf(S.mode);
+  if (m.fam === 'v1-compact') return renderV1(box, R.graph, cv.idx, lbl);
   let extra = '';
-  if (S.mode === 'v2-dedup') {
-    const base = run('v2-compact').memTokens, mine = R.memTokens;
-    extra = ` <br>图内容与 Event Graph 相同；Dedup 只改编码，把可由规则推出的来源关系折叠成配方，不合并实际调用。本任务记忆：Event Graph ${fmtN(base)} → Event Graph-Dedup ${fmtN(mine)} tokens（${mine <= base ? '−' : '+'}${fmtN(Math.abs(mine - base))}）。`;
+  if (m.fam === 'v2-dedup') {
+    const ref = isW() ? run('event-baseline') : run('v2-compact');
+    const base = ref.memTokens, mine = R.memTokens;
+    extra = ` <br>Dedup 在 Event Graph 的基础上把可由规则推出的来源关系折叠，不合并实际调用，语义内容相同。本种子记忆：Event Graph${isW() ? ' · 原格式' : ''} ${fmtN(base)} → ${esc(lbl)} ${fmtN(mine)} tokens（${mine <= base ? '−' : '+'}${fmtN(Math.abs(mine - base))}）。`;
   }
   renderV2(box, R.graph, cv.idx, lbl, extra);
 }
 
 /* ---------- charts ---------- */
 function niceMax(v) { const p = Math.pow(10, Math.floor(Math.log10(v))); const m = v / p; return (m <= 1 ? 1 : m <= 2 ? 2 : m <= 2.5 ? 2.5 : m <= 5 ? 5 : 10) * p; }
-function axes(W, H, m, N, ymax, X, Y) {
+function axes(Wd, H, m, N, ymax, X, Y) {
   const muted = css('--muted'), line = css('--line');
   let s = '';
   for (let k = 0; k <= 4; k++) {
     const v = ymax * k / 4;
-    s += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="${line}" stroke-width="${k === 0 ? 1 : 0.6}"/>`;
+    s += `<line x1="${m.l}" x2="${Wd - m.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="${line}" stroke-width="${k === 0 ? 1 : 0.6}"/>`;
     s += `<text x="${m.l - 8}" y="${Y(v) + 4}" font-size="10.5" fill="${muted}" text-anchor="end">${fmtK(v)}</text>`;
   }
   const every = N > 40 ? 10 : N > 20 ? 5 : 2;
   for (let i = 0; i < N; i++) if ((i + 1) % every === 0 || i === 0) s += `<text x="${X(i)}" y="${H - m.b + 16}" font-size="10.5" fill="${muted}" text-anchor="middle">${i + 1}</text>`;
-  s += `<text x="${(m.l + W - m.r) / 2}" y="${H - 4}" font-size="10.5" fill="${muted}" text-anchor="middle">模型调用序号</text>`;
+  s += `<text x="${(m.l + Wd - m.r) / 2}" y="${H - 4}" font-size="10.5" fill="${muted}" text-anchor="middle">模型调用序号</text>`;
   return s;
 }
 function turnBands(R, X, H, m) {
@@ -839,7 +1087,7 @@ function turnBands(R, X, H, m) {
     const endTurn = i === R.steps.length - 1 || R.steps[i + 1].turn !== st.turn;
     if (!endTurn) return;
     const x1 = X(start) - (start > 0 ? (X(1) - X(0)) / 2 : 0), x2 = i === R.steps.length - 1 ? X(i) + 4 : (X(i) + X(i + 1)) / 2;
-    if (st.turn % 2 === 1) s += `<rect x="${x1}" y="${m.t}" width="${x2 - x1}" height="${H - m.t - m.b}" fill="${sunk}"/>`;
+    if (st.turn % 2 === 1) s += `<rect x="${x1}" y="${m.t}" width="${x2 - x1}" height="${H - m.t - m.b}" fill="${sunk}" opacity="0.6"/>`;
     s += `<text x="${(x1 + x2) / 2}" y="${m.t - 8}" font-size="10.5" fill="${muted}" text-anchor="middle">第${st.turn + 1}轮</text>`;
     start = i + 1;
   });
@@ -848,86 +1096,129 @@ function turnBands(R, X, H, m) {
 function convMarker(cv, X, H, m, color) {
   if (!cv) return '';
   const bx = cv.idx > 0 ? (X(cv.idx - 1) + X(cv.idx)) / 2 : X(0);
-  const label = cv.kind === 'swap' ? '历史 → 图记忆' : '1000 阈值触发（未运行）';
+  const label = cv.kind === 'swap' ? '历史 → 图记忆' : cv.kind === 'w1000' ? '转换（工作输入 > 1000）' : '1000 阈值触发（未运行）';
   return `<line x1="${bx}" x2="${bx}" y1="${m.t}" y2="${H - m.b}" stroke="${color}" stroke-width="1.5" stroke-dasharray="4 3"/><text x="${bx + 4}" y="${m.t + 12}" font-size="10.5" fill="${color}">${label}</text>`;
 }
-function attachHover(box, W, m, N, onTip, onClick) {
+function attachHover(box, Wd, m, N, onTip, onClick) {
   const hit = box.querySelector('.hit'), tip = box.querySelector('.tip');
-  const idxAt = ev => { const rect = box.querySelector('svg').getBoundingClientRect(); const px = (ev.clientX - rect.left) * (W / rect.width); return Math.max(0, Math.min(N - 1, Math.round((px - m.l) / ((W - m.l - m.r) / Math.max(1, N - 1))))); };
+  const idxAt = ev => { const rect = box.querySelector('svg').getBoundingClientRect(); const px = (ev.clientX - rect.left) * (Wd / rect.width); return Math.max(0, Math.min(N - 1, Math.round((px - m.l) / ((Wd - m.l - m.r) / Math.max(1, N - 1))))); };
   hit.addEventListener('mousemove', ev => {
     const i = idxAt(ev);
     tip.hidden = false;
     tip.innerHTML = onTip(i);
     const rect = box.getBoundingClientRect();
-    let left = ev.clientX - rect.left + 14; if (left > rect.width - 260) left = ev.clientX - rect.left - 260;
+    let left = ev.clientX - rect.left + 14; if (left > rect.width - 300) left = ev.clientX - rect.left - 300;
     tip.style.left = left + 'px'; tip.style.top = Math.max(0, ev.clientY - rect.top - 40) + 'px';
   });
   hit.addEventListener('mouseleave', () => { tip.hidden = true; });
   hit.addEventListener('click', ev => onClick(idxAt(ev)));
 }
+/* Decomposition of the current request: fixed tools/system, graph explanation, graph body, other history. */
+function parts(R, i) {
+  const st = R.steps[i], fx = fixedOf(st);
+  const g = graphIn(R, i) && R.k !== 'identity' && S.mode !== 'identity';
+  const ins = g ? instrOf(R) : 0, body = g ? bodyOf(R) : 0;
+  return { fx, ins, body, hist: Math.max(0, st.in - fx - ins - body), total: st.in };
+}
+function renderComp() {
+  const R = run(), p = parts(R, S.r);
+  const pct = v => Math.max(0, v / p.total * 100);
+  const g = p.ins + p.body > 0;
+  $('comp').innerHTML = `<div class="title">第 ${S.r + 1} 次调用的输入构成 · ${fmtN(p.total)} tokens</div>
+    <div class="bar" role="img" aria-label="输入构成"><span class="fx" style="flex:${pct(p.fx)}"></span>${g ? `<span class="ins" style="flex:${pct(p.ins)}"></span><span class="body" style="flex:${pct(p.body)}"></span>` : ''}<span class="hist" style="flex:${pct(p.hist)}"></span></div>
+    <div class="keys"><span class="em"><i class="sw" style="background:var(--fixed)"></i>${isW() ? '工具定义与系统模板' : '工具定义'} <b>${fmtN(p.fx)}</b>（${Math.round(pct(p.fx))}%）</span>` +
+    (g ? `<span class="em"><i class="sw" style="background:var(--cur)"></i>图说明 <b>${fmtN(p.ins)}</b>${R.instrTokens == null ? '（早期实验未单独记录，含在图记忆里）' : ''}</span><span><i class="sw" style="background:color-mix(in srgb, var(--cur) 40%, transparent)"></i>图记忆正文 <b>${fmtN(p.body)}</b></span>` : '') +
+    `<span><i class="sw" style="background:var(--sunk);border:1px solid var(--line)"></i>其余对话历史与协议包装 <b>${fmtN(p.hist)}</b></span></div>`;
+}
 function renderChart() {
+  renderComp();
   const box = $('chart');
-  const W = Math.max(320, box.clientWidth), H = 280;
+  const Wd = Math.max(320, box.clientWidth), H = 300;
   const m = { l: 52, r: 18, t: 26, b: 34 };
-  const runs = expModes().map(md => ({ md, R: run(md.k) }));
+  const runs = availModes().map(md => ({ md, R: run(md.k) }));
   const N = Math.max(...runs.map(x => x.R.steps.length));
   const ymax = niceMax(Math.max(...runs.flatMap(x => x.R.steps.map(s => s.in))) * 1.05);
-  const X = i => m.l + (N > 1 ? i / (N - 1) : 0) * (W - m.l - m.r);
+  const X = i => m.l + (N > 1 ? i / (N - 1) : 0) * (Wd - m.l - m.r);
   const Y = v => H - m.b - (v / ymax) * (H - m.t - m.b);
-  const muted = css('--muted'), cur = css('--cur'), surf = css('--surface');
+  const muted = css('--muted'), cur = css('--cur'), surf = css('--surface'), fixedC = css('--fixed'), thr = css('--thr');
   const R = run(), cv = conv();
-  let s = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="每次模型调用的输入 tokens">`;
-  s += turnBands(R, X, H, m) + axes(W, H, m, N, ymax, X, Y);
-  const tt = model().toolTokens;
-  s += `<rect x="${m.l}" y="${Y(tt)}" width="${W - m.l - m.r}" height="${Y(0) - Y(tt)}" fill="${muted}" opacity="0.07"/>
-    <line x1="${m.l}" x2="${W - m.r}" y1="${Y(tt)}" y2="${Y(tt)}" stroke="${muted}" stroke-width="1" stroke-dasharray="2 3"/>
-    <text x="${W - m.r - 4}" y="${Y(tt) + 13}" font-size="10.5" fill="${muted}" text-anchor="end">工具定义 ${fmtN(tt)}（每次调用固定）</text>`;
+  const stepPath = vals => vals.map((v, i) => { const x0 = i === 0 ? X(0) : (X(i - 1) + X(i)) / 2, x1 = i === vals.length - 1 ? X(i) : (X(i) + X(i + 1)) / 2; return `${x0.toFixed(1)},${Y(v).toFixed(1)} ${x1.toFixed(1)},${Y(v).toFixed(1)}`; }).join(' ');
+  let s = `<svg viewBox="0 0 ${Wd} ${H}" width="${Wd}" height="${H}" role="img" aria-label="每次模型调用的输入 tokens">`;
+  s += turnBands(R, X, H, m) + axes(Wd, H, m, N, ymax, X, Y);
+  // fixed tools/system band (selected run)
+  const fx = R.steps.map(fixedOf);
+  s += `<polygon points="${X(0)},${Y(0)} ${stepPath(fx)} ${X(fx.length - 1)},${Y(0)}" fill="${fixedC}" opacity="0.28"/>`;
+  s += `<polyline points="${stepPath(fx)}" fill="none" stroke="${fixedC}" stroke-width="1.5"/>`;
+  s += `<text x="${m.l + 8}" y="${(Y(fx[0]) + Y(0)) / 2 + 4}" font-size="12" font-weight="600" fill="${css('--ink')}">${isW() ? '工具定义与系统模板' : '工具定义'} ${fmtN(fx[0])}${new Set(fx).size > 1 ? '（本次运行中有变化）' : '（每次调用都带）'}</text>`;
+  // graph explanation + body bands (selected graph arm, after conversion)
+  const gi = R.steps.map((_, i) => graphIn(R, i) && S.mode !== 'identity');
+  if (gi.some(Boolean)) {
+    const i0 = gi.indexOf(true);
+    const xs = i => i === i0 ? (i0 > 0 ? (X(i0 - 1) + X(i0)) / 2 : X(0)) : (X(i - 1) + X(i)) / 2, xe = i => i === R.steps.length - 1 ? X(i) : (X(i) + X(i + 1)) / 2;
+    const ins = instrOf(R), body = bodyOf(R);
+    let band1 = '', band2 = '';
+    for (let i = i0; i < R.steps.length; i++) {
+      const f = fx[i];
+      band2 += `<rect x="${xs(i)}" y="${Y(f + ins + body)}" width="${xe(i) - xs(i)}" height="${Y(f + ins) - Y(f + ins + body)}" fill="${cur}" opacity="0.22"/>`;
+      if (ins > 0) band1 += `<rect x="${xs(i)}" y="${Y(f + ins) - 1.5}" width="${xe(i) - xs(i)}" height="${Math.max(3, Y(f) - Y(f + ins)) }" fill="${cur}"/>`;
+    }
+    s += band2 + band1;
+    const lx = xs(i0) + 6, f0 = fx[i0];
+    s += `<text x="${lx}" y="${(Y(f0 + ins + body) + Y(f0 + ins)) / 2 + 4}" font-size="11.5" font-weight="600" fill="${css('--ink')}">图记忆正文 ${fmtN(body)}</text>`;
+    if (ins > 0) s += `<text x="${lx}" y="${Y(f0 + ins) - 6}" font-size="11.5" font-weight="600" fill="${cur}">▲ 图说明 ${fmtN(ins)}（每次调用都带）</text>`;
+  }
+  // threshold: fixed + 1000 working tokens
+  if (isW()) {
+    const th = fx.map(v => v + W.threshold);
+    s += `<polyline points="${stepPath(th)}" fill="none" stroke="${thr}" stroke-width="1.2" stroke-dasharray="5 3"/>`;
+    s += `<text x="${Wd - m.r - 4}" y="${Y(th[th.length - 1]) - 6}" font-size="10.5" fill="${thr}" text-anchor="end">触发阈值：工具与系统模板 + ${W.threshold}</text>`;
+  }
   s += convMarker(cv, X, H, m, cv && cv.kind === 'h1000' ? css('--bad') : cur);
   const order = runs.filter(x => x.md.k !== S.mode).concat(runs.filter(x => x.md.k === S.mode));
   order.forEach(({ md, R: rr }) => {
-    const col = css(md.c), sel = md.k === S.mode;
+    const col = css(md.c), sel = md.k === S.mode, dash = md.variant === 'baseline' ? 'stroke-dasharray="5 3"' : '';
     const pts = rr.steps.map((st, i) => `${X(i).toFixed(1)},${Y(st.in).toFixed(1)}`);
-    if (!sel) { s += `<polyline points="${pts.join(' ')}" fill="none" stroke="${col}" stroke-width="1.5" opacity="0.55" stroke-linejoin="round"/>`; return; }
+    if (!sel) { s += `<polyline points="${pts.join(' ')}" fill="none" stroke="${col}" stroke-width="1.5" opacity="0.5" stroke-linejoin="round" ${dash}/>`; return; }
     s += `<polyline points="${pts.join(' ')}" fill="none" stroke="${col}" stroke-width="1.5" opacity="0.3" stroke-dasharray="3 3"/>`;
     const done = pts.slice(0, S.r + 1);
-    s += `<polygon points="${X(0)},${Y(0)} ${done.join(' ')} ${X(S.r)},${Y(0)}" fill="${col}" opacity="0.10"/>`;
     s += `<polyline points="${done.join(' ')}" fill="none" stroke="${col}" stroke-width="2.5" stroke-linejoin="round"/>`;
     rr.steps.slice(0, S.r + 1).forEach((st, i) => { s += `<circle cx="${X(i)}" cy="${Y(st.in)}" r="${i === S.r ? 5 : 2.5}" fill="${col}" stroke="${surf}" stroke-width="${i === S.r ? 2 : 1}"/>`; });
     const v = rr.steps[S.r].in, px = X(S.r), py = Y(v);
     s += `<line x1="${px}" x2="${px}" y1="${m.t}" y2="${H - m.b}" stroke="${col}" stroke-width="1" opacity="0.6"/>`;
-    const right = px > W - 120;
+    const right = px > Wd - 120;
     s += `<text x="${px + (right ? -8 : 8)}" y="${py - 9}" font-size="12" font-weight="600" fill="${css('--ink')}" text-anchor="${right ? 'end' : 'start'}">${fmtN(v)}</text>`;
   });
-  s += `<rect class="hit" x="${m.l}" y="${m.t}" width="${W - m.l - m.r}" height="${H - m.t - m.b}" fill="transparent" style="cursor:pointer"/></svg><div class="tip" hidden></div>`;
+  s += `<rect class="hit" x="${m.l}" y="${m.t}" width="${Wd - m.l - m.r}" height="${H - m.t - m.b}" fill="transparent" style="cursor:pointer"/></svg><div class="tip" hidden></div>`;
   box.innerHTML = s;
-  attachHover(box, W, m, N,
-    i => `<div style="color:var(--muted);margin-bottom:2px">第 ${i + 1} 次调用</div>` + runs.map(({ md, R: rr }) => rr.steps[i] ? `<div class="r"><i class="sw" style="background:var(${md.c})"></i>${md.label}：<b>${fmtN(rr.steps[i].in)}</b>（第${rr.steps[i].turn + 1}轮）</div>` : `<div class="r" style="color:var(--muted)"><i class="sw" style="background:var(${md.c})"></i>${md.label}：已结束</div>`).join(''),
+  attachHover(box, Wd, m, N,
+    i => `<div style="color:var(--muted);margin-bottom:2px">第 ${i + 1} 次调用</div>` + runs.map(({ md, R: rr }) => rr.steps[i] ? `<div class="r"><i class="sw" style="background:var(${md.c})"></i>${esc(md.label)}：<b>${fmtN(rr.steps[i].in)}</b>（第${rr.steps[i].turn + 1}轮）</div>` : `<div class="r" style="color:var(--muted)"><i class="sw" style="background:var(${md.c})"></i>${esc(md.label)}：已结束</div>`).join(''),
     i => { if (i < run().steps.length) { stop(); setStep(i); } });
   $('legend').innerHTML = runs.map(({ md, R: rr }) => {
-    const total = rr.steps.reduce((a, s) => a + s.in, 0);
-    return `<span class="it ${md.k === S.mode ? 'cur' : ''}" data-k="${md.k}" style="--c:var(${md.c})"><span class="ln"></span>${md.label}<span class="v">${rr.steps.length} 次调用 · 累计 ${fmtN(total)} · ${rr.passed ? '通过' : '未通过'}</span></span>`;
+    const post = rr.steps.slice(cv && isW() ? cv.idx : 0);
+    const mean = Math.round(post.reduce((a, s) => a + s.in, 0) / Math.max(1, post.length));
+    return `<span class="it ${md.k === S.mode ? 'cur' : ''}" data-k="${md.k}" style="--c:var(${md.c})"><span class="ln" ${md.variant === 'baseline' ? 'style="background:repeating-linear-gradient(90deg,var(--c) 0 5px,transparent 5px 8px)"' : ''}></span>${esc(md.label)}<span class="v">${rr.steps.length} 次调用 · ${isW() && cv ? '转换后平均 ' + fmtN(mean) : '累计 ' + fmtN(rr.steps.reduce((a, s) => a + s.in, 0))} · ${rr.passed ? '通过' : '未通过'}</span></span>`;
   }).join('');
+  const st = R.steps[S.r], p = parts(R, S.r);
   const cum = R.steps.slice(0, S.r + 1).reduce((a, s) => a + s.in, 0);
-  const st = R.steps[S.r];
   const idAt = run('identity').steps[S.r];
-  $('stats').innerHTML = `<span>本次输入 <b>${fmtN(st.in)}</b> tokens（工具 ${fmtN(tt)} + 消息 <b>${fmtN(st.in - tt)}</b>）</span><span>其中缓存命中 <b>${fmtN(st.cached)}</b></span><span>累计至此 <b>${fmtN(cum)}</b> tokens</span>` +
-    (S.mode !== 'identity' && idAt ? `<span>同序号 Identity 输入 <b>${fmtN(idAt.in)}</b>（差 ${st.in - idAt.in >= 0 ? '+' : ''}${fmtN(st.in - idAt.in)}）</span>` : '');
+  $('stats').innerHTML = `<span>本次输入 <b>${fmtN(st.in)}</b> tokens</span><span>工作输入 <b>${fmtN(st.in - p.fx)}</b></span><span>其中缓存命中 <b>${fmtN(st.cached)}</b></span><span>累计至此 <b>${fmtN(cum)}</b></span>` +
+    (S.mode !== 'identity' && idAt ? `<span>同序号 Identity 输入 <b>${fmtN(idAt.in)}</b>（差 ${st.in - idAt.in >= 0 ? '+' : ''}${fmtN(st.in - idAt.in)}；转换后的同序号调用不一定对应同一动作）</span>` : '');
 }
 function renderHistChart() {
   $('histPanel').hidden = !isH();
   if (!isH()) return;
   const box = $('chart2'), h = task().h1000, R = run('identity');
-  const W = Math.max(320, box.clientWidth), H = 220;
+  const Wd = Math.max(320, box.clientWidth), H = 220;
   const m = { l: 52, r: 18, t: 26, b: 34 };
   const N = R.steps.length, TH = exp().threshold;
   const vals = h.hist.map(v => v ?? 0);
   const ymax = niceMax(Math.max(TH * 1.15, ...vals) * 1.05);
-  const X = i => m.l + (N > 1 ? i / (N - 1) : 0) * (W - m.l - m.r);
+  const X = i => m.l + (N > 1 ? i / (N - 1) : 0) * (Wd - m.l - m.r);
   const Y = v => H - m.b - (v / ymax) * (H - m.t - m.b);
-  const col = css('--m-id'), bad = css('--bad'), muted = css('--muted'), surf = css('--surface'), cv = conv();
-  let s = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="工具内容累计 tokens">`;
-  s += turnBands(R, X, H, m) + axes(W, H, m, N, ymax, X, Y);
-  s += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(TH)}" y2="${Y(TH)}" stroke="${bad}" stroke-width="1.2" stroke-dasharray="5 3"/>
+  const col = css('--m-id'), bad = css('--bad'), surf = css('--surface'), cv = conv();
+  let s = `<svg viewBox="0 0 ${Wd} ${H}" width="${Wd}" height="${H}" role="img" aria-label="工具内容累计 tokens">`;
+  s += turnBands(R, X, H, m) + axes(Wd, H, m, N, ymax, X, Y);
+  s += `<line x1="${m.l}" x2="${Wd - m.r}" y1="${Y(TH)}" y2="${Y(TH)}" stroke="${bad}" stroke-width="1.2" stroke-dasharray="5 3"/>
     <text x="${m.l + 6}" y="${Y(TH) - 6}" font-size="10.5" fill="${bad}">阈值 ${fmtN(TH)}</text>`;
   s += convMarker(cv, X, H, m, bad);
   const pts = h.hist.map((v, i) => v == null ? null : `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).filter(Boolean);
@@ -936,19 +1227,50 @@ function renderHistChart() {
   s += `<polyline points="${done.join(' ')}" fill="none" stroke="${col}" stroke-width="2.5" stroke-linejoin="round"/>`;
   h.hist.slice(0, S.r + 1).forEach((v, i) => { if (v != null) s += `<circle cx="${X(i)}" cy="${Y(v)}" r="${i === S.r ? 5 : 2.5}" fill="${i === h.trigger ? bad : col}" stroke="${surf}" stroke-width="${i === S.r ? 2 : 1}"/>`; });
   const v = h.hist[S.r];
-  if (v != null) { const px = X(S.r), right = px > W - 120; s += `<text x="${px + (right ? -8 : 8)}" y="${Y(v) - 9}" font-size="12" font-weight="600" fill="${css('--ink')}" text-anchor="${right ? 'end' : 'start'}">${fmtN(v)}</text>`; }
-  s += `<rect class="hit" x="${m.l}" y="${m.t}" width="${W - m.l - m.r}" height="${H - m.t - m.b}" fill="transparent" style="cursor:pointer"/></svg><div class="tip" hidden></div>`;
+  if (v != null) { const px = X(S.r), right = px > Wd - 120; s += `<text x="${px + (right ? -8 : 8)}" y="${Y(v) - 9}" font-size="12" font-weight="600" fill="${css('--ink')}" text-anchor="${right ? 'end' : 'start'}">${fmtN(v)}</text>`; }
+  s += `<rect class="hit" x="${m.l}" y="${m.t}" width="${Wd - m.l - m.r}" height="${H - m.t - m.b}" fill="transparent" style="cursor:pointer"/></svg><div class="tip" hidden></div>`;
   box.innerHTML = s;
-  attachHover(box, W, m, N, i => `<div style="color:var(--muted);margin-bottom:2px">第 ${i + 1} 次调用前</div>工具内容累计 <b>${h.hist[i] == null ? '—' : fmtN(h.hist[i])}</b> tokens${i === h.trigger ? '<br><b style="color:var(--bad)">首次达到阈值，在此转换</b>' : ''}`, i => { stop(); setStep(i); });
+  attachHover(box, Wd, m, N, i => `<div style="color:var(--muted);margin-bottom:2px">第 ${i + 1} 次调用前</div>工具内容累计 <b>${h.hist[i] == null ? '—' : fmtN(h.hist[i])}</b> tokens${i === h.trigger ? '<br><b style="color:var(--bad)">首次达到阈值，在此转换</b>' : ''}`, i => { stop(); setStep(i); });
   $('stats2').innerHTML = h.trigger != null
     ? `<span>第 <b>${h.trigger + 1}</b> 次调用前达到 <b>${fmtN(h.hist[h.trigger])}</b> tokens</span><span>该次调用的完整输入 <b>${fmtN(h.before)}</b> tokens</span><span>当前 <b>${v == null ? '—' : fmtN(v)}</b></span>`
     : `<span>整条轨迹最高 <b>${fmtN(Math.max(...vals))}</b> tokens，没有达到 ${fmtN(TH)}，不触发转换</span>`;
 }
 
+/* Whole-trajectory input consumption of the selected seed / task, per method. */
+function renderTotals() {
+  const runs = availModes().map(md => ({ md, R: run(md.k) }));
+  const cv = conv();
+  // Shared part: requests before the conversion point (identical across methods there).
+  let split = cv ? cv.idx : 0;
+  if (!isW() && !isH()) { const g = runs.find(x => x.R.boundary != null); split = g ? g.R.boundary : 0; }
+  const rows = runs.map(({ md, R }) => {
+    const pre = R.steps.slice(0, split).reduce((a, s) => a + s.in, 0);
+    const post = R.steps.slice(split).reduce((a, s) => a + s.in, 0);
+    const out = R.steps.reduce((a, s) => a + (s.out || 0), 0);
+    return { md, R, pre, post, total: pre + post, out, n: R.steps.length - split };
+  });
+  const max = Math.max(...rows.map(r => r.total));
+  const idRow = rows.find(r => r.md.k === 'identity');
+  $('totals').innerHTML = rows.map(r => {
+    const d = idRow && r !== idRow ? ` · 相对 Identity <span class="${{ up: 'down', down: 'up', flat: 'flat' }[trend(r.total - idRow.total)]}">${signed((r.total / idRow.total - 1) * 100, 0, '%')}</span>` : '';
+    return `<div class="trow ${r.md.k === S.mode ? 'cur' : ''}" data-k="${r.md.k}" style="--c:var(${r.md.c})" title="${esc(r.md.label)}">
+      <span>${esc(r.md.label)} <span class="flat">${r.R.passed ? '✓' : '✗'}</span></span>
+      <span class="tb"><span class="pre" style="width:${r.pre / max * 100}%"></span><span class="post" style="width:${r.post / max * 100}%"></span></span>
+      <span class="tv"><b>${fmtN(r.total)}</b>${d}<br>${split ? `前缀 ${fmtN(r.pre)} + 转换后 ${fmtN(r.post)}（${r.n} 次）` : `${r.n} 次调用`} · 输出 ${fmtN(r.out)}</span>
+    </div>`;
+  }).join('');
+  const what = isW() ? `本种子（${current.seed.seed}）整条轨迹` : '本任务整条轨迹';
+  $('totalsSub').textContent = `${what}的累计输入 tokens：灰色是转换前的共享前缀（各方法相同），彩色是转换后的部分`;
+  $('totalsCap').textContent = split ? '转换后各方法走的调用次数不同，累计值同时反映每次输入的大小和调用次数。全体前缀的平均值见页面顶部的结果总览。' : '这个种子没有触发转换，只有 Identity。';
+}
+
 /* ---------- control flow ---------- */
-function renderStep() { renderTurns(); renderStepInfo(); renderTree(); renderTerm(); renderMem(); renderChart(); renderHistChart(); }
+function renderStep() { renderTurns(); renderStepInfo(); renderTree(); renderTerm(); renderMem(); renderChart(); renderHistChart(); renderTotals(); }
 function setStep(r) { const N = run().steps.length; S.r = Math.max(0, Math.min(N - 1, r)); renderStep(); }
-function renderRun() { if (!exp().modes.includes(S.mode)) S.mode = exp().modes[0]; renderModes(); renderTicks(); setStep(S.r); persist(); }
+function renderRun() {
+  if (!availModes().some(m => m.k === S.mode)) S.mode = availModes().some(m => m.k === 'event-optimized') ? 'event-optimized' : availModes()[0].k;
+  renderModes(); renderTicks(); if (isW()) renderOverview(); setStep(S.r); persist();
+}
 function stop() { S.playing = false; clearInterval(S.timer); $('playIcon').innerHTML = '<path d="M4 2l10 6-10 6z"/>'; $('play').setAttribute('aria-label', '播放'); }
 function play() {
   if (S.r >= run().steps.length - 1) setStep(0);
@@ -957,10 +1279,34 @@ function play() {
   S.timer = setInterval(() => { if (S.r >= run().steps.length - 1) { stop(); return; } setStep(S.r + 1); }, 1300 / S.speed);
 }
 function defaultStep() {
-  if (!exp().modes.includes(S.mode)) S.mode = exp().modes[0];
+  if (!availModes().some(m => m.k === S.mode)) S.mode = availModes()[0].k;
   const R = run(), cv = conv(), N = R.steps.length;
   if (!cv) return Math.min(N - 1, 5);
-  return Math.min(N - 1, cv.kind === 'swap' ? cv.idx + 3 : cv.idx);
+  return Math.min(N - 1, cv.kind === 'swap' ? cv.idx + 3 : cv.kind === 'w1000' ? cv.idx + 1 : cv.idx);
+}
+let token = 0;
+async function go(resetStep = true) {
+  stop();
+  const my = ++token;
+  if (isW()) {
+    const e = wEntry();
+    $('stepLabel').textContent = '';
+    $('stepTag').textContent = '正在加载…'; $('stepTag').className = 'tag';
+    let detail;
+    try { detail = await loadDetail(e.file); }
+    catch (err) {
+      $('expnote').hidden = false;
+      $('expnote').innerHTML = err.message === 'local'
+        ? '<b>无法读取数据文件。</b>直接用浏览器打开本地 index.html 时，浏览器不允许读取旁边的数据文件。请在项目根目录运行 <code>python -m http.server -d visualization</code>，再打开 http://localhost:8000/。'
+        : `<b>数据文件加载失败：</b>${esc(err.message)}`;
+      $('stepTag').textContent = '加载失败';
+      return;
+    }
+    if (my !== token) return;
+    buildCurrent(detail);
+  }
+  if (resetStep) S.r = defaultStep();
+  renderRun();
 }
 $('play').onclick = () => S.playing ? stop() : play();
 $('prev').onclick = () => { stop(); setStep(S.r - 1); };
@@ -970,29 +1316,46 @@ $('last').onclick = () => { stop(); setStep(run().steps.length - 1); };
 $('scrub').oninput = e => { stop(); setStep(+e.target.value); };
 $('speed').value = String(S.speed);
 $('speed').onchange = e => { S.speed = +e.target.value; persist(); if (S.playing) play(); };
-$('model').onchange = e => { stop(); S.mi = +e.target.value; S.ti = 0; fillExps(); fillTasks(); S.r = defaultStep(); renderRun(); };
-$('exp').onchange = e => { stop(); S.ei = +e.target.value; fillTasks(); S.r = defaultStep(); renderRun(); };
-$('task').onchange = e => { stop(); S.ti = +e.target.value; S.r = defaultStep(); renderRun(); };
+$('model').onchange = e => { S.mi = +e.target.value; S.ti = 0; fillExps(); fillTasks(); go(); };
+$('exp').onchange = e => { S.ei = +e.target.value; fillTasks(); go(); };
+$('task').onchange = e => { if (isW()) { S.wi = +e.target.value; S.si = 0; fillSeeds(); } else S.ti = +e.target.value; go(); };
+$('seed').onchange = e => { S.si = +e.target.value; go(); };
 $('modes').onclick = e => { const b = e.target.closest('.mode'); if (!b || b.getAttribute('aria-disabled') === 'true') return; S.mode = b.dataset.k; renderRun(); };
+$('overview').onclick = e => {
+  const c = e.target.closest('[data-c]');
+  if (c) { S.cohort = c.dataset.c; persist(); renderOverview(); return; }
+  const r = e.target.closest('tr[data-k]');
+  if (r && isW() && current && run(r.dataset.k)) { S.mode = r.dataset.k; renderRun(); }
+};
+$('totals').onclick = e => { const r = e.target.closest('[data-k]'); if (r && run(r.dataset.k)) { S.mode = r.dataset.k; renderRun(); } };
 $('legend').onclick = e => { const b = e.target.closest('.it'); if (!b) return; S.mode = b.dataset.k; renderRun(); };
 $('prefix').onclick = e => { const b = e.target.closest('[data-turn]'); if (!b) return; stop(); const t = +b.dataset.turn; const i = run().steps.findIndex(s => s.turn === t); if (i >= 0) setStep(i); };
 $('tabs').onclick = e => { const b = e.target.closest('[data-tab]'); if (!b) return; S.tab = b.dataset.tab; persist(); renderMem(); };
 document.addEventListener('keydown', e => {
   if (e.target.closest('select, input, textarea')) return;
+  if (!task() || !run()) return;
   if (e.key === ' ') { e.preventDefault(); S.playing ? stop() : play(); }
   else if (e.key === 'ArrowRight') { stop(); setStep(S.r + 1); }
   else if (e.key === 'ArrowLeft') { stop(); setStep(S.r - 1); }
 });
-let rz; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { renderChart(); renderHistChart(); }, 120); });
-matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', () => renderStep());
-new MutationObserver(() => renderStep()).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+const rerender = () => { if (task() && run()) renderStep(); };
+let rz; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { if (task() && run()) { renderChart(); renderHistChart(); } }, 120); });
+matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', rerender);
+new MutationObserver(rerender).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
-fillModels(); fillExps(); fillTasks();
-if (!MODES.some(m => m.k === S.mode)) S.mode = 'v2-compact';
+fillModels(); fillExps();
 let firstVisit = true;
-try { firstVisit = !localStorage.getItem('bfcl-memory-viewer'); } catch (e) {}
-if (firstVisit) { const i = model().tasks.findIndex(t => t.id === 'multi_turn_long_context_1'); if (i >= 0) S.ti = i; $('task').value = S.ti; }
-S.r = defaultStep();
-renderRun();
+try { firstVisit = !localStorage.getItem(KEY); } catch (e) {}
+if (firstVisit) {
+  S.ei = 0;
+  // Open on a seed whose seven outcomes disagree and whose prefix really calls a non-filesystem tool.
+  const split = s => s.triggered && new Set(Object.values(s.passed)).size > 1;
+  let i = W.tasks.findIndex(t => t.seeds.some(s => split(s) && s.mixedPrefix && s.passed.identity));
+  if (i < 0) i = W.tasks.findIndex(t => t.seeds.some(split));
+  if (i >= 0) { S.wi = i; S.si = Math.max(0, W.tasks[i].seeds.findIndex(s => split(s) && s.mixedPrefix && s.passed.identity)); }
+  $('exp').value = S.ei;
+}
+fillTasks();
+go();
 })();
 </script>

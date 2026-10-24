@@ -1,0 +1,63 @@
+{
+  "observed_at": 1792513525.3106992,
+  "status": "seven_arms_mechanical_checks_passed",
+  "rows": [
+    {
+      "path": "experiments/bfcl_identity/lossless_encoding_v1/evaluation/multi_turn_base_1/seed4409/identity",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v2"
+    },
+    {
+      "path": "experiments/bfcl_identity/lossless_encoding_v1/evaluation/multi_turn_base_1/seed4409/state-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v2"
+    },
+    {
+      "path": "experiments/bfcl_identity/lossless_encoding_v1/evaluation/multi_turn_base_1/seed4409/state-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v2"
+    },
+    {
+      "path": "experiments/bfcl_identity/lossless_encoding_v1/evaluation/multi_turn_base_1/seed4409/event-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v2"
+    },
+    {
+      "path": "experiments/bfcl_identity/lossless_encoding_v1/evaluation/multi_turn_base_1/seed4409/event-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v2"
+    },
+    {
+      "path": "experiments/bfcl_identity/lossless_encoding_v1/evaluation/multi_turn_base_1/seed4409/dedup-baseline",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v2"
+    },
+    {
+      "path": "experiments/bfcl_identity/lossless_encoding_v1/evaluation/multi_turn_base_1/seed4409/dedup-optimized",
+      "status": "complete",
+      "audit": "pass",
+      "triggered": true,
+      "passed": true,
+      "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/source_code/candidates-v2"
+    }
+  ],
+  "scope": "First fresh-seed matched prefix only; not final scientific conclusions."
+}

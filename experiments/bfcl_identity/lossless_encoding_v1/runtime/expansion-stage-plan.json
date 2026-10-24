@@ -1,0 +1,56 @@
+{
+  "status": "mixed_adapter_frozen_development_running",
+  "authorized_at": 1792507424.330685,
+  "authorization_source": "User instruction relayed by /root: expand underlying task families, not merely conditions or seeds.",
+  "current_scope": {
+    "underlying_families": 13,
+    "conditions_per_family": 4,
+    "conditions": 52,
+    "seeds": [
+      4409,
+      5519,
+      6637
+    ],
+    "note": "52 conditions are not 52 independent tasks."
+  },
+  "stages": [
+    {
+      "stage": "mixed_file_tool_inventory",
+      "status": "complete",
+      "description": "Investigate the 37 additional mixed-tool families among each category's 50 tasks containing GorillaFileSystem; verify actual family IDs, category overlap, and tool classes before fixing scope."
+    },
+    {
+      "stage": "graph_semantic_coverage_audit",
+      "status": "complete",
+      "description": "For every new tool, distinguish lossless generic event recording from supported environment objects/facts/state transitions. Unknown tools must not be presented as equally supported graph semantics."
+    },
+    {
+      "stage": "development_and_freeze",
+      "status": "in_progress",
+      "description": "If adapters are needed, implement on development examples, independently audit payload restoration and tool semantics, then freeze source and choices before new evaluation."
+    },
+    {
+      "stage": "paired_expansion_evaluation",
+      "status": "pending",
+      "description": "Retain strictly >1000 native working tokens excluding fixed tools/system; complete paired boundary; multiple Identity seeds; exactly one conversion then append suffix. Compare Identity, all three current graph baselines, and all three optimized graph encodings on identical prefixes. No evaluation-driven candidate edits."
+    },
+    {
+      "stage": "other_bfcl_tool_scenarios",
+      "status": "pending_after_mixed_tool_findings",
+      "description": "Then investigate remaining BFCL tool scenarios, with the same coverage audit and development/evaluation separation before any scope expansion."
+    }
+  ],
+  "execution_constraints": [
+    "Do not modify the active frozen run, task-split, selection, or source snapshots.",
+    "Separate currently seen families, new families, and condition variants in all denominators.",
+    "Retain existing experiments and user-maintained visualization/.",
+    "Expansion requires its own protocol and status; this file is a pending authorized plan, not evidence that expansion has started."
+  ],
+  "updated_at": 1792536313.0948267,
+  "inventory": "../mixed_tool_expansion/inventory.json",
+  "current_independent_audit": "analysis/independent_audit/final.json",
+  "expanded_model_evaluation_started": true,
+  "fresh_evaluation_started": false,
+  "active_controller": "../mixed_tool_expansion/runtime/controller-launch.json",
+  "preflight": "../mixed_tool_expansion/preflight-review.json"
+}

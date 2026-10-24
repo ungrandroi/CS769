@@ -1,0 +1,77 @@
+{
+  "model": "Qwen3.8-27B",
+  "quantization": "Q8_0",
+  "model_path": "/home/data/models/gguf/Qwen3.8-27B-Q8_0/Qwen3.8-27B-Q8_0.gguf",
+  "model_file_bytes": 28595763648,
+  "model_source": "ggml-org/Qwen3.8-27B-GGUF",
+  "model_revision": "71bc7b627595dc8a91039addd9c791ae548d6747",
+  "model_sha256_from_existing_download_manifest": "aab65c67ef0dad127960efef9247f1832bca105faa1c7a052cc039b223cf86a1",
+  "full_weights_rehashed": false,
+  "metadata_bytes": 10943782,
+  "metadata_sha256": "2622b23ee76fe1550104cd3bbfbc8c598a0b36bd40c8549583af6860db317425",
+  "declared_tensors": 851,
+  "metadata_keys": 40,
+  "library_path": "/home/bcao44/bofeng/CS769/vendor/qwen-tokenizer-631109b34/lib/libllama.so.0.5.0",
+  "library_sha256": "73b89cc3cfd638b9175974fc9337ce6ad5a80272562bd933056948327188f723",
+  "library_commit": "631109b34",
+  "abi_header_url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/include/llama.h",
+  "abi_headers_manifest": "/home/bcao44/bofeng/CS769/vendor/qwen-tokenizer-631109b34/headers-manifest.json",
+  "abi_headers": [
+    {
+      "path": "include/llama.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/include/llama.h",
+      "sha256": "d5cf9203bea63b575e76cba4881f29cfd1b611451578b01582b75b72ecbb04bc"
+    },
+    {
+      "path": "ggml/include/gguf.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/gguf.h",
+      "sha256": "e56714aab702e5ce62ee587a409643c08f7e93e8fbb77f48ef7cc85075f96fa4"
+    },
+    {
+      "path": "ggml/include/ggml.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml.h",
+      "sha256": "12ee71f99db7db9b353bc02b1fbb57c344ee17c01ac5fb7952b41a637a747ea9"
+    },
+    {
+      "path": "ggml/include/ggml-opt.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-opt.h",
+      "sha256": "3586de1bc8a934b5c72339e2b6937b0641e8f149b512231e666f67de0736eea2"
+    },
+    {
+      "path": "ggml/include/ggml-backend.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-backend.h",
+      "sha256": "5791edae1fb7622027621d15bc7a160198bd3b75ed8f96d06cb7b85e2b873756"
+    },
+    {
+      "path": "ggml/include/ggml-alloc.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-alloc.h",
+      "sha256": "d114067f9099c4a0e2bbc0625c676d4894d9cf0ea27168ee072c7de0e71bb51d"
+    },
+    {
+      "path": "ggml/include/ggml-cpu.h",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-cpu.h",
+      "sha256": "316279e004cdeb8e6ef78599acb602bf79a8abdf897fed9fd1914808c1518c6e"
+    }
+  ],
+  "vocab_only": true,
+  "tensor_weights_loaded": false,
+  "model_context_created": false,
+  "inference_calls": 0,
+  "server_started": false,
+  "tokenizer": {
+    "general.name": "Qwen3.8-27B",
+    "general.architecture": "qwen35",
+    "tokenizer.ggml.model": "gpt2",
+    "tokenizer.ggml.pre": "qwen35",
+    "tokenizer.ggml.add_bos_token": false,
+    "vocab_size": 248320,
+    "merge_count": 247587,
+    "bos_token_id": 248044,
+    "bos_token": "<|endoftext|>",
+    "eos_token_id": 248046,
+    "eos_token": "<|im_end|>"
+  },
+  "chat_template_sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+  "ordinary_text_policy": "add_special=False, parse_special=False; no BOS/EOS or chat framing",
+  "chat_text_policy": "Caller renders embedded GGUF template, then explicitly sets parse_special=True"
+}

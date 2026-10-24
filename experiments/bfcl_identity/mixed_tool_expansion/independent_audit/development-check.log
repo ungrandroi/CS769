@@ -1,0 +1,58 @@
+0 {'native_requests': 9, 'graph_payload_checks': 1, 'official_scores_recomputed': 1}
+30 {'native_requests': 266, 'graph_payload_checks': 27, 'official_scores_recomputed': 31, 'direct_codec_decodes': 13, 'shared_semantic_pairs': 13, 'identity_runs': 4}
+60 {'native_requests': 410, 'graph_payload_checks': 52, 'official_scores_recomputed': 61, 'direct_codec_decodes': 26, 'shared_semantic_pairs': 26, 'identity_runs': 9}
+90 {'native_requests': 938, 'graph_payload_checks': 78, 'official_scores_recomputed': 91, 'direct_codec_decodes': 39, 'shared_semantic_pairs': 39, 'identity_runs': 13}
+120 {'native_requests': 1202, 'graph_payload_checks': 104, 'official_scores_recomputed': 121, 'direct_codec_decodes': 52, 'shared_semantic_pairs': 52, 'identity_runs': 17}
+150 {'native_requests': 1453, 'graph_payload_checks': 130, 'official_scores_recomputed': 151, 'direct_codec_decodes': 65, 'shared_semantic_pairs': 65, 'identity_runs': 21}
+{
+  "status": "complete_artifact_checks_pass",
+  "created_at": 1792543502.098815,
+  "manifest_count": 168,
+  "counts": {
+    "native_requests": 1796,
+    "graph_payload_checks": 144,
+    "official_scores_recomputed": 168,
+    "direct_codec_decodes": 72,
+    "shared_semantic_pairs": 72,
+    "identity_runs": 24
+  },
+  "failures": [],
+  "pending": [],
+  "identity_nonfilesystem_execution_count": 11,
+  "identity_nonfilesystem_prefix_count": 6,
+  "frozen_gate": {
+    "snapshot_hashes_sha256": "f668a3d891c64c325dc0850306daa472347471681bc8c06abc29a697801684fb",
+    "task_split_sha256": "86c832c75efa45b3d180bfbbbaedc56413271f018f998c28be101c0c9abe3a85",
+    "selection_sha256": "26255447f21070503ae0fa4d68f7897545341ebd0f69be3fa38253785409d237",
+    "vendor_pins_sha256": "5ee16bf59a6cdec16cd51a6d582ea18f74ccd121ddefb6f748e71370be0ce04a",
+    "protocol_sha256": "fe0ce7f8a038385461339f870e81a2701a53eecdf5742d934db8804a71114929"
+  },
+  "development_manifest_sha256": "47c3d7cc4901ffa6e7944e4765891f781052b0f40ece3d3918d855b7c10bc5cf",
+  "controller_state": {
+    "pid": 1641596,
+    "status": "running",
+    "stage": "waiting_for_independent_development_review",
+    "started_at": 1792536292.568296,
+    "completed_jobs": 168,
+    "stages": [
+      "development_complete"
+    ],
+    "source_snapshot": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/source_code/adapters-v1",
+    "frozen_inputs": {
+      "snapshot_hashes_sha256": "f668a3d891c64c325dc0850306daa472347471681bc8c06abc29a697801684fb",
+      "task_split_sha256": "86c832c75efa45b3d180bfbbbaedc56413271f018f998c28be101c0c9abe3a85",
+      "selection_sha256": "26255447f21070503ae0fa4d68f7897545341ebd0f69be3fa38253785409d237",
+      "vendor_pins_sha256": "5ee16bf59a6cdec16cd51a6d582ea18f74ccd121ddefb6f748e71370be0ce04a",
+      "protocol_sha256": "fe0ce7f8a038385461339f870e81a2701a53eecdf5742d934db8804a71114929"
+    },
+    "updated_at": 1792543478.3408687,
+    "current": {
+      "task": "multi_turn_long_context_15",
+      "seed": 3301,
+      "method": "dedup",
+      "optimized": true,
+      "destination": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed3301/dedup-optimized"
+    },
+    "last_completed": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/mixed_tool_expansion/development/multi_turn_long_context_15/seed3301/dedup-optimized"
+  }
+}

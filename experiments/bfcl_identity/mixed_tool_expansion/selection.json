@@ -1,0 +1,31 @@
+{
+  "selected": {
+    "state": {
+      "method": "state",
+      "module": "core.lossless_state",
+      "variant": "state-shared-v1",
+      "explanation": "minimal",
+      "label": "state-state-shared-v1-minimal",
+      "development_adoption_criterion_met": true
+    },
+    "event": {
+      "method": "event",
+      "module": "core.lossless_event",
+      "variant": "tables-v1",
+      "explanation": "minimal",
+      "label": "event-tables-v1-minimal",
+      "development_adoption_criterion_met": true
+    },
+    "dedup": {
+      "method": "dedup",
+      "module": "core.lossless_event",
+      "variant": "shared-v1",
+      "explanation": "none",
+      "label": "dedup-shared-v1-none",
+      "development_adoption_criterion_met": true
+    }
+  },
+  "selection_source": "../lossless_encoding_v1/selection.json",
+  "selection_source_sha256": "1f8b3a75d37790ad3a610aa2c6251dce88f972c641806b42acdad7b1d0f96953",
+  "selection_policy": "Fixed from prior completed lossless study; no mixed-task selection or fresh-outcome changes."
+}

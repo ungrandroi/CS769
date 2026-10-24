@@ -1,0 +1,1856 @@
+{
+  "selected": {
+    "state": {
+      "method": "state",
+      "module": "core.lossless_state",
+      "variant": "state-shared-v1",
+      "explanation": "minimal",
+      "label": "state-state-shared-v1-minimal",
+      "development_adoption_criterion_met": true
+    },
+    "event": {
+      "method": "event",
+      "module": "core.lossless_event",
+      "variant": "tables-v1",
+      "explanation": "minimal",
+      "label": "event-tables-v1-minimal",
+      "development_adoption_criterion_met": true
+    },
+    "dedup": {
+      "method": "dedup",
+      "module": "core.lossless_event",
+      "variant": "shared-v1",
+      "explanation": "none",
+      "label": "dedup-shared-v1-none",
+      "development_adoption_criterion_met": true
+    }
+  },
+  "evidence": {
+    "state": [
+      {
+        "method": "state",
+        "module": "core.lossless_state",
+        "variant": "state-shared-v1",
+        "explanation": "minimal",
+        "label": "state-state-shared-v1-minimal",
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": true,
+            "baseline_input": 6734,
+            "candidate_input": 6337
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5177,
+            "candidate_input": 5191
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5115.333333333333,
+            "candidate_input": 5131.2
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5226,
+            "candidate_input": 5291.2
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 8841.333333333334,
+            "candidate_input": 9048.666666666666
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 9292,
+            "candidate_input": 8500
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 10798.57142857143,
+            "candidate_input": 8898.666666666666
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": false,
+            "candidate_passed": true,
+            "baseline_input": 7278.857142857143,
+            "candidate_input": 7167.333333333333
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 6640,
+            "candidate_input": 6714.888888888889
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 7303.428571428572,
+            "candidate_input": 8014.692307692308
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12239.333333333334,
+            "candidate_input": 11445.75
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12459.625,
+            "candidate_input": 11087.25
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12956.666666666666,
+            "candidate_input": 11787.888888888889
+          }
+        ],
+        "passed": 11,
+        "baseline_passed": 10,
+        "mean_input": 8047.348980933596,
+        "baseline_mean_input": 8466.31913919414
+      },
+      {
+        "method": "state",
+        "module": "core.lossless_state",
+        "variant": "state-tables-v1",
+        "explanation": "minimal",
+        "label": "state-state-tables-v1-minimal",
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": true,
+            "baseline_input": 6734,
+            "candidate_input": 6413.181818181818
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5177,
+            "candidate_input": 5189.75
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5115.333333333333,
+            "candidate_input": 5109.2
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5226,
+            "candidate_input": 5269.2
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 8841.333333333334,
+            "candidate_input": 8940
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 9292,
+            "candidate_input": 8478
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 10798.57142857143,
+            "candidate_input": 8720
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": false,
+            "candidate_passed": true,
+            "baseline_input": 7278.857142857143,
+            "candidate_input": 6743
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 6640,
+            "candidate_input": 6604
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 7303.428571428572,
+            "candidate_input": 6579.909090909091
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12239.333333333334,
+            "candidate_input": 11360.727272727272
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 12459.625,
+            "candidate_input": 11110.5
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 12956.666666666666,
+            "candidate_input": 10997
+          }
+        ],
+        "passed": 10,
+        "baseline_passed": 10,
+        "mean_input": 7808.8052447552445,
+        "baseline_mean_input": 8466.31913919414
+      },
+      {
+        "method": "state",
+        "module": "core.lossless_state",
+        "variant": "state-shared-v1",
+        "explanation": "none",
+        "label": "state-state-shared-v1-none",
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": true,
+            "baseline_input": 6734,
+            "candidate_input": 6622.555555555556
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5177,
+            "candidate_input": 5158
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5115.333333333333,
+            "candidate_input": 5047
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5226,
+            "candidate_input": 5280.5
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 8841.333333333334,
+            "candidate_input": 8600
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 9292,
+            "candidate_input": 8467
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 10798.57142857143,
+            "candidate_input": 10624
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 7278.857142857143,
+            "candidate_input": 7453.571428571428
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 6640,
+            "candidate_input": 6988
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 7303.428571428572,
+            "candidate_input": 7126.076923076923
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12239.333333333334,
+            "candidate_input": 12811.666666666666
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12459.625,
+            "candidate_input": 12588.444444444445
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12956.666666666666,
+            "candidate_input": 13273.4
+          }
+        ],
+        "passed": 9,
+        "baseline_passed": 10,
+        "mean_input": 8464.631924485771,
+        "baseline_mean_input": 8466.31913919414
+      },
+      {
+        "method": "state",
+        "module": "core.lossless_state",
+        "variant": "state-tables-v1",
+        "explanation": "none",
+        "label": "state-state-tables-v1-none",
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 6734,
+            "candidate_input": 6458.2307692307695
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5177,
+            "candidate_input": 5103.5
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5115.333333333333,
+            "candidate_input": 5168.714285714285
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5226,
+            "candidate_input": 5624
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 8841.333333333334,
+            "candidate_input": 8578
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 9292,
+            "candidate_input": 8445
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 10798.57142857143,
+            "candidate_input": 10485.545454545454
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 7278.857142857143,
+            "candidate_input": 7080.8
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 6640,
+            "candidate_input": 7152.4
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 7303.428571428572,
+            "candidate_input": 8226.263157894737
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12239.333333333334,
+            "candidate_input": 11175.285714285714
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 12459.625,
+            "candidate_input": 12592.333333333334
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12956.666666666666,
+            "candidate_input": 12889.555555555555
+          }
+        ],
+        "passed": 8,
+        "baseline_passed": 10,
+        "mean_input": 8383.048328504603,
+        "baseline_mean_input": 8466.31913919414
+      }
+    ],
+    "event": [
+      {
+        "method": "event",
+        "module": "core.lossless_event",
+        "variant": "tables-v1",
+        "explanation": "minimal",
+        "label": "event-tables-v1-minimal",
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 7760.375,
+            "candidate_input": 7576
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5680,
+            "candidate_input": 5602
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5424,
+            "candidate_input": 5454.8
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5589,
+            "candidate_input": 5614.8
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 11805,
+            "candidate_input": 10219
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12031,
+            "candidate_input": 10928.076923076924
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12661,
+            "candidate_input": 10549
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 8374,
+            "candidate_input": 8281
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": false,
+            "candidate_passed": true,
+            "baseline_input": 7629,
+            "candidate_input": 9384.3
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": true,
+            "baseline_input": 10970.583333333334,
+            "candidate_input": 8688.333333333334
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 17701.11111111111,
+            "candidate_input": 12898.333333333334
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 17703.444444444445,
+            "candidate_input": 15027.888888888889
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 17127.444444444445,
+            "candidate_input": 13520
+          }
+        ],
+        "passed": 13,
+        "baseline_passed": 11,
+        "mean_input": 9518.733267587113,
+        "baseline_mean_input": 10804.304487179486
+      },
+      {
+        "method": "event",
+        "module": "core.lossless_event",
+        "variant": "shared-v1",
+        "explanation": "full",
+        "label": "event-shared-v1-full",
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 7760.375,
+            "candidate_input": 7389.333333333333
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5680,
+            "candidate_input": 5707
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5424,
+            "candidate_input": 5533.2
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5589,
+            "candidate_input": 5713.2
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 11805,
+            "candidate_input": 9904
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12031,
+            "candidate_input": 9833
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12661,
+            "candidate_input": 10253
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 8374,
+            "candidate_input": 7860
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": false,
+            "candidate_passed": true,
+            "baseline_input": 7629,
+            "candidate_input": 8604.714285714286
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": true,
+            "baseline_input": 10970.583333333334,
+            "candidate_input": 8411
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 17701.11111111111,
+            "candidate_input": 12999.57142857143
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 17703.444444444445,
+            "candidate_input": 15015.777777777777
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 17127.444444444445,
+            "candidate_input": 12188.388888888889
+          }
+        ],
+        "passed": 11,
+        "baseline_passed": 11,
+        "mean_input": 9185.552747252746,
+        "baseline_mean_input": 10804.304487179486
+      },
+      {
+        "method": "event",
+        "module": "core.lossless_event",
+        "variant": "shared-v1",
+        "explanation": "none",
+        "label": "event-shared-v1-none",
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 7760.375,
+            "candidate_input": 7340.454545454545
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 5680,
+            "candidate_input": 5602.75
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5424,
+            "candidate_input": 5415
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5589,
+            "candidate_input": 5662.875
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 11805,
+            "candidate_input": 9894.666666666666
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12031,
+            "candidate_input": 10362.2
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12661,
+            "candidate_input": 10291
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 8374,
+            "candidate_input": 8281.4
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 7629,
+            "candidate_input": 7359
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": true,
+            "baseline_input": 10970.583333333334,
+            "candidate_input": 9136.666666666666
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 17701.11111111111,
+            "candidate_input": 14978.818181818182
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 17703.444444444445,
+            "candidate_input": 14876.555555555555
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 17127.444444444445,
+            "candidate_input": 15225.1
+          }
+        ],
+        "passed": 11,
+        "baseline_passed": 11,
+        "mean_input": 9571.268201243201,
+        "baseline_mean_input": 10804.304487179486
+      },
+      {
+        "method": "event",
+        "module": "core.lossless_event",
+        "variant": "tables-v1",
+        "explanation": "full",
+        "label": "event-tables-v1-full",
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 7760.375,
+            "candidate_input": 7765.777777777777
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5680,
+            "candidate_input": 5721
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5424,
+            "candidate_input": 5465
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5589,
+            "candidate_input": 5644.5
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 11805,
+            "candidate_input": 10720
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12031,
+            "candidate_input": 15148
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12661,
+            "candidate_input": 10668
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 8374,
+            "candidate_input": 8312.5
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": false,
+            "candidate_passed": true,
+            "baseline_input": 7629,
+            "candidate_input": 7681
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 10970.583333333334,
+            "candidate_input": 8849.57142857143
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 17701.11111111111,
+            "candidate_input": 12994.5
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 17703.444444444445,
+            "candidate_input": 15125.888888888889
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 17127.444444444445,
+            "candidate_input": 12302.388888888889
+          }
+        ],
+        "passed": 10,
+        "baseline_passed": 11,
+        "mean_input": 9722.932844932844,
+        "baseline_mean_input": 10804.304487179486
+      },
+      {
+        "method": "event",
+        "module": "core.lossless_event",
+        "variant": "shared-v1",
+        "explanation": "minimal",
+        "label": "event-shared-v1-minimal",
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 7760.375,
+            "candidate_input": 7281.285714285715
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5680,
+            "candidate_input": 5588
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5424,
+            "candidate_input": 5383
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5589,
+            "candidate_input": 5594.2
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 11805,
+            "candidate_input": 9785
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12031,
+            "candidate_input": 9714
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12661,
+            "candidate_input": 10966.42857142857
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 8374,
+            "candidate_input": 7974
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 7629,
+            "candidate_input": 7398
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 10970.583333333334,
+            "candidate_input": 9432.947368421053
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 17701.11111111111,
+            "candidate_input": 14810.555555555555
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 17703.444444444445,
+            "candidate_input": 14910.555555555555
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 17127.444444444445,
+            "candidate_input": 14866.111111111111
+          }
+        ],
+        "passed": 9,
+        "baseline_passed": 11,
+        "mean_input": 9515.698759719813,
+        "baseline_mean_input": 10804.304487179486
+      },
+      {
+        "method": "event",
+        "module": "core.lossless_event",
+        "variant": "tables-v1",
+        "explanation": "none",
+        "label": "event-tables-v1-none",
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 7760.375,
+            "candidate_input": 7690.066666666667
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5680,
+            "candidate_input": 5760.333333333333
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5424,
+            "candidate_input": 5421.8
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5589,
+            "candidate_input": 5546.5
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 11805,
+            "candidate_input": 10780
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 12031,
+            "candidate_input": 10030
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 12661,
+            "candidate_input": 11933.1
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 8374,
+            "candidate_input": 7905
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 7629,
+            "candidate_input": 7924
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": true,
+            "baseline_input": 10970.583333333334,
+            "candidate_input": 8735.454545454546
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 17701.11111111111,
+            "candidate_input": 14963
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 17703.444444444445,
+            "candidate_input": 14665.666666666666
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 17127.444444444445,
+            "candidate_input": 15569.666666666666
+          }
+        ],
+        "passed": 8,
+        "baseline_passed": 11,
+        "mean_input": 9763.429836829837,
+        "baseline_mean_input": 10804.304487179486
+      }
+    ],
+    "dedup": [
+      {
+        "method": "dedup",
+        "module": "core.lossless_event",
+        "variant": "shared-v1",
+        "explanation": "none",
+        "label": "dedup-shared-v1-none",
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 6964.666666666667,
+            "candidate_input": 6628
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5397.666666666667,
+            "candidate_input": 5664
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5232.75,
+            "candidate_input": 5351.8
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5375,
+            "candidate_input": 5553.8
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 9926,
+            "candidate_input": 10735.8
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 9896,
+            "candidate_input": 10272.92857142857
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": false,
+            "candidate_passed": true,
+            "baseline_input": 11575.5,
+            "candidate_input": 10133.5
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 7435.5,
+            "candidate_input": 7840
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 6795,
+            "candidate_input": 7749.25
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 10418.470588235294,
+            "candidate_input": 9126.235294117647
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 15973.857142857143,
+            "candidate_input": 15358.2
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 16330.111111111111,
+            "candidate_input": 15054.8
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 16325.545454545454,
+            "candidate_input": 14807.555555555555
+          }
+        ],
+        "passed": 11,
+        "baseline_passed": 11,
+        "mean_input": 9559.682263161674,
+        "baseline_mean_input": 9818.928279237103
+      },
+      {
+        "method": "dedup",
+        "module": "core.lossless_event",
+        "variant": "tables-v1",
+        "explanation": "minimal",
+        "label": "dedup-tables-v1-minimal",
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 6964.666666666667,
+            "candidate_input": 6707.909090909091
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5397.666666666667,
+            "candidate_input": 5461.75
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5232.75,
+            "candidate_input": 5381.8
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5375,
+            "candidate_input": 5541.8
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 9926,
+            "candidate_input": 9764.666666666666
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 9896,
+            "candidate_input": 9691.666666666666
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 11575.5,
+            "candidate_input": 10022
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 7435.5,
+            "candidate_input": 7647.5
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 6795,
+            "candidate_input": 6998
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 10418.470588235294,
+            "candidate_input": 8718.714285714286
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 15973.857142857143,
+            "candidate_input": 13420.875
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 16330.111111111111,
+            "candidate_input": 14958.444444444445
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 16325.545454545454,
+            "candidate_input": 14550.9
+          }
+        ],
+        "passed": 9,
+        "baseline_passed": 11,
+        "mean_input": 9143.540473415473,
+        "baseline_mean_input": 9818.928279237103
+      },
+      {
+        "method": "dedup",
+        "module": "core.lossless_event",
+        "variant": "shared-v1",
+        "explanation": "minimal",
+        "label": "dedup-shared-v1-minimal",
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 6964.666666666667,
+            "candidate_input": 6715.4
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5397.666666666667,
+            "candidate_input": 5486
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5232.75,
+            "candidate_input": 5426.8
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5375,
+            "candidate_input": 5586.8
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 9926,
+            "candidate_input": 9627
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 9896,
+            "candidate_input": 9597
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": false,
+            "candidate_passed": true,
+            "baseline_input": 11575.5,
+            "candidate_input": 9732
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 7435.5,
+            "candidate_input": 8977.470588235294
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 6795,
+            "candidate_input": 7701.9
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 10418.470588235294,
+            "candidate_input": 8226.375
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 15973.857142857143,
+            "candidate_input": 14458.5
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 16330.111111111111,
+            "candidate_input": 14830
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 16325.545454545454,
+            "candidate_input": 14360.90909090909
+          }
+        ],
+        "passed": 9,
+        "baseline_passed": 11,
+        "mean_input": 9286.627283011107,
+        "baseline_mean_input": 9818.928279237103
+      },
+      {
+        "method": "dedup",
+        "module": "core.lossless_event",
+        "variant": "tables-v1",
+        "explanation": "none",
+        "label": "dedup-tables-v1-none",
+        "pairs": [
+          {
+            "task": "multi_turn_base_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 6964.666666666667,
+            "candidate_input": 6708.545454545455
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5397.666666666667,
+            "candidate_input": 5746.8
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5232.75,
+            "candidate_input": 5348.8
+          },
+          {
+            "task": "multi_turn_base_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 5375,
+            "candidate_input": 5473.5
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 9926,
+            "candidate_input": 9628
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 9896,
+            "candidate_input": 9516
+          },
+          {
+            "task": "multi_turn_long_context_3",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 11575.5,
+            "candidate_input": 10159.5
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 7435.5,
+            "candidate_input": 7693.5
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": false,
+            "baseline_input": 6795,
+            "candidate_input": 7354
+          },
+          {
+            "task": "multi_turn_long_context_9",
+            "seed": 3301,
+            "identity_passed": false,
+            "baseline_passed": false,
+            "candidate_passed": false,
+            "baseline_input": 10418.470588235294,
+            "candidate_input": 9535.944444444445
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 1103,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 15973.857142857143,
+            "candidate_input": 15170.5
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 2207,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 16330.111111111111,
+            "candidate_input": 14606.111111111111
+          },
+          {
+            "task": "multi_turn_long_context_37",
+            "seed": 3301,
+            "identity_passed": true,
+            "baseline_passed": true,
+            "candidate_passed": true,
+            "baseline_input": 16325.545454545454,
+            "candidate_input": 15017.90909090909
+          }
+        ],
+        "passed": 8,
+        "baseline_passed": 11,
+        "mean_input": 9381.470007770007,
+        "baseline_mean_input": 9818.928279237103
+      }
+    ]
+  }
+}

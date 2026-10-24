@@ -26,3 +26,17 @@ vendor/qwen-tokenizer-631109b34/lib/
 
 # Local research proposal; do not publish.
 /workflow_graph_memory_research_proposal.md
+
+# Frozen research snapshots use machine-local vendor symlinks.
+/experiments/bfcl_identity/lossless_encoding_v1/source_code/*/vendor
+/experiments/bfcl_identity/mixed_tool_expansion/source_code/*/vendor
+
+# Raw model trajectories are multi-GB and stay local; protocols, reports,
+# analyses, audit conclusions and frozen source snapshots are tracked.
+/experiments/bfcl_identity/lossless_encoding_v1/evaluation/
+/experiments/bfcl_identity/lossless_encoding_v1/development/
+/experiments/bfcl_identity/mixed_tool_expansion/evaluation/
+/experiments/bfcl_identity/mixed_tool_expansion/development/
+/experiments/bfcl_identity/mixed_tool_expansion/independent_audit/*-native-samples.json
+/experiments/bfcl_identity/work1000_research/tasks/
+/experiments/bfcl_identity/work1000_research/runtime/qwen-server-resume.log

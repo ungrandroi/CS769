@@ -1,0 +1,707 @@
+{
+  "count": 117,
+  "runs": [
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed1103/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed1103/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed1103/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed1103/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed1103/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed1103/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed1103/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed1103/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed1103/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed2207/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed2207/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed2207/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed2207/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed2207/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed2207/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed2207/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed2207/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed2207/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed3301/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed3301/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed3301/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed3301/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed3301/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed3301/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed3301/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed3301/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed3301/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed1103/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed1103/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed1103/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed1103/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed1103/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed1103/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed1103/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed1103/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed1103/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed2207/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed2207/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed2207/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed2207/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed2207/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed2207/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed2207/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed2207/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed2207/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed3301/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed3301/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed3301/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed3301/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed3301/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed3301/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed3301/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed3301/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed3301/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed1103/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed1103/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed1103/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed1103/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed1103/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed1103/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed1103/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed1103/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed1103/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed2207/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed2207/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed2207/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed2207/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed2207/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed2207/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed2207/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed2207/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed2207/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed3301/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed3301/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed3301/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed3301/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed3301/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed3301/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed3301/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed3301/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed3301/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed1103/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed1103/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed1103/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed1103/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed1103/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed1103/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed1103/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed1103/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed1103/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed2207/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed2207/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed2207/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed2207/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed2207/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed2207/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed2207/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed2207/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed2207/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed3301/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed3301/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed3301/identity/checkpoint-history.json",
+      "method": "v1-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed3301/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed3301/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed3301/identity/checkpoint-history.json",
+      "method": "v2-compact",
+      "explanation": "full",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed3301/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "none",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed3301/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "minimal",
+      "audit": "pass"
+    },
+    {
+      "checkpoint": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed3301/identity/checkpoint-history.json",
+      "method": "v2-dedup",
+      "explanation": "full",
+      "audit": "pass"
+    }
+  ]
+}

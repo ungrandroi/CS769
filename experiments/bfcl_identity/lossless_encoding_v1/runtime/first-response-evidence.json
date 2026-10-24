@@ -1,0 +1,14 @@
+{
+  "path": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_9/seed3301/state-state-tables-v1-none",
+  "response_index": 17,
+  "model": "bfcl-qwen38-27b",
+  "usage": {
+    "completion_tokens": 14,
+    "prompt_tokens": 6105,
+    "total_tokens": 6119,
+    "prompt_tokens_details": {
+      "cached_tokens": 3106
+    }
+  },
+  "payload_exact": true
+}

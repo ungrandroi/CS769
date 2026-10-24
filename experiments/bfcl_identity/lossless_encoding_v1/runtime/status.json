@@ -1,0 +1,64 @@
+{
+  "pid": 1938875,
+  "started_at": 1792496728.218725,
+  "status": "inference_complete_pending_independent_audit",
+  "completed_jobs": 1344,
+  "stages": [
+    "development:state-state-tables-v1-none",
+    "development:state-state-tables-v1-minimal",
+    "development:state-state-shared-v1-none",
+    "development:state-state-shared-v1-minimal",
+    "development:event-tables-v1-none",
+    "development:event-tables-v1-minimal",
+    "development:event-tables-v1-full",
+    "development:event-shared-v1-none",
+    "development:event-shared-v1-minimal",
+    "development:event-shared-v1-full",
+    "development:dedup-tables-v1-none",
+    "development:dedup-tables-v1-minimal",
+    "development:dedup-shared-v1-none",
+    "development:dedup-shared-v1-minimal",
+    "selection_frozen",
+    "fresh_identity",
+    "paired_baselines_and_candidates"
+  ],
+  "source_snapshot": "candidates-v2",
+  "registry": "candidate-registry-v2.json",
+  "explanation_controls": "short-and-baseline",
+  "stage": "independent_audit_then_cleanup",
+  "updated_at": 1792534478.7630575,
+  "current": {
+    "task": "multi_turn_miss_param_39",
+    "seed": 6637,
+    "label": "dedup-shared-v1-none",
+    "destination": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/evaluation/multi_turn_miss_param_39/seed6637/dedup-optimized"
+  },
+  "last_completed": "/home/bcao44/bofeng/CS769/experiments/bfcl_identity/lossless_encoding_v1/evaluation/multi_turn_miss_param_39/seed6637/dedup-optimized",
+  "selection": {
+    "state": {
+      "method": "state",
+      "module": "core.lossless_state",
+      "variant": "state-shared-v1",
+      "explanation": "minimal",
+      "label": "state-state-shared-v1-minimal",
+      "development_adoption_criterion_met": true
+    },
+    "event": {
+      "method": "event",
+      "module": "core.lossless_event",
+      "variant": "tables-v1",
+      "explanation": "minimal",
+      "label": "event-tables-v1-minimal",
+      "development_adoption_criterion_met": true
+    },
+    "dedup": {
+      "method": "dedup",
+      "module": "core.lossless_event",
+      "variant": "shared-v1",
+      "explanation": "none",
+      "label": "dedup-shared-v1-none",
+      "development_adoption_criterion_met": true
+    }
+  },
+  "finished_at": 1792534478.7630541
+}

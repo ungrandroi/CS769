@@ -1,0 +1,895 @@
+{
+  "scope": "13 development triggered checkpoints only. Plain memory body includes all visible codec rules; excludes fixed request overhead. No inference.",
+  "codec_sha256": "8b4896610237a61430b685de6e98ac68f8d67157ac472b98d02fbe24195f6807",
+  "tokenizer": {
+    "model": "Qwen3.8-27B",
+    "quantization": "Q8_0",
+    "model_path": "/home/data/models/gguf/Qwen3.8-27B-Q8_0/Qwen3.8-27B-Q8_0.gguf",
+    "model_file_bytes": 28595763648,
+    "model_source": "ggml-org/Qwen3.8-27B-GGUF",
+    "model_revision": "71bc7b627595dc8a91039addd9c791ae548d6747",
+    "model_sha256_from_existing_download_manifest": "aab65c67ef0dad127960efef9247f1832bca105faa1c7a052cc039b223cf86a1",
+    "full_weights_rehashed": false,
+    "metadata_bytes": 10943782,
+    "metadata_sha256": "2622b23ee76fe1550104cd3bbfbc8c598a0b36bd40c8549583af6860db317425",
+    "declared_tensors": 851,
+    "metadata_keys": 40,
+    "library_path": "/home/bcao44/bofeng/CS769/vendor/qwen-tokenizer-631109b34/lib/libllama.so.0.5.0",
+    "library_sha256": "73b89cc3cfd638b9175974fc9337ce6ad5a80272562bd933056948327188f723",
+    "library_commit": "631109b34",
+    "abi_header_url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/include/llama.h",
+    "abi_headers_manifest": "/home/bcao44/bofeng/CS769/vendor/qwen-tokenizer-631109b34/headers-manifest.json",
+    "abi_headers": [
+      {
+        "path": "include/llama.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/include/llama.h",
+        "sha256": "d5cf9203bea63b575e76cba4881f29cfd1b611451578b01582b75b72ecbb04bc"
+      },
+      {
+        "path": "ggml/include/gguf.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/gguf.h",
+        "sha256": "e56714aab702e5ce62ee587a409643c08f7e93e8fbb77f48ef7cc85075f96fa4"
+      },
+      {
+        "path": "ggml/include/ggml.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml.h",
+        "sha256": "12ee71f99db7db9b353bc02b1fbb57c344ee17c01ac5fb7952b41a637a747ea9"
+      },
+      {
+        "path": "ggml/include/ggml-opt.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-opt.h",
+        "sha256": "3586de1bc8a934b5c72339e2b6937b0641e8f149b512231e666f67de0736eea2"
+      },
+      {
+        "path": "ggml/include/ggml-backend.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-backend.h",
+        "sha256": "5791edae1fb7622027621d15bc7a160198bd3b75ed8f96d06cb7b85e2b873756"
+      },
+      {
+        "path": "ggml/include/ggml-alloc.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-alloc.h",
+        "sha256": "d114067f9099c4a0e2bbc0625c676d4894d9cf0ea27168ee072c7de0e71bb51d"
+      },
+      {
+        "path": "ggml/include/ggml-cpu.h",
+        "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/631109b34/ggml/include/ggml-cpu.h",
+        "sha256": "316279e004cdeb8e6ef78599acb602bf79a8abdf897fed9fd1914808c1518c6e"
+      }
+    ],
+    "vocab_only": true,
+    "tensor_weights_loaded": false,
+    "model_context_created": false,
+    "inference_calls": 0,
+    "server_started": false,
+    "tokenizer": {
+      "general.name": "Qwen3.8-27B",
+      "general.architecture": "qwen35",
+      "tokenizer.ggml.model": "gpt2",
+      "tokenizer.ggml.pre": "qwen35",
+      "tokenizer.ggml.add_bos_token": false,
+      "vocab_size": 248320,
+      "merge_count": 247587,
+      "bos_token_id": 248044,
+      "bos_token": "<|endoftext|>",
+      "eos_token_id": 248046,
+      "eos_token": "<|im_end|>"
+    },
+    "chat_template_sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+    "ordinary_text_policy": "add_special=False, parse_special=False; no BOS/EOS or chat framing",
+    "chat_text_policy": "Caller renders embedded GGUF template, then explicitly sets parse_special=True"
+  },
+  "summary": [
+    {
+      "variant": "tables-v1",
+      "checkpoints": 13,
+      "baseline_body_tokens_mean": 6496.461538461538,
+      "encoded_body_tokens_mean": 5335.461538461538,
+      "mean_per_checkpoint_ratio": 0.878768026114323,
+      "all_payload_history_original_graph_exact": true
+    },
+    {
+      "variant": "shared-v1",
+      "checkpoints": 13,
+      "baseline_body_tokens_mean": 6496.461538461538,
+      "encoded_body_tokens_mean": 5167.923076923077,
+      "mean_per_checkpoint_ratio": 0.8556192785070341,
+      "all_payload_history_original_graph_exact": true
+    },
+    {
+      "variant": "source-json-v1",
+      "checkpoints": 13,
+      "baseline_body_tokens_mean": 6496.461538461538,
+      "encoded_body_tokens_mean": 5204,
+      "mean_per_checkpoint_ratio": 0.8647096334217048,
+      "all_payload_history_original_graph_exact": true
+    }
+  ],
+  "rows": [
+    {
+      "task": "multi_turn_base_9",
+      "seed": 3301,
+      "method": "event",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 4155,
+      "encoded_body_tokens": 4168,
+      "ratio": 1.0031287605294825,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "ee2878e9f89ebf61e7e14d816be83a5ea106bcd7452fcf8d4f9ad52fde514a15",
+      "encoded_sha256": "11d43fa6b80d855c6a18ede38c808d9f40d7be924079e0d50cfda979cfc7d298",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": 3301,
+      "method": "event",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 4155,
+      "encoded_body_tokens": 3916,
+      "ratio": 0.9424789410348977,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "ee2878e9f89ebf61e7e14d816be83a5ea106bcd7452fcf8d4f9ad52fde514a15",
+      "encoded_sha256": "95f33deca3ee908dbc97aa111108b312c2859373d5357817e246de022266c742",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 13
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": 3301,
+      "method": "event",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 4155,
+      "encoded_body_tokens": 3963,
+      "ratio": 0.9537906137184116,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "ee2878e9f89ebf61e7e14d816be83a5ea106bcd7452fcf8d4f9ad52fde514a15",
+      "encoded_sha256": "fe0469baba0c401bfe81fb451aeb158ab84b06fb33548ae4ab50af81ba419a8a",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 13
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 1103,
+      "method": "event",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 2343,
+      "encoded_body_tokens": 2384,
+      "ratio": 1.0174989329918906,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "aea0ed081331a9b809c944751478fda4d941a18638b29940ec9ce60794f07bfa",
+      "encoded_sha256": "9c9ed464d1533c89657ef40f9561c2673f1fa63747aa1585e2b588d9785ef5d2",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 1103,
+      "method": "event",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 2343,
+      "encoded_body_tokens": 2370,
+      "ratio": 1.0115236875800255,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "aea0ed081331a9b809c944751478fda4d941a18638b29940ec9ce60794f07bfa",
+      "encoded_sha256": "ad2bd8ad87606555b9c651c1d646462a732048fac923c811e690cc5988dfc6e3",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 3
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 1103,
+      "method": "event",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 2343,
+      "encoded_body_tokens": 2417,
+      "ratio": 1.0315834400341442,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "aea0ed081331a9b809c944751478fda4d941a18638b29940ec9ce60794f07bfa",
+      "encoded_sha256": "340af9aa1edf0975a0e13d9b015328f7df5caeff51109166533bb15a3fb41864",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 3
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 2207,
+      "method": "event",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 2070,
+      "encoded_body_tokens": 2111,
+      "ratio": 1.019806763285024,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "c5a636bb0a396050b8d76743da2a4694b81eb1802f16cb4c9d74514fcdd82c42",
+      "encoded_sha256": "fd2b2e58bed087e4a37389a57df73852294092b49dcbe35049b6e47418bbef94",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 2207,
+      "method": "event",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 2070,
+      "encoded_body_tokens": 2148,
+      "ratio": 1.03768115942029,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "c5a636bb0a396050b8d76743da2a4694b81eb1802f16cb4c9d74514fcdd82c42",
+      "encoded_sha256": "7df862da8b9196dbaacde17eb9a331ea6a704b9c6bd0013c1f815c0165d98bab",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 2207,
+      "method": "event",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 2070,
+      "encoded_body_tokens": 2195,
+      "ratio": 1.0603864734299517,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "c5a636bb0a396050b8d76743da2a4694b81eb1802f16cb4c9d74514fcdd82c42",
+      "encoded_sha256": "e0227ee40234b7d32a7f617374427d9390647f33c2dbbb3ce19107b816d9d20d",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 3301,
+      "method": "event",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 2230,
+      "encoded_body_tokens": 2271,
+      "ratio": 1.0183856502242152,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "4ecbe1ea1a47501fd89372eb1a0bb3d81967c7c1be8bffff331b62522399a33c",
+      "encoded_sha256": "a895781363392e2769d275659c12567c22057f916853d1a6cb8f925962b6c4b7",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 3301,
+      "method": "event",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 2230,
+      "encoded_body_tokens": 2308,
+      "ratio": 1.0349775784753363,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "4ecbe1ea1a47501fd89372eb1a0bb3d81967c7c1be8bffff331b62522399a33c",
+      "encoded_sha256": "406085ab935e474ffc3e9b7fdd11e120e8483f619930dcd27ce7331b1a81c072",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": 3301,
+      "method": "event",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 2230,
+      "encoded_body_tokens": 2355,
+      "ratio": 1.0560538116591929,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "4ecbe1ea1a47501fd89372eb1a0bb3d81967c7c1be8bffff331b62522399a33c",
+      "encoded_sha256": "ec99544f91ae9bc49bcb475fc5987b89e190248ee7ac2b01d5ade70118689e4e",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 1103,
+      "method": "event",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 8535,
+      "encoded_body_tokens": 6686,
+      "ratio": 0.7833626244874048,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "21f214725325a8fb280884820a67a0bfb11a8c1c9a47e535200d823ff8aad8ea",
+      "encoded_sha256": "c33fd08d1644e31b8919e335e3aebf873b35c951f7dc76db36b6f08748a76417",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 1103,
+      "method": "event",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 8535,
+      "encoded_body_tokens": 6252,
+      "ratio": 0.7325131810193322,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "21f214725325a8fb280884820a67a0bfb11a8c1c9a47e535200d823ff8aad8ea",
+      "encoded_sha256": "12b537e68f903607162f07a2281fd634b7af13c317abe46039e1bcc6d08e4413",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 11
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 1103,
+      "method": "event",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 8535,
+      "encoded_body_tokens": 6278,
+      "ratio": 0.735559461042765,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "21f214725325a8fb280884820a67a0bfb11a8c1c9a47e535200d823ff8aad8ea",
+      "encoded_sha256": "055ff6f6f9d75c5759bdd6e718209636a332c9e6264a70f5c1bbb59a922013d9",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 11
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "method": "event",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 8379,
+      "encoded_body_tokens": 6530,
+      "ratio": 0.7793292755698771,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "b976831bba423c6948096561549a2502df7278815bbb4db706d8f70f9b2a0029",
+      "encoded_sha256": "f254da03257b8a3f1cfa5d10b134b8104fd5145333d7e8319f4a7e2ffb25cbbe",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "method": "event",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 8379,
+      "encoded_body_tokens": 6181,
+      "ratio": 0.7376775271512114,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "b976831bba423c6948096561549a2502df7278815bbb4db706d8f70f9b2a0029",
+      "encoded_sha256": "8108ee8e172ac6597ded5da9dcf04f8535619d87a570a743ab482b70c538eee0",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 9
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 2207,
+      "method": "event",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 8379,
+      "encoded_body_tokens": 6207,
+      "ratio": 0.74078052273541,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "b976831bba423c6948096561549a2502df7278815bbb4db706d8f70f9b2a0029",
+      "encoded_sha256": "7f9a720a4e1a39a1924ccf84e947334d81961182d777fe676167229d198f0789",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 9
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 3301,
+      "method": "event",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 9009,
+      "encoded_body_tokens": 7016,
+      "ratio": 0.7787767787767788,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "1c178afb5e2583a88af40ea04a9ae1aa164a6a34742d56f03f967bac70c6c87e",
+      "encoded_sha256": "d28ff01c7652aaec9aca14bd651b3d209ac95248885dad78e310e90f9bab85ff",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 3301,
+      "method": "event",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 9009,
+      "encoded_body_tokens": 6601,
+      "ratio": 0.7327117327117327,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "1c178afb5e2583a88af40ea04a9ae1aa164a6a34742d56f03f967bac70c6c87e",
+      "encoded_sha256": "6d5dba2c6ad79e3fbe0c03269fa17401ae7e3abaea7e384eda33c4ade32dc2fa",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 10
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": 3301,
+      "method": "event",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 9009,
+      "encoded_body_tokens": 6627,
+      "ratio": 0.7355977355977356,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "1c178afb5e2583a88af40ea04a9ae1aa164a6a34742d56f03f967bac70c6c87e",
+      "encoded_sha256": "7b086f000431aa168076019bd972180e0f0e04caa5ca4bfadc212dd074fdd56f",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 10
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 1103,
+      "method": "event",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 4418,
+      "encoded_body_tokens": 4444,
+      "ratio": 1.0058850158442734,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "44c047f33d9c7f1bea487d0486891eb7f5eb1564d1395697d5afa789cb079d15",
+      "encoded_sha256": "ec055dde85abc63b81eace31111492ec91d4406b6b70139ed93c99090429d57a",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 1103,
+      "method": "event",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 4418,
+      "encoded_body_tokens": 4247,
+      "ratio": 0.9612947034857402,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "44c047f33d9c7f1bea487d0486891eb7f5eb1564d1395697d5afa789cb079d15",
+      "encoded_sha256": "7c689870e69fc1bfb976580836bc40274ffdeca370a5820db0a7262f704d7742",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 10
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 1103,
+      "method": "event",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 4418,
+      "encoded_body_tokens": 4294,
+      "ratio": 0.9719330013580806,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "44c047f33d9c7f1bea487d0486891eb7f5eb1564d1395697d5afa789cb079d15",
+      "encoded_sha256": "3fd2a23d2b08213c399bf12ad5c731a21c8611248fde42173f93570350e9f2d2",
+      "packed_tables": [
+        "relations"
+      ],
+      "shared_values": 10
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 2207,
+      "method": "event",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 4016,
+      "encoded_body_tokens": 4068,
+      "ratio": 1.0129482071713147,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "1d6e6473ef4485f252dd34a7c8a4c464e10f6de862023567fec6ce9f6a7b4980",
+      "encoded_sha256": "18b1397837fb6b2417ec7313a36e154a16a3b5ccac19bc941af04916e93b20ac",
+      "packed_tables": [],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 2207,
+      "method": "event",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 4016,
+      "encoded_body_tokens": 3898,
+      "ratio": 0.9706175298804781,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "1d6e6473ef4485f252dd34a7c8a4c464e10f6de862023567fec6ce9f6a7b4980",
+      "encoded_sha256": "4271d37a21de233e7c4d9460839f948ae1beacceabd05c7af4fabee714ffe451",
+      "packed_tables": [],
+      "shared_values": 7
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 2207,
+      "method": "event",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 4016,
+      "encoded_body_tokens": 3945,
+      "ratio": 0.9823207171314741,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "1d6e6473ef4485f252dd34a7c8a4c464e10f6de862023567fec6ce9f6a7b4980",
+      "encoded_sha256": "d19eccd4c8a74ed608a94b6e4e4b6724868e6bc86e08bacc72986dfaf54d44da",
+      "packed_tables": [],
+      "shared_values": 7
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 3301,
+      "method": "event",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 6671,
+      "encoded_body_tokens": 4756,
+      "ratio": 0.7129365912157097,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "c146ef24b91423909da69748dcfd1cfaedde52aebf5a2831cb183159c7385dab",
+      "encoded_sha256": "f3e3924d35c28a850f079e8ba8edf707bdb0b2fc9fc7e1ccc14008033b34c83c",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 3301,
+      "method": "event",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 6671,
+      "encoded_body_tokens": 4677,
+      "ratio": 0.701094288712337,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "c146ef24b91423909da69748dcfd1cfaedde52aebf5a2831cb183159c7385dab",
+      "encoded_sha256": "9f85ee548f042a4083c591741ac7229af3beb5a5736899e1c654339a90a92aa3",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 5
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": 3301,
+      "method": "event",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 6671,
+      "encoded_body_tokens": 4705,
+      "ratio": 0.7052915604856843,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "c146ef24b91423909da69748dcfd1cfaedde52aebf5a2831cb183159c7385dab",
+      "encoded_sha256": "642d29889cf04bceea984940e60c2bae10a38852f9a453d79e1014b70e44bd97",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "relations"
+      ],
+      "shared_values": 5
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 1103,
+      "method": "event",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 10860,
+      "encoded_body_tokens": 8293,
+      "ratio": 0.7636279926335175,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "1e6a1f225b0c64d02100bbcedd05e479200b6ccbec7351b9f529d71515c87ed2",
+      "encoded_sha256": "f3279b0320e960b9b61c19495174fb67e474e4e03bfeb0f963fb27c0f423b867",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 1103,
+      "method": "event",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 10860,
+      "encoded_body_tokens": 8179,
+      "ratio": 0.7531307550644567,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "1e6a1f225b0c64d02100bbcedd05e479200b6ccbec7351b9f529d71515c87ed2",
+      "encoded_sha256": "f87ddf3b7462f8168ed8095ce14727dfe6c04b5dac7874c958fd5ad19b440081",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 1103,
+      "method": "event",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 10860,
+      "encoded_body_tokens": 8206,
+      "ratio": 0.7556169429097606,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "1e6a1f225b0c64d02100bbcedd05e479200b6ccbec7351b9f529d71515c87ed2",
+      "encoded_sha256": "7283cb3f07bcba1e25053ce5bc6cb84c9f5e6f64d125865a3d7ace55c4af70fb",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 2207,
+      "method": "event",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 10897,
+      "encoded_body_tokens": 8330,
+      "ratio": 0.7644305772230889,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "bc2a8d5765430cd94391ac3ba29c7d21b1fa8b02a4f47359af8a53536922f1a5",
+      "encoded_sha256": "67006ce93d6e394e506496c8b6e2b5fb356c60bede96f8f992ede42ef6135f7e",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 2207,
+      "method": "event",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 10897,
+      "encoded_body_tokens": 8216,
+      "ratio": 0.7539689822887033,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "bc2a8d5765430cd94391ac3ba29c7d21b1fa8b02a4f47359af8a53536922f1a5",
+      "encoded_sha256": "3cd29b35c3d1ade7aad469a49df357e484f33dcea5d304cb1f8f4a612db219fd",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 2207,
+      "method": "event",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 10897,
+      "encoded_body_tokens": 8243,
+      "ratio": 0.7564467284573736,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "bc2a8d5765430cd94391ac3ba29c7d21b1fa8b02a4f47359af8a53536922f1a5",
+      "encoded_sha256": "e67d244cf65065a15fbf189f1ff99f22f96688d736cd8a148b812d651b1ff5e5",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 3301,
+      "method": "event",
+      "variant": "tables-v1",
+      "baseline_body_tokens": 10871,
+      "encoded_body_tokens": 8304,
+      "ratio": 0.7638671695336215,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "e591e7402e3bc64347e55433c518594e07fed5e30edaade239fc1168b7e89c1f",
+      "encoded_sha256": "7fbe52943ceafac327321b311eebb9f074ba1852be847991bbda52619940eae2",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 0
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 3301,
+      "method": "event",
+      "variant": "shared-v1",
+      "baseline_body_tokens": 10871,
+      "encoded_body_tokens": 8190,
+      "ratio": 0.7533805537669027,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "e591e7402e3bc64347e55433c518594e07fed5e30edaade239fc1168b7e89c1f",
+      "encoded_sha256": "7bf787111ed25198a03a084bffcf7520c6e163846cbe1dc4482fc58dbeb3cdfd",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 2
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": 3301,
+      "method": "event",
+      "variant": "source-json-v1",
+      "baseline_body_tokens": 10871,
+      "encoded_body_tokens": 8217,
+      "ratio": 0.7558642259221783,
+      "payload_exact": true,
+      "history_exact": true,
+      "original_graph_exact": true,
+      "dictionary_order_policy": "Original table/source-message order retained; other dictionary order immaterial.",
+      "source_sha256": "e591e7402e3bc64347e55433c518594e07fed5e30edaade239fc1168b7e89c1f",
+      "encoded_sha256": "59022b163ce9cc15a0fc42af5a2eb84617a49cef4e4d39f10e2e77ef9595295d",
+      "packed_tables": [
+        "objects",
+        "facts",
+        "events",
+        "relations"
+      ],
+      "shared_values": 2
+    }
+  ]
+}

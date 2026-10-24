@@ -1,0 +1,862 @@
+{
+  "encoding": "state-shared-v1",
+  "decoding": "A $table stores its original list or object: each row maps columns to values, with defaults added; keys name object rows. $literal is unchanged original data. $ref substitutes the exact value in shared_values; references do not merge events or states.",
+  "payload": {
+    "format": "readable-graph-1",
+    "method": "v1-compact",
+    "source_message_columns": {
+      "role:user": [
+        "content"
+      ],
+      "function_call": [
+        "arguments",
+        "call_id",
+        "name",
+        "id"
+      ],
+      "function_call_output": [
+        "call_id",
+        "output"
+      ],
+      "message": [
+        "id",
+        "content",
+        "status",
+        "phase"
+      ]
+    },
+    "message_defaults_by_type": {
+      "role:user": {
+        "role": "user"
+      },
+      "function_call": {
+        "type": "function_call",
+        "namespace": null,
+        "status": "completed"
+      },
+      "function_call_output": {
+        "type": "function_call_output"
+      },
+      "message": {
+        "role": "assistant",
+        "type": "message"
+      }
+    },
+    "source_messages": {
+      "m0": [
+        "role:user",
+        "I remember I should have a document called 'FinalReport.txt' in the 'Documentation' folder. "
+      ],
+      "m1": [
+        "function_call",
+        "{\"folder\":\"Documentation\"}",
+        "qwen_call_0_0",
+        "cd",
+        "qwen_fc_0_0"
+      ],
+      "m2": [
+        "function_call_output",
+        "qwen_call_0_0",
+        "{\"current_working_directory\": \"Documentation\"}"
+      ],
+      "m3": [
+        "function_call",
+        "{}",
+        "qwen_call_1_0",
+        "ls",
+        "qwen_fc_1_0"
+      ],
+      "m4": [
+        "function_call_output",
+        "qwen_call_1_0",
+        {
+          "$ref": "v0"
+        }
+      ],
+      "m5": [
+        "message",
+        "qwen_msg_2",
+        [
+          {
+            "annotations": [],
+            "text": "Good news — `FinalReport.txt` is there in the `Documentation` folder. The folder also contains an `Archives` subdirectory. Would you like me to display the contents of the report?",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "completed",
+        null
+      ],
+      "m6": [
+        "role:user",
+        "Make a copy of 'FinalReport.txt' to the 'Archives' directory inside the 'Documentation' folder, while ensuring the duplicate is preserved as 'ArchivedFinalReport2024.txt'."
+      ],
+      "m7": [
+        "function_call",
+        "{\"source\":\"FinalReport.txt\",\"destination\":\"Archives/ArchivedFinalReport2024.txt\"}",
+        "qwen_call_3_0",
+        "cp",
+        "qwen_fc_3_0"
+      ],
+      "m8": [
+        "function_call_output",
+        "qwen_call_3_0",
+        "{\"error\": \"cp: path not allowed in destination. Provide only a file or directory name.\"}"
+      ],
+      "m9": [
+        "function_call",
+        "{\"folder\":\"Archives\"}",
+        "qwen_call_4_0",
+        "cd",
+        "qwen_fc_4_0"
+      ],
+      "m10": [
+        "function_call_output",
+        "qwen_call_4_0",
+        "{\"current_working_directory\": \"Archives\"}"
+      ],
+      "m11": [
+        "function_call",
+        "{\"source\":\"../FinalReport.txt\",\"destination\":\"ArchivedFinalReport2024.txt\"}",
+        "qwen_call_5_0",
+        "cp",
+        "qwen_fc_5_0"
+      ],
+      "m12": [
+        "function_call_output",
+        "qwen_call_5_0",
+        "{\"error\": \"cp: cannot copy '../FinalReport.txt': No such file or directory\"}"
+      ],
+      "m13": [
+        "function_call",
+        "{}",
+        "qwen_call_6_0",
+        "ls",
+        "qwen_fc_6_0"
+      ],
+      "m14": [
+        "function_call_output",
+        "qwen_call_6_0",
+        "{\"current_directory_content\": []}"
+      ],
+      "m15": [
+        "function_call",
+        "{\"folder\":\"..\"}",
+        "qwen_call_7_0",
+        "cd",
+        "qwen_fc_7_0"
+      ],
+      "m16": [
+        "function_call_output",
+        "qwen_call_7_0",
+        "{}"
+      ],
+      "m17": [
+        "function_call",
+        "{}",
+        "qwen_call_8_0",
+        "ls",
+        "qwen_fc_8_0"
+      ],
+      "m18": [
+        "function_call_output",
+        "qwen_call_8_0",
+        {
+          "$ref": "v0"
+        }
+      ],
+      "m19": [
+        "function_call",
+        "{\"source\":\"FinalReport.txt\",\"destination\":\"Archives\"}",
+        "qwen_call_9_0",
+        "cp",
+        "qwen_fc_9_0"
+      ],
+      "m20": [
+        "function_call_output",
+        "qwen_call_9_0",
+        "{\"result\": \"'FinalReport.txt' copied to 'Archives/FinalReport.txt'\"}"
+      ],
+      "m21": [
+        "function_call",
+        "{\"source\":\"Archives/FinalReport.txt\",\"destination\":\"ArchivedFinalReport2024.txt\"}",
+        "qwen_call_10_0",
+        "mv",
+        "qwen_fc_10_0"
+      ],
+      "m22": [
+        "function_call_output",
+        "qwen_call_10_0",
+        "{\"error\": \"mv: cannot move 'Archives/FinalReport.txt': No such file or directory\"}"
+      ],
+      "m23": [
+        "function_call",
+        "{\"folder\":\"Archives\"}",
+        "qwen_call_11_0",
+        "cd",
+        "qwen_fc_11_0"
+      ],
+      "m24": [
+        "function_call_output",
+        "qwen_call_11_0",
+        "{\"current_working_directory\": \"Archives\"}"
+      ],
+      "m25": [
+        "function_call",
+        "{}",
+        "qwen_call_12_0",
+        "ls",
+        "qwen_fc_12_0"
+      ],
+      "m26": [
+        "function_call_output",
+        "qwen_call_12_0",
+        "{\"current_directory_content\": [\"FinalReport.txt\"]}"
+      ],
+      "m27": [
+        "function_call",
+        "{\"source\":\"FinalReport.txt\",\"destination\":\"ArchivedFinalReport2024.txt\"}",
+        "qwen_call_13_0",
+        "mv",
+        "qwen_fc_13_0"
+      ],
+      "m28": [
+        "function_call_output",
+        "qwen_call_13_0",
+        "{\"result\": \"'FinalReport.txt' moved to 'ArchivedFinalReport2024.txt'\"}"
+      ],
+      "m29": [
+        "function_call",
+        "{}",
+        "qwen_call_14_0",
+        "ls",
+        "qwen_fc_14_0"
+      ],
+      "m30": [
+        "function_call_output",
+        "qwen_call_14_0",
+        "{\"current_directory_content\": [\"ArchivedFinalReport2024.txt\"]}"
+      ],
+      "m31": [
+        "function_call",
+        "{\"folder\":\"..\"}",
+        "qwen_call_15_0",
+        "cd",
+        "qwen_fc_15_0"
+      ],
+      "m32": [
+        "function_call_output",
+        "qwen_call_15_0",
+        "{}"
+      ],
+      "m33": [
+        "function_call",
+        "{}",
+        "qwen_call_16_0",
+        "ls",
+        "qwen_fc_16_0"
+      ],
+      "m34": [
+        "function_call_output",
+        "qwen_call_16_0",
+        {
+          "$ref": "v0"
+        }
+      ]
+    },
+    "user_requests": [
+      "m0",
+      "m6"
+    ],
+    "unverified_assistant_statements": [
+      "m5"
+    ],
+    "state_nodes": {
+      "s0": {
+        "cwd": {
+          "location_id": "l0",
+          "value": null,
+          "evidence": []
+        },
+        "objects": [],
+        "task_completion": "unknown"
+      },
+      "s1": {
+        "inherits": "s0",
+        "changes": {
+          "cwd": {
+            "location_id": "l1",
+            "value": "Documentation",
+            "evidence": [
+              "m1",
+              "m2"
+            ]
+          },
+          "objects_updated": [
+            {
+              "object_index": 0,
+              "location_id": "l0",
+              "name": "Documentation",
+              "exists": true,
+              "kind": "directory",
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m1",
+                  "m2"
+                ],
+                "kind": [
+                  "m1",
+                  "m2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "s2": {
+        "inherits": "s1",
+        "changes": {
+          "objects_updated": [
+            {
+              "object_index": 1,
+              "location_id": "l1",
+              "name": "FinalReport.txt",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m3",
+                  "m4"
+                ]
+              }
+            },
+            {
+              "object_index": 2,
+              "location_id": "l1",
+              "name": "Archives",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m3",
+                  "m4"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "s3": {
+        "inherits": "s2",
+        "changes": {}
+      },
+      "s4": {
+        "inherits": "s3",
+        "changes": {
+          "cwd": {
+            "location_id": "l2",
+            "value": "Archives",
+            "evidence": [
+              "m9",
+              "m10"
+            ]
+          },
+          "objects_updated": [
+            {
+              "object_index": 2,
+              "kind": "directory",
+              "evidence": {
+                "exists": [
+                  "m9",
+                  "m10"
+                ],
+                "kind": [
+                  "m9",
+                  "m10"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "s5": {
+        "inherits": "s4",
+        "changes": {}
+      },
+      "s6": {
+        "inherits": "s5",
+        "changes": {}
+      },
+      "s7": {
+        "inherits": "s6",
+        "changes": {
+          "cwd": {
+            "location_id": "l1",
+            "value": "Documentation",
+            "evidence": [
+              "m15",
+              "m16"
+            ]
+          }
+        }
+      },
+      "s8": {
+        "inherits": "s7",
+        "changes": {
+          "objects_updated": [
+            {
+              "object_index": 1,
+              "evidence": {
+                "exists": [
+                  "m17",
+                  "m18"
+                ]
+              }
+            },
+            {
+              "object_index": 2,
+              "evidence": {
+                "exists": [
+                  "m17",
+                  "m18"
+                ],
+                "kind": [
+                  "m9",
+                  "m10"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "s9": {
+        "inherits": "s8",
+        "changes": {
+          "objects_updated": [
+            {
+              "object_index": 2,
+              "evidence": {
+                "exists": [
+                  "m19",
+                  "m20"
+                ],
+                "kind": [
+                  "m19",
+                  "m20"
+                ]
+              }
+            },
+            {
+              "object_index": 3,
+              "location_id": "l2",
+              "name": "FinalReport.txt",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": [
+                  "m19",
+                  "m20",
+                  "m17",
+                  "m18"
+                ],
+                "kind": [
+                  "m19",
+                  "m20",
+                  "m17",
+                  "m18"
+                ],
+                "content": [
+                  "m19",
+                  "m20",
+                  "m17",
+                  "m18"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "s10": {
+        "inherits": "s9",
+        "changes": {}
+      },
+      "s11": {
+        "inherits": "s10",
+        "changes": {
+          "cwd": {
+            "location_id": "l2",
+            "value": "Archives",
+            "evidence": [
+              "m23",
+              "m24"
+            ]
+          },
+          "objects_updated": [
+            {
+              "object_index": 2,
+              "evidence": {
+                "exists": [
+                  "m23",
+                  "m24"
+                ],
+                "kind": [
+                  "m23",
+                  "m24"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "s12": {
+        "inherits": "s11",
+        "changes": {
+          "objects_updated": [
+            {
+              "object_index": 3,
+              "evidence": {
+                "exists": [
+                  "m25",
+                  "m26"
+                ],
+                "kind": [
+                  "m19",
+                  "m20",
+                  "m17",
+                  "m18"
+                ],
+                "content": [
+                  "m19",
+                  "m20",
+                  "m17",
+                  "m18"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "s13": {
+        "inherits": "s12",
+        "changes": {
+          "objects_updated": [
+            {
+              "object_index": 3,
+              "exists": false,
+              "evidence": {
+                "exists": [
+                  "m27",
+                  "m28"
+                ],
+                "kind": [
+                  "m27",
+                  "m28"
+                ],
+                "content": [
+                  "m27",
+                  "m28"
+                ]
+              }
+            },
+            {
+              "object_index": 4,
+              "location_id": "l2",
+              "name": "ArchivedFinalReport2024.txt",
+              "exists": true,
+              "kind": null,
+              "content": null,
+              "evidence": {
+                "exists": {
+                  "$ref": "v1"
+                },
+                "kind": {
+                  "$ref": "v1"
+                },
+                "content": {
+                  "$ref": "v1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "s14": {
+        "inherits": "s13",
+        "changes": {
+          "objects_updated": [
+            {
+              "object_index": 3,
+              "evidence": {
+                "exists": [
+                  "m29",
+                  "m30"
+                ],
+                "kind": [
+                  "m29",
+                  "m30"
+                ],
+                "content": [
+                  "m29",
+                  "m30"
+                ]
+              }
+            },
+            {
+              "object_index": 4,
+              "evidence": {
+                "exists": [
+                  "m29",
+                  "m30"
+                ],
+                "kind": {
+                  "$ref": "v1"
+                },
+                "content": {
+                  "$ref": "v1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "s15": {
+        "inherits": "s14",
+        "changes": {
+          "cwd": {
+            "location_id": "l1",
+            "value": "Documentation",
+            "evidence": [
+              "m31",
+              "m32"
+            ]
+          }
+        }
+      },
+      "s16": {
+        "inherits": "s15",
+        "changes": {
+          "objects_updated": [
+            {
+              "object_index": 1,
+              "evidence": {
+                "exists": [
+                  "m33",
+                  "m34"
+                ]
+              }
+            },
+            {
+              "object_index": 2,
+              "evidence": {
+                "exists": [
+                  "m33",
+                  "m34"
+                ],
+                "kind": [
+                  "m23",
+                  "m24"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "tool_call_edges": {
+      "$table": {
+        "columns": [
+          "from",
+          "to",
+          "tool",
+          "input_message",
+          "return_message",
+          "status"
+        ],
+        "defaults": {},
+        "rows": [
+          [
+            "s0",
+            "s1",
+            "cd",
+            "m1",
+            "m2",
+            "success"
+          ],
+          [
+            "s1",
+            "s2",
+            "ls",
+            "m3",
+            "m4",
+            "success"
+          ],
+          [
+            "s2",
+            "s3",
+            "cp",
+            "m7",
+            "m8",
+            "error"
+          ],
+          [
+            "s3",
+            "s4",
+            "cd",
+            "m9",
+            "m10",
+            "success"
+          ],
+          [
+            "s4",
+            "s5",
+            "cp",
+            "m11",
+            "m12",
+            "error"
+          ],
+          [
+            "s5",
+            "s6",
+            "ls",
+            "m13",
+            "m14",
+            "success"
+          ],
+          [
+            "s6",
+            "s7",
+            "cd",
+            "m15",
+            "m16",
+            "success"
+          ],
+          [
+            "s7",
+            "s8",
+            "ls",
+            "m17",
+            "m18",
+            "success"
+          ],
+          [
+            "s8",
+            "s9",
+            "cp",
+            "m19",
+            "m20",
+            "success"
+          ],
+          [
+            "s9",
+            "s10",
+            "mv",
+            "m21",
+            "m22",
+            "error"
+          ],
+          [
+            "s10",
+            "s11",
+            "cd",
+            "m23",
+            "m24",
+            "success"
+          ],
+          [
+            "s11",
+            "s12",
+            "ls",
+            "m25",
+            "m26",
+            "success"
+          ],
+          [
+            "s12",
+            "s13",
+            "mv",
+            "m27",
+            "m28",
+            "success"
+          ],
+          [
+            "s13",
+            "s14",
+            "ls",
+            "m29",
+            "m30",
+            "success"
+          ],
+          [
+            "s14",
+            "s15",
+            "cd",
+            "m31",
+            "m32",
+            "success"
+          ],
+          [
+            "s15",
+            "s16",
+            "ls",
+            "m33",
+            "m34",
+            "success"
+          ]
+        ],
+        "keys": [
+          "e0",
+          "e1",
+          "e2",
+          "e3",
+          "e4",
+          "e5",
+          "e6",
+          "e7",
+          "e8",
+          "e9",
+          "e10",
+          "e11",
+          "e12",
+          "e13",
+          "e14",
+          "e15"
+        ]
+      }
+    },
+    "locations": [
+      {
+        "id": "l0",
+        "name": null,
+        "parent": null
+      },
+      {
+        "id": "l1",
+        "name": "Documentation",
+        "parent": "l0"
+      },
+      {
+        "id": "l2",
+        "name": "Archives",
+        "parent": "l1"
+      }
+    ],
+    "current_state": "s16"
+  },
+  "shared_values": {
+    "v0": "{\"current_directory_content\": [\"FinalReport.txt\", \"Archives\"]}",
+    "v1": [
+      "m27",
+      "m28",
+      "m25",
+      "m26",
+      "m19",
+      "m20",
+      "m17",
+      "m18"
+    ]
+  }
+}

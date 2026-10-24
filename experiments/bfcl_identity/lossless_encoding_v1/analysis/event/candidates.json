@@ -1,0 +1,43 @@
+{
+  "status": "ready_for_independent_review_then_freeze",
+  "module": "core.lossless_event",
+  "module_path": "scripts/core/lossless_event.py",
+  "module_sha256": "8b4896610237a61430b685de6e98ac68f8d67157ac472b98d02fbe24195f6807",
+  "baseline_method": "event",
+  "baseline_payload_method": "v2-compact",
+  "external_explanation": "none",
+  "rules_location": "model-visible encoded envelope, already included in measured tokens",
+  "candidates": [
+    {
+      "id": "event-tables-v1",
+      "variant": "tables-v1",
+      "module": "core.lossless_event",
+      "baseline_method": "event",
+      "encode_function": "encode",
+      "decode_function": "decode",
+      "instruction": "",
+      "offline_report": "experiments/bfcl_identity/lossless_encoding_v1/analysis/event/offline-report.json"
+    },
+    {
+      "id": "event-shared-v1",
+      "variant": "shared-v1",
+      "module": "core.lossless_event",
+      "baseline_method": "event",
+      "encode_function": "encode",
+      "decode_function": "decode",
+      "instruction": "",
+      "offline_report": "experiments/bfcl_identity/lossless_encoding_v1/analysis/event/offline-report.json"
+    }
+  ],
+  "excluded_candidate": {
+    "variant": "source-json-v1",
+    "reason": "higher native development token cost than shared-v1; retained as disclosed offline candidate, not scheduled for inference"
+  },
+  "ready": true,
+  "method": "event",
+  "source_sha256": "8b4896610237a61430b685de6e98ac68f8d67157ac472b98d02fbe24195f6807",
+  "variants": [
+    "tables-v1",
+    "shared-v1"
+  ]
+}

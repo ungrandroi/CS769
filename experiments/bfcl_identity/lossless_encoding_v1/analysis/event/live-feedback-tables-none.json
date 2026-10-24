@@ -1,0 +1,746 @@
+{
+  "generated_at": "2026-10-20T13:24:07.796069+00:00",
+  "candidate": "event-tables-v1-none",
+  "scope": "Development triggered checkpoints only; no final validation inference performed by this analysis.",
+  "summary": {
+    "identity": {
+      "passed": 11,
+      "total": 13,
+      "first_input_mean": 4871.846153846154,
+      "mean_post_input_macro_mean": 5444.913461538462
+    },
+    "event-full": {
+      "passed": 11,
+      "total": 13,
+      "first_input_mean": 9766.461538461539,
+      "mean_post_input_macro_mean": 10804.304487179486
+    },
+    "event-none": {
+      "passed": 10,
+      "total": 13,
+      "first_input_mean": 9614.461538461539,
+      "mean_post_input_macro_mean": 10686.817715617715
+    },
+    "candidate": {
+      "passed": 8,
+      "total": 13,
+      "first_input_mean": 8453.461538461539,
+      "mean_post_input_macro_mean": 9763.429836829837
+    }
+  },
+  "paired": {
+    "identity": {
+      "both_success": [
+        "multi_turn_base_37/seed1103",
+        "multi_turn_base_37/seed2207",
+        "multi_turn_base_37/seed3301",
+        "multi_turn_long_context_3/seed1103",
+        "multi_turn_long_context_3/seed2207",
+        "multi_turn_long_context_37/seed1103",
+        "multi_turn_long_context_37/seed3301"
+      ],
+      "both_fail": [
+        "multi_turn_base_9/seed3301"
+      ],
+      "gains": [
+        "multi_turn_long_context_9/seed3301"
+      ],
+      "losses": [
+        "multi_turn_long_context_3/seed3301",
+        "multi_turn_long_context_37/seed2207",
+        "multi_turn_long_context_9/seed1103",
+        "multi_turn_long_context_9/seed2207"
+      ]
+    },
+    "event-full": {
+      "both_success": [
+        "multi_turn_base_37/seed1103",
+        "multi_turn_base_37/seed2207",
+        "multi_turn_base_37/seed3301",
+        "multi_turn_long_context_3/seed1103",
+        "multi_turn_long_context_3/seed2207",
+        "multi_turn_long_context_37/seed1103",
+        "multi_turn_long_context_37/seed3301"
+      ],
+      "both_fail": [
+        "multi_turn_long_context_9/seed2207"
+      ],
+      "gains": [
+        "multi_turn_long_context_9/seed3301"
+      ],
+      "losses": [
+        "multi_turn_base_9/seed3301",
+        "multi_turn_long_context_3/seed3301",
+        "multi_turn_long_context_37/seed2207",
+        "multi_turn_long_context_9/seed1103"
+      ]
+    },
+    "event-none": {
+      "both_success": [
+        "multi_turn_base_37/seed1103",
+        "multi_turn_base_37/seed2207",
+        "multi_turn_base_37/seed3301",
+        "multi_turn_long_context_3/seed1103",
+        "multi_turn_long_context_3/seed2207",
+        "multi_turn_long_context_37/seed1103",
+        "multi_turn_long_context_37/seed3301",
+        "multi_turn_long_context_9/seed3301"
+      ],
+      "both_fail": [
+        "multi_turn_long_context_3/seed3301",
+        "multi_turn_long_context_9/seed1103",
+        "multi_turn_long_context_9/seed2207"
+      ],
+      "gains": [],
+      "losses": [
+        "multi_turn_base_9/seed3301",
+        "multi_turn_long_context_37/seed2207"
+      ]
+    }
+  },
+  "untriggered": [
+    {
+      "task": "multi_turn_base_3",
+      "seed": "seed1103",
+      "status": "not_triggered",
+      "passed": null
+    },
+    {
+      "task": "multi_turn_base_3",
+      "seed": "seed2207",
+      "status": "not_triggered",
+      "passed": null
+    },
+    {
+      "task": "multi_turn_base_3",
+      "seed": "seed3301",
+      "status": "not_triggered",
+      "passed": null
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": "seed1103",
+      "status": "not_triggered",
+      "passed": null
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": "seed2207",
+      "status": "not_triggered",
+      "passed": null
+    }
+  ],
+  "rows": [
+    {
+      "task": "multi_turn_base_37",
+      "seed": "seed1103",
+      "trigger_index": 7,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4181,
+        "mean_post_input_tokens": 4251.333333333333,
+        "post_requests": 3,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed1103/identity"
+      },
+      "event-full": {
+        "passed": true,
+        "first_input_tokens": 5613,
+        "mean_post_input_tokens": 5680,
+        "post_requests": 3,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed1103/event-full"
+      },
+      "event-none": {
+        "passed": true,
+        "first_input_tokens": 5461,
+        "mean_post_input_tokens": 5644.25,
+        "post_requests": 4,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed1103/event-none"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 5502,
+        "mean_post_input_tokens": 5760.333333333333,
+        "post_requests": 6,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_37/seed1103/event-tables-v1-none"
+      },
+      "audits": {
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_exactly_matches_old_same_explanation": true,
+        "payload_matches_old_event_full_exactly": true,
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "encoded_sha256": "9c9ed464d1533c89657ef40f9561c2673f1fa63747aa1585e2b588d9785ef5d2"
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": "seed2207",
+      "trigger_index": 7,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4127,
+        "mean_post_input_tokens": 4224,
+        "post_requests": 4,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed2207/identity"
+      },
+      "event-full": {
+        "passed": true,
+        "first_input_tokens": 5340,
+        "mean_post_input_tokens": 5424,
+        "post_requests": 4,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed2207/event-full"
+      },
+      "event-none": {
+        "passed": true,
+        "first_input_tokens": 5188,
+        "mean_post_input_tokens": 5290,
+        "post_requests": 4,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed2207/event-none"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 5229,
+        "mean_post_input_tokens": 5421.8,
+        "post_requests": 5,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_37/seed2207/event-tables-v1-none"
+      },
+      "audits": {
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_exactly_matches_old_same_explanation": true,
+        "payload_matches_old_event_full_exactly": true,
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "encoded_sha256": "fd2b2e58bed087e4a37389a57df73852294092b49dcbe35049b6e47418bbef94"
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_base_37",
+      "seed": "seed3301",
+      "trigger_index": 7,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4245,
+        "mean_post_input_tokens": 4346,
+        "post_requests": 4,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed3301/identity"
+      },
+      "event-full": {
+        "passed": true,
+        "first_input_tokens": 5500,
+        "mean_post_input_tokens": 5589,
+        "post_requests": 3,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed3301/event-full"
+      },
+      "event-none": {
+        "passed": true,
+        "first_input_tokens": 5348,
+        "mean_post_input_tokens": 5453,
+        "post_requests": 4,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_37/seed3301/event-none"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 5389,
+        "mean_post_input_tokens": 5546.5,
+        "post_requests": 4,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_37/seed3301/event-tables-v1-none"
+      },
+      "audits": {
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_exactly_matches_old_same_explanation": true,
+        "payload_matches_old_event_full_exactly": true,
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "encoded_sha256": "a895781363392e2769d275659c12567c22057f916853d1a6cb8f925962b6c4b7"
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_base_9",
+      "seed": "seed3301",
+      "trigger_index": 17,
+      "identity": {
+        "passed": false,
+        "first_input_tokens": 4156,
+        "mean_post_input_tokens": 4341.571428571428,
+        "post_requests": 7,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/identity"
+      },
+      "event-full": {
+        "passed": true,
+        "first_input_tokens": 7425,
+        "mean_post_input_tokens": 7760.375,
+        "post_requests": 8,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/event-full"
+      },
+      "event-none": {
+        "passed": true,
+        "first_input_tokens": 7273,
+        "mean_post_input_tokens": 7531.363636363636,
+        "post_requests": 11,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_base_9/seed3301/event-none"
+      },
+      "candidate": {
+        "passed": false,
+        "first_input_tokens": 7286,
+        "mean_post_input_tokens": 7690.066666666667,
+        "post_requests": 15,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_base_9/seed3301/event-tables-v1-none"
+      },
+      "audits": {
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_exactly_matches_old_same_explanation": true,
+        "payload_matches_old_event_full_exactly": true,
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "encoded_sha256": "11d43fa6b80d855c6a18ede38c808d9f40d7be924079e0d50cfda979cfc7d298"
+      },
+      "official_errors": [
+        {
+          "type": "multi_turn:execution_response_mismatch",
+          "message": "Model response execution results so far does not contain all the ground truth response execution results for turn 2."
+        }
+      ]
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": "seed1103",
+      "trigger_index": 9,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4784,
+        "mean_post_input_tokens": 4784,
+        "post_requests": 1,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed1103/identity"
+      },
+      "event-full": {
+        "passed": true,
+        "first_input_tokens": 11805,
+        "mean_post_input_tokens": 11805,
+        "post_requests": 1,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed1103/event-full"
+      },
+      "event-none": {
+        "passed": true,
+        "first_input_tokens": 11653,
+        "mean_post_input_tokens": 11653,
+        "post_requests": 1,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed1103/event-none"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 9804,
+        "mean_post_input_tokens": 10780,
+        "post_requests": 14,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_3/seed1103/event-tables-v1-none"
+      },
+      "audits": {
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_exactly_matches_old_same_explanation": true,
+        "payload_matches_old_event_full_exactly": true,
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "encoded_sha256": "c33fd08d1644e31b8919e335e3aebf873b35c951f7dc76db36b6f08748a76417"
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": "seed2207",
+      "trigger_index": 8,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4783,
+        "mean_post_input_tokens": 4783,
+        "post_requests": 1,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed2207/identity"
+      },
+      "event-full": {
+        "passed": true,
+        "first_input_tokens": 11649,
+        "mean_post_input_tokens": 12031,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed2207/event-full"
+      },
+      "event-none": {
+        "passed": true,
+        "first_input_tokens": 11497,
+        "mean_post_input_tokens": 11879,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed2207/event-none"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 9648,
+        "mean_post_input_tokens": 10030,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_3/seed2207/event-tables-v1-none"
+      },
+      "audits": {
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_exactly_matches_old_same_explanation": true,
+        "payload_matches_old_event_full_exactly": true,
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "encoded_sha256": "f254da03257b8a3f1cfa5d10b134b8104fd5145333d7e8319f4a7e2ffb25cbbe"
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_long_context_3",
+      "seed": "seed3301",
+      "trigger_index": 9,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4772,
+        "mean_post_input_tokens": 4772,
+        "post_requests": 1,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed3301/identity"
+      },
+      "event-full": {
+        "passed": true,
+        "first_input_tokens": 12279,
+        "mean_post_input_tokens": 12661,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed3301/event-full"
+      },
+      "event-none": {
+        "passed": false,
+        "first_input_tokens": 12127,
+        "mean_post_input_tokens": 12945.6,
+        "post_requests": 10,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_3/seed3301/event-none"
+      },
+      "candidate": {
+        "passed": false,
+        "first_input_tokens": 10134,
+        "mean_post_input_tokens": 11933.1,
+        "post_requests": 10,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_3/seed3301/event-tables-v1-none"
+      },
+      "audits": {
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_exactly_matches_old_same_explanation": true,
+        "payload_matches_old_event_full_exactly": true,
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "encoded_sha256": "d28ff01c7652aaec9aca14bd651b3d209ac95248885dad78e310e90f9bab85ff"
+      },
+      "official_errors": [
+        {
+          "type": "multi_turn:instance_state_mismatch",
+          "message": "Model instance for GorillaFileSystem does not match the state with ground truth instance."
+        }
+      ]
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": "seed1103",
+      "trigger_index": 3,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 6375,
+        "mean_post_input_tokens": 7955.142857142857,
+        "post_requests": 7,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed1103/identity"
+      },
+      "event-full": {
+        "passed": true,
+        "first_input_tokens": 14130,
+        "mean_post_input_tokens": 17701.11111111111,
+        "post_requests": 9,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed1103/event-full"
+      },
+      "event-none": {
+        "passed": true,
+        "first_input_tokens": 13978,
+        "mean_post_input_tokens": 17520.777777777777,
+        "post_requests": 9,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed1103/event-none"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 11411,
+        "mean_post_input_tokens": 14963,
+        "post_requests": 8,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_37/seed1103/event-tables-v1-none"
+      },
+      "audits": {
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_exactly_matches_old_same_explanation": true,
+        "payload_matches_old_event_full_exactly": true,
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "encoded_sha256": "f3279b0320e960b9b61c19495174fb67e474e4e03bfeb0f963fb27c0f423b867"
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": "seed2207",
+      "trigger_index": 3,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 6412,
+        "mean_post_input_tokens": 8208.625,
+        "post_requests": 8,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed2207/identity"
+      },
+      "event-full": {
+        "passed": true,
+        "first_input_tokens": 14167,
+        "mean_post_input_tokens": 17703.444444444445,
+        "post_requests": 9,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed2207/event-full"
+      },
+      "event-none": {
+        "passed": true,
+        "first_input_tokens": 14015,
+        "mean_post_input_tokens": 15685.125,
+        "post_requests": 8,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed2207/event-none"
+      },
+      "candidate": {
+        "passed": false,
+        "first_input_tokens": 11448,
+        "mean_post_input_tokens": 14665.666666666666,
+        "post_requests": 9,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_37/seed2207/event-tables-v1-none"
+      },
+      "audits": {
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_exactly_matches_old_same_explanation": true,
+        "payload_matches_old_event_full_exactly": true,
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "encoded_sha256": "67006ce93d6e394e506496c8b6e2b5fb356c60bede96f8f992ede42ef6135f7e"
+      },
+      "official_errors": [
+        {
+          "type": "multi_turn:instance_state_mismatch",
+          "message": "Model instance for GorillaFileSystem does not match the state with ground truth instance."
+        }
+      ]
+    },
+    {
+      "task": "multi_turn_long_context_37",
+      "seed": "seed3301",
+      "trigger_index": 3,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 6386,
+        "mean_post_input_tokens": 8243.25,
+        "post_requests": 8,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed3301/identity"
+      },
+      "event-full": {
+        "passed": true,
+        "first_input_tokens": 14141,
+        "mean_post_input_tokens": 17127.444444444445,
+        "post_requests": 9,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed3301/event-full"
+      },
+      "event-none": {
+        "passed": true,
+        "first_input_tokens": 13989,
+        "mean_post_input_tokens": 17759.88888888889,
+        "post_requests": 9,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_37/seed3301/event-none"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 11422,
+        "mean_post_input_tokens": 15569.666666666666,
+        "post_requests": 9,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_37/seed3301/event-tables-v1-none"
+      },
+      "audits": {
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_exactly_matches_old_same_explanation": true,
+        "payload_matches_old_event_full_exactly": true,
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "encoded_sha256": "7fbe52943ceafac327321b311eebb9f074ba1852be847991bbda52619940eae2"
+      },
+      "official_errors": []
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": "seed1103",
+      "trigger_index": 11,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4416,
+        "mean_post_input_tokens": 4759,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed1103/identity"
+      },
+      "event-full": {
+        "passed": true,
+        "first_input_tokens": 7688,
+        "mean_post_input_tokens": 8374,
+        "post_requests": 3,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed1103/event-full"
+      },
+      "event-none": {
+        "passed": false,
+        "first_input_tokens": 7536,
+        "mean_post_input_tokens": 9164,
+        "post_requests": 13,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed1103/event-none"
+      },
+      "candidate": {
+        "passed": false,
+        "first_input_tokens": 7562,
+        "mean_post_input_tokens": 7905,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_9/seed1103/event-tables-v1-none"
+      },
+      "audits": {
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_exactly_matches_old_same_explanation": true,
+        "payload_matches_old_event_full_exactly": true,
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "encoded_sha256": "ec055dde85abc63b81eace31111492ec91d4406b6b70139ed93c99090429d57a"
+      },
+      "official_errors": [
+        {
+          "type": "multi_turn:execution_response_mismatch",
+          "message": "Model response execution results so far does not contain all the ground truth response execution results for turn 2."
+        }
+      ]
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": "seed2207",
+      "trigger_index": 9,
+      "identity": {
+        "passed": true,
+        "first_input_tokens": 4399,
+        "mean_post_input_tokens": 4724.666666666667,
+        "post_requests": 3,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed2207/identity"
+      },
+      "event-full": {
+        "passed": false,
+        "first_input_tokens": 7286,
+        "mean_post_input_tokens": 7629,
+        "post_requests": 2,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed2207/event-full"
+      },
+      "event-none": {
+        "passed": false,
+        "first_input_tokens": 7134,
+        "mean_post_input_tokens": 8138.5,
+        "post_requests": 4,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed2207/event-none"
+      },
+      "candidate": {
+        "passed": false,
+        "first_input_tokens": 7186,
+        "mean_post_input_tokens": 7924,
+        "post_requests": 3,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_9/seed2207/event-tables-v1-none"
+      },
+      "audits": {
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_exactly_matches_old_same_explanation": true,
+        "payload_matches_old_event_full_exactly": true,
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "encoded_sha256": "18b1397837fb6b2417ec7313a36e154a16a3b5ccac19bc941af04916e93b20ac"
+      },
+      "official_errors": [
+        {
+          "type": "multi_turn:execution_response_mismatch",
+          "message": "Model response execution results so far does not contain all the ground truth response execution results for turn 2."
+        }
+      ]
+    },
+    {
+      "task": "multi_turn_long_context_9",
+      "seed": "seed3301",
+      "trigger_index": 7,
+      "identity": {
+        "passed": false,
+        "first_input_tokens": 4298,
+        "mean_post_input_tokens": 5391.285714285715,
+        "post_requests": 14,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed3301/identity"
+      },
+      "event-full": {
+        "passed": false,
+        "first_input_tokens": 9941,
+        "mean_post_input_tokens": 10970.583333333334,
+        "post_requests": 12,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed3301/event-full"
+      },
+      "event-none": {
+        "passed": true,
+        "first_input_tokens": 9789,
+        "mean_post_input_tokens": 10264.125,
+        "post_requests": 8,
+        "run_path": "experiments/bfcl_identity/work1000_research/tasks/multi_turn_long_context_9/seed3301/event-none"
+      },
+      "candidate": {
+        "passed": true,
+        "first_input_tokens": 7874,
+        "mean_post_input_tokens": 8735.454545454546,
+        "post_requests": 11,
+        "run_path": "experiments/bfcl_identity/lossless_encoding_v1/development/multi_turn_long_context_9/seed3301/event-tables-v1-none"
+      },
+      "audits": {
+        "actual_request_contains_exact_memory": true,
+        "external_instruction_exactly_matches_old_same_explanation": true,
+        "payload_matches_old_event_full_exactly": true,
+        "history_exact": true,
+        "original_graph_rebuilt_exact": true,
+        "encoded_sha256": "f3e3924d35c28a850f079e8ba8edf707bdb0b2fc9fc7e1ccc14008033b34c83c"
+      },
+      "official_errors": []
+    }
+  ],
+  "case_observations": {
+    "multi_turn_base_9/seed3301": {
+      "observation": "Instead of sorting ArchivedFinalReport2024.txt, continuation creates line1.txt, writes alphabetized words, sorts that temporary file, and removes it. Official checker misses sorted_content for the report.",
+      "baseline_behavior": "Event-full invokes sort on ArchivedFinalReport2024.txt; Event-none also passes.",
+      "classification": "Post-conversion task interpretation/action selection divergence; no payload loss observed."
+    },
+    "multi_turn_long_context_3/seed3301": {
+      "observation": "Prefix already copied both test files and entered backup_tests. Candidate repeats cp from inside backup_tests, creating a plain file named backup_tests; the next cp fails Not a directory. It ends by asking permission instead of accepting the already completed copies.",
+      "retained_evidence": "Decoded active cwd fact f21 is backup_tests; successful cp events a7/a8 and cd a9 remain intact. Source returns and complete original payload match the baseline exactly.",
+      "baseline_behavior": "Event-full lists the completed backup and stops successfully; Event-none already fails this case.",
+      "classification": "Previously completed action/current-location recognition failure is consistent with the trace, but internal cause is not established."
+    },
+    "multi_turn_long_context_37/seed2207": {
+      "observation": "Candidate creates 7.txt from its count of server-error mentions. User requested file name from line count; earlier wc returned count 1 and official target is 1.txt.",
+      "retained_evidence": "Decoded payload retains active cwd /temp and original wc responses. Candidate also rechecks wc after compaction and receives 1 again.",
+      "baseline_behavior": "Event-full creates 1.txt; Event-none also passes.",
+      "classification": "Wrong referent for requested number after later interaction, not missing line-count evidence."
+    },
+    "multi_turn_long_context_9/seed1103": {
+      "observation": "Candidate calls cat then gives a textual word-sorting response without invoking sort on the archived report. Official checker misses required sorted_content result.",
+      "baseline_behavior": "Event-full invokes sort and passes; Event-none already fails.",
+      "classification": "Tool-action omission/task interpretation divergence; no payload loss observed."
+    },
+    "multi_turn_long_context_9/seed2207": {
+      "observation": "Candidate and both old Event variants fail while Identity succeeds. This is not a newly introduced loss relative to the frozen Event baseline.",
+      "classification": "Existing Event-versus-Identity loss, not new codec evidence."
+    },
+    "multi_turn_long_context_9/seed3301": {
+      "observation": "Candidate passes where Identity and Event-full fail; Event-none already passes.",
+      "classification": "Gain relative to full/Identity, no gain relative to matched zero-instruction baseline."
+    }
+  },
+  "limitations": [
+    "Single continuation per method for each shared prefix. Three seeds reuse the same task families.",
+    "Candidate none vs Event-full changes the codec and external instruction length together; cannot isolate encoding causality from that comparison.",
+    "Event-none is the matched external-instruction comparison; model-visible codec rules still differ.",
+    "All reported input counts include fixed tool/system costs; post means average within each trajectory, then equally across trajectories.",
+    "Successful strict restoration proves storage preservation, not unchanged model behavior or reasoning.",
+    "Five untriggered runs are reported separately and not counted as graph-conversion evidence."
+  ]
+}

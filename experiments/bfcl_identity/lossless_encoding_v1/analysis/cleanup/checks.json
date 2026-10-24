@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "protected_files_checked": 63122,
+  "protected_metadata_digest_before": "7065a0e51950b00b4a2e67cc2964a0839525b472056e0758c09f8153977407bc",
+  "protected_metadata_digest_after": "7065a0e51950b00b4a2e67cc2964a0839525b472056e0758c09f8153977407bc",
+  "frozen_source_hashes_checked": 177,
+  "cli_routes_help_checked": 6,
+  "cli_tests_passed": 4,
+  "codec_tests_passed": 20,
+  "deleted_existing_files": [],
+  "modified_working_files": [
+    ".gitignore",
+    "README.md",
+    "scripts/README.md",
+    "scripts/manage.py"
+  ],
+  "new_documentation": [
+    "experiments/bfcl_identity/lossless_encoding_v1/RESULTS.md"
+  ],
+  "limitations": [
+    "File metadata equality is a preservation check, not a content-hash audit of all trajectories; frozen source contents were separately hashed.",
+    "The completed experiment independently audited trajectories and request/scoring evidence before cleanup."
+  ],
+  "test_environment_note": "BFCL conda provides runtime dependencies but no pytest; host Python provides pytest but no transformers. CLI passed in conda and pure codecs passed in host Python. Initial attempts to combine these suites in one existing environment failed only on missing dependencies; no environment was changed."
+}
