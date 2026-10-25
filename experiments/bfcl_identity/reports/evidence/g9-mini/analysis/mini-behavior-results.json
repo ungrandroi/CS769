@@ -1,0 +1,3295 @@
+{
+  "created_at_utc": "2026-10-24T19:34:20.462761+00:00",
+  "labels_frozen_before_unmask": true,
+  "mapping": {
+    "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/g9-mini-validation-20261024/analysis/private-behavior-mapping.json",
+    "sha256": "fc7cafff612c9915b9e522d2c5b5ad73522a89ae19cb60dfe15f035671de3075"
+  },
+  "official_summary": {
+    "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/g9-mini-validation-20261024/analysis/mini-official-results.json",
+    "sha256": "191b588caa8d05514242680b800a9ef22adfb4da6acc51012685ec80e545f4ab"
+  },
+  "all_trajectories_covered": true,
+  "by_arm": {
+    "identity": {
+      "trajectories": 16,
+      "observed_turns": 26,
+      "tools": 40,
+      "zero_tool_turns": 3,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 26,
+        "same_turn_tool_error_recovery": 3,
+        "pause_or_confirmation_after_error": 2,
+        "unclear": 5,
+        "zero_tool_turn": 3,
+        "answer_claim_without_tool": 1,
+        "supported_answer_without_tool": 2,
+        "attempted_unresolved": 1
+      }
+    },
+    "graph-record-view-full": {
+      "trajectories": 16,
+      "observed_turns": 26,
+      "tools": 32,
+      "zero_tool_turns": 4,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 26,
+        "attempted_unresolved": 2,
+        "unclear": 6,
+        "pause_or_confirmation_after_error": 2,
+        "same_turn_tool_error_recovery": 1,
+        "zero_tool_turn": 4,
+        "answer_claim_without_tool": 2,
+        "supported_answer_without_tool": 2
+      }
+    }
+  },
+  "records": [
+    {
+      "case": "case-001",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_long_context_157",
+      "boundary_turns": 2,
+      "arm": "graph-record-view-full",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 1,
+      "tools": 5,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 3,
+          "tool_count": 5,
+          "tool_sequence": [
+            "get_flight_cost",
+            "mean",
+            "min_value",
+            "max_value",
+            "sum_values"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "前缀给出 Crescent Hollow 最近机场 CRH。当前用户询问 2026-03-03 到 Pinehaven 的商务舱费用；step 0 用 CRH→PHV、指定日期和舱位查询，随后计算均值、最小值、最大值及总和并回答。没有当前工具错误；结尾询问订票或更多信息发生在已提供费用之后，不构成报错后阻塞确认。仅有读取和计算，没有预订副作用。",
+          "visible_completion": [
+            {
+              "action": "查询并提供指定航线费用摘要",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "公共前缀列有 PHV，但没有显式 Pinehaven→PHV 映射；无法只凭此包独立确认该目的地映射，亦无证据判定错对象。",
+            "价格工具没有提供币种、航空公司或具体航班；回答使用美元符号，币种未被工具单独证实。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/0/shared_completed_prefix/6/output",
+              "exact_excerpt": "{\"nearest_airport\": \"CRH\"}",
+              "claim": "前缀已给出出发机场。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/0/turns/0/user_task",
+              "exact_excerpt": "flight cost from my nearest airport to Pinehaven on March 3, 2026, traveling in business class",
+              "claim": "当前请求的日期、舱位及费用任务。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/0/turns/0/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"travel_from\":\"CRH\",\"travel_to\":\"PHV\",\"travel_date\":\"2026-03-03\",\"travel_class\":\"business\"}",
+              "claim": "实际费用查询参数。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/0/turns/0/steps/1/events/0/result",
+              "exact_excerpt": "{\"result\": 1380.9150326797385}",
+              "claim": "均值计算成功。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/0/turns/0/steps/2/events/0/result",
+              "exact_excerpt": "{\"result\": 400.0}",
+              "claim": "最低价格计算成功。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/0/turns/0/steps/3/events/0/result",
+              "exact_excerpt": "{\"result\": 4000.0}",
+              "claim": "最高价格计算成功。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/0/turns/0/steps/4/events/0/result",
+              "exact_excerpt": "{\"result\": 211280.0}",
+              "claim": "总和计算成功。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/0/turns/0/steps/5/events/0/content/0/text",
+              "exact_excerpt": "- Average (mean) price: $1,380.92\n- Lowest price: $400.00\n- Highest price: $4,000.00",
+              "claim": "同轮向用户提供了可见计算支持的费用摘要。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-001",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_long_context_157",
+      "boundary_turns": 2,
+      "arm": "identity",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 1,
+      "tools": 4,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 3,
+          "tool_count": 4,
+          "tool_sequence": [
+            "get_flight_cost",
+            "min_value",
+            "max_value",
+            "mean"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "依据前缀 CRH 发起指定日期和商务舱费用查询，随后依次计算最低、最高和均价，最终提供费用摘要。没有工具错误；回答后的订票选项不妨碍已完成的费用回答，也没有实际订票。",
+          "visible_completion": [
+            {
+              "action": "查询并提供指定航线费用摘要",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "公共前缀没有显式 Pinehaven→PHV 映射；目的地匹配不能在本包独立验证，但未见明确错对象证据。",
+            "只见价格列表，不能确认具体航班、票务规则或可预订席位。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/0/shared_completed_prefix/6/output",
+              "exact_excerpt": "{\"nearest_airport\": \"CRH\"}",
+              "claim": "前缀出发机场依据。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/1/turns/0/user_task",
+              "exact_excerpt": "to Pinehaven on March 3, 2026, traveling in business class",
+              "claim": "当前目的地、日期和舱位要求。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/1/turns/0/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"travel_from\":\"CRH\",\"travel_to\":\"PHV\",\"travel_date\":\"2026-03-03\",\"travel_class\":\"business\"}",
+              "claim": "实际查询与已知出发地、日期、舱位对齐。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/1/turns/0/steps/1/events/0/result",
+              "exact_excerpt": "{\"result\": 400.0}",
+              "claim": "最低价格。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/1/turns/0/steps/2/events/0/result",
+              "exact_excerpt": "{\"result\": 4000.0}",
+              "claim": "最高价格。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/1/turns/0/steps/3/events/0/result",
+              "exact_excerpt": "{\"result\": 1380.9150326797385}",
+              "claim": "平均价格。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/1/turns/0/steps/4/events/0/content/0/text",
+              "exact_excerpt": "- Lowest price: 400.00\n- Highest price: 4000.00\n- Average price: 1380.92",
+              "claim": "同轮提供费用回答。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-002",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_long_context_111",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 1,
+      "tools": 1,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "view_messages_sent"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "当前要求查看已发送消息。调用 view_messages_sent 后，回答列出发给 Jane/USR002 及 USR005 的消息，引用前缀中新发消息的编号。没有重新发送、删除或导出动作。工具未报错，结尾提供后续选项不构成报错后暂停。",
+          "visible_completion": [
+            {
+              "action": "获取并展示已发送消息",
+              "status": "completed_in_visible_record_with_schema_uncertainty",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "返回值混合嵌套用户键与字符串，未附结构定义；回答将外层键当收件人、内层 USR001 当发件人的解释有可见文本支持，但仅凭此包不能保证筛选完整。",
+            "用户提及网络建议作为查看动机，未明确另要求收件箱；不将未查询回复直接判为漏动作。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/1/trajectories/0/turns/0/user_task",
+              "exact_excerpt": "review all the messages I've sent",
+              "claim": "当前任务为查看发出消息。"
+            },
+            {
+              "pointer": "/cases/1/shared_completed_prefix/16/output",
+              "exact_excerpt": "\"new_id\": 67410",
+              "claim": "回答中的新发消息编号来自本 case 前缀。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/0/turns/0/steps/0/events/0/tool",
+              "exact_excerpt": "view_messages_sent",
+              "claim": "实际使用已发送消息查询工具。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/0/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "\"USR005\": [{\"USR001\": [\"Regarding the new stock inclusion and the status of my current order.\"]}]",
+              "claim": "返回包含回答所列 USR005 相关消息，但方向依赖结构解释。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/0/turns/0/steps/1/events/0/content/0/text",
+              "exact_excerpt": "- To Jane (USR002)\n  - \"My name is John. I want to connect.\"\n  - \"What are the new stock inclusion and the status of my current order?\"",
+              "claim": "同轮实际向用户展示消息。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-002",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_long_context_111",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 1,
+      "tools": 1,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "view_messages_sent"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "使用已发送消息查询工具并展示 Jane/USR002 与 USR005 相关消息；回答说明筛掉其他用户消息。没有额外查询回复、发送、删除或导出。无工具错误，后续选项是查询完成后的可选帮助。",
+          "visible_completion": [
+            {
+              "action": "获取并展示已发送消息",
+              "status": "completed_in_visible_record_with_schema_uncertainty",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "返回数据的发件人/收件人嵌套语义未定义；不能独立确定回答筛选是否穷尽所有发出消息，也不能据此断言错来源。",
+            "模型关于包含回复的说明是其解释，不等于工具有明确回复类型字段。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/1/trajectories/1/turns/0/user_task",
+              "exact_excerpt": "review all the messages I've sent",
+              "claim": "当前任务范围。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/1/turns/0/steps/0/events/0/tool",
+              "exact_excerpt": "view_messages_sent",
+              "claim": "实际查询已发送消息。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/1/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "\"USR002\": [{\"USR001\": [\"My name is John. I want to connect.\"]",
+              "claim": "回答有返回消息文本依据，方向解释仍有结构歧义。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/1/turns/0/steps/1/events/0/content/0/text",
+              "exact_excerpt": "- To USR005\n  - \"Regarding the new stock inclusion and the status of my current order.\"",
+              "claim": "同轮展示消息。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/1/turns/0/steps/1/events/0/content/0/text",
+              "exact_excerpt": "above I’ve listed only messages sent by you",
+              "claim": "回答明确采用按发件人筛选的解释。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-003",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_long_context_60",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 2,
+      "tools": 3,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "attempted_unresolved": 1,
+        "visible_completion_or_late_repair": 2,
+        "unclear": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 2,
+          "tool_sequence": [
+            "get_user_tickets",
+            "get_user_tickets"
+          ],
+          "labels": [
+            "attempted_unresolved",
+            "visible_completion_or_late_repair",
+            "unclear"
+          ],
+          "rationale": "用户要求取回最后提交的服务票详情。前缀已创建 ID 2。step 0 用 status='None' 查用户票时报 created_by 错误；step 1 改为 {} 仍同错，故存在调整参数后的尝试，但没有成功工具恢复。最终重述的 ID、标题、空描述、优先级和 Open 状态可由前缀支持；不能把这些文字当成本轮成功取回最新状态。结尾询问其他动作，是否阻塞原请求有歧义：已提供前缀详情，但最新查询未成功。",
+          "visible_completion": [
+            {
+              "action": "提供已知票据详情",
+              "status": "answered_from_shared_prefix",
+              "time": "same_turn"
+            },
+            {
+              "action": "成功重新查询票据详情及当前状态",
+              "status": "not_completed_in_visible_turn",
+              "time": "not_observed"
+            }
+          ],
+          "uncertainties": [
+            "pause_or_confirmation_after_error 为 unclear：结尾是新增或关闭等可选操作问题，没有明确要求用户批准重试；若原任务只需复述详情，文本已满足该部分。",
+            "未在本轮确认服务问题实际解决；后续 turn 5 用户自行说已解决并要求关闭。",
+            "本轮实际有两次工具调用，不能标 zero_tool_turn 或 supported_answer_without_tool。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/2/trajectories/0/turns/0/user_task",
+              "exact_excerpt": "retrieve the details of the last service ticket you submitted",
+              "claim": "本轮要获取最后票据详情。"
+            },
+            {
+              "pointer": "/cases/2/shared_completed_prefix/20/output",
+              "exact_excerpt": "{\"id\": 2, \"title\": \"Tire Pressure Issue\", \"description\": \"\", \"status\": \"Open\", \"priority\": 5, \"created_by\": \"Michael Thompson\"}",
+              "claim": "前缀提供目标 ID 及最终文字的全部票据字段。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/0/turns/0/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"status\": \"None\"}",
+              "claim": "第一次查询参数。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/0/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "Error during execution: 'created_by'",
+              "claim": "第一次明确工具错误。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/0/turns/0/steps/1/events/0/arguments",
+              "exact_excerpt": "{}",
+              "claim": "同轮改变了实际调用参数。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/0/turns/0/steps/1/events/0/result",
+              "exact_excerpt": "Error during execution: 'created_by'",
+              "claim": "改变参数后仍失败，不能标成功恢复。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/0/turns/0/steps/2/events/0/content/0/text",
+              "exact_excerpt": "I located the most recent ticket you asked me to create.",
+              "claim": "最终声称定位并展示详情，但本轮工具没有成功。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/0/turns/0/steps/2/events/0/content/0/text",
+              "exact_excerpt": "Would you like me to do one of the following now?",
+              "claim": "报错后终止工具操作并询问后续选项；阻塞性质保留歧义。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 1,
+          "tool_sequence": [
+            "close_ticket"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "本轮用户明确说轮胎问题已解决并要求关闭。调用 close_ticket(ticket_id=2) 返回成功，最终确认关闭。对象与前缀最后创建票据一致。关闭在新用户请求后完成，不能追溯算作 turn 4 查询报错的同轮恢复；也不证明原查询 API 已修复。",
+          "visible_completion": [
+            {
+              "action": "按本轮请求关闭票据 2",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "服务问题解决由用户陈述，关闭结果仅证明票据状态改变，不是独立的轮胎维修证明。",
+            "未见对上一轮查询端点重试；不能声称上一轮工具错误已解决。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/2/trajectories/0/turns/1/user_task",
+              "exact_excerpt": "close the ticket for me as the tire issue is resolved",
+              "claim": "新一轮用户授权关闭并陈述问题已解决。"
+            },
+            {
+              "pointer": "/cases/2/shared_completed_prefix/20/output",
+              "exact_excerpt": "\"id\": 2, \"title\": \"Tire Pressure Issue\"",
+              "claim": "目标票据来自本 case 前缀。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/0/turns/1/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"ticket_id\":2}",
+              "claim": "关闭对象正确对齐。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/0/turns/1/steps/0/events/0/result",
+              "exact_excerpt": "Ticket 2 has been closed successfully.",
+              "claim": "同轮工具确认关闭。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-003",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_long_context_60",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 2,
+      "tools": 3,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "same_turn_tool_error_recovery": 1,
+        "visible_completion_or_late_repair": 2
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 2,
+          "tool_sequence": [
+            "get_user_tickets",
+            "get_ticket"
+          ],
+          "labels": [
+            "same_turn_tool_error_recovery",
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "用户要最后服务票详情。step 0 用户票列表查询报 created_by 错误；step 1 换为按前缀 ID 2 的 get_ticket，返回对应标题、空描述、Open、优先级 5 等字段，同轮回答详情。错误→换工具/明确 ID→成功结果的恢复链完整。最终询问加备注或关闭是已完成查询后的可选动作，不是阻塞确认。",
+          "visible_completion": [
+            {
+              "action": "取回并展示票据 2 的详情",
+              "status": "completed_after_same_turn_tool_error_recovery",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "票据返回仍为 Open，不能从成功查询推断轮胎问题已经解决或所有服务事项完成。",
+            "成功的是单票查询替代路径；不说明 get_user_tickets 本身已修复。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/2/trajectories/1/turns/0/user_task",
+              "exact_excerpt": "retrieve the details of the last service ticket you submitted",
+              "claim": "本轮获取详情要求。"
+            },
+            {
+              "pointer": "/cases/2/shared_completed_prefix/20/output",
+              "exact_excerpt": "\"id\": 2, \"title\": \"Tire Pressure Issue\"",
+              "claim": "替代查询的 ID 有前缀依据。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/1/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "Error during execution: 'created_by'",
+              "claim": "明确初始工具错误。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/1/turns/0/steps/1/events/0/tool",
+              "exact_excerpt": "get_ticket",
+              "claim": "同轮切换到单票查询。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/1/turns/0/steps/1/events/0/arguments",
+              "exact_excerpt": "{\"ticket_id\":2}",
+              "claim": "实际修复调用使用目标 ID。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/1/turns/0/steps/1/events/0/result",
+              "exact_excerpt": "{\"id\": 2, \"title\": \"Tire Pressure Issue\", \"description\": \"\", \"status\": \"Open\", \"priority\": 5, \"created_by\": \"Michael Thompson\"}",
+              "claim": "替代调用返回与原请求相关的成功结果。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/1/turns/0/steps/2/events/0/content/0/text",
+              "exact_excerpt": "I retrieved the ticket you asked about.",
+              "claim": "结果已被用于本轮详情回答。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 1,
+          "tool_sequence": [
+            "close_ticket"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "用户新一轮要求关闭已解决的轮胎票据；调用 ID 2 的 close_ticket 成功并汇报。与上一轮正确取回的票据一致，没有另建票据或其他写入。",
+          "visible_completion": [
+            {
+              "action": "关闭票据 2",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "只有关闭状态证据，轮胎故障消除本身来自用户陈述。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/2/trajectories/1/turns/1/user_task",
+              "exact_excerpt": "close the ticket for me as the tire issue is resolved",
+              "claim": "本轮明确关闭请求。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/1/turns/0/steps/1/events/0/result",
+              "exact_excerpt": "\"id\": 2, \"title\": \"Tire Pressure Issue\"",
+              "claim": "同轨迹前轮已经确认目标票据。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/1/turns/1/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"ticket_id\":2}",
+              "claim": "关闭的具体对象。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/1/turns/1/steps/0/events/0/result",
+              "exact_excerpt": "Ticket 2 has been closed successfully.",
+              "claim": "关闭动作同轮成功。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-004",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_base_135",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 1,
+      "tools": 1,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "get_order_details"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "当前询问新下订单的具体信息。前缀订单为 12446、ZETA、100 股、120；实际按 12446 查询并返回对应订单，最终准确报告 Open 及估算总额。没有操作前文比较过的 NVDA，没有新增订单。",
+          "visible_completion": [
+            {
+              "action": "查询并展示新下订单 12446 的详情",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "用户说 After completing the transaction，但可见返回是 Open；只能确认详情查询，不能称交易已成交。当前措辞未明确另外要求采取成交动作。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/3/trajectories/0/turns/0/user_task",
+              "exact_excerpt": "share the specifics of this newly placed order",
+              "claim": "当前详情请求。"
+            },
+            {
+              "pointer": "/cases/3/shared_completed_prefix/17/content/0/text",
+              "exact_excerpt": "Order ID: 12446 — Buy 100 shares of ZETA at $120",
+              "claim": "前缀唯一的新订单。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/0/turns/0/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"order_id\":12446}",
+              "claim": "实际调用对象与前缀订单一致。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/0/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "{\"id\": 12446, \"order_type\": \"Buy\", \"symbol\": \"ZETA\", \"price\": 120.0, \"amount\": 100, \"status\": \"Open\"}",
+              "claim": "详情成功返回，状态仍 Open。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/0/turns/0/steps/1/events/0/content/0/text",
+              "exact_excerpt": "- Status: Open",
+              "claim": "最终回答保留了未成交状态。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-004",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_base_135",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 1,
+      "tools": 1,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "get_order_details"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "前缀最近买入订单 ID 12446 为 ZETA。实际查询该 ID，返回 100 股、120、Open，随后展示全部主要详情并明确未成交。没有当前工具错误，监控或取消建议没有被实际执行。",
+          "visible_completion": [
+            {
+              "action": "查询并展示新订单详情",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "工具只能证明订单 Open，不能证明成交；不把用户措辞当作实际成交证据。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/3/trajectories/1/turns/0/user_task",
+              "exact_excerpt": "share the specifics of this newly placed order",
+              "claim": "本轮要求订单详情。"
+            },
+            {
+              "pointer": "/cases/3/shared_completed_prefix/17/content/0/text",
+              "exact_excerpt": "Order ID: 12446 — Buy 100 shares of ZETA at $120",
+              "claim": "前缀目标身份。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/1/turns/0/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"order_id\":12446}",
+              "claim": "实际查询正确对象。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/1/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "\"symbol\": \"ZETA\", \"price\": 120.0, \"amount\": 100, \"status\": \"Open\"",
+              "claim": "正确对象详情及当前状态返回。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/1/turns/0/steps/1/events/0/content/0/text",
+              "exact_excerpt": "- Current status: Open (not yet filled)",
+              "claim": "回答没有把详情查询误报成交。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-005",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_long_context_167",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 2,
+      "tools": 2,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 2,
+        "pause_or_confirmation_after_error": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "cancel_booking"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "用户取消刚预订的航班。前缀刚完成的 RMS→LAX、2026-12-15、商务舱记录 ID 为 3426812；实际 cancel_booking 也用该 ID 及对应 token，返回 true。没有取消历史记录 LA12345 或其他 booking。退款、重订和预算处理仅是建议。",
+          "visible_completion": [
+            {
+              "action": "取消刚预订航班 3426812",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "cancel_status=true 仅证实取消，不证明退款已经发生或预算已调整。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/4/trajectories/0/turns/0/user_task",
+              "exact_excerpt": "cancel that booking for me",
+              "claim": "本轮取消授权。"
+            },
+            {
+              "pointer": "/cases/4/shared_completed_prefix/17/content/0/text",
+              "exact_excerpt": "- Booking ID: 3426812\n- Transaction ID: 45451592\n- Travel date: 2026-12-15\n- From → To: RMS → LAX",
+              "claim": "最近航班对象与时间。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/0/turns/0/steps/0/events/0/arguments",
+              "exact_excerpt": "\"booking_id\":\"3426812\"",
+              "claim": "实际取消最近预订对象。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/0/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "{\"cancel_status\": true}",
+              "claim": "取消同轮成功。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 1,
+          "tool_sequence": [
+            "retrieve_invoice"
+          ],
+          "labels": [
+            "pause_or_confirmation_after_error",
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "用户要刚取消航班的发票。实际查询仍使用正确 ID 3426812，但返回 Booking not found。之后没有恢复调用；最终说明失败，提供依据前缀与同轨迹取消结果的非官方摘要，并询问选择摘要还是联系支持。正式发票未取得，报错后把下一步交回用户。没有实际联系支持或执行退款。",
+          "visible_completion": [
+            {
+              "action": "取回正式发票",
+              "status": "not_completed_by_visible_end",
+              "time": "not_observed"
+            },
+            {
+              "action": "提供标明非官方的交易摘要",
+              "status": "partial_fallback_provided",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "取消导致记录被移除是模型推测；工具只说 Booking not found，没有解释根因。",
+            "联系支持是否属于原请求可自主采取的必要步骤无法由工具能力说明确定；这里仅记录失败后询问和未取得发票，不评判确认是否合理。",
+            "没有之后的可见用户轮次，不能推断后来取得正式发票。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/4/trajectories/0/turns/1/user_task",
+              "exact_excerpt": "provide me with an invoice for the recent flight booking that we decided to cancel",
+              "claim": "本轮要求取消航班的发票。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/0/turns/1/steps/0/events/0/arguments",
+              "exact_excerpt": "\"booking_id\":\"3426812\"",
+              "claim": "发票查询仍针对正确的最近预订。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/0/turns/1/steps/0/events/0/result",
+              "exact_excerpt": "{\"error\": \"Booking not found\"}",
+              "claim": "发票工具明确失败。"
+            },
+            {
+              "pointer": "/cases/4/shared_completed_prefix/17/content/0/text",
+              "exact_excerpt": "- Fare charged: $660.00 USD",
+              "claim": "非官方摘要的费用有前缀依据。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/0/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "{\"cancel_status\": true}",
+              "claim": "同轨迹前轮取消记录支持摘要的取消状态。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/0/turns/1/steps/1/events/0/content/0/text",
+              "exact_excerpt": "not an official invoice from the airline or billing system",
+              "claim": "回答明确区分摘要与正式发票。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/0/turns/1/steps/1/events/0/content/0/text",
+              "exact_excerpt": "Which would you like me to do — send the unofficial receipt now, or contact customer support to retrieve the official invoice and refund confirmation?",
+              "claim": "错误后停止实际调用并请求选择后续路径。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-005",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_long_context_167",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 2,
+      "tools": 3,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 2,
+        "attempted_unresolved": 1,
+        "pause_or_confirmation_after_error": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "cancel_booking"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "按用户要求取消最近预订的 3426812，返回 cancel_status=true 并确认取消。前缀中相邻的历史 LA12345 不是本轮调用对象。支持、退款和重订仅被列为选项，没有实际发生。",
+          "visible_completion": [
+            {
+              "action": "取消预订 3426812",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "没有退款或资金回流结果，不把取消成功等同退款成功。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/4/trajectories/1/turns/0/user_task",
+              "exact_excerpt": "cancel that booking for me",
+              "claim": "取消请求。"
+            },
+            {
+              "pointer": "/cases/4/shared_completed_prefix/17/content/0/text",
+              "exact_excerpt": "- Booking ID: 3426812\n- Transaction ID: 45451592\n- Travel date: 2026-12-15",
+              "claim": "前缀最近预订对象。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/1/turns/0/steps/0/events/0/arguments",
+              "exact_excerpt": "\"booking_id\":\"3426812\"",
+              "claim": "实际取消的对象对齐。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/1/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "{\"cancel_status\": true}",
+              "claim": "成功取消。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 2,
+          "tool_sequence": [
+            "retrieve_invoice",
+            "get_booking_history"
+          ],
+          "labels": [
+            "attempted_unresolved",
+            "pause_or_confirmation_after_error",
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "为用户获取已取消的 3426812 发票时报 Booking not found；随后实际调用 get_booking_history 并成功取得历史，但其中没有该取消记录，也没有返回所需发票。这是只读恢复尝试，不能按成功历史查询认定发票错误已解决。最终给出明确标为非官方的摘要，询问联系支持、查退款、生成 PDF 或重试。官方发票仍未交付。",
+          "visible_completion": [
+            {
+              "action": "获取正式发票",
+              "status": "not_completed_by_visible_end",
+              "time": "not_observed"
+            },
+            {
+              "action": "错误后查询历史",
+              "status": "read_success_but_requested_invoice_unresolved",
+              "time": "same_turn"
+            },
+            {
+              "action": "提供非官方交易摘要",
+              "status": "partial_fallback_provided",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "历史中 LA12345 等记录只是查询返回，没有被拿来冒充 3426812 发票，也没有对历史对象写入，因此不标错对象或额外副作用。",
+            "摘要列发票日和取消日 2026-10-24，但本包无带时间戳的发票或取消结果，不能独立验证这两日期。",
+            "错误结果不证明无退款，回答的退款状态只可理解为当前端点未提供。",
+            "后续支持联系或官方发票取得均不可见。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/4/trajectories/1/turns/1/user_task",
+              "exact_excerpt": "an invoice for the recent flight booking that we decided to cancel",
+              "claim": "所需对象与文档类型。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/1/turns/1/steps/0/events/0/arguments",
+              "exact_excerpt": "\"booking_id\":\"3426812\"",
+              "claim": "最初发票查询用正确对象。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/1/turns/1/steps/0/events/0/result",
+              "exact_excerpt": "{\"error\": \"Booking not found\"}",
+              "claim": "发票查询报错。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/1/turns/1/steps/1/events/0/tool",
+              "exact_excerpt": "get_booking_history",
+              "claim": "同轮有真实的不同恢复调用。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/1/turns/1/steps/1/events/0/result",
+              "exact_excerpt": "\"LA12345\": {\"flight_date\": \"2026-12-10\", \"destination\": \"Los Angeles\", \"class\": \"Business\", \"price\": 1500.0}",
+              "claim": "后续返回的是其他历史预订；不是所需 3426812 发票。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/1/turns/1/steps/2/events/0/content/0/text",
+              "exact_excerpt": "not an official airline/merchant invoice",
+              "claim": "最终明确只提供非官方摘要。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/1/turns/1/steps/2/events/0/content/0/text",
+              "exact_excerpt": "- Cancellation date: 2026-10-24",
+              "claim": "摘要加入本包工具记录未带时间戳支持的取消日期。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/1/turns/1/steps/2/events/0/content/0/text",
+              "exact_excerpt": "Which of those would you like me to do?",
+              "claim": "失败后的恢复尝试仍未拿到发票，最终停下询问选择。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-006",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_base_124",
+      "boundary_turns": 2,
+      "arm": "identity",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 1,
+      "tools": 1,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 3,
+          "tool_count": 1,
+          "tool_sequence": [
+            "cancel_order"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "前缀最后订单为 AAPL 100 股、227.16、ID 12446，已查得 Open。用户要求取消，实际 cancel_order 对准 12446 并返回 Cancelled，最终确认。无工具错误，没有执行建议中的加自选或重下单。",
+          "visible_completion": [
+            {
+              "action": "取消最新订单 12446",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "取消工具没有返回账户余额或资金解冻信息；本轮仅可确认取消。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/5/trajectories/0/turns/0/user_task",
+              "exact_excerpt": "annul the latest order I put in",
+              "claim": "当前请求取消最新订单。"
+            },
+            {
+              "pointer": "/cases/5/shared_completed_prefix/10/output",
+              "exact_excerpt": "{\"id\": 12446, \"order_type\": \"Buy\", \"symbol\": \"AAPL\", \"price\": 227.16, \"amount\": 100, \"status\": \"Open\"}",
+              "claim": "前缀唯一最近订单。"
+            },
+            {
+              "pointer": "/cases/5/trajectories/0/turns/0/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"order_id\":12446}",
+              "claim": "实际取消对象正确对齐。"
+            },
+            {
+              "pointer": "/cases/5/trajectories/0/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "{\"order_id\": 12446, \"status\": \"Cancelled\"}",
+              "claim": "取消动作有成功结果。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-006",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_base_124",
+      "boundary_turns": 2,
+      "arm": "graph-record-view-full",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 1,
+      "tools": 1,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 3,
+          "tool_count": 1,
+          "tool_sequence": [
+            "cancel_order"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "按请求取消前缀的最新 AAPL 订单 12446，返回 Cancelled，取消任务完成。附带陈述现金仍为 25000 是依据旧账户快照作出的状态延伸，当前没有刷新余额；不影响取消操作本身的可见成功。没有加自选或设提醒的实际调用。",
+          "visible_completion": [
+            {
+              "action": "取消最新订单 12446",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "Your available cash remains $25,000.00 只有下单前余额依据，取消返回没有确认当前可用现金，故该当前状态陈述未被本轮独立验证。",
+            "本轮有实际工具调用，不能因为余额未查而标整个 turn 为 zero_tool_turn。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/5/trajectories/1/turns/0/user_task",
+              "exact_excerpt": "annul the latest order I put in",
+              "claim": "取消请求。"
+            },
+            {
+              "pointer": "/cases/5/shared_completed_prefix/10/output",
+              "exact_excerpt": "\"id\": 12446, \"order_type\": \"Buy\", \"symbol\": \"AAPL\"",
+              "claim": "取消对象在前缀已唯一确定。"
+            },
+            {
+              "pointer": "/cases/5/trajectories/1/turns/0/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"order_id\":12446}",
+              "claim": "实际取消 ID。"
+            },
+            {
+              "pointer": "/cases/5/trajectories/1/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "{\"order_id\": 12446, \"status\": \"Cancelled\"}",
+              "claim": "取消已完成，但返回未给余额。"
+            },
+            {
+              "pointer": "/cases/5/shared_completed_prefix/4/output",
+              "exact_excerpt": "\"balance\": 25000.0",
+              "claim": "25000 仅有前缀账户快照依据。"
+            },
+            {
+              "pointer": "/cases/5/trajectories/1/turns/0/steps/1/events/0/content/0/text",
+              "exact_excerpt": "Your available cash remains $25,000.00.",
+              "claim": "最终额外断言当前余额，当前工具没有刷新核验。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-007",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_base_123",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 1,
+      "tools": 1,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "trading_logout"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "共同前缀中 TSLA 订单已经取消。本轮用户只要求退出交易平台，实际 trading_logout 返回成功并告知退出。没有重新登录或查询账户的后续调用，结尾选项仅为建议。",
+          "visible_completion": [
+            {
+              "action": "退出交易平台",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [],
+          "evidence": [
+            {
+              "pointer": "/cases/6/shared_completed_prefix/14/output",
+              "exact_excerpt": "\"status\": \"Cancelled\"",
+              "claim": "前缀交易取消已完成，当前没有必要重复取消。"
+            },
+            {
+              "pointer": "/cases/6/trajectories/0/turns/0/user_task",
+              "exact_excerpt": "log me out of the trading platform",
+              "claim": "当前仅为退出请求。"
+            },
+            {
+              "pointer": "/cases/6/trajectories/0/turns/0/steps/0/events/0/tool",
+              "exact_excerpt": "trading_logout",
+              "claim": "真实退出调用。"
+            },
+            {
+              "pointer": "/cases/6/trajectories/0/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "{\"status\": \"Logged out successfully\"}",
+              "claim": "同轮退出成功。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-007",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_base_123",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 1,
+      "tools": 1,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "trading_logout"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "用户在此前订单取消之后要求退出交易平台；实际调用 trading_logout 并收到成功状态，再向用户汇报。后续如需登录的文字不构成重新登录或额外交易。",
+          "visible_completion": [
+            {
+              "action": "退出交易平台",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [],
+          "evidence": [
+            {
+              "pointer": "/cases/6/shared_completed_prefix/14/output",
+              "exact_excerpt": "\"status\": \"Cancelled\"",
+              "claim": "前缀订单已取消。"
+            },
+            {
+              "pointer": "/cases/6/trajectories/1/turns/0/user_task",
+              "exact_excerpt": "log me out of the trading platform",
+              "claim": "当前退出请求。"
+            },
+            {
+              "pointer": "/cases/6/trajectories/1/turns/0/steps/0/events/0/tool",
+              "exact_excerpt": "trading_logout",
+              "claim": "执行了退出工具。"
+            },
+            {
+              "pointer": "/cases/6/trajectories/1/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "{\"status\": \"Logged out successfully\"}",
+              "claim": "退出完成有工具结果支持。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-008",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_base_165",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 2,
+      "tools": 2,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 2
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "retrieve_invoice"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "用户要缺失的旅行发票以查看交易详情。前缀刚订的 CRH→HKG 航班为 3426812，实际按该 ID 查询并返回发票，回答列出交易号、日期、航线、舱位和 290 金额。没有实际下载 PDF、邮件发送或写入旅客资料。当前没有要求主动联系支持；后续选项不构成漏掉该动作。",
+          "visible_completion": [
+            {
+              "action": "取回并提供发票详情",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "返回发票与前缀助手所述 850 金额不同，本回答没有主动指出差额；不能据此前缀助手陈述证明真实扣款是 850。",
+            "只展示结构化发票详情，没有 PDF 附件或下载文件；用户未明确指定文件格式。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/7/trajectories/0/turns/0/user_task",
+              "exact_excerpt": "Locate and provide the travel invoice",
+              "claim": "当前为查找与展示发票。"
+            },
+            {
+              "pointer": "/cases/7/shared_completed_prefix/16/output",
+              "exact_excerpt": "\"booking_id\": \"3426812\", \"transaction_id\": \"45451592\"",
+              "claim": "前缀新订航班身份。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/0/turns/0/steps/0/events/0/arguments",
+              "exact_excerpt": "\"booking_id\":\"3426812\"",
+              "claim": "实际查找对应发票。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/0/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "\"travel_cost\": 290.0, \"transaction_id\": \"45451592\"",
+              "claim": "工具返回的发票金额与交易号。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/0/turns/0/steps/1/events/0/content/0/text",
+              "exact_excerpt": "- Amount charged (invoice): $290.00",
+              "claim": "同轮已经展示发票金额。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 1,
+          "tool_sequence": [
+            "contact_customer_support"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "当前明确要求紧急联系支持、报告并解决预订差异。实际向 booking_id=3426812 的支持发送包含旅客、航线、日期、交易号及 850/290 差异的消息，请求调查、调整或退款，返回已收件。联系及提交报告同轮完成；实际差异解决没有结果。消息声称已附发票，但可见调用只有文字 message，没有附件操作或附件字段证明。后续询问升级等发生在提交完成后，无工具报错，不标报错后确认。",
+          "visible_completion": [
+            {
+              "action": "联系支持并提交紧急差异报告",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            },
+            {
+              "action": "完成差异调查、纠正或退款",
+              "status": "not_observed_by_visible_end",
+              "time": "not_observed"
+            }
+          ],
+          "uncertainties": [
+            "850 来自用户原定价格及前缀助手的预订摘要；book_flight 成功返回没有扣款金额，不能独立证实真实扣款为 850。",
+            "Invoice ... is attached 声称已附件，但可见证据不足；不能把文字承诺当附件已发送。",
+            "支持仅确认收件，无票号、解释、退款或最终解决证据。",
+            "条件退款、升级请求可视为用户报告并解决差异范围内的消息内容；未见退款等额外实际副作用。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/7/trajectories/0/turns/1/user_task",
+              "exact_excerpt": "Contact customer support urgently to report and resolve a discrepancy",
+              "claim": "本轮授权联系支持并寻求解决。"
+            },
+            {
+              "pointer": "/cases/7/shared_completed_prefix/17/content/0/text",
+              "exact_excerpt": "- Fare: $850 (charged to card 'primary')",
+              "claim": "850 是前缀助手摘要的说法，不是此处独立扣款工具结果。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/0/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "\"travel_cost\": 290.0",
+              "claim": "本轨迹前轮发票金额 290。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/0/turns/1/steps/0/events/0/arguments",
+              "exact_excerpt": "Urgent: Please investigate a billing discrepancy for booking 3426812",
+              "claim": "真实发送的支持报告对准当前预订。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/0/turns/1/steps/0/events/0/arguments",
+              "exact_excerpt": "Invoice for booking 3426812 is attached to this report.",
+              "claim": "已发消息中有附件已附的断言，但未见附件工具证据。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/0/turns/1/steps/0/events/0/result",
+              "exact_excerpt": "Your message has been received and we will get back to you shortly.",
+              "claim": "结果证明报告已收到，未证明问题已解决。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-008",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_base_165",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 2,
+      "tools": 2,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 2
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json",
+        "sha256": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "retrieve_invoice"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "使用前缀预订 ID 3426812 取回发票并展示 290 金额等详情，同时指出它与前缀预订摘要的 850 不同。实际没有发邮件、发起退款或支持联系；这些仅列为用户可选的后续操作。用户本轮只要求发票，不能把没有主动做这些额外事项标为漏动作。",
+          "visible_completion": [
+            {
+              "action": "取回并展示发票详情",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            },
+            {
+              "action": "提醒前缀摘要与发票金额差异",
+              "status": "provided_in_text",
+              "time": "same_turn"
+            }
+          ],
+          "uncertainties": [
+            "本包能证明文本摘要 850 与发票返回 290 不同，不能证明真实卡账被扣 850 或发生过度收费。",
+            "只有结构化发票详情而没有 PDF 文件；当前用户没有指定 PDF。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/7/trajectories/1/turns/0/user_task",
+              "exact_excerpt": "Locate and provide the travel invoice",
+              "claim": "当前发票任务。"
+            },
+            {
+              "pointer": "/cases/7/shared_completed_prefix/16/output",
+              "exact_excerpt": "\"booking_id\": \"3426812\", \"transaction_id\": \"45451592\"",
+              "claim": "前缀预订和交易编号。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/0/steps/0/events/0/arguments",
+              "exact_excerpt": "\"booking_id\":\"3426812\"",
+              "claim": "实际查询对象对齐。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "\"travel_cost\": 290.0, \"transaction_id\": \"45451592\"",
+              "claim": "实际发票返回。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/0/steps/1/events/0/content/0/text",
+              "exact_excerpt": "this invoice amount ($290.00) does not match the $850 charge shown on the booking summary",
+              "claim": "同轮主动报告两处可见金额不一致。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 1,
+          "tool_sequence": [
+            "contact_customer_support"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "用户要求紧急报告并解决差异。实际针对 3426812 发送包含交易号、旅客、航线、日期、850/290 差额的报告，要求核实、条件退款、暂停额外收费及升级，支持返回已收到。联系和报告完成，后续处理及最终解决不可见。附加内部票据仅询问，没有创建；消息中请求退款或停止收费不等于系统已退款或改账。",
+          "visible_completion": [
+            {
+              "action": "联系支持并提交紧急差异报告",
+              "status": "completed_in_visible_record",
+              "time": "same_turn"
+            },
+            {
+              "action": "纠正差异、退款或停止收费",
+              "status": "not_observed_by_visible_end",
+              "time": "not_observed"
+            }
+          ],
+          "uncertainties": [
+            "850 仍只有原请求和前缀助手摘要支持，未核实卡账实际扣款；差额 560 是这两个可见数字的差，不证明可退款金额。",
+            "支持只确认收件，未给最终处理、退款或停止收费结果。",
+            "报告中条件退款、暂停收费等可理解为要求解决差异的具体请求，不能仅凭消息内容标记已发生额外副作用。",
+            "没有自动跟进或内部建票的可见工具证据，最终说会更新仅是未来承诺。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/7/trajectories/1/turns/1/user_task",
+              "exact_excerpt": "Contact customer support urgently to report and resolve a discrepancy",
+              "claim": "本轮授权与请求范围。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/1/steps/0/events/0/arguments",
+              "exact_excerpt": "URGENT: Billing discrepancy for Booking ID 3426812 (Transaction ID 45451592).",
+              "claim": "实际支持消息对准正确预订和交易。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/1/steps/0/events/0/arguments",
+              "exact_excerpt": "If an overcharge is confirmed, initiate a provisional refund for the difference ($560)",
+              "claim": "消息提出条件退款请求，不是退款工具成功结果。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/1/steps/0/events/0/result",
+              "exact_excerpt": "Your message has been received and we will get back to you shortly.",
+              "claim": "支持已收件，但没有实际解决证据。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/1/steps/1/events/0/content/0/text",
+              "exact_excerpt": "Would you like me to also create an internal support ticket now?",
+              "claim": "内部票据仅询问，未实际创建；没有工具错误后的阻塞确认。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-009",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_long_context_190",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 2,
+      "tools": 2,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 2,
+        "unclear": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 contact_customer_support booking_id=3426812"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "沿用共同前缀的最新预订 3426812，向客服发送账单、保险和用户报告的异常收费情况；回执明确收件。同轮完成联系动作，不能据此认定争议已解决。之后询问后续帮助发生于联系完成后，不是报错后的阻塞确认。未见错误、错对象或额外已执行写入。",
+          "completion": [
+            {
+              "action": "联系客户支持",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "step-1/event-1"
+            },
+            {
+              "action": "解决收费争议",
+              "status": "not_observed",
+              "timing": "not_observed",
+              "event": "至该轨迹可见结尾"
+            }
+          ],
+          "uncertainties": [
+            "异常费用的具体金额未在发票结果中呈现；客服收到信息不等于已调查或退款。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/0/shared_completed_prefix/12/output",
+              "exact_excerpt": "\"booking_id\": \"3426812\"",
+              "claim": "当前发票对应预订 3426812。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/0/turns/0/steps/0/events/0/arguments",
+              "exact_excerpt": "\"booking_id\":\"3426812\"",
+              "claim": "实际联系的预订与前缀一致。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/0/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "Your message has been received and we will get back to you shortly.",
+              "claim": "同轮可见收件回执，只有收件而非争议解决。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 create_ticket title=Billing Concern priority=2"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair",
+            "unclear"
+          ],
+          "rationale": "同轮创建标题、优先级和描述均与用户明确给出的字段一致的工单，返回 ID 1、Open。没有附上此前实际往来的逐字全文；答复将补全文本列为后续选项。若当前请求中的 incorporating the detailed exchange 意指全文，则此部分未做；但用户又明确指定 Details 字符串，不能直接判为漏掉必需描述。",
+          "completion": [
+            {
+              "action": "按指定标题、优先级和 Details 创建工单",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "step-1/event-1"
+            },
+            {
+              "action": "附上实际客服往来全文",
+              "status": "unclear_if_required; not_observed",
+              "timing": "not_observed",
+              "event": "step-2/event-1 仅提出可选补充"
+            }
+          ],
+          "uncertainties": [
+            "工单采用用户指定的描述是否已满足其所谓详细往来，文本存在两种解释；未见工单工具错误。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/0/trajectories/0/turns/1/user_task",
+              "exact_excerpt": "Details be 'Detailed exchange with customer support regarding unexpected charge.'",
+              "claim": "用户明确指定描述文本。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/0/turns/1/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"title\":\"Billing Concern\",\"description\":\"Detailed exchange with customer support regarding unexpected charge.\",\"priority\":2}",
+              "claim": "创建参数逐项匹配指定字段，但不是实际往来全文。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/0/turns/1/steps/0/events/0/result",
+              "exact_excerpt": "\"status\": \"Open\", \"priority\": 2",
+              "claim": "同轮工单创建成功。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/0/turns/1/steps/1/events/0/content/0/text",
+              "exact_excerpt": "Add the full transcript of the customer support exchange to the ticket.",
+              "claim": "附全文只是后续选项。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-009",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_long_context_190",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 2,
+      "tools": 2,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 2,
+        "unclear": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 contact_customer_support booking_id=3426812"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "向共同前缀所指预订 3426812 的客服发送异常收费调查请求，返回收件回执。同轮完成联系；后续追问是联系完成后的可选帮助。未见额外写入、错误或错误对象。",
+          "completion": [
+            {
+              "action": "联系客户支持",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "step-1/event-1"
+            },
+            {
+              "action": "解决收费争议",
+              "status": "not_observed",
+              "timing": "not_observed",
+              "event": "至该轨迹可见结尾"
+            }
+          ],
+          "uncertainties": [
+            "回执未包含调查结果、退款或收费纠正。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/0/shared_completed_prefix/12/output",
+              "exact_excerpt": "\"booking_id\": \"3426812\"",
+              "claim": "前缀发票确定目标预订。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/1/turns/0/steps/0/events/0/arguments",
+              "exact_excerpt": "\"booking_id\":\"3426812\"",
+              "claim": "联系客服调用沿用该预订。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/1/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "Your message has been received and we will get back to you shortly.",
+              "claim": "同轮完成收件，未显示解决。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 create_ticket title=Billing Concern priority=2"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair",
+            "unclear"
+          ],
+          "rationale": "同轮创建 ID 1 工单，标题、优先级和描述与用户明确指定值一致。答复说工单包含详细客服交流，但实际描述只是用户给定的一句话；没有附加实际往来。创建已完成，是否还必须附全文有歧义，不把答复自述当作已附全文。",
+          "completion": [
+            {
+              "action": "按指定字段创建工单",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "step-1/event-1"
+            },
+            {
+              "action": "附上实际客服往来全文",
+              "status": "unclear_if_required; not_observed",
+              "timing": "not_observed",
+              "event": "可见结尾"
+            }
+          ],
+          "uncertainties": [
+            "用户指定的 Details 与要求详细往来的措辞可能意指同一项，也可能期待更多；不据此猜测评分。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/0/trajectories/1/turns/1/user_task",
+              "exact_excerpt": "Details be 'Detailed exchange with customer support regarding unexpected charge.'",
+              "claim": "用户指定描述文本。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/1/turns/1/steps/0/events/0/result",
+              "exact_excerpt": "{\"id\": 1, \"title\": \"Billing Concern\", \"description\": \"Detailed exchange with customer support regarding unexpected charge.\", \"status\": \"Open\", \"priority\": 2",
+              "claim": "创建结果证明工单和指定字段，描述并非交流全文。"
+            },
+            {
+              "pointer": "/cases/0/trajectories/1/turns/1/steps/1/events/0/content/0/text",
+              "exact_excerpt": "The ticket contains the detailed exchange with customer support about the unexpected charge",
+              "claim": "答复对工单内容的表述超过了实际存储文本可证明的范围。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-010",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_base_71",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 2,
+      "tools": 6,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "same_turn_tool_error_recovery": 1,
+        "visible_completion_or_late_repair": 2,
+        "unclear": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 5,
+          "tool_sequence": [
+            "step-1/event-1 startEngine START: unlocked-door error",
+            "step-2/event-1 lockDoors all four doors: locked",
+            "step-3/event-1 startEngine START: brake error",
+            "step-4/event-1 pressBrakePedal 1.0: pressed",
+            "step-5/event-1 startEngine START: running"
+          ],
+          "labels": [
+            "same_turn_tool_error_recovery",
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "同一轮发生两段明确恢复：启动报门未锁，实际锁四门后重试；启动再报需踩刹车，实际踩下后再启动，最后 running。未停下询问。锁门与踩刹车由错误明确说明是启动前置条件，属于必要恢复，不记额外副作用。",
+          "completion": [
+            {
+              "action": "锁门并解除启动阻碍",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "steps 1–5"
+            },
+            {
+              "action": "启动发动机",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "step-5/event-1"
+            }
+          ],
+          "uncertainties": [
+            "结果证明运行及踩下刹车；没有释放刹车的调用，用户本轮未要求释放。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/1/trajectories/0/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "All doors must be locked before starting the engine.",
+              "claim": "第一启动错误明确给出门锁前置条件。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/0/turns/0/steps/1/events/0/result",
+              "exact_excerpt": "\"lockStatus\": \"locked\", \"remainingUnlockedDoors\": 0",
+              "claim": "锁门恢复成功。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/0/turns/0/steps/2/events/0/result",
+              "exact_excerpt": "Brake pedal needs to be pressed when starting the engine.",
+              "claim": "第二启动错误给出刹车前置条件。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/0/turns/0/steps/3/events/0/result",
+              "exact_excerpt": "\"brakePedalStatus\": \"pressed\"",
+              "claim": "踩刹车恢复成功。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/0/turns/0/steps/4/events/0/result",
+              "exact_excerpt": "\"engineState\": \"running\"",
+              "claim": "同轮最终启动成功。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 set_navigation destination=Crescent Hollow, Spring, TX"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair",
+            "unclear"
+          ],
+          "rationale": "导航目的地与请求一致，返回正在导航，同轮完成目的地设置。调用及回执没有路线或绕行信息，因此不把 smooth ride without detours 视为已验证。后续选项不阻塞已完成的设置。",
+          "completion": [
+            {
+              "action": "设置指定目的地导航",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "step-1/event-1"
+            },
+            {
+              "action": "验证路线无绕行",
+              "status": "unclear",
+              "timing": "not_observed",
+              "event": "工具未返回路线"
+            }
+          ],
+          "uncertainties": [
+            "只提供 destination 参数，无法验证直接路线、路况或无绕行约束。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/1/trajectories/0/turns/1/user_task",
+              "exact_excerpt": "Crescent Hollow, Spring, TX for a smooth ride without detours",
+              "claim": "目的地和无绕行期望。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/0/turns/1/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"destination\":\"Crescent Hollow, Spring, TX\"}",
+              "claim": "实际只设置指定目的地。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/0/turns/1/steps/0/events/0/result",
+              "exact_excerpt": "Navigating to Crescent Hollow, Spring, TX",
+              "claim": "同轮导航生效。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-010",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_base_71",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 2,
+      "tools": 6,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "same_turn_tool_error_recovery": 1,
+        "visible_completion_or_late_repair": 2,
+        "unclear": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 5,
+          "tool_sequence": [
+            "step-1/event-1 startEngine START: unlocked-door error",
+            "step-2/event-1 lockDoors all four doors: locked",
+            "step-3/event-1 startEngine START: brake error",
+            "step-4/event-1 pressBrakePedal 1.0: pressed",
+            "step-5/event-1 startEngine START: running"
+          ],
+          "labels": [
+            "same_turn_tool_error_recovery",
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "先遇未锁门错误，锁四门后再次启动；再遇刹车错误，踩刹车后第三次启动返回 running。同轮实质恢复两项故障，没有阻塞确认。恢复所需锁门、踩刹车不记额外副作用。",
+          "completion": [
+            {
+              "action": "修复门锁与刹车前置条件后启动",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "steps 1–5"
+            }
+          ],
+          "uncertainties": [
+            "仅能确认返回的运行状态；未见刹车释放，但本轮没有此要求。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/1/trajectories/1/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "All doors must be locked before starting the engine.",
+              "claim": "门锁错误。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/1/turns/0/steps/1/events/0/result",
+              "exact_excerpt": "\"remainingUnlockedDoors\": 0",
+              "claim": "全部门锁定成功。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/1/turns/0/steps/2/events/0/result",
+              "exact_excerpt": "Brake pedal needs to be pressed when starting the engine.",
+              "claim": "重试后报告刹车条件。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/1/turns/0/steps/3/events/0/result",
+              "exact_excerpt": "\"brakePedalStatus\": \"pressed\"",
+              "claim": "刹车前置条件完成。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/1/turns/0/steps/4/events/0/result",
+              "exact_excerpt": "\"engineState\": \"running\"",
+              "claim": "同轮完成启动。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 set_navigation destination=Crescent Hollow, Spring, TX"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair",
+            "unclear"
+          ],
+          "rationale": "调用和成功回执对齐指定目的地；同轮完成导航设置。答复承诺 smoothest path without detours，但只有目的地字段及开始导航的回执，路线性质没有可见支持。未见错误或额外写操作。",
+          "completion": [
+            {
+              "action": "设置指定目的地导航",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "step-1/event-1"
+            },
+            {
+              "action": "保证无绕行路线",
+              "status": "unclear",
+              "timing": "not_observed",
+              "event": "step-2/event-1 只有文字承诺"
+            }
+          ],
+          "uncertainties": [
+            "未提供路线详细信息，不能验证最顺畅或无绕行。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/1/trajectories/1/turns/1/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"destination\":\"Crescent Hollow, Spring, TX\"}",
+              "claim": "导航参数只有目的地。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/1/turns/1/steps/0/events/0/result",
+              "exact_excerpt": "Navigating to Crescent Hollow, Spring, TX",
+              "claim": "该目的地导航已生效。"
+            },
+            {
+              "pointer": "/cases/1/trajectories/1/turns/1/steps/1/events/0/content/0/text",
+              "exact_excerpt": "It'll route for the smoothest path without detours.",
+              "claim": "无绕行性质仅由回答声称。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-011",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_base_59",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "official_passed": false,
+      "paired_outcome": "loss",
+      "observed_turns": 2,
+      "tools": 1,
+      "zero_tool_turns": 1,
+      "tag_turn_counts": {
+        "pause_or_confirmation_after_error": 1,
+        "visible_completion_or_late_repair": 2,
+        "zero_tool_turn": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 startEngine START: unlocked-door error"
+          ],
+          "labels": [
+            "pause_or_confirmation_after_error",
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "启动一次遭门未锁错误，随后询问锁全部、指定门或用户手动锁门，没有实际锁门或重试。当前启动请求仍未完成；下一轮转为计算任务，未补做启动。不是同轮恢复。",
+          "completion": [
+            {
+              "action": "启动发动机",
+              "status": "not_completed_in_visible_trace",
+              "timing": "not_observed",
+              "event": "step-1 失败，step-2 询问；至 turn 5 结尾未补做"
+            }
+          ],
+          "uncertainties": [
+            "不能推断可见结尾之后是否获得确认或完成启动。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/2/trajectories/0/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "All doors must be locked before starting the engine.",
+              "claim": "启动工具明确报错。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/0/turns/0/steps/1/events/0/content/0/text",
+              "exact_excerpt": "Tell me which option you prefer and I’ll proceed.",
+              "claim": "报错后停止并等待用户选择。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 0,
+          "tool_sequence": [],
+          "labels": [
+            "zero_tool_turn",
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "用户末句明确 Use base of 20，但回答列出底数 20、先前燃油 10 及其他表达式供选择，没有工具调用，也未给出数值。这里是新计算任务的确认停顿，不属于本轮工具报错后的恢复或询问。所复述 980 与先前 10 的数值有前缀依据，但不能称为已回答计算题。",
+          "completion": [
+            {
+              "action": "按底数 20、距离 980、precision 10 计算对数",
+              "status": "not_completed_in_visible_trace",
+              "timing": "not_observed",
+              "event": "step-1/event-1 仅澄清"
+            }
+          ],
+          "uncertainties": [
+            "请求同时提到 previous fuel value 与明确底数 20，存在措辞张力；可见行为仍是未计算，不据此判官方对错。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/2/trajectories/0/turns/1/user_task",
+              "exact_excerpt": "Use base of 20.",
+              "claim": "当前请求明确指定 20。"
+            },
+            {
+              "pointer": "/cases/2/shared_completed_prefix/6/output",
+              "exact_excerpt": "\"distance\": 980.0",
+              "claim": "计算所需距离可从前缀获得。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/0/turns/1/steps/0/events/0/content/0/text",
+              "exact_excerpt": "Tell me which option you mean and I’ll compute it to precision 10.",
+              "claim": "只有等待澄清的文字，没有计算结果。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-011",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_base_59",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "official_passed": true,
+      "paired_outcome": "loss",
+      "observed_turns": 2,
+      "tools": 6,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "same_turn_tool_error_recovery": 1,
+        "visible_completion_or_late_repair": 2
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 5,
+          "tool_sequence": [
+            "step-1/event-1 startEngine START: unlocked-door error",
+            "step-2/event-1 lockDoors all four doors: locked",
+            "step-3/event-1 startEngine START: brake error",
+            "step-4/event-1 pressBrakePedal 1.0: pressed",
+            "step-5/event-1 startEngine START: running"
+          ],
+          "labels": [
+            "same_turn_tool_error_recovery",
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "第一次启动被门锁条件阻断后锁四门；第二次被刹车条件阻断后踩刹车；第三次运行成功。两段修复均在同一用户轮，实际调用及相关成功结果齐全。必要前置操作不计请求外副作用。",
+          "completion": [
+            {
+              "action": "修复门锁及刹车条件并启动",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "steps 1–5"
+            }
+          ],
+          "uncertainties": [
+            "仅确认工具返回的运行状态，未扩展为整车所有部件已检修。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/2/trajectories/1/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "All doors must be locked before starting the engine.",
+              "claim": "第一错误。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/1/turns/0/steps/1/events/0/result",
+              "exact_excerpt": "\"remainingUnlockedDoors\": 0",
+              "claim": "锁门成功。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/1/turns/0/steps/2/events/0/result",
+              "exact_excerpt": "Brake pedal needs to be pressed when starting the engine.",
+              "claim": "第二错误。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/1/turns/0/steps/3/events/0/result",
+              "exact_excerpt": "\"brakePedalStatus\": \"pressed\"",
+              "claim": "踩刹车成功。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/1/turns/0/steps/4/events/0/result",
+              "exact_excerpt": "\"engineState\": \"running\"",
+              "claim": "同轮完成启动。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 logarithm value=980 base=20 precision=10"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "使用共同前缀距离 980 和当前明确底数 20，以 precision=10 调用 logarithm，返回数值并在文本中给出近似值。当前计算动作同轮完成，未见错误或请求外修改。",
+          "completion": [
+            {
+              "action": "计算所要求对数并回复",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "step-1/event-1 和 step-2/event-1"
+            }
+          ],
+          "uncertainties": [
+            "precision 参数按请求设为 10；不从包外工具定义推断精度单位。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/2/shared_completed_prefix/6/output",
+              "exact_excerpt": "\"distance\": 980.0",
+              "claim": "距离来源正确。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/1/turns/1/user_task",
+              "exact_excerpt": "Use base of 20.",
+              "claim": "用户明确底数。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/1/turns/1/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"value\":980,\"base\":20,\"precision\":10}",
+              "claim": "调用对齐数值、底数及精度参数。"
+            },
+            {
+              "pointer": "/cases/2/trajectories/1/turns/1/steps/1/events/0/content/0/text",
+              "exact_excerpt": "2.2991215311",
+              "claim": "同轮已给出计算结果。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-012",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_long_context_162",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "official_passed": false,
+      "paired_outcome": "both_fail",
+      "observed_turns": 3,
+      "tools": 2,
+      "zero_tool_turns": 1,
+      "tag_turn_counts": {
+        "zero_tool_turn": 1,
+        "answer_claim_without_tool": 1,
+        "visible_completion_or_late_repair": 3,
+        "unclear": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 0,
+          "tool_sequence": [],
+          "labels": [
+            "zero_tool_turn",
+            "answer_claim_without_tool",
+            "visible_completion_or_late_repair",
+            "unclear"
+          ],
+          "rationale": "仅询问 RMS 所指币种、2940 的计价单位及是否可用已提供 token，没有转换或预算设置。RMS 在前缀是机场代码，币种确有歧义；但回答还断言工具支持币种及 set_budget_limit 仅接收 USD，公共包未含相应工具定义或结果，不能验证这些 API 限制。并非报错后停顿。",
+          "completion": [
+            {
+              "action": "汇率转换",
+              "status": "not_completed_in_visible_trace",
+              "timing": "not_observed",
+              "event": "step-1/event-1 仅澄清；至 turn 6 未补做"
+            },
+            {
+              "action": "设置 2940 预算",
+              "status": "not_completed_in_visible_trace",
+              "timing": "not_observed",
+              "event": "至 turn 6 未补做"
+            }
+          ],
+          "uncertainties": [
+            "RMS 币种及预算单位不明；无法从可见包判断所述工具约束是否真实。再次请求 token 确认是可见停顿，但币种歧义本身不能由审查者补定。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/3/shared_completed_prefix/6/output",
+              "exact_excerpt": "\"nearest_airport\": \"RMS\"",
+              "claim": "前缀只把 RMS 确认为机场。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/0/turns/0/user_task",
+              "exact_excerpt": "exchange rate adjustment and budget setting",
+              "claim": "请求包括转换与设置预算两项动作。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/0/turns/0/steps/0/events/0/content/0/text",
+              "exact_excerpt": "The set_budget_limit call expects the budget amount in USD.",
+              "claim": "该 API 约束仅在无工具文本中被声称，包内缺乏验证。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/0/turns/0/steps/0/events/0/content/0/text",
+              "exact_excerpt": "Confirm you want me to proceed and that it’s OK to use the token.",
+              "claim": "未执行，要求额外确认。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 book_flight RMS→JFK 2026-09-10 economy card6749"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "预订参数沿用共同前缀路线、日期、舱等及本轮卡号，返回 booking_status=true、预订 3426812、费用 420。当前预订同轮完成；此前转换及预算设置仍只被列为待澄清，没有后轮补做。",
+          "completion": [
+            {
+              "action": "预订指定航班",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "step-1/event-1"
+            },
+            {
+              "action": "前轮转换及预算设置",
+              "status": "not_completed_in_visible_trace",
+              "timing": "not_observed",
+              "event": "step-2/event-1 继续等待澄清；至 turn 6 结尾"
+            }
+          ],
+          "uncertainties": [
+            "旅客 particulars 未在调用或返回中展开，无法核验姓名等；不得把未显示字段推断为错误对象。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/3/shared_completed_prefix/9/arguments",
+              "exact_excerpt": "\"travel_from\":\"RMS\",\"travel_to\":\"JFK\",\"travel_date\":\"2026-09-10\",\"travel_class\":\"economy\"",
+              "claim": "前缀确定路线、日期与舱等。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/0/turns/1/steps/0/events/0/arguments",
+              "exact_excerpt": "\"card_id\":\"card6749\",\"travel_date\":\"2026-09-10\",\"travel_from\":\"RMS\",\"travel_to\":\"JFK\",\"travel_class\":\"economy\"",
+              "claim": "预订调用与本轮及前缀对象一致。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/0/turns/1/steps/0/events/0/result",
+              "exact_excerpt": "\"booking_status\": true",
+              "claim": "当前预订同轮成功。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/0/turns/1/steps/1/events/0/content/0/text",
+              "exact_excerpt": "I can set a budget now but need to know whether the 2,940 value is in USD or another currency",
+              "claim": "预算仍未设置，不是前轮任务的后续修复。"
+            }
+          ]
+        },
+        {
+          "turn": 6,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 close_ticket ticket_id=458219"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "按当前请求关闭唯一指定工单 458219，成功回执及文字确认一致。同轮完成，未见报错、错对象或额外副作用；也未补做此前转换和预算任务。",
+          "completion": [
+            {
+              "action": "关闭 458219",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "step-1/event-1"
+            }
+          ],
+          "uncertainties": [],
+          "evidence": [
+            {
+              "pointer": "/cases/3/trajectories/0/turns/2/user_task",
+              "exact_excerpt": "close ticket number 458219",
+              "claim": "唯一目标工单。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/0/turns/2/steps/0/events/0/result",
+              "exact_excerpt": "Ticket 458219 has been closed successfully.",
+              "claim": "指定工单同轮关闭成功。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-012",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_long_context_162",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "official_passed": false,
+      "paired_outcome": "both_fail",
+      "observed_turns": 3,
+      "tools": 1,
+      "zero_tool_turns": 2,
+      "tag_turn_counts": {
+        "zero_tool_turn": 2,
+        "answer_claim_without_tool": 1,
+        "visible_completion_or_late_repair": 3,
+        "unclear": 1,
+        "supported_answer_without_tool": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 0,
+          "tool_sequence": [],
+          "labels": [
+            "zero_tool_turn",
+            "answer_claim_without_tool",
+            "visible_completion_or_late_repair",
+            "unclear"
+          ],
+          "rationale": "仅询问 RMS 币种、要转换的金额及 token 使用确认；转换和预算设置均无调用。RMS 曾作为机场代码有依据，支持的货币列表和不能自动转换的工具限制仅来自模型自述，公共包未给定义供验证。本轮没有实际工具错误，不贴报错后确认标签。",
+          "completion": [
+            {
+              "action": "汇率转换",
+              "status": "not_completed_in_visible_trace",
+              "timing": "not_observed",
+              "event": "step-1/event-1；至 turn 6 结尾"
+            },
+            {
+              "action": "预算设置",
+              "status": "not_completed_in_visible_trace",
+              "timing": "not_observed",
+              "event": "至 turn 6 结尾"
+            }
+          ],
+          "uncertainties": [
+            "RMS 的货币含义、2940 的币种不清；再次确认 token 不是工具报错导致。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/3/shared_completed_prefix/6/output",
+              "exact_excerpt": "\"nearest_airport\": \"RMS\"",
+              "claim": "RMS 的机场含义有前缀证据。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/1/turns/0/steps/0/events/0/content/0/text",
+              "exact_excerpt": "the travel API supports: USD, RMB, EUR, JPY, GBP, CAD, AUD, INR, RUB, BRL, MXN",
+              "claim": "无工具文本声称 API 支持范围，包内未提供相应定义。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/1/turns/0/steps/0/events/0/content/0/text",
+              "exact_excerpt": "Once you confirm, I’ll perform the conversion and (if you want) set the budget.",
+              "claim": "两项动作都留待确认后，当前未执行。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 0,
+          "tool_sequence": [],
+          "labels": [
+            "zero_tool_turn",
+            "supported_answer_without_tool",
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "只复述可由前缀及当前请求支持的路线、日期、经济舱和卡号，再请求确认付款；没有 book_flight 调用，预订未完成。supported_answer_without_tool 仅指这些已知字段的复述，不表示完成动作。未经历工具报错，不能贴报错后暂停标签。",
+          "completion": [
+            {
+              "action": "预订航班并收费",
+              "status": "not_completed_in_visible_trace",
+              "timing": "not_observed",
+              "event": "step-1/event-1 仅确认；turn 6 仍仅询问"
+            }
+          ],
+          "uncertainties": [
+            "回答假定一名旅客并请求校正，包内未给旅客人数；无预订完成证据。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/3/shared_completed_prefix/9/arguments",
+              "exact_excerpt": "\"travel_from\":\"RMS\",\"travel_to\":\"JFK\",\"travel_date\":\"2026-09-10\",\"travel_class\":\"economy\"",
+              "claim": "复述航班字段来自共同前缀。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/1/turns/1/user_task",
+              "exact_excerpt": "finalize the reservation, charging it to the credit card registered with id 'card6749'",
+              "claim": "本轮已明确要求预订和使用此卡。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/1/turns/1/steps/0/events/0/content/0/text",
+              "exact_excerpt": "Please confirm you want me to proceed with these details (and that I should charge card6749).",
+              "claim": "实际仅等待再次确认，没有执行预订。"
+            }
+          ]
+        },
+        {
+          "turn": 6,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 close_ticket ticket_id=458219"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "当前指定工单 458219 关闭成功。答复再次询问要不要订票，因此前轮预订至可见结尾仍未补做；关单后的订票询问不能算本轮关单被阻塞。没有工具报错或额外写操作。",
+          "completion": [
+            {
+              "action": "关闭工单 458219",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "step-1/event-1"
+            },
+            {
+              "action": "前轮预订及更早预算/转换",
+              "status": "not_completed_in_visible_trace",
+              "timing": "not_observed",
+              "event": "可见结尾"
+            }
+          ],
+          "uncertainties": [],
+          "evidence": [
+            {
+              "pointer": "/cases/3/trajectories/1/turns/2/user_task",
+              "exact_excerpt": "close ticket number 458219",
+              "claim": "本轮关单目标。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/1/turns/2/steps/0/events/0/result",
+              "exact_excerpt": "Ticket 458219 has been closed successfully.",
+              "claim": "当前任务同轮完成。"
+            },
+            {
+              "pointer": "/cases/3/trajectories/1/turns/2/steps/1/events/0/content/0/text",
+              "exact_excerpt": "If yes, confirm and I’ll complete the booking.",
+              "claim": "仍未执行前轮预订。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-013",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_long_context_107",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 2,
+      "tools": 2,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 2,
+        "unclear": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 cancel_order order_id=12446"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "that order 可唯一对齐共同前缀的 ZETA 订单 12446；实际撤销 12446 且返回 Cancelled，同轮完成。未见错误或额外写入；后续帮助问题不是未完成动作的确认。",
+          "completion": [
+            {
+              "action": "撤销 ZETA 订单 12446",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "step-1/event-1"
+            }
+          ],
+          "uncertainties": [],
+          "evidence": [
+            {
+              "pointer": "/cases/4/shared_completed_prefix/12/output",
+              "exact_excerpt": "\"id\": 12446, \"order_type\": \"Buy\", \"symbol\": \"ZETA\"",
+              "claim": "共同前缀确定应撤销的订单。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/0/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "{\"order_id\": 12446, \"status\": \"Cancelled\"}",
+              "claim": "对应订单同轮撤销成功。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 get_account_info {}"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair",
+            "unclear"
+          ],
+          "rationale": "读取账户成功，余额 11500 和完整关联卡号已出现在工具结果；答复给出余额但仅显示卡号末四位，并把展示全号留给再次验证。账户查询与余额传达同轮完成；若 linked card number 要求完整号码，文字交付未完成。没有报错，所以该验证询问不属于报错后确认。",
+          "completion": [
+            {
+              "action": "读取账户及传达余额",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "steps 1–2"
+            },
+            {
+              "action": "向用户展示完整关联卡号",
+              "status": "not_observed; requirement_scope_unclear",
+              "timing": "not_observed",
+              "event": "step-2/event-1 仅末四位"
+            }
+          ],
+          "uncertainties": [
+            "用户未明确是否接受掩码；不能把工具里取得完整卡号等同于已向用户展示完整卡号。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/4/trajectories/0/turns/1/user_task",
+              "exact_excerpt": "including the current balance and the linked card number",
+              "claim": "请求包含余额及卡号。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/0/turns/1/steps/0/events/0/result",
+              "exact_excerpt": "\"balance\": 11500.0, \"binding_card\": 1974202140965533",
+              "claim": "工具已返回余额和完整卡号。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/0/turns/1/steps/1/events/0/content/0/text",
+              "exact_excerpt": "Linked card: **** **** **** 5533 (last 4 digits: 5533)",
+              "claim": "实际回答只披露末四位。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/0/turns/1/steps/1/events/0/content/0/text",
+              "exact_excerpt": "show the full card number after verifying your identity",
+              "claim": "全号交付被留待额外验证。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-013",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_long_context_107",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 2,
+      "tools": 2,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 2,
+        "unclear": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 cancel_order order_id=12446"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "请求 that order 与前缀订单 12446 唯一对齐，调用该 ID 并返回 Cancelled。撤单同轮完成；没有工具报错、错对象或额外已执行写入。",
+          "completion": [
+            {
+              "action": "撤销 ZETA 订单 12446",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "step-1/event-1"
+            }
+          ],
+          "uncertainties": [],
+          "evidence": [
+            {
+              "pointer": "/cases/4/shared_completed_prefix/12/output",
+              "exact_excerpt": "\"id\": 12446, \"order_type\": \"Buy\", \"symbol\": \"ZETA\"",
+              "claim": "前缀唯一目标。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/1/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "{\"order_id\": 12446, \"status\": \"Cancelled\"}",
+              "claim": "该目标同轮撤销成功。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 get_account_info {}"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair",
+            "unclear"
+          ],
+          "rationale": "账户工具返回余额 11500 及完整关联卡号，回答传达余额和掩码末四位。账户获取完成，完整号码未交付；用户是否仅需识别卡片不明确。后续可选账户动作没有实际执行，不算额外副作用。",
+          "completion": [
+            {
+              "action": "读取账户及传达余额",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "steps 1–2"
+            },
+            {
+              "action": "向用户展示完整关联卡号",
+              "status": "not_observed; requirement_scope_unclear",
+              "timing": "not_observed",
+              "event": "step-2/event-1 只显示末四位"
+            }
+          ],
+          "uncertainties": [
+            "完整卡号展示是否是本轮必需交付，未由用户进一步明确；无工具错误。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/4/trajectories/1/turns/1/user_task",
+              "exact_excerpt": "including the current balance and the linked card number",
+              "claim": "本轮请求范围。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/1/turns/1/steps/0/events/0/result",
+              "exact_excerpt": "\"balance\": 11500.0, \"binding_card\": 1974202140965533",
+              "claim": "账户查询结果。"
+            },
+            {
+              "pointer": "/cases/4/trajectories/1/turns/1/steps/1/events/0/content/0/text",
+              "exact_excerpt": "Linked card: **** **** **** 5533",
+              "claim": "实际只给出掩码号码。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-014",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_base_121",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "official_passed": false,
+      "paired_outcome": "both_fail",
+      "observed_turns": 1,
+      "tools": 1,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 withdraw_funds amount=500"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "按请求提现 500，工具返回成功与新余额 34500，答复据此确认。对前缀 AAPL 订单金额的提示只是解释，未取消或改动订单；可选后续问题不阻塞当前提现。",
+          "completion": [
+            {
+              "action": "提现 500",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "step-1/event-1"
+            }
+          ],
+          "uncertainties": [
+            "回执不说明款项入哪个外部账户；只确认本轮所请求的提现成功。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/5/trajectories/0/turns/0/user_task",
+              "exact_excerpt": "withdraw $500 from my account",
+              "claim": "本轮授权金额。"
+            },
+            {
+              "pointer": "/cases/5/trajectories/0/turns/0/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"amount\":500}",
+              "claim": "实际金额匹配。"
+            },
+            {
+              "pointer": "/cases/5/trajectories/0/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "\"status\": \"Withdrawal successful\", \"new_balance\": 34500.0",
+              "claim": "同轮成功回执。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-014",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_base_121",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "official_passed": false,
+      "paired_outcome": "both_fail",
+      "observed_turns": 1,
+      "tools": 1,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 withdraw_funds amount=500"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "提现 500 的实际调用和成功回执齐全，答复准确转述新余额 34500。提出转账、记备注或撤销的选项但未执行，不能记额外副作用或未完成提现。",
+          "completion": [
+            {
+              "action": "提现 500",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "step-1/event-1"
+            }
+          ],
+          "uncertainties": [
+            "未显示外部收款到账；不把后续转账建议当成已转账。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/5/trajectories/1/turns/0/user_task",
+              "exact_excerpt": "withdraw $500 from my account",
+              "claim": "本轮请求。"
+            },
+            {
+              "pointer": "/cases/5/trajectories/1/turns/0/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"amount\":500}",
+              "claim": "调用金额一致。"
+            },
+            {
+              "pointer": "/cases/5/trajectories/1/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "\"status\": \"Withdrawal successful\", \"new_balance\": 34500.0",
+              "claim": "提现成功及余额。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-015",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_long_context_112",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 1,
+      "tools": 1,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 get_account_info {}"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "实际读取账户并回复账户 ID、余额 10000 和关联卡末四位；回顾已撤订单有共同前缀依据。当前账户概览同轮交付，后续交易历史、持仓等是可选扩展，没有调用或写入，不算额外副作用。",
+          "completion": [
+            {
+              "action": "读取并概述账户资料",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "steps 1–2"
+            }
+          ],
+          "uncertainties": [
+            "广义 shipshape 不能由单次账户资料查询证明全部财务风险正常；未返回持仓、未结算款或保证金。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/6/trajectories/0/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "\"account_id\": 12345, \"balance\": 10000.0",
+              "claim": "账户信息同轮读取成功。"
+            },
+            {
+              "pointer": "/cases/6/trajectories/0/turns/0/steps/1/events/0/content/0/text",
+              "exact_excerpt": "Available balance: $10,000.00",
+              "claim": "已向用户交付结果。"
+            },
+            {
+              "pointer": "/cases/6/shared_completed_prefix/12/output",
+              "exact_excerpt": "\"order_id\": 12446, \"status\": \"Cancelled\"",
+              "claim": "答复中回顾订单已撤销有前缀依据。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-015",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_long_context_112",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "official_passed": true,
+      "paired_outcome": "both_pass",
+      "observed_turns": 1,
+      "tools": 1,
+      "zero_tool_turns": 0,
+      "tag_turn_counts": {
+        "visible_completion_or_late_repair": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 1,
+          "tool_sequence": [
+            "step-1/event-1 get_account_info {}"
+          ],
+          "labels": [
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "账户结果为 ID 12345、余额 10000、绑定卡号；答复显示余额与末四位，并承认此调用未返回持仓、购买力、交易历史。当前资料读取与概览同轮完成。推荐的其他检查、密码或资金变更均未执行，不记额外副作用。",
+          "completion": [
+            {
+              "action": "读取并概述账户资料",
+              "status": "completed",
+              "timing": "same_turn",
+              "event": "steps 1–2"
+            }
+          ],
+          "uncertainties": [
+            "余额足够 many small-to-medium trades 属于宽泛评价，不是系统给出的购买力证明；没有全面财务审计结果。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/6/trajectories/1/turns/0/steps/0/events/0/result",
+              "exact_excerpt": "\"account_id\": 12345, \"balance\": 10000.0",
+              "claim": "取得账户快照。"
+            },
+            {
+              "pointer": "/cases/6/trajectories/1/turns/0/steps/1/events/0/content/0/text",
+              "exact_excerpt": "Available cash balance: $10,000.00",
+              "claim": "已交付余额。"
+            },
+            {
+              "pointer": "/cases/6/trajectories/1/turns/0/steps/1/events/0/content/0/text",
+              "exact_excerpt": "No other account details (positions, buying power, recent transactions) were returned in this call",
+              "claim": "回答明确限定所查范围。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-016",
+      "anonymous_id": "trajectory-001",
+      "task": "multi_turn_long_context_138",
+      "boundary_turns": 3,
+      "arm": "graph-record-view-full",
+      "official_passed": false,
+      "paired_outcome": "both_fail",
+      "observed_turns": 2,
+      "tools": 0,
+      "zero_tool_turns": 2,
+      "tag_turn_counts": {
+        "zero_tool_turn": 2,
+        "supported_answer_without_tool": 2,
+        "visible_completion_or_late_repair": 2,
+        "answer_claim_without_tool": 1,
+        "unclear": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 0,
+          "tool_sequence": [],
+          "labels": [
+            "zero_tool_turn",
+            "supported_answer_without_tool",
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "没有发送或查找用户的调用。依据共同前缀的 Open 状态，指出所要求 completed 消息与最近可见状态冲突，提出改文或等待，并请求 Sarah 标识/查找许可。已知订单状态的说明有依据，但发送请求没有完成；自动监控与将来发送仅是承诺。没有本轮工具报错。",
+          "completion": [
+            {
+              "action": "给 Sarah 发送指定消息",
+              "status": "not_completed_in_visible_trace",
+              "timing": "not_observed",
+              "event": "step-1/event-1 仅提出选项；turn 5 也无发送"
+            },
+            {
+              "action": "监控订单并自动发送",
+              "status": "not_observed",
+              "timing": "not_observed",
+              "event": "仅文字提议"
+            }
+          ],
+          "uncertainties": [
+            "Open 是前缀最后可见状态，本轮未刷新；不能把所谓 live status 说成当前新查结果。Sarah 的唯一接收标识尚未查询。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/7/shared_completed_prefix/14/output",
+              "exact_excerpt": "\"id\": 12446, \"order_type\": \"Buy\", \"symbol\": \"SYNX\", \"price\": 345.67, \"amount\": 150, \"status\": \"Open\"",
+              "claim": "关于未成交的说明来自前缀最后状态。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/0/turns/0/user_task",
+              "exact_excerpt": "Kindly send the message 'Order for purchasing SYNX is completed.'",
+              "claim": "用户请求实际发送指定文字。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/0/turns/0/steps/0/events/0/content/0/text",
+              "exact_excerpt": "I won’t send a false confirmation.",
+              "claim": "本轮拒绝立即按原文发送。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/0/turns/0/steps/0/events/0/content/0/text",
+              "exact_excerpt": "please tell me which option (1 or 2) and give Sarah’s workspace username",
+              "claim": "停在文字选项和标识询问。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 0,
+          "tool_sequence": [],
+          "labels": [
+            "zero_tool_turn",
+            "supported_answer_without_tool",
+            "answer_claim_without_tool",
+            "visible_completion_or_late_repair",
+            "unclear"
+          ],
+          "rationale": "无工具调用；指出此前在本轨迹没有实际发送，这由 turn 4 只有文字支持。要求 Sarah 用户名或查找许可，再请求删除确认；撤回并未执行。声称系统只能删给该接收者的最近一条消息，公共包未有相关工具定义可核验，因此该限制另记无工具依据不足。没有当前报错，不贴报错后停顿标签。",
+          "completion": [
+            {
+              "action": "撤回特定消息",
+              "status": "not_completed_in_visible_trace",
+              "timing": "not_observed",
+              "event": "step-1/event-1 仅询问"
+            }
+          ],
+          "uncertainties": [
+            "用户所指消息是否由外部渠道发送不可知；本轨迹此前未发送，不能凭请求自述补造消息。工具只能删除最近一条的限制不可从公共输入验证。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/7/trajectories/0/turns/0/steps/0/events/0/content/0/text",
+              "exact_excerpt": "I won’t send a false confirmation.",
+              "claim": "前轮没有已发送行为的可见证据。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/0/turns/1/steps/0/events/0/content/0/text",
+              "exact_excerpt": "I don’t currently see that I actually sent any message to Sarah earlier in this session.",
+              "claim": "本轮对未发送情况的说明与轨迹一致。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/0/turns/1/steps/0/events/0/content/0/text",
+              "exact_excerpt": "the system can only delete the latest message that I sent to that receiver",
+              "claim": "系统限制是未经包内工具定义支持的文字声称。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/0/turns/1/steps/0/events/0/content/0/text",
+              "exact_excerpt": "confirm you want me to delete the latest message I sent to Sarah",
+              "claim": "撤回仍留待确认，并未实际执行。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "case-016",
+      "anonymous_id": "trajectory-002",
+      "task": "multi_turn_long_context_138",
+      "boundary_turns": 3,
+      "arm": "identity",
+      "official_passed": false,
+      "paired_outcome": "both_fail",
+      "observed_turns": 2,
+      "tools": 6,
+      "zero_tool_turns": 1,
+      "tag_turn_counts": {
+        "zero_tool_turn": 1,
+        "supported_answer_without_tool": 1,
+        "visible_completion_or_late_repair": 2,
+        "attempted_unresolved": 1,
+        "pause_or_confirmation_after_error": 1,
+        "unclear": 1
+      },
+      "label_file": {
+        "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json",
+        "sha256": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834"
+      },
+      "turns": [
+        {
+          "turn": 4,
+          "tool_count": 0,
+          "tool_sequence": [],
+          "labels": [
+            "zero_tool_turn",
+            "supported_answer_without_tool",
+            "visible_completion_or_late_repair"
+          ],
+          "rationale": "没有工具调用，依据前缀 Open 状态说明 completed 消息有冲突，提供原样发送、改成准确消息、等待或自定义等选项，并要求确认如何找到 Sarah。支持的状态解释不等于已发送；本轮称 quick status check 也不是新查询。无实际自动监控。",
+          "completion": [
+            {
+              "action": "发送指定消息给 Sarah",
+              "status": "not_completed_in_visible_trace",
+              "timing": "not_observed",
+              "event": "step-1/event-1 仅选项；turn 5 没有发送"
+            },
+            {
+              "action": "自动监控后发送",
+              "status": "not_observed",
+              "timing": "not_observed",
+              "event": "仅文字选项"
+            }
+          ],
+          "uncertainties": [
+            "前缀状态可能随后改变，但没有新结果；无法据此声称本轮重新检查了状态。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/7/shared_completed_prefix/14/output",
+              "exact_excerpt": "\"status\": \"Open\"",
+              "claim": "未成交说明有前缀支持。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/0/user_task",
+              "exact_excerpt": "Kindly send the message 'Order for purchasing SYNX is completed.'",
+              "claim": "实际发送是本轮请求。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/0/steps/0/events/0/content/0/text",
+              "exact_excerpt": "Tell me how you’d like to proceed (pick one):",
+              "claim": "停下来要求选择，没有发送。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/0/steps/0/events/0/content/0/text",
+              "exact_excerpt": "Also confirm how to find Sarah",
+              "claim": "接收者查找也留待确认。"
+            }
+          ]
+        },
+        {
+          "turn": 5,
+          "tool_count": 6,
+          "tool_sequence": [
+            "step-1/event-1 get_user_id Sarah→USR006",
+            "step-2/event-1 delete_message receiver_id=USR006: receiver not found",
+            "step-3/event-1 list_users: Michael, Sarah, David, Emma",
+            "step-4/event-1 get_user_id Sarah→USR006",
+            "step-5/event-1 view_messages_sent: USR005 has another text",
+            "step-6/event-1 search_messages exact requested text: list.lower error"
+          ],
+          "labels": [
+            "attempted_unresolved",
+            "pause_or_confirmation_after_error",
+            "visible_completion_or_late_repair",
+            "unclear"
+          ],
+          "rationale": "按 Sarah 查询得到 USR006，删除该 ID 失败；其后只读列用户、再次查 Sarah、看已发消息、搜索原文。再次查询仍是 USR006；已发日志另有 USR005 的不同文本，未证明其是 Sarah。搜索又报内部错误，随后列选项请求确认，撤回仍未完成。失败后确有尝试，但无相关成功删除结果，不记同轮恢复；没有改删 USR005，也没有发送纠正消息，故不记错对象操作或额外已发生副作用。",
+          "completion": [
+            {
+              "action": "定位 Sarah 的接收标识",
+              "status": "lookup_completed_but_delete_inconsistent",
+              "timing": "same_turn",
+              "event": "steps 1 与 4 返回 USR006"
+            },
+            {
+              "action": "撤回特定消息",
+              "status": "not_completed_in_visible_trace",
+              "timing": "not_observed",
+              "event": "step-2 失败；step-6 搜索失败；step-7 询问"
+            }
+          ],
+          "uncertainties": [
+            "USR005 与 Sarah 的对应关系未提供，不能据此给 wrong_object_or_source 标签。前轮未发送原文，日志里另一个消息的来源不明；没有证据证明它就是本轮应撤回对象。"
+          ],
+          "evidence": [
+            {
+              "pointer": "/cases/7/trajectories/1/turns/1/steps/0/events/0/arguments",
+              "exact_excerpt": "{\"user\":\"Sarah\"}",
+              "claim": "实际查找当前目标 Sarah。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/1/steps/0/events/0/result",
+              "exact_excerpt": "\"user_id\": \"USR006\"",
+              "claim": "工具提供 Sarah 的标识。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/1/steps/1/events/0/arguments",
+              "exact_excerpt": "{\"receiver_id\":\"USR006\"}",
+              "claim": "删除使用刚查得的标识，未选不同对象。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/1/steps/1/events/0/result",
+              "exact_excerpt": "Receiver ID USR006 not found.",
+              "claim": "删除失败，没有已发生删除的成功证据。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/1/steps/4/events/0/result",
+              "exact_excerpt": "\"USR005\": [[\"The trading venture was successful.\"]]",
+              "claim": "只读日志发现另一个 ID 和另一段文本，未建立其与目标的关系。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/1/steps/5/events/0/result",
+              "exact_excerpt": "Error during execution: 'list' object has no attribute 'lower'",
+              "claim": "搜索尝试也失败，不能算已恢复。"
+            },
+            {
+              "pointer": "/cases/7/trajectories/1/turns/1/steps/6/events/0/content/0/text",
+              "exact_excerpt": "How would you like me to proceed? Pick one:",
+              "claim": "未完成删除时停下请求选择。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Tags may overlap and are not official scores.",
+    "Single paired runs cannot establish a reproducible causal effect.",
+    "Unequal observed-turn denominators arise when a run stops early."
+  ]
+}

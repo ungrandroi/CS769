@@ -1,0 +1,621 @@
+{
+  "version": "coverage120-behavior-review-v1",
+  "created_at_utc": "2026-10-25T03:33:31.055725+00:00",
+  "model": "gpt-4.1",
+  "snapshot_root": "snapshots/completed",
+  "review_scope": "All discordant pairs (two losses, zero gains), plus official error categories for 11 shared travel failures. No APIs, evaluator changes, source edits, or post-hoc rescoring.",
+  "sampling": "One trajectory per arm per eligible condition; temperature 0 and seed 42 do not establish repeatability.",
+  "turn_numbering": "JSON turn_zero_based is the runner index; turn_human is index+1.",
+  "paired_summary": {
+    "eligible_pairs": 85,
+    "identity_passed": 68,
+    "g9_passed": 66,
+    "losses": [
+      "multi_turn_long_context_176",
+      "multi_turn_long_context_199"
+    ],
+    "gains": []
+  },
+  "per_domain": {
+    "filesystem": {
+      "pairs": 19,
+      "identity_passed": 19,
+      "g9_passed": 19,
+      "new_losses": 0,
+      "gains": 0
+    },
+    "vehicle": {
+      "pairs": 13,
+      "identity_passed": 9,
+      "g9_passed": 9,
+      "new_losses": 0,
+      "gains": 0
+    },
+    "trading": {
+      "pairs": 27,
+      "identity_passed": 25,
+      "g9_passed": 25,
+      "new_losses": 0,
+      "gains": 0
+    },
+    "travel": {
+      "pairs": 26,
+      "identity_passed": 15,
+      "g9_passed": 13,
+      "new_losses": 2,
+      "gains": 0
+    }
+  },
+  "discordant_pair_reviews": [
+    {
+      "task_id": "multi_turn_long_context_176",
+      "domain": "travel",
+      "boundary_completed_user_turns": 1,
+      "identity_passed": true,
+      "g9_passed": false,
+      "first_divergent_continuation_turn_zero_based": 1,
+      "first_divergent_continuation_turn_human": 2,
+      "official_error_type": "multi_turn:instance_state_mismatch",
+      "official_error_message": "Model instance for TicketAPI does not match the state with ground truth instance.",
+      "empty_turn_failure": false,
+      "new_tools_invoked_by_g9": true,
+      "shared_prefix_files_identical": {
+        "prefix-history.json": true,
+        "native-prefix-history.json": true,
+        "native-context.json": true,
+        "user-suffix.json": true
+      },
+      "tools_and_sampling_equal": true,
+      "graph_full_visible_evidence_roundtrip_verified": true,
+      "graph_record_active": false,
+      "graph_join_count": 0,
+      "graph_edge_count": 0,
+      "graph_appendix_characters": 0,
+      "graph_exact_base_body": true,
+      "live_requests": {
+        "identity": 2,
+        "graph-record-view-full": 2
+      },
+      "sources": {
+        "identity_score": {
+          "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_long_context_176/1/identity/official-score.json",
+          "sha256": "f7eb9aeceb5c25eec7b218b1c8d6fe318d50328a3e1a0ed0f7ee58c01281782d"
+        },
+        "g9_score": {
+          "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_long_context_176/1/graph-record-view-full/official-score.json",
+          "sha256": "812c8c7e2e81a297085fc807626c53390eb8236857462c0dbb50904c13233b3f",
+          "json_pointer": "/diagnostics/0/error"
+        },
+        "current_user_instruction": {
+          "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_long_context_176/1/graph-record-view-full/user-suffix.json",
+          "sha256": "e650e3ad64e26d9e9580e576cd04ead0ae9b23611c56e0d9d6dd7149f462b2ba",
+          "json_pointer": "/0/content",
+          "turn_zero_based": 1,
+          "turn_human": 2
+        },
+        "shared_prefix": {
+          "path": "snapshots/completed/cov01-prefix-k1/runs/gpt-4.1/multi_turn_long_context_176/1/identity/native-prefix-history.json",
+          "sha256": "7532d98294e94be249bbd674fb9971bbe921cb9cdb6b20048c24dadd24b85f21"
+        },
+        "tool_definitions": {
+          "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_long_context_176/1/graph-record-view-full/native-context.json",
+          "sha256": "bdd49706f13c933bafe33d242b68fa8b53f373cc54758d667d85643801e1292c",
+          "json_pointer": "/tools"
+        },
+        "graph_structure": {
+          "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_long_context_176/1/graph-record-view-full/multi_turn_long_context_176.graph.json",
+          "sha256": "3cd045f9ab4258e5373cff250d386e87b980564586c0df513e3f7c82091fa669",
+          "json_pointer": "/record_inference/record_layer"
+        },
+        "graph_structure_audit": {
+          "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_long_context_176/1/graph-record-view-full/multi_turn_long_context_176.graph.json",
+          "sha256": "3cd045f9ab4258e5373cff250d386e87b980564586c0df513e3f7c82091fa669",
+          "json_pointer": "/record_audit"
+        },
+        "graph_integrity": {
+          "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_long_context_176/1/graph-record-view-full/manifest.json",
+          "sha256": "15c8bffe410f2376d5cfa6bd4ed2dc7b72c3845885157ea7044837f3c563adac",
+          "json_pointer": "/boundary/evidence_audit"
+        },
+        "identity_first_action": {
+          "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_long_context_176/1/identity/native.jsonl",
+          "sha256": "3da4774b646393046c9dc645e234cb7ddce4d4fa039f563e0cefa893443cbddb",
+          "line": 2,
+          "turn_zero_based": 1,
+          "turn_human": 2
+        },
+        "g9_first_action": {
+          "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_long_context_176/1/graph-record-view-full/native.jsonl",
+          "sha256": "eb64e934e031e075d5dc558b209009098d3d80b496de81a204a6a8a93454213c",
+          "line": 2,
+          "turn_zero_based": 1,
+          "turn_human": 2
+        },
+        "g9_tool_results": {
+          "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_long_context_176/1/graph-record-view-full/native.jsonl",
+          "sha256": "eb64e934e031e075d5dc558b209009098d3d80b496de81a204a6a8a93454213c",
+          "line": 3,
+          "turn_zero_based": 1,
+          "turn_human": 2
+        }
+      },
+      "causal_limit": "Each arm was sampled once. The traces establish a paired outcome and behavior difference, not a reproducible causal effect of G9 or its new relations.",
+      "behavior_category": "specified_ticket_description_extended",
+      "requested_description": "Due to unexpected changes in schedule, the flight from JFK to LAX on December 15, 2023, needs to be canceled immediately.",
+      "g9_extra_description": " This is an abrupt change and requires immediate attention and support for any related issues or refunds.",
+      "observed_identity": "Canceled the booking and created the priority-5 ticket using exactly the supplied description.",
+      "observed_g9": "Canceled the same booking and created the same-priority ticket, but appended an unrequested sentence to the description.",
+      "task_impact": "The cancellation and ticket creation succeeded. The stored description differs from the user-specified literal field and official expected ticket state; this is a write-field fidelity error, not missing tool use.",
+      "interpretation": "The user asked for a thorough explanation but also supplied the description text. G9 expanded that field; identity copied it exactly. Both used the 2023 date supplied in the current request. The historical 2026 date is not the source of this particular loss.",
+      "relation_mechanism_limit": "No G9 identifier joins were active; the rendered G9 body equals the base/G5 representation. This loss cannot be attributed specifically to added identifier relationships."
+    },
+    {
+      "task_id": "multi_turn_long_context_199",
+      "domain": "travel",
+      "boundary_completed_user_turns": 3,
+      "identity_passed": true,
+      "g9_passed": false,
+      "first_divergent_continuation_turn_zero_based": 3,
+      "first_divergent_continuation_turn_human": 4,
+      "official_error_type": "multi_turn:instance_state_mismatch",
+      "official_error_message": "Model instance for MessageAPI does not match the state with ground truth instance.",
+      "empty_turn_failure": false,
+      "new_tools_invoked_by_g9": true,
+      "shared_prefix_files_identical": {
+        "prefix-history.json": true,
+        "native-prefix-history.json": true,
+        "native-context.json": true,
+        "user-suffix.json": true
+      },
+      "tools_and_sampling_equal": true,
+      "graph_full_visible_evidence_roundtrip_verified": true,
+      "graph_record_active": true,
+      "graph_join_count": 1,
+      "graph_edge_count": 3,
+      "graph_appendix_characters": 361,
+      "graph_exact_base_body": false,
+      "live_requests": {
+        "identity": 5,
+        "graph-record-view-full": 6
+      },
+      "sources": {
+        "identity_score": {
+          "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_199/boundary-3/1/identity/official-score.json",
+          "sha256": "012f4e1b8caa073bd8ce1fab241e627987afaefcba51e54376645aee64b3c67e"
+        },
+        "g9_score": {
+          "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_199/boundary-3/1/graph-record-view-full/official-score.json",
+          "sha256": "6752cb7157f6bacab594627b97cfdcf7e27ae6ffee1d76d5fb1c396d472116d2",
+          "json_pointer": "/diagnostics/0/error"
+        },
+        "current_user_instruction": {
+          "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_199/boundary-3/1/graph-record-view-full/user-suffix.json",
+          "sha256": "4517a2488fff4baaf301c21b1a22fdf0f7af4f5f4e50f2bee9d95371d0580e4e",
+          "json_pointer": "/0/content",
+          "turn_zero_based": 3,
+          "turn_human": 4
+        },
+        "shared_prefix": {
+          "path": "snapshots/completed/cov03-prefix-k3/runs/gpt-4.1/multi_turn_long_context_199/boundary-3/1/identity/native-prefix-history.json",
+          "sha256": "bdf9c0dfed7fb1eb3f74bfb2bea734305772f8520e322ddc66ef48b8c01c96fe"
+        },
+        "tool_definitions": {
+          "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_199/boundary-3/1/graph-record-view-full/native-context.json",
+          "sha256": "604e50f2c3ff21f0727e3f601b38a58dc12bc68f61bc1c939f1c36f452113454",
+          "json_pointer": "/tools"
+        },
+        "graph_structure": {
+          "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_199/boundary-3/1/graph-record-view-full/multi_turn_long_context_199.graph.json",
+          "sha256": "eb8b64bb8bb8ac38a8d5cd0b4b00de47003336e79b134311f36bceeee38013ae",
+          "json_pointer": "/record_inference/record_layer"
+        },
+        "graph_structure_audit": {
+          "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_199/boundary-3/1/graph-record-view-full/multi_turn_long_context_199.graph.json",
+          "sha256": "eb8b64bb8bb8ac38a8d5cd0b4b00de47003336e79b134311f36bceeee38013ae",
+          "json_pointer": "/record_audit"
+        },
+        "graph_integrity": {
+          "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_199/boundary-3/1/graph-record-view-full/manifest.json",
+          "sha256": "ff420c10709c1113c337668f4488cf7b1ca8f8ea472f2d6eae003e3a4b5c09d9",
+          "json_pointer": "/boundary/evidence_audit"
+        },
+        "identity_login": {
+          "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_199/boundary-3/1/identity/native.jsonl",
+          "sha256": "e3303e408b12556bddbdf85cafe60d11987ce93d6c8806bc95dc0ece7c7b11b7",
+          "line": 2,
+          "turn_zero_based": 3,
+          "turn_human": 4
+        },
+        "identity_send": {
+          "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_199/boundary-3/1/identity/native.jsonl",
+          "sha256": "e3303e408b12556bddbdf85cafe60d11987ce93d6c8806bc95dc0ece7c7b11b7",
+          "line": 4,
+          "turn_zero_based": 3,
+          "turn_human": 4
+        },
+        "g9_wrong_lookup": {
+          "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_199/boundary-3/1/graph-record-view-full/native.jsonl",
+          "sha256": "a4129a41fc95007db470b8a7a23e725117fff394aa1414e880ee8fcbdae76548",
+          "line": 2,
+          "turn_zero_based": 3,
+          "turn_human": 4
+        },
+        "g9_lookup_results": {
+          "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_199/boundary-3/1/graph-record-view-full/native.jsonl",
+          "sha256": "a4129a41fc95007db470b8a7a23e725117fff394aa1414e880ee8fcbdae76548",
+          "line": 7,
+          "turn_zero_based": 3,
+          "turn_human": 4
+        },
+        "g9_clarification": {
+          "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_199/boundary-3/1/graph-record-view-full/native.jsonl",
+          "sha256": "a4129a41fc95007db470b8a7a23e725117fff394aa1414e880ee8fcbdae76548",
+          "line": 8,
+          "turn_zero_based": 3,
+          "turn_human": 4
+        },
+        "g9_following_turn_no_login_error": {
+          "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_199/boundary-3/1/graph-record-view-full/native.jsonl",
+          "sha256": "a4129a41fc95007db470b8a7a23e725117fff394aa1414e880ee8fcbdae76548",
+          "line": 11,
+          "turn_zero_based": 4,
+          "turn_human": 5
+        }
+      },
+      "causal_limit": "Each arm was sampled once. The traces establish a paired outcome and behavior difference, not a reproducible causal effect of G9 or its new relations.",
+      "behavior_category": "wrong_identifier_lookup_and_clarification_instead_of_login_send",
+      "observed_identity": "At user turn 4 called message_login(user_id=USR001), then send_message(receiver_id=USR003, exact requested message). At turn 5 retrieved sent messages.",
+      "observed_g9": "At turn 4 called get_user_id(user=USR001), then list_users, then get_user_id for Catherine and MichaelTpss. After lookup errors it requested confirmation without logging in or sending. At turn 5 view_messages_sent failed because no user was logged in.",
+      "task_impact": "The requested message was never sent and MessageAPI current_user remained null; this is an actual uncompleted state-changing task, not a semantically correct answer penalized for avoiding a redundant tool call.",
+      "tool_schema_fact": "get_user_id expects a username, while message_login directly accepts a user_id. Both tool descriptions were present and identical for both arms.",
+      "interpretation": "The current request explicitly supplies the login ID and recipient ID while also mentioning an unnecessary sender name. G9 tried to resolve those as workspace usernames and treated the resulting lookup failure as missing user information.",
+      "relation_mechanism_limit": "The only new identifier anchor links travel:booking_id across book_flight, retrieve_invoice and contact_customer_support; it does not link MessageAPI user identities. The new login instruction appears after the shared prefix. The trace does not show lost login evidence or an incorrect graph ID join."
+    }
+  ],
+  "travel_shared_failure_background": {
+    "count": 11,
+    "error_types_by_arm": {
+      "identity": {
+        "multi_turn:execution_response_mismatch": 2,
+        "multi_turn:instance_state_mismatch": 7,
+        "multi_turn:empty_turn_model_response": 2
+      },
+      "graph-record-view-full": {
+        "multi_turn:execution_response_mismatch": 2,
+        "multi_turn:instance_state_mismatch": 7,
+        "multi_turn:empty_turn_model_response": 2
+      }
+    },
+    "rows": [
+      {
+        "task_id": "multi_turn_base_168",
+        "review_depth": "official_diagnostics_only_unless_noted",
+        "arms": {
+          "identity": {
+            "official_error_type": "multi_turn:execution_response_mismatch",
+            "official_error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 4.",
+            "state_difference_fields": [],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_base_168/boundary-3/1/identity/official-score.json",
+              "sha256": "aae6d2600e8d00342c7143eb2f4fbbe9efd1836f8e97a91742a3cf6ef805181a",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          },
+          "graph-record-view-full": {
+            "official_error_type": "multi_turn:execution_response_mismatch",
+            "official_error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 4.",
+            "state_difference_fields": [],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_base_168/boundary-3/1/graph-record-view-full/official-score.json",
+              "sha256": "f9c5962bbb207ef1eae4521d4aa798ffd45a0b99fbd4bc2a8ba1079c078cd2a7",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          }
+        }
+      },
+      {
+        "task_id": "multi_turn_base_174",
+        "review_depth": "official_diagnostics_only_unless_noted",
+        "arms": {
+          "identity": {
+            "official_error_type": "multi_turn:instance_state_mismatch",
+            "official_error_message": "Model instance for TwitterAPI does not match the state with ground truth instance.",
+            "state_difference_fields": [
+              "tweets"
+            ],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_base_174/boundary-3/1/identity/official-score.json",
+              "sha256": "074adde39252b143ad59cc80ad7ac3a5a2e298f480acca67cbd6f94e21cb485e",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          },
+          "graph-record-view-full": {
+            "official_error_type": "multi_turn:instance_state_mismatch",
+            "official_error_message": "Model instance for TwitterAPI does not match the state with ground truth instance.",
+            "state_difference_fields": [
+              "tweets"
+            ],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_base_174/boundary-3/1/graph-record-view-full/official-score.json",
+              "sha256": "9204b1ae6de5158b14f8bc5573a7f7b94df90121f6bb4fa19a5029f1da2fa74d",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          }
+        }
+      },
+      {
+        "task_id": "multi_turn_base_176",
+        "review_depth": "current_user_literal_and_state_mismatch_reviewed",
+        "arms": {
+          "identity": {
+            "official_error_type": "multi_turn:instance_state_mismatch",
+            "official_error_message": "Model instance for TicketAPI does not match the state with ground truth instance.",
+            "state_difference_fields": [
+              "ticket_queue"
+            ],
+            "score": {
+              "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_base_176/1/identity/official-score.json",
+              "sha256": "5047e74ebfee4b73a858e81d825eccba7c3d33ee25c4a0d8d96c41292004a75e",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          },
+          "graph-record-view-full": {
+            "official_error_type": "multi_turn:instance_state_mismatch",
+            "official_error_message": "Model instance for TicketAPI does not match the state with ground truth instance.",
+            "state_difference_fields": [
+              "ticket_queue"
+            ],
+            "score": {
+              "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_base_176/1/graph-record-view-full/official-score.json",
+              "sha256": "ab073abaa7f44260a248f079a7e4af0bcfb9ca7683ef59d226ef8fa9c62e2d38",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          }
+        },
+        "note": "Both arms write the current user requested year 2026, but the official expected ticket description uses 2023. This is a prompt/reference mismatch in a shared failure; official scores are retained.",
+        "user_instruction": {
+          "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_base_176/1/identity/user-suffix.json",
+          "sha256": "ff51710b0c1a0c597ad5c33be10dcba5cdfc9641f20a37388de4eee0ebe8f53b",
+          "json_pointer": "/0/content",
+          "turn_zero_based": 1,
+          "turn_human": 2
+        }
+      },
+      {
+        "task_id": "multi_turn_base_177",
+        "review_depth": "official_diagnostics_only_unless_noted",
+        "arms": {
+          "identity": {
+            "official_error_type": "multi_turn:empty_turn_model_response",
+            "official_error_message": "Model response list is empty for turn 1",
+            "state_difference_fields": [],
+            "score": {
+              "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_base_177/1/identity/official-score.json",
+              "sha256": "9c8b88c298539ce1c5621971429e751f63caa3ca73a1587fb7a7d924c85dda43",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          },
+          "graph-record-view-full": {
+            "official_error_type": "multi_turn:empty_turn_model_response",
+            "official_error_message": "Model response list is empty for turn 1",
+            "state_difference_fields": [],
+            "score": {
+              "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_base_177/1/graph-record-view-full/official-score.json",
+              "sha256": "effb27cda14be5a2140035710e77c4c047d5f4c34d7782ea2608973318a98cb7",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          }
+        }
+      },
+      {
+        "task_id": "multi_turn_base_178",
+        "review_depth": "official_diagnostics_only_unless_noted",
+        "arms": {
+          "identity": {
+            "official_error_type": "multi_turn:instance_state_mismatch",
+            "official_error_message": "Model instance for TicketAPI does not match the state with ground truth instance.",
+            "state_difference_fields": [
+              "ticket_queue"
+            ],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_base_178/boundary-3/1/identity/official-score.json",
+              "sha256": "016456d1c0444116c594d479cee0ca82c3439698b820dcf770033b8cfe074c45",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          },
+          "graph-record-view-full": {
+            "official_error_type": "multi_turn:instance_state_mismatch",
+            "official_error_message": "Model instance for TicketAPI does not match the state with ground truth instance.",
+            "state_difference_fields": [
+              "ticket_queue"
+            ],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_base_178/boundary-3/1/graph-record-view-full/official-score.json",
+              "sha256": "bff4f03bae5448c2310388c1491ef4c149c5bf3bdb1a436cf969d2ce26ca260b",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          }
+        }
+      },
+      {
+        "task_id": "multi_turn_base_181",
+        "review_depth": "official_diagnostics_only_unless_noted",
+        "arms": {
+          "identity": {
+            "official_error_type": "multi_turn:instance_state_mismatch",
+            "official_error_message": "Model instance for TicketAPI does not match the state with ground truth instance.",
+            "state_difference_fields": [
+              "ticket_queue"
+            ],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_base_181/boundary-3/1/identity/official-score.json",
+              "sha256": "1af5b9d0340663698da60e7c49b3e5d087d17d23a00eb9f4f39738655d43d391",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          },
+          "graph-record-view-full": {
+            "official_error_type": "multi_turn:instance_state_mismatch",
+            "official_error_message": "Model instance for TicketAPI does not match the state with ground truth instance.",
+            "state_difference_fields": [
+              "ticket_queue"
+            ],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_base_181/boundary-3/1/graph-record-view-full/official-score.json",
+              "sha256": "c71c4098b16336fca90ad95af883adc77d01151a394e6d3037c7346ec91a9940",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          }
+        }
+      },
+      {
+        "task_id": "multi_turn_long_context_168",
+        "review_depth": "official_diagnostics_only_unless_noted",
+        "arms": {
+          "identity": {
+            "official_error_type": "multi_turn:execution_response_mismatch",
+            "official_error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 4.",
+            "state_difference_fields": [],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_168/boundary-3/1/identity/official-score.json",
+              "sha256": "d115dc712a237901b629e4728f98c340774499367f92d45262a301ed478f5202",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          },
+          "graph-record-view-full": {
+            "official_error_type": "multi_turn:execution_response_mismatch",
+            "official_error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 4.",
+            "state_difference_fields": [],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_168/boundary-3/1/graph-record-view-full/official-score.json",
+              "sha256": "6e07c3117a26005d5d4be0cb7a2ecec1711cdda9d8b79ec5782de5552ac454f1",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          }
+        }
+      },
+      {
+        "task_id": "multi_turn_long_context_174",
+        "review_depth": "official_diagnostics_only_unless_noted",
+        "arms": {
+          "identity": {
+            "official_error_type": "multi_turn:instance_state_mismatch",
+            "official_error_message": "Model instance for TwitterAPI does not match the state with ground truth instance.",
+            "state_difference_fields": [
+              "tweets"
+            ],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_174/boundary-3/1/identity/official-score.json",
+              "sha256": "3f10aca291d29af28a52d04efcad9f2292165f66fddb786483cde36c9bdc83d7",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          },
+          "graph-record-view-full": {
+            "official_error_type": "multi_turn:instance_state_mismatch",
+            "official_error_message": "Model instance for TwitterAPI does not match the state with ground truth instance.",
+            "state_difference_fields": [
+              "tweets"
+            ],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_174/boundary-3/1/graph-record-view-full/official-score.json",
+              "sha256": "6ee9e1f0f79f9d8956648c88c2b74f01d1ef91a855dc0eef166677f06b4d7cc6",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          }
+        }
+      },
+      {
+        "task_id": "multi_turn_long_context_177",
+        "review_depth": "official_diagnostics_only_unless_noted",
+        "arms": {
+          "identity": {
+            "official_error_type": "multi_turn:empty_turn_model_response",
+            "official_error_message": "Model response list is empty for turn 1",
+            "state_difference_fields": [],
+            "score": {
+              "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_long_context_177/1/identity/official-score.json",
+              "sha256": "ac7a5b14523d4b8d8f234bc1947a4b7f8ebfd94c6349431e01db4fe1ddf606f4",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          },
+          "graph-record-view-full": {
+            "official_error_type": "multi_turn:empty_turn_model_response",
+            "official_error_message": "Model response list is empty for turn 1",
+            "state_difference_fields": [],
+            "score": {
+              "path": "snapshots/completed/cov04-continuation-k1/runs/gpt-4.1/multi_turn_long_context_177/1/graph-record-view-full/official-score.json",
+              "sha256": "9e97d0c3d8abd1ef616d8383d2ee35976015dacd79ade276b8121481307e3d23",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          }
+        }
+      },
+      {
+        "task_id": "multi_turn_long_context_178",
+        "review_depth": "official_diagnostics_only_unless_noted",
+        "arms": {
+          "identity": {
+            "official_error_type": "multi_turn:instance_state_mismatch",
+            "official_error_message": "Model instance for TicketAPI does not match the state with ground truth instance.",
+            "state_difference_fields": [
+              "ticket_queue"
+            ],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_178/boundary-3/1/identity/official-score.json",
+              "sha256": "9498bfb7907ec21ddf0ad71281c1e4a0d0eb31464fce9267993e0c52007c1434",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          },
+          "graph-record-view-full": {
+            "official_error_type": "multi_turn:instance_state_mismatch",
+            "official_error_message": "Model instance for TicketAPI does not match the state with ground truth instance.",
+            "state_difference_fields": [
+              "ticket_queue"
+            ],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_178/boundary-3/1/graph-record-view-full/official-score.json",
+              "sha256": "e770c8b346a0cefe2a65390538946bc31dfb7c6da07422974c392dabe89995eb",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          }
+        }
+      },
+      {
+        "task_id": "multi_turn_long_context_181",
+        "review_depth": "official_diagnostics_only_unless_noted",
+        "arms": {
+          "identity": {
+            "official_error_type": "multi_turn:instance_state_mismatch",
+            "official_error_message": "Model instance for TicketAPI does not match the state with ground truth instance.",
+            "state_difference_fields": [
+              "ticket_queue"
+            ],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_181/boundary-3/1/identity/official-score.json",
+              "sha256": "904109caf78b9ecc00b76e16726e5598e77ee9f58498e98fd6bf920df28ecb45",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          },
+          "graph-record-view-full": {
+            "official_error_type": "multi_turn:instance_state_mismatch",
+            "official_error_message": "Model instance for TicketAPI does not match the state with ground truth instance.",
+            "state_difference_fields": [
+              "ticket_queue"
+            ],
+            "score": {
+              "path": "snapshots/completed/cov06-continuation-k3/runs/gpt-4.1/multi_turn_long_context_181/boundary-3/1/graph-record-view-full/official-score.json",
+              "sha256": "2f46b234114e62370a9fc84b87e9c527692b18983b089b282cfff85d1b2b4f5e",
+              "json_pointer": "/diagnostics/0/error"
+            }
+          }
+        }
+      }
+    ],
+    "limits": "Error-category counts are not full semantic adjudications. Empty-turn errors are present in both arms on the same two travel conditions and are not the two additional G9 losses."
+  },
+  "conclusions": [
+    "Both additional G9 losses involve changed behavior with complete evidence still available; neither is an empty-turn checker-only failure.",
+    "One loss is an exact user-specified write-field deviation; the other is an actual failure to log in and send a requested message.",
+    "One loss has zero active G9 relations. No trace establishes that added identifier edges caused the other loss.",
+    "Keep official scores unchanged. These observations motivate targeted repeat diagnosis, not a causal or overall noninferiority claim."
+  ]
+}

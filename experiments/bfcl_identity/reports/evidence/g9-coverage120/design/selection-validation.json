@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "selection_sha256": "cd7bd77f3ad5e0699c5e12215c3d116c9eb1c0cf8ce58ba8d16475afe801adda",
+  "metadata_projection_sha256": "7e2e8cc3fb1d475cf404b2ddedcb027fb13fe7bd67542acb88fd755005fb614b",
+  "by_domain_boundary": {
+    "filesystem": {
+      "1": 4,
+      "2": 12,
+      "3": 14
+    },
+    "vehicle": {
+      "1": 10,
+      "2": 4,
+      "3": 16
+    },
+    "trading": {
+      "1": 4,
+      "2": 4,
+      "3": 22
+    },
+    "travel": {
+      "1": 8,
+      "2": 8,
+      "3": 14
+    }
+  },
+  "exposure_conditions": {
+    "recorded_prior_content_exposure": 44,
+    "unknown": 72,
+    "previously_registered_exposure_not_reaudited": 4
+  },
+  "source_datasets": [
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/g5-domain-expansion-20261024/runner/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_base.json",
+      "sha256": "1a21a995d06fd6f20ba55de7bced30ef953ec35e998f502ec2ecf4d66ef1c43a"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/g5-domain-expansion-20261024/runner/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_long_context.json",
+      "sha256": "78c3268c5cc8e97c0f4ec6c811b3b9a2bba14323b1830b7a874b06d822749324"
+    }
+  ],
+  "eligible_family_pools": {
+    "filesystem": 49,
+    "vehicle": 49,
+    "trading": 50,
+    "travel": 49
+  },
+  "scope": {
+    "complete_visible_evidence": true,
+    "native_prefix_replaced_in_graph_arm": true,
+    "identity_alongside_graph": false,
+    "compression": false,
+    "evaluator_modified": false,
+    "representation_retuning": false,
+    "same_model_prefix_shared_between_arms": true,
+    "tool_schema_identical_between_arms": true,
+    "zero_join_retained": true
+  },
+  "eligibility": {
+    "model_generates_own_prefix": true,
+    "prefix_generation_attempts_per_condition": 1,
+    "complete_official_prefix_must_pass": true,
+    "reuse_other_model_prefix": false,
+    "exclude_on_continuation_score": false,
+    "exclude_on_empty_relations": false,
+    "regenerate_failed_prefix": false,
+    "replace_excluded_condition": false,
+    "record_every_candidate": true,
+    "retain_budget_interrupted_and_transport_failed_separately": true
+  }
+}

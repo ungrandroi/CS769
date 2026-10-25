@@ -1,0 +1,434 @@
+{
+  "version": "g9-mini-fixed24-selection-v1",
+  "created_at_utc": "2026-10-24T18:41:01.392862+00:00",
+  "models": [
+    "gpt-5-mini"
+  ],
+  "arms": [
+    "identity",
+    "graph-record-view-full"
+  ],
+  "repeat_labels": [
+    1
+  ],
+  "candidate_version": "G9-active-record-views-v1",
+  "source_selection_files": [
+    {
+      "batch": "independent",
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/design/g9-independent-fixed12-selection-v1.json",
+      "sha256": "870416b5060fa0862e2f9082dbaf109473cf0e004f0c6e75a75d59247476eace"
+    },
+    {
+      "batch": "expanded",
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/graph-structure-exploration-20261024/design/g9-expanded-fixed12-selection-v1.json",
+      "sha256": "ee6beca92af72d65a726912a93a3ec378397a76d148b20ecdf0ec2c0743bedea"
+    }
+  ],
+  "source_conditions_preserved": true,
+  "selection_rule": "Concatenate the complete original independent and expanded fixed-12 lists without model-specific success filtering or replacement.",
+  "conditions": [
+    {
+      "id": "multi_turn_long_context_79",
+      "family": 79,
+      "domain": "vehicle",
+      "user_turns": 3,
+      "involved_classes": [
+        "VehicleControlAPI"
+      ],
+      "boundary_turns": 2,
+      "source_batch": "independent"
+    },
+    {
+      "id": "multi_turn_base_71",
+      "family": 71,
+      "domain": "vehicle",
+      "user_turns": 5,
+      "involved_classes": [
+        "VehicleControlAPI"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "independent"
+    },
+    {
+      "id": "multi_turn_base_59",
+      "family": 59,
+      "domain": "vehicle",
+      "user_turns": 5,
+      "involved_classes": [
+        "VehicleControlAPI",
+        "MathAPI"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "independent"
+    },
+    {
+      "id": "multi_turn_long_context_80",
+      "family": 80,
+      "domain": "vehicle",
+      "user_turns": 5,
+      "involved_classes": [
+        "VehicleControlAPI",
+        "MathAPI"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "independent"
+    },
+    {
+      "id": "multi_turn_long_context_138",
+      "family": 138,
+      "domain": "trading",
+      "user_turns": 5,
+      "involved_classes": [
+        "MessageAPI",
+        "TradingBot"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "independent"
+    },
+    {
+      "id": "multi_turn_base_123",
+      "family": 123,
+      "domain": "trading",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "independent"
+    },
+    {
+      "id": "multi_turn_base_121",
+      "family": 121,
+      "domain": "trading",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "independent"
+    },
+    {
+      "id": "multi_turn_long_context_111",
+      "family": 111,
+      "domain": "trading",
+      "user_turns": 4,
+      "involved_classes": [
+        "MessageAPI",
+        "TradingBot"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "independent"
+    },
+    {
+      "id": "multi_turn_long_context_157",
+      "family": 157,
+      "domain": "travel",
+      "user_turns": 3,
+      "involved_classes": [
+        "MathAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 2,
+      "source_batch": "independent"
+    },
+    {
+      "id": "multi_turn_long_context_167",
+      "family": 167,
+      "domain": "travel",
+      "user_turns": 5,
+      "involved_classes": [
+        "TravelAPI"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "independent"
+    },
+    {
+      "id": "multi_turn_long_context_162",
+      "family": 162,
+      "domain": "travel",
+      "user_turns": 6,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "independent"
+    },
+    {
+      "id": "multi_turn_base_165",
+      "family": 165,
+      "domain": "travel",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "independent"
+    },
+    {
+      "id": "multi_turn_base_81",
+      "family": 81,
+      "domain": "vehicle",
+      "user_turns": 4,
+      "involved_classes": [
+        "VehicleControlAPI",
+        "MathAPI"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "expanded"
+    },
+    {
+      "id": "multi_turn_base_95",
+      "family": 95,
+      "domain": "vehicle",
+      "user_turns": 5,
+      "involved_classes": [
+        "MessageAPI",
+        "VehicleControlAPI"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "expanded"
+    },
+    {
+      "id": "multi_turn_long_context_60",
+      "family": 60,
+      "domain": "vehicle",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "VehicleControlAPI"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "expanded"
+    },
+    {
+      "id": "multi_turn_base_73",
+      "family": 73,
+      "domain": "vehicle",
+      "user_turns": 3,
+      "involved_classes": [
+        "VehicleControlAPI"
+      ],
+      "boundary_turns": 2,
+      "source_batch": "expanded"
+    },
+    {
+      "id": "multi_turn_base_135",
+      "family": 135,
+      "domain": "trading",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "expanded"
+    },
+    {
+      "id": "multi_turn_long_context_107",
+      "family": 107,
+      "domain": "trading",
+      "user_turns": 5,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "expanded"
+    },
+    {
+      "id": "multi_turn_base_124",
+      "family": 124,
+      "domain": "trading",
+      "user_turns": 3,
+      "involved_classes": [
+        "TradingBot",
+        "MathAPI"
+      ],
+      "boundary_turns": 2,
+      "source_batch": "expanded"
+    },
+    {
+      "id": "multi_turn_long_context_112",
+      "family": 112,
+      "domain": "trading",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot",
+        "MathAPI"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "expanded"
+    },
+    {
+      "id": "multi_turn_long_context_196",
+      "family": 196,
+      "domain": "travel",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "expanded"
+    },
+    {
+      "id": "multi_turn_long_context_190",
+      "family": 190,
+      "domain": "travel",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "expanded"
+    },
+    {
+      "id": "multi_turn_long_context_170",
+      "family": 170,
+      "domain": "travel",
+      "user_turns": 6,
+      "involved_classes": [
+        "TwitterAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "expanded"
+    },
+    {
+      "id": "multi_turn_long_context_188",
+      "family": 188,
+      "domain": "travel",
+      "user_turns": 6,
+      "involved_classes": [
+        "TwitterAPI",
+        "TravelAPI"
+      ],
+      "boundary_turns": 3,
+      "source_batch": "expanded"
+    }
+  ],
+  "early_conditions": [
+    "multi_turn_long_context_79",
+    "multi_turn_long_context_157",
+    "multi_turn_base_73",
+    "multi_turn_base_124"
+  ],
+  "early_boundary_turns": 2,
+  "longer_conditions": [
+    "multi_turn_base_71",
+    "multi_turn_base_59",
+    "multi_turn_long_context_80",
+    "multi_turn_long_context_138",
+    "multi_turn_base_123",
+    "multi_turn_base_121",
+    "multi_turn_long_context_111",
+    "multi_turn_long_context_167",
+    "multi_turn_long_context_162",
+    "multi_turn_base_165",
+    "multi_turn_base_81",
+    "multi_turn_base_95",
+    "multi_turn_long_context_60",
+    "multi_turn_base_135",
+    "multi_turn_long_context_107",
+    "multi_turn_long_context_112",
+    "multi_turn_long_context_196",
+    "multi_turn_long_context_190",
+    "multi_turn_long_context_170",
+    "multi_turn_long_context_188"
+  ],
+  "longer_boundary_turns": 3,
+  "counts": {
+    "candidate_conditions": 24,
+    "distinct_families": 24,
+    "by_domain": {
+      "vehicle": 8,
+      "trading": 8,
+      "travel": 8
+    },
+    "by_boundary": {
+      "2": 4,
+      "3": 20
+    },
+    "max_prefixes": 24,
+    "max_continuations": 48
+  },
+  "eligibility": {
+    "model_generates_own_prefix": true,
+    "prefix_generation_attempts_per_condition": 1,
+    "complete_official_prefix_must_pass": true,
+    "reuse_other_model_prefix": false,
+    "exclude_on_continuation_score": false,
+    "exclude_on_empty_relations": false,
+    "regenerate_failed_prefix": false,
+    "replace_excluded_condition": false,
+    "record_every_candidate": true,
+    "retain_budget_interrupted_and_transport_failed_separately": true
+  },
+  "exposure_disclosure": "All 24 families were already evaluated under GPT-4.1 and Claude. This is a new-model transfer check on the same fixed pool, not a newly unseen task holdout. Prior model pass/fail does not affect inclusion.",
+  "scope": {
+    "complete_visible_evidence": true,
+    "native_prefix_replaced_in_graph_arm": true,
+    "identity_alongside_graph": false,
+    "compression": false,
+    "evaluator_modified": false,
+    "representation_retuning": false,
+    "same_model_prefix_shared_between_arms": true,
+    "tool_schema_identical_between_arms": true,
+    "zero_join_retained": true
+  },
+  "frozen_graph_source_sha256": {
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_encoding.py": "055ddd87883b75fd54dbe166855e1464c7d5b45328be36af87ee3ab5d3d9ec36",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_evidence.py": "3fed98d65d054dca782c0242524f8c33db68621a78efae4b3192d8e727572c49",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_native.py": "a6b255752afc61e61bd5785889d5b476d778f5d2034f449840e31848f0863c35",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_observed.py": "9a661b46518e9880643f2b2f9f3e09bb8f37b7f255447679ff1e8b94af156a4b",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_payload.py": "4b9097831c584fa4ae9602b5c3833c582f12523eaa4f6466c4cf12e4fb0507ba",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_readable.py": "b409dc9c46745755bbefa2cda2d2c94fbac694cfffdbc2379343ab1380086050",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_record_render.py": "dadee99c3c353a3e1c56829de2b0b1e020ff56c998de26de9d98c75eebb09256",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_record_views.py": "d97442e735fbdf1d09a0e8ec5630346242d5ac46eb00c7362c594c2e81cff4cc",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_record_visibility.py": "293c5cd3557a23a471cf65d82e4f782ff5f6f733882d9839e0b49b8d963fd8f8",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_records.py": "e106cbd1e1a03a6538c79f60b3a1cf2de41161348fb3b4e75e14c0a76b1781f9",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_replace.py": "b4727b1a3a5eff5fd05c53b7e1d9d5559228294865f458bc49c1b1ba8975846e",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_role_partition.py": "cb9fc4c84e25ff45acb1f2ab097b3b123446384b5b4c00d00809c01734d2b2b4",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_serialization.py": "6a1a3bf48ce3c5f07f6bfdb961d1de947b074265c8dd7c44fa2f5464b95da2ba",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_serialization_target.py": "aad9e60d8764b2909307ac5df7fb0632e1f39a029b92787d0c3eea952ac46792",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_signature.py": "1f2623c9c25b71739611edadf37db3c39a55d08020e9adbeec1e1989e9ddf6e2",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_structured.py": "37886246760c19eb37c8824a0aac9ab0111f4bec494a5f28c090b828689f98e4"
+  },
+  "budget": {
+    "model": "gpt-5-mini",
+    "cap_usd": 3,
+    "fresh_ledger_required": true,
+    "include_prefixes_continuations_smoke_and_retries": true,
+    "borrow_from_prior_campaign": false,
+    "preserve_uncertain_reservations": true,
+    "halt_before_unfunded_request": true,
+    "resume_only_after_user_review": true
+  },
+  "dispatch_requirements": [
+    "Before paid calls freeze inference parameters, runtime/source hashes and schedule in the new campaign manifest.",
+    "Pair identity and G9 on the same passed mini prefix; use one repetition only and outcome-independent randomized/interleaved order.",
+    "Keep the original official evaluator and tool definitions unchanged.",
+    "Generate candidate G9 only from its graph, audit full visible evidence preservation, and reject attaching the completed native prefix alongside it.",
+    "Stop on budget or integrity failure; record any incomplete pair rather than scoring it as a completed pair."
+  ],
+  "analysis": {
+    "primary": [
+      "Official identity/G9 pass counts on complete eligible pairs",
+      "Paired gains and new regressions",
+      "Candidate screening counts and exclusion reasons"
+    ],
+    "secondary": [
+      "Domain and k2/k3 breakdown",
+      "Relationship-active and zero-join coverage",
+      "First-request input tokens and whole-continuation input/output including reasoning",
+      "Prefix/continuation/uncertain budget totals",
+      "Source-quoted behavior differences, preferably blind before score linkage"
+    ],
+    "interpretation": "Single-repeat descriptive model-transfer check. No global preservation, G9 superiority, or safe-compression claim. Prior GPT-4.1/Claude scores are context, not a directly matched inter-model accuracy comparison."
+  },
+  "selected_before_candidate_results": true,
+  "selection_freeze_scope": "Before GPT-5-mini candidate results; tasks were exposed in prior GPT-4.1/Claude studies as disclosed.",
+  "no_replacement": true,
+  "no_zero_index_exclusion": true
+}

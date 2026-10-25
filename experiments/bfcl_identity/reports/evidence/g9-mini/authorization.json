@@ -1,0 +1,46 @@
+{
+  "campaign": "frozen-g9-mini-validation-20261024",
+  "status": "authorized_exploration",
+  "authorization_basis": "User confirmed GPT-5-mini and independent $3 cap in this conversation; same 24 candidates, identity and frozen G9 each once. New bounded trial, not continuation of expired 12-hour exploration.",
+  "start_utc": "2026-10-24T18:41:46.303359+00:00",
+  "deadline_utc": "2026-10-25T00:41:46.303359+00:00",
+  "deadline_basis": "Self-imposed six-hour limit on launching new stages for this bounded trial; preserve in-flight attempts and ask before extending.",
+  "models": [
+    "gpt-5-mini"
+  ],
+  "budget_caps_usd": {
+    "gpt-5-mini": 3
+  },
+  "fresh_ledger": true,
+  "prior_expenses_excluded": true,
+  "retain_complete_visible_evidence": true,
+  "compression": false,
+  "modify_eval": false,
+  "identity_alongside_graph": false,
+  "ask_before_budget_or_time_extension": true,
+  "server_base": "/home/ruqi/public/CS769/experiments/bfcl_identity/v10_g9_mini_20261024",
+  "budgets": {
+    "exploration": {
+      "gpt-5-mini": 3
+    },
+    "separate_fresh_ledgers": true,
+    "prior_expenses_excluded_but_preserved": true,
+    "stop_before_limit_and_ask": true
+  },
+  "budget_ledger_paths": {
+    "exploration": "/home/ruqi/public/CS769/experiments/bfcl_identity/v10_g9_mini_20261024/mini-budget.json"
+  },
+  "arms": [
+    "identity",
+    "graph-record-view-full"
+  ],
+  "sampling": {
+    "reasoning_effort": "medium",
+    "seed": 42,
+    "max_completion_tokens": 16384,
+    "temperature": "omitted"
+  },
+  "repeat_count": 1,
+  "no_outcome_driven_replacement": true,
+  "native_compiler_branch": false
+}

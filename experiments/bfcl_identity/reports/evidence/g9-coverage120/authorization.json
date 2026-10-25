@@ -1,0 +1,69 @@
+{
+  "campaign": "frozen-g9-gpt41-coverage120-20261024",
+  "status": "authorized_exploration",
+  "authorization_basis": "User explicitly selected 120 candidate conditions balanced across four domains, GPT-4.1 only, independent $35 cap, identity and frozen G9 each once. User asks to be told when laptop can close.",
+  "start_utc": "2026-10-24T20:03:48.587351+00:00",
+  "deadline_utc": "2026-10-25T20:03:48.587351+00:00",
+  "deadline_basis": "Internal 24-hour limit on new stage dispatch for this bounded campaign; no further work automatically added. Not reuse of expired exploration authorization.",
+  "models": [
+    "gpt-4.1"
+  ],
+  "budget_caps_usd": {
+    "gpt-4.1": 35
+  },
+  "fresh_ledger": true,
+  "prior_expenses_excluded": true,
+  "retain_complete_visible_evidence": true,
+  "compression": false,
+  "modify_eval": false,
+  "identity_alongside_graph": false,
+  "ask_before_budget_or_time_extension": true,
+  "server_base": "/home/ruqi/public/CS769/experiments/bfcl_identity/v11_g9_gpt41_coverage120_20261024",
+  "budgets": {
+    "exploration": {
+      "gpt-4.1": 35
+    },
+    "separate_fresh_ledgers": true,
+    "prior_expenses_excluded_but_preserved": true,
+    "stop_before_limit_and_ask": true
+  },
+  "budget_ledger_paths": {
+    "exploration": "/home/ruqi/public/CS769/experiments/bfcl_identity/v11_g9_gpt41_coverage120_20261024/coverage-budget.json"
+  },
+  "arms": [
+    "identity",
+    "graph-record-view-full"
+  ],
+  "candidate_version": "G9-active-record-views-v1",
+  "repeat_count": 1,
+  "candidate_conditions": 120,
+  "families": 60,
+  "families_per_domain": 15,
+  "domains": [
+    "filesystem",
+    "vehicle",
+    "trading",
+    "travel"
+  ],
+  "dataset_scope": [
+    "multi_turn_base",
+    "multi_turn_long_context"
+  ],
+  "registered_coverage_not_guaranteed_eligible_pairs": true,
+  "prefix_boundary_rule": "min(3, user_turns-1); excludes single-turn families; both variants retained",
+  "no_outcome_driven_replacement": true,
+  "no_zero_index_exclusion": true,
+  "native_compiler_branch": false,
+  "reporting": {
+    "milestones": true,
+    "two_hour_progress_if_available": true,
+    "laptop_close_only_after_detached_remote_process_verified": true
+  },
+  "previous_campaigns_remain_stopped": true,
+  "sampling": {
+    "temperature": 0,
+    "seed": 42,
+    "max_tokens": 4096,
+    "provider": "existing frozen Azure OpenAI adapter"
+  }
+}

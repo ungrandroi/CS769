@@ -1,0 +1,274 @@
+{
+  "passed": false,
+  "completed_user_turns": 3,
+  "diagnostics": {
+    "id": "multi_turn_base_81",
+    "model_name": "completed_prefix_audit",
+    "test_category": "multi_turn_base",
+    "valid": false,
+    "error": {
+      "error_message": "Model instance for VehicleControlAPI does not match the state with ground truth instance.",
+      "error_type": "multi_turn:instance_state_mismatch",
+      "details": {
+        "differences": {
+          "engine_state": {
+            "model": "stopped",
+            "ground_truth": "running"
+          },
+          "remainingUnlockedDoors": {
+            "model": 4,
+            "ground_truth": 0
+          },
+          "doorStatus": {
+            "model": {
+              "driver": "unlocked",
+              "passenger": "unlocked",
+              "rear_left": "unlocked",
+              "rear_right": "unlocked"
+            },
+            "ground_truth": {
+              "driver": "locked",
+              "passenger": "locked",
+              "rear_left": "locked",
+              "rear_right": "locked"
+            }
+          },
+          "brakePedalStatus": {
+            "model": "released",
+            "ground_truth": "pressed"
+          }
+        },
+        "model_instance_state": {
+          "fuelLevel": 4.640000000000001,
+          "batteryVoltage": 12.6,
+          "engine_state": "stopped",
+          "remainingUnlockedDoors": 4,
+          "doorStatus": {
+            "driver": "unlocked",
+            "passenger": "unlocked",
+            "rear_left": "unlocked",
+            "rear_right": "unlocked"
+          },
+          "acTemperature": 25.0,
+          "fanSpeed": 50,
+          "acMode": "auto",
+          "humidityLevel": 50.0,
+          "headLightStatus": "off",
+          "parkingBrakeStatus": "released",
+          "brakePedalStatus": "released",
+          "distanceToNextVehicle": 50.0,
+          "cruiseStatus": "inactive",
+          "destination": "None",
+          "frontLeftTirePressure": 32.0,
+          "frontRightTirePressure": 32.0,
+          "rearLeftTirePressure": 30.0,
+          "rearRightTirePressure": 30.0,
+          "long_context": false
+        },
+        "ground_truth_instance_state": {
+          "fuelLevel": 4.640000000000001,
+          "batteryVoltage": 12.6,
+          "engine_state": "running",
+          "remainingUnlockedDoors": 0,
+          "doorStatus": {
+            "driver": "locked",
+            "passenger": "locked",
+            "rear_left": "locked",
+            "rear_right": "locked"
+          },
+          "acTemperature": 25.0,
+          "fanSpeed": 50,
+          "acMode": "auto",
+          "humidityLevel": 50.0,
+          "headLightStatus": "off",
+          "parkingBrakeStatus": "released",
+          "brakePedalStatus": "pressed",
+          "distanceToNextVehicle": 50.0,
+          "cruiseStatus": "inactive",
+          "destination": "None",
+          "frontLeftTirePressure": 32.0,
+          "frontRightTirePressure": 32.0,
+          "rearLeftTirePressure": 30.0,
+          "rearRightTirePressure": 30.0,
+          "long_context": false
+        }
+      },
+      "execution_result": [
+        {
+          "model": [
+            [
+              "{\"gallon\": 2.6417200000000003}"
+            ],
+            [
+              "{\"fuelLevel\": 4.640000000000001}"
+            ]
+          ],
+          "ground_truth": [
+            "{\"gallon\": 2.6417200000000003}",
+            "{\"fuelLevel\": 4.640000000000001}"
+          ]
+        },
+        {
+          "model": [
+            [
+              "{\"error\": \"All doors must be locked before starting the engine. Here are the unlocked doors: driver, passenger, rear_left, rear_right\"}",
+              "{\"batteryVoltage\": 12.6}",
+              "{\"currentACTemperature\": 25.0, \"fanSpeed\": 50, \"climateMode\": \"auto\", \"humidityLevel\": 50.0}"
+            ]
+          ],
+          "ground_truth": [
+            "{\"lockStatus\": \"locked\", \"remainingUnlockedDoors\": 0}",
+            "{\"brakePedalStatus\": \"pressed\", \"brakePedalForce\": 1000.0}",
+            "{\"engineState\": \"running\", \"fuelLevel\": 4.640000000000001, \"batteryVoltage\": 12.6}",
+            "{\"currentACTemperature\": 25.0, \"fanSpeed\": 50, \"climateMode\": \"auto\", \"humidityLevel\": 50.0}"
+          ]
+        }
+      ]
+    },
+    "prompt": {
+      "id": "multi_turn_base_81",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "I'm cruising down a country road in my brand-new convertible, admiring the scenic lavender fields when I notice the fuel gauge creeping towards empty. I'd appreciate it if you could refill with 10 liters of gasoline to keep the adventure alive. Use 2 decimal digit of the gallon amount"
+          }
+        ],
+        [
+          {
+            "role": "user",
+            "content": "Now that the tank is replenished, let's fire up the engine with a swift ignition and take a peek at the dashboard stats, particularly the battery voltage and the AC temperature before we continue our picturesque journey."
+          }
+        ],
+        [
+          {
+            "role": "user",
+            "content": "Before we venture further into the rolling hills, I'm keen on ensuring the tires' health is up to standard. Could you check the current tire pressure for each one and let me know?"
+          }
+        ]
+      ],
+      "initial_config": {
+        "VehicleControlAPI": {
+          "fuelLevel": 2.0,
+          "batteryVoltage": 12.6,
+          "engineState": "stopped",
+          "doorStatus": {
+            "driver": "unlocked",
+            "passenger": "unlocked",
+            "rear_left": "unlocked",
+            "rear_right": "unlocked"
+          },
+          "acTemperature": 25.0,
+          "fanSpeed": 50,
+          "acMode": "auto",
+          "humidityLevel": 50.0,
+          "headLightStatus": "off",
+          "parkingBrakeStatus": "released",
+          "parkingBrakeForce": 0.0,
+          "slopeAngle": 0.0,
+          "distanceToNextVehicle": 50.0,
+          "cruiseStatus": "inactive",
+          "destination": "None",
+          "frontLeftTirePressure": 32.0,
+          "frontRightTirePressure": 32.0,
+          "rearLeftTirePressure": 30.0,
+          "rearRightTirePressure": 30.0
+        },
+        "MathAPI": {
+          "numbers": [
+            32.0,
+            32.0,
+            30.0,
+            30.0
+          ]
+        }
+      },
+      "path": [
+        "VehicleControlAPI.liter_to_gallon",
+        "VehicleControlAPI.fillFuelTank",
+        "VehicleControlAPI.startEngine",
+        "VehicleControlAPI.check_tire_pressure",
+        "MathAPI.mean"
+      ],
+      "involved_classes": [
+        "VehicleControlAPI",
+        "MathAPI"
+      ]
+    },
+    "model_result_raw": [
+      [
+        [
+          {
+            "liter_to_gallon": "{\"liter\":10}"
+          }
+        ],
+        [
+          {
+            "fillFuelTank": "{\"fuelAmount\":2.64}"
+          }
+        ],
+        "Done — I added 10.00 liters of gasoline (2.64 gallons). Your tank increased to 4.64 gallons. Safe cruising — want me to find the nearest gas station or estimate how far you can go with this fuel?"
+      ],
+      [
+        [
+          {
+            "startEngine": "{\"ignitionMode\": \"START\"}"
+          },
+          {
+            "displayCarStatus": "{\"option\": \"battery\"}"
+          },
+          {
+            "displayCarStatus": "{\"option\": \"climate\"}"
+          }
+        ],
+        "Quick update from the dash:\n\n- Battery voltage: 12.60 V  \n- A/C: 25.0 °C, fan speed 50, mode \"auto\", humidity ~50%\n\nI was unable to start the engine — the system requires all doors to be locked first. Currently all four doors are unlocked: driver, passenger, rear_left, rear_right.\n\nWould you like me to lock the doors and then start the engine for you?"
+      ],
+      [
+        [
+          {
+            "check_tire_pressure": "{}"
+          }
+        ],
+        "Here are the tire pressures:\n\n- Front left: 32.0 psi\n- Front right: 32.0 psi\n- Rear left: 30.0 psi\n- Rear right: 30.0 psi\n\nAll tires are within a healthy range. You're good to go — enjoy the drive!"
+      ]
+    ],
+    "model_result_decoded": [
+      [
+        [
+          "liter_to_gallon(liter=10)"
+        ],
+        [
+          "fillFuelTank(fuelAmount=2.64)"
+        ]
+      ],
+      [
+        [
+          "startEngine(ignitionMode='START')",
+          "displayCarStatus(option='battery')",
+          "displayCarStatus(option='climate')"
+        ]
+      ],
+      [
+        [
+          "check_tire_pressure()"
+        ]
+      ]
+    ],
+    "possible_answer": [
+      [
+        "liter_to_gallon(liter=10)",
+        "fillFuelTank(fuelAmount=2.64)"
+      ],
+      [
+        "lockDoors(unlock=False, door=['driver', 'passenger', 'rear_left', 'rear_right'])",
+        "pressBrakePedal(pedalPosition=1.0)",
+        "startEngine(ignitionMode='START')",
+        "displayCarStatus(option='climate')"
+      ],
+      [
+        "check_tire_pressure()"
+      ]
+    ]
+  },
+  "evaluator": "official BFCL completed prefix"
+}

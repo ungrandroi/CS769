@@ -1,6 +1,24 @@
 # 图记忆表示实验简报
 
-> 后续更新（2026-10-24）：[G9 扩大验证与两批累计](g9-expanded-validation-results.md) 已发布：两批独立题中，identity/G9 分别为 GPT 12/18、Claude 19/22，逐题通过情况一致；仍有个别参数行为差异，尚未证明总体保率或压缩效果。
+## G9 三模型累计结果
+
+本节更新至 GPT-4.1 的 120 候选题实验完成（2026-10-25 UTC）。**identity** 保留原生历史；**G9** 将旧历史前缀替换为完整证据图表示，并连接同一命名空间、类型与值的 ID；不另附 identity、不压缩、不改官方 eval。[方法与实际输入](g9-structure-method.md) · [本轮协议](g9-coverage120-results.md#范围与方法)
+
+| 模型 | 有效配对次数／每组续跑数 | 不同题目条件数 | identity 通过率 | G9 通过率 | 新增掉点 / 恢复 | 详细记录 |
+|---|---:|---:|---:|---:|---:|---|
+| **GPT-4.1** | **103** | **102** | **80/103（77.67%）** | **78/103（75.73%）** | **2 / 0** | [首批](g9-independent-validation-results.md) · [第二批](g9-expanded-validation-results.md) · [120 候选题](g9-coverage120-results.md) |
+| GPT-5-mini | 16 | 16 | 13/16（81.25%） | 12/16（75.00%） | 1 / 0 | [mini 验证](g9-mini-validation-results.md) |
+| Claude Sonnet 5.5 | 22 | 22 | 19/22（86.36%） | 19/22（86.36%） | 0 / 0 | [首批](g9-independent-validation-results.md) · [第二批](g9-expanded-validation-results.md) |
+
+GPT-4.1 一行合并此前 18 对和本次 85 对；`multi_turn_base_135` 在两个批次出现，因此是 **103 次配对、102 个不同题目条件**，不是 103 道独立题。表中“题目条件”区分 Base 与 Long-Context，同一题族的两个版本不算独立题族；各批每题每组一次，跨批累计仅作描述，不将开发迭代混入结果。[逐条合并数据与重复检查](evidence/g9-model-summary.json)
+
+最新 GPT-4.1 批次的文件系统、车辆、交易领域逐题通过情况一致，旅行有两例新增失败：没有原样填写工单文字，以及误解用户 ID 后未发消息；mini 的一例是启动发动机报错后停下询问。Claude 当前 22 对没有新增失败。以上仍是单次观察，不能据此宣布整体通过率保持或新增关系具有因果收益；各模型合格题集不同，也不据此比较模型强弱。[GPT-4.1 行为证据](g9-coverage120-results.md#新增掉点及可观察原因) · [mini 行为证据](g9-mini-validation-results.md) · [Claude 两批记录](g9-expanded-validation-results.md)
+
+Token、筛选排除和费用按各批原口径保留在详细报告中，未将不同模型或不同阶段的 token 混成一个均值。[120 候选题的 token 与费用](g9-coverage120-results.md#token) · [mini 的 token 与费用](g9-mini-validation-results.md) · [早期两模型记录](g9-expanded-validation-results.md)
+
+## V2–V5 历史汇总
+
+> 早期两批记录（2026-10-24）：[G9 扩大验证与两批累计](g9-expanded-validation-results.md) 已发布：两批独立题中，identity/G9 分别为 GPT 12/18、Claude 19/22，逐题通过情况一致；仍有个别参数行为差异，尚未证明总体保率或压缩效果。
 
 [报告目录](README.md) · [GitHub 阅读版](experiment-summary.md)
 

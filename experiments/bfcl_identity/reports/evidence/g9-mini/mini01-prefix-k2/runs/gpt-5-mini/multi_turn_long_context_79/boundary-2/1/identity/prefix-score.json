@@ -1,0 +1,217 @@
+{
+  "passed": false,
+  "completed_user_turns": 2,
+  "diagnostics": {
+    "id": "multi_turn_long_context_79",
+    "model_name": "completed_prefix_audit",
+    "test_category": "multi_turn_long_context",
+    "valid": false,
+    "error": {
+      "error_message": "Model instance for VehicleControlAPI does not match the state with ground truth instance.",
+      "error_type": "multi_turn:instance_state_mismatch",
+      "details": {
+        "differences": {
+          "engine_state": {
+            "model": "stopped",
+            "ground_truth": "running"
+          },
+          "remainingUnlockedDoors": {
+            "model": 4,
+            "ground_truth": 0
+          },
+          "doorStatus": {
+            "model": {
+              "driver": "unlocked",
+              "passenger": "unlocked",
+              "rear_left": "unlocked",
+              "rear_right": "unlocked"
+            },
+            "ground_truth": {
+              "driver": "locked",
+              "passenger": "locked",
+              "rear_left": "locked",
+              "rear_right": "locked"
+            }
+          },
+          "brakePedalStatus": {
+            "model": "released",
+            "ground_truth": "pressed"
+          }
+        },
+        "model_instance_state": {
+          "fuelLevel": 15.5,
+          "batteryVoltage": 12.8,
+          "engine_state": "stopped",
+          "remainingUnlockedDoors": 4,
+          "doorStatus": {
+            "driver": "unlocked",
+            "passenger": "unlocked",
+            "rear_left": "unlocked",
+            "rear_right": "unlocked"
+          },
+          "acTemperature": 22.0,
+          "fanSpeed": 60,
+          "acMode": "auto",
+          "humidityLevel": 45.0,
+          "headLightStatus": "off",
+          "parkingBrakeStatus": "released",
+          "brakePedalStatus": "released",
+          "distanceToNextVehicle": 100.0,
+          "cruiseStatus": "inactive",
+          "destination": "None",
+          "frontLeftTirePressure": 32.0,
+          "frontRightTirePressure": 32.0,
+          "rearLeftTirePressure": 30.0,
+          "rearRightTirePressure": 30.0,
+          "long_context": true
+        },
+        "ground_truth_instance_state": {
+          "fuelLevel": 15.5,
+          "batteryVoltage": 12.8,
+          "engine_state": "running",
+          "remainingUnlockedDoors": 0,
+          "doorStatus": {
+            "driver": "locked",
+            "passenger": "locked",
+            "rear_left": "locked",
+            "rear_right": "locked"
+          },
+          "acTemperature": 22.0,
+          "fanSpeed": 60,
+          "acMode": "auto",
+          "humidityLevel": 45.0,
+          "headLightStatus": "off",
+          "parkingBrakeStatus": "released",
+          "brakePedalStatus": "pressed",
+          "distanceToNextVehicle": 100.0,
+          "cruiseStatus": "inactive",
+          "destination": "None",
+          "frontLeftTirePressure": 32.0,
+          "frontRightTirePressure": 32.0,
+          "rearLeftTirePressure": 30.0,
+          "rearRightTirePressure": 30.0,
+          "long_context": true
+        }
+      },
+      "execution_result": [
+        {
+          "model": [
+            [
+              "{\"lockStatus\": \"unlocked\", \"remainingUnlockedDoors\": 4}"
+            ]
+          ],
+          "ground_truth": [
+            "{\"lockStatus\": \"unlocked\", \"remainingUnlockedDoors\": 4}"
+          ]
+        },
+        {
+          "model": [
+            [
+              "{\"error\": \"All doors must be locked before starting the engine. Here are the unlocked doors: driver, passenger, rear_left, rear_right\"}"
+            ]
+          ],
+          "ground_truth": [
+            "{\"lockStatus\": \"locked\", \"remainingUnlockedDoors\": 0}",
+            "{\"brakePedalStatus\": \"pressed\", \"brakePedalForce\": 1000.0}",
+            "{\"engineState\": \"running\", \"fuelLevel\": 15.5, \"batteryVoltage\": 12.8}"
+          ]
+        }
+      ]
+    },
+    "prompt": {
+      "id": "multi_turn_long_context_79",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "I just returned to my vehicle, and it dawned on me that I may not have unlocked the doors yet. Would you assist in unlocking them all?"
+          }
+        ],
+        [
+          {
+            "role": "user",
+            "content": "With every door now open, please proceed to fire up the engine; I need to ensure everything's in working order before hitting the road."
+          }
+        ]
+      ],
+      "initial_config": {
+        "VehicleControlAPI": {
+          "fuelLevel": 15.5,
+          "batteryVoltage": 12.8,
+          "engineState": "stopped",
+          "doorStatus": {
+            "driver": "locked",
+            "passenger": "locked",
+            "rear_left": "locked",
+            "rear_right": "locked"
+          },
+          "acTemperature": 22.0,
+          "fanSpeed": 60,
+          "acMode": "auto",
+          "humidityLevel": 45.0,
+          "headLightStatus": "off",
+          "parkingBrakeStatus": "released",
+          "parkingBrakeForce": 0.0,
+          "slopeAngle": 0.0,
+          "distanceToNextVehicle": 100.0,
+          "cruiseStatus": "inactive",
+          "destination": "None",
+          "frontLeftTirePressure": 32.0,
+          "frontRightTirePressure": 32.0,
+          "rearLeftTirePressure": 30.0,
+          "rearRightTirePressure": 30.0
+        }
+      },
+      "path": [
+        "VehicleControlAPI.displayCarStatus",
+        "VehicleControlAPI.lockDoors",
+        "VehicleControlAPI.startEngine",
+        "VehicleControlAPI.setCruiseControl"
+      ],
+      "involved_classes": [
+        "VehicleControlAPI"
+      ]
+    },
+    "model_result_raw": [
+      [
+        [
+          {
+            "lockDoors": "{\"unlock\":true,\"door\":[\"driver\",\"passenger\",\"rear_left\",\"rear_right\"]}"
+          }
+        ],
+        "All doors have been unlocked. Is there anything else I can help with?"
+      ],
+      [
+        [
+          {
+            "startEngine": "{\"ignitionMode\":\"START\"}"
+          }
+        ],
+        "I can’t start the engine while the doors are unlocked. The system reports these doors are unlocked: driver, passenger, rear_left, rear_right.\n\nWould you like me to lock all doors now and then start the engine? Or do you prefer to lock them yourself and I’ll start the engine after you confirm?"
+      ]
+    ],
+    "model_result_decoded": [
+      [
+        [
+          "lockDoors(unlock=True,door=['driver', 'passenger', 'rear_left', 'rear_right'])"
+        ]
+      ],
+      [
+        [
+          "startEngine(ignitionMode='START')"
+        ]
+      ]
+    ],
+    "possible_answer": [
+      [
+        "lockDoors(unlock=True, door=['driver', 'passenger', 'rear_left', 'rear_right'])"
+      ],
+      [
+        "lockDoors(unlock=False, door=['driver', 'passenger', 'rear_left', 'rear_right'])",
+        "pressBrakePedal(pedalPosition=1.0)",
+        "startEngine(ignitionMode='START')"
+      ]
+    ]
+  },
+  "evaluator": "official BFCL completed prefix"
+}

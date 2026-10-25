@@ -1,0 +1,892 @@
+{
+  "version": "g9-coverage-publication-v1",
+  "base_commit": "882b64fe21244c0ab7e9ec2652094e9e11e22582",
+  "model_calls": 0,
+  "original_records_modified": false,
+  "source_records": [
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/snapshots/completed/execution-state.json",
+      "source_sha256": "bc0031d15148ebed0ef003bfe69b231ceb74e282bf1ac6c7a15fdcf8ce86f33c",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/snapshots/completed/execution-state.json",
+      "published_sha256": "bc0031d15148ebed0ef003bfe69b231ceb74e282bf1ac6c7a15fdcf8ce86f33c",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/analysis/coverage-selection-summary.json",
+      "source_sha256": "c91c18221d870528c2fce67d20b82858ea7aaa1ac438cf9ad38df3ebaa454efb",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/analysis/coverage-selection-summary.json",
+      "published_sha256": "c91c18221d870528c2fce67d20b82858ea7aaa1ac438cf9ad38df3ebaa454efb",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/authorization.json",
+      "source_sha256": "9bd7b3be1fac6e6219ce134273f5f11c765d184ef13bfb1af78875acb1bbe2c2",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/authorization.json",
+      "published_sha256": "9bd7b3be1fac6e6219ce134273f5f11c765d184ef13bfb1af78875acb1bbe2c2",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/design/coverage120-selection-v1.json",
+      "source_sha256": "cd7bd77f3ad5e0699c5e12215c3d116c9eb1c0cf8ce58ba8d16475afe801adda",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/design/coverage120-selection-v1.json",
+      "published_sha256": "cd7bd77f3ad5e0699c5e12215c3d116c9eb1c0cf8ce58ba8d16475afe801adda",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/design/dataset-metadata-projection.json",
+      "source_sha256": "7e2e8cc3fb1d475cf404b2ddedcb027fb13fe7bd67542acb88fd755005fb614b",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/design/dataset-metadata-projection.json",
+      "published_sha256": "7e2e8cc3fb1d475cf404b2ddedcb027fb13fe7bd67542acb88fd755005fb614b",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/design/build-selection.py",
+      "source_sha256": "22bf3c9a821bdf3cd7c0bcb6f3e465b447aeb6bb66a79e58a20c82f68f9d714f",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/design/build-selection.py",
+      "published_sha256": "22bf3c9a821bdf3cd7c0bcb6f3e465b447aeb6bb66a79e58a20c82f68f9d714f",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/design/selection-validation.json",
+      "source_sha256": "97c81c016b319821833ebcb1e0384d4884d28a721185c8315e0d28978a31f73e",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/design/selection-validation.json",
+      "published_sha256": "97c81c016b319821833ebcb1e0384d4884d28a721185c8315e0d28978a31f73e",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/design/selection-review.md",
+      "source_sha256": "1e0860ccd918d196fded0d854d7abc072f1ed576e2a2afa43e083fd18e83c5c5",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/design/selection-review.md",
+      "published_sha256": "1e0860ccd918d196fded0d854d7abc072f1ed576e2a2afa43e083fd18e83c5c5",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/analysis/coverage-selection-summary.csv",
+      "source_sha256": "3b25512481806b46219f373ff65b1c9ede21081a538663832ce6f33384338231",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/analysis/coverage-selection-summary.csv",
+      "published_sha256": "3b25512481806b46219f373ff65b1c9ede21081a538663832ce6f33384338231",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/analysis/coverage-selection-summary.py",
+      "source_sha256": "da6ff89dab8a3b0f9a02056290cd8273f695b1ca1658f5d2f8818721bd632fda",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/analysis/coverage-selection-summary.py",
+      "published_sha256": "da6ff89dab8a3b0f9a02056290cd8273f695b1ca1658f5d2f8818721bd632fda",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/analysis/coverage-selection-summary.md",
+      "source_sha256": "881870e0e79bfafa0536d2bb9f69c37649c4b0bd6706c0ef345a96e1d46eb038",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/analysis/coverage-selection-summary.md",
+      "published_sha256": "881870e0e79bfafa0536d2bb9f69c37649c4b0bd6706c0ef345a96e1d46eb038",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/analysis/coverage-behavior-review.json",
+      "source_sha256": "0fbe9f789d47ee1c8916e3caf8c9c62ac071f651842f4e8cbb29e89cd3003f35",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/analysis/coverage-behavior-review.json",
+      "published_sha256": "0fbe9f789d47ee1c8916e3caf8c9c62ac071f651842f4e8cbb29e89cd3003f35",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/analysis/coverage-token-cost-summary.json",
+      "source_sha256": "9cbeae249c700abb554a059561a95b696c072f11f19d2314dcb1b83b50642582",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/analysis/coverage-token-cost-summary.json",
+      "published_sha256": "9cbeae249c700abb554a059561a95b696c072f11f19d2314dcb1b83b50642582",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/review/coverage-token-cost-review.md",
+      "source_sha256": "e87b27078b4e2e4e0d2170a592da64924ed69ea393c4987f7f9484debef2812b",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/review/coverage-token-cost-review.md",
+      "published_sha256": "39df404777488448c0ab886f6dd282444f9274ef0ff76c0e4a9195564fd7a9cd",
+      "byte_identical": false
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/review/audit-k1-fix-review.md",
+      "source_sha256": "a69e4d17b339f9daf760155641d0ad59ff2c0aa622b3263555234e8423843e2f",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/review/audit-k1-fix-review.md",
+      "published_sha256": "a69e4d17b339f9daf760155641d0ad59ff2c0aa622b3263555234e8423843e2f",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/snapshots/completed/launch-admission-resume-01.json",
+      "source_sha256": "29d2fd141d59c98aa5de54d966f868a232bb590009e12a7f2b0c3c0136ff3d5e",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-coverage120/snapshots/completed/launch-admission-resume-01.json",
+      "published_sha256": "29d2fd141d59c98aa5de54d966f868a232bb590009e12a7f2b0c3c0136ff3d5e",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/research/g9-coverage120-results.md",
+      "source_sha256": "191e373f9bcca5e278e54a8f3f5f0f0e9d9be594fa550250f97f77331d3ede68",
+      "published": "experiments/bfcl_identity/reports/g9-coverage120-results.md",
+      "published_sha256": "78dd01163466d73c4829328f464c9f2f57ce0c814978149a3373649fa4e91f0c",
+      "byte_identical": false
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/analysis/mini-official-results.json",
+      "source_sha256": "191b588caa8d05514242680b800a9ef22adfb4da6acc51012685ec80e545f4ab",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/analysis/mini-official-results.json",
+      "published_sha256": "191b588caa8d05514242680b800a9ef22adfb4da6acc51012685ec80e545f4ab",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/design/g9-mini-fixed24-selection-v1.json",
+      "source_sha256": "21b5ec8683d5ea095088bce3fe026001878b9ba660e258513f88525eebc775e8",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/design/g9-mini-fixed24-selection-v1.json",
+      "published_sha256": "21b5ec8683d5ea095088bce3fe026001878b9ba660e258513f88525eebc775e8",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_71/boundary-3/1/identity/official-score.json",
+      "source_sha256": "f348e3be2a6d9cdba457e4369c653d6691c2857014e4054fb4d7296ff63a6547",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_71/boundary-3/1/identity/official-score.json",
+      "published_sha256": "f348e3be2a6d9cdba457e4369c653d6691c2857014e4054fb4d7296ff63a6547",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_71/boundary-3/1/graph-record-view-full/official-score.json",
+      "source_sha256": "ec94712510c842dcf0b8cdba27184366a6fd7051069cf9f67267df456f4dc32c",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_71/boundary-3/1/graph-record-view-full/official-score.json",
+      "published_sha256": "ec94712510c842dcf0b8cdba27184366a6fd7051069cf9f67267df456f4dc32c",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_59/boundary-3/1/identity/official-score.json",
+      "source_sha256": "e069d31c40e85660170c1f245b5715e6f00fdcb5bbc9b9be77f2900096fa2711",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_59/boundary-3/1/identity/official-score.json",
+      "published_sha256": "e069d31c40e85660170c1f245b5715e6f00fdcb5bbc9b9be77f2900096fa2711",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_59/boundary-3/1/graph-record-view-full/official-score.json",
+      "source_sha256": "0cebb81bb6d5d47f31d544e930ea22afc4eb2eb90244ef01232d979f40748e26",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_59/boundary-3/1/graph-record-view-full/official-score.json",
+      "published_sha256": "0cebb81bb6d5d47f31d544e930ea22afc4eb2eb90244ef01232d979f40748e26",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_138/boundary-3/1/identity/official-score.json",
+      "source_sha256": "8c77af240ecfd4a7bfe937aa0afbf34d1cb61641949ae39e140a2906cdd87bec",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_138/boundary-3/1/identity/official-score.json",
+      "published_sha256": "8c77af240ecfd4a7bfe937aa0afbf34d1cb61641949ae39e140a2906cdd87bec",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_138/boundary-3/1/graph-record-view-full/official-score.json",
+      "source_sha256": "71142e668b2cf64762eccc37b6cf5885a7297c73ec43744b454fda0d288e6d07",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_138/boundary-3/1/graph-record-view-full/official-score.json",
+      "published_sha256": "71142e668b2cf64762eccc37b6cf5885a7297c73ec43744b454fda0d288e6d07",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_123/boundary-3/1/identity/official-score.json",
+      "source_sha256": "2aedd80c5229370dc8faf652baf0949b89ac45685a17c47488b71700cc3927a5",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_123/boundary-3/1/identity/official-score.json",
+      "published_sha256": "2aedd80c5229370dc8faf652baf0949b89ac45685a17c47488b71700cc3927a5",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_123/boundary-3/1/graph-record-view-full/official-score.json",
+      "source_sha256": "73bb071a4ab00414e215dde00f4f612e400ee372939fb8bf6390671b269f7702",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_123/boundary-3/1/graph-record-view-full/official-score.json",
+      "published_sha256": "73bb071a4ab00414e215dde00f4f612e400ee372939fb8bf6390671b269f7702",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_121/boundary-3/1/identity/official-score.json",
+      "source_sha256": "52abfb18b91e313faa490454ab003214060b758cbe62967e00d98e6f3c20f5ca",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_121/boundary-3/1/identity/official-score.json",
+      "published_sha256": "52abfb18b91e313faa490454ab003214060b758cbe62967e00d98e6f3c20f5ca",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_121/boundary-3/1/graph-record-view-full/official-score.json",
+      "source_sha256": "0cf355ac44519d080739cdb2a19d4c9dcdd9f497d6bfb245194061812b38f858",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_121/boundary-3/1/graph-record-view-full/official-score.json",
+      "published_sha256": "0cf355ac44519d080739cdb2a19d4c9dcdd9f497d6bfb245194061812b38f858",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_111/boundary-3/1/identity/official-score.json",
+      "source_sha256": "661195628ca75e8056e5adf7e4af1690062341722cee8682ce89b6aa88e97c0e",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_111/boundary-3/1/identity/official-score.json",
+      "published_sha256": "661195628ca75e8056e5adf7e4af1690062341722cee8682ce89b6aa88e97c0e",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_111/boundary-3/1/graph-record-view-full/official-score.json",
+      "source_sha256": "51194be88cf85122ca9cb3ad49642b960fc67d7b62a4f6beaaa316bc482cdf56",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_111/boundary-3/1/graph-record-view-full/official-score.json",
+      "published_sha256": "51194be88cf85122ca9cb3ad49642b960fc67d7b62a4f6beaaa316bc482cdf56",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini03-continuation-k2/runs/gpt-5-mini/multi_turn_long_context_157/boundary-2/1/identity/official-score.json",
+      "source_sha256": "55561600d047c59f102b3b93177efd028795fba45570661cd06fe8423b8e3241",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini03-continuation-k2/runs/gpt-5-mini/multi_turn_long_context_157/boundary-2/1/identity/official-score.json",
+      "published_sha256": "55561600d047c59f102b3b93177efd028795fba45570661cd06fe8423b8e3241",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini03-continuation-k2/runs/gpt-5-mini/multi_turn_long_context_157/boundary-2/1/graph-record-view-full/official-score.json",
+      "source_sha256": "310f9867dacacd0e80898b67cd43f23c4b835001ac16b482d45fbb048aca704a",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini03-continuation-k2/runs/gpt-5-mini/multi_turn_long_context_157/boundary-2/1/graph-record-view-full/official-score.json",
+      "published_sha256": "310f9867dacacd0e80898b67cd43f23c4b835001ac16b482d45fbb048aca704a",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_167/boundary-3/1/identity/official-score.json",
+      "source_sha256": "63025e595dbe6cb98a441283306e8ee8016a8de36484e950cf44314960d5a22c",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_167/boundary-3/1/identity/official-score.json",
+      "published_sha256": "63025e595dbe6cb98a441283306e8ee8016a8de36484e950cf44314960d5a22c",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_167/boundary-3/1/graph-record-view-full/official-score.json",
+      "source_sha256": "7519102109af97871cc31fc2eb27f9a830672ee2b99bbfc9c440ed3e1a78710c",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_167/boundary-3/1/graph-record-view-full/official-score.json",
+      "published_sha256": "7519102109af97871cc31fc2eb27f9a830672ee2b99bbfc9c440ed3e1a78710c",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_162/boundary-3/1/identity/official-score.json",
+      "source_sha256": "34a27bdd7052c3522a210236d3a07068a6872f064bae5cf21936450527f55f71",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_162/boundary-3/1/identity/official-score.json",
+      "published_sha256": "34a27bdd7052c3522a210236d3a07068a6872f064bae5cf21936450527f55f71",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_162/boundary-3/1/graph-record-view-full/official-score.json",
+      "source_sha256": "236f92f9cae5c4e06cc60dc5137d1046802b10ee7ad86df51c75bf4c024fc668",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_162/boundary-3/1/graph-record-view-full/official-score.json",
+      "published_sha256": "236f92f9cae5c4e06cc60dc5137d1046802b10ee7ad86df51c75bf4c024fc668",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_165/boundary-3/1/identity/official-score.json",
+      "source_sha256": "0baffc530aa198dc6e7064d45ea951e7ca9dd6db5bdde66b7c39485118b9cd94",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_165/boundary-3/1/identity/official-score.json",
+      "published_sha256": "0baffc530aa198dc6e7064d45ea951e7ca9dd6db5bdde66b7c39485118b9cd94",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_165/boundary-3/1/graph-record-view-full/official-score.json",
+      "source_sha256": "de20a7033a98f50094fb0315297e9b78addfbd6997c686d0cb8a336c55ecf64b",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_165/boundary-3/1/graph-record-view-full/official-score.json",
+      "published_sha256": "de20a7033a98f50094fb0315297e9b78addfbd6997c686d0cb8a336c55ecf64b",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_60/boundary-3/1/identity/official-score.json",
+      "source_sha256": "8aec1b3bb16a9a22466b1ae027f3b75fec26306407333ab2191114062719a63b",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_60/boundary-3/1/identity/official-score.json",
+      "published_sha256": "8aec1b3bb16a9a22466b1ae027f3b75fec26306407333ab2191114062719a63b",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_60/boundary-3/1/graph-record-view-full/official-score.json",
+      "source_sha256": "d95f2bf233f7a73558f8cdf47bc435fb1494e6d36e1bac698053d9b0b5a336c7",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_60/boundary-3/1/graph-record-view-full/official-score.json",
+      "published_sha256": "d95f2bf233f7a73558f8cdf47bc435fb1494e6d36e1bac698053d9b0b5a336c7",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_135/boundary-3/1/identity/official-score.json",
+      "source_sha256": "5d3d47ed3a9fb6eabdf0ae71237119afc53c0f51e578f850ec990c760deebd3a",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_135/boundary-3/1/identity/official-score.json",
+      "published_sha256": "5d3d47ed3a9fb6eabdf0ae71237119afc53c0f51e578f850ec990c760deebd3a",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_135/boundary-3/1/graph-record-view-full/official-score.json",
+      "source_sha256": "dfdceafd9c49850e54eeb8167065a9d05b8b643f86113b6e88a19fd360672e58",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_135/boundary-3/1/graph-record-view-full/official-score.json",
+      "published_sha256": "dfdceafd9c49850e54eeb8167065a9d05b8b643f86113b6e88a19fd360672e58",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_107/boundary-3/1/identity/official-score.json",
+      "source_sha256": "fdc6fd8f512946fd4b4de86f5b2d53c254e6df516e8e99e2ae4771042b59d308",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_107/boundary-3/1/identity/official-score.json",
+      "published_sha256": "fdc6fd8f512946fd4b4de86f5b2d53c254e6df516e8e99e2ae4771042b59d308",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_107/boundary-3/1/graph-record-view-full/official-score.json",
+      "source_sha256": "d98e3b76bab5ea1e9cf6bcf026e3392076a861796ab45bd216940eaeaadf2eec",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_107/boundary-3/1/graph-record-view-full/official-score.json",
+      "published_sha256": "d98e3b76bab5ea1e9cf6bcf026e3392076a861796ab45bd216940eaeaadf2eec",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini03-continuation-k2/runs/gpt-5-mini/multi_turn_base_124/boundary-2/1/identity/official-score.json",
+      "source_sha256": "962a5b4c83ed425cc809555d91acc8dbc3a75c48a800b776c543e959f66d189f",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini03-continuation-k2/runs/gpt-5-mini/multi_turn_base_124/boundary-2/1/identity/official-score.json",
+      "published_sha256": "962a5b4c83ed425cc809555d91acc8dbc3a75c48a800b776c543e959f66d189f",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini03-continuation-k2/runs/gpt-5-mini/multi_turn_base_124/boundary-2/1/graph-record-view-full/official-score.json",
+      "source_sha256": "88b5b030ea127c3c77ac8ddc04bc09003e29cf9075323421967b2f8ab552464f",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini03-continuation-k2/runs/gpt-5-mini/multi_turn_base_124/boundary-2/1/graph-record-view-full/official-score.json",
+      "published_sha256": "88b5b030ea127c3c77ac8ddc04bc09003e29cf9075323421967b2f8ab552464f",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_112/boundary-3/1/identity/official-score.json",
+      "source_sha256": "4737c83974c15ed48907dc69ddd6dd1cc182fdf4cdd4d3708192c6e332924feb",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_112/boundary-3/1/identity/official-score.json",
+      "published_sha256": "4737c83974c15ed48907dc69ddd6dd1cc182fdf4cdd4d3708192c6e332924feb",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_112/boundary-3/1/graph-record-view-full/official-score.json",
+      "source_sha256": "eb1692f8c413ec56d6ae6a23f621d836a25131a3851a62f7b63952246005545e",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_112/boundary-3/1/graph-record-view-full/official-score.json",
+      "published_sha256": "eb1692f8c413ec56d6ae6a23f621d836a25131a3851a62f7b63952246005545e",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_190/boundary-3/1/identity/official-score.json",
+      "source_sha256": "a8b7b718c7e04844889fa6715c83c523e0615fa7ee1b51f988544e857ecc0c5b",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_190/boundary-3/1/identity/official-score.json",
+      "published_sha256": "a8b7b718c7e04844889fa6715c83c523e0615fa7ee1b51f988544e857ecc0c5b",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_190/boundary-3/1/graph-record-view-full/official-score.json",
+      "source_sha256": "9747703f41ea9cac192d96426b2b75b6c38aeb835aacc3821a21709385171054",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_190/boundary-3/1/graph-record-view-full/official-score.json",
+      "published_sha256": "9747703f41ea9cac192d96426b2b75b6c38aeb835aacc3821a21709385171054",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini01-prefix-k2/runs/gpt-5-mini/multi_turn_base_73/boundary-2/1/identity/prefix-score.json",
+      "source_sha256": "ebac761e5fe6c15fc66fb25ff830007db4266d9e3dbedc20a5b9c8680505d12a",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini01-prefix-k2/runs/gpt-5-mini/multi_turn_base_73/boundary-2/1/identity/prefix-score.json",
+      "published_sha256": "ebac761e5fe6c15fc66fb25ff830007db4266d9e3dbedc20a5b9c8680505d12a",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini01-prefix-k2/runs/gpt-5-mini/multi_turn_long_context_79/boundary-2/1/identity/prefix-score.json",
+      "source_sha256": "470d48cab30112f0df790de1f018c4ae3ec9f5862a95b9298264dde3f550d2e3",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini01-prefix-k2/runs/gpt-5-mini/multi_turn_long_context_79/boundary-2/1/identity/prefix-score.json",
+      "published_sha256": "470d48cab30112f0df790de1f018c4ae3ec9f5862a95b9298264dde3f550d2e3",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_base_81/boundary-3/1/identity/prefix-score.json",
+      "source_sha256": "b0633f64f3ce56f7e01acca69ef2acf9038dccb77e06efbcd7d91df0e1afcecb",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_base_81/boundary-3/1/identity/prefix-score.json",
+      "published_sha256": "b0633f64f3ce56f7e01acca69ef2acf9038dccb77e06efbcd7d91df0e1afcecb",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_long_context_170/boundary-3/1/identity/prefix-score.json",
+      "source_sha256": "32c3bc2ec5166dde325e299afe00a2273d27f0985ba1c329148dff302c9cc91b",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_long_context_170/boundary-3/1/identity/prefix-score.json",
+      "published_sha256": "32c3bc2ec5166dde325e299afe00a2273d27f0985ba1c329148dff302c9cc91b",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_long_context_196/boundary-3/1/identity/prefix-score.json",
+      "source_sha256": "c5be6425476cc533922942abd1878cdd3057fbf62b597effd1a54e488f56f104",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_long_context_196/boundary-3/1/identity/prefix-score.json",
+      "published_sha256": "c5be6425476cc533922942abd1878cdd3057fbf62b597effd1a54e488f56f104",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_long_context_188/boundary-3/1/identity/prefix-score.json",
+      "source_sha256": "05e4b8747b629f7f7a8b46c9434884aa5f48a12ad6cf57934bebf5494aa1230c",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_long_context_188/boundary-3/1/identity/prefix-score.json",
+      "published_sha256": "05e4b8747b629f7f7a8b46c9434884aa5f48a12ad6cf57934bebf5494aa1230c",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_base_95/boundary-3/1/identity/prefix-score.json",
+      "source_sha256": "130ce554f58f8213738e943557c97570cae645aab38948e8a120441ca8126af2",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_base_95/boundary-3/1/identity/prefix-score.json",
+      "published_sha256": "130ce554f58f8213738e943557c97570cae645aab38948e8a120441ca8126af2",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_long_context_80/boundary-3/1/identity/prefix-score.json",
+      "source_sha256": "87c91986efaf3d14dad02bc7481b7610b732c93f406c323e2aa0d3c37399a97e",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_long_context_80/boundary-3/1/identity/prefix-score.json",
+      "published_sha256": "87c91986efaf3d14dad02bc7481b7610b732c93f406c323e2aa0d3c37399a97e",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/analysis/mini-official-results.md",
+      "source_sha256": "1d555fe620c26e3132efa31aea9074af2de862b9fb8293dda1fcbf2d7d794ab7",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/analysis/mini-official-results.md",
+      "published_sha256": "1d555fe620c26e3132efa31aea9074af2de862b9fb8293dda1fcbf2d7d794ab7",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/authorization.json",
+      "source_sha256": "6682aded7a095c83270aa488307a61fc3407b288b5857937258339fbe2c13f51",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/authorization.json",
+      "published_sha256": "6682aded7a095c83270aa488307a61fc3407b288b5857937258339fbe2c13f51",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/execution-state.json",
+      "source_sha256": "08efc94afeefa37e902d6cae89fa573dfdb8b5d16ec49197e10fbe4785f51869",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/execution-state.json",
+      "published_sha256": "08efc94afeefa37e902d6cae89fa573dfdb8b5d16ec49197e10fbe4785f51869",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "anonymous-behavior-review-20261024/review-b.md",
+      "source_sha256": "2c0dc45e69ce13cf9c7e3a5151490122bdd31e3aee4650b5c4dd347f2bff5cd5",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/blind-review/review-b.md",
+      "published_sha256": "2c0dc45e69ce13cf9c7e3a5151490122bdd31e3aee4650b5c4dd347f2bff5cd5",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/analysis/mini-behavior-results.json",
+      "source_sha256": "b4a5ae54d635433a36fb2743f130b7e1a4beaa721834d91d52a01bd920c32cd1",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/analysis/mini-behavior-results.json",
+      "published_sha256": "b4a5ae54d635433a36fb2743f130b7e1a4beaa721834d91d52a01bd920c32cd1",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/analysis/mini04-continuation-k3-actual-audit.json",
+      "source_sha256": "01eebc8b272b50c3b7025c64de24dd93a67228549c746b3dbf84a3ee43be06a4",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/analysis/mini04-continuation-k3-actual-audit.json",
+      "published_sha256": "01eebc8b272b50c3b7025c64de24dd93a67228549c746b3dbf84a3ee43be06a4",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/analysis/pre-unmask-label-freeze.json",
+      "source_sha256": "2e8b07a58784fde5f0d8e728fa46c5616ee2b43a2619007df149dbe758ffd0ed",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/analysis/pre-unmask-label-freeze.json",
+      "published_sha256": "2e8b07a58784fde5f0d8e728fa46c5616ee2b43a2619007df149dbe758ffd0ed",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "anonymous-behavior-review-20261024/review-a.md",
+      "source_sha256": "c56790758cfe22eeef2545a663f7921315083e8d929b48f143723791277db19e",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/blind-review/review-a.md",
+      "published_sha256": "c56790758cfe22eeef2545a663f7921315083e8d929b48f143723791277db19e",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/mini-budget.json",
+      "source_sha256": "f960fda3eb2c7d1f887b47a8eccf9d5119eb64b2782367e44859728fcc69d063",
+      "published": "experiments/bfcl_identity/reports/evidence/g9-mini/mini-budget.json",
+      "published_sha256": "f960fda3eb2c7d1f887b47a8eccf9d5119eb64b2782367e44859728fcc69d063",
+      "byte_identical": true
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/research/g9-mini-validation-results.md",
+      "source_sha256": "a667c855576d5c3e14b9a2c3e210448d1e08e55490c6b4a7510b84ac57fb4c22",
+      "published": "experiments/bfcl_identity/reports/g9-mini-validation-results.md",
+      "published_sha256": "2db559b72bb926323c9d0e8c1cf82ee1e7ab4a24fc84a5ebc54c2717fc82ac80",
+      "byte_identical": false
+    }
+  ],
+  "derived_summary_sources": [
+    {
+      "source_workspace_path": "graph-structure-exploration-20261024/analysis/g9-independent-unmasked-summary.json",
+      "sha256": "a758eccb0340175c0c6fc2aaec4c8b977a137e2ce52dd0cb6a2a80320ca66186"
+    },
+    {
+      "source_workspace_path": "graph-structure-exploration-20261024/analysis/g9-expanded-unmasked-summary.json",
+      "sha256": "e87d469b64d8f4c4fc2eff6922b6dd6efe55b26c40cbf4ac91233e4e9003ceb7"
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/analysis/coverage-selection-summary.json",
+      "sha256": "c91c18221d870528c2fce67d20b82858ea7aaa1ac438cf9ad38df3ebaa454efb"
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/analysis/mini-official-results.json",
+      "sha256": "191b588caa8d05514242680b800a9ef22adfb4da6acc51012685ec80e545f4ab"
+    }
+  ],
+  "checks": {
+    "official_counts_recomputed": true,
+    "gpt41_repeated_condition": "multi_turn_base_135",
+    "relative_links_checked": 300,
+    "credential_pattern_findings": 0
+  },
+  "files": [
+    {
+      "path": "experiments/bfcl_identity/reports/README.md",
+      "sha256": "100cc64bda9c4190c0f8f1f75e9745661c23b4dab8bcd95f47f34ac47fe98344",
+      "bytes": 4928
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/README.md",
+      "sha256": "d1e226145ae7d4037688adc4fe72d775bae7f4c0b43fb7a85d5b6cc9e1540c3f",
+      "bytes": 789
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/analysis/coverage-behavior-review.json",
+      "sha256": "0fbe9f789d47ee1c8916e3caf8c9c62ac071f651842f4e8cbb29e89cd3003f35",
+      "bytes": 32974
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/analysis/coverage-selection-summary.csv",
+      "sha256": "3b25512481806b46219f373ff65b1c9ede21081a538663832ce6f33384338231",
+      "bytes": 38107
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/analysis/coverage-selection-summary.json",
+      "sha256": "c91c18221d870528c2fce67d20b82858ea7aaa1ac438cf9ad38df3ebaa454efb",
+      "bytes": 99595
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/analysis/coverage-selection-summary.md",
+      "sha256": "881870e0e79bfafa0536d2bb9f69c37649c4b0bd6706c0ef345a96e1d46eb038",
+      "bytes": 5855
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/analysis/coverage-selection-summary.py",
+      "sha256": "da6ff89dab8a3b0f9a02056290cd8273f695b1ca1658f5d2f8818721bd632fda",
+      "bytes": 12426
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/analysis/coverage-token-cost-summary.json",
+      "sha256": "9cbeae249c700abb554a059561a95b696c072f11f19d2314dcb1b83b50642582",
+      "bytes": 865338
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/authorization.json",
+      "sha256": "9bd7b3be1fac6e6219ce134273f5f11c765d184ef13bfb1af78875acb1bbe2c2",
+      "bytes": 2362
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/design/build-selection.py",
+      "sha256": "22bf3c9a821bdf3cd7c0bcb6f3e465b447aeb6bb66a79e58a20c82f68f9d714f",
+      "bytes": 10164
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/design/coverage120-selection-v1.json",
+      "sha256": "cd7bd77f3ad5e0699c5e12215c3d116c9eb1c0cf8ce58ba8d16475afe801adda",
+      "bytes": 84070
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/design/dataset-metadata-projection.json",
+      "sha256": "7e2e8cc3fb1d475cf404b2ddedcb027fb13fe7bd67542acb88fd755005fb614b",
+      "bytes": 95889
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/design/selection-review.md",
+      "sha256": "1e0860ccd918d196fded0d854d7abc072f1ed576e2a2afa43e083fd18e83c5c5",
+      "bytes": 6256
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/design/selection-validation.json",
+      "sha256": "97c81c016b319821833ebcb1e0384d4884d28a721185c8315e0d28978a31f73e",
+      "bytes": 2278
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/review/audit-k1-fix-review.md",
+      "sha256": "a69e4d17b339f9daf760155641d0ad59ff2c0aa622b3263555234e8423843e2f",
+      "bytes": 3275
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/review/coverage-token-cost-review.md",
+      "sha256": "39df404777488448c0ab886f6dd282444f9274ef0ff76c0e4a9195564fd7a9cd",
+      "bytes": 4589
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/snapshots/completed/execution-state.json",
+      "sha256": "bc0031d15148ebed0ef003bfe69b231ceb74e282bf1ac6c7a15fdcf8ce86f33c",
+      "bytes": 3064
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-coverage120/snapshots/completed/launch-admission-resume-01.json",
+      "sha256": "29d2fd141d59c98aa5de54d966f868a232bb590009e12a7f2b0c3c0136ff3d5e",
+      "bytes": 13899
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/README.md",
+      "sha256": "21575d9463da102933f55fd9103a686f47cf417fd78c9c100063e41fd671dec0",
+      "bytes": 786
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/analysis/mini-behavior-results.json",
+      "sha256": "b4a5ae54d635433a36fb2743f130b7e1a4beaa721834d91d52a01bd920c32cd1",
+      "bytes": 143738
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/analysis/mini-official-results.json",
+      "sha256": "191b588caa8d05514242680b800a9ef22adfb4da6acc51012685ec80e545f4ab",
+      "bytes": 334876
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/analysis/mini-official-results.md",
+      "sha256": "1d555fe620c26e3132efa31aea9074af2de862b9fb8293dda1fcbf2d7d794ab7",
+      "bytes": 8613
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/analysis/mini04-continuation-k3-actual-audit.json",
+      "sha256": "01eebc8b272b50c3b7025c64de24dd93a67228549c746b3dbf84a3ee43be06a4",
+      "bytes": 123511
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/analysis/pre-unmask-label-freeze.json",
+      "sha256": "2e8b07a58784fde5f0d8e728fa46c5616ee2b43a2619007df149dbe758ffd0ed",
+      "bytes": 1204
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/authorization.json",
+      "sha256": "6682aded7a095c83270aa488307a61fc3407b288b5857937258339fbe2c13f51",
+      "bytes": 1613
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/blind-review/review-a.md",
+      "sha256": "c56790758cfe22eeef2545a663f7921315083e8d929b48f143723791277db19e",
+      "bytes": 6477
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/blind-review/review-b.md",
+      "sha256": "2c0dc45e69ce13cf9c7e3a5151490122bdd31e3aee4650b5c4dd347f2bff5cd5",
+      "bytes": 6319
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/design/g9-mini-fixed24-selection-v1.json",
+      "sha256": "21b5ec8683d5ea095088bce3fe026001878b9ba660e258513f88525eebc775e8",
+      "bytes": 13882
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/execution-state.json",
+      "sha256": "08efc94afeefa37e902d6cae89fa573dfdb8b5d16ec49197e10fbe4785f51869",
+      "bytes": 1844
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini-budget.json",
+      "sha256": "f960fda3eb2c7d1f887b47a8eccf9d5119eb64b2782367e44859728fcc69d063",
+      "bytes": 202508
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini01-prefix-k2/runs/gpt-5-mini/multi_turn_base_73/boundary-2/1/identity/prefix-score.json",
+      "sha256": "ebac761e5fe6c15fc66fb25ff830007db4266d9e3dbedc20a5b9c8680505d12a",
+      "bytes": 7644
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini01-prefix-k2/runs/gpt-5-mini/multi_turn_long_context_79/boundary-2/1/identity/prefix-score.json",
+      "sha256": "470d48cab30112f0df790de1f018c4ae3ec9f5862a95b9298264dde3f550d2e3",
+      "bytes": 6966
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_base_81/boundary-3/1/identity/prefix-score.json",
+      "sha256": "b0633f64f3ce56f7e01acca69ef2acf9038dccb77e06efbcd7d91df0e1afcecb",
+      "bytes": 9021
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_base_95/boundary-3/1/identity/prefix-score.json",
+      "sha256": "130ce554f58f8213738e943557c97570cae645aab38948e8a120441ca8126af2",
+      "bytes": 7276
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_long_context_170/boundary-3/1/identity/prefix-score.json",
+      "sha256": "32c3bc2ec5166dde325e299afe00a2273d27f0985ba1c329148dff302c9cc91b",
+      "bytes": 64325
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_long_context_188/boundary-3/1/identity/prefix-score.json",
+      "sha256": "05e4b8747b629f7f7a8b46c9434884aa5f48a12ad6cf57934bebf5494aa1230c",
+      "bytes": 9353
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_long_context_196/boundary-3/1/identity/prefix-score.json",
+      "sha256": "c5be6425476cc533922942abd1878cdd3057fbf62b597effd1a54e488f56f104",
+      "bytes": 45746
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini02-prefix-k3/runs/gpt-5-mini/multi_turn_long_context_80/boundary-3/1/identity/prefix-score.json",
+      "sha256": "87c91986efaf3d14dad02bc7481b7610b732c93f406c323e2aa0d3c37399a97e",
+      "bytes": 49337
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini03-continuation-k2/runs/gpt-5-mini/multi_turn_base_124/boundary-2/1/graph-record-view-full/official-score.json",
+      "sha256": "88b5b030ea127c3c77ac8ddc04bc09003e29cf9075323421967b2f8ab552464f",
+      "bytes": 424
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini03-continuation-k2/runs/gpt-5-mini/multi_turn_base_124/boundary-2/1/identity/official-score.json",
+      "sha256": "962a5b4c83ed425cc809555d91acc8dbc3a75c48a800b776c543e959f66d189f",
+      "bytes": 424
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini03-continuation-k2/runs/gpt-5-mini/multi_turn_long_context_157/boundary-2/1/graph-record-view-full/official-score.json",
+      "sha256": "310f9867dacacd0e80898b67cd43f23c4b835001ac16b482d45fbb048aca704a",
+      "bytes": 432
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini03-continuation-k2/runs/gpt-5-mini/multi_turn_long_context_157/boundary-2/1/identity/official-score.json",
+      "sha256": "55561600d047c59f102b3b93177efd028795fba45570661cd06fe8423b8e3241",
+      "bytes": 432
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_121/boundary-3/1/graph-record-view-full/official-score.json",
+      "sha256": "0cf355ac44519d080739cdb2a19d4c9dcdd9f497d6bfb245194061812b38f858",
+      "bytes": 1841
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_121/boundary-3/1/identity/official-score.json",
+      "sha256": "52abfb18b91e313faa490454ab003214060b758cbe62967e00d98e6f3c20f5ca",
+      "bytes": 1841
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_123/boundary-3/1/graph-record-view-full/official-score.json",
+      "sha256": "73bb071a4ab00414e215dde00f4f612e400ee372939fb8bf6390671b269f7702",
+      "bytes": 424
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_123/boundary-3/1/identity/official-score.json",
+      "sha256": "2aedd80c5229370dc8faf652baf0949b89ac45685a17c47488b71700cc3927a5",
+      "bytes": 424
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_135/boundary-3/1/graph-record-view-full/official-score.json",
+      "sha256": "dfdceafd9c49850e54eeb8167065a9d05b8b643f86113b6e88a19fd360672e58",
+      "bytes": 424
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_135/boundary-3/1/identity/official-score.json",
+      "sha256": "5d3d47ed3a9fb6eabdf0ae71237119afc53c0f51e578f850ec990c760deebd3a",
+      "bytes": 424
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_165/boundary-3/1/graph-record-view-full/official-score.json",
+      "sha256": "de20a7033a98f50094fb0315297e9b78addfbd6997c686d0cb8a336c55ecf64b",
+      "bytes": 424
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_165/boundary-3/1/identity/official-score.json",
+      "sha256": "0baffc530aa198dc6e7064d45ea951e7ca9dd6db5bdde66b7c39485118b9cd94",
+      "bytes": 424
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_59/boundary-3/1/graph-record-view-full/official-score.json",
+      "sha256": "0cebb81bb6d5d47f31d544e930ea22afc4eb2eb90244ef01232d979f40748e26",
+      "bytes": 5236
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_59/boundary-3/1/identity/official-score.json",
+      "sha256": "e069d31c40e85660170c1f245b5715e6f00fdcb5bbc9b9be77f2900096fa2711",
+      "bytes": 424
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_71/boundary-3/1/graph-record-view-full/official-score.json",
+      "sha256": "ec94712510c842dcf0b8cdba27184366a6fd7051069cf9f67267df456f4dc32c",
+      "bytes": 424
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_base_71/boundary-3/1/identity/official-score.json",
+      "sha256": "f348e3be2a6d9cdba457e4369c653d6691c2857014e4054fb4d7296ff63a6547",
+      "bytes": 424
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_107/boundary-3/1/graph-record-view-full/official-score.json",
+      "sha256": "d98e3b76bab5ea1e9cf6bcf026e3392076a861796ab45bd216940eaeaadf2eec",
+      "bytes": 432
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_107/boundary-3/1/identity/official-score.json",
+      "sha256": "fdc6fd8f512946fd4b4de86f5b2d53c254e6df516e8e99e2ae4771042b59d308",
+      "bytes": 432
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_111/boundary-3/1/graph-record-view-full/official-score.json",
+      "sha256": "51194be88cf85122ca9cb3ad49642b960fc67d7b62a4f6beaaa316bc482cdf56",
+      "bytes": 432
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_111/boundary-3/1/identity/official-score.json",
+      "sha256": "661195628ca75e8056e5adf7e4af1690062341722cee8682ce89b6aa88e97c0e",
+      "bytes": 432
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_112/boundary-3/1/graph-record-view-full/official-score.json",
+      "sha256": "eb1692f8c413ec56d6ae6a23f621d836a25131a3851a62f7b63952246005545e",
+      "bytes": 432
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_112/boundary-3/1/identity/official-score.json",
+      "sha256": "4737c83974c15ed48907dc69ddd6dd1cc182fdf4cdd4d3708192c6e332924feb",
+      "bytes": 432
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_138/boundary-3/1/graph-record-view-full/official-score.json",
+      "sha256": "71142e668b2cf64762eccc37b6cf5885a7297c73ec43744b454fda0d288e6d07",
+      "bytes": 80412
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_138/boundary-3/1/identity/official-score.json",
+      "sha256": "8c77af240ecfd4a7bfe937aa0afbf34d1cb61641949ae39e140a2906cdd87bec",
+      "bytes": 80412
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_162/boundary-3/1/graph-record-view-full/official-score.json",
+      "sha256": "236f92f9cae5c4e06cc60dc5137d1046802b10ee7ad86df51c75bf4c024fc668",
+      "bytes": 4226
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_162/boundary-3/1/identity/official-score.json",
+      "sha256": "34a27bdd7052c3522a210236d3a07068a6872f064bae5cf21936450527f55f71",
+      "bytes": 4226
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_167/boundary-3/1/graph-record-view-full/official-score.json",
+      "sha256": "7519102109af97871cc31fc2eb27f9a830672ee2b99bbfc9c440ed3e1a78710c",
+      "bytes": 432
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_167/boundary-3/1/identity/official-score.json",
+      "sha256": "63025e595dbe6cb98a441283306e8ee8016a8de36484e950cf44314960d5a22c",
+      "bytes": 432
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_190/boundary-3/1/graph-record-view-full/official-score.json",
+      "sha256": "9747703f41ea9cac192d96426b2b75b6c38aeb835aacc3821a21709385171054",
+      "bytes": 432
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_190/boundary-3/1/identity/official-score.json",
+      "sha256": "a8b7b718c7e04844889fa6715c83c523e0615fa7ee1b51f988544e857ecc0c5b",
+      "bytes": 432
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_60/boundary-3/1/graph-record-view-full/official-score.json",
+      "sha256": "d95f2bf233f7a73558f8cdf47bc435fb1494e6d36e1bac698053d9b0b5a336c7",
+      "bytes": 432
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-mini/mini04-continuation-k3/runs/gpt-5-mini/multi_turn_long_context_60/boundary-3/1/identity/official-score.json",
+      "sha256": "8aec1b3bb16a9a22466b1ae027f3b75fec26306407333ab2191114062719a63b",
+      "bytes": 432
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-model-summary.json",
+      "sha256": "577863c9329fe10ace9ef27dee2bba10738708cb9b43f18c242c02e56d901a7c",
+      "bytes": 25134
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/experiment-summary.html",
+      "sha256": "93b921b5fdd3b4ea00de796977e0942c163f53e790ad8efcf2574ed31270f520",
+      "bytes": 15423
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/experiment-summary.md",
+      "sha256": "236e4fba56d4b45c02ba85391a1805f5facbf9809238eba5c0f7d98cb1e704fb",
+      "bytes": 12506
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/g9-coverage120-results.md",
+      "sha256": "78dd01163466d73c4829328f464c9f2f57ce0c814978149a3373649fa4e91f0c",
+      "bytes": 8267
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/g9-mini-validation-results.md",
+      "sha256": "2db559b72bb926323c9d0e8c1cf82ee1e7ab4a24fc84a5ebc54c2717fc82ac80",
+      "bytes": 7033
+    }
+  ]
+}

@@ -1,0 +1,2696 @@
+{
+  "version": "g9-gpt41-coverage120-selection-v1",
+  "created_at_utc": "2026-10-24T20:04:26.146450+00:00",
+  "models": [
+    "gpt-4.1"
+  ],
+  "arms": [
+    "identity",
+    "graph-record-view-full"
+  ],
+  "repeat_labels": [
+    1
+  ],
+  "candidate_version": "G9-active-record-views-v1",
+  "selected_before_candidate_results": true,
+  "selection_freeze_scope": "Before any new coverage120 prefix or continuation request.",
+  "metadata_only": true,
+  "selection_seed": "g9-gpt41-coverage120-20261024-v1",
+  "selection_rule": "Within each of four primary domains, exclude single-turn families 46/50/198, sort remaining family IDs by SHA256(UTF8(seed + \"|\" + domain + \"|\" + decimal_family_id)) ascending (family ID tie-break), select first 15, retain both Base and Long-Context. No historical or candidate outcomes, graph activation, or prior exposure affect selection.",
+  "boundary_rule": "For each condition k=min(3,user_turns-1); share its first native prefix across arms, retain at least one future user turn. No length-triggered extra checkpoint.",
+  "source_datasets": [
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/g5-domain-expansion-20261024/runner/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_base.json",
+      "sha256": "1a21a995d06fd6f20ba55de7bced30ef953ec35e998f502ec2ecf4d66ef1c43a"
+    },
+    {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/g5-domain-expansion-20261024/runner/vendor/gorilla/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_multi_turn_long_context.json",
+      "sha256": "78c3268c5cc8e97c0f4ec6c811b3b9a2bba14323b1830b7a874b06d822749324"
+    }
+  ],
+  "family_ranking": [
+    {
+      "domain": "filesystem",
+      "eligible_families": 49,
+      "ranked_families": [
+        37,
+        21,
+        31,
+        0,
+        5,
+        19,
+        39,
+        8,
+        47,
+        16,
+        45,
+        2,
+        22,
+        48,
+        15,
+        4,
+        14,
+        28,
+        25,
+        36,
+        41,
+        26,
+        1,
+        9,
+        20,
+        49,
+        40,
+        35,
+        29,
+        11,
+        13,
+        7,
+        30,
+        33,
+        6,
+        32,
+        38,
+        43,
+        42,
+        10,
+        44,
+        24,
+        18,
+        12,
+        3,
+        17,
+        34,
+        23,
+        27
+      ],
+      "selected_families": [
+        37,
+        21,
+        31,
+        0,
+        5,
+        19,
+        39,
+        8,
+        47,
+        16,
+        45,
+        2,
+        22,
+        48,
+        15
+      ]
+    },
+    {
+      "domain": "vehicle",
+      "eligible_families": 49,
+      "ranked_families": [
+        78,
+        75,
+        51,
+        66,
+        69,
+        62,
+        76,
+        68,
+        65,
+        60,
+        52,
+        54,
+        77,
+        67,
+        96,
+        94,
+        61,
+        56,
+        88,
+        90,
+        82,
+        97,
+        80,
+        84,
+        70,
+        74,
+        83,
+        99,
+        58,
+        98,
+        85,
+        53,
+        86,
+        95,
+        64,
+        93,
+        92,
+        72,
+        87,
+        57,
+        91,
+        63,
+        81,
+        89,
+        59,
+        71,
+        73,
+        79,
+        55
+      ],
+      "selected_families": [
+        78,
+        75,
+        51,
+        66,
+        69,
+        62,
+        76,
+        68,
+        65,
+        60,
+        52,
+        54,
+        77,
+        67,
+        96
+      ]
+    },
+    {
+      "domain": "trading",
+      "eligible_families": 50,
+      "ranked_families": [
+        100,
+        137,
+        115,
+        101,
+        106,
+        128,
+        126,
+        135,
+        114,
+        125,
+        139,
+        116,
+        142,
+        145,
+        110,
+        131,
+        120,
+        122,
+        108,
+        103,
+        102,
+        107,
+        149,
+        127,
+        123,
+        121,
+        144,
+        109,
+        143,
+        112,
+        130,
+        105,
+        129,
+        113,
+        148,
+        132,
+        111,
+        141,
+        117,
+        119,
+        104,
+        147,
+        124,
+        140,
+        118,
+        133,
+        134,
+        138,
+        146,
+        136
+      ],
+      "selected_families": [
+        100,
+        137,
+        115,
+        101,
+        106,
+        128,
+        126,
+        135,
+        114,
+        125,
+        139,
+        116,
+        142,
+        145,
+        110
+      ]
+    },
+    {
+      "domain": "travel",
+      "eligible_families": 49,
+      "ranked_families": [
+        163,
+        152,
+        160,
+        169,
+        159,
+        191,
+        181,
+        177,
+        168,
+        199,
+        194,
+        185,
+        176,
+        174,
+        178,
+        167,
+        186,
+        158,
+        188,
+        166,
+        192,
+        172,
+        175,
+        157,
+        162,
+        150,
+        196,
+        155,
+        154,
+        189,
+        156,
+        187,
+        151,
+        182,
+        173,
+        184,
+        164,
+        195,
+        179,
+        193,
+        190,
+        153,
+        170,
+        197,
+        180,
+        161,
+        165,
+        183,
+        171
+      ],
+      "selected_families": [
+        163,
+        152,
+        160,
+        169,
+        159,
+        191,
+        181,
+        177,
+        168,
+        199,
+        194,
+        185,
+        176,
+        174,
+        178
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "multi_turn_base_37",
+      "user_turns": 3,
+      "involved_classes": [
+        "GorillaFileSystem"
+      ],
+      "family": 37,
+      "domain": "filesystem",
+      "category": "multi_turn_base",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 1,
+      "family_rank_sha256": "0df0d4ae5c0d75473a027d249c2bd9286671605fb45a5ee226f57d0af5952227",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_37",
+      "user_turns": 3,
+      "involved_classes": [
+        "GorillaFileSystem"
+      ],
+      "family": 37,
+      "domain": "filesystem",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 1,
+      "family_rank_sha256": "0df0d4ae5c0d75473a027d249c2bd9286671605fb45a5ee226f57d0af5952227",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_21",
+      "user_turns": 3,
+      "involved_classes": [
+        "TwitterAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 21,
+      "domain": "filesystem",
+      "category": "multi_turn_base",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 2,
+      "family_rank_sha256": "1bb97ad373b1168a4a2bcb6a74339c15805aee90f52ed427838e45fb9660980e",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_21",
+      "user_turns": 3,
+      "involved_classes": [
+        "TwitterAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 21,
+      "domain": "filesystem",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 2,
+      "family_rank_sha256": "1bb97ad373b1168a4a2bcb6a74339c15805aee90f52ed427838e45fb9660980e",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_31",
+      "user_turns": 2,
+      "involved_classes": [
+        "GorillaFileSystem",
+        "MathAPI"
+      ],
+      "family": 31,
+      "domain": "filesystem",
+      "category": "multi_turn_base",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 3,
+      "family_rank_sha256": "1ec96e54cc6cbde825cd1e57286faad197bf9df624bb9fcf86e4c6bf57a134fe",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_31",
+      "user_turns": 2,
+      "involved_classes": [
+        "GorillaFileSystem",
+        "MathAPI"
+      ],
+      "family": 31,
+      "domain": "filesystem",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 3,
+      "family_rank_sha256": "1ec96e54cc6cbde825cd1e57286faad197bf9df624bb9fcf86e4c6bf57a134fe",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_0",
+      "user_turns": 4,
+      "involved_classes": [
+        "TwitterAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 0,
+      "domain": "filesystem",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 4,
+      "family_rank_sha256": "1eec79278cd9d556d8768c72361bf8da3d384de7d2f3198b69c00d803a390fb8",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_0",
+      "user_turns": 4,
+      "involved_classes": [
+        "TwitterAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 0,
+      "domain": "filesystem",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 4,
+      "family_rank_sha256": "1eec79278cd9d556d8768c72361bf8da3d384de7d2f3198b69c00d803a390fb8",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_5",
+      "user_turns": 4,
+      "involved_classes": [
+        "TwitterAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 5,
+      "domain": "filesystem",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 5,
+      "family_rank_sha256": "1f0dd5689fae1b86a92c374c912d1c8314ecfcd4f4ee804b8551b2b2f717f245",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_5",
+      "user_turns": 4,
+      "involved_classes": [
+        "TwitterAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 5,
+      "domain": "filesystem",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 5,
+      "family_rank_sha256": "1f0dd5689fae1b86a92c374c912d1c8314ecfcd4f4ee804b8551b2b2f717f245",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_19",
+      "user_turns": 3,
+      "involved_classes": [
+        "MessageAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 19,
+      "domain": "filesystem",
+      "category": "multi_turn_base",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 6,
+      "family_rank_sha256": "23897999a74f5cd97708dd4850ae71374d755ce6b553ef8f8b9b33130af79f71",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_19",
+      "user_turns": 3,
+      "involved_classes": [
+        "MessageAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 19,
+      "domain": "filesystem",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 6,
+      "family_rank_sha256": "23897999a74f5cd97708dd4850ae71374d755ce6b553ef8f8b9b33130af79f71",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_39",
+      "user_turns": 4,
+      "involved_classes": [
+        "GorillaFileSystem"
+      ],
+      "family": 39,
+      "domain": "filesystem",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 7,
+      "family_rank_sha256": "2949f86225e5fcb265bbf067b33cb64df879df506af22f8c3793258a35aee022",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_39",
+      "user_turns": 4,
+      "involved_classes": [
+        "GorillaFileSystem"
+      ],
+      "family": 39,
+      "domain": "filesystem",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 7,
+      "family_rank_sha256": "2949f86225e5fcb265bbf067b33cb64df879df506af22f8c3793258a35aee022",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_8",
+      "user_turns": 4,
+      "involved_classes": [
+        "TwitterAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 8,
+      "domain": "filesystem",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 8,
+      "family_rank_sha256": "2d58725dd6cad0d1061c4c40ef919621f9d791acffd4380b410daf5ac1c7b04c",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_8",
+      "user_turns": 4,
+      "involved_classes": [
+        "TwitterAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 8,
+      "domain": "filesystem",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 8,
+      "family_rank_sha256": "2d58725dd6cad0d1061c4c40ef919621f9d791acffd4380b410daf5ac1c7b04c",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_47",
+      "user_turns": 3,
+      "involved_classes": [
+        "GorillaFileSystem",
+        "MathAPI"
+      ],
+      "family": 47,
+      "domain": "filesystem",
+      "category": "multi_turn_base",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 9,
+      "family_rank_sha256": "30e626ef8c93ce06d3c6a1374b953202ffd10e77308c794048a3405ab101dd3f",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_47",
+      "user_turns": 3,
+      "involved_classes": [
+        "GorillaFileSystem",
+        "MathAPI"
+      ],
+      "family": 47,
+      "domain": "filesystem",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 9,
+      "family_rank_sha256": "30e626ef8c93ce06d3c6a1374b953202ffd10e77308c794048a3405ab101dd3f",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_16",
+      "user_turns": 3,
+      "involved_classes": [
+        "GorillaFileSystem"
+      ],
+      "family": 16,
+      "domain": "filesystem",
+      "category": "multi_turn_base",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 10,
+      "family_rank_sha256": "370bf1f777290f70b5e84c0422497ad93d16d74275d68f3b3cee8264e97c7b63",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_16",
+      "user_turns": 3,
+      "involved_classes": [
+        "GorillaFileSystem"
+      ],
+      "family": 16,
+      "domain": "filesystem",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 10,
+      "family_rank_sha256": "370bf1f777290f70b5e84c0422497ad93d16d74275d68f3b3cee8264e97c7b63",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_45",
+      "user_turns": 2,
+      "involved_classes": [
+        "GorillaFileSystem",
+        "MathAPI"
+      ],
+      "family": 45,
+      "domain": "filesystem",
+      "category": "multi_turn_base",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 11,
+      "family_rank_sha256": "3f957502fd5506de308583334df78fc47a6f346406ec8ba9657feb706edf5e61",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_45",
+      "user_turns": 2,
+      "involved_classes": [
+        "GorillaFileSystem",
+        "MathAPI"
+      ],
+      "family": 45,
+      "domain": "filesystem",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 11,
+      "family_rank_sha256": "3f957502fd5506de308583334df78fc47a6f346406ec8ba9657feb706edf5e61",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_2",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 2,
+      "domain": "filesystem",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 12,
+      "family_rank_sha256": "40651387ecd2d3d6c09f0f0cee568dc6e5bca80e1eff8c74bdd0af48446f3916",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_2",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 2,
+      "domain": "filesystem",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 12,
+      "family_rank_sha256": "40651387ecd2d3d6c09f0f0cee568dc6e5bca80e1eff8c74bdd0af48446f3916",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_22",
+      "user_turns": 4,
+      "involved_classes": [
+        "TwitterAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 22,
+      "domain": "filesystem",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 13,
+      "family_rank_sha256": "4b91e056a9ca7012df5d1976951a82a74c60871bfd4dc61991f52dc4b38c419c",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_22",
+      "user_turns": 4,
+      "involved_classes": [
+        "TwitterAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 22,
+      "domain": "filesystem",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 13,
+      "family_rank_sha256": "4b91e056a9ca7012df5d1976951a82a74c60871bfd4dc61991f52dc4b38c419c",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_48",
+      "user_turns": 3,
+      "involved_classes": [
+        "TicketAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 48,
+      "domain": "filesystem",
+      "category": "multi_turn_base",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 14,
+      "family_rank_sha256": "4fb72a3b6f16132488c2fd3dabca15be5773854370800907320a05616f2712ab",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_48",
+      "user_turns": 3,
+      "involved_classes": [
+        "TicketAPI",
+        "GorillaFileSystem"
+      ],
+      "family": 48,
+      "domain": "filesystem",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 14,
+      "family_rank_sha256": "4fb72a3b6f16132488c2fd3dabca15be5773854370800907320a05616f2712ab",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_15",
+      "user_turns": 5,
+      "involved_classes": [
+        "GorillaFileSystem",
+        "MathAPI"
+      ],
+      "family": 15,
+      "domain": "filesystem",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 15,
+      "family_rank_sha256": "58634551d55060a4cb9cb47a9bdd9ebfae31abad6c31ab28007ad7e4256dde6b",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_15",
+      "user_turns": 5,
+      "involved_classes": [
+        "GorillaFileSystem",
+        "MathAPI"
+      ],
+      "family": 15,
+      "domain": "filesystem",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 15,
+      "family_rank_sha256": "58634551d55060a4cb9cb47a9bdd9ebfae31abad6c31ab28007ad7e4256dde6b",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_78",
+      "user_turns": 2,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 78,
+      "domain": "vehicle",
+      "category": "multi_turn_base",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 1,
+      "family_rank_sha256": "0185c51447e49195250b481eb44b32dff3881ba51d6d41a812d5dde1c5c16273",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_78",
+      "user_turns": 2,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 78,
+      "domain": "vehicle",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 1,
+      "family_rank_sha256": "0185c51447e49195250b481eb44b32dff3881ba51d6d41a812d5dde1c5c16273",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_75",
+      "user_turns": 4,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 75,
+      "domain": "vehicle",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 2,
+      "family_rank_sha256": "06c2aab8085a3cb6ade69faa5129b297278520fee5960751dda60b4dd0db67ae",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_75",
+      "user_turns": 4,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 75,
+      "domain": "vehicle",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 2,
+      "family_rank_sha256": "06c2aab8085a3cb6ade69faa5129b297278520fee5960751dda60b4dd0db67ae",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_51",
+      "user_turns": 4,
+      "involved_classes": [
+        "MessageAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 51,
+      "domain": "vehicle",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 3,
+      "family_rank_sha256": "077d87bee3c814c2482eae8168916ef0e9d0714ea141fe8fe40fb11d8a7539f7",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_51",
+      "user_turns": 4,
+      "involved_classes": [
+        "MessageAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 51,
+      "domain": "vehicle",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 3,
+      "family_rank_sha256": "077d87bee3c814c2482eae8168916ef0e9d0714ea141fe8fe40fb11d8a7539f7",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_66",
+      "user_turns": 4,
+      "involved_classes": [
+        "VehicleControlAPI"
+      ],
+      "family": 66,
+      "domain": "vehicle",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 4,
+      "family_rank_sha256": "08461d2b8bd5ba8615b5796736c9fc31a545dad8e7397be6d65b90c9dbfc035a",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_66",
+      "user_turns": 4,
+      "involved_classes": [
+        "VehicleControlAPI"
+      ],
+      "family": 66,
+      "domain": "vehicle",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 4,
+      "family_rank_sha256": "08461d2b8bd5ba8615b5796736c9fc31a545dad8e7397be6d65b90c9dbfc035a",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_69",
+      "user_turns": 2,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 69,
+      "domain": "vehicle",
+      "category": "multi_turn_base",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 5,
+      "family_rank_sha256": "0c7f1014542ba0dd30bd7fad0561410ccebe2079ed5ca8fde69a3d1e44a38f29",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_69",
+      "user_turns": 2,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 69,
+      "domain": "vehicle",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 5,
+      "family_rank_sha256": "0c7f1014542ba0dd30bd7fad0561410ccebe2079ed5ca8fde69a3d1e44a38f29",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_62",
+      "user_turns": 4,
+      "involved_classes": [
+        "MessageAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 62,
+      "domain": "vehicle",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 6,
+      "family_rank_sha256": "0c8e525858d547805e1b8d6e03e5e9f883b339431f9072725d9c44e05e104132",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_62",
+      "user_turns": 4,
+      "involved_classes": [
+        "MessageAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 62,
+      "domain": "vehicle",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 6,
+      "family_rank_sha256": "0c8e525858d547805e1b8d6e03e5e9f883b339431f9072725d9c44e05e104132",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_76",
+      "user_turns": 2,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 76,
+      "domain": "vehicle",
+      "category": "multi_turn_base",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 7,
+      "family_rank_sha256": "0d926e7924a02cb22a24a8e24f59ad06dc072647576026b39d0bd84f253c5a11",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_76",
+      "user_turns": 2,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 76,
+      "domain": "vehicle",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 7,
+      "family_rank_sha256": "0d926e7924a02cb22a24a8e24f59ad06dc072647576026b39d0bd84f253c5a11",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_68",
+      "user_turns": 5,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 68,
+      "domain": "vehicle",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 8,
+      "family_rank_sha256": "189e6e40f43ef675b7fd10420f99a3b53ab51fd254fca83232730157d19aa252",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_68",
+      "user_turns": 5,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 68,
+      "domain": "vehicle",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 8,
+      "family_rank_sha256": "189e6e40f43ef675b7fd10420f99a3b53ab51fd254fca83232730157d19aa252",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_65",
+      "user_turns": 2,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 65,
+      "domain": "vehicle",
+      "category": "multi_turn_base",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 9,
+      "family_rank_sha256": "1cd1828854f99d94d8c1995dbba93f9afba2cd216d17f3c92ad1340c46fda679",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_65",
+      "user_turns": 2,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 65,
+      "domain": "vehicle",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 9,
+      "family_rank_sha256": "1cd1828854f99d94d8c1995dbba93f9afba2cd216d17f3c92ad1340c46fda679",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_60",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 60,
+      "domain": "vehicle",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 10,
+      "family_rank_sha256": "31bca5bb23e8da51068fb4c718d7b149ca834f69bb953c14493a799318777ad7",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": true,
+      "exposure_status": "previously_registered_exposure_not_reaudited"
+    },
+    {
+      "id": "multi_turn_long_context_60",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 60,
+      "domain": "vehicle",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 10,
+      "family_rank_sha256": "31bca5bb23e8da51068fb4c718d7b149ca834f69bb953c14493a799318777ad7",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": true,
+      "exposure_status": "previously_registered_exposure_not_reaudited"
+    },
+    {
+      "id": "multi_turn_base_52",
+      "user_turns": 4,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 52,
+      "domain": "vehicle",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 11,
+      "family_rank_sha256": "33acde2f46e81e9d87cb4263407c31cca210723bb12670daa84f5c3393aacf7c",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_52",
+      "user_turns": 4,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 52,
+      "domain": "vehicle",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 11,
+      "family_rank_sha256": "33acde2f46e81e9d87cb4263407c31cca210723bb12670daa84f5c3393aacf7c",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_54",
+      "user_turns": 3,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 54,
+      "domain": "vehicle",
+      "category": "multi_turn_base",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 12,
+      "family_rank_sha256": "36267231d4cbe567a3ddbe799407118bdfd53d6794ccea66d0b3a3e17f15d219",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_54",
+      "user_turns": 3,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 54,
+      "domain": "vehicle",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 12,
+      "family_rank_sha256": "36267231d4cbe567a3ddbe799407118bdfd53d6794ccea66d0b3a3e17f15d219",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_77",
+      "user_turns": 3,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 77,
+      "domain": "vehicle",
+      "category": "multi_turn_base",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 13,
+      "family_rank_sha256": "42073e10151a08646d14819fee58a0a73f705a619972c8573ba9ebf9c343dd07",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_77",
+      "user_turns": 3,
+      "involved_classes": [
+        "TwitterAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 77,
+      "domain": "vehicle",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 13,
+      "family_rank_sha256": "42073e10151a08646d14819fee58a0a73f705a619972c8573ba9ebf9c343dd07",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_67",
+      "user_turns": 4,
+      "involved_classes": [
+        "MessageAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 67,
+      "domain": "vehicle",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 14,
+      "family_rank_sha256": "49dfa66f0fe6f6aef2f321b3d785a2e7e9937e4b0c2297ab0fd490d884c6c855",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_67",
+      "user_turns": 4,
+      "involved_classes": [
+        "MessageAPI",
+        "VehicleControlAPI"
+      ],
+      "family": 67,
+      "domain": "vehicle",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 14,
+      "family_rank_sha256": "49dfa66f0fe6f6aef2f321b3d785a2e7e9937e4b0c2297ab0fd490d884c6c855",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_96",
+      "user_turns": 2,
+      "involved_classes": [
+        "VehicleControlAPI"
+      ],
+      "family": 96,
+      "domain": "vehicle",
+      "category": "multi_turn_base",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 15,
+      "family_rank_sha256": "4d90fda99f808323f125b7441177a864eef5f9cd1dfb89d4c45f78a29a1cb135",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_96",
+      "user_turns": 2,
+      "involved_classes": [
+        "VehicleControlAPI"
+      ],
+      "family": 96,
+      "domain": "vehicle",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 15,
+      "family_rank_sha256": "4d90fda99f808323f125b7441177a864eef5f9cd1dfb89d4c45f78a29a1cb135",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_100",
+      "user_turns": 2,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "family": 100,
+      "domain": "trading",
+      "category": "multi_turn_base",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 1,
+      "family_rank_sha256": "061d704128d21399232cfe3a2e74ea4cdadc208d8335668aef01ac751ec5d6c1",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_100",
+      "user_turns": 2,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "family": 100,
+      "domain": "trading",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 1,
+      "family_rank_sha256": "061d704128d21399232cfe3a2e74ea4cdadc208d8335668aef01ac751ec5d6c1",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_137",
+      "user_turns": 4,
+      "involved_classes": [
+        "MessageAPI",
+        "TradingBot"
+      ],
+      "family": 137,
+      "domain": "trading",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 2,
+      "family_rank_sha256": "0be7e47adf8eb634ddceba66d674cf759ea8d0659627b60e888e0264c3c6778c",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_137",
+      "user_turns": 4,
+      "involved_classes": [
+        "MessageAPI",
+        "TradingBot"
+      ],
+      "family": 137,
+      "domain": "trading",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 2,
+      "family_rank_sha256": "0be7e47adf8eb634ddceba66d674cf759ea8d0659627b60e888e0264c3c6778c",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_115",
+      "user_turns": 3,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "family": 115,
+      "domain": "trading",
+      "category": "multi_turn_base",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 3,
+      "family_rank_sha256": "0fbc83f89e322c9141d1fb59eacf12dbe8ba24119712c9a0ba2a3b2621967863",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_115",
+      "user_turns": 3,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "family": 115,
+      "domain": "trading",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 3,
+      "family_rank_sha256": "0fbc83f89e322c9141d1fb59eacf12dbe8ba24119712c9a0ba2a3b2621967863",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_101",
+      "user_turns": 3,
+      "involved_classes": [
+        "MessageAPI",
+        "TradingBot"
+      ],
+      "family": 101,
+      "domain": "trading",
+      "category": "multi_turn_base",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 4,
+      "family_rank_sha256": "10120dc8771e0c3d652190c6d09a5d9e1bba3585d661e487b0fcaac6c1d7fc1b",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_101",
+      "user_turns": 3,
+      "involved_classes": [
+        "MessageAPI",
+        "TradingBot"
+      ],
+      "family": 101,
+      "domain": "trading",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 4,
+      "family_rank_sha256": "10120dc8771e0c3d652190c6d09a5d9e1bba3585d661e487b0fcaac6c1d7fc1b",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_106",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot",
+        "TicketAPI"
+      ],
+      "family": 106,
+      "domain": "trading",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 5,
+      "family_rank_sha256": "15a12a770649d853ada10d95dd94bc33634d298c72fd272f3bd8be54c1663a84",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_106",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot",
+        "TicketAPI"
+      ],
+      "family": 106,
+      "domain": "trading",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 5,
+      "family_rank_sha256": "15a12a770649d853ada10d95dd94bc33634d298c72fd272f3bd8be54c1663a84",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_128",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "family": 128,
+      "domain": "trading",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 6,
+      "family_rank_sha256": "214f2811e07519f08f6c9c2bbdd28cca5f7e6820ebd9eb3bd00f297640760e46",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_128",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "family": 128,
+      "domain": "trading",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 6,
+      "family_rank_sha256": "214f2811e07519f08f6c9c2bbdd28cca5f7e6820ebd9eb3bd00f297640760e46",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_126",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "family": 126,
+      "domain": "trading",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 7,
+      "family_rank_sha256": "255551393cbd2ca84cb0a0f55febf6a07f4932e4f9ecc465ce9e526bc420dd8a",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_126",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "family": 126,
+      "domain": "trading",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 7,
+      "family_rank_sha256": "255551393cbd2ca84cb0a0f55febf6a07f4932e4f9ecc465ce9e526bc420dd8a",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_135",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "family": 135,
+      "domain": "trading",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 8,
+      "family_rank_sha256": "258b41e6baeb56574763a50d08c0b0b6799aca566fe8f82f68b6169d09a01296",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": true,
+      "exposure_status": "previously_registered_exposure_not_reaudited"
+    },
+    {
+      "id": "multi_turn_long_context_135",
+      "user_turns": 4,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "family": 135,
+      "domain": "trading",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 8,
+      "family_rank_sha256": "258b41e6baeb56574763a50d08c0b0b6799aca566fe8f82f68b6169d09a01296",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": true,
+      "exposure_status": "previously_registered_exposure_not_reaudited"
+    },
+    {
+      "id": "multi_turn_base_114",
+      "user_turns": 5,
+      "involved_classes": [
+        "MessageAPI",
+        "TradingBot"
+      ],
+      "family": 114,
+      "domain": "trading",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 9,
+      "family_rank_sha256": "28e701923e433ac7785783653e6df763a00476f195e475dff34a27031522a721",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_114",
+      "user_turns": 5,
+      "involved_classes": [
+        "MessageAPI",
+        "TradingBot"
+      ],
+      "family": 114,
+      "domain": "trading",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 9,
+      "family_rank_sha256": "28e701923e433ac7785783653e6df763a00476f195e475dff34a27031522a721",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_125",
+      "user_turns": 5,
+      "involved_classes": [
+        "TradingBot",
+        "TicketAPI"
+      ],
+      "family": 125,
+      "domain": "trading",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 10,
+      "family_rank_sha256": "29aeb314fdc2d429d30266e96803c38cc74807578c80a8d51130e9bae827afce",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_125",
+      "user_turns": 5,
+      "involved_classes": [
+        "TradingBot",
+        "TicketAPI"
+      ],
+      "family": 125,
+      "domain": "trading",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 10,
+      "family_rank_sha256": "29aeb314fdc2d429d30266e96803c38cc74807578c80a8d51130e9bae827afce",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_139",
+      "user_turns": 2,
+      "involved_classes": [
+        "TwitterAPI",
+        "TradingBot"
+      ],
+      "family": 139,
+      "domain": "trading",
+      "category": "multi_turn_base",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 11,
+      "family_rank_sha256": "33cfa45b835aae70a994804a348c94c97ebe20b7021901a39ee792d9e7a78102",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_139",
+      "user_turns": 2,
+      "involved_classes": [
+        "TwitterAPI",
+        "TradingBot"
+      ],
+      "family": 139,
+      "domain": "trading",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 11,
+      "family_rank_sha256": "33cfa45b835aae70a994804a348c94c97ebe20b7021901a39ee792d9e7a78102",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_116",
+      "user_turns": 6,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "family": 116,
+      "domain": "trading",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 12,
+      "family_rank_sha256": "34cf11ae19ba24b63cbe5b6304d0bdca9fda6d34b07c2f245a94dd36811f3c01",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_116",
+      "user_turns": 6,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "family": 116,
+      "domain": "trading",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 12,
+      "family_rank_sha256": "34cf11ae19ba24b63cbe5b6304d0bdca9fda6d34b07c2f245a94dd36811f3c01",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_142",
+      "user_turns": 5,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "family": 142,
+      "domain": "trading",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 13,
+      "family_rank_sha256": "3f205875a5ff047a4515045dab9a7ecb19cbdf1c809b954d6150ccf2cc4f7863",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_142",
+      "user_turns": 5,
+      "involved_classes": [
+        "TradingBot"
+      ],
+      "family": 142,
+      "domain": "trading",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 13,
+      "family_rank_sha256": "3f205875a5ff047a4515045dab9a7ecb19cbdf1c809b954d6150ccf2cc4f7863",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_145",
+      "user_turns": 5,
+      "involved_classes": [
+        "MessageAPI",
+        "TradingBot"
+      ],
+      "family": 145,
+      "domain": "trading",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 14,
+      "family_rank_sha256": "42e033c746ead6ca0d2b453b960b550461b6ed568caae3dc4f18af0d904feb62",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_145",
+      "user_turns": 5,
+      "involved_classes": [
+        "MessageAPI",
+        "TradingBot"
+      ],
+      "family": 145,
+      "domain": "trading",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 14,
+      "family_rank_sha256": "42e033c746ead6ca0d2b453b960b550461b6ed568caae3dc4f18af0d904feb62",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_110",
+      "user_turns": 6,
+      "involved_classes": [
+        "TradingBot",
+        "TicketAPI"
+      ],
+      "family": 110,
+      "domain": "trading",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 15,
+      "family_rank_sha256": "43d795e09320a9d210039ad9325132cf7a243f352df657db6bb4d43f514887fc",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_110",
+      "user_turns": 6,
+      "involved_classes": [
+        "TradingBot",
+        "TicketAPI"
+      ],
+      "family": 110,
+      "domain": "trading",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 15,
+      "family_rank_sha256": "43d795e09320a9d210039ad9325132cf7a243f352df657db6bb4d43f514887fc",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_163",
+      "user_turns": 2,
+      "involved_classes": [
+        "TravelAPI"
+      ],
+      "family": 163,
+      "domain": "travel",
+      "category": "multi_turn_base",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 1,
+      "family_rank_sha256": "0af80ea49b9e19785c325e3c08ac5b84227d9395ff5f51304f41d6a350523f41",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_163",
+      "user_turns": 2,
+      "involved_classes": [
+        "TravelAPI"
+      ],
+      "family": 163,
+      "domain": "travel",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 1,
+      "family_rank_sha256": "0af80ea49b9e19785c325e3c08ac5b84227d9395ff5f51304f41d6a350523f41",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_152",
+      "user_turns": 3,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "family": 152,
+      "domain": "travel",
+      "category": "multi_turn_base",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 2,
+      "family_rank_sha256": "1a09c179ccad29bea956dc7115e600ee2d095db952b71f9c3d224000ffe41371",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_152",
+      "user_turns": 3,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "family": 152,
+      "domain": "travel",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 2,
+      "family_rank_sha256": "1a09c179ccad29bea956dc7115e600ee2d095db952b71f9c3d224000ffe41371",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_160",
+      "user_turns": 3,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "family": 160,
+      "domain": "travel",
+      "category": "multi_turn_base",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 3,
+      "family_rank_sha256": "1bb7ff812578ddb3ad4e8088cf3f454bd99fb14b70dbdaffd518ea47b871be5a",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_160",
+      "user_turns": 3,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "family": 160,
+      "domain": "travel",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 3,
+      "family_rank_sha256": "1bb7ff812578ddb3ad4e8088cf3f454bd99fb14b70dbdaffd518ea47b871be5a",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_169",
+      "user_turns": 2,
+      "involved_classes": [
+        "MessageAPI",
+        "TravelAPI"
+      ],
+      "family": 169,
+      "domain": "travel",
+      "category": "multi_turn_base",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 4,
+      "family_rank_sha256": "1d396b3679dfcdca1e5c7e7276f39637ed15ff0cf6fb847a03196d3940b95dc7",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_169",
+      "user_turns": 2,
+      "involved_classes": [
+        "MessageAPI",
+        "TravelAPI"
+      ],
+      "family": 169,
+      "domain": "travel",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 4,
+      "family_rank_sha256": "1d396b3679dfcdca1e5c7e7276f39637ed15ff0cf6fb847a03196d3940b95dc7",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_159",
+      "user_turns": 3,
+      "involved_classes": [
+        "TravelAPI"
+      ],
+      "family": 159,
+      "domain": "travel",
+      "category": "multi_turn_base",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 5,
+      "family_rank_sha256": "26153d60851778e21a8802af7e420fbb4bd095d50fb2764514d5f5bd25d2bf90",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_159",
+      "user_turns": 3,
+      "involved_classes": [
+        "TravelAPI"
+      ],
+      "family": 159,
+      "domain": "travel",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 5,
+      "family_rank_sha256": "26153d60851778e21a8802af7e420fbb4bd095d50fb2764514d5f5bd25d2bf90",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_191",
+      "user_turns": 5,
+      "involved_classes": [
+        "TravelAPI"
+      ],
+      "family": 191,
+      "domain": "travel",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 6,
+      "family_rank_sha256": "2f0a8171151b7263faa0602ef086aa055255a8d725e803b11067d19273a18457",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_191",
+      "user_turns": 5,
+      "involved_classes": [
+        "TravelAPI"
+      ],
+      "family": 191,
+      "domain": "travel",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 6,
+      "family_rank_sha256": "2f0a8171151b7263faa0602ef086aa055255a8d725e803b11067d19273a18457",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_181",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "family": 181,
+      "domain": "travel",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 7,
+      "family_rank_sha256": "341479e7d46e8bffaf92a26a9c6da658e363da181975de6e359264646d660892",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_181",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "family": 181,
+      "domain": "travel",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 7,
+      "family_rank_sha256": "341479e7d46e8bffaf92a26a9c6da658e363da181975de6e359264646d660892",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_177",
+      "user_turns": 2,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "family": 177,
+      "domain": "travel",
+      "category": "multi_turn_base",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 8,
+      "family_rank_sha256": "3b10dfe6cb5854bfc2ae406646d12d54e5186f5707b9c3e56a3755f8e454db47",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_177",
+      "user_turns": 2,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "family": 177,
+      "domain": "travel",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 8,
+      "family_rank_sha256": "3b10dfe6cb5854bfc2ae406646d12d54e5186f5707b9c3e56a3755f8e454db47",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_168",
+      "user_turns": 5,
+      "involved_classes": [
+        "MessageAPI",
+        "TravelAPI"
+      ],
+      "family": 168,
+      "domain": "travel",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 9,
+      "family_rank_sha256": "45cd4d37926d2af2ad086b8b50204aa24921e481ca1f8fab0f1a414442aec549",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_168",
+      "user_turns": 5,
+      "involved_classes": [
+        "MessageAPI",
+        "TravelAPI"
+      ],
+      "family": 168,
+      "domain": "travel",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 9,
+      "family_rank_sha256": "45cd4d37926d2af2ad086b8b50204aa24921e481ca1f8fab0f1a414442aec549",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_199",
+      "user_turns": 5,
+      "involved_classes": [
+        "MessageAPI",
+        "TravelAPI"
+      ],
+      "family": 199,
+      "domain": "travel",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 10,
+      "family_rank_sha256": "46e03715668df6321eef1bb4e9f242771280f665321c28c0b7f1d36228c117a6",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_199",
+      "user_turns": 5,
+      "involved_classes": [
+        "MessageAPI",
+        "TravelAPI"
+      ],
+      "family": 199,
+      "domain": "travel",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 10,
+      "family_rank_sha256": "46e03715668df6321eef1bb4e9f242771280f665321c28c0b7f1d36228c117a6",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_194",
+      "user_turns": 6,
+      "involved_classes": [
+        "TravelAPI"
+      ],
+      "family": 194,
+      "domain": "travel",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 11,
+      "family_rank_sha256": "4a85f9a5d801f92d54c5070bde5c9e9294728dfab46a2b36a2cdf90f107aef53",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_long_context_194",
+      "user_turns": 6,
+      "involved_classes": [
+        "TravelAPI"
+      ],
+      "family": 194,
+      "domain": "travel",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 11,
+      "family_rank_sha256": "4a85f9a5d801f92d54c5070bde5c9e9294728dfab46a2b36a2cdf90f107aef53",
+      "recorded_exposed_family": true,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "recorded_prior_content_exposure"
+    },
+    {
+      "id": "multi_turn_base_185",
+      "user_turns": 3,
+      "involved_classes": [
+        "MessageAPI",
+        "TravelAPI"
+      ],
+      "family": 185,
+      "domain": "travel",
+      "category": "multi_turn_base",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 12,
+      "family_rank_sha256": "55db1fc66825aedd0a72819a878d53bf025d71c40c487c37462aebf3cd1efa0a",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_185",
+      "user_turns": 3,
+      "involved_classes": [
+        "MessageAPI",
+        "TravelAPI"
+      ],
+      "family": 185,
+      "domain": "travel",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 2,
+      "source_batch": "coverage120",
+      "rank_within_domain": 12,
+      "family_rank_sha256": "55db1fc66825aedd0a72819a878d53bf025d71c40c487c37462aebf3cd1efa0a",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_176",
+      "user_turns": 2,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "family": 176,
+      "domain": "travel",
+      "category": "multi_turn_base",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 13,
+      "family_rank_sha256": "6c1fca62529b16a92c1df7ba8362600e9d6dfa8ec4de273ba2387fe62e4b33b6",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_176",
+      "user_turns": 2,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "family": 176,
+      "domain": "travel",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 1,
+      "source_batch": "coverage120",
+      "rank_within_domain": 13,
+      "family_rank_sha256": "6c1fca62529b16a92c1df7ba8362600e9d6dfa8ec4de273ba2387fe62e4b33b6",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_174",
+      "user_turns": 5,
+      "involved_classes": [
+        "TwitterAPI",
+        "TravelAPI"
+      ],
+      "family": 174,
+      "domain": "travel",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 14,
+      "family_rank_sha256": "6cf85e187648bddb622a716bc3bbf0477cf27efc2163858476107578852ab848",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_174",
+      "user_turns": 5,
+      "involved_classes": [
+        "TwitterAPI",
+        "TravelAPI"
+      ],
+      "family": 174,
+      "domain": "travel",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 14,
+      "family_rank_sha256": "6cf85e187648bddb622a716bc3bbf0477cf27efc2163858476107578852ab848",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_base_178",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "family": 178,
+      "domain": "travel",
+      "category": "multi_turn_base",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 15,
+      "family_rank_sha256": "6fb49fb7bf72b1460e5bafbe55ac6ec1a53481559316a6e365f6f3d3e6df4f6f",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    },
+    {
+      "id": "multi_turn_long_context_178",
+      "user_turns": 5,
+      "involved_classes": [
+        "TicketAPI",
+        "TravelAPI"
+      ],
+      "family": 178,
+      "domain": "travel",
+      "category": "multi_turn_long_context",
+      "boundary_turns": 3,
+      "source_batch": "coverage120",
+      "rank_within_domain": 15,
+      "family_rank_sha256": "6fb49fb7bf72b1460e5bafbe55ac6ec1a53481559316a6e365f6f3d3e6df4f6f",
+      "recorded_exposed_family": null,
+      "prior_g9_or_mini_registered_family": false,
+      "exposure_status": "unknown"
+    }
+  ],
+  "short_conditions": [
+    "multi_turn_base_31",
+    "multi_turn_long_context_31",
+    "multi_turn_base_45",
+    "multi_turn_long_context_45",
+    "multi_turn_base_78",
+    "multi_turn_long_context_78",
+    "multi_turn_base_69",
+    "multi_turn_long_context_69",
+    "multi_turn_base_76",
+    "multi_turn_long_context_76",
+    "multi_turn_base_65",
+    "multi_turn_long_context_65",
+    "multi_turn_base_96",
+    "multi_turn_long_context_96",
+    "multi_turn_base_100",
+    "multi_turn_long_context_100",
+    "multi_turn_base_139",
+    "multi_turn_long_context_139",
+    "multi_turn_base_163",
+    "multi_turn_long_context_163",
+    "multi_turn_base_169",
+    "multi_turn_long_context_169",
+    "multi_turn_base_177",
+    "multi_turn_long_context_177",
+    "multi_turn_base_176",
+    "multi_turn_long_context_176"
+  ],
+  "short_boundary_turns": 1,
+  "early_conditions": [
+    "multi_turn_base_37",
+    "multi_turn_long_context_37",
+    "multi_turn_base_21",
+    "multi_turn_long_context_21",
+    "multi_turn_base_19",
+    "multi_turn_long_context_19",
+    "multi_turn_base_47",
+    "multi_turn_long_context_47",
+    "multi_turn_base_16",
+    "multi_turn_long_context_16",
+    "multi_turn_base_48",
+    "multi_turn_long_context_48",
+    "multi_turn_base_54",
+    "multi_turn_long_context_54",
+    "multi_turn_base_77",
+    "multi_turn_long_context_77",
+    "multi_turn_base_115",
+    "multi_turn_long_context_115",
+    "multi_turn_base_101",
+    "multi_turn_long_context_101",
+    "multi_turn_base_152",
+    "multi_turn_long_context_152",
+    "multi_turn_base_160",
+    "multi_turn_long_context_160",
+    "multi_turn_base_159",
+    "multi_turn_long_context_159",
+    "multi_turn_base_185",
+    "multi_turn_long_context_185"
+  ],
+  "early_boundary_turns": 2,
+  "longer_conditions": [
+    "multi_turn_base_0",
+    "multi_turn_long_context_0",
+    "multi_turn_base_5",
+    "multi_turn_long_context_5",
+    "multi_turn_base_39",
+    "multi_turn_long_context_39",
+    "multi_turn_base_8",
+    "multi_turn_long_context_8",
+    "multi_turn_base_2",
+    "multi_turn_long_context_2",
+    "multi_turn_base_22",
+    "multi_turn_long_context_22",
+    "multi_turn_base_15",
+    "multi_turn_long_context_15",
+    "multi_turn_base_75",
+    "multi_turn_long_context_75",
+    "multi_turn_base_51",
+    "multi_turn_long_context_51",
+    "multi_turn_base_66",
+    "multi_turn_long_context_66",
+    "multi_turn_base_62",
+    "multi_turn_long_context_62",
+    "multi_turn_base_68",
+    "multi_turn_long_context_68",
+    "multi_turn_base_60",
+    "multi_turn_long_context_60",
+    "multi_turn_base_52",
+    "multi_turn_long_context_52",
+    "multi_turn_base_67",
+    "multi_turn_long_context_67",
+    "multi_turn_base_137",
+    "multi_turn_long_context_137",
+    "multi_turn_base_106",
+    "multi_turn_long_context_106",
+    "multi_turn_base_128",
+    "multi_turn_long_context_128",
+    "multi_turn_base_126",
+    "multi_turn_long_context_126",
+    "multi_turn_base_135",
+    "multi_turn_long_context_135",
+    "multi_turn_base_114",
+    "multi_turn_long_context_114",
+    "multi_turn_base_125",
+    "multi_turn_long_context_125",
+    "multi_turn_base_116",
+    "multi_turn_long_context_116",
+    "multi_turn_base_142",
+    "multi_turn_long_context_142",
+    "multi_turn_base_145",
+    "multi_turn_long_context_145",
+    "multi_turn_base_110",
+    "multi_turn_long_context_110",
+    "multi_turn_base_191",
+    "multi_turn_long_context_191",
+    "multi_turn_base_181",
+    "multi_turn_long_context_181",
+    "multi_turn_base_168",
+    "multi_turn_long_context_168",
+    "multi_turn_base_199",
+    "multi_turn_long_context_199",
+    "multi_turn_base_194",
+    "multi_turn_long_context_194",
+    "multi_turn_base_174",
+    "multi_turn_long_context_174",
+    "multi_turn_base_178",
+    "multi_turn_long_context_178"
+  ],
+  "longer_boundary_turns": 3,
+  "counts": {
+    "candidate_conditions": 120,
+    "distinct_families": 60,
+    "by_domain": {
+      "filesystem": 30,
+      "vehicle": 30,
+      "trading": 30,
+      "travel": 30
+    },
+    "by_boundary": {
+      "1": 26,
+      "2": 28,
+      "3": 66
+    },
+    "max_prefixes": 120,
+    "max_continuations": 240,
+    "families_per_domain": 15,
+    "base_conditions": 60,
+    "long_context_conditions": 60
+  },
+  "coverage": {
+    "universe_conditions": 400,
+    "universe_families": 200,
+    "registered_condition_fraction": 0.3,
+    "registered_family_fraction": 0.3,
+    "multiturn_eligible_universe_conditions": 394,
+    "not_entire_BFCL": true,
+    "target_is_registered_candidates_not_qualified_pairs": true
+  },
+  "exclusions_before_sampling": {
+    "single_turn_families": [
+      46,
+      50,
+      198
+    ],
+    "reason": "No completed historical prefix can retain a subsequent user turn."
+  },
+  "eligibility": {
+    "model_generates_own_prefix": true,
+    "prefix_generation_attempts_per_condition": 1,
+    "complete_official_prefix_must_pass": true,
+    "reuse_other_model_prefix": false,
+    "exclude_on_continuation_score": false,
+    "exclude_on_empty_relations": false,
+    "regenerate_failed_prefix": false,
+    "replace_excluded_condition": false,
+    "record_every_candidate": true,
+    "retain_budget_interrupted_and_transport_failed_separately": true
+  },
+  "scope": {
+    "complete_visible_evidence": true,
+    "native_prefix_replaced_in_graph_arm": true,
+    "identity_alongside_graph": false,
+    "compression": false,
+    "evaluator_modified": false,
+    "representation_retuning": false,
+    "same_model_prefix_shared_between_arms": true,
+    "tool_schema_identical_between_arms": true,
+    "zero_join_retained": true
+  },
+  "no_replacement": true,
+  "no_zero_index_exclusion": true,
+  "frozen_graph_source_sha256": {
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_encoding.py": "055ddd87883b75fd54dbe166855e1464c7d5b45328be36af87ee3ab5d3d9ec36",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_evidence.py": "3fed98d65d054dca782c0242524f8c33db68621a78efae4b3192d8e727572c49",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_native.py": "a6b255752afc61e61bd5785889d5b476d778f5d2034f449840e31848f0863c35",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_observed.py": "9a661b46518e9880643f2b2f9f3e09bb8f37b7f255447679ff1e8b94af156a4b",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_payload.py": "4b9097831c584fa4ae9602b5c3833c582f12523eaa4f6466c4cf12e4fb0507ba",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_readable.py": "b409dc9c46745755bbefa2cda2d2c94fbac694cfffdbc2379343ab1380086050",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_record_render.py": "dadee99c3c353a3e1c56829de2b0b1e020ff56c998de26de9d98c75eebb09256",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_record_views.py": "d97442e735fbdf1d09a0e8ec5630346242d5ac46eb00c7362c594c2e81cff4cc",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_record_visibility.py": "293c5cd3557a23a471cf65d82e4f782ff5f6f733882d9839e0b49b8d963fd8f8",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_records.py": "e106cbd1e1a03a6538c79f60b3a1cf2de41161348fb3b4e75e14c0a76b1781f9",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_replace.py": "b4727b1a3a5eff5fd05c53b7e1d9d5559228294865f458bc49c1b1ba8975846e",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_role_partition.py": "cb9fc4c84e25ff45acb1f2ab097b3b123446384b5b4c00d00809c01734d2b2b4",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_serialization.py": "6a1a3bf48ce3c5f07f6bfdb961d1de947b074265c8dd7c44fa2f5464b95da2ba",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_serialization_target.py": "aad9e60d8764b2909307ac5df7fb0632e1f39a029b92787d0c3eea952ac46792",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_signature.py": "1f2623c9c25b71739611edadf37db3c39a55d08020e9adbeec1e1989e9ddf6e2",
+    "ext04-g9-continuation-k2/source_code/core/graph_memory_structured.py": "37886246760c19eb37c8824a0aac9ab0111f4bec494a5f28c090b828689f98e4"
+  },
+  "exposure_sources": {
+    "recorded_content_exposure_inventory": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/g9-report-publication/package/experiments/bfcl_identity/reports/evidence/g9/g9-expansion-feasibility-projection.json",
+      "sha256": "2c7747c0c8db78fee6e6c59f8a506534e7611621491f1cf2396478c7d45bbc2f"
+    },
+    "prior_G9_mini_registration": {
+      "path": "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/g9-mini-validation-20261024/design/g9-mini-fixed24-selection-v1.json",
+      "sha256": "21b5ec8683d5ea095088bce3fe026001878b9ba660e258513f88525eebc775e8"
+    }
+  },
+  "exposure_disclosure": "This random coverage sample contains previously exposed or registered families; it is not an unseen holdout. The older exposure inventory is incomplete for later work, so absence is unknown, never proof of no exposure. Both variants inherit the family exposure label. Exposure and prior success do not affect inclusion.",
+  "budget": {
+    "model": "gpt-4.1",
+    "cap_usd": 35,
+    "fresh_ledger_required": true,
+    "include_prefixes_continuations_smoke_and_retries": true,
+    "borrow_from_prior_campaign": false,
+    "preserve_uncertain_reservations": true,
+    "halt_before_unfunded_request": true,
+    "resume_only_after_user_review": true
+  },
+  "dispatch_requirements": [
+    "Freeze runtime, source, sampling, schedule and official tool/eval hashes before paid calls.",
+    "Every registered prefix is attempted once; all partitions finish screening before continuation outcome-based interpretation.",
+    "Pair identity and G9 on the identical passed GPT-4.1 prefix. No prefix regeneration, candidate-outcome screening, or replacement.",
+    "Randomize paired blocks and arm order independently of outcomes; keep one repetition and one boundary per condition.",
+    "Retain zero-join conditions, all exclusions, interrupted requests, unmatched pairs and their costs.",
+    "Stop on integrity/budget failure; no automatic extra repeats or representation retuning."
+  ],
+  "analysis_notes": [
+    "Report 120 registered conditions and actual eligible-pair denominator separately.",
+    "Base and Long-Context of the same family are correlated; do not treat 120 conditions as 120 independent families.",
+    "Report domain, boundary, prior-exposure and relation-activation breakdowns; do not change official eval.",
+    "This coverage experiment tests frozen graph replacement, not compression or causal benefits of individual relation types."
+  ]
+}

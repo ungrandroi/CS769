@@ -1,0 +1,14 @@
+{
+  "frozen_at_utc": "2026-10-24T19:34:16.133723+00:00",
+  "source_sha256": {
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-a.json": "db1fc84bb3f3c252055f163bbe7b2a985cdcd2db2e430589714cd67237f8790f",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/review-a.md": "c56790758cfe22eeef2545a663f7921315083e8d929b48f143723791277db19e",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/labels-b.json": "79aa3383595dfa1244b5e53eecdd296f67f347091187ce8d1aa00c10af05d834",
+    "/Users/susu/Documents/Codex/2026-10-21/codex-ins04-ssh-ins04-bug-2/work/anonymous-behavior-review-20261024/review-b.md": "2c0dc45e69ce13cf9c7e3a5151490122bdd31e3aee4650b5c4dd347f2bff5cd5"
+  },
+  "all_cases": 16,
+  "all_trajectories": 32,
+  "all_observed_turns": 52,
+  "evidence_quotes_validated": 224,
+  "note": "Reviewer B tool_sequence includes event positions and descriptions; V2 checker verifies exact positions and names without altering frozen labels. Both reviews fixed before official score summary and arm interpretation."
+}

@@ -1,0 +1,67 @@
+{
+  "status": "complete_pending_result_review",
+  "model": "gpt-4.1",
+  "budget_usd": 35,
+  "candidate_count": 120,
+  "paid_requests_started": true,
+  "controller_pid": 501741,
+  "completed_stages": [
+    {
+      "stage": "cov01-prefix-k1",
+      "kind": "screen-prefixes",
+      "audit_passed": true,
+      "audit": "/home/ruqi/public/CS769/experiments/bfcl_identity/v11_g9_gpt41_coverage120_20261024/analysis/cov01-prefix-k1-actual-audit-v2.json",
+      "audit_sha256": "20ec99262ef7f8a830ef3caffd966a19555df4e3ca45817ea8961c5ec4febaea",
+      "completed_at_utc": "2026-10-25T01:42:46.107817+00:00"
+    },
+    {
+      "stage": "cov02-prefix-k2",
+      "kind": "screen-prefixes",
+      "audit_passed": true,
+      "audit": "/home/ruqi/public/CS769/experiments/bfcl_identity/v11_g9_gpt41_coverage120_20261024/analysis/cov02-prefix-k2-actual-audit-v2.json",
+      "audit_sha256": "28641d0bce6867b82ba1611460f50d81074a9b222c611cf77c0de5803fae5791",
+      "completed_at_utc": "2026-10-25T01:50:17.192114+00:00"
+    },
+    {
+      "stage": "cov03-prefix-k3",
+      "kind": "screen-prefixes",
+      "audit_passed": true,
+      "audit": "/home/ruqi/public/CS769/experiments/bfcl_identity/v11_g9_gpt41_coverage120_20261024/analysis/cov03-prefix-k3-actual-audit-v2.json",
+      "audit_sha256": "def9c7859ae352416791625d09e2771855e4aad54a18966c9869770e8e815154",
+      "completed_at_utc": "2026-10-25T02:12:20.032608+00:00"
+    },
+    {
+      "stage": "cov04-continuation-k1",
+      "kind": "continuation",
+      "audit_passed": true,
+      "audit": "/home/ruqi/public/CS769/experiments/bfcl_identity/v11_g9_gpt41_coverage120_20261024/analysis/cov04-continuation-k1-actual-audit-v2.json",
+      "audit_sha256": "7ce6e8769644a5152ddf8fbb45a7f92bc21a1b187760e3f9a2baee70ddf1dbf4",
+      "completed_at_utc": "2026-10-25T02:24:28.502629+00:00"
+    },
+    {
+      "stage": "cov05-continuation-k2",
+      "kind": "continuation",
+      "audit_passed": true,
+      "audit": "/home/ruqi/public/CS769/experiments/bfcl_identity/v11_g9_gpt41_coverage120_20261024/analysis/cov05-continuation-k2-actual-audit-v2.json",
+      "audit_sha256": "a3b2aa2d1bfcd50991778f84abf0fe3edc53f0e41df900f953960226f7fa4a97",
+      "completed_at_utc": "2026-10-25T02:36:09.254890+00:00"
+    },
+    {
+      "stage": "cov06-continuation-k3",
+      "kind": "continuation",
+      "audit_passed": true,
+      "audit": "/home/ruqi/public/CS769/experiments/bfcl_identity/v11_g9_gpt41_coverage120_20261024/analysis/cov06-continuation-k3-actual-audit-v2.json",
+      "audit_sha256": "abf2fd93380ff4c875cc6b0866c5e1a6ad69e16cb8860e1935bf759ab4b4b2b4",
+      "completed_at_utc": "2026-10-25T03:12:12.891350+00:00"
+    }
+  ],
+  "skipped_stages": [],
+  "resume": "audit_k1_compatibility_only",
+  "original_started_at_utc": "2026-10-24T20:09:42.357313+00:00",
+  "started_at_utc": "2026-10-25T01:43:29.152937+00:00",
+  "current_stage": null,
+  "updated_at_utc": "2026-10-25T03:12:14.896345+00:00",
+  "phase": "complete",
+  "finished_at_utc": "2026-10-25T03:12:14.896302+00:00",
+  "no_further_paid_jobs_planned": true
+}

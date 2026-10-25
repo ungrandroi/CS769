@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "accuracy": 0.0,
+    "correct_count": 0,
+    "total_count": 1
+  },
+  "passed": false,
+  "diagnostics": [
+    {
+      "id": "multi_turn_base_121",
+      "model_name": "azure_gpt-5-mini-FC",
+      "test_category": "multi_turn_base",
+      "valid": false,
+      "error": {
+        "error_message": "Model response execution results so far does not contain all the ground truth response execution results for turn 3.",
+        "error_type": "multi_turn:execution_response_mismatch",
+        "details": {
+          "missing_items": [
+            "{\"account_id\": 12345, \"balance\": 35000.0, \"binding_card\": 1974202140965533}"
+          ],
+          "model_response (including all previous turns)": [
+            "{\"stock_list\": [\"AAPL\", \"GOOG\", \"MSFT\", \"NVDA\"]}",
+            "{\"price\": 227.16, \"percent_change\": 0.17, \"volume\": 2.552, \"MA(5)\": 227.11, \"MA(20)\": 227.09}",
+            "{\"order_id\": 12446, \"order_type\": \"Buy\", \"status\": \"Pending\", \"price\": 227.16, \"amount\": 150}",
+            "{\"id\": 12446, \"order_type\": \"Buy\", \"symbol\": \"AAPL\", \"price\": 227.16, \"amount\": 150, \"status\": \"Open\"}",
+            "{\"status\": \"Withdrawal successful\", \"new_balance\": 34500.0}"
+          ],
+          "ground_truth_response (only the current turn)": [
+            "{\"account_id\": 12345, \"balance\": 35000.0, \"binding_card\": 1974202140965533}",
+            "{\"status\": \"Withdrawal successful\", \"new_balance\": 34500.0}"
+          ]
+        }
+      }
+    }
+  ],
+  "result_sha256": "0c2d8273ca5a57801d3dfc4e2356e48df96cf4f6049e159eae089b1d40c328d9",
+  "score_sha256": "176d26a954715cacfa56bcc716844a486f6b037a4d75e2ae5e9fe0263ffa66e8",
+  "evaluator": "official BFCL",
+  "score_file": "score/azure_gpt-5-mini-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+}

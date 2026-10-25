@@ -1,0 +1,41 @@
+{
+  "status": "complete_pending_result_review",
+  "model": "gpt-5-mini",
+  "budget_usd": 3,
+  "candidate_count": 24,
+  "paid_requests_started": true,
+  "controller_pid": 3716152,
+  "completed_stages": [
+    {
+      "stage": "mini01-prefix-k2",
+      "audit": "/home/ruqi/public/CS769/experiments/bfcl_identity/v10_g9_mini_20261024/analysis/mini01-prefix-k2-actual-audit-v2.json",
+      "audit_sha256": "5776ff0490ed0f9fca7e513121844730eca9b940749b115b8a597704029250f1",
+      "completed_at_utc": "2026-10-24T18:56:54.784610+00:00"
+    },
+    {
+      "stage": "mini02-prefix-k3",
+      "audit": "/home/ruqi/public/CS769/experiments/bfcl_identity/v10_g9_mini_20261024/analysis/mini02-prefix-k3-actual-audit.json",
+      "audit_sha256": "5f9fd3a42cc4d9e19b74da7e279522fbb607b49bfe4e043a50bcd838c4b44189",
+      "completed_at_utc": "2026-10-24T19:08:13.573634+00:00"
+    },
+    {
+      "stage": "mini03-continuation-k2",
+      "audit": "/home/ruqi/public/CS769/experiments/bfcl_identity/v10_g9_mini_20261024/analysis/mini03-continuation-k2-actual-audit.json",
+      "audit_sha256": "ffb3adb71d51c1a37f394aadf94b412341af9ca1b87bdfc76e49f5e055dd519f",
+      "completed_at_utc": "2026-10-24T19:10:22.843830+00:00"
+    },
+    {
+      "stage": "mini04-continuation-k3",
+      "audit": "/home/ruqi/public/CS769/experiments/bfcl_identity/v10_g9_mini_20261024/analysis/mini04-continuation-k3-actual-audit.json",
+      "audit_sha256": "01eebc8b272b50c3b7025c64de24dd93a67228549c746b3dbf84a3ee43be06a4",
+      "completed_at_utc": "2026-10-24T19:24:37.986865+00:00"
+    }
+  ],
+  "skipped_stages": [],
+  "started_at_utc": "2026-10-24T18:56:54.829949+00:00",
+  "current_stage": null,
+  "updated_at_utc": "2026-10-24T19:24:39.991086+00:00",
+  "phase": "complete",
+  "finished_at_utc": "2026-10-24T19:24:39.991037+00:00",
+  "no_further_paid_jobs_planned": true
+}

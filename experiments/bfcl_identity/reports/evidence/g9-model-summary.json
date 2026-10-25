@@ -1,0 +1,1045 @@
+{
+  "version": "g9-cumulative-official-summary-v1",
+  "scope": "Frozen G9 validation only; development excluded. Descriptive pooling of paired runs, not independent unique tasks or a model ranking.",
+  "sources": [
+    {
+      "source_workspace_path": "graph-structure-exploration-20261024/analysis/g9-independent-unmasked-summary.json",
+      "sha256": "a758eccb0340175c0c6fc2aaec4c8b977a137e2ce52dd0cb6a2a80320ca66186"
+    },
+    {
+      "source_workspace_path": "graph-structure-exploration-20261024/analysis/g9-expanded-unmasked-summary.json",
+      "sha256": "e87d469b64d8f4c4fc2eff6922b6dd6efe55b26c40cbf4ac91233e4e9003ceb7"
+    },
+    {
+      "source_workspace_path": "g9-gpt41-coverage120-20261024/analysis/coverage-selection-summary.json",
+      "sha256": "c91c18221d870528c2fce67d20b82858ea7aaa1ac438cf9ad38df3ebaa454efb"
+    },
+    {
+      "source_workspace_path": "g9-mini-validation-20261024/analysis/mini-official-results.json",
+      "sha256": "191b588caa8d05514242680b800a9ef22adfb4da6acc51012685ec80e545f4ab"
+    }
+  ],
+  "models": [
+    {
+      "model": "gpt-4.1",
+      "paired_runs": 103,
+      "unique_condition_ids": 102,
+      "identity_passed": 80,
+      "g9_passed": 78,
+      "new_failures": 2,
+      "recoveries": 0,
+      "duplicated_ids": [
+        "multi_turn_base_135"
+      ]
+    },
+    {
+      "model": "gpt-5-mini",
+      "paired_runs": 16,
+      "unique_condition_ids": 16,
+      "identity_passed": 13,
+      "g9_passed": 12,
+      "new_failures": 1,
+      "recoveries": 0,
+      "duplicated_ids": []
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "paired_runs": 22,
+      "unique_condition_ids": 22,
+      "identity_passed": 19,
+      "g9_passed": 19,
+      "new_failures": 0,
+      "recoveries": 0,
+      "duplicated_ids": []
+    }
+  ],
+  "paired_runs": [
+    {
+      "batch": "initial",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_121",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_123",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_165",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_59",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_71",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_111",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_138",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "initial",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_157",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_162",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "initial",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_167",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_79",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_80",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_121",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "initial",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_123",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_165",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_59",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "initial",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_111",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_138",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_157",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_162",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "initial",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_167",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "initial",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_80",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "expanded",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_124",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "expanded",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_135",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "expanded",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_73",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "expanded",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_81",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "expanded",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_base_95",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "expanded",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_107",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "expanded",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_112",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "expanded",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_188",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "expanded",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_190",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "expanded",
+      "model": "claude-sonnet-5-5",
+      "task": "multi_turn_long_context_60",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "expanded",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_124",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "expanded",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_135",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "expanded",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_73",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "expanded",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_107",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "expanded",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_112",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "expanded",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_170",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "expanded",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_190",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "expanded",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_196",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_37",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_21",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_21",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_31",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_31",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_5",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_5",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_19",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_19",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_39",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_39",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_47",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_16",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_16",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_45",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_48",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_48",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_15",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_15",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_78",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_78",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_75",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_75",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_51",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_69",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_69",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_62",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_68",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_65",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_65",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_77",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_77",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_100",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_100",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_137",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_137",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_115",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_115",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_101",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_101",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_128",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_126",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_126",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_135",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_135",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_114",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_114",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_125",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_125",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_139",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_139",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_116",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_116",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_142",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_142",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_145",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_145",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_110",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_110",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_163",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_163",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_160",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_160",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_169",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_169",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_159",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_159",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_191",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_191",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_181",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_181",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_177",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_177",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_168",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_168",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_199",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_199",
+      "identity_passed": true,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_194",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_194",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_176",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_176",
+      "identity_passed": true,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_174",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_174",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_base_178",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "coverage120",
+      "model": "gpt-4.1",
+      "task": "multi_turn_long_context_178",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_71",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_59",
+      "identity_passed": true,
+      "g9_passed": false
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_138",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_123",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_121",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_111",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_157",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_167",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_162",
+      "identity_passed": false,
+      "g9_passed": false
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_165",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_60",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_135",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_107",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_base_124",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_112",
+      "identity_passed": true,
+      "g9_passed": true
+    },
+    {
+      "batch": "mini",
+      "model": "gpt-5-mini",
+      "task": "multi_turn_long_context_190",
+      "identity_passed": true,
+      "g9_passed": true
+    }
+  ]
+}
