@@ -1,5 +1,11 @@
 # CS769 — Graph Memory for Tool-Using Agents
 
+**G9 source is now available:** start with the [integration guide](docs/g9-memory.md),
+[offline example](examples/g9_memory.py), and [builder entry point](scripts/core/g9_memory.py).
+The frozen G5 evidence builder and G9 ID-link modules are in `scripts/core/`;
+their offline tests are in `tests/`. AppWorld integration can use these modules
+without installing the experiment runner.
+
 This project studies graph memory for file-operation tasks in the Berkeley Function Calling Leaderboard (BFCL). Experiments use a locally hosted **Qwen3.8-27B-Q8_0** model and 26 task conditions: 13 task families evaluated under both `multi_turn_base` and `multi_turn_long_context`. The environment provides 18 simulated GorillaFileSystem tools, not a real Bash shell.
 
 ## Memory Methods

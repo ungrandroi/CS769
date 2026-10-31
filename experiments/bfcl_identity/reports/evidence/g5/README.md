@@ -1,5 +1,10 @@
 # G5 证据附件
 
+**源码已发布到 ruqi：** [G5 构图函数](../../../../../scripts/core/graph_memory_evidence.py)、
+[G9 调用入口及接入说明](../../../../../docs/g9-memory.md)、
+[离线示例](../../../../../examples/g9_memory.py)。下文所说保留在 ins04 的内容指完整原始实验目录；
+现在不再需要访问 ins04 才能使用构图与渲染代码。
+
 [G5 可读报告](../../g5-graph-replacement.md) · [本次发布清单及 SHA-256](../../g5-publication-manifest.json)
 
 这里保存报告直接引用的原始判定、汇总、逐轨迹分析和审查文件的**内容不变副本**，以及从两份验证分析提取的 primary-runs.csv。原始轨迹、API 记录和冻结 source_code 保留在 ins04 的 experiments/bfcl_identity/v7_graph_iterations_20261023，未移动或改写。

@@ -1,5 +1,9 @@
 # G9 的结构与实际模型输入
 
+**代码入口：** [G9 接入说明](../../../docs/g9-memory.md) ·
+[构图与渲染入口](../../../scripts/core/g9_memory.py) ·
+[离线示例](../../../examples/g9_memory.py)。发布的是下文 R／full view 对应的冻结实现，包含 G5 依赖和测试。
+
 [新增验证](g9-expanded-validation-results.md) · [上一批验证](g9-independent-validation-results.md) · [已有 G5 报告](g5-graph-replacement.md)
 
 G5 保存完整事件、角色、轮次、顺序和工具调用—返回关系。G8 把工具字段解析成有独立内容所有权的树；G9 再连接公开工具字段规则下、同一命名空间和类型的相同 ID。每条连接有来源支持；它不是因果、任务依赖或“当前状态”推断。[实际节点、来源及冻结代码哈希](evidence/g9/g5-g8-g9-base194-input-evidence.json)

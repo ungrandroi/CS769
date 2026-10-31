@@ -1,5 +1,15 @@
 # 实验入口
 
+## G9 构图与渲染（离线使用）
+
+无需运行实验 CLI：[接入说明](../docs/g9-memory.md)、
+[build_g9_memory](core/g9_memory.py)、[最小示例](../examples/g9_memory.py)。
+`PYTHONPATH=scripts python3 examples/g9_memory.py` 可从仓库根目录运行，不调用模型。
+G5 的 `build_evidence_graph` 在 [graph_memory_evidence.py](core/graph_memory_evidence.py)。
+该入口明确选择已报告的 G9 full-view 设置，保留完整可见证据，不附带 identity 历史。
+
+## 既有实验 CLI
+
 统一命令：`scripts/bfcl_python.sh scripts/manage.py ...`
 
 ```text

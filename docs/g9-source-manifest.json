@@ -1,0 +1,52 @@
+{
+  "purpose": "Publish the evaluated G9 graph builder and renderer, without running experiments or changing evaluation.",
+  "base_ruqi_commit": "070f0920434f29f19cd895c5047e7b540f954e7c",
+  "frozen_experiment": "experiments/bfcl_identity/v11_g9_gpt41_coverage120_20261024",
+  "source_note": "Graph modules are byte-identical to the cov06-continuation-k3 frozen source_code/core snapshot. Existing tests are copied unchanged from the same campaign runner.",
+  "evaluated_profile": {
+    "mode": "graph-record-view-full",
+    "episodic_only": true,
+    "observed_variant": "observed-fields-v1",
+    "record_variant": "record-joins-v1",
+    "view": "full",
+    "visible_observations": false,
+    "carrier_role": "assistant",
+    "attach_native_history": false,
+    "compression": false
+  },
+  "copied_files_sha256": {
+    "scripts/core/graph_memory_evidence.py": "3fed98d65d054dca782c0242524f8c33db68621a78efae4b3192d8e727572c49",
+    "scripts/core/graph_memory_native.py": "a6b255752afc61e61bd5785889d5b476d778f5d2034f449840e31848f0863c35",
+    "scripts/core/graph_memory_observed.py": "9a661b46518e9880643f2b2f9f3e09bb8f37b7f255447679ff1e8b94af156a4b",
+    "scripts/core/graph_memory_payload.py": "4b9097831c584fa4ae9602b5c3833c582f12523eaa4f6466c4cf12e4fb0507ba",
+    "scripts/core/graph_memory_readable.py": "b409dc9c46745755bbefa2cda2d2c94fbac694cfffdbc2379343ab1380086050",
+    "scripts/core/graph_memory_record_render.py": "dadee99c3c353a3e1c56829de2b0b1e020ff56c998de26de9d98c75eebb09256",
+    "scripts/core/graph_memory_record_views.py": "d97442e735fbdf1d09a0e8ec5630346242d5ac46eb00c7362c594c2e81cff4cc",
+    "scripts/core/graph_memory_record_visibility.py": "293c5cd3557a23a471cf65d82e4f782ff5f6f733882d9839e0b49b8d963fd8f8",
+    "scripts/core/graph_memory_records.py": "e106cbd1e1a03a6538c79f60b3a1cf2de41161348fb3b4e75e14c0a76b1781f9",
+    "scripts/core/graph_memory_structured.py": "37886246760c19eb37c8824a0aac9ab0111f4bec494a5f28c090b828689f98e4",
+    "tests/test_graph_memory_observed.py": "29975f640cbf326f4b58df91c10ae0ce8525833307766c026b50e7ce78e6ee29",
+    "tests/test_graph_memory_payload.py": "569fdc6485acae9054646ddf72bd1eb928558a4cea79bb734727240a75ac265b",
+    "tests/test_graph_memory_record_render.py": "aa3a92e19a4ffc5ca7fb7fa8799b3ac884ce5c18bf08264499671ef592909b56",
+    "tests/test_graph_memory_records.py": "d2a66263945ef02aea24fa3c609b99b0bddc5f692fc6c2ce980483369ae03b16"
+  },
+  "existing_dependency_sha256": {
+    "scripts/core/event_graph.py": "34fabec02adde9aeb610a24dd08a44bccacb26bd7555b6c106d9b06f2ddcc10a",
+    "scripts/core/state_transition_graph.py": "7de6f78bb509f9df19d4ed825210c83a90fe9e039236e98255227395c53b4369"
+  },
+  "new_integration_files": [
+    "scripts/core/g9_memory.py",
+    "examples/g9_memory.py",
+    "tests/test_g9_memory.py"
+  ],
+  "validation": {
+    "offline_tests_passed": 73,
+    "new_model_calls": 0,
+    "published_example_exact_text": true,
+    "text_characters": 4988,
+    "text_sha256": "aef1d8135fcdeb54490bb347076b0eedfc8df9c0cd80fdb8192342fc1bb069e2",
+    "complete_graph_sha256": "af5e21fb3698af3296c3766b2519836c84d2d6e3004b49894e7941729f1d29bb",
+    "graph_digest_matches_published": true
+  },
+  "published_example": "../experiments/bfcl_identity/reports/evidence/g9/g5-g8-g9-base194-input-evidence.json"
+}
