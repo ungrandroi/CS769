@@ -4,6 +4,8 @@ This project studies graph memory for tool-using agents in the Berkeley Function
 
 ## Start Here
 
+- [G9 Evidence Graph integration](docs/g9-memory.md): full-evidence graph replacement, offline example and tests; [118-condition GPT-4.1 comparison](experiments/bfcl_identity/reports/g9-event-matched118-results.md).
+
 - [Experiment index](experiments/bfcl_identity/README.md): main results, historical baselines, development evidence, and exact record locations.
 - [Combined 417-prefix results](experiments/bfcl_identity/combined_work1000/README.md): seven paired methods, source-study strata, input metrics, and links to original runs.
 - [Filesystem optimization results](experiments/bfcl_identity/lossless_encoding_v1/RESULTS.md): completed and independently audited.
@@ -18,6 +20,7 @@ The primary research directions are Identity and the selected State-Transition a
 | Identity | `identity` | Original message history |
 | State-Transition Graph | `v1-compact` | State snapshot nodes connected by tool-call transition edges |
 | Event Graph | `v2-compact` | Execution events, shared objects, and versioned facts |
+| Evidence Graph (G9) | `graph-record-view-full` | Complete visible evidence blocks, payload trees and typed ID-reference links; no compression |
 | Event Graph-Dedup | `v2-dedup` | Lossless deduplication of repeated provenance relationships; individual tool calls remain distinct |
 
 The graph methods use compact serialization. “Compact” means a more concise encoding of the full graph; it does not guarantee fewer tokens than the original message history. Historical IDs remain unchanged in stored artifacts for reproducibility.

@@ -1,0 +1,38 @@
+{
+  "formal_experiment_authorized": true,
+  "model": "gpt-4.1",
+  "required_served_model": "gpt-4.1-2025-04-14",
+  "endpoint": "https://api.openai.com/v1",
+  "budget_cap_usd": 20,
+  "pre_cap_review_usd": 19,
+  "budget_scope": "New 114 G9 continuations only; the completed four official smoke cases and setup are reported separately, not recharged.",
+  "paid_arms": [
+    "g9"
+  ],
+  "historical_arms": [
+    "identity",
+    "event"
+  ],
+  "repetitions": 1,
+  "reuse_smoke_ids": [
+    "multi_turn_base_5",
+    "multi_turn_long_context_18",
+    "multi_turn_miss_func_33",
+    "multi_turn_miss_param_24"
+  ],
+  "candidate_count": 200,
+  "triggered_pairs": 118,
+  "untriggered": 82,
+  "threshold": "same saved >1000 o200k dynamic-history JSON checkpoint",
+  "carrier": "user, unchanged from official smoke and Event protocol",
+  "compression": false,
+  "official_eval_changed": false,
+  "old_campaign": "/home/ruqi/public/CS769/experiments/bfcl_identity/v13_event_gpt41_200_20261025",
+  "source_official_smoke": "/home/ruqi/public/CS769/experiments/bfcl_identity/g9_eventprotocol_official_smoke_20261104",
+  "local_report_scope": "118 paired conditions, plus 82 untriggered separately",
+  "scientific_changes_allowed": false,
+  "routine_notifications": false,
+  "record_note": "Source provenance only: controls reused from Azure; new G9 continuations used the official OpenAI API. Both served GPT-4.1.",
+  "full_protocol_source": "https://github.com/ungrandroi/CS769/blob/462ecb5f6ead22a5332fb0010cf5c641f6fce0a5/experiments/bfcl_identity/reports/evidence/g9-matched118/protocol.json",
+  "scope_note": "Protocol excerpt; per-condition outcomes are in paired-results.csv, full checkpoint hashes remain in the linked original protocol."
+}
