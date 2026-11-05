@@ -1,6 +1,8 @@
 # BFCL 图记忆实验报告
 
-最新结果先看 [G9 三模型累计总表](experiment-summary.md#g9-三模型累计结果)：GPT-4.1 合成一行，为 103 次配对、102 个不同题目条件，identity 80/103、G9 78/103；mini 为 13/16、12/16；Claude 为 19/22、19/22。各批范围和限制见详细报告。
+最新结果：[GPT-4.1同一接入点118道配对比较](g9-event-matched118-results.md)。Identity / Event / G9分别通过31 / 33 / 34道；G9首次请求输入比Event少33.8%。[总报告入口](experiment-summary.md) · [可核对附件](evidence/g9-matched118/README.md)
+
+此前结果见 [G9 三模型累计总表](experiment-summary.md#g9-三模型累计结果)：GPT-4.1 合成一行，为 103 次配对、102 个不同题目条件，identity 80/103、G9 78/103；mini 为 13/16、12/16；Claude 为 19/22、19/22。各批范围和限制见详细报告。
 
 早期图替代结果见 [G5 小规模验证](g5-graph-replacement.md)：图替代完整原生前缀，尚未压缩；开发与冻结验证分开报告。
 
@@ -8,6 +10,7 @@
 
 | 阶段 | 可读报告 | 主要内容 |
 | --- | --- | --- |
+| G9 同一接入点 | [118道配对比较](g9-event-matched118-results.md) | 200候选、118触发；Identity/Event/G9；逐题退化、token及费用 |
 | 总览 | [实验总报告](experiment-summary.md) / [HTML](experiment-summary.html) | 最新 G9 三模型累计表；保留从 main 到 V5 的历史结果 |
 | V2 | [Readable 实验](v2-readable.md) / [HTML](v2-readable.html) | A 原生历史、E compact 事件图、R 可读证据表示；两 GPT |
 | V3 | [原生历史＋图索引](v3-findings.md) / [HTML](v3-findings.html) | A 与 B：B 完整保留原生历史，额外加入一次 assistant 图索引；三模型 |
@@ -41,3 +44,5 @@ G5 附件单独列于 [G5 证据目录](evidence/g5/README.md)，本次新增及
 
 
 本次 G9 累计表、120 候选题和 mini 报告的发布及校验记录：[发布清单](g9-coverage-publication-manifest.json)。原始轨迹、冻结代码和历史发布清单保持不变。
+
+2026-11-05的118道配对比较整理清单：[文件与校验值](g9-matched118-publication-manifest.json)。历史清单保持原样；最新入口以Markdown为准，旧HTML保留历史版本。

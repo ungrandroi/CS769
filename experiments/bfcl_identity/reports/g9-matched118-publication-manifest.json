@@ -1,0 +1,97 @@
+{
+  "status": "prepared_for_user_review_not_pushed",
+  "repository": "ungrandroi/CS769",
+  "target_branch": "ruqi",
+  "date": "2026-11-05",
+  "files": [
+    {
+      "path": "experiments/bfcl_identity/reports/README.md",
+      "sha256": "1bcbdea9af587c87052e827102daa7565addded4bfa330126d7d1583818c170e",
+      "bytes": 5557
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-matched118/README.md",
+      "sha256": "a6c8ea3bf6d1a8a169a0f9a5ba57bb91fadc12723341a8ec9d7824453b9efe6c",
+      "bytes": 1466
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-matched118/behavior-evidence.json",
+      "sha256": "0cfaa5389d592fb9e874f83e56497d95f289877f0b377d31e18d0963a4ef8a2b",
+      "bytes": 340002
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-matched118/dependency-repair.json",
+      "sha256": "fd455b98cd84ebe534cef7db829e0fbe788dd067517e0ce197c208daee7ba898",
+      "bytes": 640
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-matched118/frozen-sha256.json",
+      "sha256": "202b1f2eb7e07670cd05c26cdaf0e3c824430a8960c1cad2c3e8b3fa3ce09124",
+      "bytes": 51558
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-matched118/paired-results.csv",
+      "sha256": "544c819d3195a109b45a3d4baa8514bfee0dbfb38ed6d4f2f174e10dd51abea6",
+      "bytes": 13280
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-matched118/paired-results.json",
+      "sha256": "af7cc788c7bcc8c4b7b662a01ad92df014f9cfb070a636bfe4da458260e78749",
+      "bytes": 358271
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-matched118/preflight-result.json",
+      "sha256": "f940e196c241d1f73b3f4a4babaedec76b9a486ec04fa5c969f688069362f438",
+      "bytes": 50026
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-matched118/preparation-audit.json",
+      "sha256": "82134fed0c9140c49f81de085d992619e6dd9f51dbc1c08452c97340d592732a",
+      "bytes": 25160
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-matched118/protocol.json",
+      "sha256": "197f6ed1360e5885e3f4727ee809da354c87eec1637f8ec111d1e04c81613ce4",
+      "bytes": 33499
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-matched118/summary.json",
+      "sha256": "44b84809662ae53a1a461aed274062cb72f78b7e60a2274c48b871973c5545c4",
+      "bytes": 9219
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/evidence/g9-matched118/untriggered.json",
+      "sha256": "631442c4d2566734d21232646555b9ffd31a5d5c5783748d596427f56b272591",
+      "bytes": 6137
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/experiment-summary.md",
+      "sha256": "548c14d57801bb10071c44b265251392378bfb6fe1c82a96f919286d2e483272",
+      "bytes": 14048
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/g9-event-matched118-results.md",
+      "sha256": "b851371f513e32b7fc181e6fdd24d0157d0b642de3ad1b23123178adbb9dd78b",
+      "bytes": 9073
+    }
+  ],
+  "original_experiment_records_modified": false,
+  "code_or_eval_modified": false,
+  "base_files": [
+    {
+      "path": "AGENTS.md",
+      "github_blob_sha": "4946e1df18e89863200a1535fcad4114ab320504",
+      "source_url": "https://github.com/ungrandroi/CS769/blob/ruqi/AGENTS.md"
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/README.md",
+      "github_blob_sha": "d55261a64753fae9f5d48ab86b66f4fd7b5cf02b",
+      "source_url": "https://github.com/ungrandroi/CS769/blob/ruqi/experiments/bfcl_identity/reports/README.md"
+    },
+    {
+      "path": "experiments/bfcl_identity/reports/experiment-summary.md",
+      "github_blob_sha": "2cd906ef3ac3c9a7ebb177f65fa1a0e52c4c9cbe",
+      "source_url": "https://github.com/ungrandroi/CS769/blob/ruqi/experiments/bfcl_identity/reports/experiment-summary.md"
+    }
+  ]
+}
