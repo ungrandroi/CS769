@@ -1,0 +1,2 @@
+# Optional: offline OpenAI token counting; graph construction uses the standard library.
+tiktoken>=0.7

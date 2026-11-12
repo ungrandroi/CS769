@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import unittest
 
-from core.event_graph import GraphMemoryV2
+from cs769.graphs.event_graph import GraphMemoryV2
 from test_state_transition_graph import history
 
 

@@ -1,0 +1,23 @@
+{
+  "extends": "_base.json",
+  "name": "state-legacy",
+  "memory": {
+    "kind": "semantic",
+    "options": {
+      "kind": "state",
+      "codec": "legacy",
+      "explanation": "minimal"
+    }
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

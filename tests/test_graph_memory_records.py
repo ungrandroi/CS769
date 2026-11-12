@@ -3,9 +3,9 @@ from copy import deepcopy
 import json
 import unittest
 
-from core.graph_memory_observed import build_observed_graph
-from core.graph_memory_payload import build_payload_graph, render_payload_graph, _expand
-from core.graph_memory_records import (
+from cs769.graphs.graph_memory_observed import build_observed_graph
+from cs769.graphs.graph_memory_payload import build_payload_graph, render_payload_graph, _expand
+from cs769.graphs.graph_memory_records import (
     build_record_graph, audit_record_graph, strip_record_graph, render_record_graph,
     render_record_segments, plan_record_projection, audit_record_projection_plan,
 )
@@ -127,7 +127,7 @@ class RecordGraphTests(unittest.TestCase):
         self.assertEqual(audit_record_graph(graph)['edge_count'],4)
 
     def test_parallel_group_adds_membership_without_temporal_edge(self):
-        from core.graph_memory_evidence import build_evidence_graph,inference_graph
+        from cs769.graphs.graph_memory_evidence import build_evidence_graph,inference_graph
         history=[{'role':'user','content':'Keep'},
             {'role':'assistant','tool_calls':[
                 {'id':'a','type':'function','function':{'name':'get_ticket','arguments':'{"ticket_id":7}'}},

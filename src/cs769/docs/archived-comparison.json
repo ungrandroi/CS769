@@ -1,0 +1,54 @@
+{
+  "paid_calls": 0,
+  "counter": "o200k_base",
+  "comparisons": [
+    {
+      "case": "multi_turn_long_context_68",
+      "profile": "g9-view-full",
+      "text_exact": true,
+      "tokens": 5385
+    },
+    {
+      "case": "multi_turn_long_context_68",
+      "profile": "share-observations",
+      "text_exact": true,
+      "tokens": 3678
+    },
+    {
+      "case": "multi_turn_long_context_5",
+      "profile": "g9-view-full",
+      "text_exact": true,
+      "tokens": 2208
+    },
+    {
+      "case": "multi_turn_long_context_5",
+      "profile": "share-observations",
+      "text_exact": true,
+      "tokens": 1656
+    },
+    {
+      "case": "multi_turn_long_context_116",
+      "profile": "numeric-summary-v1",
+      "text_exact": true,
+      "tokens": 5515
+    },
+    {
+      "case": "multi_turn_long_context_142",
+      "profile": "numeric-summary-v1",
+      "text_exact": true,
+      "tokens": 5270
+    },
+    {
+      "case": "multi_turn_long_context_100",
+      "profile": "numeric-summary-v1",
+      "text_exact": true,
+      "tokens": 820
+    },
+    {
+      "case": "multi_turn_long_context_115",
+      "profile": "numeric-summary-v1",
+      "text_exact": true,
+      "tokens": 1322
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "extends": "_base.json",
+  "name": "event-legacy",
+  "memory": {
+    "kind": "semantic",
+    "options": {
+      "kind": "event",
+      "codec": "legacy",
+      "explanation": "minimal"
+    }
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

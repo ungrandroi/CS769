@@ -1,6 +1,6 @@
 import unittest
 
-from core.qwen_transport import chat_messages, response_from_chat, prefix_log
+from cs769.adapters.qwen_transport import chat_messages, response_from_chat, prefix_log
 
 
 class AdapterTests(unittest.TestCase):
@@ -44,21 +44,28 @@ if __name__ == '__main__':
     unittest.main()
 
 class LiveGraphTests(unittest.TestCase):
-    def test_compact_builds_from_current_qwen_history_without_changing_it(self):
+    def test_semantic_profiles_preserve_current_history_without_tokenizer_assets(self):
         from copy import deepcopy
+        from pathlib import Path
         import json
-        from workflows.baseline_task import make_memory
+        import cs769
+        from cs769.config import load_config
+        from cs769.pipeline import prepare
         from test_state_transition_graph import history
-        from core.graph_memory_serialization import decode_compact, normalize
-        from core.graph_memory_replace import GraphMemoryReplacement, GraphMemoryV2Replacement
-        from core.local_qwen_tokenizer import LocalQwenTokenizer
-        source = history([('pwd', {}, {'current_working_directory': '/research'}),
-                          ('mv', {'source': 'a', 'destination': 'b'}, {'error': 'MISSING'})])
+        from cs769.graphs.graph_memory_serialization import decode_compact, normalize
+        from cs769.graphs.graph_memory_replace import GraphMemoryReplacement, GraphMemoryV2Replacement
+
+        source = history([("pwd", {}, {"current_working_directory": "/research"}),
+                          ("mv", {"source": "a", "destination": "b"}, {"error": "MISSING"})])
         original = deepcopy(source)
-        with LocalQwenTokenizer() as tokenizer:
-            for mode, cls in [('v1-compact', GraphMemoryReplacement), ('v2-compact', GraphMemoryV2Replacement)]:
-                text, graph = make_memory(source, mode, tokenizer.count)
-                expected = cls(); expected.compress(source)
-                self.assertEqual(normalize(decode_compact(text.split('\n', 2)[2])), normalize(json.loads(expected.render().split('\n', 2)[2])))
-                self.assertEqual(graph['source_messages'], source)
-                self.assertEqual(source, original)
+        for name, cls in [("state-legacy", GraphMemoryReplacement), ("event-legacy", GraphMemoryV2Replacement)]:
+            cfg = load_config(Path(cs769.__file__).parent / "configs" / (name + ".json"))
+            # Structural codec test uses explicit character units, not native Qwen token claims.
+            result = prepare(source, cfg, len, counter_name="characters")
+            expected = cls()
+            expected.compress(source)
+            self.assertEqual(normalize(decode_compact(result["memory_text"])),
+                             normalize(json.loads(expected.render().split("\n", 2)[2])))
+            self.assertEqual(expected.graph["source_messages"], source)
+            self.assertEqual(result["metrics"]["counter"], "characters")
+            self.assertEqual(source, original)

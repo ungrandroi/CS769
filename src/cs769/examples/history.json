@@ -1,0 +1,33 @@
+[
+  {
+    "role": "system",
+    "content": "Complete the task."
+  },
+  {
+    "role": "user",
+    "content": "Read the file."
+  },
+  {
+    "role": "assistant",
+    "content": null,
+    "tool_calls": [
+      {
+        "id": "c1",
+        "type": "function",
+        "function": {
+          "name": "cat",
+          "arguments": "{\"file_name\":\"x.txt\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "c1",
+    "content": "{\"content\":\"hello\"}"
+  },
+  {
+    "role": "assistant",
+    "content": "Read it."
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "extends": "_base.json",
+  "name": "g9-view-base",
+  "memory": {
+    "options": {
+      "view": "base"
+    }
+  },
+  "delivery": {
+    "role": "assistant"
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

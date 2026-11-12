@@ -1,0 +1,21 @@
+{
+  "extends": "_base.json",
+  "name": "g5-evidence",
+  "memory": {
+    "kind": "evidence"
+  },
+  "delivery": {
+    "role": "assistant"
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

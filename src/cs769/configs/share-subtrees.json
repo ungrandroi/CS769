@@ -1,0 +1,26 @@
+{
+  "extends": "_base.json",
+  "name": "share-subtrees",
+  "edits": [
+    {
+      "name": "share_subtrees",
+      "enabled": true,
+      "options": {},
+      "on_ineligible": "skip"
+    }
+  ],
+  "delivery": {
+    "role": "assistant"
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

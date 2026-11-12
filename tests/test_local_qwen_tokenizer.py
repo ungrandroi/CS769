@@ -1,8 +1,10 @@
 """Native-tokenizer sanity checks; no weights, model context, or inference."""
 import unittest
-from core.local_qwen_tokenizer import LocalQwenTokenizer
+from cs769.adapters.local_qwen_tokenizer import LocalQwenTokenizer, DEFAULT_MODEL, DEFAULT_LIBRARY
 
 
+@unittest.skipUnless(DEFAULT_MODEL.is_file() and DEFAULT_LIBRARY.is_file(),
+                     "Optional Qwen27B GGUF and pinned libllama are unavailable")
 class LocalQwenTokenizerTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

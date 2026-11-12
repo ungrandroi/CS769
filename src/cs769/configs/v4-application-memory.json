@@ -1,0 +1,21 @@
+{
+  "extends": "_base.json",
+  "name": "v4-application-memory",
+  "memory": {
+    "kind": "native_index"
+  },
+  "delivery": {
+    "mode": "prepend_user"
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

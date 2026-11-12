@@ -1,5 +1,7 @@
 # G9 evidence graph: code and integration
 
+The maintained API is cs769.g9; see the [runtime guide](runtime.md) for the current layout and free test command. Existing scripts/core imports remain compatible. The validated G9 full-view settings remain unchanged.
+
 This is the source for the **uncompressed G9 full-view profile** used in the
 [G9 method report](../experiments/bfcl_identity/reports/g9-structure-method.md).
 It replaces archived message history with one graph-derived memory text; it
@@ -7,18 +9,18 @@ does not attach the original identity history alongside the graph.
 
 ## Start here
 
-- [Public entry point: `build_g9_memory`](../scripts/core/g9_memory.py)
+- [Public entry point: `build_g9_memory`](../src/cs769/g9.py)
 - [Offline, synthetic example](../examples/g9_memory.py)
-- [G5 evidence builder: `build_evidence_graph`](../scripts/core/graph_memory_evidence.py)
-- [G9 record/ID builder](../scripts/core/graph_memory_records.py) and
-  [evaluated renderer](../scripts/core/graph_memory_record_views.py)
+- [G5 evidence builder: `build_evidence_graph`](../src/cs769/graphs/graph_memory_evidence.py)
+- [G9 record/ID builder](../src/cs769/graphs/graph_memory_records.py) and
+  [evaluated renderer](../src/cs769/graphs/graph_memory_record_views.py)
 - [Source hashes and publication checks](g9-source-manifest.json)
 
 The builder and example use only the Python standard library. From the repository
 root, run:
 
 ```bash
-PYTHONPATH=scripts python3 examples/g9_memory.py
+PYTHONPATH=src python3 -B examples/g9_memory.py
 ```
 
 This prints an illustrative message list. It makes no API calls, executes no
@@ -27,7 +29,7 @@ tools, and needs no credentials, BFCL dataset, or AppWorld installation.
 ## Minimal integration
 
 ```python
-from core.g9_memory import build_g9_memory
+from cs769.g9 import build_g9_memory
 
 # Two representations of the SAME completed history, not two model inputs.
 # For OpenAI Chat format, the same message list can be used for both arguments.
@@ -70,7 +72,9 @@ a general multimodal or AppWorld provider adapter.
 ## What is frozen
 
 The entry point selects these settings explicitly; some low-level functions
-have other defaults for earlier experiments:
+have other defaults for earlier experiments. The function returns graph/text;
+it does not choose the carrier message role. The carrier below describes the
+original publication, while the runtime uses delivery.role from its selected configuration:
 
 | Stage | Evaluated setting |
 |---|---|
@@ -95,9 +99,9 @@ than duplicating their text in evidence nodes. To recover the G5 evidence view
 for inspection or auditing, use the inverse functions, not a raw slice of G9:
 
 ```python
-from core.graph_memory_observed import strip_observed_graph
-from core.graph_memory_payload import restore_observed_graph
-from core.graph_memory_records import strip_record_graph
+from cs769.graphs.graph_memory_observed import strip_observed_graph
+from cs769.graphs.graph_memory_payload import restore_observed_graph
+from cs769.graphs.graph_memory_records import strip_record_graph
 
 evidence = strip_observed_graph(
     restore_observed_graph(strip_record_graph(memory["graph"]))
@@ -126,27 +130,27 @@ experiment runners are outside this publication.
 
 ## Offline checks and provenance
 
-Ten graph modules and four existing test files were copied unchanged from the
-frozen G9 experiment runner. The existing `event_graph.py` and
+At the original source publication, ten graph modules and four test files were copied from the frozen runner. Their maintained implementations now live in src/cs769/graphs; scripts/core files are compatibility imports. The existing `event_graph.py` and
 `state_transition_graph.py` dependencies were already present on `ruqi`; this
-publication does not replace them. The new entry point selects the frozen
+original publication did not replace them. The source manifest records that historical publication, rather than the current compatibility files. The new entry point selects the frozen
 options, and the new example and integration tests make them easier to use.
 
-The following command passed **73 tests** at publication:
+The G9-specific suite contains **73 tests**. Run it against the maintained source with:
 
 ```bash
-PYTHONPATH=scripts:tests python3 -m unittest \
+PYTHONPATH=src:tests python3 -B -m unittest \
   test_g9_memory test_graph_memory_observed test_graph_memory_payload \
   test_graph_memory_records test_graph_memory_record_render
 ```
 
 The public-schema provenance test requires the repository's pinned BFCL
 submodule (`git submodule update --init vendor/gorilla`). The entry-point tests
-alone need no submodule: `PYTHONPATH=scripts:tests python3 -m unittest test_g9_memory`.
+alone need no submodule: `PYTHONPATH=src:tests python3 -B -m unittest test_g9_memory`.
 
 An offline replay of the previously published `multi_turn_base_194` example
 reproduced both its complete graph hash and its **4,988-character model-facing
 text byte for byte**. See the [original example and source hashes](../experiments/bfcl_identity/reports/evidence/g9/g5-g8-g9-base194-input-evidence.json)
 and [original G9 model input](../experiments/bfcl_identity/reports/evidence/g9/g5-g8-g9-base194-R-memory.txt).
-This check makes no new performance claim. No paid experiment or official
-evaluation was run or changed for this source publication.
+This check makes no new performance claim. The original source publication did not run paid inference or change official evaluation.
+The later migration verified saved trajectories through unchanged official tools
+and evaluation; see [the migration checks](legacy-removal.md).

@@ -1,0 +1,22 @@
+{
+  "extends": "_base.json",
+  "name": "g1-structure-first",
+  "memory": {
+    "kind": "evidence",
+    "options": {
+      "episodic_only": false,
+      "layout": "structure-first"
+    }
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

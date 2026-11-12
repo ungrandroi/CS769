@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import unittest
 
-from core.graph_memory_replace import (DELIVERY, GraphMemoryReplacement, GraphMemoryV2Replacement,
+from cs769.graphs.graph_memory_replace import (DELIVERY, GraphMemoryReplacement, GraphMemoryV2Replacement,
                                   assert_replacement_request)
 from test_state_transition_graph import history
 

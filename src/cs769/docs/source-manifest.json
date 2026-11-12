@@ -1,0 +1,323 @@
+[
+  {
+    "module": "src/cs769/graphs/state_transition_graph.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/state_transition_graph.py",
+    "origin_sha256": "7de6f78bb509f9df19d4ed825210c83a90fe9e039236e98255227395c53b4369",
+    "current_sha256": "7de6f78bb509f9df19d4ed825210c83a90fe9e039236e98255227395c53b4369",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "7de6f78bb509f9df19d4ed825210c83a90fe9e039236e98255227395c53b4369"
+  },
+  {
+    "module": "src/cs769/graphs/event_graph.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/event_graph.py",
+    "origin_sha256": "34fabec02adde9aeb610a24dd08a44bccacb26bd7555b6c106d9b06f2ddcc10a",
+    "current_sha256": "926960022a6abe0fd2f276c028e13ae9d1364b3babb2b54fb4432248d59696a4",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "b8bfbb2ac4ace869d55ede45032aa086fcf427f023881db3b40c2189a08d6f85"
+  },
+  {
+    "module": "src/cs769/graphs/event_graph_dedup.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/event_graph_dedup.py",
+    "origin_sha256": "9ad02818207d172411da69d0d18ba1ab40d640c4711f37f564bf77657affd30b",
+    "current_sha256": "b1dc9dfd80fb18656623b634af0e39ce888447cba15ed22d62471ed99c23f415",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "9e4eff0bb7c5aeb18fdfc4bf69395c01c88fcd2216870e13c2c9208a7287da06"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_serialization.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/graph_memory_serialization.py",
+    "origin_sha256": "6a1a3bf48ce3c5f07f6bfdb961d1de947b074265c8dd7c44fa2f5464b95da2ba",
+    "current_sha256": "6a1a3bf48ce3c5f07f6bfdb961d1de947b074265c8dd7c44fa2f5464b95da2ba",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "6a1a3bf48ce3c5f07f6bfdb961d1de947b074265c8dd7c44fa2f5464b95da2ba"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_serialization_target.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/graph_memory_serialization_target.py",
+    "origin_sha256": "aad9e60d8764b2909307ac5df7fb0632e1f39a029b92787d0c3eea952ac46792",
+    "current_sha256": "fb4a8b8c2d319d4cc205ce27d1fc5c41a2f23faa9f3be3f8743718af267f4ad4",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "ad2fbaa6476490ff1a8215c9d7e5f06bdd5029d5184a0634c3ec167384d71911"
+  },
+  {
+    "module": "src/cs769/graphs/optimized_graph.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/optimized_graph.py",
+    "origin_sha256": "3189448e22d83b4dd3d2ec65dbb52247417d696a7aa1269e19e43d967bd5f925",
+    "current_sha256": "baf0ccc5dc13ef85d031c36a454ce8f804427ec84821b7ead0bac5bc852193ad",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "ba57b71fc1bbf63fe30a5582edac0832961fe989fbcdc3549a3da5d3e8dba312"
+  },
+  {
+    "module": "src/cs769/graphs/mixed_graph.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/mixed_graph.py",
+    "origin_sha256": "2d2b647be19c216de0f13a368f2fd031129d45d15f0247f3edd1cbf048246303",
+    "current_sha256": "6e361309b97457a183ae2b0764b71a610cb33e296014165d26c7848ea27b310a",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "d591898a662b344c2d0b148eb98eda277477eb1c8ce40a5876345c4afdbb497b"
+  },
+  {
+    "module": "src/cs769/graphs/mixed_event_graph.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/mixed_event_graph.py",
+    "origin_sha256": "6083b4f84df0799df0b291a5bfd21d06d6923be7638dfadea98d4b763d771227",
+    "current_sha256": "47b186c137877098b7e48306b33beeba044d7a12136a9caa328bc55529ab7c4d",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "d15a853bc188db8a641fdbbc0f7331b71c1c8beac7d59ba5d75e3009dc994604"
+  },
+  {
+    "module": "src/cs769/graphs/mixed_state_graph.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/mixed_state_graph.py",
+    "origin_sha256": "76dba836729458f33689ec1cd583b95ac71aac7e54a5440489a27f69acc37d67",
+    "current_sha256": "198a33f32a64588693552819eac8a16fb47dac26ea3471eba716b2d2e1c6382e",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "1aa28ffff55efcaba11cfba8ac86cbc414b2c63fcc73f806142e1b6d1b4903ac"
+  },
+  {
+    "module": "src/cs769/graphs/mixed_observations.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/mixed_observations.py",
+    "origin_sha256": "800d895c2c5d208bcccd5b5f96a87d1837bdc8f360ac66a96bdef5ef071edeb3",
+    "current_sha256": "5f69b77976f2347af8df7ef68c6944e4b53f14ed66ce65fc4862947d6543771e",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "5f69b77976f2347af8df7ef68c6944e4b53f14ed66ce65fc4862947d6543771e"
+  },
+  {
+    "module": "src/cs769/graphs/lossless_state.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/lossless_state.py",
+    "origin_sha256": "84958f12777af1c56144452e21992b590e373e6307c2b9f4f23476cf14b0d50b",
+    "current_sha256": "1fa5480531e707b0faaeb9c4f65729edffaf3f10403c2913a759d9fa0fb32084",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "cba4832010bb341da490b53bbd4192a67a0624ea1f0948034c47fe86e0314128"
+  },
+  {
+    "module": "src/cs769/graphs/lossless_event.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/lossless_event.py",
+    "origin_sha256": "8b4896610237a61430b685de6e98ac68f8d67157ac472b98d02fbe24195f6807",
+    "current_sha256": "8b4896610237a61430b685de6e98ac68f8d67157ac472b98d02fbe24195f6807",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "8b4896610237a61430b685de6e98ac68f8d67157ac472b98d02fbe24195f6807"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_structured.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/graph_memory_structured.py",
+    "origin_sha256": "37886246760c19eb37c8824a0aac9ab0111f4bec494a5f28c090b828689f98e4",
+    "current_sha256": "1a589703d97017552ee86b3784d6750abf2d2e5b371e555c98aa0e53ffa6240b",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "0c5f06f90ec5ba30c7bff24c9258caf9f545174e1171a3d589bafb0ba6d6da6e"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_role_partition.py",
+    "origin": "work/g9-gpt41-coverage120-20261024/runner/scripts/core/graph_memory_role_partition.py",
+    "origin_sha256": "cb9fc4c84e25ff45acb1f2ab097b3b123446384b5b4c00d00809c01734d2b2b4",
+    "current_sha256": "abeb1b898385028a09322f18cc850ec8a0df058142b5149359ac55d0caf89af1",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "68073fd96011a8de9653d7f8c89d561bba2484319abe12b0b1dca61d418d5418"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_evidence.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/graph_memory_evidence.py",
+    "origin_sha256": "3fed98d65d054dca782c0242524f8c33db68621a78efae4b3192d8e727572c49",
+    "current_sha256": "8e8f252cfad71a3381a57a3a49de26067652946b6e5a71b5da7222efbb6c47b3",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "2393f30307a3faea48fb1ae6bd6bbb6de18950eecba13d40fefebfb8bba00697"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_records.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/graph_memory_records.py",
+    "origin_sha256": "e106cbd1e1a03a6538c79f60b3a1cf2de41161348fb3b4e75e14c0a76b1781f9",
+    "current_sha256": "a748a544a508dec20b0e6f0e41ba522f848f9dde8004bcc6da8a0109d649d38f",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "7d70a7b976cc41fa089a106861d14f30c88ad822f5efefc166f51df92d748f60"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_signature.py",
+    "origin": "work/g9-gpt41-coverage120-20261024/runner/scripts/core/graph_memory_signature.py",
+    "origin_sha256": "1f2623c9c25b71739611edadf37db3c39a55d08020e9adbeec1e1989e9ddf6e2",
+    "current_sha256": "b4c38c1e6eab19c22ccffa1546a6bce5cd6e915a77b19493d9ad8641541b7e5d",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "97bcbb3e37092e486a70428bd44aea832a4b4d3eaf14ae7319543afdc7736b61"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_readable.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/graph_memory_readable.py",
+    "origin_sha256": "b409dc9c46745755bbefa2cda2d2c94fbac694cfffdbc2379343ab1380086050",
+    "current_sha256": "b409dc9c46745755bbefa2cda2d2c94fbac694cfffdbc2379343ab1380086050",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "b409dc9c46745755bbefa2cda2d2c94fbac694cfffdbc2379343ab1380086050"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_record_render.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/graph_memory_record_render.py",
+    "origin_sha256": "dadee99c3c353a3e1c56829de2b0b1e020ff56c998de26de9d98c75eebb09256",
+    "current_sha256": "3f462a33d488ded7ba8015c791fb09000e9e05939756771bdca580ee67dd549f",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "48ddf4d238da533a47f5d3237de4e4fd0ee77b32815e62c4260c850af1acb796"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_payload.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/graph_memory_payload.py",
+    "origin_sha256": "4b9097831c584fa4ae9602b5c3833c582f12523eaa4f6466c4cf12e4fb0507ba",
+    "current_sha256": "b75e81ae8813b97c58e4b4869f42127fa924d7159ae9d6791e9d00ba478c8149",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "ea7a9005115f698485b04836bc25e0255be71333b07e984ab3bed1ece8a4de95"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_record_visibility.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/graph_memory_record_visibility.py",
+    "origin_sha256": "293c5cd3557a23a471cf65d82e4f782ff5f6f733882d9839e0b49b8d963fd8f8",
+    "current_sha256": "089e0d3790f2fb98dfc9a279f5b13a9b98b5144e9b189cc59a90ab0dab7848ba",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "07c6f509b5e79beb013e97a29647d2e54ea8f92948a14c1e6bcc1ed8f0b629f4"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_native.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/graph_memory_native.py",
+    "origin_sha256": "a6b255752afc61e61bd5785889d5b476d778f5d2034f449840e31848f0863c35",
+    "current_sha256": "9a82c51aab8ede48ac2a5c567ff6d6c290775374095953ca5d52c35287370b95",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "2d23f1e240e7cf309ecf1acec5f948399ca4d84c262a995db4326d75188c22b2"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_encoding.py",
+    "origin": "work/g9-gpt41-coverage120-20261024/runner/scripts/core/graph_memory_encoding.py",
+    "origin_sha256": "055ddd87883b75fd54dbe166855e1464c7d5b45328be36af87ee3ab5d3d9ec36",
+    "current_sha256": "98a34b48b30a49cd42f687469f8ee0642600a6120095e48a5deb14c1c1570420",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "7a99f9cf0af234a27d8a9d6aacaf2e6b373e9f6edab9be89b969c212f785f2a7"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_record_views.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/graph_memory_record_views.py",
+    "origin_sha256": "d97442e735fbdf1d09a0e8ec5630346242d5ac46eb00c7362c594c2e81cff4cc",
+    "current_sha256": "b643e5015b581c2451132348a31587459a564da5f939473815398f192109e286",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "cbbbe5c3954654f53260b5f4a44e80c77140d2a34bb27111a00ab2b53dc5365d"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_observed.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/graph_memory_observed.py",
+    "origin_sha256": "9a661b46518e9880643f2b2f9f3e09bb8f37b7f255447679ff1e8b94af156a4b",
+    "current_sha256": "9a19e986e2abd3b54157f380c6bac807ee72d3d1d8ba009bee62ff375e847044",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "fac9e84b890050fd6527da0f15ef1210a25d782c3f452b6bbb3d1c2ffc299174"
+  },
+  {
+    "module": "src/cs769/edits/g9_edit.py",
+    "origin": "work/g9-v2-validation16-20261106/code/g9_edit.py",
+    "origin_sha256": "f79acf5c0138e6c8437fb17ded6d385ed5f4565aa6a60515e5564b87a57637f6",
+    "current_sha256": "394adf33ace90b2e82f8a005ec351849f4cf7599d5b14065ed4bc6d35c47864a",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "dc83c09b5a3e5e3fcedfa610871e9b3450eabfdb6d0356065b354cc8de5d2280"
+  },
+  {
+    "module": "src/cs769/edits/series_merge.py",
+    "origin": "work/g9-v2-validation16-20261106/code/series_merge.py",
+    "origin_sha256": "1a4b571695a9bc2c33f98a335bcc799ac70bb33982ee828348f9f69a4956af9a",
+    "current_sha256": "202eced633c02c3252858e9d24feea1d88c826ceac14a5b283ed86c7de08213d",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "3069862f3c06d5325113427fe6dcf7b47b9b855eed0a0f5c13d34bc27649b128"
+  },
+  {
+    "module": "src/cs769/edits/subtree_share.py",
+    "origin": "work/g9-v2-validation16-20261106/code/subtree_share.py",
+    "origin_sha256": "fe063b9e55076b8ff613e49d77f611b1f9cce62d20f2281a230f944a2aea8f1a",
+    "current_sha256": "2c2b0785fb1bdec940ee1d0e62b3aa993f6c0da101ddc1679fadbf8050ee977b",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "af8ae0d0ccd9ffb5a235f3a7542e0da4b14e500705bf43d5944a442d980e3702"
+  },
+  {
+    "module": "src/cs769/edits/g9_merge.py",
+    "origin": "work/g9-multidelete-merge-dev32-20261106/code/g9_merge.py",
+    "origin_sha256": "5862d0f983e408e2ecd6402c26f13aeba34284f6229b6e26b23302d0aafb808b",
+    "current_sha256": "520b4a5daf613874749d8f913a98ed7d59e518fc8028ac0d3fbea24cf6c31a60",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "13088f60f93a4ec029d811d9ea4095eba66832a25116b350df3a391bf52517f8"
+  },
+  {
+    "module": "src/cs769/edits/fine_delete.py",
+    "origin": "work/g9-multidelete-merge-dev32-20261106/code/fine_delete.py",
+    "origin_sha256": "2302139f9aa9382804f414b2a716cb7e4d0ecba15a27059df8e6fc3c1fa5e994",
+    "current_sha256": "6a77f48370e18775b4b5b104cf2a55ce6a0d978ccf568b830db959e791a25e14",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "22f2fd241eabdc18fbbb75e3d3773cc5095ce56149362b1c50297cdc106eb332"
+  },
+  {
+    "module": "src/cs769/edits/multi_delete.py",
+    "origin": "work/g9-multidelete-merge-dev32-20261106/code/multi_delete.py",
+    "origin_sha256": "a4cda63c2d0dd904b1469d45af3ed3070ba783232d7d80937f76d35511439056",
+    "current_sha256": "25a6f71428303b91e5b44273343554a7b02fcf3a9d0d0ef6b36257c617fce049",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "eabbff6c5c944bb0c4cf4a8bd06888a6e744ef472cdaec49e0163afd3970fe7c"
+  },
+  {
+    "module": "src/cs769/edits/inspect_merge.py",
+    "origin": "work/g9-multidelete-merge-dev32-20261106/code/inspect_merge.py",
+    "origin_sha256": "34eebcd504777d9aff1d059d414525707d30474f8d6bd1cd388c4f5cbaaac3c9",
+    "current_sha256": "4aed23587958dc3b33effc273f29efc73c326a96c77942803e51efe5ace90228",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "63447abc3251b2049d1cf575b81864d238ef08124f23fd8bb759ae999c7ef0cb"
+  },
+  {
+    "module": "src/cs769/edits/conservative_edits.py",
+    "origin": "work/g9-preserve-first-20261106/round10/code/conservative_edits.py",
+    "origin_sha256": "86871935273c9d017c2c4a8ef1c3315e0e0885bad03e0ed5beabf1b4b80d28b9",
+    "current_sha256": "bc0b47c4303f71e0381fdff41c90cce5764522171eaec36d59fd2c8c07151620",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "bbd5b8fd6530335648e7c66011551962429096203556c53fb7430ce51ed34f95"
+  },
+  {
+    "module": "src/cs769/edits/field_pruning.py",
+    "origin": "work/g9-preserve-first-20261106/round10/code/field_pruning.py",
+    "origin_sha256": "5f1edb21f3193f243bfef01eb6d8e39d6e45cdb7d1e94b0a2c529ec9188fc448",
+    "current_sha256": "bb83241ae6571c3ec4fccd73c019fe171336e959697aa3712a785b378784dd40",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "bb83241ae6571c3ec4fccd73c019fe171336e959697aa3712a785b378784dd40"
+  },
+  {
+    "module": "src/cs769/edits/schema_share.py",
+    "origin": "work/g9-preserve-first-20261106/round10/code/schema_share.py",
+    "origin_sha256": "130655bd4159db935304ab45983d115ad46f0589b670795a697491a0bc082147",
+    "current_sha256": "c67bc7321d9be624e7c908dc714c5cdebaf930d0cea1a7fa45634cda3ac177d8",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "12201794c3ef836f9d340b62b3441a2cabc3b63de35bfc4a2857e7f5f1bf9df8"
+  },
+  {
+    "module": "src/cs769/edits/share_observations.py",
+    "origin": "work/g9-observation-sharing-dev2-20261107/code/share_observations.py",
+    "origin_sha256": "5842ace8c765a9ee046e34a6c3ef6cc25e2adcfbb17f0bc6bc516d358af03015",
+    "current_sha256": "5f3ac983f295c1e9601c7f82e205461161499265c1e9b67fc76d793d8d0ba26d",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "d246989089a6354ff2adfd9f18b0d84de1c7ac5d4219a4e096c15ae82a5f9600"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_lexical.py",
+    "origin": "work/graph-structure-exploration-20261024/runner-g11-lexical/scripts/core/graph_memory_lexical.py",
+    "origin_sha256": "bc278288c7a0997119b663d8945677bba8564f10c9bd5724b280546a8d519b1f",
+    "current_sha256": "994d3c774e39f16f0d3f7fa0ff4171495d95fcee74b9ab6c7582565a3f5fe950",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "5f0b7219d809c4d4ec9dc520889efabce67895b2c2dafd9de9042051c4d02e9b"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_content_store.py",
+    "origin": "work/graph-structure-exploration-20261024/runner-g14-content-store/scripts/core/graph_memory_content_store.py",
+    "origin_sha256": "174ce866f9da37bfdfbf6959cb7a70b4aac25840878d80a05e493f82528436d5",
+    "current_sha256": "1e3cc2a208b68378fb231eddf334c2197f479b2e9b6987cc3cbbad77292ed448",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "a4dab2795fcff7dfda0701c3dc3cf75db000fdb08756ee69d9a27e300b9a76b3"
+  },
+  {
+    "module": "src/cs769/graphs/query_layout.py",
+    "origin": "work/graph-structure-exploration-20261024/runner-g15-query-layout/scripts/core/_query_owner_layout_prototype_v1.py",
+    "origin_sha256": "4b07e8338f35fc01a552a9b53ab4c0ea48bced4ca38a4756f76e324a90a9ef6b",
+    "change": "Pure functions extracted; no dynamic exec or source-directory loader",
+    "current_sha256": "20c50f379bcfe7d36518d716287763cb62845ce1b06d766e8b2b3d019df535cd",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "20c50f379bcfe7d36518d716287763cb62845ce1b06d766e8b2b3d019df535cd"
+  },
+  {
+    "module": "src/cs769/graphs/graph_memory_replace.py",
+    "origin": "work/evidence-graph-mr-review-20261105/checkout/scripts/core/graph_memory_replace.py",
+    "origin_sha256": "48510d78a2d88463496f58968d905c60f0813d6b873a528719b5f6afe7a599fa",
+    "current_sha256": "4af07f864fdc244f366d87d8e5e761c5bf3707062badc8b281f93a358b01688b",
+    "origin_is_audit_only": true,
+    "pre_migration_sha256": "80e41893227c94040d8c1ddd6f02dedec4c601f29d80a0281d53ada11a3ef9dc"
+  }
+]

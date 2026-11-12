@@ -1,10 +1,10 @@
-"""Run from the repository root: PYTHONPATH=scripts python3 examples/g9_memory.py.
+"""Run from the repository root: PYTHONPATH=src python3 -B examples/g9_memory.py.
 
 Synthetic tool records only. This example makes no API calls.
 """
 import json
 
-from core.g9_memory import build_g9_memory
+from cs769.g9 import build_g9_memory
 
 
 def example_history():

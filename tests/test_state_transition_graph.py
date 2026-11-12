@@ -3,7 +3,7 @@ import json
 import unittest
 from copy import deepcopy
 
-from core.state_transition_graph import GraphMemory
+from cs769.graphs.state_transition_graph import GraphMemory
 
 
 def history(steps, chat=False):
@@ -135,7 +135,7 @@ class StateGraphTest(unittest.TestCase):
         import httpx
         from openai import OpenAI
         from openai.types.responses import ResponseFunctionToolCall
-        from core.qwen_transport import plain
+        from cs769.adapters.qwen_transport import plain
         message = ResponseFunctionToolCall.model_validate({"type":"function_call", "call_id":"c",
             "name":"pwd", "arguments":"{}", "async":None})
         bodies = []

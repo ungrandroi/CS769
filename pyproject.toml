@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cs769-memory"
+version = "0.1.0"
+description = "Configurable graph-memory experiments with unchanged BFCL evaluation"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+cs769 = "cs769.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cs769 = ["configs/*.json", "examples/*.json"]

@@ -1,0 +1,22 @@
+{
+  "extends": "_base.json",
+  "name": "g2-local-relations",
+  "memory": {
+    "kind": "evidence",
+    "options": {
+      "episodic_only": false,
+      "layout": "local-relations"
+    }
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

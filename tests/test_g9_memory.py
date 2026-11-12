@@ -3,12 +3,12 @@ from copy import deepcopy
 import json
 import unittest
 
-from core.g9_memory import build_g9_memory
-from core.graph_memory_evidence import audit_evidence_graph, render_evidence_graph
-from core.graph_memory_observed import strip_observed_graph
-from core.graph_memory_payload import restore_observed_graph
-from core.graph_memory_records import strip_record_graph
-from core.graph_memory_record_views import render_record_view_graph
+from cs769.g9 import build_g9_memory
+from cs769.graphs.graph_memory_evidence import audit_evidence_graph, render_evidence_graph
+from cs769.graphs.graph_memory_observed import strip_observed_graph
+from cs769.graphs.graph_memory_payload import restore_observed_graph
+from cs769.graphs.graph_memory_records import strip_record_graph
+from cs769.graphs.graph_memory_record_views import render_record_view_graph
 
 
 def history():

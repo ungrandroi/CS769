@@ -26,3 +26,7 @@ vendor/qwen-tokenizer-631109b34/lib/
 
 # Local research proposal; do not publish.
 /workflow_graph_memory_research_proposal.md
+
+*.py[cod]
+
+*.egg-info/

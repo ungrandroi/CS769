@@ -1,0 +1,21 @@
+{
+  "extends": "_base.json",
+  "name": "g0-semantic-evidence",
+  "memory": {
+    "kind": "evidence",
+    "options": {
+      "episodic_only": false
+    }
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

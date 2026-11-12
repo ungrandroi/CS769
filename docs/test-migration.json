@@ -1,0 +1,375 @@
+{
+  "old_test_cases": 45,
+  "cases_with_current_targets": 40,
+  "historical_only_cases_retired": 5,
+  "note": "This maps safety intent, not byte-for-byte historical protocols. Old task lists, classifiers, caching and adaptive acceptance policies are not silently reimplemented.",
+  "entries": [
+    {
+      "old_file": "tests/test_history_checkpoints.py",
+      "old_test": "test_single_call_final_request_is_eligible",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_checkpoint_selection.CheckpointSelectionTests.test_balanced_final_request_can_trigger",
+        "test_checkpoint_selection.CheckpointSelectionTests.test_strict_and_inclusive_boundaries_are_explicit"
+      ]
+    },
+    {
+      "old_file": "tests/test_history_checkpoints.py",
+      "old_test": "test_tools_and_user_text_do_not_trigger",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_checkpoint_selection.CheckpointSelectionTests.test_tool_payload_mode_does_not_count_user_or_tool_definitions"
+      ]
+    },
+    {
+      "old_file": "tests/test_history_checkpoints.py",
+      "old_test": "test_unpaired_call_does_not_trigger",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_checkpoint_selection.CheckpointSelectionTests.test_unpaired_call_never_triggers"
+      ]
+    },
+    {
+      "old_file": "tests/test_native_gpt_task.py",
+      "old_test": "test_sdk_response_items_at_bfcl_boundary_preserve_native_wire_history",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_memory_pipeline.MemoryPipelineTests.test_sdk_items_are_made_plain_before_the_pipeline"
+      ]
+    },
+    {
+      "old_file": "tests/test_native_gpt_task.py",
+      "old_test": "test_graph_preserves_raw_arguments_outputs_and_identity",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_memory_pipeline.MemoryPipelineTests.test_native_history_is_exact_and_index_is_only_an_append",
+        "test_memory_pipeline.MemoryPipelineTests.test_g9_preserves_visible_fields_and_excludes_opaque_reasoning"
+      ]
+    },
+    {
+      "old_file": "tests/test_native_gpt_task.py",
+      "old_test": "test_empty_graph_index_is_exact_identity_not_extra_message",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_memory_pipeline.MemoryPipelineTests.test_empty_index_adds_no_message"
+      ]
+    },
+    {
+      "old_file": "tests/test_native_gpt_task.py",
+      "old_test": "test_current_user_added_exactly_once_and_server_history_disallowed",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_memory_pipeline.MemoryPipelineTests.test_current_user_once_and_replay_rejects_extra_server_history"
+      ]
+    },
+    {
+      "old_file": "tests/test_native_pilot.py",
+      "old_test": "test_frozen_counts_and_all_claude_candidates",
+      "status": "retired_fixed_historical_task_plan",
+      "targets": []
+    },
+    {
+      "old_file": "tests/test_native_pilot.py",
+      "old_test": "test_adaptive_follows_discordance_in_both_directions",
+      "status": "retired_historical_adaptive_policy",
+      "targets": []
+    },
+    {
+      "old_file": "tests/test_native_pilot.py",
+      "old_test": "test_adaptive_success_cannot_erase_primary_loss",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_paired_metrics.PairedMetricsTests.test_later_repeat_does_not_erase_an_earlier_loss"
+      ]
+    },
+    {
+      "old_file": "tests/test_native_pilot.py",
+      "old_test": "test_equal_counts_retain_changed_outcomes_and_no_equivalence_gate",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_paired_metrics.PairedMetricsTests.test_equal_totals_do_not_hide_losses_and_gains"
+      ]
+    },
+    {
+      "old_file": "tests/test_native_pilot.py",
+      "old_test": "test_incomplete_or_duplicate_pair_is_an_error",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_paired_metrics.PairedMetricsTests.test_incomplete_pairs_are_excluded_and_duplicates_rejected"
+      ]
+    },
+    {
+      "old_file": "tests/test_native_pilot.py",
+      "old_test": "test_claude_repeat_is_not_a_seed_and_order_alternates_conditions",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_request_parameters.RequestParameterTests.test_repeat_metadata_is_not_an_anthropic_seed",
+        "test_paired_metrics.PairedMetricsTests.test_explicit_plan_is_reproducible_and_each_repeat_is_distinct"
+      ]
+    },
+    {
+      "old_file": "tests/test_native_pilot.py",
+      "old_test": "test_prefix_is_added_once_and_replayed_tool_calls_excluded",
+      "status": "generic_accounting_guard_plus_236_full_replays",
+      "targets": [
+        "test_paired_metrics.PairedMetricsTests.test_cache_and_reasoning_are_subsets_not_extra_tokens"
+      ]
+    },
+    {
+      "old_file": "tests/test_native_pilot.py",
+      "old_test": "test_prefix_resume_never_overwrites_partial_attempt",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_run_validation.RunValidationTests.test_existing_attempt_is_never_overwritten",
+        "test_run_validation.RunValidationTests.test_incomplete_or_mismatched_source_never_reaches_transport"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_audit.py",
+      "old_test": "test_all_three_views_audit_original_unicode_and_argument_spelling",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_memory_pipeline.MemoryPipelineTests.test_g9_preserves_visible_fields_and_excludes_opaque_reasoning",
+        "test_graph_memory_readable.ReadableMemoryTests.test_chat_parallel_calls_keep_assistant_text_and_raw_argument_spelling"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_audit.py",
+      "old_test": "test_parallel_chat_calls_preserve_call_order_and_out_of_order_returns",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_memory_pipeline.MemoryPipelineTests.test_parallel_calls_and_out_of_order_results_remain_distinct"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_audit.py",
+      "old_test": "test_tampered_visible_role_is_not_hidden_by_correct_evidence_metadata",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_memory_pipeline.MemoryPipelineTests.test_rehashed_wrong_role_is_rejected"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_audit.py",
+      "old_test": "test_dropped_repeated_evidence_is_detected_even_when_render_and_segments_agree",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_memory_pipeline.MemoryPipelineTests.test_missing_duplicate_or_extra_rendered_text_is_rejected",
+        "test_graph_memory_readable.ReadableMemoryTests.test_repeated_calls_results_errors_and_marker_text_are_not_deduplicated"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_audit.py",
+      "old_test": "test_actual_memory_must_equal_the_audited_segments",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_memory_pipeline.MemoryPipelineTests.test_missing_duplicate_or_extra_rendered_text_is_rejected"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_audit.py",
+      "old_test": "test_invalid_source_pairing_and_unsupported_content_fail",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_memory_pipeline.MemoryPipelineTests.test_incomplete_or_unsupported_visible_input_fails"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_audit.py",
+      "old_test": "test_current_state_index_cannot_omit_a_known_fact",
+      "status": "existing_maintained_graph_guards",
+      "targets": [
+        "test_graph_memory_readable.ReadableMemoryTests.test_current_state_tracks_changes_without_repeating_file_contents",
+        "test_graph_memory_native.NativeGraphTests.test_tampering_fails_integrity_and_index_is_pure"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_audit.py",
+      "old_test": "test_token_delta_uses_complete_text_not_standalone_part_sum",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_memory_pipeline.MemoryPipelineTests.test_projected_token_count_measures_the_whole_serialization"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_audit.py",
+      "old_test": "test_all_frozen_inputs_load_without_current_query_and_produce_81_rows",
+      "status": "query_boundary_preserved_fixed_81_rows_retired",
+      "targets": [
+        "test_memory_pipeline.MemoryPipelineTests.test_current_user_once_and_replay_rejects_extra_server_history"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_audit.py",
+      "old_test": "test_changed_prefix_and_missing_source_are_errors",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_unified_runtime.UnifiedRuntimeTests.test_frozen_replay_never_releases_a_response_to_a_different_request",
+        "test_run_validation.RunValidationTests.test_missing_record_cannot_emit_a_score"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_audit.py",
+      "old_test": "test_missing_dataset_cli_writes_failure_and_returns_nonzero",
+      "status": "current_cli_failure_contract_reexpressed_not_old_audit_json_schema",
+      "targets": [
+        "test_run_validation.RunValidationTests.test_missing_record_cannot_emit_a_score",
+        "test_run_validation.RunValidationTests.test_report_output_is_never_overwritten"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_pilot.py",
+      "old_test": "test_zero_denominator_is_not_success_and_control_drops_are_excluded",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_paired_metrics.PairedMetricsTests.test_zero_denominator_is_unknown_not_success",
+        "test_paired_metrics.PairedMetricsTests.test_incomplete_pairs_are_excluded_and_duplicates_rejected"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_pilot.py",
+      "old_test": "test_half_recovery_uses_reproduced_denominator_and_rounds_up",
+      "status": "retired_v2_half_recovery_acceptance_gate",
+      "targets": []
+    },
+    {
+      "old_file": "tests/test_readable_pilot.py",
+      "old_test": "test_control_uses_raw_count_and_new_majority_failure_is_retained",
+      "status": "losses_preserved_historical_majority_gate_retired",
+      "targets": [
+        "test_paired_metrics.PairedMetricsTests.test_equal_totals_do_not_hide_losses_and_gains"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_pilot.py",
+      "old_test": "test_frozen_prefix_added_once_and_cache_reasoning_are_not_double_counted",
+      "status": "generic_accounting_guard_plus_236_full_replays",
+      "targets": [
+        "test_paired_metrics.PairedMetricsTests.test_cache_and_reasoning_are_subsets_not_extra_tokens"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_probe.py",
+      "old_test": "test_invalid_arguments_are_model_outcomes",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_transport_records.TransportRecordTests.test_invalid_tool_arguments_are_preserved_for_official_evaluation"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_probe.py",
+      "old_test": "test_output_signature_ignores_ids_and_json_whitespace_not_actions",
+      "status": "retired_probe_only_output_classifier_official_eval_unchanged",
+      "targets": []
+    },
+    {
+      "old_file": "tests/test_readable_probe.py",
+      "old_test": "test_native_state_maps_only_used_labels_and_preserves_history",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_graph_memory_native.NativeGraphTests.test_native_call_id_mapping_points_content_to_real_tool_evidence",
+        "test_memory_pipeline.MemoryPipelineTests.test_native_history_is_exact_and_index_is_only_an_append"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_probe.py",
+      "old_test": "test_native_state_rejects_absent_or_nonunique_calls_and_returns",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_graph_memory_native.NativeGraphTests.test_normalized_evidence_mismatch_and_non_bijective_map_rejected",
+        "test_memory_pipeline.MemoryPipelineTests.test_incomplete_or_unsupported_visible_input_fails"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_probe.py",
+      "old_test": "test_native_state_without_references_adds_no_wrapper",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_memory_pipeline.MemoryPipelineTests.test_empty_index_adds_no_message"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_probe.py",
+      "old_test": "test_equivalent_cases_have_126_records_and_115_unique_requests",
+      "status": "retired_fixed_probe_plan_and_cross_variant_response_reuse",
+      "targets": []
+    },
+    {
+      "old_file": "tests/test_readable_probe.py",
+      "old_test": "test_raw_response_persisted_before_classifier_and_error_does_not_discard_it",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_transport_records.TransportRecordTests.test_raw_response_saved_before_usage_validation_failure",
+        "test_transport_records.TransportRecordTests.test_raw_response_and_cost_survive_provider_normalization_failure"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_probe.py",
+      "old_test": "test_received_response_can_resume_without_another_request",
+      "status": "saved_reply_replay_safety_preserved_old_probe_classifier_resume_schema_retired",
+      "targets": [
+        "test_run_validation.RunValidationTests.test_existing_attempt_is_never_overwritten",
+        "test_unified_runtime.UnifiedRuntimeTests.test_frozen_replay_never_releases_a_response_to_a_different_request"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_probe.py",
+      "old_test": "test_identical_request_reuses_persisted_result_but_different_seed_does_not",
+      "status": "old_probe_response_cache_retired_independent_repeats_preserved",
+      "targets": [
+        "test_paired_metrics.PairedMetricsTests.test_explicit_plan_is_reproducible_and_each_repeat_is_distinct"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_probe.py",
+      "old_test": "test_unknown_failed_request_is_not_automatically_resampled",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_unified_runtime.UnifiedRuntimeTests.test_uncertain_request_is_not_retried_or_refunded",
+        "test_run_validation.RunValidationTests.test_existing_attempt_is_never_overwritten"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_probe.py",
+      "old_test": "test_summary_counts_unique_paid_usage_once_and_resume_is_free",
+      "status": "generic_billing_guards_preserved_fixed_probe_summary_retired",
+      "targets": [
+        "test_reporting.IntegrationTests.test_managed_transport_accounts_once",
+        "test_paired_metrics.PairedMetricsTests.test_cache_and_reasoning_are_subsets_not_extra_tokens"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_runner.py",
+      "old_test": "test_legacy_sampling_defaults_and_explicit_seed",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_request_parameters.RequestParameterTests.test_current_default_and_explicit_sampling_reach_the_wire",
+        "test_request_parameters.RequestParameterTests.test_reasoning_sampling_is_forwarded_without_temperature"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_runner.py",
+      "old_test": "test_reasoning_temperature_rejected_even_when_zero",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_request_parameters.RequestParameterTests.test_invalid_reasoning_temperature_and_nonfinite_values_are_rejected"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_runner.py",
+      "old_test": "test_pilot_is_explicit_and_all_arms_require_the_same_source",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_run_validation.RunValidationTests.test_incomplete_or_mismatched_source_never_reaches_transport"
+      ]
+    },
+    {
+      "old_file": "tests/test_readable_runner.py",
+      "old_test": "test_boundary_rejects_duplicated_user_or_extra_history",
+      "status": "generic_guard_reexpressed",
+      "targets": [
+        "test_memory_pipeline.MemoryPipelineTests.test_current_user_once_and_replay_rejects_extra_server_history"
+      ]
+    }
+  ]
+}

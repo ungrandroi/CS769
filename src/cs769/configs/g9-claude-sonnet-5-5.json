@@ -1,0 +1,17 @@
+{
+  "extends": "_base.json",
+  "name": "g9-claude-sonnet-5-5",
+  "checkpoint": {
+    "kind": "history_tokens",
+    "threshold": 1000,
+    "counter": "history_json",
+    "strict": true
+  },
+  "model": {
+    "provider": "anthropic",
+    "name": "claude-sonnet-5-5",
+    "sampling": {
+      "max_tokens": 4096
+    }
+  }
+}

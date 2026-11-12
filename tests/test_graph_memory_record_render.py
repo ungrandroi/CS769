@@ -3,12 +3,12 @@ from copy import deepcopy
 import json
 import unittest
 
-from core import graph_memory_payload as p
-from core import graph_memory_records as r
-from core import graph_memory_record_render as x
+from cs769.graphs import graph_memory_payload as p
+from cs769.graphs import graph_memory_records as r
+from cs769.graphs import graph_memory_record_render as x
 from test_graph_memory_records import graph_for, orders, records, member
 from test_graph_memory_observed import climate
-from core.graph_memory_observed import build_observed_graph
+from cs769.graphs.graph_memory_observed import build_observed_graph
 
 
 class ExternalRecordRenderTests(unittest.TestCase):
@@ -104,7 +104,7 @@ class ExternalRecordRenderTests(unittest.TestCase):
         self.assertFalse(r.audit_record_graph(graph)['active'])
 
     def test_parallel_calls_keep_base_order_and_have_membership_only(self):
-        from core.graph_memory_evidence import build_evidence_graph, inference_graph
+        from cs769.graphs.graph_memory_evidence import build_evidence_graph, inference_graph
         history = [{'role':'user', 'content':'Keep'},
             {'role':'assistant', 'tool_calls':[
                 {'id':'a','type':'function','function':{'name':'get_ticket','arguments':'{"ticket_id":7}'}},

@@ -1,0 +1,27 @@
+{
+  "extends": "_base.json",
+  "name": "identity",
+  "memory": {
+    "kind": "identity"
+  },
+  "delivery": {
+    "mode": "native",
+    "role": "assistant"
+  },
+  "checkpoint": {
+    "kind": "history_tokens",
+    "threshold": 1000,
+    "counter": "history_json_sorted",
+    "strict": true
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  },
+  "execution": {
+    "max_requests": 200
+  }
+}

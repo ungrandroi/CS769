@@ -1,12 +1,10 @@
+> 当前统一实验入口：`python -m cs769`。正式实现位于 `src/cs769/`；使用与迁移验证边界见 [docs/runtime.md](docs/runtime.md)。
+
 # CS769 — Graph Memory for Tool-Using Agents
 
-**G9 source is now available:** start with the [integration guide](docs/g9-memory.md),
-[offline example](examples/g9_memory.py), and [builder entry point](scripts/core/g9_memory.py).
-The frozen G5 evidence builder and G9 ID-link modules are in `scripts/core/`;
-their offline tests are in `tests/`. AppWorld integration can use these modules
-without installing the experiment runner.
+G9 integration: [guide](docs/g9-memory.md), [offline example](examples/g9_memory.py), and [maintained builder](src/cs769/g9.py). The original scripts/core imports remain compatible aliases.
 
-This project studies graph memory for file-operation tasks in the Berkeley Function Calling Leaderboard (BFCL). Experiments use a locally hosted **Qwen3.8-27B-Q8_0** model and 26 task conditions: 13 task families evaluated under both `multi_turn_base` and `multi_turn_long_context`. The environment provides 18 simulated GorillaFileSystem tools, not a real Bash shell.
+This project studies graph memory for tool-using agents in BFCL. The maintained implementation is in src/cs769, with configurable graph builders, memory edits, model adapters, recovery and unchanged official evaluation. G9 replaces visible history with structured evidence; historical graph formats remain available as explicit configurations. The early file-system experiments below used Qwen and 18 simulated GorillaFileSystem tools, rather than a real Bash shell.
 
 ## Memory Methods
 
@@ -21,9 +19,9 @@ The graph methods use compact serialization. “Compact” means a more concise 
 
 ## Experiment Reports
 
-The [report index](experiments/bfcl_identity/reports/README.md) collects the [cross-experiment summary](experiments/bfcl_identity/reports/experiment-summary.md), V2–V5 readable reports, token accounting, and linked evidence. The [V5 frozen-B validation](experiments/bfcl_identity/reports/v5-b-validation-results.md) is the latest completed validation; the early experiments below retain their original scope and results. Markdown is available for GitHub reading, alongside HTML views. Original experiment records and frozen source snapshots remain unchanged.
+The [report index](experiments/bfcl_identity/reports/README.md) collects the [cross-experiment summary](experiments/bfcl_identity/reports/experiment-summary.md), V2–V5 readable reports, token accounting, and linked evidence. V2–V5 are historical stages; see the [G9 matched-118 report](experiments/bfcl_identity/reports/g9-event-matched118-results.md) for the later graph-replacement comparison. The early experiments below retain their original scope and results. Markdown is available for GitHub reading, alongside HTML views. Original experiment records and frozen source snapshots remain unchanged.
 
-## Experiments
+## Early experiments (historical)
 
 | Experiment | Protocol | Status and results |
 |---|---|---|
@@ -38,18 +36,13 @@ Each evaluated method has one run per task condition. These results are not esti
 
 ## Repository Layout
 
-- `scripts/manage.py`: unified CLI for running experiments, auditing records, preparing checkpoints, probing codecs, and rendering reports.
-- `scripts/workflows/`: experiment-specific workflows.
-- `scripts/core/`: shared graph builders, codecs, model transport, scoring, batch scheduling, and frozen-source loading.
-- `tests/`: unit tests and batch-safety checks.
-- `experiments/bfcl_identity/qwen27b_experiment/`: complete early baseline records for 26 tasks and three methods.
-- `experiments/bfcl_identity/v2_provenance_dedup_probe/`: offline Event Graph provenance-deduplication study.
-- `experiments/bfcl_identity/qwen27b_dedup_eval/`: 26 evaluated Event Graph-Dedup continuations.
-- `experiments/bfcl_identity/history1000_eval/`: prepared checkpoints for the pure 1,000-token history threshold.
-- `experiments/bfcl_identity/gpt41_experiment/`: 26 tasks and three methods rerun with Azure GPT-4.1.
-- `experiments/bfcl_identity/gpt5mini_experiment/`: the same 26 tasks and three methods rerun with Azure GPT-5-mini.
-- `experiments/bfcl_identity/reports/`: reports using the current method names.
-- `visualization/`: user-maintained memory replay interface, including source files and a standalone `index.html`.
+- `src/cs769/`: maintained graph builders, edits, runtime, model/BFCL adapters, statistics and configurations.
+- `scripts/manage.py`: compatibility launcher for the same CLI.
+- `scripts/core/`: remaining compatibility imports; old workflows have been removed.
+- `tests/`: tests of the maintained implementations; `tests/run.py` runs the free suite.
+- `docs/`: current usage and migration notes.
+- `experiments/bfcl_identity/`: historical records and reports; their source snapshots stay unchanged.
+- `visualization/`: user-maintained memory replay interface.
 
 ## Setup
 
@@ -63,8 +56,9 @@ cd CS769
 `vendor/gorilla` is pinned to the upstream commit used in the experiments. Exact Python environment records are provided in `experiments/bfcl_identity/conda-explicit.txt` and `experiments/bfcl_identity/requirements.lock.txt`. On a compatible Linux system:
 
 ```bash
-conda create --prefix "$PWD/.conda/bfcl" --file experiments/bfcl_identity/conda-explicit.txt
+conda create --prefix "$PWD/.conda/readable" --file experiments/bfcl_identity/conda-explicit.txt
 scripts/bfcl_python.sh -m pip install -r experiments/bfcl_identity/requirements.lock.txt
+scripts/bfcl_python.sh -m pip install -e . --no-deps
 ```
 
 Lockfiles, frozen scripts, and runtime configurations may contain absolute paths from the original machine; adjust them when migrating to another system. BFCL source code is under `vendor/gorilla/berkeley-function-call-leaderboard/`. Follow its installation instructions to configure a local editable installation.
@@ -74,25 +68,26 @@ Model weights, inference-server binaries, the conda environment, and native toke
 ## Usage
 
 ```bash
-# Show available commands
-scripts/bfcl_python.sh scripts/manage.py --help
+# One runtime entry
+scripts/bfcl_python.sh -B scripts/manage.py --help
 
-# Audit the existing baseline without model inference
-scripts/bfcl_python.sh scripts/manage.py audit baseline
+# List profiles and validate a configuration
+scripts/bfcl_python.sh -B -m cs769 list
+scripts/bfcl_python.sh -B -m cs769 validate src/cs769/configs/g9-working-history.json
 
-# Prepare a new history-threshold batch without model inference
-scripts/bfcl_python.sh scripts/manage.py run history1000 --prepare-only --output /tmp/history-check
+# Prepare graph input without model calls; output must be a new directory
+scripts/bfcl_python.sh -B -m cs769 prepare --config src/cs769/configs/g9-working-history.json --history src/cs769/examples/history.json --output /tmp/cs769-input
 
-# Run the test suite
-PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=scripts scripts/bfcl_python.sh -m unittest discover -s tests -p 'test_*.py'
+# Run all free tests; actual network access is blocked
+scripts/bfcl_python.sh -B tests/run.py
 ```
 
-See the [CLI guide](scripts/README.md), [experiment usage notes](experiments/bfcl_identity/USAGE.txt), and [active experiment scope](experiments/bfcl_identity/ACTIVE_SCOPE.txt) for details. Some supporting documents remain in Chinese.
+See the [runtime guide](docs/runtime.md) and [legacy removal notes](docs/legacy-removal.md). Paid runs require separately authorized budgets and private credential files. Old workflow commands are retired.
 
-Download and open [the visualization page](visualization/index.html) in a browser to explore the saved results without calling a model. Dependencies for regenerating it are documented in the [visualization README](visualization/README.md).
+Open [the visualization page](visualization/index.html) to inspect saved results without model calls. Its source and data are unchanged.
 
 ## Reproducibility
 
-The `source_code/` directories inside historical experiments contain frozen implementation snapshots. Preserve them together with their original records. Audit commands load these snapshots and write rebuilt reports separately, allowing active code to evolve without overwriting historical evidence.
+The `source_code/` directories inside historical experiments contain frozen implementation snapshots. Preserve them together with their original records. The maintained replay command reads saved responses, re-executes the pinned official tools and evaluation, and writes any new outputs separately. It does not overwrite historical evidence.
 
 Upstream BFCL code and tokenizer headers remain subject to their respective licenses.
