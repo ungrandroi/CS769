@@ -1,0 +1,205 @@
+{
+  "qwen": {
+    "old_source": "experiments/bfcl_identity/mixed_history_diagnostics_v2/reports/summary.json",
+    "old_sha256": "d1d574c0cd974770141e43aedad5097af9513f8af5ba45f5668161b69211a1f7",
+    "comparisons": [
+      {
+        "method": "identity",
+        "old_arm": "identity_reference",
+        "new_arm": "identity_reference",
+        "old": {
+          "n": 81,
+          "successes": 47,
+          "first_input": 5691.493827160494,
+          "mean_post_input": 5873.717326706215,
+          "emitted_calls": 1.8148148148148149
+        },
+        "new": {
+          "n": 81,
+          "successes": 47,
+          "first_input": 5691.493827160494,
+          "mean_post_input": 5874.097544225322,
+          "emitted_calls": 1.8395061728395061
+        }
+      },
+      {
+        "method": "state",
+        "old_arm": "index_control",
+        "new_arm": "readout_minimal",
+        "old": {
+          "n": 81,
+          "successes": 44,
+          "first_input": 7862.827160493827,
+          "mean_post_input": 8057.794418612938,
+          "emitted_calls": 2.728395061728395
+        },
+        "new": {
+          "n": 81,
+          "successes": 39,
+          "first_input": 7808.827160493827,
+          "mean_post_input": 8043.6608232356775,
+          "emitted_calls": 3.0123456790123457
+        }
+      },
+      {
+        "method": "event",
+        "old_arm": "index_control",
+        "new_arm": "readout_minimal",
+        "old": {
+          "n": 81,
+          "successes": 40,
+          "first_input": 9042.67901234568,
+          "mean_post_input": 9262.320518439037,
+          "emitted_calls": 3.259259259259259
+        },
+        "new": {
+          "n": 81,
+          "successes": 42,
+          "first_input": 8988.67901234568,
+          "mean_post_input": 9191.293013913384,
+          "emitted_calls": 2.4691358024691357
+        }
+      },
+      {
+        "method": "dedup",
+        "old_arm": "index_control",
+        "new_arm": "readout_minimal",
+        "old": {
+          "n": 81,
+          "successes": 43,
+          "first_input": 8614.975308641975,
+          "mean_post_input": 8875.364283453173,
+          "emitted_calls": 3.567901234567901
+        },
+        "new": {
+          "n": 81,
+          "successes": 48,
+          "first_input": 8560.975308641975,
+          "mean_post_input": 8792.084057454893,
+          "emitted_calls": 2.8395061728395063
+        }
+      },
+      {
+        "method": "event",
+        "old_arm": "index_view",
+        "new_arm": "readout_compact_index",
+        "old": {
+          "n": 81,
+          "successes": 45,
+          "first_input": 9666.691358024691,
+          "mean_post_input": 9901.72381095188,
+          "emitted_calls": 3.1481481481481484
+        },
+        "new": {
+          "n": 81,
+          "successes": 48,
+          "first_input": 9065.728395061727,
+          "mean_post_input": 9293.712138581583,
+          "emitted_calls": 2.8395061728395063
+        }
+      }
+    ]
+  },
+  "muse": {
+    "old_source": "experiments/bfcl_identity/muse_history_diagnostics_v2/reports/summary.json",
+    "old_sha256": "c5b3fa6f26c701b590af3bfbaf51a9a74d8334464897045ab0047d6c16e7b20d",
+    "comparisons": [
+      {
+        "method": "identity",
+        "old_arm": "identity_reference",
+        "new_arm": "identity_reference",
+        "old": {
+          "n": 95,
+          "successes": 44,
+          "first_input": 5961.263157894737,
+          "mean_post_input": 6076.115698336751,
+          "emitted_calls": 1.2736842105263158
+        },
+        "new": {
+          "n": 95,
+          "successes": 45,
+          "first_input": 5961.263157894737,
+          "mean_post_input": 6078.351278195489,
+          "emitted_calls": 1.2842105263157895
+        }
+      },
+      {
+        "method": "state",
+        "old_arm": "index_control",
+        "new_arm": "readout_minimal",
+        "old": {
+          "n": 95,
+          "successes": 51,
+          "first_input": 7640.821052631579,
+          "mean_post_input": 7793.062865497076,
+          "emitted_calls": 1.3578947368421053
+        },
+        "new": {
+          "n": 95,
+          "successes": 52,
+          "first_input": 7587.821052631579,
+          "mean_post_input": 7729.157184628237,
+          "emitted_calls": 1.3368421052631578
+        }
+      },
+      {
+        "method": "event",
+        "old_arm": "index_control",
+        "new_arm": "readout_minimal",
+        "old": {
+          "n": 95,
+          "successes": 48,
+          "first_input": 8764.157894736842,
+          "mean_post_input": 8911.733132832082,
+          "emitted_calls": 1.2
+        },
+        "new": {
+          "n": 95,
+          "successes": 52,
+          "first_input": 8711.157894736842,
+          "mean_post_input": 8853.307192982456,
+          "emitted_calls": 1.2105263157894737
+        }
+      },
+      {
+        "method": "dedup",
+        "old_arm": "index_control",
+        "new_arm": "readout_minimal",
+        "old": {
+          "n": 95,
+          "successes": 53,
+          "first_input": 8399.957894736843,
+          "mean_post_input": 8546.894644945698,
+          "emitted_calls": 1.305263157894737
+        },
+        "new": {
+          "n": 95,
+          "successes": 51,
+          "first_input": 8346.957894736843,
+          "mean_post_input": 8488.99015037594,
+          "emitted_calls": 1.263157894736842
+        }
+      },
+      {
+        "method": "event",
+        "old_arm": "index_view",
+        "new_arm": "readout_compact_index",
+        "old": {
+          "n": 95,
+          "successes": 51,
+          "first_input": 9440.368421052632,
+          "mean_post_input": 9589.71209273183,
+          "emitted_calls": 1.305263157894737
+        },
+        "new": {
+          "n": 95,
+          "successes": 50,
+          "first_input": 8781.78947368421,
+          "mean_post_input": 8928.564068504596,
+          "emitted_calls": 1.2842105263157895
+        }
+      }
+    ]
+  },
+  "limitations": "Descriptive cross-run comparisons on matched prefixes; hardware changed. Explanation removal and index encoding changes are not isolated. Identity reruns show variation. No statistical or causal improvement claim."
+}

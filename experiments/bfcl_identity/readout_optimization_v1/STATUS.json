@@ -1,0 +1,10 @@
+{
+  "status": "frozen_online_complete",
+  "frozen_date": "2026-11-20",
+  "completed_continuations": 880,
+  "qwen": 405,
+  "muse": 475,
+  "formal_acceptance": "not_claimed",
+  "results": "final/README.md",
+  "next_stage": "lossy_graph_editing"
+}

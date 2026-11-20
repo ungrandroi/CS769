@@ -1,0 +1,27 @@
+{
+  "status": "offline_complete_online_not_run",
+  "based_on": "Second-round 19-branch diagnostics; already exposed prefixes",
+  "inference_calls": 0,
+  "model_servers_started": false,
+  "prefixes": {
+    "qwen": 81,
+    "muse": 95
+  },
+  "candidates": [
+    "state-minimal-base",
+    "event-minimal-base",
+    "event-compact-index",
+    "dedup-minimal-base"
+  ],
+  "candidate_inputs": 704,
+  "full_graph_and_history_lossless": true,
+  "event_index_exactly_recoverable": true,
+  "frozen_source_manifest_sha256": "e384304fe846115c32260f85e1e90b6af4314c452f23a8af23758d2638b564d7",
+  "offline_report_sha256": "ec699fcd548f7ef518b1c191e39fff8a45b1eb910e168eb38945338a36703e9a",
+  "tests": "33 passed, 1 optional skipped; native offline checks cover both tokenizers",
+  "not_measured": [
+    "task_success",
+    "post_boundary_tool_calls",
+    "later_request_input_mean"
+  ]
+}

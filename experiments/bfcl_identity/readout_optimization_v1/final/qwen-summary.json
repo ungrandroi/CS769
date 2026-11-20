@@ -1,0 +1,883 @@
+{
+  "model": "qwen",
+  "expected_jobs": 405,
+  "completed_jobs": 405,
+  "status": "complete",
+  "scope": "Previously exposed actual-mixed diagnostic prefixes; exploratory candidate validation, not held-out confirmation.",
+  "arms": {
+    "identity/identity_reference": {
+      "planned": 81,
+      "completed": 81,
+      "missing": 0,
+      "successes": 47,
+      "success_rate_completed": 0.5802469135802469,
+      "fixed_denominator_success_bounds": [
+        0.5802469135802469,
+        0.5802469135802469
+      ],
+      "first_input": {
+        "mean": 5691.493827160494,
+        "measured": 81
+      },
+      "mean_post_input": {
+        "mean": 5874.097544225322,
+        "measured": 81
+      },
+      "peak_input": {
+        "mean": 6019.123456790124,
+        "measured": 81
+      },
+      "cumulative_post_input": {
+        "mean": 17878.987654320987,
+        "measured": 81
+      },
+      "model_requests": {
+        "mean": 3,
+        "measured": 81
+      },
+      "emitted_calls": {
+        "mean": 1.8395061728395061,
+        "measured": 81
+      },
+      "executed_tool_items": {
+        "mean": 1.8395061728395061,
+        "measured": 81
+      },
+      "explicit_error_returns": {
+        "mean": 0.1728395061728395,
+        "measured": 81
+      },
+      "parse_errors": {
+        "mean": 1.3209876543209877,
+        "measured": 81
+      },
+      "adjacent_same_arguments_candidates": {
+        "mean": 0,
+        "measured": 81
+      },
+      "success_with_call_budget": [
+        {
+          "budget": 0,
+          "successful": 18,
+          "denominator": 81
+        },
+        {
+          "budget": 1,
+          "successful": 26,
+          "denominator": 81
+        },
+        {
+          "budget": 2,
+          "successful": 43,
+          "denominator": 81
+        },
+        {
+          "budget": 3,
+          "successful": 46,
+          "denominator": 81
+        },
+        {
+          "budget": 4,
+          "successful": 46,
+          "denominator": 81
+        },
+        {
+          "budget": 5,
+          "successful": 46,
+          "denominator": 81
+        },
+        {
+          "budget": 6,
+          "successful": 46,
+          "denominator": 81
+        },
+        {
+          "budget": 7,
+          "successful": 46,
+          "denominator": 81
+        },
+        {
+          "budget": 9,
+          "successful": 46,
+          "denominator": 81
+        },
+        {
+          "budget": 11,
+          "successful": 47,
+          "denominator": 81
+        },
+        {
+          "budget": 20,
+          "successful": 47,
+          "denominator": 81
+        }
+      ]
+    },
+    "state/readout_minimal": {
+      "planned": 81,
+      "completed": 81,
+      "missing": 0,
+      "successes": 39,
+      "success_rate_completed": 0.48148148148148145,
+      "fixed_denominator_success_bounds": [
+        0.48148148148148145,
+        0.48148148148148145
+      ],
+      "first_input": {
+        "mean": 7808.827160493827,
+        "measured": 81
+      },
+      "mean_post_input": {
+        "mean": 8043.660823235677,
+        "measured": 81
+      },
+      "peak_input": {
+        "mean": 8239.271604938273,
+        "measured": 81
+      },
+      "cumulative_post_input": {
+        "mean": 35513.1975308642,
+        "measured": 81
+      },
+      "model_requests": {
+        "mean": 4.283950617283951,
+        "measured": 81
+      },
+      "emitted_calls": {
+        "mean": 3.0123456790123457,
+        "measured": 81
+      },
+      "executed_tool_items": {
+        "mean": 3.0123456790123457,
+        "measured": 81
+      },
+      "explicit_error_returns": {
+        "mean": 0.2345679012345679,
+        "measured": 81
+      },
+      "parse_errors": {
+        "mean": 1.3580246913580247,
+        "measured": 81
+      },
+      "adjacent_same_arguments_candidates": {
+        "mean": 0,
+        "measured": 81
+      },
+      "success_with_call_budget": [
+        {
+          "budget": 0,
+          "successful": 0,
+          "denominator": 81
+        },
+        {
+          "budget": 1,
+          "successful": 13,
+          "denominator": 81
+        },
+        {
+          "budget": 2,
+          "successful": 24,
+          "denominator": 81
+        },
+        {
+          "budget": 3,
+          "successful": 32,
+          "denominator": 81
+        },
+        {
+          "budget": 4,
+          "successful": 36,
+          "denominator": 81
+        },
+        {
+          "budget": 5,
+          "successful": 36,
+          "denominator": 81
+        },
+        {
+          "budget": 6,
+          "successful": 36,
+          "denominator": 81
+        },
+        {
+          "budget": 7,
+          "successful": 38,
+          "denominator": 81
+        },
+        {
+          "budget": 8,
+          "successful": 38,
+          "denominator": 81
+        },
+        {
+          "budget": 9,
+          "successful": 39,
+          "denominator": 81
+        },
+        {
+          "budget": 13,
+          "successful": 39,
+          "denominator": 81
+        },
+        {
+          "budget": 15,
+          "successful": 39,
+          "denominator": 81
+        },
+        {
+          "budget": 19,
+          "successful": 39,
+          "denominator": 81
+        }
+      ]
+    },
+    "event/readout_minimal": {
+      "planned": 81,
+      "completed": 81,
+      "missing": 0,
+      "successes": 42,
+      "success_rate_completed": 0.5185185185185185,
+      "fixed_denominator_success_bounds": [
+        0.5185185185185185,
+        0.5185185185185185
+      ],
+      "first_input": {
+        "mean": 8988.67901234568,
+        "measured": 81
+      },
+      "mean_post_input": {
+        "mean": 9191.293013913384,
+        "measured": 81
+      },
+      "peak_input": {
+        "mean": 9366.271604938273,
+        "measured": 81
+      },
+      "cumulative_post_input": {
+        "mean": 35109.60493827161,
+        "measured": 81
+      },
+      "model_requests": {
+        "mean": 3.7037037037037037,
+        "measured": 81
+      },
+      "emitted_calls": {
+        "mean": 2.4691358024691357,
+        "measured": 81
+      },
+      "executed_tool_items": {
+        "mean": 2.4691358024691357,
+        "measured": 81
+      },
+      "explicit_error_returns": {
+        "mean": 0.35802469135802467,
+        "measured": 81
+      },
+      "parse_errors": {
+        "mean": 1.3209876543209877,
+        "measured": 81
+      },
+      "adjacent_same_arguments_candidates": {
+        "mean": 0,
+        "measured": 81
+      },
+      "success_with_call_budget": [
+        {
+          "budget": 0,
+          "successful": 6,
+          "denominator": 81
+        },
+        {
+          "budget": 1,
+          "successful": 19,
+          "denominator": 81
+        },
+        {
+          "budget": 2,
+          "successful": 32,
+          "denominator": 81
+        },
+        {
+          "budget": 3,
+          "successful": 40,
+          "denominator": 81
+        },
+        {
+          "budget": 4,
+          "successful": 42,
+          "denominator": 81
+        },
+        {
+          "budget": 6,
+          "successful": 42,
+          "denominator": 81
+        },
+        {
+          "budget": 7,
+          "successful": 42,
+          "denominator": 81
+        },
+        {
+          "budget": 8,
+          "successful": 42,
+          "denominator": 81
+        },
+        {
+          "budget": 10,
+          "successful": 42,
+          "denominator": 81
+        },
+        {
+          "budget": 11,
+          "successful": 42,
+          "denominator": 81
+        },
+        {
+          "budget": 12,
+          "successful": 42,
+          "denominator": 81
+        },
+        {
+          "budget": 13,
+          "successful": 42,
+          "denominator": 81
+        }
+      ]
+    },
+    "dedup/readout_minimal": {
+      "planned": 81,
+      "completed": 81,
+      "missing": 0,
+      "successes": 48,
+      "success_rate_completed": 0.5925925925925926,
+      "fixed_denominator_success_bounds": [
+        0.5925925925925926,
+        0.5925925925925926
+      ],
+      "first_input": {
+        "mean": 8560.975308641975,
+        "measured": 81
+      },
+      "mean_post_input": {
+        "mean": 8792.084057454891,
+        "measured": 81
+      },
+      "peak_input": {
+        "mean": 8989.839506172839,
+        "measured": 81
+      },
+      "cumulative_post_input": {
+        "mean": 36676.62962962963,
+        "measured": 81
+      },
+      "model_requests": {
+        "mean": 4.049382716049383,
+        "measured": 81
+      },
+      "emitted_calls": {
+        "mean": 2.8395061728395063,
+        "measured": 81
+      },
+      "executed_tool_items": {
+        "mean": 2.8395061728395063,
+        "measured": 81
+      },
+      "explicit_error_returns": {
+        "mean": 0.2345679012345679,
+        "measured": 81
+      },
+      "parse_errors": {
+        "mean": 1.3950617283950617,
+        "measured": 81
+      },
+      "adjacent_same_arguments_candidates": {
+        "mean": 0,
+        "measured": 81
+      },
+      "success_with_call_budget": [
+        {
+          "budget": 0,
+          "successful": 9,
+          "denominator": 81
+        },
+        {
+          "budget": 1,
+          "successful": 19,
+          "denominator": 81
+        },
+        {
+          "budget": 2,
+          "successful": 30,
+          "denominator": 81
+        },
+        {
+          "budget": 3,
+          "successful": 38,
+          "denominator": 81
+        },
+        {
+          "budget": 4,
+          "successful": 41,
+          "denominator": 81
+        },
+        {
+          "budget": 5,
+          "successful": 43,
+          "denominator": 81
+        },
+        {
+          "budget": 6,
+          "successful": 46,
+          "denominator": 81
+        },
+        {
+          "budget": 7,
+          "successful": 46,
+          "denominator": 81
+        },
+        {
+          "budget": 10,
+          "successful": 46,
+          "denominator": 81
+        },
+        {
+          "budget": 12,
+          "successful": 47,
+          "denominator": 81
+        },
+        {
+          "budget": 14,
+          "successful": 47,
+          "denominator": 81
+        },
+        {
+          "budget": 20,
+          "successful": 48,
+          "denominator": 81
+        }
+      ]
+    },
+    "event/readout_compact_index": {
+      "planned": 81,
+      "completed": 81,
+      "missing": 0,
+      "successes": 48,
+      "success_rate_completed": 0.5925925925925926,
+      "fixed_denominator_success_bounds": [
+        0.5925925925925926,
+        0.5925925925925926
+      ],
+      "first_input": {
+        "mean": 9065.728395061727,
+        "measured": 81
+      },
+      "mean_post_input": {
+        "mean": 9293.712138581583,
+        "measured": 81
+      },
+      "peak_input": {
+        "mean": 9493.061728395061,
+        "measured": 81
+      },
+      "cumulative_post_input": {
+        "mean": 37915.543209876545,
+        "measured": 81
+      },
+      "model_requests": {
+        "mean": 3.950617283950617,
+        "measured": 81
+      },
+      "emitted_calls": {
+        "mean": 2.8395061728395063,
+        "measured": 81
+      },
+      "executed_tool_items": {
+        "mean": 2.8395061728395063,
+        "measured": 81
+      },
+      "explicit_error_returns": {
+        "mean": 0.3950617283950617,
+        "measured": 81
+      },
+      "parse_errors": {
+        "mean": 1.2839506172839505,
+        "measured": 81
+      },
+      "adjacent_same_arguments_candidates": {
+        "mean": 0.09876543209876543,
+        "measured": 81
+      },
+      "success_with_call_budget": [
+        {
+          "budget": 0,
+          "successful": 8,
+          "denominator": 81
+        },
+        {
+          "budget": 1,
+          "successful": 22,
+          "denominator": 81
+        },
+        {
+          "budget": 2,
+          "successful": 40,
+          "denominator": 81
+        },
+        {
+          "budget": 3,
+          "successful": 44,
+          "denominator": 81
+        },
+        {
+          "budget": 4,
+          "successful": 46,
+          "denominator": 81
+        },
+        {
+          "budget": 5,
+          "successful": 47,
+          "denominator": 81
+        },
+        {
+          "budget": 6,
+          "successful": 48,
+          "denominator": 81
+        },
+        {
+          "budget": 7,
+          "successful": 48,
+          "denominator": 81
+        },
+        {
+          "budget": 8,
+          "successful": 48,
+          "denominator": 81
+        },
+        {
+          "budget": 10,
+          "successful": 48,
+          "denominator": 81
+        },
+        {
+          "budget": 11,
+          "successful": 48,
+          "denominator": 81
+        },
+        {
+          "budget": 17,
+          "successful": 48,
+          "denominator": 81
+        }
+      ]
+    }
+  },
+  "missing_not_excluded": true,
+  "source_output_budget": 4096,
+  "continuation_output_budget": 16384,
+  "comparisons": {
+    "state/readout_minimal": {
+      "success": {
+        "estimate": -0.09876543209876543,
+        "interval95": [
+          -0.19179399367755529,
+          -0.01694915254237288
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "calls": {
+        "estimate": 1.1728395061728396,
+        "interval95": [
+          0.7066666666666667,
+          1.7361111111111112
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "requests": {
+        "estimate": 1.2839506172839505,
+        "interval95": [
+          0.8518518518518519,
+          1.7532467532467533
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "mean_input_overhead": {
+        "estimate": 0.3693441014004266,
+        "interval95": [
+          0.3349879073266949,
+          0.40663235163347905
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "first_input_overhead": {
+        "estimate": 0.37201715360371,
+        "interval95": [
+          0.32868997283724477,
+          0.4215785288153622
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "gains": 1,
+      "losses": 9,
+      "exploratory_capability_flag": false,
+      "engineering_mean_input_flag": false
+    },
+    "event/readout_minimal": {
+      "success": {
+        "estimate": -0.06172839506172839,
+        "interval95": [
+          -0.14814814814814814,
+          0.014492753623188406
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "calls": {
+        "estimate": 0.6296296296296297,
+        "interval95": [
+          0.37662337662337664,
+          0.9135802469135802
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "requests": {
+        "estimate": 0.7037037037037037,
+        "interval95": [
+          0.39344262295081966,
+          1.0526491228070172
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "mean_input_overhead": {
+        "estimate": 0.5647157618192966,
+        "interval95": [
+          0.5049880565693994,
+          0.6340282113692001
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "first_input_overhead": {
+        "estimate": 0.5793180639941347,
+        "interval95": [
+          0.5117164226833399,
+          0.6618633872230271
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "gains": 3,
+      "losses": 8,
+      "exploratory_capability_flag": false,
+      "engineering_mean_input_flag": false
+    },
+    "dedup/readout_minimal": {
+      "success": {
+        "estimate": 0.012345679012345678,
+        "interval95": [
+          -0.03125,
+          0.053763440860215055
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "calls": {
+        "estimate": 1.0,
+        "interval95": [
+          0.4666438356164384,
+          1.6133571428571425
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "requests": {
+        "estimate": 1.0493827160493827,
+        "interval95": [
+          0.5833333333333334,
+          1.5714285714285714
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "mean_input_overhead": {
+        "estimate": 0.4967548617060622,
+        "interval95": [
+          0.4473740642661061,
+          0.5555476952588793
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "first_input_overhead": {
+        "estimate": 0.5041701824902225,
+        "interval95": [
+          0.4474511734928553,
+          0.5755499945777368
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "gains": 3,
+      "losses": 2,
+      "exploratory_capability_flag": false,
+      "engineering_mean_input_flag": false
+    },
+    "event/readout_compact_index": {
+      "success": {
+        "estimate": 0.012345679012345678,
+        "interval95": [
+          -0.05,
+          0.07692307692307693
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "calls": {
+        "estimate": 1.0,
+        "interval95": [
+          0.4367663242846662,
+          1.7560975609756098
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "requests": {
+        "estimate": 0.9506172839506173,
+        "interval95": [
+          0.38461538461538464,
+          1.7058823529411764
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "mean_input_overhead": {
+        "estimate": 0.5821514826082519,
+        "interval95": [
+          0.5215301340367571,
+          0.6519200692945443
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "first_input_overhead": {
+        "estimate": 0.5928557019246827,
+        "interval95": [
+          0.5222965061236075,
+          0.6791089958528825
+        ],
+        "families": 18,
+        "pairs": 81,
+        "degenerate": false,
+        "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+      },
+      "gains": 3,
+      "losses": 2,
+      "exploratory_capability_flag": false,
+      "engineering_mean_input_flag": false
+    }
+  },
+  "event_index_vs_same_codec_control": {
+    "success": {
+      "estimate": 0.07407407407407407,
+      "interval95": [
+        0.024096385542168676,
+        0.12857142857142856
+      ],
+      "families": 18,
+      "pairs": 81,
+      "degenerate": false,
+      "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+    },
+    "calls": {
+      "estimate": 0.37037037037037035,
+      "interval95": [
+        -0.14548484848484844,
+        0.9767508687516705
+      ],
+      "families": 18,
+      "pairs": 81,
+      "degenerate": false,
+      "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+    },
+    "requests": {
+      "estimate": 0.24691358024691357,
+      "interval95": [
+        -0.23214285714285715,
+        0.8607922304670446
+      ],
+      "families": 18,
+      "pairs": 81,
+      "degenerate": false,
+      "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+    },
+    "mean_input_overhead": {
+      "estimate": 0.0111430594708668,
+      "interval95": [
+        0.008105607123056658,
+        0.013966684992145305
+      ],
+      "families": 18,
+      "pairs": 81,
+      "degenerate": false,
+      "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+    },
+    "first_input_overhead": {
+      "estimate": 0.00857182491556574,
+      "interval95": [
+        0.006944643592173011,
+        0.010751890254652162
+      ],
+      "families": 18,
+      "pairs": 81,
+      "degenerate": false,
+      "interpretation": "Descriptive, unadjusted for multiple comparisons; not untouched-family acceptance."
+    },
+    "gains": 6,
+    "losses": 0
+  },
+  "formal_acceptance": "not_claimed: development-exposed families; precision/held-out confirmation pending"
+}

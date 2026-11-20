@@ -2,6 +2,10 @@
 
 This project studies graph memory for tool-using agents in the Berkeley Function Calling Leaderboard (BFCL), using a locally hosted **Qwen3.8-27B-Q8_0** model. The completed studies cover 13 filesystem-only task families and 37 additional families combining filesystem tools with Twitter, messaging, ticketing, or mathematics tools. These are simulated APIs, not a real Bash shell. Four conditions per family give 200 task-condition instances; repeated seeds are repetitions, not additional task families.
 
+## Frozen conversion baseline
+
+Graph conversion optimization is frozen as of 2026-11-20. The final Qwen/Muse validation completed all 880 continuations. [Fixed variants, paired metrics and limitations](experiments/bfcl_identity/readout_optimization_v1/final/README.md) define the baseline for subsequent lossy graph editing. Event with and without a compact state index remain explicit variants; no universal capability or efficiency improvement is claimed.
+
 ## Start Here
 
 - [Experiment index](experiments/bfcl_identity/README.md): main results, historical baselines, development evidence, and exact record locations.
