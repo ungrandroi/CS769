@@ -1,0 +1,18 @@
+{
+  "extends": "_base.json",
+  "name": "evidence_graph_openai_mini",
+  "checkpoint": {
+    "kind": "history_tokens",
+    "threshold": 1000,
+    "counter": "history_json",
+    "strict": true
+  },
+  "model": {
+    "name": "gpt-5-mini",
+    "sampling": {
+      "reasoning_effort": "low",
+      "seed": 42,
+      "max_completion_tokens": 16384
+    }
+  }
+}

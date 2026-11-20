@@ -1,7 +1,7 @@
 """Load trusted local experimental snapshots independently of active modules."""
 import importlib
 import sys
-from .experiment import verify_sources
+from cs769.adapters.experiment import verify_sources
 
 MODULE_ALIASES = {
     'v2_provenance_dedup': 'cs769.graphs.event_graph_dedup',

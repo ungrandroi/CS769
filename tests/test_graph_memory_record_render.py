@@ -1,14 +1,14 @@
-"""Offline tests of G9 serialization only; frozen graph semantics are reused."""
+"""Offline tests of evidence graph serialization only; frozen graph semantics are reused."""
 from copy import deepcopy
 import json
 import unittest
 
-from cs769.graphs import graph_memory_payload as p
-from cs769.graphs import graph_memory_records as r
-from cs769.graphs import graph_memory_record_render as x
+from cs769.models.graphs import graph_memory_payload as p
+from cs769.models.graphs import graph_memory_records as r
+from cs769.models.graphs import graph_memory_record_render as x
 from test_graph_memory_records import graph_for, orders, records, member
 from test_graph_memory_observed import climate
-from cs769.graphs.graph_memory_observed import build_observed_graph
+from cs769.models.graphs.graph_memory_observed import build_observed_graph
 
 
 class ExternalRecordRenderTests(unittest.TestCase):
@@ -94,7 +94,7 @@ class ExternalRecordRenderTests(unittest.TestCase):
             with self.assertRaises(ValueError): x._source_label('e1', field, bad)
 
     def test_array_and_escaped_pointer_resolver_without_contract_extension(self):
-        # Storage/address unit test only: these unknown-tool IDs create no G9 join.
+        # Storage/address unit test only: these unknown-tool IDs create no evidence graph join.
         graph = graph_for([('unknown', {}, {'a/b': [{'~key': {'x':7}}]})])
         field = next(f for f in graph['payload_layer']['fields'] if f['event_id']=='e2')
         nodes = {n['id']:n for n in graph['payload_layer']['nodes']}
@@ -104,7 +104,7 @@ class ExternalRecordRenderTests(unittest.TestCase):
         self.assertFalse(r.audit_record_graph(graph)['active'])
 
     def test_parallel_calls_keep_base_order_and_have_membership_only(self):
-        from cs769.graphs.graph_memory_evidence import build_evidence_graph, inference_graph
+        from cs769.models.graphs.graph_memory_evidence import build_evidence_graph, inference_graph
         history = [{'role':'user', 'content':'Keep'},
             {'role':'assistant', 'tool_calls':[
                 {'id':'a','type':'function','function':{'name':'get_ticket','arguments':'{"ticket_id":7}'}},

@@ -1,6 +1,8 @@
+> 当前目录与入口以 [组件说明](../doc/README.md) 为准。活动实现已按职责迁至 `base/`、`datasets/`、`models/`、`tasks/`，配方在 `conf/`；下文保留原运行流程及当时验证记录，旧配置目录继续指向同一份配方。
+
 # 统一实验入口
 
-正式实现位于 `src/cs769/`。`scripts/manage.py` 仅转发同一个 CLI；scripts/core 保留必要导入兼容。旧 workflows 包和旧辅助模块已移除，不再提供独立模型运行入口。测试直接调用正式实现；历史实验记录和源码快照保持原样。
+命令入口位于 `src/cs769/`，具体实现按职责位于项目根目录的四类组件中。`scripts/manage.py` 仅转发同一个 CLI；模型工具的两个可视化脚本直接调用正式实现。旧 workflows 包和旧辅助模块已移除，不再提供独立模型运行入口。测试直接调用正式实现；历史实验记录和源码快照保持原样。
 
 ## 现有环境与免费命令
 
@@ -8,9 +10,9 @@
 
 ```bash
 .conda/readable/bin/python -B -m cs769 list
-.conda/readable/bin/python -B -m cs769 validate src/cs769/configs/g9-working-history.json
+.conda/readable/bin/python -B -m cs769 validate src/cs769/configs/evidence_graph_history_threshold.json
 .conda/readable/bin/python -B -m cs769 prepare \
-  --config src/cs769/configs/g9-working-history.json \
+  --config src/cs769/configs/evidence_graph_history_threshold.json \
   --history src/cs769/examples/history.json \
   --output /tmp/cs769-new-input
 ```
@@ -21,11 +23,11 @@
 
 ```bash
 .conda/readable/bin/python -B -m cs769 replay \
-  --config src/cs769/configs/g9-working-history.json \
+  --config src/cs769/configs/evidence_graph_history_threshold.json \
   --record /nobackup/ruqi/CS769/evidence/matched118/g9/runs/multi_turn_base_39/g9
 ```
 
-`replay` 在返回每条保存回复之前，严格检查当前结构化请求的字段值和列表顺序。官方 BFCL 负责执行工具、推进用户轮次及评分；不是直接把旧通过数读出来。它还检查完整工具调用结果、G9 正文和官方二元评分与旧记录一致。记录只读，结果可写到另一个新路径。
+`replay` 在返回每条保存回复之前，严格检查当前结构化请求的字段值和列表顺序。官方 BFCL 负责执行工具、推进用户轮次及评分；不是直接把旧通过数读出来。它还检查完整工具调用结果、证据图 正文和官方二元评分与旧记录一致。记录只读，结果可写到另一个新路径。
 
 默认入口通过进程内路径选择固定到本项目的 vendor BFCL，不改共享环境；如果已加载其他 BFCL，立即拒绝混用。旧 shell 启动器也使用这里已验证的 readable 环境。
 
@@ -35,16 +37,16 @@ BFCL 的虚拟工具实例具有进程级共享状态。因此每条轨迹必须
 
 - `model`：模型、原生提供方、采样参数、旧 thinking 的处理。
 - `checkpoint`：手动接入、完成轮次接入、历史 token 接入。
-- `memory`：G9、identity 或显式选择的历史表示。
+- `memory`：证据图、identity 或显式选择的历史表示。
 - `delivery`：替换／原生历史等投喂方式，包含角色配置。
-- `edits`：独立操作、参数、启用开关和不适用处理；默认 G9 不编辑。
+- `edits`：独立操作、参数、启用开关和不适用处理；默认 证据图 不编辑。
 - `execution`：请求上限、预算及计划参数。
 
-当前 GPT-4.1 对照配置是 `identity.json` 与 `g9-working-history.json`：temperature 0、seed 42、max_tokens 4096；接入定义为历史 Chat JSON 经 o200k_base 计数严格超过 1000，排序对象键、不含工具定义。计数模式显式命名为 `history_json_sorted`；旧 `history_json` 的不排序含义保持不变。
+当前 GPT-4.1 对照配置是 `identity.json` 与 `evidence_graph_history_threshold.json`：temperature 0、seed 42、max_tokens 4096；接入定义为历史 Chat JSON 经 o200k_base 计数严格超过 1000，排序对象键、不含工具定义。计数模式显式命名为 `history_json_sorted`；旧 `history_json` 的不排序含义保持不变。
 
-已用的数值 v2 与观察共享配置分别为 `numeric-summary-v2.json`、`share-observations.json`。旧实验设置继续作为显式配置保留，不等于所有历史归档格式和外部依赖都已在 ins04 验证。
+已用的小数数组摘要与重复观测共享配置分别为 `summarize_decimal_arrays.json`、`share_observations.json`。旧实验设置作为显式配置保留，各历史归档格式和外部依赖的验证情况按对应记录读取。
 
-重复与随机交错由 `cs769.schedule` 生成显式计划；`batch` 按已审核计划运行，不因一个重复参数隐式增加 API 请求。每个条件的模型、接入点、重复和顺序须在计划中确定。
+重复与随机交错由 `cs769.base.schedule` 生成显式计划；`batch` 按已审核计划运行，不因一个重复参数隐式增加 API 请求。每个条件的模型、接入点、重复和顺序须在计划中确定。
 
 ## 批量调度
 
@@ -64,11 +66,11 @@ BFCL 的虚拟工具实例具有进程级共享状态。因此每条轨迹必须
 
 从保存的 identity 继续时，先检查任务、模型、采样、状态和断点；断点之前严格复用旧回复。图组只替换该断点的历史，保持其他请求字段和工具定义一致。若原任务没有触发该断点，不会默默改为重新生成前缀。
 
-## 公开 G9 API
+## 公开 证据图 API
 
 ```python
-from cs769.g9 import build_g9_memory
-memory = build_g9_memory(normalized_history, native_history, provider="openai")
+from cs769.models.evidence_graph_memory import build_evidence_graph_memory
+memory = build_evidence_graph_memory(normalized_history, native_history, provider="openai")
 text = memory["memory_text"]
 ```
 

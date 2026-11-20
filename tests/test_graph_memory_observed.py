@@ -6,15 +6,8 @@ import json
 from pathlib import Path
 import unittest
 
-from cs769.graphs.graph_memory_evidence import (
-    build_evidence_graph, inference_graph, render_evidence_graph,
-    reconstruct_visible_evidence,
-)
-from cs769.graphs.graph_memory_observed import (
-    build_observed_graph, audit_observed_graph, strip_observed_graph,
-    render_observed_graph, resolve_source, plan_field_projection,
-    audit_projection_plan, PUBLIC_DOC_SHA256, _VEHICLE_RULES, _MATH,
-)
+from cs769.models.graphs.graph_memory_evidence import build_evidence_graph, inference_graph, render_evidence_graph, reconstruct_visible_evidence
+from cs769.models.graphs.graph_memory_observed import build_observed_graph, audit_observed_graph, strip_observed_graph, render_observed_graph, resolve_source, plan_field_projection, audit_projection_plan, PUBLIC_DOC_SHA256, _VEHICLE_RULES, _MATH
 
 
 def fixture(exchanges):

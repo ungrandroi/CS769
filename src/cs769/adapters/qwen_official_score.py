@@ -4,7 +4,7 @@ from pathlib import Path
 import subprocess
 import sys
 import hashlib
-from cs769.adapters.model_config import MODEL_KEY
+from cs769.models.model_config import MODEL_KEY
 ROOT = Path(__file__).resolve().parents[2]
 def read(path): return json.loads(path.read_text())
 def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()

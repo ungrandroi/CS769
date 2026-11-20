@@ -1,14 +1,14 @@
 import copy,json,os,socket,unittest
 from pathlib import Path
 from unittest.mock import patch
-from cs769 import ExperimentConfig,load_config,prepare
-from cs769.history import checkpoint_reached,dumps
-from cs769.requests import build_request
-from cs769.metrics import Usage,paired
-from cs769.session import MemorySession
-from cs769.runtime import continue_run
-from cs769.registry import register_editor
-from cs769.edits import subtree_share,series_merge
+from cs769 import ExperimentConfig, load_config, prepare
+from cs769.base.history import checkpoint_reached, dumps
+from cs769.base.requests import build_request
+from cs769.base.metrics import Usage, paired
+from cs769.base.session import MemorySession
+from cs769.base.runtime import continue_run
+from cs769.base.registry import register_editor
+from cs769.models.edits import subtree_share, series_merge
 
 ROOT=Path(__file__).resolve().parents[1]
 def config(name):return load_config(ROOT/'configs'/(name+'.json'))
@@ -35,17 +35,17 @@ class Tests(unittest.TestCase):
  def test_identity_exact(self):
   h=fixture();self.assertEqual(prepare(h,config('identity'),len)['messages'],h)
  def test_pending_calls_rejected(self):
-  with self.assertRaises(ValueError):prepare(fixture()[:-1],config('g9-working-history'),len)
+  with self.assertRaises(ValueError):prepare(fixture()[:-1],config('evidence_graph_history_threshold'),len)
  def test_disabled_edit(self):
-  c=config('delete-2');c.edits[0]['enabled']=False
-  self.assertEqual(prepare(fixture(),c,len)['memory_text'],prepare(fixture(),config('g9-view-full'),len)['memory_text'])
+  c=config('delete_two_interactions');c.edits[0]['enabled']=False
+  self.assertEqual(prepare(fixture(),c,len)['memory_text'],prepare(fixture(),config('evidence_graph_full_view'),len)['memory_text'])
  def test_delete_count(self):
   for n in (1,2,3):
-   c=config('delete-1-oldest' if n==1 else 'delete-'+str(n));r=prepare(fixture(),c,len)
+   c=config('delete_oldest_interaction' if n==1 else 'delete-'+str(n));r=prepare(fixture(),c,len)
    self.assertEqual(r['edits'][0]['audit']['removed_interactions'],n)
    self.assertFalse(r['edits'][0]['audit']['full_original_evidence_preserved'])
  def test_sharing_restores_exactly(self):
-  h=fixture();full=prepare(h,config('g9-view-full'),len);r=prepare(h,config('share-observations'),len)
+  h=fixture();full=prepare(h,config('evidence_graph_full_view'),len);r=prepare(h,config('share_observations'),len)
   self.assertEqual(r['edits'][0]['status'],'applied');self.assertEqual(subtree_share.restore(r['graph']),full['graph'])
   self.assertLess(len(r['memory_text']),len(full['memory_text']))
  def test_summary_versions(self):
@@ -56,14 +56,14 @@ class Tests(unittest.TestCase):
   with self.assertRaises(ValueError):series_merge.array_summary(dumps([400]*153))
  def test_summary_edit_changes_graph(self):
   h=fixture(1);h[-1]['content']=dumps({'prices':[400.0]*153})
-  r=prepare(h,config('numeric-summary-v2'),len)
+  r=prepare(h,config('summarize_decimal_arrays'),len)
   self.assertEqual(r['edits'][0]['status'],'applied');self.assertIn('__numeric_series_summary__',r['memory_text'])
  def test_unknown_config_rejected(self):
   with self.assertRaises(ValueError):ExperimentConfig.from_dict({'memroy':{}})
-  c=config('g9-view-full');c.memory['options']['viwe']='full'
+  c=config('evidence_graph_full_view');c.memory['options']['viwe']='full'
   with self.assertRaises(ValueError):prepare(fixture(),c,len)
  def test_no_identity_sidecar(self):
-  c=config('g9-view-full');c.delivery['mode']='append'
+  c=config('evidence_graph_full_view');c.delivery['mode']='append'
   with self.assertRaises(ValueError):prepare(fixture(),c,len)
  def test_threshold_strict_and_balanced(self):
   h=fixture();n=len(dumps([m for m in h if m['role']!='system']))
@@ -71,28 +71,28 @@ class Tests(unittest.TestCase):
   self.assertFalse(checkpoint_reached(h,c,len));c['strict']=False;self.assertTrue(checkpoint_reached(h,c,len))
   self.assertFalse(checkpoint_reached(h[:-1],c,len))
  def test_session_once(self):
-  c=config('g9-working-history');c.checkpoint['threshold']=1;s=MemorySession(c,len)
+  c=config('evidence_graph_history_threshold');c.checkpoint['threshold']=1;s=MemorySession(c,len)
   h=fixture();first=s.project(h);suffix=[{'role':'assistant','content':'done'}]
   self.assertEqual(s.project(h+suffix),first+suffix)
   with self.assertRaises(ValueError):s.project(h[1:])
  def test_completed_turn_session(self):
-  c=config('g9-view-full');s=MemorySession(c,len);h=fixture()+[{'role':'user','content':'New task.'}]
+  c=config('evidence_graph_full_view');s=MemorySession(c,len);h=fixture()+[{'role':'user','content':'New task.'}]
   r=s.project(h,completed_turns=1);self.assertEqual(r[-1],h[-1]);self.assertNotIn('New task.',r[-2]['content'])
  def test_selection(self):
-  c=config('g9-view-full');c.selection['require_prefix_pass']=True;s=MemorySession(c,len)
+  c=config('evidence_graph_full_view');c.selection['require_prefix_pass']=True;s=MemorySession(c,len)
   h=fixture()+[{'role':'user','content':'Next'}]
   with self.assertRaises(ValueError):s.project(h,completed_turns=1)
   self.assertEqual(s.project(h,completed_turns=1,prefix_passed=False),h);self.assertEqual(s.excluded_reason,'prefix_failed')
  def test_anthropic_visible_evidence(self):
   h=[{'role':'user','content':'Find tweet.'},{'role':'assistant','content':[{'type':'thinking','thinking':'secret','signature':'sig'},{'type':'tool_use','id':'a','name':'get_tweet','input':{'tweet_id':42}}]},
      {'role':'user','content':[{'type':'tool_result','tool_use_id':'a','content':'{"tweet_id":42,"text":"visible"}'}]}]
-  c=config('g9-claude-sonnet-5-5');r=prepare(h,c,len);req=build_request(r,[])
+  c=config('evidence_graph_claude');r=prepare(h,c,len);req=build_request(r,[])
   self.assertIn('visible',r['memory_text']);self.assertNotIn('secret',json.dumps(req));self.assertNotIn('seed',req)
  def test_plugin_mount(self):
   name='test_noop'
-  if name not in __import__('cs769.registry',fromlist=['EDITORS']).EDITORS:
-   register_editor(name,lambda g,count,current,opts:(copy.deepcopy(g),{'applied':True},__import__('cs769.edits.g9_edit',fromlist=['render']).render))
-  c=config('g9-view-full');c.edits=[{'name':name}];self.assertEqual(prepare(fixture(),c,len)['edits'][0]['status'],'applied')
+  if name not in __import__('cs769.base.registry',fromlist=['EDITORS']).EDITORS:
+   register_editor(name,lambda g,count,current,opts:(copy.deepcopy(g),{'applied':True},__import__('cs769.models.edits.record_edits',fromlist=['render']).render))
+  c=config('evidence_graph_full_view');c.edits=[{'name':name}];self.assertEqual(prepare(fixture(),c,len)['edits'][0]['status'],'applied')
  def test_metrics_pairing(self):
   u=Usage();u.add({'usage':{'prompt_tokens':100,'completion_tokens':10},'choices':[{'message':{'tool_calls':[{},{}]}}]},'openai')
   v=copy.deepcopy(u);v.tool_calls=3;v.first_input_tokens=80
@@ -115,11 +115,11 @@ class Tests(unittest.TestCase):
    def reserve(self,req):return 'r'
    def settle(self,r,resp):pass
    def uncertain(self,r):raise AssertionError('unexpected')
-  c=config('g9-view-full');c.execution['budget_usd']=1;r=prepare(fixture(),c,len)
+  c=config('evidence_graph_full_view');c.execution['budget_usd']=1;r=prepare(fixture(),c,len)
   with self.assertRaises(PermissionError):continue_run(r,[],Env(),Fake(),Ledger())
   out=continue_run(r,[],Env(),Fake(),Ledger(),authorized=True);self.assertTrue(out['score']['passed']);self.assertEqual(out['usage']['requests'],1)
  def test_terminal_edit_composition_rejected(self):
-  c=config('share-observations');c.edits+=config('delete-2').edits
+  c=config('share_observations');c.edits+=config('delete_two_interactions').edits
   with self.assertRaisesRegex(ValueError,'last enabled'):prepare(fixture(),c,len)
 
  def test_active_identifier_views_and_query(self):
@@ -129,22 +129,22 @@ class Tests(unittest.TestCase):
      {'role':'user','content':'Read that tweet.'},
      {'role':'assistant','tool_calls':[{'id':'y','type':'function','function':{'name':'get_tweet','arguments':'{"tweet_id":42}'}}]},
      {'role':'tool','tool_call_id':'y','content':'{"id":42,"content":"Hello"}'}]
-  full=prepare(h,config('g9-view-full'),len);base=prepare(h,config('g9-view-base'),len)
+  full=prepare(h,config('evidence_graph_full_view'),len);base=prepare(h,config('evidence_graph_base_view'),len)
   self.assertGreater(len(full['memory_text']),len(base['memory_text']))
   self.assertTrue(full['graph']['record_layer']['edges'])
-  for name in ('g9-inline','g9-external','g9-signature','g9-lexical','g9-content_store'):
+  for name in ('evidence_graph_inline_payloads','evidence_graph_external_payloads','evidence_graph_call_signatures','evidence_graph_lexical_references','evidence_graph_content_store'):
    with self.subTest(name=name):self.assertTrue(prepare(h,config(name),len)['memory_text'])
   call=[n for n in full['graph']['evidence_view']['nodes'] if n.get('category')=='tool_call'][-1]
-  c=config('g9-query_layout-S');c.memory['options']['seeds']=[call['call_group']]
-  moved=prepare(h,c,len);chronological=prepare(h,config('g9-query_layout-C'),len)
+  c=config('evidence_graph_selected_exchanges_first');c.memory['options']['seeds']=[call['call_group']]
+  moved=prepare(h,c,len);chronological=prepare(h,config('evidence_graph_chronological_order'),len)
   self.assertNotEqual(moved['memory_text'],chronological['memory_text'])
   self.assertIn('Hello',moved['memory_text'])
  def test_nonempty_index_and_role(self):
   h=[{'role':'user','content':'Where am I?'},{'role':'assistant','tool_calls':[{'id':'p','type':'function','function':{'name':'pwd','arguments':'{}'}}]},
      {'role':'tool','tool_call_id':'p','content':'{"current_working_directory":"/home"}'}]
-  b=prepare(h,config('b-native-index'),len)
+  b=prepare(h,config('native_history_index'),len)
   self.assertEqual(b['messages'][:len(h)],h);self.assertIn('/home',b['messages'][-1]['content'])
-  v4=prepare(h,config('v4-application-memory'),len,next_messages=[{'role':'user','content':'Next'}])
+  v4=prepare(h,config('memory_before_user_request'),len,next_messages=[{'role':'user','content':'Next'}])
   self.assertIn('<application_memory',v4['messages'][-1]['content']);self.assertEqual(v4['messages'][:len(h)],h)
  def test_config_inheritance_cycle(self):
   import tempfile
@@ -152,7 +152,7 @@ class Tests(unittest.TestCase):
    p=Path(td)/'a.json';p.write_text('{"extends":"a.json"}')
    with self.assertRaisesRegex(ValueError,'cycle'):load_config(p)
  def test_custom_options_fail_without_skip(self):
-  c=config('share-observations');c.edits[0]['options']['typo']=1
+  c=config('share_observations');c.edits[0]['options']['typo']=1
   with self.assertRaisesRegex(ValueError,'Unknown'):prepare(fixture(),c,len)
  def test_mixed_graphs(self):
   if not os.environ.get('CS769_BFCL_ROOT'):self.skipTest('Set external BFCL path for mixed-domain contracts')

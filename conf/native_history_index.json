@@ -1,0 +1,22 @@
+{
+  "extends": "_base.json",
+  "name": "native_history_index",
+  "memory": {
+    "kind": "native_index"
+  },
+  "delivery": {
+    "mode": "append",
+    "role": "assistant"
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

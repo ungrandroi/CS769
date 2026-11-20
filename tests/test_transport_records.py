@@ -7,10 +7,10 @@ import json
 import os
 import unittest
 import cs769
-from cs769.adapters.budget import PersistentBudget
-from cs769.adapters.http import HTTPTransport, ProviderError
-from cs769.adapters.provider import ProviderTransport
-from cs769.config import load_config
+from cs769.base.budget import PersistentBudget
+from cs769.models.http import HTTPTransport, ProviderError
+from cs769.models.provider import ProviderTransport
+from cs769.base.config import load_config
 
 class TransportRecordTests(unittest.TestCase):
     def test_raw_response_saved_before_usage_validation_failure(self):
@@ -42,7 +42,7 @@ class TransportRecordTests(unittest.TestCase):
             key.chmod(0o600)
             budget = PersistentBudget(root / "budget.json", .1, {"input": 1, "output": 1})
             events = []
-            cfg = load_config(Path(cs769.__file__).parent / "configs/g9-working-history.json")
+            cfg = load_config(Path(cs769.__file__).parent / "configs/evidence_graph_history_threshold.json")
             transport = ProviderTransport(cfg, HTTPTransport("openai", key, budget, authorized=True, record=events.append))
             raw = {"choices": [], "usage": {"prompt_tokens": 100, "completion_tokens": 20}}
             with patch.dict(os.environ, {"CS769_OFFLINE": "0"}), \
@@ -56,7 +56,7 @@ class TransportRecordTests(unittest.TestCase):
             self.assertAlmostEqual(entry["actual_usd"], .00012)
 
     def test_invalid_tool_arguments_are_preserved_for_official_evaluation(self):
-        from cs769.adapters.qwen_transport import response_from_chat
+        from cs769.models.qwen_transport import response_from_chat
         for arguments in ("{broken", "null", "[]"):
             raw = {"model": "fixture", "choices": [{"finish_reason": "tool_calls", "message": {
                 "role": "assistant", "content": None, "tool_calls": [{"id": "c", "type": "function",

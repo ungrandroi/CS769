@@ -1,0 +1,24 @@
+{
+  "extends": "_base.json",
+  "name": "interaction_evidence_structure_first",
+  "memory": {
+    "kind": "evidence",
+    "options": {
+      "layout": "structure-first"
+    }
+  },
+  "delivery": {
+    "role": "assistant"
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

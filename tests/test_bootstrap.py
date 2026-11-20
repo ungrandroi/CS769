@@ -10,7 +10,7 @@ class BootstrapTest(unittest.TestCase):
         env.pop("PYTHONPATH",None);env.pop("CS769_BFCL_ROOT",None)
         return env
     def test_installed_package_selects_project_vendor_from_another_directory(self):
-        code=GUARD+"from cs769.bootstrap import ensure_bfcl\np=ensure_bfcl()\nimport bfcl_eval,json\nprint(json.dumps({'file':bfcl_eval.__file__}))\n"
+        code=GUARD+"from cs769.base.bootstrap import ensure_bfcl\np=ensure_bfcl()\nimport bfcl_eval,json\nprint(json.dumps({'file':bfcl_eval.__file__}))\n"
         with tempfile.TemporaryDirectory()as td:
             r=subprocess.run([sys.executable,"-B","-c",code],env=self.environment(),cwd=td,text=True,capture_output=True)
         self.assertEqual(r.returncode,0,r.stderr)
@@ -20,7 +20,7 @@ class BootstrapTest(unittest.TestCase):
         code=GUARD+"""import types,sys
 fake=types.ModuleType("bfcl_eval");fake.__file__="/tmp/not-the-project/bfcl_eval/__init__.py"
 sys.modules["bfcl_eval"]=fake
-from cs769.bootstrap import ensure_bfcl
+from cs769.base.bootstrap import ensure_bfcl
 try:ensure_bfcl()
 except RuntimeError as e:
  print(str(e))

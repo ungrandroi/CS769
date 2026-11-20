@@ -1,13 +1,13 @@
-# CS769 统一实现
+# 工具调用图记忆项目的公开入口
 
-这份代码位于正式仓库的 `src/cs769/`，通过现有环境的 editable 安装使用；不要再复制进每个实验目录。
+## 目的和主要功能
 
-唯一入口：`python -m cs769`。旧 manage.py 只转发同一个入口。使用、配置、预算、验证范围与可选依赖见 [运行说明](../../docs/runtime.md)。
+公开统一命令、配置与记忆准备接口，实际计算由职责目录直接提供。
 
-默认 G9 替换旧历史，不附带 identity；编辑通过配置独立开关。图和呈现、模型请求、BFCL 恢复及官方评分、统计、预算分开组织。历史表示配置继续保留，旧独立模型循环及旧辅助模块已移除。
+## 适用范围
 
-完整使用示例为 `configs/g9-working-history.json`。公开构图 API 为 `cs769.g9.build_g9_memory`。
+用于 `python -m cs769`、现有 Python 调用者和安装包入口。
 
-`docs/source-manifest.json` 保留原模块来源，并注明本次命名空间迁移后的哈希；历史实验本身及冻结源码不改写。本轮未运行付费实验，实际 API 仍需后续单独授权 smoke。
+实际组件说明见 [当前文档](../../doc/README.md)：数据归 `datasets/`，图记忆与模型归 `models/`，科研计算归 `tasks/`，公共协调归 `base/`，配方归 `conf/`。`configs/` 继续指向同一份配置。
 
-免费测试命令：`scripts/bfcl_python.sh -B tests/run.py`（在项目根目录）。旧 workflows 导入已停用，测试与运行均使用正式模块。清理对应关系见 [说明](../../docs/legacy-removal.md)。
+`docs/source-manifest.json` 等文件保存历史迁移来源和当时哈希。新的运行源码身份由 `base/provenance.py` 记录当前所有职责目录与配方。

@@ -3,8 +3,8 @@ from copy import deepcopy
 import json
 import unittest
 
-from cs769.graphs.event_graph import GraphMemoryV2
-from cs769.graphs.graph_memory_readable import render_readable, render_readable_segments
+from cs769.models.graphs.event_graph import GraphMemoryV2
+from cs769.models.graphs.graph_memory_readable import render_readable, render_readable_segments
 from test_state_transition_graph import history
 
 

@@ -1,0 +1,18 @@
+{
+  "extends": "_base.json",
+  "name": "readable_history_user_role",
+  "memory": {
+    "kind": "readable"
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

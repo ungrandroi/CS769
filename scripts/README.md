@@ -13,7 +13,7 @@
 - score / report：对保存结果评分或统计。
 - run / batch 实际 API：必须另有授权、预算、私有凭证和单价；默认拒绝。
 
-旧 workflows 包和旧实验专用命令已移除。scripts/core 只保留必要的导入兼容，可视化代码未改。
+旧 workflows 包和旧实验专用命令已移除。模型工具的两个可视化脚本直接调用正式实现，可视化代码沿用现状。
 
 免费测试：
 
@@ -25,4 +25,4 @@ scripts/bfcl_python.sh -B tests/run.py
 
 详细说明见 [统一运行说明](../docs/runtime.md) 和 [旧辅助模块清理](../docs/legacy-removal.md)。
 
-G9 离线接入见 [接口说明](../docs/g9-memory.md)、[示例](../examples/g9_memory.py) 和 [正式 builder](../src/cs769/g9.py)。
+evidence graph 离线接入见 [接口说明](../docs/evidence-graph-memory.md)、[示例](../examples/evidence_graph_memory.py) 和 [正式 builder](../models/evidence_graph_memory.py)。

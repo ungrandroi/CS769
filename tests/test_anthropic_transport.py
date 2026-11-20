@@ -7,9 +7,9 @@ import tempfile
 import unittest
 from unittest.mock import patch
 import urllib.error
-from cs769.adapters import anthropic_transport as transport
-from cs769.graphs.graph_memory_native import build_native_graph, append_native_index, reconstruct_native_history
-from cs769.adapters.qwen_transport import plain
+from cs769.models import anthropic_transport as transport
+from cs769.models.graphs.graph_memory_native import build_native_graph, append_native_index, reconstruct_native_history
+from cs769.models.qwen_transport import plain
 
 class AnthropicTransportTest(unittest.TestCase):
 
@@ -56,7 +56,7 @@ class AnthropicTransportTest(unittest.TestCase):
         self.assertEqual(transport.RUNTIME['thinking'], {'type': 'adaptive'})
 
     def test_shared_http_error_redacts_key_and_preserves_reservation(self):
-        from cs769.adapters.http import HTTPTransport, ProviderError
+        from cs769.models.http import HTTPTransport, ProviderError
         from tempfile import TemporaryDirectory
         from pathlib import Path
         from unittest.mock import Mock, patch

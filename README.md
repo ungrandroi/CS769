@@ -1,10 +1,10 @@
-> 当前统一实验入口：`python -m cs769`。正式实现位于 `src/cs769/`；使用与迁移验证边界见 [docs/runtime.md](docs/runtime.md)。
+> 当前组件入口：[数据与输入](doc/datasets.md)、[图记忆与模型](doc/models.md)、[科研任务](doc/tasks.md)、[目录与迁移](doc/layout.md)。正式实现按职责保存在根目录 `base/`、`datasets/`、`models/`、`tasks/`，默认配方在 `conf/`。统一命令继续为 `python -m cs769`。
 
-# CS769 — Graph Memory for Tool-Using Agents
+# 工具调用智能体的图记忆研究
 
-G9 integration: [guide](docs/g9-memory.md), [offline example](examples/g9_memory.py), and [maintained builder](src/cs769/g9.py). The original scripts/core imports remain compatible aliases.
+证据图使用入口：[使用说明](docs/evidence-graph-memory.md)、[离线示例](examples/evidence_graph_memory.py)和[正式构图接口](models/evidence_graph_memory.py)。构图、编辑和提供方由各自职责目录直接维护。
 
-This project studies graph memory for tool-using agents in BFCL. The maintained implementation is in src/cs769, with configurable graph builders, memory edits, model adapters, recovery and unchanged official evaluation. G9 replaces visible history with structured evidence; historical graph formats remain available as explicit configurations. The early file-system experiments below used Qwen and 18 simulated GorillaFileSystem tools, rather than a real Bash shell.
+This project studies graph memory for tool-using agents in BFCL. The maintained implementation is organized in base/, datasets/, models/ and tasks/, with configurable graph builders, memory edits, model adapters, recovery and unchanged official evaluation. The evidence graph replaces visible history with structured evidence; historical graph formats remain available as explicit configurations. The early file-system experiments below used Qwen and 18 simulated GorillaFileSystem tools, rather than a real Bash shell.
 
 ## Memory Methods
 
@@ -19,7 +19,7 @@ The graph methods use compact serialization. “Compact” means a more concise 
 
 ## Experiment Reports
 
-The [report index](experiments/bfcl_identity/reports/README.md) collects the [cross-experiment summary](experiments/bfcl_identity/reports/experiment-summary.md), V2–V5 readable reports, token accounting, and linked evidence. V2–V5 are historical stages; see the [G9 matched-118 report](experiments/bfcl_identity/reports/g9-event-matched118-results.md) for the later graph-replacement comparison. The early experiments below retain their original scope and results. Markdown is available for GitHub reading, alongside HTML views. Original experiment records and frozen source snapshots remain unchanged.
+The [report index](experiments/bfcl_identity/reports/README.md) collects the [cross-experiment summary](experiments/bfcl_identity/reports/experiment-summary.md), historical readable-memory reports, token accounting, and linked evidence. These reports describe historical stages; see the [证据图的配对比较报告（118 个条件）](experiments/bfcl_identity/reports/g9-event-matched118-results.md) for the later graph-replacement comparison. The early experiments below retain their original scope and results. Markdown is available for GitHub reading, alongside HTML views. Original experiment records and frozen source snapshots remain unchanged.
 
 ## Early experiments (historical)
 
@@ -36,13 +36,18 @@ Each evaluated method has one run per task condition. These results are not esti
 
 ## Repository Layout
 
-- `src/cs769/`: maintained graph builders, edits, runtime, model/BFCL adapters, statistics and configurations.
-- `scripts/manage.py`: compatibility launcher for the same CLI.
-- `scripts/core/`: remaining compatibility imports; old workflows have been removed.
-- `tests/`: tests of the maintained implementations; `tests/run.py` runs the free suite.
-- `docs/`: current usage and migration notes.
-- `experiments/bfcl_identity/`: historical records and reports; their source snapshots stay unchanged.
-- `visualization/`: user-maintained memory replay interface.
+- `base/`: configuration, paths, shared runtime, budget, batch processes and provenance.
+- `datasets/`: pinned BFCL inputs and completed-turn prefixes.
+- `models/`: graph-memory builders, representations, edits and provider adapters.
+- `tasks/`: preparation, BFCL execution, replay, prefixes and paired reports.
+- `conf/`: unchanged JSON profiles; the old config path remains a relative link.
+- `src/cs769/`: public command entry and historical snapshot utilities.
+- `doc/`: current component and layout guides; `docs/`: existing method and migration history.
+- `experiment/`: default destination for new directory-producing commands.
+- `experiments/bfcl_identity/`: historical records, reports and frozen source snapshots.
+- `scripts/`, `examples/`, `tests/`: existing launchers, examples and checks.
+- `vendor/`, `acon-history-compression/`: existing external code and material.
+- `visualization/`: user-maintained replay interface.
 
 ## Setup
 
@@ -73,10 +78,10 @@ scripts/bfcl_python.sh -B scripts/manage.py --help
 
 # List profiles and validate a configuration
 scripts/bfcl_python.sh -B -m cs769 list
-scripts/bfcl_python.sh -B -m cs769 validate src/cs769/configs/g9-working-history.json
+scripts/bfcl_python.sh -B -m cs769 validate conf/evidence_graph_history_threshold.json
 
 # Prepare graph input without model calls; output must be a new directory
-scripts/bfcl_python.sh -B -m cs769 prepare --config src/cs769/configs/g9-working-history.json --history src/cs769/examples/history.json --output /tmp/cs769-input
+scripts/bfcl_python.sh -B -m cs769 prepare --config conf/evidence_graph_history_threshold.json --history src/cs769/examples/history.json --output /tmp/cs769-input
 
 # Run all free tests; actual network access is blocked
 scripts/bfcl_python.sh -B tests/run.py

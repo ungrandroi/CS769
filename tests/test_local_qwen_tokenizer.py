@@ -1,6 +1,6 @@
 """Native-tokenizer sanity checks; no weights, model context, or inference."""
 import unittest
-from cs769.adapters.local_qwen_tokenizer import LocalQwenTokenizer, DEFAULT_MODEL, DEFAULT_LIBRARY
+from cs769.models.local_qwen_tokenizer import LocalQwenTokenizer, DEFAULT_MODEL, DEFAULT_LIBRARY
 
 
 @unittest.skipUnless(DEFAULT_MODEL.is_file() and DEFAULT_LIBRARY.is_file(),

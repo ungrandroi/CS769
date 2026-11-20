@@ -4,18 +4,18 @@ from tempfile import TemporaryDirectory
 from unittest.mock import patch
 from io import BytesIO
 import json,os,unittest
-from cs769.reporting import from_batch,from_rows
-from cs769.config import load_config,ExperimentConfig
-from cs769.pipeline import prepare
-from cs769.runtime import continue_run
-from cs769.adapters.budget import PersistentBudget
-from cs769.adapters.http import HTTPTransport
+from cs769.tasks.reporting import from_batch, from_rows
+from cs769.base.config import load_config, ExperimentConfig
+from cs769.tasks.memory import prepare
+from cs769.base.runtime import continue_run
+from cs769.base.budget import PersistentBudget
+from cs769.models.http import HTTPTransport
 
 class IntegrationTests(unittest.TestCase):
     def test_managed_transport_accounts_once(self):
         with TemporaryDirectory() as td:
             p=Path(td);k=p/"env";k.write_text("OPENAI_API_KEY=fixture-only\n");k.chmod(0o600)
-            cfg=load_config(Path(__import__("cs769").__file__).parent/"configs/g9-view-full.json").to_dict()
+            cfg=load_config(Path(__import__("cs769").__file__).parent/"configs/evidence_graph_full_view.json").to_dict()
             cfg["execution"]["budget_usd"]=.1
             prepared=prepare([{"role":"user","content":"Continue"}],ExperimentConfig.from_dict(cfg),len)
             class Environment:

@@ -1,0 +1,24 @@
+{
+  "extends": "_base.json",
+  "name": "mixed_domain_state_table_encoding",
+  "memory": {
+    "kind": "semantic",
+    "options": {
+      "kind": "state",
+      "codec": "state-tables-v1",
+      "semantics": "mixed",
+      "explanation": "minimal"
+    }
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

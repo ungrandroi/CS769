@@ -3,16 +3,16 @@ from copy import deepcopy
 from pathlib import Path
 import unittest
 import cs769
-from cs769.config import load_config
-from cs769.pipeline import prepare
-from cs769.requests import build_request
-from cs769.adapters.qwen_transport import chat_messages, plain
-from cs769.adapters.replay import ReplayTransport, ReplayMismatch
-from cs769.graphs.graph_memory_evidence import reconstruct_visible_evidence, audit_evidence_graph
-from cs769.graphs.graph_memory_record_views import audit_record_view_render
-from cs769.graphs.graph_memory_records import strip_record_graph
-from cs769.graphs.graph_memory_payload import restore_observed_graph
-from cs769.graphs.graph_memory_observed import strip_observed_graph
+from cs769.base.config import load_config
+from cs769.tasks.memory import prepare
+from cs769.base.requests import build_request
+from cs769.models.qwen_transport import chat_messages, plain
+from cs769.base.replay import ReplayTransport, ReplayMismatch
+from cs769.models.graphs.graph_memory_evidence import reconstruct_visible_evidence, audit_evidence_graph
+from cs769.models.graphs.graph_memory_record_views import audit_record_view_render
+from cs769.models.graphs.graph_memory_records import strip_record_graph
+from cs769.models.graphs.graph_memory_payload import restore_observed_graph
+from cs769.models.graphs.graph_memory_observed import strip_observed_graph
 
 CONFIGS = Path(cs769.__file__).parent / "configs"
 
@@ -26,7 +26,7 @@ def history():
         {"role": "assistant", "content": "Found two."},
     ]
 
-def prepared(messages, name="g9-working-history", **kwargs):
+def prepared(messages, name="evidence_graph_history_threshold", **kwargs):
     return prepare(messages, load_config(CONFIGS / (name + ".json")), len, **kwargs)
 
 def evidence_base(graph):
@@ -40,7 +40,7 @@ class MemoryPipelineTests(unittest.TestCase):
         before = deepcopy(source)
         native = chat_messages(source)
         a = prepared(source, "identity", native_history=native)
-        b = prepared(source, "b-native-index", native_history=native)
+        b = prepared(source, "native_history_index", native_history=native)
         self.assertEqual(a["messages"], native)
         self.assertEqual(b["messages"][:-1], native)
         self.assertEqual(b["messages"][-1], {"role": "assistant", "content": b["memory_text"]})
@@ -64,7 +64,7 @@ class MemoryPipelineTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             chat_messages(source)
         native = chat_messages(plain(source))
-        for profile in ("identity", "b-native-index"):
+        for profile in ("identity", "native_history_index"):
             result = prepared(plain(source), profile, native_history=native)
             self.assertEqual(result["messages"][:len(native)], native)
         self.assertEqual(source, before)
@@ -75,13 +75,13 @@ class MemoryPipelineTests(unittest.TestCase):
                   {"type": "function_call_output", "call_id": "c", "output": '{"matches":["/a/b.txt"]}'},
                   {"role": "assistant", "content": "Located."}]
         native = chat_messages(source)
-        result = prepared(source, "b-native-index", native_history=native)
+        result = prepared(source, "native_history_index", native_history=native)
         self.assertEqual(result["memory_text"], "")
         self.assertEqual(result["messages"], native)
 
     def test_current_user_once_and_replay_rejects_extra_server_history(self):
         following = [{"role": "user", "content": "CURRENT QUERY"}]
-        for profile in ("identity", "b-native-index", "g9-working-history"):
+        for profile in ("identity", "native_history_index", "evidence_graph_history_threshold"):
             result = prepared(history(), profile, next_messages=following)
             request = build_request(result, [])
             self.assertEqual(sum(m.get("content") == "CURRENT QUERY" for m in request["messages"]), 1)
@@ -95,7 +95,7 @@ class MemoryPipelineTests(unittest.TestCase):
                 self.assertEqual(replay.index, 0)
         self.assertEqual(following, [{"role": "user", "content": "CURRENT QUERY"}])
 
-    def test_g9_preserves_visible_fields_and_excludes_opaque_reasoning(self):
+    def test_evidence_graph_preserves_visible_fields_and_excludes_opaque_reasoning(self):
         source = history()
         source[2]["arguments"] = '{ "name" : "测试", "number": 1e+02 }'
         source.append({"type": "reasoning", "summary": [], "encrypted_content": "opaque-secret"})
@@ -124,7 +124,7 @@ class MemoryPipelineTests(unittest.TestCase):
         self.assertIn('{ "name" : "b" }', [f["value"] for r in records for f in r["fields"]])
 
     def test_rehashed_wrong_role_is_rejected(self):
-        from cs769.graphs.graph_memory_evidence import _digest
+        from cs769.models.graphs.graph_memory_evidence import _digest
         graph = deepcopy(evidence_base(prepared(history())["graph"]))
         node = next(n for n in graph["evidence_view"]["nodes"] if n["category"] == "user_request")
         node["source_role"] = "assistant"
@@ -155,9 +155,9 @@ class MemoryPipelineTests(unittest.TestCase):
                 prepared(source)
 
     def test_projected_token_count_measures_the_whole_serialization(self):
-        from cs769.history import dumps
+        from cs769.base.history import dumps
         count = lambda text: int(bool(text))  # Deliberately nonadditive tokenizer fixture.
-        result = prepare(history(), load_config(CONFIGS / "g9-working-history.json"), count,
+        result = prepare(history(), load_config(CONFIGS / "evidence_graph_history_threshold.json"), count,
                          next_messages=[{"role": "user", "content": "next"}], counter_name="toy-nonadditive")
         self.assertEqual(result["metrics"]["full_memory_units"], count(result["memory_text"]))
         self.assertEqual(result["metrics"]["projected_messages_json_units"], count(dumps(result["messages"])))

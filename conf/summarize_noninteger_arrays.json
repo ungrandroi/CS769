@@ -1,0 +1,30 @@
+{
+  "extends": "_base.json",
+  "name": "summarize_noninteger_arrays",
+  "edits": [
+    {
+      "name": "numeric_summary",
+      "enabled": true,
+      "options": {
+        "min_elements": 256,
+        "tail_elements": 32,
+        "eligibility": "noninteger"
+      },
+      "on_ineligible": "skip"
+    }
+  ],
+  "delivery": {
+    "role": "assistant"
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

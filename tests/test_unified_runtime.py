@@ -5,12 +5,12 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest.mock import patch
 import json,os,unittest,urllib.error
-from cs769.config import ExperimentConfig,load_config
-from cs769.pipeline import prepare
-from cs769.requests import build_request
-from cs769.adapters.replay import ReplayTransport,ReplayMismatch
-from cs769.adapters.budget import PersistentBudget,BudgetExceeded
-from cs769.adapters.http import HTTPTransport,ProviderError
+from cs769.base.config import ExperimentConfig, load_config
+from cs769.tasks.memory import prepare
+from cs769.base.requests import build_request
+from cs769.base.replay import ReplayTransport, ReplayMismatch
+from cs769.base.budget import PersistentBudget, BudgetExceeded
+from cs769.models.http import HTTPTransport, ProviderError
 
 PACKAGE=Path(__import__("cs769").__file__).parent
 
@@ -27,7 +27,7 @@ class UnifiedRuntimeTests(unittest.TestCase):
         history=[{"role":"user","content":"Find x"},{"role":"assistant","content":None,"tool_calls":[{"id":"c","type":"function","function":{"name":"find","arguments":"{}"}}]},
                  {"role":"tool","tool_call_id":"c","content":'{"paths":["x"]}'},{"role":"assistant","content":"Found x"}]
         original=deepcopy(history);following=[{"role":"user","content":"Read it now"}]
-        for profile in ["identity","g9-view-full"]:
+        for profile in ["identity","evidence_graph_full_view"]:
             cfg=load_config(PACKAGE/"configs"/(profile+".json"));got=prepare(history,cfg,len,next_messages=following)
             self.assertEqual(history,original)
             self.assertEqual(sum(m.get("content")=="Read it now"for m in got["messages"]),1)
@@ -35,7 +35,7 @@ class UnifiedRuntimeTests(unittest.TestCase):
                 self.assertFalse(any(m.get("role")=="tool"or m.get("tool_calls")for m in got["messages"]))
 
     def test_reasoning_wire_omits_temperature(self):
-        cfg=load_config(PACKAGE/"configs/g9-gpt-5-mini.json")
+        cfg=load_config(PACKAGE/"configs/evidence_graph_openai_mini.json")
         result=prepare([{"role":"user","content":"Continue"}],cfg,len)
         wire=build_request(result,[])
         self.assertNotIn("temperature",wire)
@@ -61,11 +61,11 @@ class UnifiedRuntimeTests(unittest.TestCase):
 
     def test_disabled_transport_never_reads_a_key(self):
         t=HTTPTransport("openai","absent",None)
-        with patch("cs769.adapters.http.read_credentials",side_effect=AssertionError("must not read")):
+        with patch("cs769.models.http.read_credentials",side_effect=AssertionError("must not read")):
             with self.assertRaises(PermissionError):t.send({})
 
     def test_swallowed_transport_failure_cannot_be_scored_complete(self):
-        from cs769.adapters.bfcl import BFCLRunner
+        from cs769.tasks.bfcl import BFCLRunner
         class Handler:
             def __init__(self,*a):pass
             def _add_next_turn_user_message_FC(self,*a):pass
@@ -78,14 +78,14 @@ class UnifiedRuntimeTests(unittest.TestCase):
         class Fail:
             def send(self,r):raise RuntimeError("fixture API failure")
         cfg=load_config(PACKAGE/"configs/identity.json")
-        with patch("cs769.adapters.bfcl._USED_PROCESS",None),patch("bfcl_eval.model_handler.api_inference.openai_response.OpenAIResponsesHandler",Handler),patch("bfcl_eval.utils.load_dataset_entry",return_value=[{"id":"fixture"}]):
+        with patch("cs769.tasks.bfcl._USED_PROCESS",None),patch("bfcl_eval.model_handler.api_inference.openai_response.OpenAIResponsesHandler",Handler),patch("bfcl_eval.utils.load_dataset_entry",return_value=[{"id":"fixture"}]):
             with self.assertRaisesRegex(RuntimeError,"fixture API failure"):
                 BFCLRunner(cfg,len).run("fixture","multi_turn_base",Fail())
 
     def test_same_process_cannot_reuse_bfcl_tool_state(self):
-        from cs769.adapters.bfcl import BFCLRunner
+        from cs769.tasks.bfcl import BFCLRunner
         cfg=load_config(PACKAGE/"configs/identity.json")
-        with patch("cs769.adapters.bfcl._USED_PROCESS",os.getpid()):
+        with patch("cs769.tasks.bfcl._USED_PROCESS",os.getpid()):
             with self.assertRaisesRegex(RuntimeError,"one worker process"):
                 BFCLRunner(cfg,len).run("fixture","multi_turn_base",None)
 
@@ -96,10 +96,10 @@ class UnifiedRuntimeTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,"mix models"):b.reserve({"model":"model-b","max_tokens":8})
 
     def test_sorted_counter_accepts_chat_and_responses(self):
-        from cs769.history import history_counter_text,normalize,checkpoint_reached
+        from cs769.base.history import history_counter_text, normalize, checkpoint_reached
         raw=[{"role":"user","content":"x"},{"type":"function_call","call_id":"c","name":"ls","arguments":"{}"},
              {"type":"function_call_output","call_id":"c","output":"[]"}]
-        from cs769.adapters.qwen_transport import chat_messages
+        from cs769.models.qwen_transport import chat_messages
         chat=chat_messages(raw)
         self.assertEqual(history_counter_text(raw,sort_keys=True),history_counter_text(chat,sort_keys=True))
         text=history_counter_text(raw,sort_keys=True)
@@ -109,7 +109,7 @@ class UnifiedRuntimeTests(unittest.TestCase):
         self.assertFalse(checkpoint_reached(raw,cfg,len));cfg["strict"]=False;self.assertTrue(checkpoint_reached(raw,cfg,len))
 
     def test_explicit_repeats_are_distinct_batch_items(self):
-        from cs769.batch import execute_batch
+        from cs769.base.batch import execute_batch
         from types import SimpleNamespace
         with TemporaryDirectory() as td:
             p=Path(td);cfg=p/"config.json";cfg.write_text("{}")
@@ -117,12 +117,12 @@ class UnifiedRuntimeTests(unittest.TestCase):
             args=SimpleNamespace(plan=plan,config=cfg,output=p/"output",replay=True,workers=1,authorize_api=False,budget_usd=0,credentials=None,rates=None)
             def run(cmd,stdout,stderr):
                 stdout.write("{}");return SimpleNamespace(returncode=0)
-            with patch("cs769.provenance.source_identity",return_value={"package_sha256":{}}),patch("cs769.provenance.package_hashes",return_value={}),patch("cs769.batch.subprocess.run",side_effect=run)as worker:
+            with patch("cs769.base.provenance.source_identity",return_value={"package_sha256":{}}),patch("cs769.base.provenance.package_hashes",return_value={}),patch("cs769.base.batch.subprocess.run",side_effect=run)as worker:
                 got=execute_batch(args)
             self.assertEqual(worker.call_count,2);self.assertEqual({x["repeat"]for x in got["results"]},{1,2})
 
     def test_duplicate_same_repeat_is_rejected_before_creating_output(self):
-        from cs769.batch import execute_batch
+        from cs769.base.batch import execute_batch
         from types import SimpleNamespace
         with TemporaryDirectory() as td:
             p=Path(td);plan=p/"plan.json";row={"task":"x","arm":"g9","repeat":1,"record":"x"}

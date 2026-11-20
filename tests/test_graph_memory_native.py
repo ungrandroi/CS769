@@ -3,12 +3,8 @@ from copy import deepcopy
 import json
 import unittest
 
-from cs769.graphs.graph_memory_native import (
-    append_native_index, build_native_graph, reconstruct_native_context,
-    reconstruct_native_history, reconstruct_normalized_history,
-    render_native_index, validate_native_history,
-)
-from cs769.adapters.qwen_transport import chat_messages
+from cs769.models.graphs.graph_memory_native import append_native_index, build_native_graph, reconstruct_native_context, reconstruct_native_history, reconstruct_normalized_history, render_native_index, validate_native_history
+from cs769.models.qwen_transport import chat_messages
 
 
 def normalized(tool="cat", arguments=None, output=None, identity="c1"):

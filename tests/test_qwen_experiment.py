@@ -1,6 +1,6 @@
 import unittest
 
-from cs769.adapters.qwen_transport import chat_messages, response_from_chat, prefix_log
+from cs769.models.qwen_transport import chat_messages, response_from_chat, prefix_log
 
 
 class AdapterTests(unittest.TestCase):
@@ -49,16 +49,16 @@ class LiveGraphTests(unittest.TestCase):
         from pathlib import Path
         import json
         import cs769
-        from cs769.config import load_config
-        from cs769.pipeline import prepare
+        from cs769.base.config import load_config
+        from cs769.tasks.memory import prepare
         from test_state_transition_graph import history
-        from cs769.graphs.graph_memory_serialization import decode_compact, normalize
-        from cs769.graphs.graph_memory_replace import GraphMemoryReplacement, GraphMemoryV2Replacement
+        from cs769.models.graphs.graph_memory_serialization import decode_compact, normalize
+        from cs769.models.graphs.graph_memory_replace import GraphMemoryReplacement, GraphMemoryV2Replacement
 
         source = history([("pwd", {}, {"current_working_directory": "/research"}),
                           ("mv", {"source": "a", "destination": "b"}, {"error": "MISSING"})])
         original = deepcopy(source)
-        for name, cls in [("state-legacy", GraphMemoryReplacement), ("event-legacy", GraphMemoryV2Replacement)]:
+        for name, cls in [("state_legacy", GraphMemoryReplacement), ("event_legacy", GraphMemoryV2Replacement)]:
             cfg = load_config(Path(cs769.__file__).parent / "configs" / (name + ".json"))
             # Structural codec test uses explicit character units, not native Qwen token claims.
             result = prepare(source, cfg, len, counter_name="characters")

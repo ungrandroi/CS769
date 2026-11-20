@@ -1,0 +1,8 @@
+# 依据依赖关系删除记录图字段与子树
+Experimental dependency-guided deletion. The selector sees completed visible history and the current request only; it cannot inspect future turns or evaluation. It proposes object-owned JSON member deletions based on current objects, unresolved obligations, state versions and evidence dependencies. No task numbers or domain allowlist occur in the editor.
+
+Hard guards protect errors, scalar state/locator fields, whole values already used in recorded call arguments, and identifiers referenced by historical calls or user requests. A current-request field reference (including MA20/MA(20)) or explicit historical request blocks the applicable candidate. Lack of a reference is not a safety certificate: semantic selection may be wrong.
+
+The payload ownership tree applies non-overlapping member removals, repairs separators and keeps retained literals exact. The evidence/identifier graph is rebuilt from retained evidence. Tool calls, user/assistant text, errors and all undeclared fields remain. There is no hidden access to deleted evidence during continuation. The model-facing representation is the same paired lossless baseline plus an explicit omitted-field notice. This is genuinely lossy, not a replacement-evidence-only deduplication.
+
+The shared campaign supports selector_editor=prune_dependency_slice; the old replacement-only selector remains unchanged. Every selector request uses the same budget ledger as continuation. Selector input/output tokens count against edited total tokens. Selection reuse is hash-bound to graph/current request. Fixed overall cases must not be replaced based on eligibility or outcomes.

@@ -6,7 +6,7 @@ _spec = spec_from_file_location("cs769_compat_manage", Path(__file__).resolve().
 manage = module_from_spec(_spec)
 _spec.loader.exec_module(manage)
 from cs769 import cli
-from cs769.adapters.research_modes import LABELS,method_id
+from cs769.adapters.research_modes import LABELS, method_id
 
 class CliTest(unittest.TestCase):
     def test_names_and_aliases(self):
@@ -17,7 +17,7 @@ class CliTest(unittest.TestCase):
     def test_canonical_command_set(self):
         parser=cli.build_parser()
         commands=next(a for a in parser._actions if hasattr(a,"choices") and isinstance(a.choices,dict))
-        self.assertEqual(set(commands.choices),{"list","validate","prepare","replay","score","report","run","batch"})
+        self.assertEqual(set(commands.choices),{"list","validate","prepare","replay","score","report","run","batch","campaign","prefix-source","boundary","inspect-prefix"})
     def test_unknown_command_is_rejected(self):
         with contextlib.redirect_stderr(io.StringIO()),self.assertRaises(SystemExit):manage.main(["wrong"])
     def test_run_without_authorization_fails_before_reading_credentials(self):

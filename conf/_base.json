@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "name": "base",
+  "memory": {
+    "kind": "evidence_graph",
+    "options": {}
+  },
+  "edits": [],
+  "delivery": {
+    "mode": "replace",
+    "role": "user"
+  },
+  "checkpoint": {
+    "kind": "manual"
+  },
+  "model": {
+    "provider": "openai",
+    "name": "gpt-4.1",
+    "sampling": {},
+    "old_thinking": "omit"
+  },
+  "selection": {
+    "require_prefix_pass": false,
+    "require_nonempty_index": false
+  },
+  "evaluation": {
+    "adapter": "external_official",
+    "changed": false
+  },
+  "execution": {
+    "repeats": 1,
+    "order_seed": 42,
+    "max_requests": 30,
+    "budget_usd": 0.0
+  }
+}

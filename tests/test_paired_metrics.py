@@ -1,7 +1,7 @@
 """Generic paired reporting replaces tests tied to old fixed task lists."""
 import unittest
-from cs769.metrics import paired, Usage, cost_from_usage
-from cs769.schedule import schedule
+from cs769.base.metrics import paired, Usage, cost_from_usage
+from cs769.base.schedule import schedule
 
 def row(task, arm, passed, repeat=1, calls=1):
     return {"task": task, "checkpoint_sha256": "same", "repeat": repeat, "arm": arm,

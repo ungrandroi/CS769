@@ -8,7 +8,7 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 
 def run_tests(stream=None, verbosity=2):
-    from cs769.bootstrap import ensure_bfcl
+    from cs769.base.bootstrap import ensure_bfcl
     ensure_bfcl()
     suite = unittest.TestSuite([
         unittest.defaultTestLoader.discover(str(ROOT / "tests")),

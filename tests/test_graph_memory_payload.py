@@ -6,13 +6,9 @@ import math
 import unittest
 from unittest.mock import patch
 
-from cs769.graphs.graph_memory_evidence import build_evidence_graph, inference_graph
-from cs769.graphs.graph_memory_observed import build_observed_graph, render_observed_graph
-from cs769.graphs.graph_memory_payload import (
-    build_payload_graph, audit_payload_graph, restore_observed_graph,
-    render_payload_graph, render_payload_segments, plan_member_projection,
-    audit_member_projection_plan, _expand,
-)
+from cs769.models.graphs.graph_memory_evidence import build_evidence_graph, inference_graph
+from cs769.models.graphs.graph_memory_observed import build_observed_graph, render_observed_graph
+from cs769.models.graphs.graph_memory_payload import build_payload_graph, audit_payload_graph, restore_observed_graph, render_payload_graph, render_payload_segments, plan_member_projection, audit_member_projection_plan, _expand
 from test_graph_memory_observed import fixture, climate
 
 
@@ -93,7 +89,7 @@ class PayloadGraphTests(unittest.TestCase):
         self.assertEqual(output_field(graph)["parse_fallback"], "depth-limit")
         self.assertEqual(_expand(output_field(graph)["root"], by_id(graph)), original)
         self.assertTrue(audit_payload_graph(graph)["ok"])
-        with patch('cs769.graphs.graph_memory_payload.MAX_NODES_PER_FIELD', 10):
+        with patch('cs769.models.graphs.graph_memory_payload.MAX_NODES_PER_FIELD', 10):
             limited = graph_for('[1,2,3,4,5,6]')
             self.assertEqual(output_field(limited)["parse_fallback"], "node-limit")
             self.assertTrue(audit_payload_graph(limited)["ok"])

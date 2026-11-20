@@ -1,10 +1,10 @@
 """Provider tests migrated from the retired per-model CLI; all HTTP is fake."""
 from copy import deepcopy
 import json,unittest
-from cs769.config import ExperimentConfig
-from cs769.adapters.provider import ProviderTransport,anthropic_messages
-from cs769.adapters.anthropic_transport import MODEL
-from cs769.adapters.qwen_transport import plain
+from cs769.base.config import ExperimentConfig
+from cs769.models.provider import ProviderTransport, anthropic_messages
+from cs769.models.anthropic_transport import MODEL
+from cs769.models.qwen_transport import plain
 
 class FakeHTTP:
     def __init__(self):self.requests=[]
@@ -35,7 +35,7 @@ class ClaudeRunnerTest(unittest.TestCase):
     def test_changed_memory_drops_old_signed_thinking(self):
         http=FakeHTTP();t=ProviderTransport(self.config(),http)
         t.send({"input":[{"role":"user","content":"Inspect"}],"tools":[]})
-        t.send({"input":[{"role":"user","content":"Compiled G9 memory"}],"tools":[]})
+        t.send({"input":[{"role":"user","content":"Compiled evidence graph memory"}],"tools":[]})
         self.assertFalse(any(b["type"]=="thinking" for m in http.requests[1]["messages"]for b in m["content"]))
     def test_real_bfcl_directory_diagnostic_uses_official_serializer(self):
         from bfcl_eval.eval_checker.multi_turn_eval.func_source_code.gorilla_file_system import Directory

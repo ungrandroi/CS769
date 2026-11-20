@@ -1,0 +1,24 @@
+{
+  "extends": "_base.json",
+  "name": "evidence_graph_historical_user_role",
+  "memory": {
+    "options": {
+      "render": "role_partition",
+      "role_mode": "historical-user"
+    }
+  },
+  "delivery": {
+    "role": "assistant"
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

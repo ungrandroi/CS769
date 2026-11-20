@@ -1,7 +1,7 @@
 import unittest
 from copy import deepcopy
-from cs769.graphs.event_graph_dedup import compact_graph,restore_graph,encode,decode,confirmation,evidence
-from cs769.graphs.graph_memory_serialization import normalize
+from cs769.models.graphs.event_graph_dedup import compact_graph, restore_graph, encode, decode, confirmation, evidence
+from cs769.models.graphs.graph_memory_serialization import normalize
 
 def fixture():
     e={'id':'a1','category':'event','step':1,'call_id':'c1','tool':'ls','arguments':{},'output_raw':'["D","f1"]',

@@ -1,0 +1,23 @@
+{
+  "extends": "_base.json",
+  "name": "state_table_encoding",
+  "memory": {
+    "kind": "semantic",
+    "options": {
+      "kind": "state",
+      "codec": "state-tables-v1",
+      "explanation": "minimal"
+    }
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

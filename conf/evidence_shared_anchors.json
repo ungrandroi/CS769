@@ -1,0 +1,25 @@
+{
+  "extends": "_base.json",
+  "name": "evidence_shared_anchors",
+  "memory": {
+    "kind": "layered",
+    "options": {
+      "layer": "anchors",
+      "variant": "anchors-v1"
+    }
+  },
+  "delivery": {
+    "role": "assistant"
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

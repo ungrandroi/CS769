@@ -1,0 +1,30 @@
+{
+  "extends": "_base.json",
+  "name": "summarize_decimal_arrays",
+  "edits": [
+    {
+      "name": "numeric_summary",
+      "enabled": true,
+      "options": {
+        "min_elements": 128,
+        "tail_elements": 32,
+        "eligibility": "decimal_literal"
+      },
+      "on_ineligible": "skip"
+    }
+  ],
+  "delivery": {
+    "role": "assistant"
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

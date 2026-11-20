@@ -1,6 +1,6 @@
 """Configured checkpoint selection without legacy task scanners."""
 import unittest
-from cs769.history import checkpoint_reached, history_counter_text
+from cs769.base.history import checkpoint_reached, history_counter_text
 
 class CheckpointSelectionTests(unittest.TestCase):
     def source(self):

@@ -1,0 +1,26 @@
+{
+  "extends": "_base.json",
+  "name": "trim_context",
+  "edits": [
+    {
+      "name": "trim_context",
+      "enabled": true,
+      "options": {},
+      "on_ineligible": "skip"
+    }
+  ],
+  "delivery": {
+    "role": "assistant"
+  },
+  "checkpoint": {
+    "kind": "completed_turn",
+    "turns": 1
+  },
+  "model": {
+    "sampling": {
+      "temperature": 0,
+      "seed": 42,
+      "max_tokens": 4096
+    }
+  }
+}

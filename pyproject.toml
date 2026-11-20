@@ -12,8 +12,9 @@ dependencies = []
 [project.scripts]
 cs769 = "cs769.cli:main"
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.setuptools]
+packages = ["cs769", "cs769.adapters", "cs769.tests", "cs769.base", "cs769.datasets", "cs769.models", "cs769.models.graphs", "cs769.models.edits", "cs769.tasks"]
+package-dir = {"" = "src", "cs769.base" = "base", "cs769.datasets" = "datasets", "cs769.models" = "models", "cs769.tasks" = "tasks"}
 
 [tool.setuptools.package-data]
 cs769 = ["configs/*.json", "examples/*.json"]
