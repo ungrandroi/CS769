@@ -1,0 +1,292 @@
+{
+  "status": "complete_audited",
+  "candidate_count": 200,
+  "paired_count": 118,
+  "new_g9_conditions": 114,
+  "reused_g9_smoke_conditions": 4,
+  "untriggered_count": 82,
+  "untriggered_identity_passed": 42,
+  "summary": {
+    "identity": {
+      "n": 118,
+      "passed": 31,
+      "success_rate": 0.2627118644067797,
+      "first_input_mean": 3586.9830508474574,
+      "first_history_body_mean": 1135.864406779661,
+      "suffix_input_sum": 2638366,
+      "suffix_output_sum": 33483,
+      "suffix_cached_sum": 2441088,
+      "suffix_requests": 696,
+      "official_empty_turn_tasks": 8
+    },
+    "event": {
+      "n": 118,
+      "passed": 33,
+      "success_rate": 0.2796610169491525,
+      "first_input_mean": 6599.483050847458,
+      "first_history_body_mean": 4205.872881355932,
+      "suffix_input_sum": 4245726,
+      "suffix_output_sum": 36458,
+      "suffix_cached_sum": 3452288,
+      "suffix_requests": 617,
+      "official_empty_turn_tasks": 10
+    },
+    "g9": {
+      "n": 118,
+      "passed": 34,
+      "success_rate": 0.288135593220339,
+      "first_input_mean": 4366.728813559322,
+      "first_history_body_mean": 1687.5254237288136,
+      "suffix_input_sum": 3005118,
+      "suffix_output_sum": 34604,
+      "suffix_cached_sum": 2228352,
+      "suffix_requests": 658,
+      "official_empty_turn_tasks": 7
+    }
+  },
+  "categories": {
+    "multi_turn_base": {
+      "identity": {
+        "n": 13,
+        "passed": 7,
+        "success_rate": 0.5384615384615384,
+        "first_input_mean": 3422.4615384615386,
+        "first_history_body_mean": 1052.923076923077,
+        "suffix_input_sum": 240234,
+        "suffix_output_sum": 2086,
+        "suffix_cached_sum": 225792,
+        "suffix_requests": 71,
+        "official_empty_turn_tasks": 0
+      },
+      "event": {
+        "n": 13,
+        "passed": 6,
+        "success_rate": 0.46153846153846156,
+        "first_input_mean": 6370.615384615385,
+        "first_history_body_mean": 4026.4615384615386,
+        "suffix_input_sum": 586246,
+        "suffix_output_sum": 3052,
+        "suffix_cached_sum": 519040,
+        "suffix_requests": 87,
+        "official_empty_turn_tasks": 0
+      },
+      "g9": {
+        "n": 13,
+        "passed": 7,
+        "success_rate": 0.5384615384615384,
+        "first_input_mean": 4242.076923076923,
+        "first_history_body_mean": 1630.923076923077,
+        "suffix_input_sum": 361277,
+        "suffix_output_sum": 2461,
+        "suffix_cached_sum": 277888,
+        "suffix_requests": 84,
+        "official_empty_turn_tasks": 0
+      }
+    },
+    "multi_turn_long_context": {
+      "identity": {
+        "n": 39,
+        "passed": 16,
+        "success_rate": 0.41025641025641024,
+        "first_input_mean": 3931.7948717948716,
+        "first_history_body_mean": 1310.076923076923,
+        "suffix_input_sum": 956660,
+        "suffix_output_sum": 18271,
+        "suffix_cached_sum": 869760,
+        "suffix_requests": 211,
+        "official_empty_turn_tasks": 0
+      },
+      "event": {
+        "n": 39,
+        "passed": 15,
+        "success_rate": 0.38461538461538464,
+        "first_input_mean": 7106.897435897436,
+        "first_history_body_mean": 4643.74358974359,
+        "suffix_input_sum": 1366048,
+        "suffix_output_sum": 17362,
+        "suffix_cached_sum": 1092352,
+        "suffix_requests": 179,
+        "official_empty_turn_tasks": 0
+      },
+      "g9": {
+        "n": 39,
+        "passed": 15,
+        "success_rate": 0.38461538461538464,
+        "first_input_mean": 4560.974358974359,
+        "first_history_body_mean": 1761.4871794871794,
+        "suffix_input_sum": 915579,
+        "suffix_output_sum": 17362,
+        "suffix_cached_sum": 716032,
+        "suffix_requests": 184,
+        "official_empty_turn_tasks": 0
+      }
+    },
+    "multi_turn_miss_func": {
+      "identity": {
+        "n": 41,
+        "passed": 3,
+        "success_rate": 0.07317073170731707,
+        "first_input_mean": 3364.878048780488,
+        "first_history_body_mean": 1050,
+        "suffix_input_sum": 937957,
+        "suffix_output_sum": 8419,
+        "suffix_cached_sum": 865536,
+        "suffix_requests": 271,
+        "official_empty_turn_tasks": 3
+      },
+      "event": {
+        "n": 41,
+        "passed": 7,
+        "success_rate": 0.17073170731707318,
+        "first_input_mean": 6270.463414634146,
+        "first_history_body_mean": 3938.9024390243903,
+        "suffix_input_sum": 1447542,
+        "suffix_output_sum": 10019,
+        "suffix_cached_sum": 1124352,
+        "suffix_requests": 224,
+        "official_empty_turn_tasks": 4
+      },
+      "g9": {
+        "n": 41,
+        "passed": 6,
+        "success_rate": 0.14634146341463414,
+        "first_input_mean": 4239.341463414634,
+        "first_history_body_mean": 1653.0487804878048,
+        "suffix_input_sum": 1159886,
+        "suffix_output_sum": 9306,
+        "suffix_cached_sum": 788096,
+        "suffix_requests": 262,
+        "official_empty_turn_tasks": 2
+      }
+    },
+    "multi_turn_miss_param": {
+      "identity": {
+        "n": 25,
+        "passed": 5,
+        "success_rate": 0.2,
+        "first_input_mean": 3498.88,
+        "first_history_body_mean": 1048.04,
+        "suffix_input_sum": 503515,
+        "suffix_output_sum": 4707,
+        "suffix_cached_sum": 480000,
+        "suffix_requests": 143,
+        "official_empty_turn_tasks": 5
+      },
+      "event": {
+        "n": 25,
+        "passed": 5,
+        "success_rate": 0.2,
+        "first_input_mean": 6466.52,
+        "first_history_body_mean": 4053.92,
+        "suffix_input_sum": 845890,
+        "suffix_output_sum": 6025,
+        "suffix_cached_sum": 716544,
+        "suffix_requests": 127,
+        "official_empty_turn_tasks": 6
+      },
+      "g9": {
+        "n": 25,
+        "passed": 6,
+        "success_rate": 0.24,
+        "first_input_mean": 4337.44,
+        "first_history_body_mean": 1658.12,
+        "suffix_input_sum": 568376,
+        "suffix_output_sum": 5475,
+        "suffix_cached_sum": 446336,
+        "suffix_requests": 128,
+        "official_empty_turn_tasks": 5
+      }
+    }
+  },
+  "comparisons": {
+    "identity": {
+      "reference": "identity",
+      "gains": [
+        "multi_turn_miss_func_46",
+        "multi_turn_long_context_20",
+        "multi_turn_miss_param_38",
+        "multi_turn_miss_param_14",
+        "multi_turn_miss_func_35",
+        "multi_turn_long_context_17",
+        "multi_turn_miss_func_43"
+      ],
+      "losses": [
+        "multi_turn_long_context_38",
+        "multi_turn_miss_param_15",
+        "multi_turn_long_context_35",
+        "multi_turn_long_context_24"
+      ],
+      "delta_success_pp": 2.542372881355932,
+      "family_cluster_bootstrap_ci95_pp": [
+        -1.694915254237288,
+        7.142857142857142
+      ],
+      "unique_families": 48,
+      "bootstrap_repetitions": 10000,
+      "interpretation": "Descriptive uncertainty; no post-hoc pass/fail margin, and controls are historical Azure runs."
+    },
+    "event": {
+      "reference": "event",
+      "gains": [
+        "multi_turn_miss_param_1",
+        "multi_turn_long_context_5",
+        "multi_turn_base_2",
+        "multi_turn_miss_func_5",
+        "multi_turn_long_context_46",
+        "multi_turn_long_context_17",
+        "multi_turn_miss_func_43"
+      ],
+      "losses": [
+        "multi_turn_long_context_25",
+        "multi_turn_miss_func_45",
+        "multi_turn_miss_func_26",
+        "multi_turn_miss_func_14",
+        "multi_turn_long_context_35",
+        "multi_turn_long_context_24"
+      ],
+      "delta_success_pp": 0.847457627118644,
+      "family_cluster_bootstrap_ci95_pp": [
+        -5.555555555555555,
+        7.317073170731707
+      ],
+      "unique_families": 48,
+      "bootstrap_repetitions": 10000,
+      "interpretation": "Descriptive uncertainty; no post-hoc pass/fail margin, and controls are historical Azure runs."
+    }
+  },
+  "costs": {
+    "new_114_usage_priced_usd": 2.879028,
+    "new_114_uncached_reference_usd": 6.172596,
+    "uncertain_attempts": 0,
+    "uncertain_reserve_usd": 0.0,
+    "reused_smoke_4_prior_cost_usd": 0.065512,
+    "all_118_g9_usage_priced_usd": 2.94454,
+    "setup_probe_separate_usd": 3e-05,
+    "new_identity_cost_usd": 0,
+    "new_event_cost_usd": 0,
+    "new_114_budget_cap_usd": 20,
+    "budget_status": {
+      "campaign": "g9-eventprotocol-official-118-20261104",
+      "model": "gpt-4.1",
+      "cap_usd_reference": 20.0,
+      "review_threshold_usd_reference": 19.0,
+      "settled_usd_reference": 6.172596,
+      "reserved_or_uncertain_usd_reference": 0.0,
+      "committed_usd_reference": 6.172596,
+      "remaining_usd_reference": 13.827404,
+      "requests_settled": 648,
+      "requests_uncertain": 0,
+      "requests_in_flight": 0,
+      "halted": false,
+      "halt_reason": null
+    },
+    "basis": "API usage at $2/M input, $0.50/M cached input, $8/M output; not an independently reconciled invoice."
+  },
+  "all_integrity_checks_passed": true,
+  "id_link_active_conditions": 4,
+  "limitations": [
+    "Identity and Event controls were run earlier on Azure; G9 is run on the official API.",
+    "One repetition per condition; model sampling is not guaranteed deterministic.",
+    "No graph tuning or changes to official evaluation in this campaign."
+  ]
+}

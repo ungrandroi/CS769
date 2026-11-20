@@ -1,5 +1,7 @@
 # Experiment CLI
 
+G9 Evidence Graph is available through [`core/g9_memory.py`](core/g9_memory.py). See the [integration guide](../docs/g9-memory.md) and [offline example](../examples/g9_memory.py). This is a standalone builder; existing runner modes and defaults are unchanged.
+
 Use `scripts/bfcl_python.sh scripts/manage.py ...` from the repository root.
 The launcher uses the local `.conda/bfcl` environment. Commands import their
 workflow lazily; historical module entry points remain available.
